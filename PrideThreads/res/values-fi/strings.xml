@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Pride-säikeet</string>
+  <string name="background">Tausta</string>
+  <string name="light">Vaalea</string>
+  <string name="dark">Tumma</string>
+</resources>

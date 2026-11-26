@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">نسيج Pride</string>
+  <string name="background">الخلفية</string>
+  <string name="light">فاتح</string>
+  <string name="dark">داكن</string>
+</resources>

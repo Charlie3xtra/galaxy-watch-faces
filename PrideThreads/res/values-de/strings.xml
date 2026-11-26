@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Pride Fäden</string>
+  <string name="background">Hintergrund</string>
+  <string name="light">Hell</string>
+  <string name="dark">Dunkel</string>
+</resources>

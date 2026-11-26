@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Pride線條</string>
+  <string name="background">背景</string>
+  <string name="light">淺色</string>
+  <string name="dark">深色</string>
+</resources>

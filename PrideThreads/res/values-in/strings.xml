@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Untaian Pride</string>
+  <string name="background">Latar Belakang</string>
+  <string name="light">Terang</string>
+  <string name="dark">Gelap</string>
+</resources>

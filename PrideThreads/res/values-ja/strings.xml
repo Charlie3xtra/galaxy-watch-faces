@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">プライドスレッド</string>
+  <string name="background">背景</string>
+  <string name="light">ライト</string>
+  <string name="dark">ダーク</string>
+</resources>

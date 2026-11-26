@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Pride vlákna</string>
+  <string name="background">Pozadie</string>
+  <string name="light">Svetlé</string>
+  <string name="dark">Tmavé</string>
+</resources>

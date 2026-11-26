@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Bebenang Pelangi</string>
+  <string name="background">Latar Belakang</string>
+  <string name="light">Cerah</string>
+  <string name="dark">Gelap</string>
+</resources>

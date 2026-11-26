@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Νήματα Περηφάνιας</string>
+  <string name="background">Φόντο</string>
+  <string name="light">Ανοιχτό</string>
+  <string name="dark">Σκούρο</string>
+</resources>

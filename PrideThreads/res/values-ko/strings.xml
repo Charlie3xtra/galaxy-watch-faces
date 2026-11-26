@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">프라이드 스레드</string>
+  <string name="background">배경</string>
+  <string name="light">라이트</string>
+  <string name="dark">다크</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Pride, szálak</string>
+  <string name="background">Háttér</string>
+  <string name="light">Világos</string>
+  <string name="dark">Sötét</string>
+</resources>

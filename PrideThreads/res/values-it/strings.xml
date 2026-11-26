@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Intreccio Pride</string>
+  <string name="background">Sfondo</string>
+  <string name="light">Chiaro</string>
+  <string name="dark">Scuro</string>
+</resources>

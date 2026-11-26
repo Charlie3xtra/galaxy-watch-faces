@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Orgull filat</string>
+  <string name="background">Fons</string>
+  <string name="light">Clar</string>
+  <string name="dark">Fosc</string>
+</resources>
