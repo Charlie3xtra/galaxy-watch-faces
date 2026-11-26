@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Portrék</string>
+  <string name="photos">FOTÓ</string>
+  <string name="typeface">BETŰTÍPUS</string>
+  <string name="effect_label">SZÍN</string>
+  <string name="modern">MODERN</string>
+  <string name="classic">KLASSZIKUS</string>
+  <string name="rounded">LEKEREKÍTETT</string>
+  <string name="natural">NINCS</string>
+  <string name="background">HÁTTÉR</string>
+  <string name="duotone">KÉTTÓNUSÚ</string>
+  <string name="personal">FOTÓ</string>
+  <string name="photo01">FOTÓ 01</string>
+  <string name="photo02">FOTÓ 02</string>
+  <string name="photo03">FOTÓ 03</string>
+  <string name="photo04">FOTÓ 04</string>
+  <string name="photo05">FOTÓ 05</string>
+  <string name="photo06">FOTÓ 06</string>
+  <string name="photo07">FOTÓ 07</string>
+  <string name="photo08">FOTÓ 08</string>
+  <string name="photo09">FOTÓ 09</string>
+  <string name="photo10">FOTÓ 10</string>
+  <string name="photo11">FOTÓ 11</string>
+  <string name="photo12">FOTÓ 12</string>
+  <string name="photo13">FOTÓ 13</string>
+  <string name="photo14">FOTÓ 14</string>
+  <string name="photo15">FOTÓ 15</string>
+  <string name="photo16">FOTÓ 16</string>
+  <string name="photo17">FOTÓ 17</string>
+</resources>

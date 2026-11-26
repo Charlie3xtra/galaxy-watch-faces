@@ -117,3 +117,10 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 [下载 Hermès 航海 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/hermes-maritime-1.1) · [系统计时器暂停实拍](HermesMaritime/screenshots/paused.png)
 
 单 APK。安装后打开一次登记表盘。左侧字标沿秒圈弯曲。开启手表的通知读取授权后，直接使用三星系统计时器；表盘会在双行时钟上方显示系统通知中的剩余时间，暂停时显示暂停标记，取消后恢复蓝色秒圈。橙圈表示当前一分钟的剩余秒数。没有独立计时设置页。通知由设备本地处理，仅解析三星计时器数据。在测试手表上未找到可从应用启动的通知授权设置页面；已授权的测试设备日常使用无需调试。若三星更新其计时通知格式，可能需要更新适配。
+## 人像 · Portraits
+
+| 亮屏 | 息屏 |
+| --- | --- |
+| <img src="Portraits/screenshots/active.png" width="220" alt="人物头部遮挡时间的下沿"> | <img src="Portraits/screenshots/ambient.png" width="220" alt="息屏低亮度照片"> |
+
+[下载人像 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/portraits-1.0)。17 张固件样片来自 watchOS 24S132 的 NTKUltraCubeFaceBundle，每张独立使用背景、原照片、人物蒙版和时钟基线。适配圆屏后微调时间位置以保持可读性，腕动时前后景分别移动。可选三种字体及原色、背景着色和双色效果；调色、视差幅度和息屏亮度为移植取值。在相册中选择个人照片可使用 Wear OS 原生照片入口；个人照片以平面展示，时间置于前面。手机伴侣选图尚未在真机走完整流程。

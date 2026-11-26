@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Portréty</string>
+  <string name="photos">FOTKA</string>
+  <string name="typeface">PÍSMO</string>
+  <string name="effect_label">FARBA</string>
+  <string name="modern">MODERNÝ</string>
+  <string name="classic">KLASICKÝ</string>
+  <string name="rounded">ZAOBLENÝ</string>
+  <string name="natural">ŽIADNY</string>
+  <string name="background">POZADIE</string>
+  <string name="duotone">DVOJFAREBNÝ</string>
+  <string name="personal">FOTKA</string>
+  <string name="photo01">FOTKA 01</string>
+  <string name="photo02">FOTKA 02</string>
+  <string name="photo03">FOTKA 03</string>
+  <string name="photo04">FOTKA 04</string>
+  <string name="photo05">FOTKA 05</string>
+  <string name="photo06">FOTKA 06</string>
+  <string name="photo07">FOTKA 07</string>
+  <string name="photo08">FOTKA 08</string>
+  <string name="photo09">FOTKA 09</string>
+  <string name="photo10">FOTKA 10</string>
+  <string name="photo11">FOTKA 11</string>
+  <string name="photo12">FOTKA 12</string>
+  <string name="photo13">FOTKA 13</string>
+  <string name="photo14">FOTKA 14</string>
+  <string name="photo15">FOTKA 15</string>
+  <string name="photo16">FOTKA 16</string>
+  <string name="photo17">FOTKA 17</string>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Potret</string>
+  <string name="photos">FOTO</string>
+  <string name="typeface">FON</string>
+  <string name="effect_label">WARNA</string>
+  <string name="modern">MODEN</string>
+  <string name="classic">KLASIK</string>
+  <string name="rounded">BUCU BULAT</string>
+  <string name="natural">TIADA</string>
+  <string name="background">LATAR BELAKANG</string>
+  <string name="duotone">DWITON</string>
+  <string name="personal">FOTO</string>
+  <string name="photo01">FOTO 01</string>
+  <string name="photo02">FOTO 02</string>
+  <string name="photo03">FOTO 03</string>
+  <string name="photo04">FOTO 04</string>
+  <string name="photo05">FOTO 05</string>
+  <string name="photo06">FOTO 06</string>
+  <string name="photo07">FOTO 07</string>
+  <string name="photo08">FOTO 08</string>
+  <string name="photo09">FOTO 09</string>
+  <string name="photo10">FOTO 10</string>
+  <string name="photo11">FOTO 11</string>
+  <string name="photo12">FOTO 12</string>
+  <string name="photo13">FOTO 13</string>
+  <string name="photo14">FOTO 14</string>
+  <string name="photo15">FOTO 15</string>
+  <string name="photo16">FOTO 16</string>
+  <string name="photo17">FOTO 17</string>
+</resources>
