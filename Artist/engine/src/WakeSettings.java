@@ -55,8 +55,9 @@ public final class WakeSettings extends Activity {
         if(getPackageManager().resolveService(new Intent("com.google.wear.ACTION_PUSH_WATCH_FACES"),PackageManager.MATCH_SYSTEM_ONLY)==null){fail(new IllegalStateException("未发现系统表盘登记服务"));return;}
         manager.listWatchFaceSlots(getMainExecutor(),callback((ListWatchFaceSlotsResponse response)->{
             for(WatchFaceSlot face:response.getInstalledWatchFaceSlots()){
-                if(face.getPackageName().equals(getPackageName()+".watchfacepush.artist")){
-                    if(face.getVersionCode()>=6){ready(face);return;}
+                if(face.getPackageName().equals(getPackageName()+".watchfacepush.portrait") && face.getVersionCode()>=7){ready(face);return;}
+                if(face.getPackageName().equals(getPackageName()+".watchfacepush.artist") || face.getPackageName().equals(getPackageName()+".watchfacepush.portrait")){
+
                     push(face.getSlotId());return;
                 }
             }
@@ -77,7 +78,7 @@ public final class WakeSettings extends Activity {
     }
     private void ready(WatchFaceSlot face) {
         closeUpload();slot=face.getSlotId();android.util.Log.i("ArtistPush","Registered "+face.getPackageName());
-                manager.isWatchFaceActive(face.getPackageName(),getMainExecutor(),callback(active->{
+        manager.isWatchFaceActive(face.getPackageName(),getMainExecutor(),callback(active->{
             if(active){finish();return;}
             if(getPreferences(0).getBoolean("activationUsed",false)){
                 manualSelection();return;
@@ -105,6 +106,7 @@ public final class WakeSettings extends Activity {
         else manualSelection();
     }
 }
+
 
 
 

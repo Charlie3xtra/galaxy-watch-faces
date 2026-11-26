@@ -42,6 +42,11 @@
             <Transform target="y" value="-450 * floor(round([REFERENCE.step]) / 3)" />
           </PartImage>
         </Group>
+        <PartImage x="0" y="0" width="450" height="450">
+          <Image resource="face_00" />
+          <Transform target="alpha" value="([COMPLICATION.TEXT] == &quot;A&quot; || [COMPLICATION.TEXT] == &quot;B&quot;) ? 0 : 255" />
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+        </PartImage>
       </Complication>
     </ComplicationSlot>
     <Group name="active" x="0" y="0" width="450" height="450">
@@ -68,5 +73,6 @@
     </Group>
   </Scene>
 </WatchFace>
+
 
 
