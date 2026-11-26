@@ -4,12 +4,26 @@ import numpy as np
 from PIL import Image, ImageFilter
 from xml.etree.ElementTree import SubElement as child
 
-COUNT=64
-FRAME_MS=240
-SIZE=(174,212)
-ROWS=(148,332)
+COUNT=32
+FRAME_MS=500
+SIZE=(174,196)
+ROWS=(140,340)
 
 def scene(parent):
+    for odd in (False, True):
+        layer=child(parent,"Group",name=f"buffer{int(odd)}",x="0",y="0",width="480",height="480")
+        if odd:
+            opacity=child(layer,"Transform",target="alpha",value="[MILLISECOND] < 500 ? 255 : 0")
+            child(opacity,"Animation",duration="0.5",fps="30",interpolation="LINEAR")
+        phase=child(layer,"Condition")
+        tests=child(phase,"Expressions")
+        for sec in range(16):
+            phase_expr="([SECONDS_IN_DAY] % 16)" if odd else "(([SECONDS_IN_DAY] + ([MILLISECOND] >= 500 ? 1 : 0)) % 16)"
+            child(tests,"Expression",name=f"s{sec}").text=f"{phase_expr} == {sec}"
+            face=child(phase,"Compare",expression=f"s{sec}")
+            digit_scene(face,2*sec+int(odd))
+
+def digit_scene(parent,frame):
     hour="([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])"
     for row,(prefix,number) in enumerate((("h",hour),("m","[MINUTE]"))):
         digits=(f"floor({number} / 10)",f"({number} % 10)")
@@ -26,10 +40,10 @@ def scene(parent):
             for d in range(limit):
                 child(expressions,"Expression",name=f"d{d}").text=f"{source} == {d}"
                 choice=child(cond,"Compare",expression=f"d{d}")
-                part=child(choice,"PartAnimatedImage",x="0",y="0",width=str(SIZE[0]),height=str(SIZE[1]))
+                part=child(choice,"PartImage",x="0",y="0",width=str(SIZE[0]),height=str(SIZE[1]))
                 asset=f"{prefix if d==0 else 'n'}{d}"
-                child(part,"AnimatedImage",resource=f"flow_{asset}",format="WEBP",thumbnail=f"first_{asset}")
-                child(part,"AnimationController",play="ON_VISIBLE",repeat="TRUE",beforePlaying="FIRST_FRAME",afterPlaying="FIRST_FRAME")
+                child(part,"Image",resource=f"key_{asset}_{frame:02}")
+
 
 def bake_digit(uv,source,reference_center,colors,settings,seed):
     h,w=uv.shape[:2]
@@ -77,14 +91,15 @@ def bake_digit(uv,source,reference_center,colors,settings,seed):
         frames.append(np.power(np.clip(display,0,1), 1/1.85))
     target=np.median([f.mean() for f in frames])
     result=[]
+    frames=[np.clip(f*(target/max(f.mean(),1e-8)),0,1) for f in frames]
+    yy,xx=np.mgrid[:h,:w]
+    edge=np.minimum.reduce((yy-7,h-8-yy,xx,w-1-xx))
+    t=np.clip(edge/8,0,1)
+    feather=t*t*(3-2*t)
+    # A shared matte keeps the two interpolation buffers opaque wherever a digit is bright.
+    alpha=np.clip(np.maximum.reduce([f.max(2) for f in frames])*16,0,1)
     for f in frames:
-        f=np.clip(f*(target/max(f.mean(),1e-8)),0,1)
-        # Transparent quiet margins allow adjacent light halos to overlap without black tiles.
-        yy,xx=np.mgrid[:h,:w]
-        border=np.minimum.reduce((yy,h-1-yy,xx,w-1-xx))
-        feather=np.clip(border/7,0,1)
-        a=np.clip(f.max(2)*10,0,1)
-        res=np.dstack([f/np.maximum(a[:,:,None],1e-7),a*feather])
+        res=np.dstack([f/np.maximum(alpha[:,:,None],1e-7),alpha*feather])
         result.append(Image.fromarray(np.uint8(np.clip(res,0,1)*255)))
     return result
 
@@ -96,8 +111,9 @@ def generate(model,art,draw,mesh_uv,settings,palette):
         for row in (("h","m") if d==0 else ("n",)):
             center=((134,155) if d==1 else (250,155)) if (row=="h" or (row=="n" and d!=9)) else ((142,330) if d==0 else (276,331))
             imgs=bake_digit(uv,source,center,palette,settings,5371+d+(30 if row=="m" else 0))
-            imgs[0].save(draw/f"first_{row}{d}.png")
-            imgs[0].save(draw/f"flow_{row}{d}.webp",save_all=True,append_images=imgs[1:],duration=FRAME_MS,loop=0,quality=85,method=3)
+            imgs=[im.crop((0,7,im.width,im.height-7)) for im in imgs]
+            for idx,im in enumerate(imgs):
+                im.save(draw/f"key_{row}{d}_{idx:02}.png")
             if d in (1,0,9):
                 frames[row,d]=imgs
     previews=[]
@@ -110,4 +126,13 @@ def generate(model,art,draw,mesh_uv,settings,palette):
                 canvas.alpha_composite(im,(240+dx-SIZE[0]//2,ROWS[row]-SIZE[1]//2))
         previews.append(canvas.convert("RGB"))
     previews[0].save(draw/"preview.png")
-    previews[0].save(draw.parent.parent/"flow-preview.webp",save_all=True,append_images=previews[1:],duration=FRAME_MS,loop=0,quality=85)
+    import os, shutil, subprocess
+    ffmpeg=os.environ.get("FFMPEG") or shutil.which("ffmpeg") or next(draw.parents[2].glob("work/decoders/imageio_ffmpeg/binaries/ffmpeg*.exe"))
+    with subprocess.Popen([str(ffmpeg),"-v","error","-y","-f","rawvideo","-pix_fmt","rgb24","-s","480x480","-r","30","-i","-","-c:v","libx264","-crf","16","-pix_fmt","yuv420p","-movflags","+faststart",str(draw.parents[1]/"flow-preview-1.4.mp4")],stdin=subprocess.PIPE) as proc:
+        for idx,current in enumerate(previews):
+            following=previews[(idx+1)%COUNT]
+            for step in range(15):
+                proc.stdin.write(Image.blend(current,following,step/15).tobytes())
+        proc.stdin.close()
+        if proc.wait():
+            raise RuntimeError("Preview encoding failed")

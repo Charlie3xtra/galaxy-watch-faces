@@ -16,7 +16,7 @@ DRAW = ROOT / "res/drawable-nodpi"
 BUNDLE = Path("System/Library/NanoTimeKit/FaceBundles/NTKPlumeriaFaceBundle.bundle")
 AX = Path("System/Library/PrivateFrameworks/AXNTKUtilities.framework")
 W, H, FRAMES = 156, 190, 6
-ROWS = ((143,"hh"),(337,"mm"))
+ROWS = ((136,"hh"),(344,"mm"))
 ROMAN = ["I", "II", "III", "IV", "V"]
 CHILD = ET.SubElement
 
@@ -31,13 +31,16 @@ def read(path):
     return json.loads(path.read_text(encoding="utf8"))
 
 
-def mesh_uv(path):
+def mesh_uv(path, enlargement=0):
     """Rasterize the Apple triangles and their face-varying texture coordinates."""
     source = path.read_text()
     def field(key):
         match = re.search(re.escape(key) + r"\.timeSamples = \{\s*\d+: (\[.*?\]),", source)
         return np.array(ast.literal_eval(match[1]))
-    pos = field("points")[:, :2] * [210, -210] + [W / 2, H / 2]
+    positions = field("points")[:, :2]
+    if enlargement:
+        positions = positions + enlargement * field("normals")[:, :2]
+    pos = positions * [210, -210] + [W / 2, H / 2]
     triangles = field("faceVertexIndices").reshape(-1, 3)
     uv = field("primvars:st")[field("primvars:st:indices")].reshape(-1, 3, 2)
     atlas = np.full((H,W,2), -1, np.float32)
@@ -57,6 +60,29 @@ def mesh_uv(path):
 
 def colors(table):
     return np.array([list(map(int,re.findall(r"\d+",table[f"color{i}"]))) for i in range(1,21)])
+
+
+def ambient_digit(uv, settings, style, digit):
+    cfg = settings["base"] | settings[f"colorway{style}"] | settings["tritiumBase"] | settings[f"tritium{style}"]
+    u,v = uv.transpose(2,0,1)
+    du = np.minimum(np.abs(np.gradient(u,axis=0))+np.abs(np.gradient(u,axis=1)),.45)/3
+    coverage = sum(np.clip(2-4*np.abs(.5-(u+d-.15)/.7),0,1) for d in (-du,0,du))/3
+    rng = np.random.default_rng(settings["global"]["randomSeed"] + digit)
+    out = np.zeros((H,W,3))
+    for index,color in enumerate(colors(cfg)/255,1):
+        phase=rng.random()
+        length=(.30+.25*rng.random())*cfg["segmentGlobalLengthMultiplier"]
+        if index==cfg["tritiumSolidLayerIdx"]:
+            length*=cfg["tritiumSolidLayerLengthMultiplier"]
+        ramp=cfg["segmentRampLength"]
+        t=np.clip((np.abs((v+phase)%1-.5)-length/2+ramp)/ramp,0,1)
+        alpha=(coverage*(1-t*t*(3-2*t)))[:,:,None]
+        out=color*alpha**2+(1-alpha)*out
+    light=(out*cfg["bloomTextLayerInputMult"])**cfg["bloomTextContrast"]
+    z=light**cfg["bloomCombinedContrast"]*cfg["bloomFinalMult"]
+    mapped=z*(1+z/cfg["bloomWhitePoint"])/(1+z)
+    display=mapped/(1+mapped.max(axis=2,keepdims=True))
+    return Image.fromarray(np.uint8(np.clip(display,0,1)**(1/1.85)*255))
 
 
 def render(uv, settings, style, phase, digit, ambient):
@@ -177,7 +203,7 @@ def scene(settings):
                 # The opaque base is already visible on wake. Only the second texture blends.
                 fade=CHILD(layer,"Group",name=f"sheen{name}",x="0",y="0",width="480",height="480")
                 opacity=CHILD(fade,"Transform",target="alpha",value="([SECOND] % 8) < 4 ? 255 : 0")
-                CHILD(opacity,"Animation",duration="3.8",fps="12",interpolation="LINEAR")
+                CHILD(opacity,"Animation",duration="3.8",fps="30",interpolation="LINEAR")
             scale=1.02 if ambient else 1.04
             for y,fmt in ROWS:
                 height=round(H*scale)
@@ -197,11 +223,12 @@ if __name__=="__main__":
     localized(props)
     for digit in range(10):
         uv=mesh_uv(args.model/"解析/媒体"/BUNDLE/f"{digit}.usda")
+        ambient_uv=mesh_uv(args.model/"解析/媒体"/BUNDLE/f"{digit}.usda",settings["tritiumBase"]["fontEnlargement"])
         for style in range(1,6):
             for phase in (0,1,5,FRAMES):
                 if style==1 and phase!=FRAMES:
                     continue
-                im=render(uv,settings,style,phase,digit,phase==FRAMES)
+                im=ambient_digit(ambient_uv,settings,style,digit) if phase==FRAMES else render(uv,settings,style,phase,digit,False)
                 im.save(DRAW/f"p{style}f{phase}d{digit}.png",compress_level=5)
     # Match both opaque endpoints to one exposure. A moving highlight changes only part
     # of each digit, so the time remains readable even on the first interactive frame.
