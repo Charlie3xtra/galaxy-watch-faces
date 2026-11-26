@@ -11,6 +11,7 @@
   <string name="large_with_seconds">J:M:S II</string>
   <string name="xlarge">J:M III</string>
   <string name="xlarge_with_seconds">J:M:S III</string>
+  <string name="elevation">KETINGGIAN</string>
   <string name="seconds">SAAT</string>
   <string name="none">TIADA</string>
   <string name="top_left">Kiri Atas</string>
@@ -25,4 +26,6 @@
   <string name="performance">Performance</string>
   <string name="burgundy">Burgundy</string>
   <string name="desert">Desert</string>
+  <string name="feet">KA</string>
+  <string name="meters">M</string>
 </resources>

@@ -11,6 +11,7 @@
   <string name="large_with_seconds">Ч:М:С II</string>
   <string name="xlarge">Ч:М III</string>
   <string name="xlarge_with_seconds">Ч:М:С III</string>
+  <string name="elevation">ВЫСОТА</string>
   <string name="seconds">СЕКУНДЫ</string>
   <string name="none">НЕТ</string>
   <string name="top_left">Вверху слева</string>
@@ -25,4 +26,6 @@
   <string name="performance">Performance</string>
   <string name="burgundy">Burgundy</string>
   <string name="desert">Desert</string>
+  <string name="feet">ФТ</string>
+  <string name="meters">М</string>
 </resources>

@@ -11,6 +11,7 @@
   <string name="large_with_seconds">H:M:S II</string>
   <string name="xlarge">H:M III</string>
   <string name="xlarge_with_seconds">H:M:S III</string>
+  <string name="elevation">ALTITUDINE</string>
   <string name="seconds">SECUNDE</string>
   <string name="none">FĂRĂ</string>
   <string name="top_left">Stânga sus</string>
@@ -25,4 +26,6 @@
   <string name="performance">Performance</string>
   <string name="burgundy">Burgundy</string>
   <string name="desert">Desert</string>
+  <string name="feet">ft</string>
+  <string name="meters">m</string>
 </resources>

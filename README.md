@@ -148,6 +148,6 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 | :---: | :---: |
 | <img src="ModularUltra/screenshots/gallery.png" width="220" alt="Ultra 模块亮屏示例"> | <img src="ModularUltra/screenshots/gallery-ambient.png" width="220" alt="Ultra 模块息屏示例"> |
 
-七个系统组件位、六种时间样式、五种配色，可选秒数表圈和手动红色夜间模式。时间数字来自 watchOS 24S132 的 Foghorn 字体，布局适配 Galaxy 圆屏。组件接入 Wear OS 数据源，示例图使用固定读数。Apple 训练负荷、水深和海拔表圈暂未移植。
+七个系统组件位、六种时间样式、五种配色，可选秒数表圈和手动红色夜间模式。时间数字来自 watchOS 24S132 的 Foghorn 字体，布局适配 Galaxy 圆屏。组件接入 Wear OS 数据源，示例图使用固定读数。海拔表圈使用三星指南针气压组件的实测值，以标准大气压估算高度。左右按固件分档绘制英尺和米的刻度，底部显示近似米数。日期和日出等短文本沿圆弧排列，盘内组件使用深色高光边框。训练负荷和水深表圈暂未移植。
 
-[下载 Ultra 模块 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/modular-ultra-1.0/ModularUltra-1.0.apk)
+[下载 Ultra 模块 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/modular-ultra-1.1/ModularUltra-1.1.apk)

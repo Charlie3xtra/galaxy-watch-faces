@@ -11,6 +11,7 @@
   <string name="large_with_seconds">ชม:นาที:วิ II</string>
   <string name="xlarge">ชม:นาที III</string>
   <string name="xlarge_with_seconds">ชม:นาที:วิ III</string>
+  <string name="elevation">ความสูง</string>
   <string name="seconds">วินาที</string>
   <string name="none">ไม่มี</string>
   <string name="top_left">ด้านบนซ้าย</string>
@@ -25,4 +26,6 @@
   <string name="performance">Performance</string>
   <string name="burgundy">Burgundy</string>
   <string name="desert">Desert</string>
+  <string name="feet">ฟุต</string>
+  <string name="meters">เมตร</string>
 </resources>

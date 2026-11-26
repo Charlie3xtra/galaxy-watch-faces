@@ -18,7 +18,7 @@ if (!(Test-Path $key)) {
 $compiled = Join-Path $tempBuild 'res.zip'
 $raw = Join-Path $tempBuild 'raw.apk'
 $aligned = Join-Path $tempBuild 'aligned.apk'
-$output = Join-Path $PSScriptRoot 'ModularUltra-1.0.apk'
+$output = Join-Path $PSScriptRoot 'ModularUltra-1.1.apk'
 Run "$BuildTools/aapt2.exe" @('compile','--dir',"$PSScriptRoot/res",'-o',$compiled)
 Run "$BuildTools/aapt2.exe" @('link','-I',$AndroidJar,'--manifest',"$PSScriptRoot/AndroidManifest.xml",'--min-sdk-version','36','--target-sdk-version','36','-o',$raw,$compiled)
 Run "$BuildTools/zipalign.exe" @('-f','4',$raw,$aligned)

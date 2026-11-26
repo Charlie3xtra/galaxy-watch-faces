@@ -11,6 +11,7 @@
   <string name="large_with_seconds">U:M:S II</string>
   <string name="xlarge">U:M III</string>
   <string name="xlarge_with_seconds">U:M:S III</string>
+  <string name="elevation">VIŠINA</string>
   <string name="seconds">SEKUNDE</string>
   <string name="none">BREZ</string>
   <string name="top_left">Zgoraj levo</string>
@@ -25,4 +26,6 @@
   <string name="performance">Performance</string>
   <string name="burgundy">Burgundy</string>
   <string name="desert">Desert</string>
+  <string name="feet">FT</string>
+  <string name="meters">M</string>
 </resources>

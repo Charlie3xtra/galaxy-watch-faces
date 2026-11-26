@@ -39,11 +39,38 @@ def variant(node,target,val):el(node,'Variant',mode='AMBIENT',target=target,valu
 def colored(node,day,night,ambient,night_ambient):
     el(node,'Transform',target='tintColor',value=f'[CONFIGURATION.night] ? {night} : {day}')
     variant(node,'tintColor',f'[CONFIGURATION.night] ? {night_ambient} : {ambient}')
+glass=set()
 def bg(parent,bounds,radius):
-    node=el(parent,'PartDraw',**bounds)
+    # Antialiased glass rim and a broad upper reflection, rendered once per shape.
+    w,h=bounds['width'],bounds['height']
+    key=f'glass_{w}_{h}'
+    if key not in glass:
+        glass.add(key)
+        scale=3
+        W,H=w*scale,h*scale
+        mask=Image.new('L',(W,H))
+        ImageDraw.Draw(mask).rounded_rectangle((1,1,W-2,H-2),radius*scale,fill=255)
+        surface=Image.new('RGBA',(W,H))
+        pixels=surface.load()
+        for y in range(H):
+            for x in range(W):
+                u,v=x/W,y/H
+                value=int(24+13*(1-v)**2+8*max(0,1-((u-.23)/.72)**2-((v+.4)/.65)**2))
+                pixels[x,y]=(value,value,min(255,value+2),255)
+        inner=Image.new('L',(W,H))
+        ImageDraw.Draw(inner).rounded_rectangle((4,4,W-5,H-5),max(1,radius*scale-3),fill=255)
+        from PIL import ImageChops
+        rim=ImageChops.subtract(mask,inner)
+        shine=Image.new('RGBA',(W,H))
+        sd=ImageDraw.Draw(shine)
+        for y in range(H):
+            v=int(40+66*(1-y/H)**3)
+            sd.line((0,y,W,y),fill=(v,v,v+2,255))
+        surface.paste(shine,mask=rim);surface.putalpha(mask)
+        surface.resize((w,h),Image.Resampling.LANCZOS).save(out/(key+'.png'))
+    node=el(parent,'PartImage',**bounds)
     variant(node,'alpha',0)
-    shape=el(node,'RoundRectangle',**box(0,0,bounds['width'],bounds['height']),cornerRadiusX=radius,cornerRadiusY=radius)
-    el(shape,'Fill',color='#FF202022')
+    el(node,'Image',resource=key)
 def text(parent,bounds,expr,size):
     part=el(parent,'PartText',**bounds)
     font=el(el(part,'Text',align='CENTER',ellipsis='TRUE'),'Font',family='SYNC_TO_DEVICE',size=size,color='#FFFFFFFF')
@@ -62,8 +89,8 @@ sizes=['default','large','xlarge']
 for st in sizes:
     for ss in ('','_with_seconds'):
         el(styles,'ListOption',id=st+ss,displayName=st+ss,icon='sample_'+st+ss)
-bezel=el(cfg,'ListConfiguration',id='bezel',displayName='edge',defaultValue='seconds')
-for mode in ('seconds','none'):el(bezel,'ListOption',id=mode,displayName=mode)
+bezel=el(cfg,'ListConfiguration',id='bezel_mode',displayName='edge',defaultValue='elevation')
+for mode in ('elevation','seconds','none'):el(bezel,'ListOption',id=mode,displayName=mode)
 el(cfg,'BooleanConfiguration',id='night',displayName='nightmode',defaultValue='FALSE')
 
 from fontTools.ttLib import TTFont
@@ -101,7 +128,7 @@ for i,st in enumerate(sizes):
         sample.save(out/('sample_'+family+'.png'))
 scene=el(face,'Scene',backgroundColor='#000000')
 mint=ink('timeMinutes')
-edge=el(el(scene,'ListConfiguration',id='bezel'),'ListOption',id='seconds')
+edge=el(el(scene,'ListConfiguration',id='bezel_mode'),'ListOption',id='seconds')
 ring=el(edge,'Group',name='seconds_ring',**full)
 colored(ring,'[CONFIGURATION.tone.0]',ink('bezelMajorTick_night'),ink('bezelMajorTick.tritium'),ink('bezelMajorTick_night.tritium'))
 for n in range(60):
@@ -145,18 +172,39 @@ for idx,(key,x,y,default,datatype,provider) in enumerate(slots,1):
     for typ in types:
         view=el(slot,'Complication',type=typ)
         if typ=='EMPTY':continue
-        bg(view,box(0,0,w,h),17 if wide else w//2)
+        curved=typ=='SHORT_TEXT' and key in ('top','bottom_right')
+        if not curved:bg(view,box(0,0,w,h),17 if wide else w//2)
         g=el(view,'Group',name=key+'_'+typ.lower(),**box(0,0,w,h))
         colored(g,'[CONFIGURATION.tone.0]',ink('primaryComplication_night'),'[CONFIGURATION.tone.0]',ink('primaryComplication_night.tritium'))
         variant(g,'alpha',160)
         img='[COMPLICATION.MONOCHROMATIC_IMAGE]'
         val='[COMPLICATION.TEXT]'
-        if typ=='MONOCHROMATIC_IMAGE':
+        if curved:
+            import math
+            angle=math.degrees(math.atan2(x-240,240-y))%360
+            radius=math.hypot(x-240,y-240)
+            direction=1 if key=='top' else -1
+            part=el(g,'PartText',**box(0,0,w,h))
+            curved_text=el(part,'TextCircular',centerX=240-x+w/2,centerY=240-y+h/2,
+                           width=2*radius,height=2*radius,startAngle=(angle-12*direction)%360,
+                           endAngle=(angle+12*direction)%360,direction='CLOCKWISE' if direction==1 else 'COUNTER_CLOCKWISE',align='CENTER')
+            font=el(curved_text,'Font',size=15,family='SYNC_TO_DEVICE',color='#FFFFFFFF')
+            tpl=el(font,'Template');tpl.text='%s';el(tpl,'Parameter',expression=val)
+        elif typ=='MONOCHROMATIC_IMAGE':
             icon(g,box(w//2-20,h//2-20,40,40),img)
         elif wide:
             icon(g,box(16,20,40,40),img)
             text(g,box(63,6,w-75,28),'[COMPLICATION.TITLE]',18)
-            text(g,box(60,33,w-72,41),val,24)
+            if typ=='RANGED_VALUE':
+                gauge=el(g,'PartDraw',**box(65,62,224,7))
+                track=el(gauge,'RoundRectangle',**box(0,0,224,6),cornerRadiusX=3,cornerRadiusY=3)
+                el(track,'Fill',color='#44FFFFFF')
+                bar=el(gauge,'RoundRectangle',**box(0,0,224,6),cornerRadiusX=3,cornerRadiusY=3)
+                el(bar,'Transform',target='width',value='224*clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(0.001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)')
+                el(bar,'Fill',color='#FFFFFFFF')
+                text(g,box(60,27,w-72,32),val,22)
+            else:
+                text(g,box(60,33,w-72,41),val,24)
         else:
             if typ=='RANGED_VALUE':
                 for fg in (False,True):
@@ -170,6 +218,8 @@ for idx,(key,x,y,default,datatype,provider) in enumerate(slots,1):
             el(el(cond,'Expressions'),'Expression',name='long_reading').text='textLength([COMPLICATION.TEXT]) > 5'
             text(el(cond,'Compare',expression='long_reading'),box(2,32,70,32),val,15)
             text(el(cond,'Default'),box(3,32,68,32),val,21)
+from elevation import add_bezel
+add_bezel(scene,el,box,colored,ink)
 write_xml(face,root/'res/raw/watchface.xml')
 for loc in (fw/'属性表'/bundle).glob('*.lproj'):
     def read(path):return json.loads(path.read_text('utf8')) if path.exists() else {}
@@ -181,9 +231,10 @@ for loc in (fw/'属性表'/bundle).glob('*.lproj'):
     for st in sizes:
         for ss in ('','_with_seconds'):
             key=st+ss;data[key]=local['EDIT_OPTION_LABEL_FOGHORN_STYLE_'+key.upper()]
-    for k in ('seconds','none'):data[k]=local['EDIT_OPTION_LABEL_FOGHORN_BEZEL_'+k.upper()]
+    for k in ('elevation','seconds','none'):data[k]=local['EDIT_OPTION_LABEL_FOGHORN_BEZEL_'+k.upper()]
     for k,*_ in slots:data[k]=labels.get('SLOT_LABEL_'+k.upper(),k.replace('_',' ').title())
     for k in tones:data[k]=names.get('foghorn.'+k,names.get(k,k.title()))
+    data.update(feet=local.get('FOGHORN_LABEL_FEET','FT'),meters=local.get('FOGHORN_LABEL_METERS','M'))
     code=loc.stem
     if code.startswith('zh'):
         data.update(nightmode='夜间模式' if code=='zh_CN' else '夜間模式',adventurer='探险橙' if code=='zh_CN' else '探險橙',ocean='海洋蓝' if code=='zh_CN' else '海洋藍',performance='金黄' if code=='zh_CN' else '金黃',burgundy='酒红' if code=='zh_CN' else '酒紅',desert='沙色')
@@ -199,10 +250,16 @@ def gallery(ambient):
     img=Image.new('RGBA',(480,480),'black')
     d=ImageDraw.Draw(img)
     color='#A74B13' if ambient else '#FF6600'
-    for n in range(60):
-        a=math.radians(n*6)
-        def at(r):return (240+r*math.sin(a),240-r*math.cos(a))
-        d.line([at(232),at(220 if n%5==0 else 225)],fill=('#292929' if ambient else color if n<=32 else '#49270D'),width=3 if n%5==0 else 2)
+    # Fixed public example at +18 m in the firmware's first elevation range.
+    for side,count in [(-1,20),(1,30)]:
+        for n in range(count+1):
+            angle=math.radians(side*(134-88*n/count))
+            def at(r):return (240+r*math.sin(angle),240-r*math.cos(angle))
+            d.line((at(233),at(220 if n%(2 if side<0 else 10)==0 else 226)),width=3,
+                   fill=color if n/count <= .6 else '#483122')
+    label=ImageFont.truetype('segoeui.ttf',16)
+    for x,y,v in [(101,67,'FT'),(379,67,'M'),(98,402,'100'),(382,402,'30'),(240,450,'≈ 18 m')]:
+        d.text((x,y),v,font=label,fill=color,anchor='mm')
     time=Image.open(out/'sample_default.png')
     if ambient:time.putalpha(time.getchannel('A').point(lambda v:int(v*.70)))
     img.alpha_composite(time,(70,134))
@@ -212,11 +269,13 @@ def gallery(ambient):
     samples=[('▣','72%'),('▦','1 Apr'),('☀','18°'),('▦','Calendar'),('♥','68'),('↗','2450'),('☼','06:32')]
     for (key,x,y,*_),(symbol,reading) in zip(slots,samples):
         if key=='center':
-            if not ambient:d.rounded_rectangle((81,237,399,317),17,fill='#202022')
+            if not ambient:img.alpha_composite(Image.open(out/'glass_318_80.png'),(81,237))
             d.text((119,y),symbol,font=symbols,fill=color,anchor='mm')
             d.text((255,y),reading,font=regular,fill=color,anchor='mm')
         else:
-            if not ambient:d.ellipse((x-37,y-37,x+37,y+37),fill='#202022')
+            if key in ('top','bottom_right'):
+                d.text((x,y),reading,font=small,fill=color,anchor='mm');continue
+            if not ambient:img.alpha_composite(Image.open(out/'glass_74_74.png'),(x-37,y-37))
             d.text((x,y-13),symbol,font=symbols,fill=color,anchor='mm')
             d.text((x,y+12),reading,font=small if len(reading)>5 else regular,fill=color,anchor='mm')
     return img

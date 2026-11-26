@@ -11,6 +11,7 @@
   <string name="large_with_seconds">שע׳, דק׳ ושני׳ II</string>
   <string name="xlarge">שע׳ ודק׳ IIII</string>
   <string name="xlarge_with_seconds">שע׳, דק׳ ושני׳ III</string>
+  <string name="elevation">גובה</string>
   <string name="seconds">שניות</string>
   <string name="none">ללא</string>
   <string name="top_left">שמאל למעלה</string>
@@ -25,4 +26,6 @@
   <string name="performance">Performance</string>
   <string name="burgundy">Burgundy</string>
   <string name="desert">Desert</string>
+  <string name="feet">רגל</string>
+  <string name="meters">מ׳</string>
 </resources>

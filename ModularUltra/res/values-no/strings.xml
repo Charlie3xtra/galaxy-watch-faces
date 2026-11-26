@@ -11,6 +11,7 @@
   <string name="large_with_seconds">T:M:S 2</string>
   <string name="xlarge">T:M 3</string>
   <string name="xlarge_with_seconds">T:M:S 3</string>
+  <string name="elevation">HØYDE</string>
   <string name="seconds">SEKUNDER</string>
   <string name="none">INGEN</string>
   <string name="top_left">Oppe til venstre</string>
@@ -25,4 +26,6 @@
   <string name="performance">Performance</string>
   <string name="burgundy">Burgundy</string>
   <string name="desert">Desert</string>
+  <string name="feet">FOT</string>
+  <string name="meters">M</string>
 </resources>

@@ -11,6 +11,7 @@
   <string name="large_with_seconds">Ó:P:MP II</string>
   <string name="xlarge">Ó:P III</string>
   <string name="xlarge_with_seconds">Ó:P:MP III</string>
+  <string name="elevation">SZINTKÜLÖNBSÉG</string>
   <string name="seconds">MÁSODPERC</string>
   <string name="none">NINCS</string>
   <string name="top_left">Balra fent</string>
@@ -25,4 +26,6 @@
   <string name="performance">Performance</string>
   <string name="burgundy">Burgundy</string>
   <string name="desert">Desert</string>
+  <string name="feet">LÁB</string>
+  <string name="meters">M</string>
 </resources>

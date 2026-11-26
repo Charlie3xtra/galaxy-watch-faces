@@ -11,6 +11,7 @@
   <string name="large_with_seconds">시:분:초 II</string>
   <string name="xlarge">시:분 III</string>
   <string name="xlarge_with_seconds">시:분:초 III</string>
+  <string name="elevation">고도</string>
   <string name="seconds">초</string>
   <string name="none">없음</string>
   <string name="top_left">왼쪽 상단</string>
@@ -25,4 +26,6 @@
   <string name="performance">Performance</string>
   <string name="burgundy">Burgundy</string>
   <string name="desert">Desert</string>
+  <string name="feet">FT</string>
+  <string name="meters">M</string>
 </resources>

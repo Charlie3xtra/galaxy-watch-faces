@@ -11,6 +11,7 @@
   <string name="large_with_seconds">H:M:S II</string>
   <string name="xlarge">H:M III</string>
   <string name="xlarge_with_seconds">H:M:S III</string>
+  <string name="elevation">ELEVAÇÃO</string>
   <string name="seconds">SEGUNDOS</string>
   <string name="none">NENHUM</string>
   <string name="top_left">Superior Esquerda</string>
@@ -25,4 +26,6 @@
   <string name="performance">Performance</string>
   <string name="burgundy">Burgundy</string>
   <string name="desert">Desert</string>
+  <string name="feet">PÉS</string>
+  <string name="meters">M</string>
 </resources>

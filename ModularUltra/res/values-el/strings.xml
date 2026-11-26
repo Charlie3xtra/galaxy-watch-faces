@@ -11,6 +11,7 @@
   <string name="large_with_seconds">Ω:Λ:Δ II</string>
   <string name="xlarge">Ω:Λ III</string>
   <string name="xlarge_with_seconds">Ω:Λ:Δ III</string>
+  <string name="elevation">ΥΨΟΜΕΤΡΟ</string>
   <string name="seconds">ΔΕΥΤΕΡΟΛΕΠΤΑ</string>
   <string name="none">ΚΑΝΕΝΑ</string>
   <string name="top_left">Πάνω αριστερά</string>
@@ -25,4 +26,6 @@
   <string name="performance">Performance</string>
   <string name="burgundy">Burgundy</string>
   <string name="desert">Desert</string>
+  <string name="feet">ΠΔ.</string>
+  <string name="meters">Μ</string>
 </resources>

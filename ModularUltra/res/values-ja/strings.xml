@@ -11,6 +11,7 @@
   <string name="large_with_seconds">時:分:秒 II</string>
   <string name="xlarge">時:分 III</string>
   <string name="xlarge_with_seconds">時:分:秒 III</string>
+  <string name="elevation">高度</string>
   <string name="seconds">秒</string>
   <string name="none">なし</string>
   <string name="top_left">左上</string>
@@ -25,4 +26,6 @@
   <string name="performance">Performance</string>
   <string name="burgundy">Burgundy</string>
   <string name="desert">Desert</string>
+  <string name="feet">FT</string>
+  <string name="meters">M</string>
 </resources>

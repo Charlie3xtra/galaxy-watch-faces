@@ -11,6 +11,7 @@
   <string name="large_with_seconds">J.M.D II</string>
   <string name="xlarge">J.M III</string>
   <string name="xlarge_with_seconds">J.M.D III</string>
+  <string name="elevation">ELEVASI</string>
   <string name="seconds">DETIK</string>
   <string name="none">TIDAK ADA</string>
   <string name="top_left">Kiri Atas</string>
@@ -25,4 +26,6 @@
   <string name="performance">Performance</string>
   <string name="burgundy">Burgundy</string>
   <string name="desert">Desert</string>
+  <string name="feet">FT</string>
+  <string name="meters">M</string>
 </resources>

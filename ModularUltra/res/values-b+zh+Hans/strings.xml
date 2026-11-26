@@ -11,6 +11,7 @@
   <string name="large_with_seconds">时:分:秒II</string>
   <string name="xlarge">时:分III</string>
   <string name="xlarge_with_seconds">时:分:秒III</string>
+  <string name="elevation">海拔高度</string>
   <string name="seconds">秒</string>
   <string name="none">无</string>
   <string name="top_left">左上</string>
@@ -25,4 +26,6 @@
   <string name="performance">金黄</string>
   <string name="burgundy">酒红</string>
   <string name="desert">沙色</string>
+  <string name="feet">英尺</string>
+  <string name="meters">米</string>
 </resources>
