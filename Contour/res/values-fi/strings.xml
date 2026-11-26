@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Reunus</string>
+  <string name="style">TYYLI</string>
+  <string name="sharp">NORMAALI</string>
+  <string name="soft">PYÖRISTETTY</string>
+  <string name="dial">TAULUN VÄRI</string>
+  <string name="color">VÄRI</string>
+  <string name="comp">Complication</string>
+  <string name="c0">Kerma</string>
+  <string name="c1">Sininen</string>
+  <string name="c2">Punainen</string>
+  <string name="c3">Keltainen</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Kontur</string>
+  <string name="style">GAYA</string>
+  <string name="sharp">BIASA</string>
+  <string name="soft">BUCU BULAT</string>
+  <string name="dial">WARNA DAIL</string>
+  <string name="color">WARNA</string>
+  <string name="comp">Complication</string>
+  <string name="c0">Putih Kuning</string>
+  <string name="c1">Biru</string>
+  <string name="c2">Merah</string>
+  <string name="c3">Kuning</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

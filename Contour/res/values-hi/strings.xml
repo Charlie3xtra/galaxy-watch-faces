@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">कॉन्टूर</string>
+  <string name="style">शैली</string>
+  <string name="sharp">नियमित</string>
+  <string name="soft">गोलाकार</string>
+  <string name="dial">डायल रंग</string>
+  <string name="color">रंग</string>
+  <string name="comp">Complication</string>
+  <string name="c0">क्रीम</string>
+  <string name="c1">नीला</string>
+  <string name="c2">लाल</string>
+  <string name="c3">पीला</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

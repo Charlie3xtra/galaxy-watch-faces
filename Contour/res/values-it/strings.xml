@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Contorno</string>
+  <string name="style">STILE</string>
+  <string name="sharp">REGOLARE</string>
+  <string name="soft">ARROTONDATO</string>
+  <string name="dial">COLORE QUADRANTE</string>
+  <string name="color">COLORE</string>
+  <string name="comp">Complication</string>
+  <string name="c0">Crema</string>
+  <string name="c1">Blu</string>
+  <string name="c2">Rosso</string>
+  <string name="c3">Giallo</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

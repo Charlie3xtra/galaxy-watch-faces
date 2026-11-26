@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Контур</string>
+  <string name="style">СТИЛЬ</string>
+  <string name="sharp">ОБЫЧНЫЙ</string>
+  <string name="soft">ЗАКРУГЛЕННЫЙ</string>
+  <string name="dial">ЦВЕТ ЦИФЕРБЛАТА</string>
+  <string name="color">ЦВЕТ</string>
+  <string name="comp">Complication</string>
+  <string name="c0">Кремовый</string>
+  <string name="c1">Синий</string>
+  <string name="c2">Красный</string>
+  <string name="c3">Желтый</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

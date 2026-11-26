@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Contour</string>
+  <string name="style">STYLE</string>
+  <string name="sharp">REGULAR</string>
+  <string name="soft">ROUNDED</string>
+  <string name="dial">DIAL COLOUR</string>
+  <string name="color">COLOUR</string>
+  <string name="comp">Complication</string>
+  <string name="c0">Cream</string>
+  <string name="c1">Blue</string>
+  <string name="c2">Red</string>
+  <string name="c3">Yellow</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

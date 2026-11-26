@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Kontura</string>
+  <string name="style">SLOG</string>
+  <string name="sharp">NAVADNO</string>
+  <string name="soft">ZAOKROŽENO</string>
+  <string name="dial">BARVA ŠTEVILČNICE</string>
+  <string name="color">BARVA</string>
+  <string name="comp">Complication</string>
+  <string name="c0">Kremna</string>
+  <string name="c1">Modra</string>
+  <string name="c2">Rdeča</string>
+  <string name="c3">Rumena</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

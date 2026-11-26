@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Contour</string>
+  <string name="style">STYLE</string>
+  <string name="sharp">NORMAL</string>
+  <string name="soft">ARRONDI</string>
+  <string name="dial">COULEUR DU CADRAN</string>
+  <string name="color">COULEUR</string>
+  <string name="comp">Complication</string>
+  <string name="c0">Crème</string>
+  <string name="c1">Bleu</string>
+  <string name="c2">Rouge</string>
+  <string name="c3">Jaune</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">輪郭</string>
+  <string name="style">スタイル</string>
+  <string name="sharp">レギュラー</string>
+  <string name="soft">ラウンド</string>
+  <string name="dial">文字盤のカラー</string>
+  <string name="color">カラー</string>
+  <string name="comp">Complication</string>
+  <string name="c0">クリーム</string>
+  <string name="c1">ブルー</string>
+  <string name="c2">レッド</string>
+  <string name="c3">イエロー</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

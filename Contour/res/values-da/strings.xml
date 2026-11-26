@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Kontur</string>
+  <string name="style">FORMAT</string>
+  <string name="sharp">ALMINDELIG</string>
+  <string name="soft">AFRUNDET</string>
+  <string name="dial">URSKIVEFARVE</string>
+  <string name="color">FARVE</string>
+  <string name="comp">Complication</string>
+  <string name="c0">Fløde</string>
+  <string name="c1">Blå</string>
+  <string name="c2">Rød</string>
+  <string name="c3">Gul</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

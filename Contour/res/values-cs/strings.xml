@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Kontura</string>
+  <string name="style">STYL</string>
+  <string name="sharp">STANDARDNÍ</string>
+  <string name="soft">ZAOBLENÝ</string>
+  <string name="dial">BARVA ČÍSELNÍKU</string>
+  <string name="color">BARVY</string>
+  <string name="comp">Complication</string>
+  <string name="c0">Smetanová</string>
+  <string name="c1">Modrá</string>
+  <string name="c2">Červená</string>
+  <string name="c3">Žlutá</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

@@ -131,3 +131,13 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 
 [下载加州 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/california-1.1) · [圆形亮屏与息屏对照](California/圆形盘面核对.md)。1.1 默认使用圆形奶白配色，上图为 1.0 实拍，数字使用 watchOS 24S132 加州表盘内嵌的 SF Compact Numerals Bold。提供六种数字样式、六款配色和一个可更换的短文本组件，默认显示日期。指针长度和刻度半径已适配 Galaxy 圆屏。息屏采用黑底、保留时分针并隐藏秒针，配色含移植取值。
 
+
+## 轮廓 Contour
+
+| 亮屏 | 息屏 |
+| :---: | :---: |
+| <img src="Contour/screenshots/active.png" width="220" alt="轮廓亮屏实拍"> | <img src="Contour/screenshots/ambient.png" width="220" alt="轮廓息屏实拍"> |
+
+从 watchOS 24S132 的 NTKProteusFaceBundle 读取 Neptune 常规及圆体字形，按小时计算字重，再将原有矩形数字带映射到圆屏。整点前两秒使用 23 档字重过渡。提供六款配色、彩色盘底和可留空的短文本组件。息屏黑底来自固件，数字亮度按 Galaxy 屏幕适配。Apple 的点按波动和表冠展开尚未移植。两图均来自 Galaxy Watch。
+
+[下载轮廓 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/contour-1.0/Contour-1.0.apk)

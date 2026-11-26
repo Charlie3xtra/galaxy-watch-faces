@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">輪廓</string>
+  <string name="style">樣式</string>
+  <string name="sharp">標準</string>
+  <string name="soft">圓角</string>
+  <string name="dial">刻度盤顏色</string>
+  <string name="color">顏色</string>
+  <string name="comp">複雜功能</string>
+  <string name="c0">奶油白色</string>
+  <string name="c1">藍色</string>
+  <string name="c2">紅色</string>
+  <string name="c3">黃色</string>
+  <string name="c4">白色</string>
+  <string name="c5">螢光黃</string>
+</resources>

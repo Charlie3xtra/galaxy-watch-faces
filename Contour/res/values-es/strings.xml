@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Contorno</string>
+  <string name="style">ESTILO</string>
+  <string name="sharp">NORMAL</string>
+  <string name="soft">REDONDEADO</string>
+  <string name="dial">COLOR DE LA ESFERA</string>
+  <string name="color">COLOR</string>
+  <string name="comp">Complication</string>
+  <string name="c0">Crema</string>
+  <string name="c1">Azul</string>
+  <string name="c2">Rojo</string>
+  <string name="c3">Amarillo</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

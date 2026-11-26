@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Kontur</string>
+  <string name="style">STYL</string>
+  <string name="sharp">ZWYKŁE</string>
+  <string name="soft">ZAOKRĄGLONE</string>
+  <string name="dial">KOLOR TARCZKI</string>
+  <string name="color">KOLOR</string>
+  <string name="comp">Complication</string>
+  <string name="c0">Kremowy</string>
+  <string name="c1">Niebieski</string>
+  <string name="c2">Czerwony</string>
+  <string name="c3">Żółty</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

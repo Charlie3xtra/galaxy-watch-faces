@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">윤곽</string>
+  <string name="style">스타일</string>
+  <string name="sharp">기본</string>
+  <string name="soft">원형</string>
+  <string name="dial">문자판 색상</string>
+  <string name="color">색상</string>
+  <string name="comp">Complication</string>
+  <string name="c0">크림</string>
+  <string name="c1">블루</string>
+  <string name="c2">레드</string>
+  <string name="c3">옐로</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

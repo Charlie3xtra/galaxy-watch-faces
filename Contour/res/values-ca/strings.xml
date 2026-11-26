@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Contorn</string>
+  <string name="style">ESTIL</string>
+  <string name="sharp">NORMAL</string>
+  <string name="soft">ARRODONIT</string>
+  <string name="dial">COLOR DE L’ESFERA</string>
+  <string name="color">COLOR</string>
+  <string name="comp">Complication</string>
+  <string name="c0">Crema</string>
+  <string name="c1">Blau</string>
+  <string name="c2">Vermell</string>
+  <string name="c3">Groc</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

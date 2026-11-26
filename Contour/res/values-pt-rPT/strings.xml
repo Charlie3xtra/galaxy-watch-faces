@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Contorno</string>
+  <string name="style">ESTILO</string>
+  <string name="sharp">NORMAL</string>
+  <string name="soft">ARREDONDADO</string>
+  <string name="dial">COR DO MOSTRADOR</string>
+  <string name="color">COR</string>
+  <string name="comp">Complication</string>
+  <string name="c0">Creme</string>
+  <string name="c1">Azul</string>
+  <string name="c2">Vermelho</string>
+  <string name="c3">Amarelo</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

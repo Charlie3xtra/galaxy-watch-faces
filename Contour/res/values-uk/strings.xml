@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Обрис</string>
+  <string name="style">СТИЛЬ</string>
+  <string name="sharp">ПРЯМИЙ</string>
+  <string name="soft">ОКРУГЛИЙ</string>
+  <string name="dial">КОЛІР ШКАЛИ</string>
+  <string name="color">КОЛІР</string>
+  <string name="comp">Complication</string>
+  <string name="c0">Кремовий</string>
+  <string name="c1">Синій</string>
+  <string name="c2">Червоний</string>
+  <string name="c3">Жовтий</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

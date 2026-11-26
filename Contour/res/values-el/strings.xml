@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Περίγραμμα</string>
+  <string name="style">ΣΤΙΛ</string>
+  <string name="sharp">ΚΑΝΟΝΙΚΟ</string>
+  <string name="soft">ΣΤΡΟΓΓΥΛΟ</string>
+  <string name="dial">ΧΡΩΜΑ ΚΑΝΤΡΑΝ</string>
+  <string name="color">ΧΡΩΜΑ</string>
+  <string name="comp">Complication</string>
+  <string name="c0">Κρεμ</string>
+  <string name="c1">Μπλε</string>
+  <string name="c2">Κόκκινο</string>
+  <string name="c3">Κίτρινο</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

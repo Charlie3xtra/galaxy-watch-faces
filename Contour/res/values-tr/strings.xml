@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Kontur</string>
+  <string name="style">STİL</string>
+  <string name="sharp">NORMAL</string>
+  <string name="soft">YUVARLAK</string>
+  <string name="dial">KADRAN RENGİ</string>
+  <string name="color">RENK</string>
+  <string name="comp">Complication</string>
+  <string name="c0">Krem</string>
+  <string name="c1">Mavi</string>
+  <string name="c2">Kırmızı</string>
+  <string name="c3">Sarı</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

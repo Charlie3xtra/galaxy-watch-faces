@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">كونتور</string>
+  <string name="style">النمط</string>
+  <string name="sharp">عادي</string>
+  <string name="soft">مستدير</string>
+  <string name="dial">لون القرص</string>
+  <string name="color">اللون</string>
+  <string name="comp">Complication</string>
+  <string name="c0">كريمي</string>
+  <string name="c1">أزرق</string>
+  <string name="c2">أحمر</string>
+  <string name="c3">أصفر</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

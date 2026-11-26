@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Diễn biến</string>
+  <string name="style">KIỂU</string>
+  <string name="sharp">THƯỜNG</string>
+  <string name="soft">BO TRÒN</string>
+  <string name="dial">MÀU ĐĨA SỐ</string>
+  <string name="color">MÀU</string>
+  <string name="comp">Complication</string>
+  <string name="c0">Kem</string>
+  <string name="c1">Lam</string>
+  <string name="c2">Đỏ</string>
+  <string name="c3">Vàng</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

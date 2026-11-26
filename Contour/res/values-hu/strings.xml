@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Kontúr</string>
+  <string name="style">STÍLUS</string>
+  <string name="sharp">NORMÁL</string>
+  <string name="soft">KEREKÍTETT</string>
+  <string name="dial">SZÁMLAP SZÍNE</string>
+  <string name="color">SZÍN</string>
+  <string name="comp">Complication</string>
+  <string name="c0">Krém</string>
+  <string name="c1">Kék</string>
+  <string name="c2">Vörös</string>
+  <string name="c3">Sárga</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

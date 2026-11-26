@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">מתאר</string>
+  <string name="style">סגנון</string>
+  <string name="sharp">רגיל</string>
+  <string name="soft">מעוגל</string>
+  <string name="dial">צבע החוגה</string>
+  <string name="color">צבע</string>
+  <string name="comp">Complication</string>
+  <string name="c0">שמנת</string>
+  <string name="c1">כחול</string>
+  <string name="c2">אדום</string>
+  <string name="c3">צהוב</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

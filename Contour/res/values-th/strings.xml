@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">กาลเวลา</string>
+  <string name="style">สไตล์</string>
+  <string name="sharp">ปกติ</string>
+  <string name="soft">มนกลม</string>
+  <string name="dial">สีหน้าปัด</string>
+  <string name="color">สี</string>
+  <string name="comp">Complication</string>
+  <string name="c0">ครีม</string>
+  <string name="c1">น้ำเงิน</string>
+  <string name="c2">แดง</string>
+  <string name="c3">เหลือง</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>

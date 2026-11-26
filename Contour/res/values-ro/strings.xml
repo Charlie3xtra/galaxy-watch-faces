@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Contur</string>
+  <string name="style">STIL</string>
+  <string name="sharp">NORMAL</string>
+  <string name="soft">ROTUNJIT</string>
+  <string name="dial">CULOARE CADRAN</string>
+  <string name="color">CULORI</string>
+  <string name="comp">Complication</string>
+  <string name="c0">Crem</string>
+  <string name="c1">Albastru</string>
+  <string name="c2">Roșu</string>
+  <string name="c3">Galben</string>
+  <string name="c4">White</string>
+  <string name="c5">Volt</string>
+</resources>
