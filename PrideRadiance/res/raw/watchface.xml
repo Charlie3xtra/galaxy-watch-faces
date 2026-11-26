@@ -287,22 +287,22 @@
             <Group name="buffer0" x="0" y="0" width="480" height="480">
               <Condition>
                 <Expressions>
-                  <Expression name="s0">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 0</Expression>
-                  <Expression name="s1">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 1</Expression>
-                  <Expression name="s2">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 2</Expression>
-                  <Expression name="s3">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 3</Expression>
-                  <Expression name="s4">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 4</Expression>
-                  <Expression name="s5">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 5</Expression>
-                  <Expression name="s6">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 6</Expression>
-                  <Expression name="s7">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 7</Expression>
-                  <Expression name="s8">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 8</Expression>
-                  <Expression name="s9">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 9</Expression>
-                  <Expression name="s10">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 10</Expression>
-                  <Expression name="s11">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 11</Expression>
-                  <Expression name="s12">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 12</Expression>
-                  <Expression name="s13">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 13</Expression>
-                  <Expression name="s14">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 14</Expression>
-                  <Expression name="s15">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 15</Expression>
+                  <Expression name="s0">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 0</Expression>
+                  <Expression name="s1">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 1</Expression>
+                  <Expression name="s2">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 2</Expression>
+                  <Expression name="s3">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 3</Expression>
+                  <Expression name="s4">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 4</Expression>
+                  <Expression name="s5">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 5</Expression>
+                  <Expression name="s6">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 6</Expression>
+                  <Expression name="s7">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 7</Expression>
+                  <Expression name="s8">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 8</Expression>
+                  <Expression name="s9">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 9</Expression>
+                  <Expression name="s10">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 10</Expression>
+                  <Expression name="s11">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 11</Expression>
+                  <Expression name="s12">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 12</Expression>
+                  <Expression name="s13">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 13</Expression>
+                  <Expression name="s14">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 14</Expression>
+                  <Expression name="s15">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 15</Expression>
                 </Expressions>
                 <Compare expression="s0">
                   <Group name="h0" x="126" y="8" width="228" height="265">
@@ -3571,27 +3571,32 @@
               </Condition>
             </Group>
             <Group name="buffer1" x="0" y="0" width="480" height="480">
-              <Transform target="alpha" value="[MILLISECOND] &lt; 500 ? 255 : 0">
-                <Animation duration="0.5" fps="30" interpolation="LINEAR" />
+              <Transform target="alpha" value="([SECOND] % 2 == 0) ? 255 : 0">
+                <Animation duration="1" fps="30" interpolation="LINEAR" />
               </Transform>
+              <PartDraw x="0" y="0" width="480" height="480">
+                <Rectangle x="0" y="0" width="480" height="480">
+                  <Fill color="#000000" />
+                </Rectangle>
+              </PartDraw>
               <Condition>
                 <Expressions>
-                  <Expression name="s0">([SECONDS_IN_DAY] % 16) == 0</Expression>
-                  <Expression name="s1">([SECONDS_IN_DAY] % 16) == 1</Expression>
-                  <Expression name="s2">([SECONDS_IN_DAY] % 16) == 2</Expression>
-                  <Expression name="s3">([SECONDS_IN_DAY] % 16) == 3</Expression>
-                  <Expression name="s4">([SECONDS_IN_DAY] % 16) == 4</Expression>
-                  <Expression name="s5">([SECONDS_IN_DAY] % 16) == 5</Expression>
-                  <Expression name="s6">([SECONDS_IN_DAY] % 16) == 6</Expression>
-                  <Expression name="s7">([SECONDS_IN_DAY] % 16) == 7</Expression>
-                  <Expression name="s8">([SECONDS_IN_DAY] % 16) == 8</Expression>
-                  <Expression name="s9">([SECONDS_IN_DAY] % 16) == 9</Expression>
-                  <Expression name="s10">([SECONDS_IN_DAY] % 16) == 10</Expression>
-                  <Expression name="s11">([SECONDS_IN_DAY] % 16) == 11</Expression>
-                  <Expression name="s12">([SECONDS_IN_DAY] % 16) == 12</Expression>
-                  <Expression name="s13">([SECONDS_IN_DAY] % 16) == 13</Expression>
-                  <Expression name="s14">([SECONDS_IN_DAY] % 16) == 14</Expression>
-                  <Expression name="s15">([SECONDS_IN_DAY] % 16) == 15</Expression>
+                  <Expression name="s0">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 0</Expression>
+                  <Expression name="s1">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 1</Expression>
+                  <Expression name="s2">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 2</Expression>
+                  <Expression name="s3">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 3</Expression>
+                  <Expression name="s4">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 4</Expression>
+                  <Expression name="s5">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 5</Expression>
+                  <Expression name="s6">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 6</Expression>
+                  <Expression name="s7">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 7</Expression>
+                  <Expression name="s8">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 8</Expression>
+                  <Expression name="s9">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 9</Expression>
+                  <Expression name="s10">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 10</Expression>
+                  <Expression name="s11">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 11</Expression>
+                  <Expression name="s12">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 12</Expression>
+                  <Expression name="s13">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 13</Expression>
+                  <Expression name="s14">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 14</Expression>
+                  <Expression name="s15">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 15</Expression>
                 </Expressions>
                 <Compare expression="s0">
                   <Group name="h0" x="126" y="8" width="228" height="265">
@@ -6882,22 +6887,22 @@
             <Group name="buffer0" x="0" y="0" width="480" height="480">
               <Condition>
                 <Expressions>
-                  <Expression name="s0">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 0</Expression>
-                  <Expression name="s1">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 1</Expression>
-                  <Expression name="s2">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 2</Expression>
-                  <Expression name="s3">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 3</Expression>
-                  <Expression name="s4">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 4</Expression>
-                  <Expression name="s5">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 5</Expression>
-                  <Expression name="s6">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 6</Expression>
-                  <Expression name="s7">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 7</Expression>
-                  <Expression name="s8">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 8</Expression>
-                  <Expression name="s9">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 9</Expression>
-                  <Expression name="s10">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 10</Expression>
-                  <Expression name="s11">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 11</Expression>
-                  <Expression name="s12">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 12</Expression>
-                  <Expression name="s13">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 13</Expression>
-                  <Expression name="s14">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 14</Expression>
-                  <Expression name="s15">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 15</Expression>
+                  <Expression name="s0">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 0</Expression>
+                  <Expression name="s1">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 1</Expression>
+                  <Expression name="s2">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 2</Expression>
+                  <Expression name="s3">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 3</Expression>
+                  <Expression name="s4">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 4</Expression>
+                  <Expression name="s5">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 5</Expression>
+                  <Expression name="s6">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 6</Expression>
+                  <Expression name="s7">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 7</Expression>
+                  <Expression name="s8">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 8</Expression>
+                  <Expression name="s9">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 9</Expression>
+                  <Expression name="s10">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 10</Expression>
+                  <Expression name="s11">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 11</Expression>
+                  <Expression name="s12">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 12</Expression>
+                  <Expression name="s13">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 13</Expression>
+                  <Expression name="s14">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 14</Expression>
+                  <Expression name="s15">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 15</Expression>
                 </Expressions>
                 <Compare expression="s0">
                   <Group name="h0" x="126" y="8" width="228" height="265">
@@ -10166,27 +10171,32 @@
               </Condition>
             </Group>
             <Group name="buffer1" x="0" y="0" width="480" height="480">
-              <Transform target="alpha" value="[MILLISECOND] &lt; 500 ? 255 : 0">
-                <Animation duration="0.5" fps="30" interpolation="LINEAR" />
+              <Transform target="alpha" value="([SECOND] % 2 == 0) ? 255 : 0">
+                <Animation duration="1" fps="30" interpolation="LINEAR" />
               </Transform>
+              <PartDraw x="0" y="0" width="480" height="480">
+                <Rectangle x="0" y="0" width="480" height="480">
+                  <Fill color="#000000" />
+                </Rectangle>
+              </PartDraw>
               <Condition>
                 <Expressions>
-                  <Expression name="s0">([SECONDS_IN_DAY] % 16) == 0</Expression>
-                  <Expression name="s1">([SECONDS_IN_DAY] % 16) == 1</Expression>
-                  <Expression name="s2">([SECONDS_IN_DAY] % 16) == 2</Expression>
-                  <Expression name="s3">([SECONDS_IN_DAY] % 16) == 3</Expression>
-                  <Expression name="s4">([SECONDS_IN_DAY] % 16) == 4</Expression>
-                  <Expression name="s5">([SECONDS_IN_DAY] % 16) == 5</Expression>
-                  <Expression name="s6">([SECONDS_IN_DAY] % 16) == 6</Expression>
-                  <Expression name="s7">([SECONDS_IN_DAY] % 16) == 7</Expression>
-                  <Expression name="s8">([SECONDS_IN_DAY] % 16) == 8</Expression>
-                  <Expression name="s9">([SECONDS_IN_DAY] % 16) == 9</Expression>
-                  <Expression name="s10">([SECONDS_IN_DAY] % 16) == 10</Expression>
-                  <Expression name="s11">([SECONDS_IN_DAY] % 16) == 11</Expression>
-                  <Expression name="s12">([SECONDS_IN_DAY] % 16) == 12</Expression>
-                  <Expression name="s13">([SECONDS_IN_DAY] % 16) == 13</Expression>
-                  <Expression name="s14">([SECONDS_IN_DAY] % 16) == 14</Expression>
-                  <Expression name="s15">([SECONDS_IN_DAY] % 16) == 15</Expression>
+                  <Expression name="s0">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 0</Expression>
+                  <Expression name="s1">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 1</Expression>
+                  <Expression name="s2">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 2</Expression>
+                  <Expression name="s3">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 3</Expression>
+                  <Expression name="s4">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 4</Expression>
+                  <Expression name="s5">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 5</Expression>
+                  <Expression name="s6">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 6</Expression>
+                  <Expression name="s7">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 7</Expression>
+                  <Expression name="s8">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 8</Expression>
+                  <Expression name="s9">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 9</Expression>
+                  <Expression name="s10">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 10</Expression>
+                  <Expression name="s11">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 11</Expression>
+                  <Expression name="s12">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 12</Expression>
+                  <Expression name="s13">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 13</Expression>
+                  <Expression name="s14">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 14</Expression>
+                  <Expression name="s15">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 15</Expression>
                 </Expressions>
                 <Compare expression="s0">
                   <Group name="h0" x="126" y="8" width="228" height="265">
@@ -13477,22 +13487,22 @@
             <Group name="buffer0" x="0" y="0" width="480" height="480">
               <Condition>
                 <Expressions>
-                  <Expression name="s0">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 0</Expression>
-                  <Expression name="s1">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 1</Expression>
-                  <Expression name="s2">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 2</Expression>
-                  <Expression name="s3">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 3</Expression>
-                  <Expression name="s4">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 4</Expression>
-                  <Expression name="s5">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 5</Expression>
-                  <Expression name="s6">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 6</Expression>
-                  <Expression name="s7">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 7</Expression>
-                  <Expression name="s8">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 8</Expression>
-                  <Expression name="s9">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 9</Expression>
-                  <Expression name="s10">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 10</Expression>
-                  <Expression name="s11">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 11</Expression>
-                  <Expression name="s12">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 12</Expression>
-                  <Expression name="s13">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 13</Expression>
-                  <Expression name="s14">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 14</Expression>
-                  <Expression name="s15">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 15</Expression>
+                  <Expression name="s0">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 0</Expression>
+                  <Expression name="s1">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 1</Expression>
+                  <Expression name="s2">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 2</Expression>
+                  <Expression name="s3">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 3</Expression>
+                  <Expression name="s4">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 4</Expression>
+                  <Expression name="s5">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 5</Expression>
+                  <Expression name="s6">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 6</Expression>
+                  <Expression name="s7">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 7</Expression>
+                  <Expression name="s8">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 8</Expression>
+                  <Expression name="s9">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 9</Expression>
+                  <Expression name="s10">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 10</Expression>
+                  <Expression name="s11">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 11</Expression>
+                  <Expression name="s12">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 12</Expression>
+                  <Expression name="s13">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 13</Expression>
+                  <Expression name="s14">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 14</Expression>
+                  <Expression name="s15">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 15</Expression>
                 </Expressions>
                 <Compare expression="s0">
                   <Group name="h0" x="126" y="8" width="228" height="265">
@@ -16761,27 +16771,32 @@
               </Condition>
             </Group>
             <Group name="buffer1" x="0" y="0" width="480" height="480">
-              <Transform target="alpha" value="[MILLISECOND] &lt; 500 ? 255 : 0">
-                <Animation duration="0.5" fps="30" interpolation="LINEAR" />
+              <Transform target="alpha" value="([SECOND] % 2 == 0) ? 255 : 0">
+                <Animation duration="1" fps="30" interpolation="LINEAR" />
               </Transform>
+              <PartDraw x="0" y="0" width="480" height="480">
+                <Rectangle x="0" y="0" width="480" height="480">
+                  <Fill color="#000000" />
+                </Rectangle>
+              </PartDraw>
               <Condition>
                 <Expressions>
-                  <Expression name="s0">([SECONDS_IN_DAY] % 16) == 0</Expression>
-                  <Expression name="s1">([SECONDS_IN_DAY] % 16) == 1</Expression>
-                  <Expression name="s2">([SECONDS_IN_DAY] % 16) == 2</Expression>
-                  <Expression name="s3">([SECONDS_IN_DAY] % 16) == 3</Expression>
-                  <Expression name="s4">([SECONDS_IN_DAY] % 16) == 4</Expression>
-                  <Expression name="s5">([SECONDS_IN_DAY] % 16) == 5</Expression>
-                  <Expression name="s6">([SECONDS_IN_DAY] % 16) == 6</Expression>
-                  <Expression name="s7">([SECONDS_IN_DAY] % 16) == 7</Expression>
-                  <Expression name="s8">([SECONDS_IN_DAY] % 16) == 8</Expression>
-                  <Expression name="s9">([SECONDS_IN_DAY] % 16) == 9</Expression>
-                  <Expression name="s10">([SECONDS_IN_DAY] % 16) == 10</Expression>
-                  <Expression name="s11">([SECONDS_IN_DAY] % 16) == 11</Expression>
-                  <Expression name="s12">([SECONDS_IN_DAY] % 16) == 12</Expression>
-                  <Expression name="s13">([SECONDS_IN_DAY] % 16) == 13</Expression>
-                  <Expression name="s14">([SECONDS_IN_DAY] % 16) == 14</Expression>
-                  <Expression name="s15">([SECONDS_IN_DAY] % 16) == 15</Expression>
+                  <Expression name="s0">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 0</Expression>
+                  <Expression name="s1">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 1</Expression>
+                  <Expression name="s2">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 2</Expression>
+                  <Expression name="s3">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 3</Expression>
+                  <Expression name="s4">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 4</Expression>
+                  <Expression name="s5">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 5</Expression>
+                  <Expression name="s6">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 6</Expression>
+                  <Expression name="s7">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 7</Expression>
+                  <Expression name="s8">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 8</Expression>
+                  <Expression name="s9">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 9</Expression>
+                  <Expression name="s10">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 10</Expression>
+                  <Expression name="s11">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 11</Expression>
+                  <Expression name="s12">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 12</Expression>
+                  <Expression name="s13">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 13</Expression>
+                  <Expression name="s14">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 14</Expression>
+                  <Expression name="s15">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 15</Expression>
                 </Expressions>
                 <Compare expression="s0">
                   <Group name="h0" x="126" y="8" width="228" height="265">
@@ -20072,22 +20087,22 @@
             <Group name="buffer0" x="0" y="0" width="480" height="480">
               <Condition>
                 <Expressions>
-                  <Expression name="s0">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 0</Expression>
-                  <Expression name="s1">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 1</Expression>
-                  <Expression name="s2">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 2</Expression>
-                  <Expression name="s3">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 3</Expression>
-                  <Expression name="s4">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 4</Expression>
-                  <Expression name="s5">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 5</Expression>
-                  <Expression name="s6">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 6</Expression>
-                  <Expression name="s7">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 7</Expression>
-                  <Expression name="s8">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 8</Expression>
-                  <Expression name="s9">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 9</Expression>
-                  <Expression name="s10">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 10</Expression>
-                  <Expression name="s11">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 11</Expression>
-                  <Expression name="s12">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 12</Expression>
-                  <Expression name="s13">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 13</Expression>
-                  <Expression name="s14">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 14</Expression>
-                  <Expression name="s15">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 15</Expression>
+                  <Expression name="s0">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 0</Expression>
+                  <Expression name="s1">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 1</Expression>
+                  <Expression name="s2">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 2</Expression>
+                  <Expression name="s3">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 3</Expression>
+                  <Expression name="s4">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 4</Expression>
+                  <Expression name="s5">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 5</Expression>
+                  <Expression name="s6">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 6</Expression>
+                  <Expression name="s7">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 7</Expression>
+                  <Expression name="s8">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 8</Expression>
+                  <Expression name="s9">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 9</Expression>
+                  <Expression name="s10">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 10</Expression>
+                  <Expression name="s11">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 11</Expression>
+                  <Expression name="s12">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 12</Expression>
+                  <Expression name="s13">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 13</Expression>
+                  <Expression name="s14">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 14</Expression>
+                  <Expression name="s15">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 15</Expression>
                 </Expressions>
                 <Compare expression="s0">
                   <Group name="h0" x="126" y="8" width="228" height="265">
@@ -23356,27 +23371,32 @@
               </Condition>
             </Group>
             <Group name="buffer1" x="0" y="0" width="480" height="480">
-              <Transform target="alpha" value="[MILLISECOND] &lt; 500 ? 255 : 0">
-                <Animation duration="0.5" fps="30" interpolation="LINEAR" />
+              <Transform target="alpha" value="([SECOND] % 2 == 0) ? 255 : 0">
+                <Animation duration="1" fps="30" interpolation="LINEAR" />
               </Transform>
+              <PartDraw x="0" y="0" width="480" height="480">
+                <Rectangle x="0" y="0" width="480" height="480">
+                  <Fill color="#000000" />
+                </Rectangle>
+              </PartDraw>
               <Condition>
                 <Expressions>
-                  <Expression name="s0">([SECONDS_IN_DAY] % 16) == 0</Expression>
-                  <Expression name="s1">([SECONDS_IN_DAY] % 16) == 1</Expression>
-                  <Expression name="s2">([SECONDS_IN_DAY] % 16) == 2</Expression>
-                  <Expression name="s3">([SECONDS_IN_DAY] % 16) == 3</Expression>
-                  <Expression name="s4">([SECONDS_IN_DAY] % 16) == 4</Expression>
-                  <Expression name="s5">([SECONDS_IN_DAY] % 16) == 5</Expression>
-                  <Expression name="s6">([SECONDS_IN_DAY] % 16) == 6</Expression>
-                  <Expression name="s7">([SECONDS_IN_DAY] % 16) == 7</Expression>
-                  <Expression name="s8">([SECONDS_IN_DAY] % 16) == 8</Expression>
-                  <Expression name="s9">([SECONDS_IN_DAY] % 16) == 9</Expression>
-                  <Expression name="s10">([SECONDS_IN_DAY] % 16) == 10</Expression>
-                  <Expression name="s11">([SECONDS_IN_DAY] % 16) == 11</Expression>
-                  <Expression name="s12">([SECONDS_IN_DAY] % 16) == 12</Expression>
-                  <Expression name="s13">([SECONDS_IN_DAY] % 16) == 13</Expression>
-                  <Expression name="s14">([SECONDS_IN_DAY] % 16) == 14</Expression>
-                  <Expression name="s15">([SECONDS_IN_DAY] % 16) == 15</Expression>
+                  <Expression name="s0">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 0</Expression>
+                  <Expression name="s1">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 1</Expression>
+                  <Expression name="s2">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 2</Expression>
+                  <Expression name="s3">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 3</Expression>
+                  <Expression name="s4">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 4</Expression>
+                  <Expression name="s5">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 5</Expression>
+                  <Expression name="s6">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 6</Expression>
+                  <Expression name="s7">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 7</Expression>
+                  <Expression name="s8">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 8</Expression>
+                  <Expression name="s9">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 9</Expression>
+                  <Expression name="s10">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 10</Expression>
+                  <Expression name="s11">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 11</Expression>
+                  <Expression name="s12">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 12</Expression>
+                  <Expression name="s13">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 13</Expression>
+                  <Expression name="s14">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 14</Expression>
+                  <Expression name="s15">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 15</Expression>
                 </Expressions>
                 <Compare expression="s0">
                   <Group name="h0" x="126" y="8" width="228" height="265">
@@ -26667,22 +26687,22 @@
             <Group name="buffer0" x="0" y="0" width="480" height="480">
               <Condition>
                 <Expressions>
-                  <Expression name="s0">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 0</Expression>
-                  <Expression name="s1">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 1</Expression>
-                  <Expression name="s2">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 2</Expression>
-                  <Expression name="s3">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 3</Expression>
-                  <Expression name="s4">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 4</Expression>
-                  <Expression name="s5">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 5</Expression>
-                  <Expression name="s6">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 6</Expression>
-                  <Expression name="s7">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 7</Expression>
-                  <Expression name="s8">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 8</Expression>
-                  <Expression name="s9">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 9</Expression>
-                  <Expression name="s10">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 10</Expression>
-                  <Expression name="s11">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 11</Expression>
-                  <Expression name="s12">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 12</Expression>
-                  <Expression name="s13">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 13</Expression>
-                  <Expression name="s14">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 14</Expression>
-                  <Expression name="s15">(([SECONDS_IN_DAY] + ([MILLISECOND] &gt;= 500 ? 1 : 0)) % 16) == 15</Expression>
+                  <Expression name="s0">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 0</Expression>
+                  <Expression name="s1">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 1</Expression>
+                  <Expression name="s2">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 2</Expression>
+                  <Expression name="s3">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 3</Expression>
+                  <Expression name="s4">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 4</Expression>
+                  <Expression name="s5">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 5</Expression>
+                  <Expression name="s6">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 6</Expression>
+                  <Expression name="s7">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 7</Expression>
+                  <Expression name="s8">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 8</Expression>
+                  <Expression name="s9">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 9</Expression>
+                  <Expression name="s10">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 10</Expression>
+                  <Expression name="s11">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 11</Expression>
+                  <Expression name="s12">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 12</Expression>
+                  <Expression name="s13">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 13</Expression>
+                  <Expression name="s14">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 14</Expression>
+                  <Expression name="s15">(floor((([SECONDS_IN_DAY] % 32) + 1) / 2) % 16) == 15</Expression>
                 </Expressions>
                 <Compare expression="s0">
                   <Group name="h0" x="126" y="8" width="228" height="265">
@@ -29951,27 +29971,32 @@
               </Condition>
             </Group>
             <Group name="buffer1" x="0" y="0" width="480" height="480">
-              <Transform target="alpha" value="[MILLISECOND] &lt; 500 ? 255 : 0">
-                <Animation duration="0.5" fps="30" interpolation="LINEAR" />
+              <Transform target="alpha" value="([SECOND] % 2 == 0) ? 255 : 0">
+                <Animation duration="1" fps="30" interpolation="LINEAR" />
               </Transform>
+              <PartDraw x="0" y="0" width="480" height="480">
+                <Rectangle x="0" y="0" width="480" height="480">
+                  <Fill color="#000000" />
+                </Rectangle>
+              </PartDraw>
               <Condition>
                 <Expressions>
-                  <Expression name="s0">([SECONDS_IN_DAY] % 16) == 0</Expression>
-                  <Expression name="s1">([SECONDS_IN_DAY] % 16) == 1</Expression>
-                  <Expression name="s2">([SECONDS_IN_DAY] % 16) == 2</Expression>
-                  <Expression name="s3">([SECONDS_IN_DAY] % 16) == 3</Expression>
-                  <Expression name="s4">([SECONDS_IN_DAY] % 16) == 4</Expression>
-                  <Expression name="s5">([SECONDS_IN_DAY] % 16) == 5</Expression>
-                  <Expression name="s6">([SECONDS_IN_DAY] % 16) == 6</Expression>
-                  <Expression name="s7">([SECONDS_IN_DAY] % 16) == 7</Expression>
-                  <Expression name="s8">([SECONDS_IN_DAY] % 16) == 8</Expression>
-                  <Expression name="s9">([SECONDS_IN_DAY] % 16) == 9</Expression>
-                  <Expression name="s10">([SECONDS_IN_DAY] % 16) == 10</Expression>
-                  <Expression name="s11">([SECONDS_IN_DAY] % 16) == 11</Expression>
-                  <Expression name="s12">([SECONDS_IN_DAY] % 16) == 12</Expression>
-                  <Expression name="s13">([SECONDS_IN_DAY] % 16) == 13</Expression>
-                  <Expression name="s14">([SECONDS_IN_DAY] % 16) == 14</Expression>
-                  <Expression name="s15">([SECONDS_IN_DAY] % 16) == 15</Expression>
+                  <Expression name="s0">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 0</Expression>
+                  <Expression name="s1">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 1</Expression>
+                  <Expression name="s2">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 2</Expression>
+                  <Expression name="s3">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 3</Expression>
+                  <Expression name="s4">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 4</Expression>
+                  <Expression name="s5">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 5</Expression>
+                  <Expression name="s6">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 6</Expression>
+                  <Expression name="s7">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 7</Expression>
+                  <Expression name="s8">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 8</Expression>
+                  <Expression name="s9">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 9</Expression>
+                  <Expression name="s10">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 10</Expression>
+                  <Expression name="s11">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 11</Expression>
+                  <Expression name="s12">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 12</Expression>
+                  <Expression name="s13">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 13</Expression>
+                  <Expression name="s14">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 14</Expression>
+                  <Expression name="s15">(floor((([SECONDS_IN_DAY] % 32) + 0) / 2) % 16) == 15</Expression>
                 </Expressions>
                 <Compare expression="s0">
                   <Group name="h0" x="126" y="8" width="228" height="265">

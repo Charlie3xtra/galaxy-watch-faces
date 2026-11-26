@@ -5,7 +5,9 @@ from PIL import Image, ImageFilter
 from xml.etree.ElementTree import SubElement as child
 
 COUNT=32
-FRAME_MS=500
+BAKED_CYCLE_SECONDS=16
+FPS=30
+TICKS_PER_KEY=30
 SIZE=(228,265)
 ROWS=(140,340)
 GLOW_PADDING=24
@@ -16,15 +18,22 @@ def key_name(style, asset, frame):
     return f"{prefix}_{asset}_{frame:02}"
 
 def scene(parent, style):
+    # The renderer interpolates between second ticks, and only a fully faded
+    # buffer changes texture. The upper frame has an opaque backing.
     for odd in (False, True):
         layer=child(parent,"Group",name=f"buffer{int(odd)}",x="0",y="0",width="480",height="480")
         if odd:
-            opacity=child(layer,"Transform",target="alpha",value="[MILLISECOND] < 500 ? 255 : 0")
-            child(opacity,"Animation",duration="0.5",fps="30",interpolation="LINEAR")
+            opacity=child(layer,"Transform",target="alpha",value="([SECOND] % 2 == 0) ? 255 : 0")
+            child(opacity,"Animation",duration="1",fps=str(FPS),interpolation="LINEAR")
+            # Fade a complete frame, including its black background, so
+            # translucent halos do not reveal an additional copy underneath.
+            bg=child(layer,"PartDraw",x="0",y="0",width="480",height="480")
+            rect=child(bg,"Rectangle",x="0",y="0",width="480",height="480")
+            child(rect,"Fill",color="#000000")
         phase=child(layer,"Condition")
         tests=child(phase,"Expressions")
-        for sec in range(16):
-            phase_expr="([SECONDS_IN_DAY] % 16)" if odd else "(([SECONDS_IN_DAY] + ([MILLISECOND] >= 500 ? 1 : 0)) % 16)"
+        for sec in range(COUNT//2):
+            phase_expr=f"(floor((([SECONDS_IN_DAY] % 32) + {0 if odd else 1}) / 2) % {COUNT//2})"
             child(tests,"Expression",name=f"s{sec}").text=f"{phase_expr} == {sec}"
             face=child(phase,"Compare",expression=f"s{sec}")
             digit_scene(face,2*sec+int(odd),style)
@@ -84,7 +93,7 @@ def bake_digit(uv,source,reference_center,colors,settings,seed):
             # block006.ll, lines 52-105: periodic position, eased ramp and framebuffer blend.
             cycle=n/COUNT
             # Close the portable loop while retaining the measured local velocity at its midpoint.
-            travel=cycle+(speed*COUNT*FRAME_MS/1000-1)*np.sin(2*np.pi*cycle)/(2*np.pi)
+            travel=cycle+(speed*BAKED_CYCLE_SECONDS-1)*np.sin(2*np.pi*cycle)/(2*np.pi)
             pos=(v+offset+travel*direction)%1
             ramp=settings["segmentRampLength"]
             t=np.clip((np.abs(pos-.5)-length*.5+ramp)/ramp,0,1)
@@ -141,11 +150,11 @@ def generate(model,art,draw,mesh_uv,settings,palette,style):
         previews[0].save(draw/"preview.png")
     import os, shutil, subprocess
     ffmpeg=os.environ.get("FFMPEG") or shutil.which("ffmpeg") or next(draw.parents[2].glob("work/decoders/imageio_ffmpeg/binaries/ffmpeg*.exe"))
-    with subprocess.Popen([str(ffmpeg),"-v","error","-y","-f","rawvideo","-pix_fmt","rgb24","-s","480x480","-r","30","-i","-","-c:v","libx264","-crf","16","-pix_fmt","yuv420p","-movflags","+faststart",str(draw.parents[1]/f"flow-preview-1.9-{style}.mp4")],stdin=subprocess.PIPE) as proc:
+    with subprocess.Popen([str(ffmpeg),"-v","error","-y","-f","rawvideo","-pix_fmt","rgb24","-s","480x480","-r","30","-i","-","-c:v","libx264","-crf","16","-pix_fmt","yuv420p","-movflags","+faststart",str(draw.parents[1]/f"flow-preview-1.10-{style}.mp4")],stdin=subprocess.PIPE) as proc:
         for idx,current in enumerate(previews):
             following=previews[(idx+1)%COUNT]
-            for step in range(15):
-                proc.stdin.write(Image.blend(current,following,step/15).tobytes())
+            for step in range(TICKS_PER_KEY):
+                proc.stdin.write(Image.blend(current,following,step/TICKS_PER_KEY).tobytes())
         proc.stdin.close()
         if proc.wait():
             raise RuntimeError("Preview encoding failed")
