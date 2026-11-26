@@ -1,0 +1,430 @@
+<?xml version='1.0' encoding='utf-8'?>
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <UserConfigurations>
+    <ColorConfiguration id="palette" displayName="color" defaultValue="0">
+      <ColorOption id="0" displayName="palette_0" colors="#FFAEAFFF #FF7A7BFF" />
+      <ColorOption id="1" displayName="palette_1" colors="#FFFF6848 #FFF4ACA5" />
+      <ColorOption id="2" displayName="palette_2" colors="#FFFFEB7D #FFD5F2BD" />
+      <ColorOption id="3" displayName="palette_3" colors="#FFD5F2BD #FF8B7F58" />
+      <ColorOption id="4" displayName="palette_4" colors="#FFFFEB7D #FF636E84" />
+      <ColorOption id="5" displayName="palette_5" colors="#FFE9CC0D #FF9ED5CC" />
+      <ColorOption id="6" displayName="palette_6" colors="#FFE1F323 #FFFFC2A9" />
+      <ColorOption id="7" displayName="palette_7" colors="#FFFF6411 #FF669797" />
+      <ColorOption id="8" displayName="palette_8" colors="#FF8C8C76 #FFFF5964" />
+      <ColorOption id="9" displayName="palette_9" colors="#FFFE8850 #FF729B9D" />
+      <ColorOption id="10" displayName="palette_10" colors="#FF636E59 #FF5C7299" />
+      <ColorOption id="11" displayName="palette_11" colors="#FFEF4F48 #FFFE8850" />
+      <ColorOption id="12" displayName="palette_12" colors="#FFFF9500 #FFFAE1C5" />
+      <ColorOption id="13" displayName="palette_13" colors="#FFFF4E51 #FFB08664" />
+      <ColorOption id="14" displayName="palette_14" colors="#FFFE8850 #FF51764A" />
+      <ColorOption id="15" displayName="palette_15" colors="#FFBC112F #FF815668" />
+      <ColorOption id="16" displayName="palette_16" colors="#FF4A778B #FF778A51" />
+      <ColorOption id="17" displayName="palette_17" colors="#FFE41F3B #FFFE8850" />
+      <ColorOption id="18" displayName="palette_18" colors="#FFFFC2A9 #FFFF5A48" />
+      <ColorOption id="19" displayName="palette_19" colors="#FFE6C5A4 #FFFFBF52" />
+      <ColorOption id="20" displayName="palette_20" colors="#FFE6C5A4 #FFB3B8A7" />
+      <ColorOption id="21" displayName="palette_21" colors="#FFE6C5A4 #FF8C8C76" />
+      <ColorOption id="22" displayName="palette_22" colors="#FF5F708A #FFFFFFFF" />
+      <ColorOption id="23" displayName="palette_23" colors="#FFFFCDB8 #FFFF505A" />
+      <ColorOption id="24" displayName="palette_24" colors="#FF737E5A #FFFDFFDC" />
+      <ColorOption id="25" displayName="palette_25" colors="#FF60798E #FF7F3B4A" />
+      <ColorOption id="26" displayName="palette_26" colors="#FFE6C5A4 #FFFF905B" />
+      <ColorOption id="27" displayName="palette_27" colors="#FFE6C5A4 #FF60798E" />
+      <ColorOption id="28" displayName="palette_28" colors="#FFFF905B #FF60798E" />
+      <ColorOption id="29" displayName="palette_29" colors="#FFFF3A3A #FF826F60" />
+      <ColorOption id="30" displayName="palette_30" colors="#FF8CE329 #FF566B94" />
+      <ColorOption id="31" displayName="palette_31" colors="#FFFF6411 #FF826F60" />
+      <ColorOption id="32" displayName="palette_32" colors="#FFFF9500 #FF6B8A81" />
+      <ColorOption id="33" displayName="palette_33" colors="#FFFFA100 #FF40578C" />
+      <ColorOption id="34" displayName="palette_34" colors="#FF5C7299 #FFFC7450" />
+      <ColorOption id="35" displayName="palette_35" colors="#FF626273 #FFC7B5B7" />
+      <ColorOption id="36" displayName="palette_36" colors="#FFE1C675 #FFFFDE44" />
+      <ColorOption id="37" displayName="palette_37" colors="#FF566B94 #FF6F8F6C" />
+      <ColorOption id="38" displayName="palette_38" colors="#FFFF5A48 #FFFD1E58" />
+      <ColorOption id="39" displayName="palette_39" colors="#FFFF5964 #FF6D5F3F" />
+      <ColorOption id="40" displayName="palette_40" colors="#FF6D5F3F #FFF6F1D7" />
+      <ColorOption id="41" displayName="palette_41" colors="#FF21679F #FFFF4C36" />
+      <ColorOption id="42" displayName="palette_42" colors="#FF6D5F3F #FFFFB18C" />
+      <ColorOption id="43" displayName="palette_43" colors="#FFFF2942 #FFFF2942" />
+      <ColorOption id="44" displayName="palette_44" colors="#FFF66546 #FFF66546" />
+      <ColorOption id="45" displayName="palette_45" colors="#FFFF9600 #FFFF9600" />
+      <ColorOption id="46" displayName="palette_46" colors="#FFFFDE43 #FFFFDE43" />
+      <ColorOption id="47" displayName="palette_47" colors="#FFFFEC7C #FFFFEC7C" />
+      <ColorOption id="48" displayName="palette_48" colors="#FFB1F3A0 #FFB1F3A0" />
+      <ColorOption id="49" displayName="palette_49" colors="#FF01DF70 #FF01DF70" />
+      <ColorOption id="50" displayName="palette_50" colors="#FF5EC7FA #FF5EC7FA" />
+      <ColorOption id="51" displayName="palette_51" colors="#FF2193F9 #FF2193F9" />
+      <ColorOption id="52" displayName="palette_52" colors="#FF56609E #FF56609E" />
+      <ColorOption id="53" displayName="palette_53" colors="#FF797AFF #FF797AFF" />
+      <ColorOption id="54" displayName="palette_54" colors="#FFB8A4E1 #FFB8A4E1" />
+      <ColorOption id="55" displayName="palette_55" colors="#FFEC4678 #FFEC4678" />
+      <ColorOption id="56" displayName="palette_56" colors="#FFFF1652 #FFFF1652" />
+      <ColorOption id="57" displayName="palette_57" colors="#FF93424B #FF93424B" />
+      <ColorOption id="58" displayName="palette_58" colors="#FF827160 #FF827160" />
+      <ColorOption id="59" displayName="palette_59" colors="#FFAEA192 #FFAEA192" />
+      <ColorOption id="60" displayName="palette_60" colors="#FFFFEDCF #FFFFEDCF" />
+      <ColorOption id="61" displayName="palette_61" colors="#FF9C9BA3 #FF9C9BA3" />
+    </ColorConfiguration>
+    <ListConfiguration id="symbols" displayName="symbols" defaultValue="western">
+      <ListOption id="western" displayName="western" />
+      <ListOption id="eastern" displayName="eastern" />
+      <ListOption id="deva" displayName="deva" />
+    </ListConfiguration>
+    <ListConfiguration id="style" displayName="style" defaultValue="filled">
+      <ListOption id="filled" displayName="filled" />
+      <ListOption id="mixed" displayName="mixed" />
+      <ListOption id="outline" displayName="outline" />
+    </ListConfiguration>
+  </UserConfigurations>
+  <BitmapFonts>
+    <BitmapFont name="western_filled">
+      <Character name="0" resource="western_filled_0" width="155" height="166" />
+      <Character name="٠" resource="western_filled_0" width="155" height="166" />
+      <Character name="०" resource="western_filled_0" width="155" height="166" />
+      <Character name="1" resource="western_filled_1" width="155" height="166" />
+      <Character name="١" resource="western_filled_1" width="155" height="166" />
+      <Character name="१" resource="western_filled_1" width="155" height="166" />
+      <Character name="2" resource="western_filled_2" width="155" height="166" />
+      <Character name="٢" resource="western_filled_2" width="155" height="166" />
+      <Character name="२" resource="western_filled_2" width="155" height="166" />
+      <Character name="3" resource="western_filled_3" width="155" height="166" />
+      <Character name="٣" resource="western_filled_3" width="155" height="166" />
+      <Character name="३" resource="western_filled_3" width="155" height="166" />
+      <Character name="4" resource="western_filled_4" width="155" height="166" />
+      <Character name="٤" resource="western_filled_4" width="155" height="166" />
+      <Character name="४" resource="western_filled_4" width="155" height="166" />
+      <Character name="5" resource="western_filled_5" width="155" height="166" />
+      <Character name="٥" resource="western_filled_5" width="155" height="166" />
+      <Character name="५" resource="western_filled_5" width="155" height="166" />
+      <Character name="6" resource="western_filled_6" width="155" height="166" />
+      <Character name="٦" resource="western_filled_6" width="155" height="166" />
+      <Character name="६" resource="western_filled_6" width="155" height="166" />
+      <Character name="7" resource="western_filled_7" width="155" height="166" />
+      <Character name="٧" resource="western_filled_7" width="155" height="166" />
+      <Character name="७" resource="western_filled_7" width="155" height="166" />
+      <Character name="8" resource="western_filled_8" width="155" height="166" />
+      <Character name="٨" resource="western_filled_8" width="155" height="166" />
+      <Character name="८" resource="western_filled_8" width="155" height="166" />
+      <Character name="9" resource="western_filled_9" width="155" height="166" />
+      <Character name="٩" resource="western_filled_9" width="155" height="166" />
+      <Character name="९" resource="western_filled_9" width="155" height="166" />
+    </BitmapFont>
+    <BitmapFont name="eastern_filled">
+      <Character name="0" resource="eastern_filled_0" width="155" height="166" />
+      <Character name="٠" resource="eastern_filled_0" width="155" height="166" />
+      <Character name="०" resource="eastern_filled_0" width="155" height="166" />
+      <Character name="1" resource="eastern_filled_1" width="155" height="166" />
+      <Character name="١" resource="eastern_filled_1" width="155" height="166" />
+      <Character name="१" resource="eastern_filled_1" width="155" height="166" />
+      <Character name="2" resource="eastern_filled_2" width="155" height="166" />
+      <Character name="٢" resource="eastern_filled_2" width="155" height="166" />
+      <Character name="२" resource="eastern_filled_2" width="155" height="166" />
+      <Character name="3" resource="eastern_filled_3" width="155" height="166" />
+      <Character name="٣" resource="eastern_filled_3" width="155" height="166" />
+      <Character name="३" resource="eastern_filled_3" width="155" height="166" />
+      <Character name="4" resource="eastern_filled_4" width="155" height="166" />
+      <Character name="٤" resource="eastern_filled_4" width="155" height="166" />
+      <Character name="४" resource="eastern_filled_4" width="155" height="166" />
+      <Character name="5" resource="eastern_filled_5" width="155" height="166" />
+      <Character name="٥" resource="eastern_filled_5" width="155" height="166" />
+      <Character name="५" resource="eastern_filled_5" width="155" height="166" />
+      <Character name="6" resource="eastern_filled_6" width="155" height="166" />
+      <Character name="٦" resource="eastern_filled_6" width="155" height="166" />
+      <Character name="६" resource="eastern_filled_6" width="155" height="166" />
+      <Character name="7" resource="eastern_filled_7" width="155" height="166" />
+      <Character name="٧" resource="eastern_filled_7" width="155" height="166" />
+      <Character name="७" resource="eastern_filled_7" width="155" height="166" />
+      <Character name="8" resource="eastern_filled_8" width="155" height="166" />
+      <Character name="٨" resource="eastern_filled_8" width="155" height="166" />
+      <Character name="८" resource="eastern_filled_8" width="155" height="166" />
+      <Character name="9" resource="eastern_filled_9" width="155" height="166" />
+      <Character name="٩" resource="eastern_filled_9" width="155" height="166" />
+      <Character name="९" resource="eastern_filled_9" width="155" height="166" />
+    </BitmapFont>
+    <BitmapFont name="deva_filled">
+      <Character name="0" resource="deva_filled_0" width="155" height="166" />
+      <Character name="٠" resource="deva_filled_0" width="155" height="166" />
+      <Character name="०" resource="deva_filled_0" width="155" height="166" />
+      <Character name="1" resource="deva_filled_1" width="155" height="166" />
+      <Character name="١" resource="deva_filled_1" width="155" height="166" />
+      <Character name="१" resource="deva_filled_1" width="155" height="166" />
+      <Character name="2" resource="deva_filled_2" width="155" height="166" />
+      <Character name="٢" resource="deva_filled_2" width="155" height="166" />
+      <Character name="२" resource="deva_filled_2" width="155" height="166" />
+      <Character name="3" resource="deva_filled_3" width="155" height="166" />
+      <Character name="٣" resource="deva_filled_3" width="155" height="166" />
+      <Character name="३" resource="deva_filled_3" width="155" height="166" />
+      <Character name="4" resource="deva_filled_4" width="155" height="166" />
+      <Character name="٤" resource="deva_filled_4" width="155" height="166" />
+      <Character name="४" resource="deva_filled_4" width="155" height="166" />
+      <Character name="5" resource="deva_filled_5" width="155" height="166" />
+      <Character name="٥" resource="deva_filled_5" width="155" height="166" />
+      <Character name="५" resource="deva_filled_5" width="155" height="166" />
+      <Character name="6" resource="deva_filled_6" width="155" height="166" />
+      <Character name="٦" resource="deva_filled_6" width="155" height="166" />
+      <Character name="६" resource="deva_filled_6" width="155" height="166" />
+      <Character name="7" resource="deva_filled_7" width="155" height="166" />
+      <Character name="٧" resource="deva_filled_7" width="155" height="166" />
+      <Character name="७" resource="deva_filled_7" width="155" height="166" />
+      <Character name="8" resource="deva_filled_8" width="155" height="166" />
+      <Character name="٨" resource="deva_filled_8" width="155" height="166" />
+      <Character name="८" resource="deva_filled_8" width="155" height="166" />
+      <Character name="9" resource="deva_filled_9" width="155" height="166" />
+      <Character name="٩" resource="deva_filled_9" width="155" height="166" />
+      <Character name="९" resource="deva_filled_9" width="155" height="166" />
+    </BitmapFont>
+    <BitmapFont name="western_outline">
+      <Character name="0" resource="western_outline_0" width="155" height="166" />
+      <Character name="٠" resource="western_outline_0" width="155" height="166" />
+      <Character name="०" resource="western_outline_0" width="155" height="166" />
+      <Character name="1" resource="western_outline_1" width="155" height="166" />
+      <Character name="١" resource="western_outline_1" width="155" height="166" />
+      <Character name="१" resource="western_outline_1" width="155" height="166" />
+      <Character name="2" resource="western_outline_2" width="155" height="166" />
+      <Character name="٢" resource="western_outline_2" width="155" height="166" />
+      <Character name="२" resource="western_outline_2" width="155" height="166" />
+      <Character name="3" resource="western_outline_3" width="155" height="166" />
+      <Character name="٣" resource="western_outline_3" width="155" height="166" />
+      <Character name="३" resource="western_outline_3" width="155" height="166" />
+      <Character name="4" resource="western_outline_4" width="155" height="166" />
+      <Character name="٤" resource="western_outline_4" width="155" height="166" />
+      <Character name="४" resource="western_outline_4" width="155" height="166" />
+      <Character name="5" resource="western_outline_5" width="155" height="166" />
+      <Character name="٥" resource="western_outline_5" width="155" height="166" />
+      <Character name="५" resource="western_outline_5" width="155" height="166" />
+      <Character name="6" resource="western_outline_6" width="155" height="166" />
+      <Character name="٦" resource="western_outline_6" width="155" height="166" />
+      <Character name="६" resource="western_outline_6" width="155" height="166" />
+      <Character name="7" resource="western_outline_7" width="155" height="166" />
+      <Character name="٧" resource="western_outline_7" width="155" height="166" />
+      <Character name="७" resource="western_outline_7" width="155" height="166" />
+      <Character name="8" resource="western_outline_8" width="155" height="166" />
+      <Character name="٨" resource="western_outline_8" width="155" height="166" />
+      <Character name="८" resource="western_outline_8" width="155" height="166" />
+      <Character name="9" resource="western_outline_9" width="155" height="166" />
+      <Character name="٩" resource="western_outline_9" width="155" height="166" />
+      <Character name="९" resource="western_outline_9" width="155" height="166" />
+    </BitmapFont>
+    <BitmapFont name="eastern_outline">
+      <Character name="0" resource="eastern_outline_0" width="155" height="166" />
+      <Character name="٠" resource="eastern_outline_0" width="155" height="166" />
+      <Character name="०" resource="eastern_outline_0" width="155" height="166" />
+      <Character name="1" resource="eastern_outline_1" width="155" height="166" />
+      <Character name="١" resource="eastern_outline_1" width="155" height="166" />
+      <Character name="१" resource="eastern_outline_1" width="155" height="166" />
+      <Character name="2" resource="eastern_outline_2" width="155" height="166" />
+      <Character name="٢" resource="eastern_outline_2" width="155" height="166" />
+      <Character name="२" resource="eastern_outline_2" width="155" height="166" />
+      <Character name="3" resource="eastern_outline_3" width="155" height="166" />
+      <Character name="٣" resource="eastern_outline_3" width="155" height="166" />
+      <Character name="३" resource="eastern_outline_3" width="155" height="166" />
+      <Character name="4" resource="eastern_outline_4" width="155" height="166" />
+      <Character name="٤" resource="eastern_outline_4" width="155" height="166" />
+      <Character name="४" resource="eastern_outline_4" width="155" height="166" />
+      <Character name="5" resource="eastern_outline_5" width="155" height="166" />
+      <Character name="٥" resource="eastern_outline_5" width="155" height="166" />
+      <Character name="५" resource="eastern_outline_5" width="155" height="166" />
+      <Character name="6" resource="eastern_outline_6" width="155" height="166" />
+      <Character name="٦" resource="eastern_outline_6" width="155" height="166" />
+      <Character name="६" resource="eastern_outline_6" width="155" height="166" />
+      <Character name="7" resource="eastern_outline_7" width="155" height="166" />
+      <Character name="٧" resource="eastern_outline_7" width="155" height="166" />
+      <Character name="७" resource="eastern_outline_7" width="155" height="166" />
+      <Character name="8" resource="eastern_outline_8" width="155" height="166" />
+      <Character name="٨" resource="eastern_outline_8" width="155" height="166" />
+      <Character name="८" resource="eastern_outline_8" width="155" height="166" />
+      <Character name="9" resource="eastern_outline_9" width="155" height="166" />
+      <Character name="٩" resource="eastern_outline_9" width="155" height="166" />
+      <Character name="९" resource="eastern_outline_9" width="155" height="166" />
+    </BitmapFont>
+    <BitmapFont name="deva_outline">
+      <Character name="0" resource="deva_outline_0" width="155" height="166" />
+      <Character name="٠" resource="deva_outline_0" width="155" height="166" />
+      <Character name="०" resource="deva_outline_0" width="155" height="166" />
+      <Character name="1" resource="deva_outline_1" width="155" height="166" />
+      <Character name="١" resource="deva_outline_1" width="155" height="166" />
+      <Character name="१" resource="deva_outline_1" width="155" height="166" />
+      <Character name="2" resource="deva_outline_2" width="155" height="166" />
+      <Character name="٢" resource="deva_outline_2" width="155" height="166" />
+      <Character name="२" resource="deva_outline_2" width="155" height="166" />
+      <Character name="3" resource="deva_outline_3" width="155" height="166" />
+      <Character name="٣" resource="deva_outline_3" width="155" height="166" />
+      <Character name="३" resource="deva_outline_3" width="155" height="166" />
+      <Character name="4" resource="deva_outline_4" width="155" height="166" />
+      <Character name="٤" resource="deva_outline_4" width="155" height="166" />
+      <Character name="४" resource="deva_outline_4" width="155" height="166" />
+      <Character name="5" resource="deva_outline_5" width="155" height="166" />
+      <Character name="٥" resource="deva_outline_5" width="155" height="166" />
+      <Character name="५" resource="deva_outline_5" width="155" height="166" />
+      <Character name="6" resource="deva_outline_6" width="155" height="166" />
+      <Character name="٦" resource="deva_outline_6" width="155" height="166" />
+      <Character name="६" resource="deva_outline_6" width="155" height="166" />
+      <Character name="7" resource="deva_outline_7" width="155" height="166" />
+      <Character name="٧" resource="deva_outline_7" width="155" height="166" />
+      <Character name="७" resource="deva_outline_7" width="155" height="166" />
+      <Character name="8" resource="deva_outline_8" width="155" height="166" />
+      <Character name="٨" resource="deva_outline_8" width="155" height="166" />
+      <Character name="८" resource="deva_outline_8" width="155" height="166" />
+      <Character name="9" resource="deva_outline_9" width="155" height="166" />
+      <Character name="٩" resource="deva_outline_9" width="155" height="166" />
+      <Character name="९" resource="deva_outline_9" width="155" height="166" />
+    </BitmapFont>
+  </BitmapFonts>
+  <Scene backgroundColor="#000000">
+    <ListConfiguration id="symbols">
+      <ListOption id="western">
+        <Group name="western" x="0" y="0" width="480" height="480">
+          <ListConfiguration id="style">
+            <ListOption id="filled">
+              <Group name="western_filled" x="0" y="0" width="480" height="480">
+                <Variant mode="AMBIENT" target="alpha" value="52" />
+                <DigitalClock x="85" y="65" width="310" height="166">
+                  <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                    <BitmapFont family="western_filled" size="166" color="[CONFIGURATION.palette.0]" />
+                  </TimeText>
+                </DigitalClock>
+                <DigitalClock x="85" y="249" width="310" height="166">
+                  <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                    <BitmapFont family="western_filled" size="166" color="[CONFIGURATION.palette.1]" />
+                  </TimeText>
+                </DigitalClock>
+              </Group>
+            </ListOption>
+            <ListOption id="mixed">
+              <Group name="western_mixed" x="0" y="0" width="480" height="480">
+                <Variant mode="AMBIENT" target="alpha" value="52" />
+                <DigitalClock x="85" y="65" width="310" height="166">
+                  <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                    <BitmapFont family="western_filled" size="166" color="[CONFIGURATION.palette.0]" />
+                  </TimeText>
+                </DigitalClock>
+                <DigitalClock x="85" y="249" width="310" height="166">
+                  <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                    <BitmapFont family="western_outline" size="166" color="[CONFIGURATION.palette.1]" />
+                  </TimeText>
+                </DigitalClock>
+              </Group>
+            </ListOption>
+            <ListOption id="outline">
+              <Group name="western_outline" x="0" y="0" width="480" height="480">
+                <Variant mode="AMBIENT" target="alpha" value="52" />
+                <DigitalClock x="85" y="65" width="310" height="166">
+                  <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                    <BitmapFont family="western_outline" size="166" color="[CONFIGURATION.palette.0]" />
+                  </TimeText>
+                </DigitalClock>
+                <DigitalClock x="85" y="249" width="310" height="166">
+                  <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                    <BitmapFont family="western_outline" size="166" color="[CONFIGURATION.palette.1]" />
+                  </TimeText>
+                </DigitalClock>
+              </Group>
+            </ListOption>
+          </ListConfiguration>
+        </Group>
+      </ListOption>
+      <ListOption id="eastern">
+        <Group name="eastern" x="0" y="0" width="480" height="480">
+          <ListConfiguration id="style">
+            <ListOption id="filled">
+              <Group name="eastern_filled" x="0" y="0" width="480" height="480">
+                <Variant mode="AMBIENT" target="alpha" value="52" />
+                <DigitalClock x="85" y="65" width="310" height="166">
+                  <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                    <BitmapFont family="eastern_filled" size="166" color="[CONFIGURATION.palette.0]" />
+                  </TimeText>
+                </DigitalClock>
+                <DigitalClock x="85" y="249" width="310" height="166">
+                  <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                    <BitmapFont family="eastern_filled" size="166" color="[CONFIGURATION.palette.1]" />
+                  </TimeText>
+                </DigitalClock>
+              </Group>
+            </ListOption>
+            <ListOption id="mixed">
+              <Group name="eastern_mixed" x="0" y="0" width="480" height="480">
+                <Variant mode="AMBIENT" target="alpha" value="52" />
+                <DigitalClock x="85" y="65" width="310" height="166">
+                  <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                    <BitmapFont family="eastern_filled" size="166" color="[CONFIGURATION.palette.0]" />
+                  </TimeText>
+                </DigitalClock>
+                <DigitalClock x="85" y="249" width="310" height="166">
+                  <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                    <BitmapFont family="eastern_outline" size="166" color="[CONFIGURATION.palette.1]" />
+                  </TimeText>
+                </DigitalClock>
+              </Group>
+            </ListOption>
+            <ListOption id="outline">
+              <Group name="eastern_outline" x="0" y="0" width="480" height="480">
+                <Variant mode="AMBIENT" target="alpha" value="52" />
+                <DigitalClock x="85" y="65" width="310" height="166">
+                  <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                    <BitmapFont family="eastern_outline" size="166" color="[CONFIGURATION.palette.0]" />
+                  </TimeText>
+                </DigitalClock>
+                <DigitalClock x="85" y="249" width="310" height="166">
+                  <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                    <BitmapFont family="eastern_outline" size="166" color="[CONFIGURATION.palette.1]" />
+                  </TimeText>
+                </DigitalClock>
+              </Group>
+            </ListOption>
+          </ListConfiguration>
+        </Group>
+      </ListOption>
+      <ListOption id="deva">
+        <Group name="deva" x="0" y="0" width="480" height="480">
+          <ListConfiguration id="style">
+            <ListOption id="filled">
+              <Group name="deva_filled" x="0" y="0" width="480" height="480">
+                <Variant mode="AMBIENT" target="alpha" value="52" />
+                <DigitalClock x="85" y="65" width="310" height="166">
+                  <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                    <BitmapFont family="deva_filled" size="166" color="[CONFIGURATION.palette.0]" />
+                  </TimeText>
+                </DigitalClock>
+                <DigitalClock x="85" y="249" width="310" height="166">
+                  <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                    <BitmapFont family="deva_filled" size="166" color="[CONFIGURATION.palette.1]" />
+                  </TimeText>
+                </DigitalClock>
+              </Group>
+            </ListOption>
+            <ListOption id="mixed">
+              <Group name="deva_mixed" x="0" y="0" width="480" height="480">
+                <Variant mode="AMBIENT" target="alpha" value="52" />
+                <DigitalClock x="85" y="65" width="310" height="166">
+                  <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                    <BitmapFont family="deva_filled" size="166" color="[CONFIGURATION.palette.0]" />
+                  </TimeText>
+                </DigitalClock>
+                <DigitalClock x="85" y="249" width="310" height="166">
+                  <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                    <BitmapFont family="deva_outline" size="166" color="[CONFIGURATION.palette.1]" />
+                  </TimeText>
+                </DigitalClock>
+              </Group>
+            </ListOption>
+            <ListOption id="outline">
+              <Group name="deva_outline" x="0" y="0" width="480" height="480">
+                <Variant mode="AMBIENT" target="alpha" value="52" />
+                <DigitalClock x="85" y="65" width="310" height="166">
+                  <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                    <BitmapFont family="deva_outline" size="166" color="[CONFIGURATION.palette.0]" />
+                  </TimeText>
+                </DigitalClock>
+                <DigitalClock x="85" y="249" width="310" height="166">
+                  <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                    <BitmapFont family="deva_outline" size="166" color="[CONFIGURATION.palette.1]" />
+                  </TimeText>
+                </DigitalClock>
+              </Group>
+            </ListOption>
+          </ListConfiguration>
+        </Group>
+      </ListOption>
+    </ListConfiguration>
+  </Scene>
+</WatchFace>
