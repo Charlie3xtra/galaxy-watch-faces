@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike (híbrido)</string>
+  <string name="time">HORA</string>
+  <string name="color">COLOR</string>
+  <string name="dial">ESTILO</string>
+  <string name="digital">DIGITAL</string>
+  <string name="analog">ANALÓGICO I</string>
+  <string name="minimal">ANALÓGICO II</string>
+  <string name="full">PANTALLA COMPLETA</string>
+  <string name="circle">CIRCULAR</string>
+  <string name="p0">Platino puro</string>
+  <string name="p1">Voltio</string>
+  <string name="p2">Naranja intenso</string>
+  <string name="p3">Rosa explosivo</string>
+  <string name="p4">Verde aurora</string>
+  <string name="p5">Turquesa medianoche</string>
+  <string name="p6">Azul piscina</string>
+  <string name="p7">Turquesa claro</string>
+  <string name="p8">Bruma obsidiana</string>
+  <string name="p9">Azul imperial</string>
+  <string name="p10">Arena del desierto</string>
+  <string name="p11">Aura pícea</string>
+</resources>

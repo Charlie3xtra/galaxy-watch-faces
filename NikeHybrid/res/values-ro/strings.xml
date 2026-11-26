@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike hibrid</string>
+  <string name="time">ORA</string>
+  <string name="color">CULORI</string>
+  <string name="dial">STIL</string>
+  <string name="digital">DIGITAL</string>
+  <string name="analog">ANALOGIC I</string>
+  <string name="minimal">ANALOGIC II</string>
+  <string name="full">PE TOT ECRANUL</string>
+  <string name="circle">CIRCULAR</string>
+  <string name="p0">Platină pură</string>
+  <string name="p1">Volt</string>
+  <string name="p2">Portocaliu total</string>
+  <string name="p3">Roz exploziv</string>
+  <string name="p4">Verde auroră</string>
+  <string name="p5">Turcoaz nocturn</string>
+  <string name="p6">Albastru fluorescent</string>
+  <string name="p7">Turcoaz celest</string>
+  <string name="p8">Ceață obsidiană</string>
+  <string name="p9">Puls regal</string>
+  <string name="p10">Nisip deșertic</string>
+  <string name="p11">Aură verde</string>
+</resources>

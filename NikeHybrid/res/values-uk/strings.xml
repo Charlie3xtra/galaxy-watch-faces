@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike гібрид</string>
+  <string name="time">ЧАС</string>
+  <string name="color">КОЛІР</string>
+  <string name="dial">СТИЛЬ</string>
+  <string name="digital">ЦИФРА</string>
+  <string name="analog">АНАЛОГ I</string>
+  <string name="minimal">АНАЛОГ II</string>
+  <string name="full">НА ВЕСЬ ЕКРАН</string>
+  <string name="circle">КОЛОМ</string>
+  <string name="p0">Чиста платина</string>
+  <string name="p1">Вольт</string>
+  <string name="p2">Цільний оранж</string>
+  <string name="p3">Румʼяний</string>
+  <string name="p4">Зелена аврора</string>
+  <string name="p5">Нічний бірюзовий</string>
+  <string name="p6">Пастельно-блакитний</string>
+  <string name="p7">Небесна бірюза</string>
+  <string name="p8">Сіре марево</string>
+  <string name="p9">Королівський синій</string>
+  <string name="p10">Пісок пустелі</string>
+  <string name="p11">Молода смерека</string>
+</resources>

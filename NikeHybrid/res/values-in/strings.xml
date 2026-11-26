@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Hybrid</string>
+  <string name="time">WAKTU</string>
+  <string name="color">WARNA</string>
+  <string name="dial">GAYA</string>
+  <string name="digital">DIGITAL</string>
+  <string name="analog">ANALOG I</string>
+  <string name="minimal">ANALOG II</string>
+  <string name="full">LAYAR PENUH</string>
+  <string name="circle">MELINGKAR</string>
+  <string name="p0">Platinum Murni</string>
+  <string name="p1">Volt</string>
+  <string name="p2">Total Orange</string>
+  <string name="p3">Pink Akrilik</string>
+  <string name="p4">Aurora Green</string>
+  <string name="p5">Pirus</string>
+  <string name="p6">Biru Klorin</string>
+  <string name="p7">Celestial Teal</string>
+  <string name="p8">Abu-Abu Kabut</string>
+  <string name="p9">Biru Royal</string>
+  <string name="p10">Pasir Gurun</string>
+  <string name="p11">Hijau Muda Cemara</string>
+</resources>

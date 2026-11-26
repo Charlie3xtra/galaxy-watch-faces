@@ -1,0 +1,2312 @@
+<?xml version='1.0' encoding='utf-8'?>
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <UserConfigurations>
+    <ColorConfiguration id="palette" displayName="color" defaultValue="0">
+      <ColorOption id="0" displayName="p0" colors="#FFCBD1D3 #FFFF5C33 #FF9DA5A8" />
+      <ColorOption id="1" displayName="p1" colors="#FFE0FF00 #FFE0FF00 #FFA2DD00" />
+      <ColorOption id="2" displayName="p2" colors="#FFED6742 #FFED6742 #FFD3382D" />
+      <ColorOption id="3" displayName="p3" colors="#FFFF597D #FFFF597D #FFC13A64" />
+      <ColorOption id="4" displayName="p4" colors="#FF7DFFD2 #FF7DFFD2 #FF165D5E" />
+      <ColorOption id="5" displayName="p5" colors="#FF165D5E #FF165D5E #FF7DFFD2" />
+      <ColorOption id="6" displayName="p6" colors="#FF0A9DA3 #FF0A9DA3 #FF09696F" />
+      <ColorOption id="7" displayName="p7" colors="#FF527B7F #FF527B7F #FF394C54" />
+      <ColorOption id="8" displayName="p8" colors="#FF9B9B96 #FF9B9B96 #FF6C6C6C" />
+      <ColorOption id="9" displayName="p9" colors="#FF7990D1 #FF7990D1 #FF475F8E" />
+      <ColorOption id="10" displayName="p10" colors="#FFDDC3A0 #FFDDC3A0 #FFA8907B" />
+      <ColorOption id="11" displayName="p11" colors="#FFFFF6D3 #FFFFF6D3 #FFDDCCA6" />
+    </ColorConfiguration>
+    <ListConfiguration id="time" displayName="time" defaultValue="digital">
+      <ListOption id="digital" displayName="digital" />
+      <ListOption id="analog" displayName="analog" />
+      <ListOption id="minimal" displayName="minimal" />
+    </ListConfiguration>
+    <ListConfiguration id="dial" displayName="dial" defaultValue="full">
+      <ListOption id="full" displayName="full" />
+      <ListOption id="circle" displayName="circle" />
+    </ListConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#000000">
+    <Group name="interactive" x="0" y="0" width="480" height="480" alpha="255">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Group name="layout0" x="0" y="0" width="480" height="480">
+        <ListConfiguration id="dial">
+          <ListOption id="full">
+            <Group name="full0" x="0" y="0" width="480" height="480">
+              <ListConfiguration id="time">
+                <ListOption id="digital">
+                  <Group name="digitalfull0" x="0" y="0" width="480" height="480">
+                    <Condition>
+                      <Expressions>
+                        <Expression name="d0">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 0</Expression>
+                        <Expression name="d1">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 1</Expression>
+                        <Expression name="d2">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 2</Expression>
+                        <Expression name="d3">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 3</Expression>
+                        <Expression name="d4">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 4</Expression>
+                        <Expression name="d5">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 5</Expression>
+                        <Expression name="d6">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 6</Expression>
+                        <Expression name="d7">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 7</Expression>
+                        <Expression name="d8">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 8</Expression>
+                        <Expression name="d9">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 9</Expression>
+                        <Expression name="d10">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 10</Expression>
+                        <Expression name="d11">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 11</Expression>
+                        <Expression name="d12">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 12</Expression>
+                        <Expression name="d13">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 13</Expression>
+                        <Expression name="d14">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 14</Expression>
+                        <Expression name="d15">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 15</Expression>
+                        <Expression name="d16">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 16</Expression>
+                        <Expression name="d17">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 17</Expression>
+                        <Expression name="d18">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 18</Expression>
+                        <Expression name="d19">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 19</Expression>
+                        <Expression name="d20">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 20</Expression>
+                        <Expression name="d21">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 21</Expression>
+                        <Expression name="d22">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 22</Expression>
+                        <Expression name="d23">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 23</Expression>
+                      </Expressions>
+                      <Compare expression="d0">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_0" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d1">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_1" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d2">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_2" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d3">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_3" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d4">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_4" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d5">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_5" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d6">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_6" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d7">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_7" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d8">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_8" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d9">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_9" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d10">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_10" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d11">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_11" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d12">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_12" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d13">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_13" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d14">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_14" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d15">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_15" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d16">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_16" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d17">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_17" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d18">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_18" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d19">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_19" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d20">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_20" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d21">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_21" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d22">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_22" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d23">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_23" />
+                        </PartImage>
+                      </Compare>
+                    </Condition>
+                    <Condition>
+                      <Expressions>
+                        <Expression name="d0">[MINUTE] == 0</Expression>
+                        <Expression name="d1">[MINUTE] == 1</Expression>
+                        <Expression name="d2">[MINUTE] == 2</Expression>
+                        <Expression name="d3">[MINUTE] == 3</Expression>
+                        <Expression name="d4">[MINUTE] == 4</Expression>
+                        <Expression name="d5">[MINUTE] == 5</Expression>
+                        <Expression name="d6">[MINUTE] == 6</Expression>
+                        <Expression name="d7">[MINUTE] == 7</Expression>
+                        <Expression name="d8">[MINUTE] == 8</Expression>
+                        <Expression name="d9">[MINUTE] == 9</Expression>
+                        <Expression name="d10">[MINUTE] == 10</Expression>
+                        <Expression name="d11">[MINUTE] == 11</Expression>
+                        <Expression name="d12">[MINUTE] == 12</Expression>
+                        <Expression name="d13">[MINUTE] == 13</Expression>
+                        <Expression name="d14">[MINUTE] == 14</Expression>
+                        <Expression name="d15">[MINUTE] == 15</Expression>
+                        <Expression name="d16">[MINUTE] == 16</Expression>
+                        <Expression name="d17">[MINUTE] == 17</Expression>
+                        <Expression name="d18">[MINUTE] == 18</Expression>
+                        <Expression name="d19">[MINUTE] == 19</Expression>
+                        <Expression name="d20">[MINUTE] == 20</Expression>
+                        <Expression name="d21">[MINUTE] == 21</Expression>
+                        <Expression name="d22">[MINUTE] == 22</Expression>
+                        <Expression name="d23">[MINUTE] == 23</Expression>
+                        <Expression name="d24">[MINUTE] == 24</Expression>
+                        <Expression name="d25">[MINUTE] == 25</Expression>
+                        <Expression name="d26">[MINUTE] == 26</Expression>
+                        <Expression name="d27">[MINUTE] == 27</Expression>
+                        <Expression name="d28">[MINUTE] == 28</Expression>
+                        <Expression name="d29">[MINUTE] == 29</Expression>
+                        <Expression name="d30">[MINUTE] == 30</Expression>
+                        <Expression name="d31">[MINUTE] == 31</Expression>
+                        <Expression name="d32">[MINUTE] == 32</Expression>
+                        <Expression name="d33">[MINUTE] == 33</Expression>
+                        <Expression name="d34">[MINUTE] == 34</Expression>
+                        <Expression name="d35">[MINUTE] == 35</Expression>
+                        <Expression name="d36">[MINUTE] == 36</Expression>
+                        <Expression name="d37">[MINUTE] == 37</Expression>
+                        <Expression name="d38">[MINUTE] == 38</Expression>
+                        <Expression name="d39">[MINUTE] == 39</Expression>
+                        <Expression name="d40">[MINUTE] == 40</Expression>
+                        <Expression name="d41">[MINUTE] == 41</Expression>
+                        <Expression name="d42">[MINUTE] == 42</Expression>
+                        <Expression name="d43">[MINUTE] == 43</Expression>
+                        <Expression name="d44">[MINUTE] == 44</Expression>
+                        <Expression name="d45">[MINUTE] == 45</Expression>
+                        <Expression name="d46">[MINUTE] == 46</Expression>
+                        <Expression name="d47">[MINUTE] == 47</Expression>
+                        <Expression name="d48">[MINUTE] == 48</Expression>
+                        <Expression name="d49">[MINUTE] == 49</Expression>
+                        <Expression name="d50">[MINUTE] == 50</Expression>
+                        <Expression name="d51">[MINUTE] == 51</Expression>
+                        <Expression name="d52">[MINUTE] == 52</Expression>
+                        <Expression name="d53">[MINUTE] == 53</Expression>
+                        <Expression name="d54">[MINUTE] == 54</Expression>
+                        <Expression name="d55">[MINUTE] == 55</Expression>
+                        <Expression name="d56">[MINUTE] == 56</Expression>
+                        <Expression name="d57">[MINUTE] == 57</Expression>
+                        <Expression name="d58">[MINUTE] == 58</Expression>
+                        <Expression name="d59">[MINUTE] == 59</Expression>
+                      </Expressions>
+                      <Compare expression="d0">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_00" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d1">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_01" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d2">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_02" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d3">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_03" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d4">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_04" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d5">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_05" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d6">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_06" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d7">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_07" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d8">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_08" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d9">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_09" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d10">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_10" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d11">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_11" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d12">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_12" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d13">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_13" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d14">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_14" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d15">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_15" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d16">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_16" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d17">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_17" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d18">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_18" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d19">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_19" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d20">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_20" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d21">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_21" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d22">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_22" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d23">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_23" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d24">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_24" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d25">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_25" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d26">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_26" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d27">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_27" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d28">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_28" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d29">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_29" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d30">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_30" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d31">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_31" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d32">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_32" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d33">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_33" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d34">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_34" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d35">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_35" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d36">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_36" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d37">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_37" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d38">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_38" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d39">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_39" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d40">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_40" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d41">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_41" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d42">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_42" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d43">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_43" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d44">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_44" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d45">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_45" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d46">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_46" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d47">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_47" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d48">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_48" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d49">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_49" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d50">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_50" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d51">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_51" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d52">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_52" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d53">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_53" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d54">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_54" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d55">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_55" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d56">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_56" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d57">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_57" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d58">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_58" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d59">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_59" />
+                        </PartImage>
+                      </Compare>
+                    </Condition>
+                    <PartImage x="45" y="231" width="74" height="27" tintColor="[CONFIGURATION.palette.1]">
+                      <Image resource="swoosh" />
+                    </PartImage>
+                  </Group>
+                </ListOption>
+                <ListOption id="analog">
+                  <Group name="analogfull0" x="0" y="0" width="480" height="480">
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="ticks" />
+                    </PartImage>
+                    <PartImage x="122" y="225" width="77" height="28" tintColor="[CONFIGURATION.palette.1]">
+                      <Image resource="swoosh" />
+                    </PartImage>
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="hourhand" />
+                      <Transform target="angle" value="(([HOUR_0_23]%12)*30 + [MINUTE]*0.5)" />
+                    </PartImage>
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="minutehand" />
+                      <Transform target="angle" value="([MINUTE]*6 + [SECOND]*0.1)" />
+                    </PartImage>
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.1]">
+                      <Image resource="secondhand" />
+                      <Transform target="angle" value="[SECOND_MILLISECOND]*6" />
+                    </PartImage>
+                  </Group>
+                </ListOption>
+                <ListOption id="minimal">
+                  <Group name="minimalfull0" x="0" y="0" width="480" height="480">
+                    <PartDraw x="0" y="0" width="480" height="480">
+                      <Arc centerX="240" centerY="240" width="260" height="260" startAngle="0" endAngle="90">
+                        <Transform target="startAngle" value="(([HOUR_0_23]%12)*30 + [MINUTE]*0.5)" />
+                        <Transform target="endAngle" value="(([HOUR_0_23]%12)*30 + [MINUTE]*0.5) + (360 + ([MINUTE]*6 + [SECOND]*0.1) - (([HOUR_0_23]%12)*30 + [MINUTE]*0.5))%360" />
+                        <Stroke thickness="260" color="[CONFIGURATION.palette.2]" />
+                      </Arc>
+                    </PartDraw>
+                    <PartImage x="122" y="225" width="77" height="28" tintColor="[CONFIGURATION.palette.1]">
+                      <Image resource="swoosh" />
+                    </PartImage>
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="hourhand" />
+                      <Transform target="angle" value="(([HOUR_0_23]%12)*30 + [MINUTE]*0.5)" />
+                    </PartImage>
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="minutehand" />
+                      <Transform target="angle" value="([MINUTE]*6 + [SECOND]*0.1)" />
+                    </PartImage>
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.1]">
+                      <Image resource="secondhand" />
+                      <Transform target="angle" value="[SECOND_MILLISECOND]*6" />
+                    </PartImage>
+                  </Group>
+                </ListOption>
+              </ListConfiguration>
+            </Group>
+          </ListOption>
+          <ListOption id="circle">
+            <Group name="circle0" x="0" y="0" width="480" height="480" scaleX="0.85" scaleY="0.85">
+              <ListConfiguration id="time">
+                <ListOption id="digital">
+                  <Group name="digitalcircle0" x="0" y="0" width="480" height="480">
+                    <PartImage x="-35" y="-35" width="550" height="550" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="ticks" />
+                    </PartImage>
+                    <Condition>
+                      <Expressions>
+                        <Expression name="d0">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 0</Expression>
+                        <Expression name="d1">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 1</Expression>
+                        <Expression name="d2">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 2</Expression>
+                        <Expression name="d3">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 3</Expression>
+                        <Expression name="d4">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 4</Expression>
+                        <Expression name="d5">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 5</Expression>
+                        <Expression name="d6">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 6</Expression>
+                        <Expression name="d7">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 7</Expression>
+                        <Expression name="d8">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 8</Expression>
+                        <Expression name="d9">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 9</Expression>
+                        <Expression name="d10">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 10</Expression>
+                        <Expression name="d11">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 11</Expression>
+                        <Expression name="d12">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 12</Expression>
+                        <Expression name="d13">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 13</Expression>
+                        <Expression name="d14">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 14</Expression>
+                        <Expression name="d15">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 15</Expression>
+                        <Expression name="d16">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 16</Expression>
+                        <Expression name="d17">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 17</Expression>
+                        <Expression name="d18">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 18</Expression>
+                        <Expression name="d19">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 19</Expression>
+                        <Expression name="d20">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 20</Expression>
+                        <Expression name="d21">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 21</Expression>
+                        <Expression name="d22">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 22</Expression>
+                        <Expression name="d23">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 23</Expression>
+                      </Expressions>
+                      <Compare expression="d0">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_0" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d1">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_1" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d2">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_2" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d3">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_3" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d4">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_4" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d5">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_5" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d6">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_6" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d7">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_7" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d8">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_8" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d9">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_9" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d10">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_10" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d11">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_11" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d12">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_12" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d13">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_13" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d14">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_14" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d15">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_15" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d16">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_16" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d17">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_17" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d18">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_18" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d19">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_19" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d20">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_20" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d21">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_21" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d22">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_22" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d23">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_23" />
+                        </PartImage>
+                      </Compare>
+                    </Condition>
+                    <Condition>
+                      <Expressions>
+                        <Expression name="d0">[MINUTE] == 0</Expression>
+                        <Expression name="d1">[MINUTE] == 1</Expression>
+                        <Expression name="d2">[MINUTE] == 2</Expression>
+                        <Expression name="d3">[MINUTE] == 3</Expression>
+                        <Expression name="d4">[MINUTE] == 4</Expression>
+                        <Expression name="d5">[MINUTE] == 5</Expression>
+                        <Expression name="d6">[MINUTE] == 6</Expression>
+                        <Expression name="d7">[MINUTE] == 7</Expression>
+                        <Expression name="d8">[MINUTE] == 8</Expression>
+                        <Expression name="d9">[MINUTE] == 9</Expression>
+                        <Expression name="d10">[MINUTE] == 10</Expression>
+                        <Expression name="d11">[MINUTE] == 11</Expression>
+                        <Expression name="d12">[MINUTE] == 12</Expression>
+                        <Expression name="d13">[MINUTE] == 13</Expression>
+                        <Expression name="d14">[MINUTE] == 14</Expression>
+                        <Expression name="d15">[MINUTE] == 15</Expression>
+                        <Expression name="d16">[MINUTE] == 16</Expression>
+                        <Expression name="d17">[MINUTE] == 17</Expression>
+                        <Expression name="d18">[MINUTE] == 18</Expression>
+                        <Expression name="d19">[MINUTE] == 19</Expression>
+                        <Expression name="d20">[MINUTE] == 20</Expression>
+                        <Expression name="d21">[MINUTE] == 21</Expression>
+                        <Expression name="d22">[MINUTE] == 22</Expression>
+                        <Expression name="d23">[MINUTE] == 23</Expression>
+                        <Expression name="d24">[MINUTE] == 24</Expression>
+                        <Expression name="d25">[MINUTE] == 25</Expression>
+                        <Expression name="d26">[MINUTE] == 26</Expression>
+                        <Expression name="d27">[MINUTE] == 27</Expression>
+                        <Expression name="d28">[MINUTE] == 28</Expression>
+                        <Expression name="d29">[MINUTE] == 29</Expression>
+                        <Expression name="d30">[MINUTE] == 30</Expression>
+                        <Expression name="d31">[MINUTE] == 31</Expression>
+                        <Expression name="d32">[MINUTE] == 32</Expression>
+                        <Expression name="d33">[MINUTE] == 33</Expression>
+                        <Expression name="d34">[MINUTE] == 34</Expression>
+                        <Expression name="d35">[MINUTE] == 35</Expression>
+                        <Expression name="d36">[MINUTE] == 36</Expression>
+                        <Expression name="d37">[MINUTE] == 37</Expression>
+                        <Expression name="d38">[MINUTE] == 38</Expression>
+                        <Expression name="d39">[MINUTE] == 39</Expression>
+                        <Expression name="d40">[MINUTE] == 40</Expression>
+                        <Expression name="d41">[MINUTE] == 41</Expression>
+                        <Expression name="d42">[MINUTE] == 42</Expression>
+                        <Expression name="d43">[MINUTE] == 43</Expression>
+                        <Expression name="d44">[MINUTE] == 44</Expression>
+                        <Expression name="d45">[MINUTE] == 45</Expression>
+                        <Expression name="d46">[MINUTE] == 46</Expression>
+                        <Expression name="d47">[MINUTE] == 47</Expression>
+                        <Expression name="d48">[MINUTE] == 48</Expression>
+                        <Expression name="d49">[MINUTE] == 49</Expression>
+                        <Expression name="d50">[MINUTE] == 50</Expression>
+                        <Expression name="d51">[MINUTE] == 51</Expression>
+                        <Expression name="d52">[MINUTE] == 52</Expression>
+                        <Expression name="d53">[MINUTE] == 53</Expression>
+                        <Expression name="d54">[MINUTE] == 54</Expression>
+                        <Expression name="d55">[MINUTE] == 55</Expression>
+                        <Expression name="d56">[MINUTE] == 56</Expression>
+                        <Expression name="d57">[MINUTE] == 57</Expression>
+                        <Expression name="d58">[MINUTE] == 58</Expression>
+                        <Expression name="d59">[MINUTE] == 59</Expression>
+                      </Expressions>
+                      <Compare expression="d0">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_00" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d1">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_01" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d2">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_02" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d3">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_03" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d4">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_04" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d5">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_05" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d6">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_06" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d7">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_07" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d8">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_08" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d9">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_09" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d10">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_10" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d11">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_11" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d12">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_12" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d13">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_13" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d14">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_14" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d15">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_15" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d16">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_16" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d17">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_17" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d18">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_18" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d19">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_19" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d20">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_20" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d21">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_21" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d22">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_22" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d23">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_23" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d24">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_24" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d25">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_25" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d26">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_26" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d27">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_27" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d28">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_28" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d29">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_29" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d30">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_30" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d31">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_31" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d32">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_32" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d33">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_33" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d34">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_34" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d35">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_35" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d36">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_36" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d37">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_37" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d38">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_38" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d39">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_39" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d40">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_40" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d41">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_41" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d42">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_42" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d43">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_43" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d44">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_44" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d45">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_45" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d46">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_46" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d47">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_47" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d48">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_48" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d49">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_49" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d50">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_50" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d51">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_51" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d52">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_52" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d53">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_53" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d54">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_54" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d55">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_55" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d56">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_56" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d57">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_57" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d58">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_58" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d59">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="solid_59" />
+                        </PartImage>
+                      </Compare>
+                    </Condition>
+                    <PartImage x="45" y="231" width="74" height="27" tintColor="[CONFIGURATION.palette.1]">
+                      <Image resource="swoosh" />
+                    </PartImage>
+                  </Group>
+                </ListOption>
+                <ListOption id="analog">
+                  <Group name="analogcircle0" x="0" y="0" width="480" height="480">
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="ticks" />
+                    </PartImage>
+                    <PartImage x="122" y="225" width="77" height="28" tintColor="[CONFIGURATION.palette.1]">
+                      <Image resource="swoosh" />
+                    </PartImage>
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="hourhand" />
+                      <Transform target="angle" value="(([HOUR_0_23]%12)*30 + [MINUTE]*0.5)" />
+                    </PartImage>
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="minutehand" />
+                      <Transform target="angle" value="([MINUTE]*6 + [SECOND]*0.1)" />
+                    </PartImage>
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.1]">
+                      <Image resource="secondhand" />
+                      <Transform target="angle" value="[SECOND_MILLISECOND]*6" />
+                    </PartImage>
+                  </Group>
+                </ListOption>
+                <ListOption id="minimal">
+                  <Group name="minimalcircle0" x="0" y="0" width="480" height="480">
+                    <PartDraw x="0" y="0" width="480" height="480">
+                      <Arc centerX="240" centerY="240" width="260" height="260" startAngle="0" endAngle="90">
+                        <Transform target="startAngle" value="(([HOUR_0_23]%12)*30 + [MINUTE]*0.5)" />
+                        <Transform target="endAngle" value="(([HOUR_0_23]%12)*30 + [MINUTE]*0.5) + (360 + ([MINUTE]*6 + [SECOND]*0.1) - (([HOUR_0_23]%12)*30 + [MINUTE]*0.5))%360" />
+                        <Stroke thickness="260" color="[CONFIGURATION.palette.2]" />
+                      </Arc>
+                    </PartDraw>
+                    <PartImage x="122" y="225" width="77" height="28" tintColor="[CONFIGURATION.palette.1]">
+                      <Image resource="swoosh" />
+                    </PartImage>
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="hourhand" />
+                      <Transform target="angle" value="(([HOUR_0_23]%12)*30 + [MINUTE]*0.5)" />
+                    </PartImage>
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="minutehand" />
+                      <Transform target="angle" value="([MINUTE]*6 + [SECOND]*0.1)" />
+                    </PartImage>
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.1]">
+                      <Image resource="secondhand" />
+                      <Transform target="angle" value="[SECOND_MILLISECOND]*6" />
+                    </PartImage>
+                  </Group>
+                </ListOption>
+              </ListConfiguration>
+            </Group>
+          </ListOption>
+        </ListConfiguration>
+      </Group>
+    </Group>
+    <Group name="ambient" x="0" y="0" width="480" height="480" alpha="0">
+      <Variant mode="AMBIENT" target="alpha" value="100" />
+      <Group name="layout1" x="0" y="0" width="480" height="480">
+        <ListConfiguration id="dial">
+          <ListOption id="full">
+            <Group name="full1" x="0" y="0" width="480" height="480">
+              <ListConfiguration id="time">
+                <ListOption id="digital">
+                  <Group name="digitalfull1" x="0" y="0" width="480" height="480">
+                    <Condition>
+                      <Expressions>
+                        <Expression name="d0">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 0</Expression>
+                        <Expression name="d1">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 1</Expression>
+                        <Expression name="d2">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 2</Expression>
+                        <Expression name="d3">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 3</Expression>
+                        <Expression name="d4">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 4</Expression>
+                        <Expression name="d5">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 5</Expression>
+                        <Expression name="d6">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 6</Expression>
+                        <Expression name="d7">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 7</Expression>
+                        <Expression name="d8">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 8</Expression>
+                        <Expression name="d9">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 9</Expression>
+                        <Expression name="d10">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 10</Expression>
+                        <Expression name="d11">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 11</Expression>
+                        <Expression name="d12">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 12</Expression>
+                        <Expression name="d13">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 13</Expression>
+                        <Expression name="d14">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 14</Expression>
+                        <Expression name="d15">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 15</Expression>
+                        <Expression name="d16">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 16</Expression>
+                        <Expression name="d17">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 17</Expression>
+                        <Expression name="d18">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 18</Expression>
+                        <Expression name="d19">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 19</Expression>
+                        <Expression name="d20">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 20</Expression>
+                        <Expression name="d21">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 21</Expression>
+                        <Expression name="d22">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 22</Expression>
+                        <Expression name="d23">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 23</Expression>
+                      </Expressions>
+                      <Compare expression="d0">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_0" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d1">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_1" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d2">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_2" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d3">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_3" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d4">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_4" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d5">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_5" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d6">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_6" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d7">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_7" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d8">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_8" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d9">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_9" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d10">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_10" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d11">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_11" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d12">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_12" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d13">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_13" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d14">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_14" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d15">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_15" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d16">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_16" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d17">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_17" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d18">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_18" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d19">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_19" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d20">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_20" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d21">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_21" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d22">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_22" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d23">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_23" />
+                        </PartImage>
+                      </Compare>
+                    </Condition>
+                    <Condition>
+                      <Expressions>
+                        <Expression name="d0">[MINUTE] == 0</Expression>
+                        <Expression name="d1">[MINUTE] == 1</Expression>
+                        <Expression name="d2">[MINUTE] == 2</Expression>
+                        <Expression name="d3">[MINUTE] == 3</Expression>
+                        <Expression name="d4">[MINUTE] == 4</Expression>
+                        <Expression name="d5">[MINUTE] == 5</Expression>
+                        <Expression name="d6">[MINUTE] == 6</Expression>
+                        <Expression name="d7">[MINUTE] == 7</Expression>
+                        <Expression name="d8">[MINUTE] == 8</Expression>
+                        <Expression name="d9">[MINUTE] == 9</Expression>
+                        <Expression name="d10">[MINUTE] == 10</Expression>
+                        <Expression name="d11">[MINUTE] == 11</Expression>
+                        <Expression name="d12">[MINUTE] == 12</Expression>
+                        <Expression name="d13">[MINUTE] == 13</Expression>
+                        <Expression name="d14">[MINUTE] == 14</Expression>
+                        <Expression name="d15">[MINUTE] == 15</Expression>
+                        <Expression name="d16">[MINUTE] == 16</Expression>
+                        <Expression name="d17">[MINUTE] == 17</Expression>
+                        <Expression name="d18">[MINUTE] == 18</Expression>
+                        <Expression name="d19">[MINUTE] == 19</Expression>
+                        <Expression name="d20">[MINUTE] == 20</Expression>
+                        <Expression name="d21">[MINUTE] == 21</Expression>
+                        <Expression name="d22">[MINUTE] == 22</Expression>
+                        <Expression name="d23">[MINUTE] == 23</Expression>
+                        <Expression name="d24">[MINUTE] == 24</Expression>
+                        <Expression name="d25">[MINUTE] == 25</Expression>
+                        <Expression name="d26">[MINUTE] == 26</Expression>
+                        <Expression name="d27">[MINUTE] == 27</Expression>
+                        <Expression name="d28">[MINUTE] == 28</Expression>
+                        <Expression name="d29">[MINUTE] == 29</Expression>
+                        <Expression name="d30">[MINUTE] == 30</Expression>
+                        <Expression name="d31">[MINUTE] == 31</Expression>
+                        <Expression name="d32">[MINUTE] == 32</Expression>
+                        <Expression name="d33">[MINUTE] == 33</Expression>
+                        <Expression name="d34">[MINUTE] == 34</Expression>
+                        <Expression name="d35">[MINUTE] == 35</Expression>
+                        <Expression name="d36">[MINUTE] == 36</Expression>
+                        <Expression name="d37">[MINUTE] == 37</Expression>
+                        <Expression name="d38">[MINUTE] == 38</Expression>
+                        <Expression name="d39">[MINUTE] == 39</Expression>
+                        <Expression name="d40">[MINUTE] == 40</Expression>
+                        <Expression name="d41">[MINUTE] == 41</Expression>
+                        <Expression name="d42">[MINUTE] == 42</Expression>
+                        <Expression name="d43">[MINUTE] == 43</Expression>
+                        <Expression name="d44">[MINUTE] == 44</Expression>
+                        <Expression name="d45">[MINUTE] == 45</Expression>
+                        <Expression name="d46">[MINUTE] == 46</Expression>
+                        <Expression name="d47">[MINUTE] == 47</Expression>
+                        <Expression name="d48">[MINUTE] == 48</Expression>
+                        <Expression name="d49">[MINUTE] == 49</Expression>
+                        <Expression name="d50">[MINUTE] == 50</Expression>
+                        <Expression name="d51">[MINUTE] == 51</Expression>
+                        <Expression name="d52">[MINUTE] == 52</Expression>
+                        <Expression name="d53">[MINUTE] == 53</Expression>
+                        <Expression name="d54">[MINUTE] == 54</Expression>
+                        <Expression name="d55">[MINUTE] == 55</Expression>
+                        <Expression name="d56">[MINUTE] == 56</Expression>
+                        <Expression name="d57">[MINUTE] == 57</Expression>
+                        <Expression name="d58">[MINUTE] == 58</Expression>
+                        <Expression name="d59">[MINUTE] == 59</Expression>
+                      </Expressions>
+                      <Compare expression="d0">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_00" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d1">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_01" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d2">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_02" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d3">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_03" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d4">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_04" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d5">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_05" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d6">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_06" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d7">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_07" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d8">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_08" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d9">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_09" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d10">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_10" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d11">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_11" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d12">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_12" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d13">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_13" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d14">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_14" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d15">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_15" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d16">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_16" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d17">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_17" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d18">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_18" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d19">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_19" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d20">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_20" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d21">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_21" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d22">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_22" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d23">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_23" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d24">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_24" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d25">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_25" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d26">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_26" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d27">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_27" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d28">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_28" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d29">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_29" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d30">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_30" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d31">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_31" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d32">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_32" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d33">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_33" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d34">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_34" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d35">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_35" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d36">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_36" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d37">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_37" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d38">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_38" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d39">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_39" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d40">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_40" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d41">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_41" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d42">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_42" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d43">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_43" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d44">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_44" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d45">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_45" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d46">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_46" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d47">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_47" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d48">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_48" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d49">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_49" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d50">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_50" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d51">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_51" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d52">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_52" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d53">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_53" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d54">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_54" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d55">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_55" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d56">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_56" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d57">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_57" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d58">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_58" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d59">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_59" />
+                        </PartImage>
+                      </Compare>
+                    </Condition>
+                    <PartImage x="45" y="231" width="74" height="27" tintColor="[CONFIGURATION.palette.1]">
+                      <Image resource="swoosh" />
+                    </PartImage>
+                  </Group>
+                </ListOption>
+                <ListOption id="analog">
+                  <Group name="analogfull1" x="0" y="0" width="480" height="480">
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="ticks" />
+                    </PartImage>
+                    <PartImage x="122" y="225" width="77" height="28" tintColor="[CONFIGURATION.palette.1]">
+                      <Image resource="swoosh" />
+                    </PartImage>
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="hourhand" />
+                      <Transform target="angle" value="(([HOUR_0_23]%12)*30 + [MINUTE]*0.5)" />
+                    </PartImage>
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="minutehand" />
+                      <Transform target="angle" value="[MINUTE]*6" />
+                    </PartImage>
+                  </Group>
+                </ListOption>
+                <ListOption id="minimal">
+                  <Group name="minimalfull1" x="0" y="0" width="480" height="480">
+                    <PartImage x="122" y="225" width="77" height="28" tintColor="[CONFIGURATION.palette.1]">
+                      <Image resource="swoosh" />
+                    </PartImage>
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="hourhand" />
+                      <Transform target="angle" value="(([HOUR_0_23]%12)*30 + [MINUTE]*0.5)" />
+                    </PartImage>
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="minutehand" />
+                      <Transform target="angle" value="[MINUTE]*6" />
+                    </PartImage>
+                  </Group>
+                </ListOption>
+              </ListConfiguration>
+            </Group>
+          </ListOption>
+          <ListOption id="circle">
+            <Group name="circle1" x="0" y="0" width="480" height="480" scaleX="0.85" scaleY="0.85">
+              <ListConfiguration id="time">
+                <ListOption id="digital">
+                  <Group name="digitalcircle1" x="0" y="0" width="480" height="480">
+                    <PartImage x="-35" y="-35" width="550" height="550" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="ticks" />
+                    </PartImage>
+                    <Condition>
+                      <Expressions>
+                        <Expression name="d0">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 0</Expression>
+                        <Expression name="d1">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 1</Expression>
+                        <Expression name="d2">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 2</Expression>
+                        <Expression name="d3">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 3</Expression>
+                        <Expression name="d4">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 4</Expression>
+                        <Expression name="d5">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 5</Expression>
+                        <Expression name="d6">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 6</Expression>
+                        <Expression name="d7">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 7</Expression>
+                        <Expression name="d8">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 8</Expression>
+                        <Expression name="d9">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 9</Expression>
+                        <Expression name="d10">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 10</Expression>
+                        <Expression name="d11">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 11</Expression>
+                        <Expression name="d12">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 12</Expression>
+                        <Expression name="d13">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 13</Expression>
+                        <Expression name="d14">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 14</Expression>
+                        <Expression name="d15">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 15</Expression>
+                        <Expression name="d16">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 16</Expression>
+                        <Expression name="d17">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 17</Expression>
+                        <Expression name="d18">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 18</Expression>
+                        <Expression name="d19">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 19</Expression>
+                        <Expression name="d20">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 20</Expression>
+                        <Expression name="d21">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 21</Expression>
+                        <Expression name="d22">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 22</Expression>
+                        <Expression name="d23">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 23</Expression>
+                      </Expressions>
+                      <Compare expression="d0">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_0" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d1">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_1" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d2">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_2" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d3">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_3" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d4">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_4" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d5">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_5" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d6">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_6" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d7">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_7" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d8">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_8" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d9">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_9" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d10">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_10" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d11">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_11" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d12">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_12" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d13">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_13" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d14">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_14" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d15">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_15" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d16">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_16" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d17">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_17" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d18">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_18" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d19">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_19" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d20">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_20" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d21">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_21" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d22">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_22" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d23">
+                        <PartImage x="126" y="86" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_23" />
+                        </PartImage>
+                      </Compare>
+                    </Condition>
+                    <Condition>
+                      <Expressions>
+                        <Expression name="d0">[MINUTE] == 0</Expression>
+                        <Expression name="d1">[MINUTE] == 1</Expression>
+                        <Expression name="d2">[MINUTE] == 2</Expression>
+                        <Expression name="d3">[MINUTE] == 3</Expression>
+                        <Expression name="d4">[MINUTE] == 4</Expression>
+                        <Expression name="d5">[MINUTE] == 5</Expression>
+                        <Expression name="d6">[MINUTE] == 6</Expression>
+                        <Expression name="d7">[MINUTE] == 7</Expression>
+                        <Expression name="d8">[MINUTE] == 8</Expression>
+                        <Expression name="d9">[MINUTE] == 9</Expression>
+                        <Expression name="d10">[MINUTE] == 10</Expression>
+                        <Expression name="d11">[MINUTE] == 11</Expression>
+                        <Expression name="d12">[MINUTE] == 12</Expression>
+                        <Expression name="d13">[MINUTE] == 13</Expression>
+                        <Expression name="d14">[MINUTE] == 14</Expression>
+                        <Expression name="d15">[MINUTE] == 15</Expression>
+                        <Expression name="d16">[MINUTE] == 16</Expression>
+                        <Expression name="d17">[MINUTE] == 17</Expression>
+                        <Expression name="d18">[MINUTE] == 18</Expression>
+                        <Expression name="d19">[MINUTE] == 19</Expression>
+                        <Expression name="d20">[MINUTE] == 20</Expression>
+                        <Expression name="d21">[MINUTE] == 21</Expression>
+                        <Expression name="d22">[MINUTE] == 22</Expression>
+                        <Expression name="d23">[MINUTE] == 23</Expression>
+                        <Expression name="d24">[MINUTE] == 24</Expression>
+                        <Expression name="d25">[MINUTE] == 25</Expression>
+                        <Expression name="d26">[MINUTE] == 26</Expression>
+                        <Expression name="d27">[MINUTE] == 27</Expression>
+                        <Expression name="d28">[MINUTE] == 28</Expression>
+                        <Expression name="d29">[MINUTE] == 29</Expression>
+                        <Expression name="d30">[MINUTE] == 30</Expression>
+                        <Expression name="d31">[MINUTE] == 31</Expression>
+                        <Expression name="d32">[MINUTE] == 32</Expression>
+                        <Expression name="d33">[MINUTE] == 33</Expression>
+                        <Expression name="d34">[MINUTE] == 34</Expression>
+                        <Expression name="d35">[MINUTE] == 35</Expression>
+                        <Expression name="d36">[MINUTE] == 36</Expression>
+                        <Expression name="d37">[MINUTE] == 37</Expression>
+                        <Expression name="d38">[MINUTE] == 38</Expression>
+                        <Expression name="d39">[MINUTE] == 39</Expression>
+                        <Expression name="d40">[MINUTE] == 40</Expression>
+                        <Expression name="d41">[MINUTE] == 41</Expression>
+                        <Expression name="d42">[MINUTE] == 42</Expression>
+                        <Expression name="d43">[MINUTE] == 43</Expression>
+                        <Expression name="d44">[MINUTE] == 44</Expression>
+                        <Expression name="d45">[MINUTE] == 45</Expression>
+                        <Expression name="d46">[MINUTE] == 46</Expression>
+                        <Expression name="d47">[MINUTE] == 47</Expression>
+                        <Expression name="d48">[MINUTE] == 48</Expression>
+                        <Expression name="d49">[MINUTE] == 49</Expression>
+                        <Expression name="d50">[MINUTE] == 50</Expression>
+                        <Expression name="d51">[MINUTE] == 51</Expression>
+                        <Expression name="d52">[MINUTE] == 52</Expression>
+                        <Expression name="d53">[MINUTE] == 53</Expression>
+                        <Expression name="d54">[MINUTE] == 54</Expression>
+                        <Expression name="d55">[MINUTE] == 55</Expression>
+                        <Expression name="d56">[MINUTE] == 56</Expression>
+                        <Expression name="d57">[MINUTE] == 57</Expression>
+                        <Expression name="d58">[MINUTE] == 58</Expression>
+                        <Expression name="d59">[MINUTE] == 59</Expression>
+                      </Expressions>
+                      <Compare expression="d0">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_00" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d1">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_01" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d2">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_02" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d3">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_03" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d4">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_04" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d5">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_05" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d6">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_06" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d7">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_07" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d8">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_08" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d9">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_09" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d10">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_10" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d11">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_11" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d12">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_12" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d13">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_13" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d14">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_14" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d15">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_15" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d16">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_16" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d17">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_17" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d18">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_18" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d19">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_19" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d20">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_20" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d21">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_21" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d22">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_22" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d23">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_23" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d24">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_24" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d25">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_25" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d26">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_26" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d27">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_27" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d28">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_28" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d29">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_29" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d30">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_30" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d31">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_31" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d32">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_32" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d33">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_33" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d34">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_34" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d35">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_35" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d36">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_36" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d37">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_37" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d38">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_38" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d39">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_39" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d40">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_40" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d41">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_41" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d42">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_42" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d43">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_43" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d44">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_44" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d45">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_45" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d46">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_46" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d47">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_47" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d48">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_48" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d49">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_49" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d50">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_50" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d51">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_51" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d52">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_52" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d53">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_53" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d54">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_54" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d55">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_55" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d56">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_56" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d57">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_57" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d58">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_58" />
+                        </PartImage>
+                      </Compare>
+                      <Compare expression="d59">
+                        <PartImage x="126" y="230" width="250" height="140" tintColor="[CONFIGURATION.palette.0]">
+                          <Image resource="outline_59" />
+                        </PartImage>
+                      </Compare>
+                    </Condition>
+                    <PartImage x="45" y="231" width="74" height="27" tintColor="[CONFIGURATION.palette.1]">
+                      <Image resource="swoosh" />
+                    </PartImage>
+                  </Group>
+                </ListOption>
+                <ListOption id="analog">
+                  <Group name="analogcircle1" x="0" y="0" width="480" height="480">
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="ticks" />
+                    </PartImage>
+                    <PartImage x="122" y="225" width="77" height="28" tintColor="[CONFIGURATION.palette.1]">
+                      <Image resource="swoosh" />
+                    </PartImage>
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="hourhand" />
+                      <Transform target="angle" value="(([HOUR_0_23]%12)*30 + [MINUTE]*0.5)" />
+                    </PartImage>
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="minutehand" />
+                      <Transform target="angle" value="[MINUTE]*6" />
+                    </PartImage>
+                  </Group>
+                </ListOption>
+                <ListOption id="minimal">
+                  <Group name="minimalcircle1" x="0" y="0" width="480" height="480">
+                    <PartImage x="122" y="225" width="77" height="28" tintColor="[CONFIGURATION.palette.1]">
+                      <Image resource="swoosh" />
+                    </PartImage>
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="hourhand" />
+                      <Transform target="angle" value="(([HOUR_0_23]%12)*30 + [MINUTE]*0.5)" />
+                    </PartImage>
+                    <PartImage x="0" y="0" width="480" height="480" tintColor="[CONFIGURATION.palette.0]">
+                      <Image resource="minutehand" />
+                      <Transform target="angle" value="[MINUTE]*6" />
+                    </PartImage>
+                  </Group>
+                </ListOption>
+              </ListConfiguration>
+            </Group>
+          </ListOption>
+        </ListConfiguration>
+      </Group>
+    </Group>
+  </Scene>
+</WatchFace>

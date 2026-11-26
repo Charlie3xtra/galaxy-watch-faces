@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike υβριδικό</string>
+  <string name="time">ΩΡΑ</string>
+  <string name="color">ΧΡΩΜΑ</string>
+  <string name="dial">ΣΤΙΛ</string>
+  <string name="digital">ΨΗΦΙΑΚΟ</string>
+  <string name="analog">ΑΝΑΛΟΓΙΚΟ I</string>
+  <string name="minimal">ΑΝΑΛΟΓΙΚΟ II</string>
+  <string name="full">ΠΛΗΡΗΣ ΟΘΟΝΗ</string>
+  <string name="circle">ΚΥΚΛΙΚΟ</string>
+  <string name="p0">Pure Platinum</string>
+  <string name="p1">Λαχανί</string>
+  <string name="p2">Φουλ πορτοκαλί</string>
+  <string name="p3">Εκρηκτικό ροζ</string>
+  <string name="p4">Πράσινο Σέλας</string>
+  <string name="p5">Σκούρο τιρκουάζ</string>
+  <string name="p6">Μπλε της πισίνας</string>
+  <string name="p7">Γκρίζος ουρανός</string>
+  <string name="p8">Γκρι του οψιδιανού</string>
+  <string name="p9">Βαθύ γαλάζιο</string>
+  <string name="p10">Μπεζ άμμου</string>
+  <string name="p11">Γκριζοπράσινη αύρα</string>
+</resources>

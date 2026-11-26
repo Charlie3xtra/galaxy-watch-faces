@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Hybrid</string>
+  <string name="time">समय</string>
+  <string name="color">रंग</string>
+  <string name="dial">शैली</string>
+  <string name="digital">डिजिटल</string>
+  <string name="analog">ऐनालॉग I</string>
+  <string name="minimal">ऐनालॉग II</string>
+  <string name="full">फ़ुल स्क्रीन</string>
+  <string name="circle">गोलाकार</string>
+  <string name="p0">प्योर प्लेटिनम</string>
+  <string name="p1">वोल्ट</string>
+  <string name="p2">टोटल ऑरेंज</string>
+  <string name="p3">पिंक ब्लास्ट</string>
+  <string name="p4">ऑरोरा ग्रीन</string>
+  <string name="p5">मिडनाइट फ़िरोज़ी</string>
+  <string name="p6">क्लोरीन ब्लू</string>
+  <string name="p7">सेलेस्टियल टील</string>
+  <string name="p8">ऑब्सिडियन मिस्ट</string>
+  <string name="p9">रॉयल पल्स</string>
+  <string name="p10">डेज़र्ट सैंड</string>
+  <string name="p11">स्प्रूस ऑरा</string>
+</resources>

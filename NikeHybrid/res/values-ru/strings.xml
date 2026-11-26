@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike (гибридный)</string>
+  <string name="time">ЦИФЕРБЛАТ</string>
+  <string name="color">ЦВЕТ</string>
+  <string name="dial">СТИЛЬ</string>
+  <string name="digital">ЦИФРОВОЙ</string>
+  <string name="analog">АНАЛОГОВЫЙ I</string>
+  <string name="minimal">АНАЛОГОВЫЙ II</string>
+  <string name="full">ПОЛНЫЙ ЭКРАН</string>
+  <string name="circle">КРУГ</string>
+  <string name="p0">Чистая платина</string>
+  <string name="p1">Вольт</string>
+  <string name="p2">Сочный апельсин</string>
+  <string name="p3">Розовый всплеск</string>
+  <string name="p4">Северное сияние</string>
+  <string name="p5">Полночная бирюза</string>
+  <string name="p6">Лазурь</string>
+  <string name="p7">Небесная бирюза</string>
+  <string name="p8">Дымчатый серый</string>
+  <string name="p9">Синяя пастель</string>
+  <string name="p10">Песчаная пустыня</string>
+  <string name="p11">Еловая дымка</string>
+</resources>

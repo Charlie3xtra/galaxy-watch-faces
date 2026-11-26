@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike (Hỗn hợp)</string>
+  <string name="time">THỜI GIAN</string>
+  <string name="color">MÀU</string>
+  <string name="dial">KIỂU</string>
+  <string name="digital">SỐ</string>
+  <string name="analog">KIM I</string>
+  <string name="minimal">KIM II</string>
+  <string name="full">TOÀN MÀN HÌNH</string>
+  <string name="circle">VÒNG TRÒN</string>
+  <string name="p0">Bạch kim</string>
+  <string name="p1">Volt</string>
+  <string name="p2">Total Orange</string>
+  <string name="p3">Hồng đậm</string>
+  <string name="p4">Aurora Green</string>
+  <string name="p5">Xanh ngọc trăng đêm</string>
+  <string name="p6">Xanh hồ bơi</string>
+  <string name="p7">Celestial Teal</string>
+  <string name="p8">Xám sương mờ</string>
+  <string name="p9">Xanh lam</string>
+  <string name="p10">Vàng cát</string>
+  <string name="p11">Xanh phớt</string>
+</resources>

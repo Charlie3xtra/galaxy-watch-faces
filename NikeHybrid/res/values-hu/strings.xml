@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Hibrid</string>
+  <string name="time">IDŐ</string>
+  <string name="color">SZÍN</string>
+  <string name="dial">STÍLUS</string>
+  <string name="digital">DIGITÁLIS</string>
+  <string name="analog">ANALÓG I</string>
+  <string name="minimal">ANALÓG II</string>
+  <string name="full">TELJES KÉPERNYŐ</string>
+  <string name="circle">KEREK</string>
+  <string name="p0">Platinaszín</string>
+  <string name="p1">Neonzöld</string>
+  <string name="p2">Totálnarancs</string>
+  <string name="p3">Élénk rózsaszín</string>
+  <string name="p4">Sarki fény</string>
+  <string name="p5">Éjféli türkiz</string>
+  <string name="p6">Klórkék</string>
+  <string name="p7">Csillagközi zöld</string>
+  <string name="p8">Obszidiánköd</string>
+  <string name="p9">Royal kék</string>
+  <string name="p10">Sivatagi homok</string>
+  <string name="p11">Lucfenyő aura</string>
+</resources>

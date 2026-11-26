@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike混合</string>
+  <string name="time">時間</string>
+  <string name="color">顏色</string>
+  <string name="dial">樣式</string>
+  <string name="digital">數位</string>
+  <string name="analog">指針I</string>
+  <string name="minimal">指針II</string>
+  <string name="full">全螢幕</string>
+  <string name="circle">圓形</string>
+  <string name="p0">Pure Platinum</string>
+  <string name="p1">Volt</string>
+  <string name="p2">全橙色</string>
+  <string name="p3">勁爆粉色</string>
+  <string name="p4">極光綠色</string>
+  <string name="p5">午夜松石色</string>
+  <string name="p6">氯藍色</string>
+  <string name="p7">鴨絨色</string>
+  <string name="p8">霧黑曜石色</string>
+  <string name="p9">皇族藍色</string>
+  <string name="p10">沙丘色</string>
+  <string name="p11">雲杉灰綠色</string>
+</resources>

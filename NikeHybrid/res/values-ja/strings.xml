@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nikeハイブリッド</string>
+  <string name="time">時間</string>
+  <string name="color">カラー</string>
+  <string name="dial">スタイル</string>
+  <string name="digital">デジタル</string>
+  <string name="analog">アナログI</string>
+  <string name="minimal">アナログII</string>
+  <string name="full">フルスクリーン</string>
+  <string name="circle">円形</string>
+  <string name="p0">ピュアプラチナム</string>
+  <string name="p1">ボルト</string>
+  <string name="p2">トータルオレンジ</string>
+  <string name="p3">ピンクブラスト</string>
+  <string name="p4">オーロラグリーン</string>
+  <string name="p5">ミッドナイトターコイズ</string>
+  <string name="p6">クロリンブルー</string>
+  <string name="p7">セレスティアルティール</string>
+  <string name="p8">オブシディアンミスト</string>
+  <string name="p9">ロイヤルパルス</string>
+  <string name="p10">デザートサンド</string>
+  <string name="p11">スプルースオーラ</string>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">‏Nike משולב</string>
+  <string name="time">שעה</string>
+  <string name="color">צבע</string>
+  <string name="dial">סגנון</string>
+  <string name="digital">דיגיטלי</string>
+  <string name="analog">אנלוגי 1</string>
+  <string name="minimal">אנלוגי 2</string>
+  <string name="full">מסך מלא</string>
+  <string name="circle">מעגלית</string>
+  <string name="p0">פלטינה טהורה</string>
+  <string name="p1">ליים זוהר</string>
+  <string name="p2">כתום טוטאלי</string>
+  <string name="p3">ורוד מתפוצץ</string>
+  <string name="p4">ירוק אורורה</string>
+  <string name="p5">טורקיז חצות</string>
+  <string name="p6">כחול מינרלי</string>
+  <string name="p7">טורקיז שמימי</string>
+  <string name="p8">ערפל בזלתי</string>
+  <string name="p9">כחול מלכותי</string>
+  <string name="p10">חול מדבר</string>
+  <string name="p11">ירקרק חיוור</string>
+</resources>

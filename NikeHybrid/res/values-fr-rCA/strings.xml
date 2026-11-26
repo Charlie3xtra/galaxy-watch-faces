@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike hybride</string>
+  <string name="time">HEURE</string>
+  <string name="color">COULEUR</string>
+  <string name="dial">STYLE</string>
+  <string name="digital">NUMÉRIQUE</string>
+  <string name="analog">ANALOGIQUE I</string>
+  <string name="minimal">ANALOGIQUE II</string>
+  <string name="full">PLEIN ÉCRAN</string>
+  <string name="circle">CIRCULAIRE</string>
+  <string name="p0">Platine pur</string>
+  <string name="p1">Volt</string>
+  <string name="p2">Orange total</string>
+  <string name="p3">Gomme balloune</string>
+  <string name="p4">Aurore boréale</string>
+  <string name="p5">Turquoise nuit</string>
+  <string name="p6">Bleu chlore</string>
+  <string name="p7">Bleu céleste</string>
+  <string name="p8">Brume obsidienne</string>
+  <string name="p9">Bleu noble</string>
+  <string name="p10">Sable du désert</string>
+  <string name="p11">Essence d’épinette</string>
+</resources>

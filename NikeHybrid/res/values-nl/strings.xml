@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Hybrid</string>
+  <string name="time">TIJD</string>
+  <string name="color">KLEUR</string>
+  <string name="dial">STIJL</string>
+  <string name="digital">DIGITAAL</string>
+  <string name="analog">ANALOOG I</string>
+  <string name="minimal">ANALOOG II</string>
+  <string name="full">SCHERM­VULLEND</string>
+  <string name="circle">CIRKEL­VORMIG</string>
+  <string name="p0">Pure Platinum</string>
+  <string name="p1">Volt</string>
+  <string name="p2">Total Orange</string>
+  <string name="p3">Pink Blast</string>
+  <string name="p4">Aurora Green</string>
+  <string name="p5">Midnight Turquoise</string>
+  <string name="p6">Chlorine Blue</string>
+  <string name="p7">Celestial Teal</string>
+  <string name="p8">Obsidian Mist</string>
+  <string name="p9">Royal Pulse</string>
+  <string name="p10">Desert Sand</string>
+  <string name="p11">Spruce Aura</string>
+</resources>

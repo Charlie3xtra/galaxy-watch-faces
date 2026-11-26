@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike hybrydowy</string>
+  <string name="time">CZAS</string>
+  <string name="color">KOLOR</string>
+  <string name="dial">STYL</string>
+  <string name="digital">CYFROWY</string>
+  <string name="analog">ANALOGOWY I</string>
+  <string name="minimal">ANALOGOWY II</string>
+  <string name="full">PEŁNY EKRAN</string>
+  <string name="circle">KOŁO</string>
+  <string name="p0">Czysta platyna</string>
+  <string name="p1">Volt</string>
+  <string name="p2">Soczysty pomarańczowy</string>
+  <string name="p3">Radykalny róż</string>
+  <string name="p4">Aurora Green</string>
+  <string name="p5">Nocny turkus</string>
+  <string name="p6">Chlorine Blue</string>
+  <string name="p7">Ciemny turkus</string>
+  <string name="p8">Jasny obsydian</string>
+  <string name="p9">Królewski lazur</string>
+  <string name="p10">Pustynny piasek</string>
+  <string name="p11">Delikatna zieleń</string>
+</resources>

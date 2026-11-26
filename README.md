@@ -87,3 +87,11 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 | <img src="Flux/screenshots/active.png" width="220" alt="流转亮屏"> | <img src="Flux/screenshots/ambient.png" width="220" alt="流转息屏"> |
 
 [下载流转 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/flux-1.1) · [Galaxy Watch 跨分钟实录](Flux/screenshots/minute.mp4)。动态模式按 24S132 的 14 组背景色和字色循环，索引由年内日序、显示小时和分钟决定。三套数字的 12/24 小时路径来自固件，按四个关键形状、0.25 秒时长及原缓动曲线采样。少数路径指令数量或类型不同的字形在对应阶段切换轮廓。录屏中实际形变约每 100 毫秒更新一次。息屏采用本分钟静态原字形和低亮灰色。构建现有资源使用 Flux/build.ps1；重新生成时先运行 Flux/dolomite.py，再运行 Flux/generate.py，需要 24S132 提取文件、原工作区资料、NumPy、Pillow 和 fontTools。
+
+## Nike 混合 · Nike Hybrid
+
+| 亮屏 | 息屏 |
+| :---: | :---: |
+| <img src="NikeHybrid/screenshots/active.png" width="220" alt="Nike 混合亮屏"> | <img src="NikeHybrid/screenshots/ambient.png" width="220" alt="Nike 混合息屏"> |
+
+[下载 Nike 混合 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/nike-hybrid-1.0)。默认双行数字采用 24S132 固件内嵌的 Victory Italic 和 Nike Hybrid 专用 Swoosh，息屏使用 Victory Outline Italic。提供 12 组配色、数字与两种指针样式、全屏和圆形刻度盘。此版省略复杂功能。数字版以 Apple 官方预览为依据，指针、扇形遮罩、刻度及息屏亮度为 Galaxy 圆屏适配。使用 NikeHybrid/build.ps1 构建现有资源。

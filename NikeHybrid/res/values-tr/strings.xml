@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Hibrit</string>
+  <string name="time">ZAMAN</string>
+  <string name="color">RENK</string>
+  <string name="dial">STİL</string>
+  <string name="digital">DİJİTAL</string>
+  <string name="analog">ANALOG I</string>
+  <string name="minimal">ANALOG II</string>
+  <string name="full">TAM EKRAN</string>
+  <string name="circle">DAİRESEL</string>
+  <string name="p0">Saf Platin</string>
+  <string name="p1">Volt</string>
+  <string name="p2">Total Orange</string>
+  <string name="p3">Parlak Pembe</string>
+  <string name="p4">Tan Yeşili</string>
+  <string name="p5">Koyu Turkuaz</string>
+  <string name="p6">Klor Mavisi</string>
+  <string name="p7">Petrol Yeşili</string>
+  <string name="p8">Obsidiyen Grisi</string>
+  <string name="p9">Bulutlu Mavi</string>
+  <string name="p10">Çöl Kumu</string>
+  <string name="p11">Ladin</string>
+</resources>

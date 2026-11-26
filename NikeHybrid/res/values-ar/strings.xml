@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">‏Nike مختلطة</string>
+  <string name="time">الوقت</string>
+  <string name="color">اللون</string>
+  <string name="dial">النمط</string>
+  <string name="digital">رقمية</string>
+  <string name="analog">بعقارب ١</string>
+  <string name="minimal">بعقارب ٢</string>
+  <string name="full">ملء الشاشة</string>
+  <string name="circle">دائرة</string>
+  <string name="p0">بلاتين</string>
+  <string name="p1">أخضر فولت</string>
+  <string name="p2">برتقالي فاتح</string>
+  <string name="p3">زهري صارخ</string>
+  <string name="p4">أخضر فيروزي</string>
+  <string name="p5">تركواز سماء الليل</string>
+  <string name="p6">أزرق الكلور</string>
+  <string name="p7">فيروزي سماوي</string>
+  <string name="p8">رمادي غائم</string>
+  <string name="p9">نبض ملكي</string>
+  <string name="p10">رملي صحراوي</string>
+  <string name="p11">أخضر باهت</string>
+</resources>

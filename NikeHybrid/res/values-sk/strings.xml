@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike hybridný</string>
+  <string name="time">ČAS</string>
+  <string name="color">FARBA</string>
+  <string name="dial">ŠTÝL</string>
+  <string name="digital">DIGITÁLNY</string>
+  <string name="analog">RUČIČKOVÝ I</string>
+  <string name="minimal">RUČIČKOVÝ II</string>
+  <string name="full">CELÁ OBRAZOVKA</string>
+  <string name="circle">KRUH</string>
+  <string name="p0">Platinová</string>
+  <string name="p1">Volt</string>
+  <string name="p2">Výrazná oranžová</string>
+  <string name="p3">Krikľavá ružová</string>
+  <string name="p4">Polárna zelená</string>
+  <string name="p5">Polnočná tyrkysová</string>
+  <string name="p6">Bazénová modrá</string>
+  <string name="p7">Modrozelená</string>
+  <string name="p8">Jemná obsidiánová</string>
+  <string name="p9">Kráľovská modrá</string>
+  <string name="p10">Piesková béžová</string>
+  <string name="p11">Snová zelená</string>
+</resources>

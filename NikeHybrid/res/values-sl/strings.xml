@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Hybrid</string>
+  <string name="time">ČAS</string>
+  <string name="color">BARVA</string>
+  <string name="dial">SLOG</string>
+  <string name="digital">DIGITALNI</string>
+  <string name="analog">ANALOGNI I</string>
+  <string name="minimal">ANALOGNI II</string>
+  <string name="full">CELOTEN ZASLON</string>
+  <string name="circle">ZAOBLJENA</string>
+  <string name="p0">Čista platina</string>
+  <string name="p1">Volt</string>
+  <string name="p2">Živo oranžna</string>
+  <string name="p3">Eksplozivno roza</string>
+  <string name="p4">Zelena zarja</string>
+  <string name="p5">Polnočno turkizna</string>
+  <string name="p6">Klorasto modra</string>
+  <string name="p7">Nebesna zelenomodra</string>
+  <string name="p8">Obsidianska meglica</string>
+  <string name="p9">Svetlo kraljevsko modra</string>
+  <string name="p10">Puščavski pesek</string>
+  <string name="p11">Svetlo smrekasta</string>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike híbrida</string>
+  <string name="time">HORA</string>
+  <string name="color">COLOR</string>
+  <string name="dial">ESTIL</string>
+  <string name="digital">DIGITAL</string>
+  <string name="analog">ANALÒGIC I</string>
+  <string name="minimal">ANALÒGIC II</string>
+  <string name="full">PANTALLA COMPLETA</string>
+  <string name="circle">CIRCULAR</string>
+  <string name="p0">Platí pur</string>
+  <string name="p1">Volt</string>
+  <string name="p2">Taronja viu</string>
+  <string name="p3">Rosa explosiu</string>
+  <string name="p4">Verd aurora</string>
+  <string name="p5">Turquesa mitjanit</string>
+  <string name="p6">Blau piscina</string>
+  <string name="p7">Celeste verdós</string>
+  <string name="p8">Boira obsidiana</string>
+  <string name="p9">Blau reial</string>
+  <string name="p10">Sorra del desert</string>
+  <string name="p11">Aura d’avet</string>
+</resources>
