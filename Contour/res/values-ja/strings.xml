@@ -13,4 +13,6 @@
   <string name="c3">イエロー</string>
   <string name="c4">White</string>
   <string name="c5">Volt</string>
+  <string name="top">上サブダイヤル</string>
+  <string name="bottom">下サブダイヤル</string>
 </resources>

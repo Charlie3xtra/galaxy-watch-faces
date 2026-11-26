@@ -13,4 +13,6 @@
   <string name="c3">Rumena</string>
   <string name="c4">White</string>
   <string name="c5">Volt</string>
+  <string name="top">Podštevilčnica zgoraj</string>
+  <string name="bottom">Podštevilčnica spodaj</string>
 </resources>

@@ -138,6 +138,6 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 | :---: | :---: |
 | <img src="Contour/screenshots/active.png" width="220" alt="轮廓亮屏实拍"> | <img src="Contour/screenshots/ambient.png" width="220" alt="轮廓息屏实拍"> |
 
-从 watchOS 24S132 的 NTKProteusFaceBundle 读取 Neptune 常规及圆体字形，按小时计算字重，再将原有矩形数字带映射到圆屏。整点前两秒使用 23 档字重过渡。提供六款配色、彩色盘底和可留空的短文本组件。息屏黑底来自固件，数字亮度按 Galaxy 屏幕适配。Apple 的点按波动和表冠展开尚未移植。两图均来自 Galaxy Watch。
+从 watchOS 24S132 的 NTKProteusFaceBundle 读取 Neptune 常规及圆体字形，按小时计算字重，再将原有矩形数字带映射到圆屏。整点前两秒使用 23 档字重过渡。提供六款配色、彩色盘底、上方文字和下方圆形组件。息屏黑底来自固件，数字亮度按 Galaxy 屏幕适配。Apple 的点按波动和表冠展开尚未移植。两图均来自 Galaxy Watch。
 
-[下载轮廓 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/contour-1.1/Contour-1.1.apk) · [常规字形预览](Contour/screenshots/style_sharp.png) · [圆体字形预览](Contour/screenshots/style_soft.png)
+[下载轮廓 1.2](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/contour-1.2/Contour-1.2.apk) · [双组件真机截图](Contour/screenshots/active-1.2.png) · [常规字形预览](Contour/screenshots/style_sharp.png) · [圆体字形预览](Contour/screenshots/style_soft.png)

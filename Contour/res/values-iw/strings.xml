@@ -13,4 +13,6 @@
   <string name="c3">צהוב</string>
   <string name="c4">White</string>
   <string name="c5">Volt</string>
+  <string name="top">חלק עליון משני</string>
+  <string name="bottom">חלק תחתון משני</string>
 </resources>

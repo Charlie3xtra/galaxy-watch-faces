@@ -13,4 +13,6 @@
   <string name="c3">Gul</string>
   <string name="c4">White</string>
   <string name="c5">Volt</string>
+  <string name="top">Underurskive øverst</string>
+  <string name="bottom">Underurskive nederst</string>
 </resources>

@@ -13,4 +13,6 @@
   <string name="c3">Žuta</string>
   <string name="c4">White</string>
   <string name="c5">Volt</string>
+  <string name="top">Kronograf gore</string>
+  <string name="bottom">Kronograf dolje</string>
 </resources>

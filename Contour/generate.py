@@ -177,12 +177,78 @@ for style in fonts:
             ambient(part,'tintColor','[CONFIGURATION.tone.0]')
             ambient(part,'alpha',135)
             el(part,'Image',resource=name)
-# Native optional short-text data source. Empty by default like the gallery shot.
-slot=el(scene,'ComplicationSlot',slotId=1,displayName='comp',supportedTypes='SHORT_TEXT EMPTY',**box(174,284,132,44))
-el(slot,'BoundingRoundBox',**box(0,0,132,44),cornerRadius=21)
-comp=el(slot,'Complication',type='SHORT_TEXT')
-font=el(el(el(comp,'PartText',**box(0,0,132,44)),'Text',align='CENTER'),'Font',family='SYNC_TO_DEVICE',size=27,color='#FFFFFFFF')
-tpl=el(font,'Template');tpl.text='%s';el(tpl,'Parameter',expression='[COMPLICATION.TEXT]')
+# Geometry in this 480-unit adaptation uses two units per reference point.
+# SimpleText reference frame has a 1.4 aspect and -62pt centre offset.
+# Proteus sets the bottom factory's offset to (0,+50pt), +54pt on size class 5.
+def slot_group(comp,name,w,h):
+    g=el(comp,'Group',name=name,**box(0,0,w,h),tintColor='[CONFIGURATION.tone.0]')
+    el(g,'Transform',target='tintColor',value='[CONFIGURATION.colored] ? [CONFIGURATION.tone.1] : [CONFIGURATION.tone.0]')
+    ambient(g,'tintColor','[CONFIGURATION.tone.0]')
+    ambient(g,'alpha',142)
+    return g
+
+def data_text(parent,rect,size,value):
+    part=el(parent,'PartText',**box(*rect))
+    font=el(el(part,'Text',align='CENTER',ellipsis='TRUE'),'Font',family='SYNC_TO_DEVICE',size=size,color='#FFFFFFFF')
+    tpl=el(font,'Template');tpl.text='%s'
+    el(tpl,'Parameter',expression=value)
+
+def data_icon(parent,rect,resource='[COMPLICATION.MONOCHROMATIC_IMAGE]'):
+    part=el(parent,'PartImage',**box(*rect))
+    el(part,'Image',resource=resource)
+
+def branches(parent,options):
+    cond=el(parent,'Condition')
+    expressions=el(cond,'Expressions')
+    for name,value in options:
+        el(expressions,'Expression',name=name).text=value
+    return [el(cond,'Compare',expression=name) for name,_ in options]+[el(cond,'Default')]
+
+def gauge(parent,fraction):
+    for foreground in (False,True):
+        draw=el(parent,'PartDraw',**box(0,0,80,80),alpha=255 if foreground else 65)
+        arc=el(draw,'Arc',centerX=40,centerY=40,width=72,height=72,startAngle=225,endAngle=495)
+        if foreground:el(arc,'Transform',target='endAngle',value=f'225+270*clamp({fraction},0,1)')
+        el(arc,'Stroke',color='#FFFFFFFF',thickness=4)
+
+text_value='[COMPLICATION.TEXT]'
+length=f'textLength({text_value})'
+def ends_with(suffix):
+    return f'subText({text_value},max(0,{length}-{len(suffix)}),{length}) == "{suffix}"'
+
+top=el(scene,'ComplicationSlot',slotId=2,displayName='top',supportedTypes='SHORT_TEXT EMPTY',**box(191,81,98,70))
+el(top,'BoundingRoundBox',**box(0,0,98,70),cornerRadius=15)
+el(top,'DefaultProviderPolicy',defaultSystemProvider='DATE',defaultSystemProviderType='SHORT_TEXT')
+el(top,'Complication',type='EMPTY')
+g=slot_group(el(top,'Complication',type='SHORT_TEXT'),'upper_text',98,70)
+data_text(g,(0,14,98,42),26,text_value)
+
+kinds=['RANGED_VALUE','SHORT_TEXT','MONOCHROMATIC_IMAGE']
+bottom=el(scene,'ComplicationSlot',slotId=1,displayName='bottom',supportedTypes=' '.join(kinds+['EMPTY']),**box(200,300,80,80))
+el(bottom,'BoundingOval',**box(0,0,80,80))
+el(bottom,'DefaultProviderPolicy',defaultSystemProvider='WATCH_BATTERY',defaultSystemProviderType='RANGED_VALUE')
+el(bottom,'Complication',type='EMPTY')
+for kind in kinds:
+    g=slot_group(el(bottom,'Complication',type=kind),'lower_'+kind.lower(),80,80)
+    if kind=='MONOCHROMATIC_IMAGE':
+        data_icon(g,(12,12,56,56))
+    elif kind=='RANGED_VALUE':
+        value='[COMPLICATION.RANGED_VALUE_VALUE]'
+        gauge(g,f'({value}-[COMPLICATION.RANGED_VALUE_MIN])/max(0.001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN])')
+        data_icon(g,(29,13,22,22))
+        data_text(g,(7,35,66,33),21,f'{length}>0 ? {text_value} : numberFormat("#",{value})')
+    else:
+        temp,percent,metric=branches(g,[
+            ('temperature',' || '.join(ends_with(u) for u in ('°','°C','°F','℃','℉'))),
+            ('percentage',ends_with('%')+' || '+ends_with('％'))])
+        data_icon(temp,(23,3,34,34))
+        data_text(temp,(0,36,80,38),27,text_value)
+        data_icon(percent,(25,6,30,30))
+        data_text(percent,(0,38,80,32),23,text_value)
+        # Samsung Health supplies its own state icon and localized reading.
+        data_icon(metric,(3,25,26,26))
+        data_text(metric,(29,19,50,40),22,text_value)
+        data_text(metric,(4,55,72,20),13,'[COMPLICATION.TITLE]')
 clock=el(scene,'AnalogClock',**box())
 for tag,key,length in [('HourHand','hour',95),('MinuteHand','minute',157),('SecondHand','second',178)]:
     w=22
@@ -213,6 +279,7 @@ for loc in labels.glob('*.lproj'):
     data={'face_name':names['FACE_STYLE_PROTEUS_IN_TITLE_CASE'],'style':names['EDIT_MODE_LABEL_PROTEUS_STYLE'],'sharp':names['EDIT_OPTION_LABEL_PROTEUS_STYLE_SHARP'],'soft':names['EDIT_OPTION_LABEL_PROTEUS_STYLE_SOFT'],'dial':names['EDIT_MODE_LABEL_PROTEUS_CONTENT'],'color':options.get('EDIT_MODE_LABEL_COLOR','Color'),'comp':options.get('EDIT_MODE_LABEL_COMPLICATION','Complication')}
     for i,key in enumerate(colors):
         data[f'c{i}']=pigments.get(key.replace('_','.'),key.split('_')[-1].title())
+    data.update(top=options.get('SLOT_LABEL_SUBDIAL_TOP','Upper subdial'),bottom=options.get('SLOT_LABEL_SUBDIAL_BOTTOM','Lower subdial'))
     code=loc.stem
     if code.startswith('zh'):
         data.update(comp='复杂功能' if code=='zh_CN' else '複雜功能',c4='白色',c5='荧光黄' if code=='zh_CN' else '螢光黃')

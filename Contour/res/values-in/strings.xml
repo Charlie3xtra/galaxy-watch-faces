@@ -13,4 +13,6 @@
   <string name="c3">Kuning</string>
   <string name="c4">White</string>
   <string name="c5">Volt</string>
+  <string name="top">Sub-dial Atas</string>
+  <string name="bottom">Sub-dial Bawah</string>
 </resources>

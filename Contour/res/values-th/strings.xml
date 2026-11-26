@@ -13,4 +13,6 @@
   <string name="c3">เหลือง</string>
   <string name="c4">White</string>
   <string name="c5">Volt</string>
+  <string name="top">หน้าปัดย่อยด้านบน</string>
+  <string name="bottom">หน้าปัดย่อยด้านล่าง</string>
 </resources>

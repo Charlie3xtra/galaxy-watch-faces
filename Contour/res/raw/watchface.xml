@@ -5102,17 +5102,128 @@
         </Group>
       </ListOption>
     </ListConfiguration>
-    <ComplicationSlot slotId="1" displayName="comp" supportedTypes="SHORT_TEXT EMPTY" x="174" y="284" width="132" height="44">
-      <BoundingRoundBox x="0" y="0" width="132" height="44" cornerRadius="21" />
+    <ComplicationSlot slotId="2" displayName="top" supportedTypes="SHORT_TEXT EMPTY" x="191" y="81" width="98" height="70">
+      <BoundingRoundBox x="0" y="0" width="98" height="70" cornerRadius="15" />
+      <DefaultProviderPolicy defaultSystemProvider="DATE" defaultSystemProviderType="SHORT_TEXT" />
+      <Complication type="EMPTY" />
       <Complication type="SHORT_TEXT">
-        <PartText x="0" y="0" width="132" height="44">
-          <Text align="CENTER">
-            <Font family="SYNC_TO_DEVICE" size="27" color="#FFFFFFFF">
-              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
-              </Template>
-            </Font>
-          </Text>
-        </PartText>
+        <Group name="upper_text" x="0" y="0" width="98" height="70" tintColor="[CONFIGURATION.tone.0]">
+          <Transform target="tintColor" value="[CONFIGURATION.colored] ? [CONFIGURATION.tone.1] : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="142" />
+          <PartText x="0" y="14" width="98" height="42">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="26" color="#FFFFFFFF">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+    </ComplicationSlot>
+    <ComplicationSlot slotId="1" displayName="bottom" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY" x="200" y="300" width="80" height="80">
+      <BoundingOval x="0" y="0" width="80" height="80" />
+      <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="RANGED_VALUE" />
+      <Complication type="EMPTY" />
+      <Complication type="RANGED_VALUE">
+        <Group name="lower_ranged_value" x="0" y="0" width="80" height="80" tintColor="[CONFIGURATION.tone.0]">
+          <Transform target="tintColor" value="[CONFIGURATION.colored] ? [CONFIGURATION.tone.1] : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="142" />
+          <PartDraw x="0" y="0" width="80" height="80" alpha="65">
+            <Arc centerX="40" centerY="40" width="72" height="72" startAngle="225" endAngle="495">
+              <Stroke color="#FFFFFFFF" thickness="4" />
+            </Arc>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="80" height="80" alpha="255">
+            <Arc centerX="40" centerY="40" width="72" height="72" startAngle="225" endAngle="495">
+              <Transform target="endAngle" value="225+270*clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(0.001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)" />
+              <Stroke color="#FFFFFFFF" thickness="4" />
+            </Arc>
+          </PartDraw>
+          <PartImage x="29" y="13" width="22" height="22">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <PartText x="7" y="35" width="66" height="33">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="21" color="#FFFFFFFF">
+                <Template>%s<Parameter expression="textLength([COMPLICATION.TEXT])&gt;0 ? [COMPLICATION.TEXT] : numberFormat(&quot;#&quot;,[COMPLICATION.RANGED_VALUE_VALUE])" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="SHORT_TEXT">
+        <Group name="lower_short_text" x="0" y="0" width="80" height="80" tintColor="[CONFIGURATION.tone.0]">
+          <Transform target="tintColor" value="[CONFIGURATION.colored] ? [CONFIGURATION.tone.1] : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="142" />
+          <Condition>
+            <Expressions>
+              <Expression name="temperature">subText([COMPLICATION.TEXT],max(0,textLength([COMPLICATION.TEXT])-1),textLength([COMPLICATION.TEXT])) == "°" || subText([COMPLICATION.TEXT],max(0,textLength([COMPLICATION.TEXT])-2),textLength([COMPLICATION.TEXT])) == "°C" || subText([COMPLICATION.TEXT],max(0,textLength([COMPLICATION.TEXT])-2),textLength([COMPLICATION.TEXT])) == "°F" || subText([COMPLICATION.TEXT],max(0,textLength([COMPLICATION.TEXT])-1),textLength([COMPLICATION.TEXT])) == "℃" || subText([COMPLICATION.TEXT],max(0,textLength([COMPLICATION.TEXT])-1),textLength([COMPLICATION.TEXT])) == "℉"</Expression>
+              <Expression name="percentage">subText([COMPLICATION.TEXT],max(0,textLength([COMPLICATION.TEXT])-1),textLength([COMPLICATION.TEXT])) == "%" || subText([COMPLICATION.TEXT],max(0,textLength([COMPLICATION.TEXT])-1),textLength([COMPLICATION.TEXT])) == "％"</Expression>
+            </Expressions>
+            <Compare expression="temperature">
+              <PartImage x="23" y="3" width="34" height="34">
+                <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+              </PartImage>
+              <PartText x="0" y="36" width="80" height="38">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="27" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Compare>
+            <Compare expression="percentage">
+              <PartImage x="25" y="6" width="30" height="30">
+                <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+              </PartImage>
+              <PartText x="0" y="38" width="80" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="23" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Compare>
+            <Default>
+              <PartImage x="3" y="25" width="26" height="26">
+                <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+              </PartImage>
+              <PartText x="29" y="19" width="50" height="40">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="22" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+              <PartText x="4" y="55" width="72" height="20">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="13" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="[COMPLICATION.TITLE]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Default>
+          </Condition>
+        </Group>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <Group name="lower_monochromatic_image" x="0" y="0" width="80" height="80" tintColor="[CONFIGURATION.tone.0]">
+          <Transform target="tintColor" value="[CONFIGURATION.colored] ? [CONFIGURATION.tone.1] : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="142" />
+          <PartImage x="12" y="12" width="56" height="56">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+        </Group>
       </Complication>
     </ComplicationSlot>
     <AnalogClock x="0" y="0" width="480" height="480">
