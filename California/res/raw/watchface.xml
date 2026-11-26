@@ -2,10 +2,10 @@
 <WatchFace width="480" height="480" clipShape="CIRCLE">
   <UserConfigurations>
     <ColorConfiguration id="palette" displayName="color" defaultValue="0">
-      <ColorOption id="0" displayName="color_0" colors="#FFE8E2D9 #FF383A4B" />
-      <ColorOption id="1" displayName="color_1" colors="#FF000000 #FFF2F2F2" />
+      <ColorOption id="0" displayName="color_0" colors="#FF1A1A1A #FFFFEDCF" />
+      <ColorOption id="1" displayName="color_1" colors="#FF1A1A1A #FFF2F2F2" />
       <ColorOption id="2" displayName="color_2" colors="#FFE6C5A4 #FF393D44" />
-      <ColorOption id="3" displayName="color_3" colors="#FF4A778B #FFDED4C4" />
+      <ColorOption id="3" displayName="color_3" colors="#FF3A798D #FFDED4C4" />
       <ColorOption id="4" displayName="color_4" colors="#FF5C8649 #FFE2CDAF" />
       <ColorOption id="5" displayName="color_5" colors="#FFAE132E #FFDED4C4" />
     </ColorConfiguration>
@@ -21,10 +21,10 @@
   <Scene backgroundColor="#000000">
     <Condition>
       <Expressions>
-        <Expression name="p0">[CONFIGURATION.palette.0] == #FFE8E2D9 &amp;&amp; [CONFIGURATION.palette.1] == #FF383A4B</Expression>
-        <Expression name="p1">[CONFIGURATION.palette.0] == #FF000000 &amp;&amp; [CONFIGURATION.palette.1] == #FFF2F2F2</Expression>
+        <Expression name="p0">[CONFIGURATION.palette.0] == #FF1A1A1A &amp;&amp; [CONFIGURATION.palette.1] == #FFFFEDCF</Expression>
+        <Expression name="p1">[CONFIGURATION.palette.0] == #FF1A1A1A &amp;&amp; [CONFIGURATION.palette.1] == #FFF2F2F2</Expression>
         <Expression name="p2">[CONFIGURATION.palette.0] == #FFE6C5A4 &amp;&amp; [CONFIGURATION.palette.1] == #FF393D44</Expression>
-        <Expression name="p3">[CONFIGURATION.palette.0] == #FF4A778B &amp;&amp; [CONFIGURATION.palette.1] == #FFDED4C4</Expression>
+        <Expression name="p3">[CONFIGURATION.palette.0] == #FF3A798D &amp;&amp; [CONFIGURATION.palette.1] == #FFDED4C4</Expression>
         <Expression name="p4">[CONFIGURATION.palette.0] == #FF5C8649 &amp;&amp; [CONFIGURATION.palette.1] == #FFE2CDAF</Expression>
         <Expression name="p5">[CONFIGURATION.palette.0] == #FFAE132E &amp;&amp; [CONFIGURATION.palette.1] == #FFDED4C4</Expression>
       </Expressions>
@@ -33,43 +33,43 @@
           <Variant mode="AMBIENT" target="alpha" value="0" />
           <PartDraw x="0" y="0" width="480" height="480">
             <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FFE8E2D9" />
+              <Fill color="#FF1A1A1A" />
             </Rectangle>
           </PartDraw>
-          <PartImage x="0" y="0" width="480" height="480" tintColor="#FFC5C1BC">
+          <PartImage x="0" y="0" width="480" height="480" tintColor="#66FFEDCF">
             <Image resource="small_ticks" />
           </PartImage>
-          <PartImage x="0" y="0" width="480" height="480" tintColor="#FF686A77">
+          <PartImage x="0" y="0" width="480" height="480" tintColor="#E6FFEDCF">
             <Image resource="large_ticks" />
           </PartImage>
           <ListConfiguration id="numbers">
             <ListOption id="california">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FF383A4B">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFFFEDCF">
                 <Image resource="dial_california" />
               </PartImage>
             </ListOption>
             <ListOption id="roman">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FF383A4B">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFFFEDCF">
                 <Image resource="dial_roman" />
               </PartImage>
             </ListOption>
             <ListOption id="numerals">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FF383A4B">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFFFEDCF">
                 <Image resource="dial_numerals" />
               </PartImage>
             </ListOption>
             <ListOption id="pills">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FF383A4B">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFFFEDCF">
                 <Image resource="dial_pills" />
               </PartImage>
             </ListOption>
             <ListOption id="arabic">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FF383A4B">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFFFEDCF">
                 <Image resource="dial_arabic" />
               </PartImage>
             </ListOption>
             <ListOption id="hindi">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FF383A4B">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFFFEDCF">
                 <Image resource="dial_hindi" />
               </PartImage>
             </ListOption>
@@ -82,40 +82,40 @@
               <Fill color="#FF000000" />
             </Rectangle>
           </PartDraw>
-          <PartImage x="0" y="0" width="480" height="480" tintColor="#504C5055">
+          <PartImage x="0" y="0" width="480" height="480" tintColor="#66FFEDCF">
             <Image resource="small_ticks" />
           </PartImage>
-          <PartImage x="0" y="0" width="480" height="480" tintColor="#FFE8E2D9">
+          <PartImage x="0" y="0" width="480" height="480" tintColor="#E6FFEDCF">
             <Image resource="large_ticks" />
           </PartImage>
           <ListConfiguration id="numbers">
             <ListOption id="california">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFE8E2D9">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8FFEDCF">
                 <Image resource="dial_california" />
               </PartImage>
             </ListOption>
             <ListOption id="roman">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFE8E2D9">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8FFEDCF">
                 <Image resource="dial_roman" />
               </PartImage>
             </ListOption>
             <ListOption id="numerals">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFE8E2D9">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8FFEDCF">
                 <Image resource="dial_numerals" />
               </PartImage>
             </ListOption>
             <ListOption id="pills">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFE8E2D9">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8FFEDCF">
                 <Image resource="dial_pills" />
               </PartImage>
             </ListOption>
             <ListOption id="arabic">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFE8E2D9">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8FFEDCF">
                 <Image resource="dial_arabic" />
               </PartImage>
             </ListOption>
             <ListOption id="hindi">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFE8E2D9">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8FFEDCF">
                 <Image resource="dial_hindi" />
               </PartImage>
             </ListOption>
@@ -127,13 +127,13 @@
           <Variant mode="AMBIENT" target="alpha" value="0" />
           <PartDraw x="0" y="0" width="480" height="480">
             <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
+              <Fill color="#FF1A1A1A" />
             </Rectangle>
           </PartDraw>
-          <PartImage x="0" y="0" width="480" height="480" tintColor="#66888888">
+          <PartImage x="0" y="0" width="480" height="480" tintColor="#33F2F2F2">
             <Image resource="small_ticks" />
           </PartImage>
-          <PartImage x="0" y="0" width="480" height="480" tintColor="#FFF2F2F2">
+          <PartImage x="0" y="0" width="480" height="480" tintColor="#B2F2F2F2">
             <Image resource="large_ticks" />
           </PartImage>
           <ListConfiguration id="numbers">
@@ -176,40 +176,40 @@
               <Fill color="#FF000000" />
             </Rectangle>
           </PartDraw>
-          <PartImage x="0" y="0" width="480" height="480" tintColor="#504C5055">
+          <PartImage x="0" y="0" width="480" height="480" tintColor="#33F2F2F2">
             <Image resource="small_ticks" />
           </PartImage>
-          <PartImage x="0" y="0" width="480" height="480" tintColor="#FFF2F2F2">
+          <PartImage x="0" y="0" width="480" height="480" tintColor="#80969696">
             <Image resource="large_ticks" />
           </PartImage>
           <ListConfiguration id="numbers">
             <ListOption id="california">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFF2F2F2">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8969696">
                 <Image resource="dial_california" />
               </PartImage>
             </ListOption>
             <ListOption id="roman">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFF2F2F2">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8969696">
                 <Image resource="dial_roman" />
               </PartImage>
             </ListOption>
             <ListOption id="numerals">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFF2F2F2">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8969696">
                 <Image resource="dial_numerals" />
               </PartImage>
             </ListOption>
             <ListOption id="pills">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFF2F2F2">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8969696">
                 <Image resource="dial_pills" />
               </PartImage>
             </ListOption>
             <ListOption id="arabic">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFF2F2F2">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8969696">
                 <Image resource="dial_arabic" />
               </PartImage>
             </ListOption>
             <ListOption id="hindi">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFF2F2F2">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8969696">
                 <Image resource="dial_hindi" />
               </PartImage>
             </ListOption>
@@ -224,7 +224,7 @@
               <Fill color="#FFE6C5A4" />
             </Rectangle>
           </PartDraw>
-          <PartImage x="0" y="0" width="480" height="480" tintColor="#4D393D44">
+          <PartImage x="0" y="0" width="480" height="480" tintColor="#66393D44">
             <Image resource="small_ticks" />
           </PartImage>
           <PartImage x="0" y="0" width="480" height="480" tintColor="#FF393D44">
@@ -270,7 +270,7 @@
               <Fill color="#FF000000" />
             </Rectangle>
           </PartDraw>
-          <PartImage x="0" y="0" width="480" height="480" tintColor="#504C5055">
+          <PartImage x="0" y="0" width="480" height="480" tintColor="#66393D44">
             <Image resource="small_ticks" />
           </PartImage>
           <PartImage x="0" y="0" width="480" height="480" tintColor="#FFE6C5A4">
@@ -278,32 +278,32 @@
           </PartImage>
           <ListConfiguration id="numbers">
             <ListOption id="california">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFE6C5A4">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8E6C5A4">
                 <Image resource="dial_california" />
               </PartImage>
             </ListOption>
             <ListOption id="roman">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFE6C5A4">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8E6C5A4">
                 <Image resource="dial_roman" />
               </PartImage>
             </ListOption>
             <ListOption id="numerals">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFE6C5A4">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8E6C5A4">
                 <Image resource="dial_numerals" />
               </PartImage>
             </ListOption>
             <ListOption id="pills">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFE6C5A4">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8E6C5A4">
                 <Image resource="dial_pills" />
               </PartImage>
             </ListOption>
             <ListOption id="arabic">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFE6C5A4">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8E6C5A4">
                 <Image resource="dial_arabic" />
               </PartImage>
             </ListOption>
             <ListOption id="hindi">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFE6C5A4">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8E6C5A4">
                 <Image resource="dial_hindi" />
               </PartImage>
             </ListOption>
@@ -315,10 +315,10 @@
           <Variant mode="AMBIENT" target="alpha" value="0" />
           <PartDraw x="0" y="0" width="480" height="480">
             <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF4A778B" />
+              <Fill color="#FF3A798D" />
             </Rectangle>
           </PartDraw>
-          <PartImage x="0" y="0" width="480" height="480" tintColor="#4DDED4C4">
+          <PartImage x="0" y="0" width="480" height="480" tintColor="#66DED4C4">
             <Image resource="small_ticks" />
           </PartImage>
           <PartImage x="0" y="0" width="480" height="480" tintColor="#FFDED4C4">
@@ -364,40 +364,40 @@
               <Fill color="#FF000000" />
             </Rectangle>
           </PartDraw>
-          <PartImage x="0" y="0" width="480" height="480" tintColor="#504C5055">
+          <PartImage x="0" y="0" width="480" height="480" tintColor="#66DED4C4">
             <Image resource="small_ticks" />
           </PartImage>
-          <PartImage x="0" y="0" width="480" height="480" tintColor="#FF4A778B">
+          <PartImage x="0" y="0" width="480" height="480" tintColor="#FFDED4C4">
             <Image resource="large_ticks" />
           </PartImage>
           <ListConfiguration id="numbers">
             <ListOption id="california">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FF4A778B">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8DED4C4">
                 <Image resource="dial_california" />
               </PartImage>
             </ListOption>
             <ListOption id="roman">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FF4A778B">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8DED4C4">
                 <Image resource="dial_roman" />
               </PartImage>
             </ListOption>
             <ListOption id="numerals">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FF4A778B">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8DED4C4">
                 <Image resource="dial_numerals" />
               </PartImage>
             </ListOption>
             <ListOption id="pills">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FF4A778B">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8DED4C4">
                 <Image resource="dial_pills" />
               </PartImage>
             </ListOption>
             <ListOption id="arabic">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FF4A778B">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8DED4C4">
                 <Image resource="dial_arabic" />
               </PartImage>
             </ListOption>
             <ListOption id="hindi">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FF4A778B">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8DED4C4">
                 <Image resource="dial_hindi" />
               </PartImage>
             </ListOption>
@@ -412,7 +412,7 @@
               <Fill color="#FF5C8649" />
             </Rectangle>
           </PartDraw>
-          <PartImage x="0" y="0" width="480" height="480" tintColor="#4DE2CDAF">
+          <PartImage x="0" y="0" width="480" height="480" tintColor="#66E2CDAF">
             <Image resource="small_ticks" />
           </PartImage>
           <PartImage x="0" y="0" width="480" height="480" tintColor="#FFE2CDAF">
@@ -458,40 +458,40 @@
               <Fill color="#FF000000" />
             </Rectangle>
           </PartDraw>
-          <PartImage x="0" y="0" width="480" height="480" tintColor="#504C5055">
+          <PartImage x="0" y="0" width="480" height="480" tintColor="#66E2CDAF">
             <Image resource="small_ticks" />
           </PartImage>
-          <PartImage x="0" y="0" width="480" height="480" tintColor="#FF5C8649">
+          <PartImage x="0" y="0" width="480" height="480" tintColor="#FFE2CDAF">
             <Image resource="large_ticks" />
           </PartImage>
           <ListConfiguration id="numbers">
             <ListOption id="california">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FF5C8649">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8E2CDAF">
                 <Image resource="dial_california" />
               </PartImage>
             </ListOption>
             <ListOption id="roman">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FF5C8649">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8E2CDAF">
                 <Image resource="dial_roman" />
               </PartImage>
             </ListOption>
             <ListOption id="numerals">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FF5C8649">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8E2CDAF">
                 <Image resource="dial_numerals" />
               </PartImage>
             </ListOption>
             <ListOption id="pills">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FF5C8649">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8E2CDAF">
                 <Image resource="dial_pills" />
               </PartImage>
             </ListOption>
             <ListOption id="arabic">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FF5C8649">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8E2CDAF">
                 <Image resource="dial_arabic" />
               </PartImage>
             </ListOption>
             <ListOption id="hindi">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FF5C8649">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8E2CDAF">
                 <Image resource="dial_hindi" />
               </PartImage>
             </ListOption>
@@ -506,7 +506,7 @@
               <Fill color="#FFAE132E" />
             </Rectangle>
           </PartDraw>
-          <PartImage x="0" y="0" width="480" height="480" tintColor="#4DDED4C4">
+          <PartImage x="0" y="0" width="480" height="480" tintColor="#66DED4C4">
             <Image resource="small_ticks" />
           </PartImage>
           <PartImage x="0" y="0" width="480" height="480" tintColor="#FFDED4C4">
@@ -552,40 +552,40 @@
               <Fill color="#FF000000" />
             </Rectangle>
           </PartDraw>
-          <PartImage x="0" y="0" width="480" height="480" tintColor="#504C5055">
+          <PartImage x="0" y="0" width="480" height="480" tintColor="#66DED4C4">
             <Image resource="small_ticks" />
           </PartImage>
-          <PartImage x="0" y="0" width="480" height="480" tintColor="#FFAE132E">
+          <PartImage x="0" y="0" width="480" height="480" tintColor="#FFDED4C4">
             <Image resource="large_ticks" />
           </PartImage>
           <ListConfiguration id="numbers">
             <ListOption id="california">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFAE132E">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8DED4C4">
                 <Image resource="dial_california" />
               </PartImage>
             </ListOption>
             <ListOption id="roman">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFAE132E">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8DED4C4">
                 <Image resource="dial_roman" />
               </PartImage>
             </ListOption>
             <ListOption id="numerals">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFAE132E">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8DED4C4">
                 <Image resource="dial_numerals" />
               </PartImage>
             </ListOption>
             <ListOption id="pills">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFAE132E">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8DED4C4">
                 <Image resource="dial_pills" />
               </PartImage>
             </ListOption>
             <ListOption id="arabic">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFAE132E">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8DED4C4">
                 <Image resource="dial_arabic" />
               </PartImage>
             </ListOption>
             <ListOption id="hindi">
-              <PartImage x="0" y="0" width="480" height="480" tintColor="#FFAE132E">
+              <PartImage x="0" y="0" width="480" height="480" tintColor="#C8DED4C4">
                 <Image resource="dial_hindi" />
               </PartImage>
             </ListOption>
@@ -593,26 +593,172 @@
         </Group>
       </Compare>
     </Condition>
-    <ComplicationSlot slotId="1" displayName="date" supportedTypes="SHORT_TEXT EMPTY" x="181" y="128" width="118" height="40">
-      <BoundingRoundBox x="0" y="0" width="118" height="40" cornerRadius="12" />
+    <ComplicationSlot slotId="1" displayName="date" supportedTypes="SHORT_TEXT EMPTY" x="162" y="119" width="156" height="52">
+      <BoundingRoundBox x="0" y="0" width="156" height="52" cornerRadius="12" />
       <DefaultProviderPolicy defaultSystemProvider="DATE" defaultSystemProviderType="SHORT_TEXT" />
       <Complication type="SHORT_TEXT">
-        <PartText x="0" y="0" width="118" height="40">
-          <Text align="CENTER">
-            <Font family="SYNC_TO_DEVICE" size="23" weight="BOLD" color="[CONFIGURATION.palette.1]">
-              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
-              </Template>
-            </Font>
-          </Text>
-        </PartText>
+        <Condition>
+          <Expressions>
+            <Expression name="p0">[CONFIGURATION.palette.0] == #FF1A1A1A &amp;&amp; [CONFIGURATION.palette.1] == #FFFFEDCF</Expression>
+            <Expression name="p1">[CONFIGURATION.palette.0] == #FF1A1A1A &amp;&amp; [CONFIGURATION.palette.1] == #FFF2F2F2</Expression>
+            <Expression name="p2">[CONFIGURATION.palette.0] == #FFE6C5A4 &amp;&amp; [CONFIGURATION.palette.1] == #FF393D44</Expression>
+            <Expression name="p3">[CONFIGURATION.palette.0] == #FF3A798D &amp;&amp; [CONFIGURATION.palette.1] == #FFDED4C4</Expression>
+            <Expression name="p4">[CONFIGURATION.palette.0] == #FF5C8649 &amp;&amp; [CONFIGURATION.palette.1] == #FFE2CDAF</Expression>
+            <Expression name="p5">[CONFIGURATION.palette.0] == #FFAE132E &amp;&amp; [CONFIGURATION.palette.1] == #FFDED4C4</Expression>
+          </Expressions>
+          <Compare expression="p0">
+            <Group name="complication_0_0" x="0" y="0" width="156" height="52" alpha="255">
+              <Variant mode="AMBIENT" target="alpha" value="0" />
+              <PartText x="0" y="0" width="156" height="52">
+                <Text align="CENTER">
+                  <Font family="SYNC_TO_DEVICE" size="30" weight="BOLD" color="#FFFFEDCF">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Group>
+            <Group name="complication_0_1" x="0" y="0" width="156" height="52" alpha="0">
+              <Variant mode="AMBIENT" target="alpha" value="255" />
+              <PartText x="0" y="0" width="156" height="52">
+                <Text align="CENTER">
+                  <Font family="SYNC_TO_DEVICE" size="30" weight="BOLD" color="#FFFFEDCF">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Group>
+          </Compare>
+          <Compare expression="p1">
+            <Group name="complication_1_0" x="0" y="0" width="156" height="52" alpha="255">
+              <Variant mode="AMBIENT" target="alpha" value="0" />
+              <PartText x="0" y="0" width="156" height="52">
+                <Text align="CENTER">
+                  <Font family="SYNC_TO_DEVICE" size="30" weight="BOLD" color="#FFF2F2F2">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Group>
+            <Group name="complication_1_1" x="0" y="0" width="156" height="52" alpha="0">
+              <Variant mode="AMBIENT" target="alpha" value="255" />
+              <PartText x="0" y="0" width="156" height="52">
+                <Text align="CENTER">
+                  <Font family="SYNC_TO_DEVICE" size="30" weight="BOLD" color="#FF969696">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Group>
+          </Compare>
+          <Compare expression="p2">
+            <Group name="complication_2_0" x="0" y="0" width="156" height="52" alpha="255">
+              <Variant mode="AMBIENT" target="alpha" value="0" />
+              <PartText x="0" y="0" width="156" height="52">
+                <Text align="CENTER">
+                  <Font family="SYNC_TO_DEVICE" size="30" weight="BOLD" color="#FF393D44">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Group>
+            <Group name="complication_2_1" x="0" y="0" width="156" height="52" alpha="0">
+              <Variant mode="AMBIENT" target="alpha" value="255" />
+              <PartText x="0" y="0" width="156" height="52">
+                <Text align="CENTER">
+                  <Font family="SYNC_TO_DEVICE" size="30" weight="BOLD" color="#FFE6C5A4">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Group>
+          </Compare>
+          <Compare expression="p3">
+            <Group name="complication_3_0" x="0" y="0" width="156" height="52" alpha="255">
+              <Variant mode="AMBIENT" target="alpha" value="0" />
+              <PartText x="0" y="0" width="156" height="52">
+                <Text align="CENTER">
+                  <Font family="SYNC_TO_DEVICE" size="30" weight="BOLD" color="#FFDED4C4">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Group>
+            <Group name="complication_3_1" x="0" y="0" width="156" height="52" alpha="0">
+              <Variant mode="AMBIENT" target="alpha" value="255" />
+              <PartText x="0" y="0" width="156" height="52">
+                <Text align="CENTER">
+                  <Font family="SYNC_TO_DEVICE" size="30" weight="BOLD" color="#FFDED4C4">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Group>
+          </Compare>
+          <Compare expression="p4">
+            <Group name="complication_4_0" x="0" y="0" width="156" height="52" alpha="255">
+              <Variant mode="AMBIENT" target="alpha" value="0" />
+              <PartText x="0" y="0" width="156" height="52">
+                <Text align="CENTER">
+                  <Font family="SYNC_TO_DEVICE" size="30" weight="BOLD" color="#FFE2CDAF">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Group>
+            <Group name="complication_4_1" x="0" y="0" width="156" height="52" alpha="0">
+              <Variant mode="AMBIENT" target="alpha" value="255" />
+              <PartText x="0" y="0" width="156" height="52">
+                <Text align="CENTER">
+                  <Font family="SYNC_TO_DEVICE" size="30" weight="BOLD" color="#FFE2CDAF">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Group>
+          </Compare>
+          <Compare expression="p5">
+            <Group name="complication_5_0" x="0" y="0" width="156" height="52" alpha="255">
+              <Variant mode="AMBIENT" target="alpha" value="0" />
+              <PartText x="0" y="0" width="156" height="52">
+                <Text align="CENTER">
+                  <Font family="SYNC_TO_DEVICE" size="30" weight="BOLD" color="#FFDED4C4">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Group>
+            <Group name="complication_5_1" x="0" y="0" width="156" height="52" alpha="0">
+              <Variant mode="AMBIENT" target="alpha" value="255" />
+              <PartText x="0" y="0" width="156" height="52">
+                <Text align="CENTER">
+                  <Font family="SYNC_TO_DEVICE" size="30" weight="BOLD" color="#FFDED4C4">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Group>
+          </Compare>
+        </Condition>
       </Complication>
     </ComplicationSlot>
     <Condition>
       <Expressions>
-        <Expression name="p0">[CONFIGURATION.palette.0] == #FFE8E2D9 &amp;&amp; [CONFIGURATION.palette.1] == #FF383A4B</Expression>
-        <Expression name="p1">[CONFIGURATION.palette.0] == #FF000000 &amp;&amp; [CONFIGURATION.palette.1] == #FFF2F2F2</Expression>
+        <Expression name="p0">[CONFIGURATION.palette.0] == #FF1A1A1A &amp;&amp; [CONFIGURATION.palette.1] == #FFFFEDCF</Expression>
+        <Expression name="p1">[CONFIGURATION.palette.0] == #FF1A1A1A &amp;&amp; [CONFIGURATION.palette.1] == #FFF2F2F2</Expression>
         <Expression name="p2">[CONFIGURATION.palette.0] == #FFE6C5A4 &amp;&amp; [CONFIGURATION.palette.1] == #FF393D44</Expression>
-        <Expression name="p3">[CONFIGURATION.palette.0] == #FF4A778B &amp;&amp; [CONFIGURATION.palette.1] == #FFDED4C4</Expression>
+        <Expression name="p3">[CONFIGURATION.palette.0] == #FF3A798D &amp;&amp; [CONFIGURATION.palette.1] == #FFDED4C4</Expression>
         <Expression name="p4">[CONFIGURATION.palette.0] == #FF5C8649 &amp;&amp; [CONFIGURATION.palette.1] == #FFE2CDAF</Expression>
         <Expression name="p5">[CONFIGURATION.palette.0] == #FFAE132E &amp;&amp; [CONFIGURATION.palette.1] == #FFDED4C4</Expression>
       </Expressions>
@@ -620,10 +766,10 @@
         <Group name="hands_0_0" x="0" y="0" width="480" height="480" alpha="255">
           <Variant mode="AMBIENT" target="alpha" value="0" />
           <AnalogClock x="0" y="0" width="480" height="480">
-            <HourHand resource="hour" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FF111111" />
-            <HourHand resource="hour_inlay" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FFF9F5EF" />
-            <MinuteHand resource="minute" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FF111111" />
-            <MinuteHand resource="minute_inlay" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FFF9F5EF" />
+            <HourHand resource="hour" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FFFFFFFF" />
+            <HourHand resource="hour_inlay" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FF000000" />
+            <MinuteHand resource="minute" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FFFFFFFF" />
+            <MinuteHand resource="minute_inlay" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FF000000" />
             <SecondHand resource="second" x="231" y="50" width="18" height="230" pivotX=".5" pivotY="0.8260869565217391" tintColor="#FFFF3B30">
               <Sweep frequency="15" />
             </SecondHand>
@@ -632,10 +778,10 @@
         <Group name="hands_0_1" x="0" y="0" width="480" height="480" alpha="0">
           <Variant mode="AMBIENT" target="alpha" value="255" />
           <AnalogClock x="0" y="0" width="480" height="480">
-            <HourHand resource="hour" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FFB5B5B5" />
-            <HourHand resource="hour_inlay" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FF303030" />
-            <MinuteHand resource="minute" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FFB5B5B5" />
-            <MinuteHand resource="minute_inlay" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FF303030" />
+            <HourHand resource="hour" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FFFFFFFF" />
+            <HourHand resource="hour_inlay" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FF000000" />
+            <MinuteHand resource="minute" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FFFFFFFF" />
+            <MinuteHand resource="minute_inlay" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FF000000" />
           </AnalogClock>
         </Group>
       </Compare>
@@ -655,10 +801,10 @@
         <Group name="hands_1_1" x="0" y="0" width="480" height="480" alpha="0">
           <Variant mode="AMBIENT" target="alpha" value="255" />
           <AnalogClock x="0" y="0" width="480" height="480">
-            <HourHand resource="hour" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FFB5B5B5" />
-            <HourHand resource="hour_inlay" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FF303030" />
-            <MinuteHand resource="minute" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FFB5B5B5" />
-            <MinuteHand resource="minute_inlay" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FF303030" />
+            <HourHand resource="hour" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FFFFFFFF" />
+            <HourHand resource="hour_inlay" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FF000000" />
+            <MinuteHand resource="minute" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FFFFFFFF" />
+            <MinuteHand resource="minute_inlay" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FF000000" />
           </AnalogClock>
         </Group>
       </Compare>
@@ -678,10 +824,10 @@
         <Group name="hands_2_1" x="0" y="0" width="480" height="480" alpha="0">
           <Variant mode="AMBIENT" target="alpha" value="255" />
           <AnalogClock x="0" y="0" width="480" height="480">
-            <HourHand resource="hour" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FFB5B5B5" />
-            <HourHand resource="hour_inlay" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FF303030" />
-            <MinuteHand resource="minute" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FFB5B5B5" />
-            <MinuteHand resource="minute_inlay" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FF303030" />
+            <HourHand resource="hour" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FFFFFFFF" />
+            <HourHand resource="hour_inlay" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FF000000" />
+            <MinuteHand resource="minute" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FFFFFFFF" />
+            <MinuteHand resource="minute_inlay" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FF000000" />
           </AnalogClock>
         </Group>
       </Compare>
@@ -701,10 +847,10 @@
         <Group name="hands_3_1" x="0" y="0" width="480" height="480" alpha="0">
           <Variant mode="AMBIENT" target="alpha" value="255" />
           <AnalogClock x="0" y="0" width="480" height="480">
-            <HourHand resource="hour" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FFB5B5B5" />
-            <HourHand resource="hour_inlay" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FF303030" />
-            <MinuteHand resource="minute" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FFB5B5B5" />
-            <MinuteHand resource="minute_inlay" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FF303030" />
+            <HourHand resource="hour" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FFFFFFFF" />
+            <HourHand resource="hour_inlay" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FF000000" />
+            <MinuteHand resource="minute" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FFFFFFFF" />
+            <MinuteHand resource="minute_inlay" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FF000000" />
           </AnalogClock>
         </Group>
       </Compare>
@@ -724,10 +870,10 @@
         <Group name="hands_4_1" x="0" y="0" width="480" height="480" alpha="0">
           <Variant mode="AMBIENT" target="alpha" value="255" />
           <AnalogClock x="0" y="0" width="480" height="480">
-            <HourHand resource="hour" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FFB5B5B5" />
-            <HourHand resource="hour_inlay" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FF303030" />
-            <MinuteHand resource="minute" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FFB5B5B5" />
-            <MinuteHand resource="minute_inlay" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FF303030" />
+            <HourHand resource="hour" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FFFFFFFF" />
+            <HourHand resource="hour_inlay" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FF000000" />
+            <MinuteHand resource="minute" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FFFFFFFF" />
+            <MinuteHand resource="minute_inlay" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FF000000" />
           </AnalogClock>
         </Group>
       </Compare>
@@ -747,10 +893,10 @@
         <Group name="hands_5_1" x="0" y="0" width="480" height="480" alpha="0">
           <Variant mode="AMBIENT" target="alpha" value="255" />
           <AnalogClock x="0" y="0" width="480" height="480">
-            <HourHand resource="hour" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FFB5B5B5" />
-            <HourHand resource="hour_inlay" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FF303030" />
-            <MinuteHand resource="minute" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FFB5B5B5" />
-            <MinuteHand resource="minute_inlay" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FF303030" />
+            <HourHand resource="hour" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FFFFFFFF" />
+            <HourHand resource="hour_inlay" x="226" y="138" width="28" height="110" pivotX=".5" pivotY="0.9272727272727272" tintColor="#FF000000" />
+            <MinuteHand resource="minute" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FFFFFFFF" />
+            <MinuteHand resource="minute_inlay" x="226" y="59" width="28" height="189" pivotX=".5" pivotY="0.9576719576719577" tintColor="#FF000000" />
           </AnalogClock>
         </Group>
       </Compare>

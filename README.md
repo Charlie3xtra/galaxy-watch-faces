@@ -129,4 +129,5 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 
 <img src="California/screenshots/active.png" width="220" alt="Galaxy Watch 亮屏实拍，奶白底的加州混合数字和红色秒针">
 
-[下载加州 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/california-1.0)。默认配色取自 Apple 官方图，数字使用 watchOS 24S132 加州表盘内嵌的 SF Compact Numerals Bold。提供六种数字样式、六款配色和一个可更换的短文本组件，默认显示日期。指针长度和刻度半径已适配 Galaxy 圆屏。息屏采用黑底、保留时分针并隐藏秒针，配色含移植取值。
+[下载加州 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/california-1.1) · [圆形亮屏与息屏对照](California/圆形盘面核对.md)。1.1 默认使用圆形奶白配色，上图为 1.0 实拍，数字使用 watchOS 24S132 加州表盘内嵌的 SF Compact Numerals Bold。提供六种数字样式、六款配色和一个可更换的短文本组件，默认显示日期。指针长度和刻度半径已适配 Galaxy 圆屏。息屏采用黑底、保留时分针并隐藏秒针，配色含移植取值。
+
