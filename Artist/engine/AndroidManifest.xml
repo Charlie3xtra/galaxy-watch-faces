@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="local.artist.watchface" android:versionCode="9" android:versionName="4.4">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="local.artist.watchface" android:versionCode="10" android:versionName="4.5">
  <queries><intent><action android:name="com.google.wear.ACTION_PUSH_WATCH_FACES"/></intent><package android:name="com.google.android.wearable.app"/></queries>
  <uses-feature android:name="android.hardware.type.watch" android:required="true"/>
  <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
@@ -10,10 +10,9 @@
   <meta-data android:name="com.google.android.wearable.standalone" android:value="true"/>
   <uses-library android:name="wear-sdk" android:required="true"/>
   <activity android:name="local.artist.engine.WakeSettings" android:exported="true" android:theme="@android:style/Theme.Material.NoActionBar">
+
+   <intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.INFO"/><category android:name="android.intent.category.DEFAULT"/></intent-filter>
   </activity>
-  <activity-alias android:name="local.artist.engine.LocalizedSetupLauncher" android:targetActivity="local.artist.engine.WakeSettings" android:exported="true">
-   <intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter>
-  </activity-alias>
   <service android:name="local.artist.engine.WakeListener" android:foregroundServiceType="specialUse" android:exported="false">
    <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="User-enabled watch-face wake transitions when the portrait has expired. No wake locks or polling."/>
   </service>

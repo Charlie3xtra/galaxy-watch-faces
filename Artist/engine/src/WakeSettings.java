@@ -80,7 +80,7 @@ public final class WakeSettings extends Activity {
     private void ready(WatchFaceSlot face) {
         closeUpload();slot=face.getSlotId();android.util.Log.i("ArtistPush","Registered "+face.getPackageName());
         manager.isWatchFaceActive(face.getPackageName(),getMainExecutor(),callback(active->{
-            if(active){finishSetup();return;}
+            if(active){finish();return;}
             if(getPreferences(0).getBoolean("activationUsed",false)){
                 manualSelection();return;
             }
@@ -90,16 +90,11 @@ public final class WakeSettings extends Activity {
             requestPermissions(new String[]{ACTIVATE},1);
         }));
     }
-    private void finishSetup(){
-        android.content.ComponentName launcher=new android.content.ComponentName(this,"local.artist.engine.LocalizedSetupLauncher");
-        getPackageManager().setComponentEnabledSetting(launcher,PackageManager.COMPONENT_ENABLED_STATE_DISABLED,PackageManager.DONT_KILL_APP);
-        finish();
-    }
     private void manualSelection(){status.setText(getString(R.string.manual_selection,getString(R.string.face_name)));}
     private void activate(){
         manager.setWatchFaceAsActive(slot,getMainExecutor(),new OutcomeReceiver<Void,WatchFacePushManager.SetActiveException>(){
             public void onResult(Void unused){
-                getPreferences(0).edit().putBoolean("activationUsed",true).apply();finishSetup();
+                getPreferences(0).edit().putBoolean("activationUsed",true).apply();finish();
             }
             public void onError(WatchFacePushManager.SetActiveException err){
                 android.util.Log.w("ArtistPush","System activation",err);manualSelection();
