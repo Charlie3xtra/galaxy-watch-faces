@@ -130,6 +130,11 @@ def group(parent):
     return add(parent,'Group',name=f'layer{group_index}',**box(0,0,480,480))
 large=group(scene)
 ambient(large,67)
+# Scale both the renderer geometry and its gallery preview around the screen center.
+def scale_time_box(x,y,w,h):
+    return (round(240+(x-240)*1.11),round(240+(y-240)*1.11),
+            round(w*1.11),round(h*1.11))
+
 rows=[(hour,76),('[MINUTE]',249)]
 preview=Image.new('RGB',(480,480))
 for row,(source,y) in enumerate(rows):
@@ -143,18 +148,20 @@ for row,(source,y) in enumerate(rows):
             m=masks[n]
             x=right-m.width
             top=y+(154-m.height)//2
-            part=add(branch,'PartImage',**box(x,top,m.width,m.height),tintColor=ink)
+            x,top,w,h=scale_time_box(x,top,m.width,m.height)
+            part=add(branch,'PartImage',**box(x,top,w,h),tintColor=ink)
             add(part,'Image',resource=f'digit_{n}')
             if n==((10,9)[row]//10 if tens else (10,9)[row]%10):
-                preview.paste(purple,(x,top,x+m.width,top+m.height),m)
-part=add(large,'PartImage',**box(90,272,32,107),tintColor=ink)
+                preview.paste(purple,(x,top,x+w,top+h),m.resize((w,h),Image.Resampling.LANCZOS))
+x,top,w,h=scale_time_box(90,272,32,107)
+part=add(large,'PartImage',**box(x,top,w,h),tintColor=ink)
 add(part,'Image',resource='dots')
-preview.paste(purple,(90,272,122,379),mask)
+preview.paste(purple,(x,top,x+w,top+h),mask.resize((w,h),Image.Resampling.LANCZOS))
 preview.save(DRAW/'preview.png')
 
 types=['SHORT_TEXT','MONOCHROMATIC_IMAGE','SMALL_IMAGE','PHOTO_IMAGE']
 slot=add(scene,'ComplicationSlot',**box(0,0,480,480),slotId=1,supportedTypes='EMPTY '+' '.join(types))
-add(slot,'BoundingOval',**box(12,12,456,456))
+add(slot,'BoundingOval',**box(0,0,480,480))
 add(slot,'Complication',type='EMPTY')
 for kind in types:
     g=group(add(slot,'Complication',type=kind))
@@ -162,24 +169,24 @@ for kind in types:
     add(add(bg,'Rectangle',**box(0,0,480,480)),'Fill',color='#000000')
     fg=group(g)
     ambient(fg,70)
-    clock=add(fg,'DigitalClock',**box(54,65,372,91))
-    t=add(clock,'TimeText',**box(0,0,372,91),format='h:mm',align='CENTER')
-    add(t,'BitmapFont',family='compact_time',size=87,color=ink)
+    clock=add(fg,'DigitalClock',**box(38,75,404,99))
+    t=add(clock,'TimeText',**box(0,0,404,99),format='h:mm',align='CENTER')
+    add(t,'BitmapFont',family='compact_time',size=94,color=ink)
     # Apple Watch User Guide for watchOS 9, page 148: platter/time height = 253/91.
-    platter=add(fg,'PartDraw',**box(116,174,248,248))
+    platter=add(fg,'PartDraw',**box(104,181,272,272))
     ambient(platter,0)
-    add(add(platter,'Ellipse',**box(0,0,248,248)),'Fill',color='#151515')
+    add(add(platter,'Ellipse',**box(0,0,272,272)),'Fill',color='#151515')
     if kind=='SHORT_TEXT':
-        part=add(fg,'PartImage',**box(197,199,86,86),tintColor=ink)
+        part=add(fg,'PartImage',**box(193,208,94,94),tintColor=ink)
         add(part,'Image',resource='[COMPLICATION.MONOCHROMATIC_IMAGE]')
-        part=add(fg,'PartText',**box(127,290,226,81))
+        part=add(fg,'PartText',**box(116,309,248,89))
         text=add(part,'Text',align='CENTER')
-        f=add(text,'Font',family='SYNC_TO_DEVICE',size=52,color=ink)
+        f=add(text,'Font',family='SYNC_TO_DEVICE',size=57,color=ink)
         temp=add(f,'Template')
         temp.text='%s'
         add(temp,'Parameter',expression='[COMPLICATION.TEXT]')
     else:
-        part=add(fg,'PartImage',**box(154,212,172,172),**({'tintColor':ink} if kind=='MONOCHROMATIC_IMAGE' else {}))
+        part=add(fg,'PartImage',**box(146,223,188,188),**({'tintColor':ink} if kind=='MONOCHROMATIC_IMAGE' else {}))
         add(part,'Image',resource=f'[COMPLICATION.{kind}]')
 write(RES/'raw/watchface.xml',face)
 print(len(palette),'colors')
