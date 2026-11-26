@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Egység fényei</string>
+  <string name="style">STÍLUS</string>
+  <string name="simple">I</string>
+  <string name="detailed">II</string>
+  <string name="dial">STÍLUS</string>
+  <string name="color">SZÍN</string>
+  <string name="full">TELJES KÉPERNYŐ</string>
+  <string name="inset">KEREK</string>
+  <string name="p0">Piros/zöld/fekete</string>
+  <string name="p1">◐</string>
+  <string name="corner0">Balra fent</string>
+  <string name="corner1">Jobbra fent</string>
+  <string name="corner2">Balra lent</string>
+  <string name="corner3">Jobbra lent</string>
+</resources>

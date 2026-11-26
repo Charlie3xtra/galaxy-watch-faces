@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Unity Lights</string>
+  <string name="style">STIL</string>
+  <string name="simple">I</string>
+  <string name="detailed">II</string>
+  <string name="dial">STIL</string>
+  <string name="color">FARBE</string>
+  <string name="full">VOLLBILD</string>
+  <string name="inset">KREISFÖRMIG</string>
+  <string name="p0">Rot/Grün/Schwarz</string>
+  <string name="p1">◐</string>
+  <string name="corner0">Oben links</string>
+  <string name="corner1">Oben rechts</string>
+  <string name="corner2">Unten links</string>
+  <string name="corner3">Unten rechts</string>
+</resources>

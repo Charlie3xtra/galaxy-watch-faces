@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">União (luzes)</string>
+  <string name="style">ESTILO</string>
+  <string name="simple">I</string>
+  <string name="detailed">II</string>
+  <string name="dial">ESTILO</string>
+  <string name="color">COR</string>
+  <string name="full">ECRÃ COMPLETO</string>
+  <string name="inset">CIRCULAR</string>
+  <string name="p0">Vermelho/verde/preto</string>
+  <string name="p1">◐</string>
+  <string name="corner0">Em cima, à esquerda</string>
+  <string name="corner1">Em cima, à direita</string>
+  <string name="corner2">Em baixo, à esquerda</string>
+  <string name="corner3">Em baixo, à direita</string>
+</resources>

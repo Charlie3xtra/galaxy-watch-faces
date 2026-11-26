@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Samholdsglød</string>
+  <string name="style">STIL</string>
+  <string name="simple">1</string>
+  <string name="detailed">2</string>
+  <string name="dial">STIL</string>
+  <string name="color">FARGE</string>
+  <string name="full">HELE SKJERMEN</string>
+  <string name="inset">RUND</string>
+  <string name="p0">Rød/grønn/svart</string>
+  <string name="p1">◐</string>
+  <string name="corner0">Oppe til venstre</string>
+  <string name="corner1">Oppe til høyre</string>
+  <string name="corner2">Nede til venstre</string>
+  <string name="corner3">Nede til høyre</string>
+</resources>

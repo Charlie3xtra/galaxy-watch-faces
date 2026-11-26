@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Luci dell’unità</string>
+  <string name="style">STILE</string>
+  <string name="simple">I</string>
+  <string name="detailed">II</string>
+  <string name="dial">STILE</string>
+  <string name="color">COLORE</string>
+  <string name="full">A TUTTO SCHERMO</string>
+  <string name="inset">CIRCOLARE</string>
+  <string name="p0">Rosso/Verde/Nero</string>
+  <string name="p1">◐</string>
+  <string name="corner0">In alto a sinistra</string>
+  <string name="corner1">In alto a destra</string>
+  <string name="corner2">In basso a sinistra</string>
+  <string name="corner3">In basso a destra</string>
+</resources>

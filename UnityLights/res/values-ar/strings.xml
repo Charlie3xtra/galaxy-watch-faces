@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">أضواء الوحدة</string>
+  <string name="style">النمط</string>
+  <string name="simple">I</string>
+  <string name="detailed">II</string>
+  <string name="dial">النمط</string>
+  <string name="color">اللون</string>
+  <string name="full">ملء الشاشة</string>
+  <string name="inset">دائرة</string>
+  <string name="p0">أحمر/أخضر/أسود</string>
+  <string name="p1">◐</string>
+  <string name="corner0">أعلى اليسار</string>
+  <string name="corner1">أعلى اليمين</string>
+  <string name="corner2">أسفل اليسار</string>
+  <string name="corner3">أسفل اليمين</string>
+</resources>

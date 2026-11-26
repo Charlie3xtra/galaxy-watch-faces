@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Luzes de União</string>
+  <string name="style">ESTILO</string>
+  <string name="simple">I</string>
+  <string name="detailed">II</string>
+  <string name="dial">ESTILO</string>
+  <string name="color">COR</string>
+  <string name="full">TELA CHEIA</string>
+  <string name="inset">CIRCULAR</string>
+  <string name="p0">Vermelho/Verde/Preto</string>
+  <string name="p1">◐</string>
+  <string name="corner0">Superior Esquerda</string>
+  <string name="corner1">Superior Direita</string>
+  <string name="corner2">Inferior Esquerda</string>
+  <string name="corner3">Inferior Direita</string>
+</resources>

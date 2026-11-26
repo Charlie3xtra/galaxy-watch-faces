@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">ユニティライト</string>
+  <string name="style">スタイル</string>
+  <string name="simple">I</string>
+  <string name="detailed">II</string>
+  <string name="dial">スタイル</string>
+  <string name="color">カラー</string>
+  <string name="full">フルスクリーン</string>
+  <string name="inset">円形</string>
+  <string name="p0">レッド/グリーン/ブラック</string>
+  <string name="p1">◐</string>
+  <string name="corner0">左上</string>
+  <string name="corner1">右上</string>
+  <string name="corner2">左下</string>
+  <string name="corner3">右下</string>
+</resources>

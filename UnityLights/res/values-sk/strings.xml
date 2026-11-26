@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Svetlá jednoty</string>
+  <string name="style">ŠTÝL</string>
+  <string name="simple">I</string>
+  <string name="detailed">II</string>
+  <string name="dial">ŠTÝL</string>
+  <string name="color">FARBA</string>
+  <string name="full">CELÁ OBRAZOVKA</string>
+  <string name="inset">KRUH</string>
+  <string name="p0">Červená/zelená/čierna</string>
+  <string name="p1">◐</string>
+  <string name="corner0">Vľavo hore</string>
+  <string name="corner1">Vpravo hore</string>
+  <string name="corner2">Vľavo dole</string>
+  <string name="corner3">Vpravo dole</string>
+</resources>

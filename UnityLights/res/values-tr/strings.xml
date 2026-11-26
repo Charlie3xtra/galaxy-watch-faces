@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Birlik Işıkları</string>
+  <string name="style">STİL</string>
+  <string name="simple">I</string>
+  <string name="detailed">II</string>
+  <string name="dial">STİL</string>
+  <string name="color">RENK</string>
+  <string name="full">TAM EKRAN</string>
+  <string name="inset">DAİRESEL</string>
+  <string name="p0">Kırmızı/Yeşil/Siyah</string>
+  <string name="p1">◐</string>
+  <string name="corner0">Sol Üst</string>
+  <string name="corner1">Sağ Üst</string>
+  <string name="corner2">Sol Alt</string>
+  <string name="corner3">Sağ Alt</string>
+</resources>

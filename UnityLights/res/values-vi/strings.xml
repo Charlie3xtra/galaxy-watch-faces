@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Ánh sáng đoàn kết</string>
+  <string name="style">KIỂU</string>
+  <string name="simple">I</string>
+  <string name="detailed">II</string>
+  <string name="dial">KIỂU</string>
+  <string name="color">MÀU</string>
+  <string name="full">TOÀN MÀN HÌNH</string>
+  <string name="inset">VÒNG TRÒN</string>
+  <string name="p0">Đỏ/Lục/Đen</string>
+  <string name="p1">◐</string>
+  <string name="corner0">Trên cùng bên trái</string>
+  <string name="corner1">Trên cùng bên phải</string>
+  <string name="corner2">Dưới cùng bên trái</string>
+  <string name="corner3">Dưới cùng bên phải</string>
+</resources>

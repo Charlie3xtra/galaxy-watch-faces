@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Svetla enotnost</string>
+  <string name="style">SLOG</string>
+  <string name="simple">I</string>
+  <string name="detailed">II</string>
+  <string name="dial">SLOG</string>
+  <string name="color">BARVA</string>
+  <string name="full">CELOTEN ZASLON</string>
+  <string name="inset">ZAOBLJENA</string>
+  <string name="p0">Rdeča/zelena/črna</string>
+  <string name="p1">◐</string>
+  <string name="corner0">Zgoraj levo</string>
+  <string name="corner1">Zgoraj desno</string>
+  <string name="corner2">Spodaj levo</string>
+  <string name="corner3">Spodaj desno</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Cahaya Kesatuan</string>
+  <string name="style">GAYA</string>
+  <string name="simple">I</string>
+  <string name="detailed">II</string>
+  <string name="dial">GAYA</string>
+  <string name="color">WARNA</string>
+  <string name="full">LAYAR PENUH</string>
+  <string name="inset">MELINGKAR</string>
+  <string name="p0">Merah/Hijau/Hitam</string>
+  <string name="p1">◐</string>
+  <string name="corner0">Kiri Atas</string>
+  <string name="corner1">Kanan Atas</string>
+  <string name="corner2">Kiri Bawah</string>
+  <string name="corner3">Kanan Bawah</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Llums d’unitat</string>
+  <string name="style">ESTIL</string>
+  <string name="simple">I</string>
+  <string name="detailed">II</string>
+  <string name="dial">ESTIL</string>
+  <string name="color">COLOR</string>
+  <string name="full">PANTALLA COMPLETA</string>
+  <string name="inset">CIRCULAR</string>
+  <string name="p0">Vermell/verd/negre</string>
+  <string name="p1">◐</string>
+  <string name="corner0">A dalt a l’esquerra</string>
+  <string name="corner1">A dalt a la dreta</string>
+  <string name="corner2">A baix a l’esquerra</string>
+  <string name="corner3">A baix a la dreta</string>
+</resources>

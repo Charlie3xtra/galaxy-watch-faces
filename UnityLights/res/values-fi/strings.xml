@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Unity Lights</string>
+  <string name="style">TYYLI</string>
+  <string name="simple">I</string>
+  <string name="detailed">II</string>
+  <string name="dial">TYYLI</string>
+  <string name="color">VÄRI</string>
+  <string name="full">KOKO NÄYTTÖ</string>
+  <string name="inset">KIEKKO</string>
+  <string name="p0">Punainen/vihreä/musta</string>
+  <string name="p1">◐</string>
+  <string name="corner0">Ylävasemmalla</string>
+  <string name="corner1">Yläoikealla</string>
+  <string name="corner2">Alavasemmalla</string>
+  <string name="corner3">Alaoikealla</string>
+</resources>

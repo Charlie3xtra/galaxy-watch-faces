@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Огни единства</string>
+  <string name="style">СТИЛЬ</string>
+  <string name="simple">I</string>
+  <string name="detailed">II</string>
+  <string name="dial">СТИЛЬ</string>
+  <string name="color">ЦВЕТ</string>
+  <string name="full">ПОЛНЫЙ ЭКРАН</string>
+  <string name="inset">КРУГ</string>
+  <string name="p0">Красный/Зеленый/Черный</string>
+  <string name="p1">◐</string>
+  <string name="corner0">Вверху слева</string>
+  <string name="corner1">Вверху справа</string>
+  <string name="corner2">Внизу слева</string>
+  <string name="corner3">Внизу справа</string>
+</resources>

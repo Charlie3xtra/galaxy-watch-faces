@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Вогні єдності</string>
+  <string name="style">СТИЛЬ</string>
+  <string name="simple">I</string>
+  <string name="detailed">II</string>
+  <string name="dial">СТИЛЬ</string>
+  <string name="color">КОЛІР</string>
+  <string name="full">НА ВЕСЬ ЕКРАН</string>
+  <string name="inset">КОЛОМ</string>
+  <string name="p0">Червоний/Зелений/Чорний</string>
+  <string name="p1">◐</string>
+  <string name="corner0">Вгорі зліва</string>
+  <string name="corner1">Вгорі справа</string>
+  <string name="corner2">Внизу зліва</string>
+  <string name="corner3">Внизу справа</string>
+</resources>

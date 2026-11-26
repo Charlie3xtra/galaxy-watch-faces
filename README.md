@@ -151,3 +151,13 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 七个系统组件位、六种时间样式、五种配色，可选秒数表圈和手动红色夜间模式。时间数字来自 watchOS 24S132 的 Foghorn 字体，布局适配 Galaxy 圆屏。组件接入 Wear OS 数据源，示例图使用固定读数。海拔表圈使用三星指南针气压组件的实测值，以标准大气压估算高度。左右按固件分档绘制英尺和米的刻度，底部显示近似米数。默认多色布局使用上方日期、大时间、中央半圆仪表及底部等大的三个组件。中部默认读取手表电量，表圈继续显示海拔。训练负荷和水深表圈暂未移植。
 
 [下载 Ultra 模块 1.2](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/modular-ultra-1.2/ModularUltra-1.2.apk)
+
+## 团结之光 Unity Lights
+
+| 红绿亮屏 | 息屏 | 黑白、圆形与时标 |
+| :---: | :---: | :---: |
+| <img src="UnityLights/screenshots/gallery.png" width="200"> | <img src="UnityLights/screenshots/ambient.png" width="200"> | <img src="UnityLights/screenshots/monochrome.png" width="200"> |
+
+以上为布局渲染图。时针和分针分别带动光场，圆形内盘可显示四个 Wear OS 系统组件。光场来自 watchOS 24S132 的 Coltan 指针纹理及配色，在 WFF 中分层合成。交叠阴影和息屏光强为近似值。
+
+[下载团结之光 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/unity-lights-1.0/UnityLights-1.0.apk)

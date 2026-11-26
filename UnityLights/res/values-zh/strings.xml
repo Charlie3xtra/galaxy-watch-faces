@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">团结之光</string>
+  <string name="style">样式</string>
+  <string name="simple">I</string>
+  <string name="detailed">II</string>
+  <string name="dial">样式</string>
+  <string name="color">颜色</string>
+  <string name="full">全屏幕</string>
+  <string name="inset">圆形</string>
+  <string name="p0">红/绿/黑</string>
+  <string name="p1">黑白</string>
+  <string name="corner0">左上</string>
+  <string name="corner1">右上</string>
+  <string name="corner2">左下</string>
+  <string name="corner3">右下</string>
+</resources>

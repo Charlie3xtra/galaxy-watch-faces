@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Unity-licht</string>
+  <string name="style">STIJL</string>
+  <string name="simple">I</string>
+  <string name="detailed">II</string>
+  <string name="dial">STIJL</string>
+  <string name="color">KLEUR</string>
+  <string name="full">SCHERM­VULLEND</string>
+  <string name="inset">CIRKEL­VORMIG</string>
+  <string name="p0">Rood/Groen/Zwart</string>
+  <string name="p1">◐</string>
+  <string name="corner0">Linksboven</string>
+  <string name="corner1">Rechtsboven</string>
+  <string name="corner2">Linksonder</string>
+  <string name="corner3">Rechtsonder</string>
+</resources>
