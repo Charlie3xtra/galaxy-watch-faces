@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Pride Radiance</string>
+  <string name="palette_0">I</string>
+  <string name="desc_0">Dúhové</string>
+  <string name="palette_1">II</string>
+  <string name="desc_1">Oranžová, biela a ružová</string>
+  <string name="palette_2">III</string>
+  <string name="desc_2">Ružová, fialová a modrá</string>
+  <string name="palette_3">IV</string>
+  <string name="desc_3">Modrá, ružová a biela</string>
+  <string name="palette_4">V</string>
+  <string name="desc_4">Žltá, biela, fialová a čierna</string>
+  <string name="color_label">Farba</string>
+</resources>

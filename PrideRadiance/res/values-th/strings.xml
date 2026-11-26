@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Pride แสงนีออน</string>
+  <string name="palette_0">I</string>
+  <string name="desc_0">สายรุ้ง</string>
+  <string name="palette_1">II</string>
+  <string name="desc_1">สีส้ม สีขาว และสีชมพู</string>
+  <string name="palette_2">III</string>
+  <string name="desc_2">สีชมพู สีม่วง และสีน้ำเงิน</string>
+  <string name="palette_3">IV</string>
+  <string name="desc_3">สีน้ำเงิน สีชมพู และสีขาว</string>
+  <string name="palette_4">V</string>
+  <string name="desc_4">สีเหลือง สีขาว สีม่วง และสีดำ</string>
+  <string name="color_label">สี</string>
+</resources>

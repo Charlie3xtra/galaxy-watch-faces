@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Pride-loiste</string>
+  <string name="palette_0">I</string>
+  <string name="desc_0">Sateenkaari</string>
+  <string name="palette_1">II</string>
+  <string name="desc_1">Oranssi, valkoinen ja pinkki</string>
+  <string name="palette_2">III</string>
+  <string name="desc_2">Pinkki, violetti ja sininen</string>
+  <string name="palette_3">IV</string>
+  <string name="desc_3">Sininen, pinkki ja valkoinen</string>
+  <string name="palette_4">V</string>
+  <string name="desc_4">Keltainen, valkoinen, violetti ja musta</string>
+  <string name="color_label">Väri</string>
+</resources>

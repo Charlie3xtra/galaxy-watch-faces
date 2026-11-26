@@ -1,0 +1,2463 @@
+<?xml version='1.0' encoding='utf-8'?>
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <BitmapFonts>
+    <BitmapFont name="p1f0">
+      <Character name="0" resource="p1f0d0" width="156" height="190" />
+      <Character name="٠" resource="p1f0d0" width="156" height="190" />
+      <Character name="۰" resource="p1f0d0" width="156" height="190" />
+      <Character name="०" resource="p1f0d0" width="156" height="190" />
+      <Character name="๐" resource="p1f0d0" width="156" height="190" />
+      <Character name="1" resource="p1f0d1" width="156" height="190" />
+      <Character name="١" resource="p1f0d1" width="156" height="190" />
+      <Character name="۱" resource="p1f0d1" width="156" height="190" />
+      <Character name="१" resource="p1f0d1" width="156" height="190" />
+      <Character name="๑" resource="p1f0d1" width="156" height="190" />
+      <Character name="2" resource="p1f0d2" width="156" height="190" />
+      <Character name="٢" resource="p1f0d2" width="156" height="190" />
+      <Character name="۲" resource="p1f0d2" width="156" height="190" />
+      <Character name="२" resource="p1f0d2" width="156" height="190" />
+      <Character name="๒" resource="p1f0d2" width="156" height="190" />
+      <Character name="3" resource="p1f0d3" width="156" height="190" />
+      <Character name="٣" resource="p1f0d3" width="156" height="190" />
+      <Character name="۳" resource="p1f0d3" width="156" height="190" />
+      <Character name="३" resource="p1f0d3" width="156" height="190" />
+      <Character name="๓" resource="p1f0d3" width="156" height="190" />
+      <Character name="4" resource="p1f0d4" width="156" height="190" />
+      <Character name="٤" resource="p1f0d4" width="156" height="190" />
+      <Character name="۴" resource="p1f0d4" width="156" height="190" />
+      <Character name="४" resource="p1f0d4" width="156" height="190" />
+      <Character name="๔" resource="p1f0d4" width="156" height="190" />
+      <Character name="5" resource="p1f0d5" width="156" height="190" />
+      <Character name="٥" resource="p1f0d5" width="156" height="190" />
+      <Character name="۵" resource="p1f0d5" width="156" height="190" />
+      <Character name="५" resource="p1f0d5" width="156" height="190" />
+      <Character name="๕" resource="p1f0d5" width="156" height="190" />
+      <Character name="6" resource="p1f0d6" width="156" height="190" />
+      <Character name="٦" resource="p1f0d6" width="156" height="190" />
+      <Character name="۶" resource="p1f0d6" width="156" height="190" />
+      <Character name="६" resource="p1f0d6" width="156" height="190" />
+      <Character name="๖" resource="p1f0d6" width="156" height="190" />
+      <Character name="7" resource="p1f0d7" width="156" height="190" />
+      <Character name="٧" resource="p1f0d7" width="156" height="190" />
+      <Character name="۷" resource="p1f0d7" width="156" height="190" />
+      <Character name="७" resource="p1f0d7" width="156" height="190" />
+      <Character name="๗" resource="p1f0d7" width="156" height="190" />
+      <Character name="8" resource="p1f0d8" width="156" height="190" />
+      <Character name="٨" resource="p1f0d8" width="156" height="190" />
+      <Character name="۸" resource="p1f0d8" width="156" height="190" />
+      <Character name="८" resource="p1f0d8" width="156" height="190" />
+      <Character name="๘" resource="p1f0d8" width="156" height="190" />
+      <Character name="9" resource="p1f0d9" width="156" height="190" />
+      <Character name="٩" resource="p1f0d9" width="156" height="190" />
+      <Character name="۹" resource="p1f0d9" width="156" height="190" />
+      <Character name="९" resource="p1f0d9" width="156" height="190" />
+      <Character name="๙" resource="p1f0d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p1f1">
+      <Character name="0" resource="p1f1d0" width="156" height="190" />
+      <Character name="٠" resource="p1f1d0" width="156" height="190" />
+      <Character name="۰" resource="p1f1d0" width="156" height="190" />
+      <Character name="०" resource="p1f1d0" width="156" height="190" />
+      <Character name="๐" resource="p1f1d0" width="156" height="190" />
+      <Character name="1" resource="p1f1d1" width="156" height="190" />
+      <Character name="١" resource="p1f1d1" width="156" height="190" />
+      <Character name="۱" resource="p1f1d1" width="156" height="190" />
+      <Character name="१" resource="p1f1d1" width="156" height="190" />
+      <Character name="๑" resource="p1f1d1" width="156" height="190" />
+      <Character name="2" resource="p1f1d2" width="156" height="190" />
+      <Character name="٢" resource="p1f1d2" width="156" height="190" />
+      <Character name="۲" resource="p1f1d2" width="156" height="190" />
+      <Character name="२" resource="p1f1d2" width="156" height="190" />
+      <Character name="๒" resource="p1f1d2" width="156" height="190" />
+      <Character name="3" resource="p1f1d3" width="156" height="190" />
+      <Character name="٣" resource="p1f1d3" width="156" height="190" />
+      <Character name="۳" resource="p1f1d3" width="156" height="190" />
+      <Character name="३" resource="p1f1d3" width="156" height="190" />
+      <Character name="๓" resource="p1f1d3" width="156" height="190" />
+      <Character name="4" resource="p1f1d4" width="156" height="190" />
+      <Character name="٤" resource="p1f1d4" width="156" height="190" />
+      <Character name="۴" resource="p1f1d4" width="156" height="190" />
+      <Character name="४" resource="p1f1d4" width="156" height="190" />
+      <Character name="๔" resource="p1f1d4" width="156" height="190" />
+      <Character name="5" resource="p1f1d5" width="156" height="190" />
+      <Character name="٥" resource="p1f1d5" width="156" height="190" />
+      <Character name="۵" resource="p1f1d5" width="156" height="190" />
+      <Character name="५" resource="p1f1d5" width="156" height="190" />
+      <Character name="๕" resource="p1f1d5" width="156" height="190" />
+      <Character name="6" resource="p1f1d6" width="156" height="190" />
+      <Character name="٦" resource="p1f1d6" width="156" height="190" />
+      <Character name="۶" resource="p1f1d6" width="156" height="190" />
+      <Character name="६" resource="p1f1d6" width="156" height="190" />
+      <Character name="๖" resource="p1f1d6" width="156" height="190" />
+      <Character name="7" resource="p1f1d7" width="156" height="190" />
+      <Character name="٧" resource="p1f1d7" width="156" height="190" />
+      <Character name="۷" resource="p1f1d7" width="156" height="190" />
+      <Character name="७" resource="p1f1d7" width="156" height="190" />
+      <Character name="๗" resource="p1f1d7" width="156" height="190" />
+      <Character name="8" resource="p1f1d8" width="156" height="190" />
+      <Character name="٨" resource="p1f1d8" width="156" height="190" />
+      <Character name="۸" resource="p1f1d8" width="156" height="190" />
+      <Character name="८" resource="p1f1d8" width="156" height="190" />
+      <Character name="๘" resource="p1f1d8" width="156" height="190" />
+      <Character name="9" resource="p1f1d9" width="156" height="190" />
+      <Character name="٩" resource="p1f1d9" width="156" height="190" />
+      <Character name="۹" resource="p1f1d9" width="156" height="190" />
+      <Character name="९" resource="p1f1d9" width="156" height="190" />
+      <Character name="๙" resource="p1f1d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p1f2">
+      <Character name="0" resource="p1f2d0" width="156" height="190" />
+      <Character name="٠" resource="p1f2d0" width="156" height="190" />
+      <Character name="۰" resource="p1f2d0" width="156" height="190" />
+      <Character name="०" resource="p1f2d0" width="156" height="190" />
+      <Character name="๐" resource="p1f2d0" width="156" height="190" />
+      <Character name="1" resource="p1f2d1" width="156" height="190" />
+      <Character name="١" resource="p1f2d1" width="156" height="190" />
+      <Character name="۱" resource="p1f2d1" width="156" height="190" />
+      <Character name="१" resource="p1f2d1" width="156" height="190" />
+      <Character name="๑" resource="p1f2d1" width="156" height="190" />
+      <Character name="2" resource="p1f2d2" width="156" height="190" />
+      <Character name="٢" resource="p1f2d2" width="156" height="190" />
+      <Character name="۲" resource="p1f2d2" width="156" height="190" />
+      <Character name="२" resource="p1f2d2" width="156" height="190" />
+      <Character name="๒" resource="p1f2d2" width="156" height="190" />
+      <Character name="3" resource="p1f2d3" width="156" height="190" />
+      <Character name="٣" resource="p1f2d3" width="156" height="190" />
+      <Character name="۳" resource="p1f2d3" width="156" height="190" />
+      <Character name="३" resource="p1f2d3" width="156" height="190" />
+      <Character name="๓" resource="p1f2d3" width="156" height="190" />
+      <Character name="4" resource="p1f2d4" width="156" height="190" />
+      <Character name="٤" resource="p1f2d4" width="156" height="190" />
+      <Character name="۴" resource="p1f2d4" width="156" height="190" />
+      <Character name="४" resource="p1f2d4" width="156" height="190" />
+      <Character name="๔" resource="p1f2d4" width="156" height="190" />
+      <Character name="5" resource="p1f2d5" width="156" height="190" />
+      <Character name="٥" resource="p1f2d5" width="156" height="190" />
+      <Character name="۵" resource="p1f2d5" width="156" height="190" />
+      <Character name="५" resource="p1f2d5" width="156" height="190" />
+      <Character name="๕" resource="p1f2d5" width="156" height="190" />
+      <Character name="6" resource="p1f2d6" width="156" height="190" />
+      <Character name="٦" resource="p1f2d6" width="156" height="190" />
+      <Character name="۶" resource="p1f2d6" width="156" height="190" />
+      <Character name="६" resource="p1f2d6" width="156" height="190" />
+      <Character name="๖" resource="p1f2d6" width="156" height="190" />
+      <Character name="7" resource="p1f2d7" width="156" height="190" />
+      <Character name="٧" resource="p1f2d7" width="156" height="190" />
+      <Character name="۷" resource="p1f2d7" width="156" height="190" />
+      <Character name="७" resource="p1f2d7" width="156" height="190" />
+      <Character name="๗" resource="p1f2d7" width="156" height="190" />
+      <Character name="8" resource="p1f2d8" width="156" height="190" />
+      <Character name="٨" resource="p1f2d8" width="156" height="190" />
+      <Character name="۸" resource="p1f2d8" width="156" height="190" />
+      <Character name="८" resource="p1f2d8" width="156" height="190" />
+      <Character name="๘" resource="p1f2d8" width="156" height="190" />
+      <Character name="9" resource="p1f2d9" width="156" height="190" />
+      <Character name="٩" resource="p1f2d9" width="156" height="190" />
+      <Character name="۹" resource="p1f2d9" width="156" height="190" />
+      <Character name="९" resource="p1f2d9" width="156" height="190" />
+      <Character name="๙" resource="p1f2d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p1f3">
+      <Character name="0" resource="p1f3d0" width="156" height="190" />
+      <Character name="٠" resource="p1f3d0" width="156" height="190" />
+      <Character name="۰" resource="p1f3d0" width="156" height="190" />
+      <Character name="०" resource="p1f3d0" width="156" height="190" />
+      <Character name="๐" resource="p1f3d0" width="156" height="190" />
+      <Character name="1" resource="p1f3d1" width="156" height="190" />
+      <Character name="١" resource="p1f3d1" width="156" height="190" />
+      <Character name="۱" resource="p1f3d1" width="156" height="190" />
+      <Character name="१" resource="p1f3d1" width="156" height="190" />
+      <Character name="๑" resource="p1f3d1" width="156" height="190" />
+      <Character name="2" resource="p1f3d2" width="156" height="190" />
+      <Character name="٢" resource="p1f3d2" width="156" height="190" />
+      <Character name="۲" resource="p1f3d2" width="156" height="190" />
+      <Character name="२" resource="p1f3d2" width="156" height="190" />
+      <Character name="๒" resource="p1f3d2" width="156" height="190" />
+      <Character name="3" resource="p1f3d3" width="156" height="190" />
+      <Character name="٣" resource="p1f3d3" width="156" height="190" />
+      <Character name="۳" resource="p1f3d3" width="156" height="190" />
+      <Character name="३" resource="p1f3d3" width="156" height="190" />
+      <Character name="๓" resource="p1f3d3" width="156" height="190" />
+      <Character name="4" resource="p1f3d4" width="156" height="190" />
+      <Character name="٤" resource="p1f3d4" width="156" height="190" />
+      <Character name="۴" resource="p1f3d4" width="156" height="190" />
+      <Character name="४" resource="p1f3d4" width="156" height="190" />
+      <Character name="๔" resource="p1f3d4" width="156" height="190" />
+      <Character name="5" resource="p1f3d5" width="156" height="190" />
+      <Character name="٥" resource="p1f3d5" width="156" height="190" />
+      <Character name="۵" resource="p1f3d5" width="156" height="190" />
+      <Character name="५" resource="p1f3d5" width="156" height="190" />
+      <Character name="๕" resource="p1f3d5" width="156" height="190" />
+      <Character name="6" resource="p1f3d6" width="156" height="190" />
+      <Character name="٦" resource="p1f3d6" width="156" height="190" />
+      <Character name="۶" resource="p1f3d6" width="156" height="190" />
+      <Character name="६" resource="p1f3d6" width="156" height="190" />
+      <Character name="๖" resource="p1f3d6" width="156" height="190" />
+      <Character name="7" resource="p1f3d7" width="156" height="190" />
+      <Character name="٧" resource="p1f3d7" width="156" height="190" />
+      <Character name="۷" resource="p1f3d7" width="156" height="190" />
+      <Character name="७" resource="p1f3d7" width="156" height="190" />
+      <Character name="๗" resource="p1f3d7" width="156" height="190" />
+      <Character name="8" resource="p1f3d8" width="156" height="190" />
+      <Character name="٨" resource="p1f3d8" width="156" height="190" />
+      <Character name="۸" resource="p1f3d8" width="156" height="190" />
+      <Character name="८" resource="p1f3d8" width="156" height="190" />
+      <Character name="๘" resource="p1f3d8" width="156" height="190" />
+      <Character name="9" resource="p1f3d9" width="156" height="190" />
+      <Character name="٩" resource="p1f3d9" width="156" height="190" />
+      <Character name="۹" resource="p1f3d9" width="156" height="190" />
+      <Character name="९" resource="p1f3d9" width="156" height="190" />
+      <Character name="๙" resource="p1f3d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p1f4">
+      <Character name="0" resource="p1f4d0" width="156" height="190" />
+      <Character name="٠" resource="p1f4d0" width="156" height="190" />
+      <Character name="۰" resource="p1f4d0" width="156" height="190" />
+      <Character name="०" resource="p1f4d0" width="156" height="190" />
+      <Character name="๐" resource="p1f4d0" width="156" height="190" />
+      <Character name="1" resource="p1f4d1" width="156" height="190" />
+      <Character name="١" resource="p1f4d1" width="156" height="190" />
+      <Character name="۱" resource="p1f4d1" width="156" height="190" />
+      <Character name="१" resource="p1f4d1" width="156" height="190" />
+      <Character name="๑" resource="p1f4d1" width="156" height="190" />
+      <Character name="2" resource="p1f4d2" width="156" height="190" />
+      <Character name="٢" resource="p1f4d2" width="156" height="190" />
+      <Character name="۲" resource="p1f4d2" width="156" height="190" />
+      <Character name="२" resource="p1f4d2" width="156" height="190" />
+      <Character name="๒" resource="p1f4d2" width="156" height="190" />
+      <Character name="3" resource="p1f4d3" width="156" height="190" />
+      <Character name="٣" resource="p1f4d3" width="156" height="190" />
+      <Character name="۳" resource="p1f4d3" width="156" height="190" />
+      <Character name="३" resource="p1f4d3" width="156" height="190" />
+      <Character name="๓" resource="p1f4d3" width="156" height="190" />
+      <Character name="4" resource="p1f4d4" width="156" height="190" />
+      <Character name="٤" resource="p1f4d4" width="156" height="190" />
+      <Character name="۴" resource="p1f4d4" width="156" height="190" />
+      <Character name="४" resource="p1f4d4" width="156" height="190" />
+      <Character name="๔" resource="p1f4d4" width="156" height="190" />
+      <Character name="5" resource="p1f4d5" width="156" height="190" />
+      <Character name="٥" resource="p1f4d5" width="156" height="190" />
+      <Character name="۵" resource="p1f4d5" width="156" height="190" />
+      <Character name="५" resource="p1f4d5" width="156" height="190" />
+      <Character name="๕" resource="p1f4d5" width="156" height="190" />
+      <Character name="6" resource="p1f4d6" width="156" height="190" />
+      <Character name="٦" resource="p1f4d6" width="156" height="190" />
+      <Character name="۶" resource="p1f4d6" width="156" height="190" />
+      <Character name="६" resource="p1f4d6" width="156" height="190" />
+      <Character name="๖" resource="p1f4d6" width="156" height="190" />
+      <Character name="7" resource="p1f4d7" width="156" height="190" />
+      <Character name="٧" resource="p1f4d7" width="156" height="190" />
+      <Character name="۷" resource="p1f4d7" width="156" height="190" />
+      <Character name="७" resource="p1f4d7" width="156" height="190" />
+      <Character name="๗" resource="p1f4d7" width="156" height="190" />
+      <Character name="8" resource="p1f4d8" width="156" height="190" />
+      <Character name="٨" resource="p1f4d8" width="156" height="190" />
+      <Character name="۸" resource="p1f4d8" width="156" height="190" />
+      <Character name="८" resource="p1f4d8" width="156" height="190" />
+      <Character name="๘" resource="p1f4d8" width="156" height="190" />
+      <Character name="9" resource="p1f4d9" width="156" height="190" />
+      <Character name="٩" resource="p1f4d9" width="156" height="190" />
+      <Character name="۹" resource="p1f4d9" width="156" height="190" />
+      <Character name="९" resource="p1f4d9" width="156" height="190" />
+      <Character name="๙" resource="p1f4d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p1f5">
+      <Character name="0" resource="p1f5d0" width="156" height="190" />
+      <Character name="٠" resource="p1f5d0" width="156" height="190" />
+      <Character name="۰" resource="p1f5d0" width="156" height="190" />
+      <Character name="०" resource="p1f5d0" width="156" height="190" />
+      <Character name="๐" resource="p1f5d0" width="156" height="190" />
+      <Character name="1" resource="p1f5d1" width="156" height="190" />
+      <Character name="١" resource="p1f5d1" width="156" height="190" />
+      <Character name="۱" resource="p1f5d1" width="156" height="190" />
+      <Character name="१" resource="p1f5d1" width="156" height="190" />
+      <Character name="๑" resource="p1f5d1" width="156" height="190" />
+      <Character name="2" resource="p1f5d2" width="156" height="190" />
+      <Character name="٢" resource="p1f5d2" width="156" height="190" />
+      <Character name="۲" resource="p1f5d2" width="156" height="190" />
+      <Character name="२" resource="p1f5d2" width="156" height="190" />
+      <Character name="๒" resource="p1f5d2" width="156" height="190" />
+      <Character name="3" resource="p1f5d3" width="156" height="190" />
+      <Character name="٣" resource="p1f5d3" width="156" height="190" />
+      <Character name="۳" resource="p1f5d3" width="156" height="190" />
+      <Character name="३" resource="p1f5d3" width="156" height="190" />
+      <Character name="๓" resource="p1f5d3" width="156" height="190" />
+      <Character name="4" resource="p1f5d4" width="156" height="190" />
+      <Character name="٤" resource="p1f5d4" width="156" height="190" />
+      <Character name="۴" resource="p1f5d4" width="156" height="190" />
+      <Character name="४" resource="p1f5d4" width="156" height="190" />
+      <Character name="๔" resource="p1f5d4" width="156" height="190" />
+      <Character name="5" resource="p1f5d5" width="156" height="190" />
+      <Character name="٥" resource="p1f5d5" width="156" height="190" />
+      <Character name="۵" resource="p1f5d5" width="156" height="190" />
+      <Character name="५" resource="p1f5d5" width="156" height="190" />
+      <Character name="๕" resource="p1f5d5" width="156" height="190" />
+      <Character name="6" resource="p1f5d6" width="156" height="190" />
+      <Character name="٦" resource="p1f5d6" width="156" height="190" />
+      <Character name="۶" resource="p1f5d6" width="156" height="190" />
+      <Character name="६" resource="p1f5d6" width="156" height="190" />
+      <Character name="๖" resource="p1f5d6" width="156" height="190" />
+      <Character name="7" resource="p1f5d7" width="156" height="190" />
+      <Character name="٧" resource="p1f5d7" width="156" height="190" />
+      <Character name="۷" resource="p1f5d7" width="156" height="190" />
+      <Character name="७" resource="p1f5d7" width="156" height="190" />
+      <Character name="๗" resource="p1f5d7" width="156" height="190" />
+      <Character name="8" resource="p1f5d8" width="156" height="190" />
+      <Character name="٨" resource="p1f5d8" width="156" height="190" />
+      <Character name="۸" resource="p1f5d8" width="156" height="190" />
+      <Character name="८" resource="p1f5d8" width="156" height="190" />
+      <Character name="๘" resource="p1f5d8" width="156" height="190" />
+      <Character name="9" resource="p1f5d9" width="156" height="190" />
+      <Character name="٩" resource="p1f5d9" width="156" height="190" />
+      <Character name="۹" resource="p1f5d9" width="156" height="190" />
+      <Character name="९" resource="p1f5d9" width="156" height="190" />
+      <Character name="๙" resource="p1f5d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p1f6">
+      <Character name="0" resource="p1f6d0" width="156" height="190" />
+      <Character name="٠" resource="p1f6d0" width="156" height="190" />
+      <Character name="۰" resource="p1f6d0" width="156" height="190" />
+      <Character name="०" resource="p1f6d0" width="156" height="190" />
+      <Character name="๐" resource="p1f6d0" width="156" height="190" />
+      <Character name="1" resource="p1f6d1" width="156" height="190" />
+      <Character name="١" resource="p1f6d1" width="156" height="190" />
+      <Character name="۱" resource="p1f6d1" width="156" height="190" />
+      <Character name="१" resource="p1f6d1" width="156" height="190" />
+      <Character name="๑" resource="p1f6d1" width="156" height="190" />
+      <Character name="2" resource="p1f6d2" width="156" height="190" />
+      <Character name="٢" resource="p1f6d2" width="156" height="190" />
+      <Character name="۲" resource="p1f6d2" width="156" height="190" />
+      <Character name="२" resource="p1f6d2" width="156" height="190" />
+      <Character name="๒" resource="p1f6d2" width="156" height="190" />
+      <Character name="3" resource="p1f6d3" width="156" height="190" />
+      <Character name="٣" resource="p1f6d3" width="156" height="190" />
+      <Character name="۳" resource="p1f6d3" width="156" height="190" />
+      <Character name="३" resource="p1f6d3" width="156" height="190" />
+      <Character name="๓" resource="p1f6d3" width="156" height="190" />
+      <Character name="4" resource="p1f6d4" width="156" height="190" />
+      <Character name="٤" resource="p1f6d4" width="156" height="190" />
+      <Character name="۴" resource="p1f6d4" width="156" height="190" />
+      <Character name="४" resource="p1f6d4" width="156" height="190" />
+      <Character name="๔" resource="p1f6d4" width="156" height="190" />
+      <Character name="5" resource="p1f6d5" width="156" height="190" />
+      <Character name="٥" resource="p1f6d5" width="156" height="190" />
+      <Character name="۵" resource="p1f6d5" width="156" height="190" />
+      <Character name="५" resource="p1f6d5" width="156" height="190" />
+      <Character name="๕" resource="p1f6d5" width="156" height="190" />
+      <Character name="6" resource="p1f6d6" width="156" height="190" />
+      <Character name="٦" resource="p1f6d6" width="156" height="190" />
+      <Character name="۶" resource="p1f6d6" width="156" height="190" />
+      <Character name="६" resource="p1f6d6" width="156" height="190" />
+      <Character name="๖" resource="p1f6d6" width="156" height="190" />
+      <Character name="7" resource="p1f6d7" width="156" height="190" />
+      <Character name="٧" resource="p1f6d7" width="156" height="190" />
+      <Character name="۷" resource="p1f6d7" width="156" height="190" />
+      <Character name="७" resource="p1f6d7" width="156" height="190" />
+      <Character name="๗" resource="p1f6d7" width="156" height="190" />
+      <Character name="8" resource="p1f6d8" width="156" height="190" />
+      <Character name="٨" resource="p1f6d8" width="156" height="190" />
+      <Character name="۸" resource="p1f6d8" width="156" height="190" />
+      <Character name="८" resource="p1f6d8" width="156" height="190" />
+      <Character name="๘" resource="p1f6d8" width="156" height="190" />
+      <Character name="9" resource="p1f6d9" width="156" height="190" />
+      <Character name="٩" resource="p1f6d9" width="156" height="190" />
+      <Character name="۹" resource="p1f6d9" width="156" height="190" />
+      <Character name="९" resource="p1f6d9" width="156" height="190" />
+      <Character name="๙" resource="p1f6d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p2f0">
+      <Character name="0" resource="p2f0d0" width="156" height="190" />
+      <Character name="٠" resource="p2f0d0" width="156" height="190" />
+      <Character name="۰" resource="p2f0d0" width="156" height="190" />
+      <Character name="०" resource="p2f0d0" width="156" height="190" />
+      <Character name="๐" resource="p2f0d0" width="156" height="190" />
+      <Character name="1" resource="p2f0d1" width="156" height="190" />
+      <Character name="١" resource="p2f0d1" width="156" height="190" />
+      <Character name="۱" resource="p2f0d1" width="156" height="190" />
+      <Character name="१" resource="p2f0d1" width="156" height="190" />
+      <Character name="๑" resource="p2f0d1" width="156" height="190" />
+      <Character name="2" resource="p2f0d2" width="156" height="190" />
+      <Character name="٢" resource="p2f0d2" width="156" height="190" />
+      <Character name="۲" resource="p2f0d2" width="156" height="190" />
+      <Character name="२" resource="p2f0d2" width="156" height="190" />
+      <Character name="๒" resource="p2f0d2" width="156" height="190" />
+      <Character name="3" resource="p2f0d3" width="156" height="190" />
+      <Character name="٣" resource="p2f0d3" width="156" height="190" />
+      <Character name="۳" resource="p2f0d3" width="156" height="190" />
+      <Character name="३" resource="p2f0d3" width="156" height="190" />
+      <Character name="๓" resource="p2f0d3" width="156" height="190" />
+      <Character name="4" resource="p2f0d4" width="156" height="190" />
+      <Character name="٤" resource="p2f0d4" width="156" height="190" />
+      <Character name="۴" resource="p2f0d4" width="156" height="190" />
+      <Character name="४" resource="p2f0d4" width="156" height="190" />
+      <Character name="๔" resource="p2f0d4" width="156" height="190" />
+      <Character name="5" resource="p2f0d5" width="156" height="190" />
+      <Character name="٥" resource="p2f0d5" width="156" height="190" />
+      <Character name="۵" resource="p2f0d5" width="156" height="190" />
+      <Character name="५" resource="p2f0d5" width="156" height="190" />
+      <Character name="๕" resource="p2f0d5" width="156" height="190" />
+      <Character name="6" resource="p2f0d6" width="156" height="190" />
+      <Character name="٦" resource="p2f0d6" width="156" height="190" />
+      <Character name="۶" resource="p2f0d6" width="156" height="190" />
+      <Character name="६" resource="p2f0d6" width="156" height="190" />
+      <Character name="๖" resource="p2f0d6" width="156" height="190" />
+      <Character name="7" resource="p2f0d7" width="156" height="190" />
+      <Character name="٧" resource="p2f0d7" width="156" height="190" />
+      <Character name="۷" resource="p2f0d7" width="156" height="190" />
+      <Character name="७" resource="p2f0d7" width="156" height="190" />
+      <Character name="๗" resource="p2f0d7" width="156" height="190" />
+      <Character name="8" resource="p2f0d8" width="156" height="190" />
+      <Character name="٨" resource="p2f0d8" width="156" height="190" />
+      <Character name="۸" resource="p2f0d8" width="156" height="190" />
+      <Character name="८" resource="p2f0d8" width="156" height="190" />
+      <Character name="๘" resource="p2f0d8" width="156" height="190" />
+      <Character name="9" resource="p2f0d9" width="156" height="190" />
+      <Character name="٩" resource="p2f0d9" width="156" height="190" />
+      <Character name="۹" resource="p2f0d9" width="156" height="190" />
+      <Character name="९" resource="p2f0d9" width="156" height="190" />
+      <Character name="๙" resource="p2f0d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p2f1">
+      <Character name="0" resource="p2f1d0" width="156" height="190" />
+      <Character name="٠" resource="p2f1d0" width="156" height="190" />
+      <Character name="۰" resource="p2f1d0" width="156" height="190" />
+      <Character name="०" resource="p2f1d0" width="156" height="190" />
+      <Character name="๐" resource="p2f1d0" width="156" height="190" />
+      <Character name="1" resource="p2f1d1" width="156" height="190" />
+      <Character name="١" resource="p2f1d1" width="156" height="190" />
+      <Character name="۱" resource="p2f1d1" width="156" height="190" />
+      <Character name="१" resource="p2f1d1" width="156" height="190" />
+      <Character name="๑" resource="p2f1d1" width="156" height="190" />
+      <Character name="2" resource="p2f1d2" width="156" height="190" />
+      <Character name="٢" resource="p2f1d2" width="156" height="190" />
+      <Character name="۲" resource="p2f1d2" width="156" height="190" />
+      <Character name="२" resource="p2f1d2" width="156" height="190" />
+      <Character name="๒" resource="p2f1d2" width="156" height="190" />
+      <Character name="3" resource="p2f1d3" width="156" height="190" />
+      <Character name="٣" resource="p2f1d3" width="156" height="190" />
+      <Character name="۳" resource="p2f1d3" width="156" height="190" />
+      <Character name="३" resource="p2f1d3" width="156" height="190" />
+      <Character name="๓" resource="p2f1d3" width="156" height="190" />
+      <Character name="4" resource="p2f1d4" width="156" height="190" />
+      <Character name="٤" resource="p2f1d4" width="156" height="190" />
+      <Character name="۴" resource="p2f1d4" width="156" height="190" />
+      <Character name="४" resource="p2f1d4" width="156" height="190" />
+      <Character name="๔" resource="p2f1d4" width="156" height="190" />
+      <Character name="5" resource="p2f1d5" width="156" height="190" />
+      <Character name="٥" resource="p2f1d5" width="156" height="190" />
+      <Character name="۵" resource="p2f1d5" width="156" height="190" />
+      <Character name="५" resource="p2f1d5" width="156" height="190" />
+      <Character name="๕" resource="p2f1d5" width="156" height="190" />
+      <Character name="6" resource="p2f1d6" width="156" height="190" />
+      <Character name="٦" resource="p2f1d6" width="156" height="190" />
+      <Character name="۶" resource="p2f1d6" width="156" height="190" />
+      <Character name="६" resource="p2f1d6" width="156" height="190" />
+      <Character name="๖" resource="p2f1d6" width="156" height="190" />
+      <Character name="7" resource="p2f1d7" width="156" height="190" />
+      <Character name="٧" resource="p2f1d7" width="156" height="190" />
+      <Character name="۷" resource="p2f1d7" width="156" height="190" />
+      <Character name="७" resource="p2f1d7" width="156" height="190" />
+      <Character name="๗" resource="p2f1d7" width="156" height="190" />
+      <Character name="8" resource="p2f1d8" width="156" height="190" />
+      <Character name="٨" resource="p2f1d8" width="156" height="190" />
+      <Character name="۸" resource="p2f1d8" width="156" height="190" />
+      <Character name="८" resource="p2f1d8" width="156" height="190" />
+      <Character name="๘" resource="p2f1d8" width="156" height="190" />
+      <Character name="9" resource="p2f1d9" width="156" height="190" />
+      <Character name="٩" resource="p2f1d9" width="156" height="190" />
+      <Character name="۹" resource="p2f1d9" width="156" height="190" />
+      <Character name="९" resource="p2f1d9" width="156" height="190" />
+      <Character name="๙" resource="p2f1d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p2f2">
+      <Character name="0" resource="p2f2d0" width="156" height="190" />
+      <Character name="٠" resource="p2f2d0" width="156" height="190" />
+      <Character name="۰" resource="p2f2d0" width="156" height="190" />
+      <Character name="०" resource="p2f2d0" width="156" height="190" />
+      <Character name="๐" resource="p2f2d0" width="156" height="190" />
+      <Character name="1" resource="p2f2d1" width="156" height="190" />
+      <Character name="١" resource="p2f2d1" width="156" height="190" />
+      <Character name="۱" resource="p2f2d1" width="156" height="190" />
+      <Character name="१" resource="p2f2d1" width="156" height="190" />
+      <Character name="๑" resource="p2f2d1" width="156" height="190" />
+      <Character name="2" resource="p2f2d2" width="156" height="190" />
+      <Character name="٢" resource="p2f2d2" width="156" height="190" />
+      <Character name="۲" resource="p2f2d2" width="156" height="190" />
+      <Character name="२" resource="p2f2d2" width="156" height="190" />
+      <Character name="๒" resource="p2f2d2" width="156" height="190" />
+      <Character name="3" resource="p2f2d3" width="156" height="190" />
+      <Character name="٣" resource="p2f2d3" width="156" height="190" />
+      <Character name="۳" resource="p2f2d3" width="156" height="190" />
+      <Character name="३" resource="p2f2d3" width="156" height="190" />
+      <Character name="๓" resource="p2f2d3" width="156" height="190" />
+      <Character name="4" resource="p2f2d4" width="156" height="190" />
+      <Character name="٤" resource="p2f2d4" width="156" height="190" />
+      <Character name="۴" resource="p2f2d4" width="156" height="190" />
+      <Character name="४" resource="p2f2d4" width="156" height="190" />
+      <Character name="๔" resource="p2f2d4" width="156" height="190" />
+      <Character name="5" resource="p2f2d5" width="156" height="190" />
+      <Character name="٥" resource="p2f2d5" width="156" height="190" />
+      <Character name="۵" resource="p2f2d5" width="156" height="190" />
+      <Character name="५" resource="p2f2d5" width="156" height="190" />
+      <Character name="๕" resource="p2f2d5" width="156" height="190" />
+      <Character name="6" resource="p2f2d6" width="156" height="190" />
+      <Character name="٦" resource="p2f2d6" width="156" height="190" />
+      <Character name="۶" resource="p2f2d6" width="156" height="190" />
+      <Character name="६" resource="p2f2d6" width="156" height="190" />
+      <Character name="๖" resource="p2f2d6" width="156" height="190" />
+      <Character name="7" resource="p2f2d7" width="156" height="190" />
+      <Character name="٧" resource="p2f2d7" width="156" height="190" />
+      <Character name="۷" resource="p2f2d7" width="156" height="190" />
+      <Character name="७" resource="p2f2d7" width="156" height="190" />
+      <Character name="๗" resource="p2f2d7" width="156" height="190" />
+      <Character name="8" resource="p2f2d8" width="156" height="190" />
+      <Character name="٨" resource="p2f2d8" width="156" height="190" />
+      <Character name="۸" resource="p2f2d8" width="156" height="190" />
+      <Character name="८" resource="p2f2d8" width="156" height="190" />
+      <Character name="๘" resource="p2f2d8" width="156" height="190" />
+      <Character name="9" resource="p2f2d9" width="156" height="190" />
+      <Character name="٩" resource="p2f2d9" width="156" height="190" />
+      <Character name="۹" resource="p2f2d9" width="156" height="190" />
+      <Character name="९" resource="p2f2d9" width="156" height="190" />
+      <Character name="๙" resource="p2f2d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p2f3">
+      <Character name="0" resource="p2f3d0" width="156" height="190" />
+      <Character name="٠" resource="p2f3d0" width="156" height="190" />
+      <Character name="۰" resource="p2f3d0" width="156" height="190" />
+      <Character name="०" resource="p2f3d0" width="156" height="190" />
+      <Character name="๐" resource="p2f3d0" width="156" height="190" />
+      <Character name="1" resource="p2f3d1" width="156" height="190" />
+      <Character name="١" resource="p2f3d1" width="156" height="190" />
+      <Character name="۱" resource="p2f3d1" width="156" height="190" />
+      <Character name="१" resource="p2f3d1" width="156" height="190" />
+      <Character name="๑" resource="p2f3d1" width="156" height="190" />
+      <Character name="2" resource="p2f3d2" width="156" height="190" />
+      <Character name="٢" resource="p2f3d2" width="156" height="190" />
+      <Character name="۲" resource="p2f3d2" width="156" height="190" />
+      <Character name="२" resource="p2f3d2" width="156" height="190" />
+      <Character name="๒" resource="p2f3d2" width="156" height="190" />
+      <Character name="3" resource="p2f3d3" width="156" height="190" />
+      <Character name="٣" resource="p2f3d3" width="156" height="190" />
+      <Character name="۳" resource="p2f3d3" width="156" height="190" />
+      <Character name="३" resource="p2f3d3" width="156" height="190" />
+      <Character name="๓" resource="p2f3d3" width="156" height="190" />
+      <Character name="4" resource="p2f3d4" width="156" height="190" />
+      <Character name="٤" resource="p2f3d4" width="156" height="190" />
+      <Character name="۴" resource="p2f3d4" width="156" height="190" />
+      <Character name="४" resource="p2f3d4" width="156" height="190" />
+      <Character name="๔" resource="p2f3d4" width="156" height="190" />
+      <Character name="5" resource="p2f3d5" width="156" height="190" />
+      <Character name="٥" resource="p2f3d5" width="156" height="190" />
+      <Character name="۵" resource="p2f3d5" width="156" height="190" />
+      <Character name="५" resource="p2f3d5" width="156" height="190" />
+      <Character name="๕" resource="p2f3d5" width="156" height="190" />
+      <Character name="6" resource="p2f3d6" width="156" height="190" />
+      <Character name="٦" resource="p2f3d6" width="156" height="190" />
+      <Character name="۶" resource="p2f3d6" width="156" height="190" />
+      <Character name="६" resource="p2f3d6" width="156" height="190" />
+      <Character name="๖" resource="p2f3d6" width="156" height="190" />
+      <Character name="7" resource="p2f3d7" width="156" height="190" />
+      <Character name="٧" resource="p2f3d7" width="156" height="190" />
+      <Character name="۷" resource="p2f3d7" width="156" height="190" />
+      <Character name="७" resource="p2f3d7" width="156" height="190" />
+      <Character name="๗" resource="p2f3d7" width="156" height="190" />
+      <Character name="8" resource="p2f3d8" width="156" height="190" />
+      <Character name="٨" resource="p2f3d8" width="156" height="190" />
+      <Character name="۸" resource="p2f3d8" width="156" height="190" />
+      <Character name="८" resource="p2f3d8" width="156" height="190" />
+      <Character name="๘" resource="p2f3d8" width="156" height="190" />
+      <Character name="9" resource="p2f3d9" width="156" height="190" />
+      <Character name="٩" resource="p2f3d9" width="156" height="190" />
+      <Character name="۹" resource="p2f3d9" width="156" height="190" />
+      <Character name="९" resource="p2f3d9" width="156" height="190" />
+      <Character name="๙" resource="p2f3d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p2f4">
+      <Character name="0" resource="p2f4d0" width="156" height="190" />
+      <Character name="٠" resource="p2f4d0" width="156" height="190" />
+      <Character name="۰" resource="p2f4d0" width="156" height="190" />
+      <Character name="०" resource="p2f4d0" width="156" height="190" />
+      <Character name="๐" resource="p2f4d0" width="156" height="190" />
+      <Character name="1" resource="p2f4d1" width="156" height="190" />
+      <Character name="١" resource="p2f4d1" width="156" height="190" />
+      <Character name="۱" resource="p2f4d1" width="156" height="190" />
+      <Character name="१" resource="p2f4d1" width="156" height="190" />
+      <Character name="๑" resource="p2f4d1" width="156" height="190" />
+      <Character name="2" resource="p2f4d2" width="156" height="190" />
+      <Character name="٢" resource="p2f4d2" width="156" height="190" />
+      <Character name="۲" resource="p2f4d2" width="156" height="190" />
+      <Character name="२" resource="p2f4d2" width="156" height="190" />
+      <Character name="๒" resource="p2f4d2" width="156" height="190" />
+      <Character name="3" resource="p2f4d3" width="156" height="190" />
+      <Character name="٣" resource="p2f4d3" width="156" height="190" />
+      <Character name="۳" resource="p2f4d3" width="156" height="190" />
+      <Character name="३" resource="p2f4d3" width="156" height="190" />
+      <Character name="๓" resource="p2f4d3" width="156" height="190" />
+      <Character name="4" resource="p2f4d4" width="156" height="190" />
+      <Character name="٤" resource="p2f4d4" width="156" height="190" />
+      <Character name="۴" resource="p2f4d4" width="156" height="190" />
+      <Character name="४" resource="p2f4d4" width="156" height="190" />
+      <Character name="๔" resource="p2f4d4" width="156" height="190" />
+      <Character name="5" resource="p2f4d5" width="156" height="190" />
+      <Character name="٥" resource="p2f4d5" width="156" height="190" />
+      <Character name="۵" resource="p2f4d5" width="156" height="190" />
+      <Character name="५" resource="p2f4d5" width="156" height="190" />
+      <Character name="๕" resource="p2f4d5" width="156" height="190" />
+      <Character name="6" resource="p2f4d6" width="156" height="190" />
+      <Character name="٦" resource="p2f4d6" width="156" height="190" />
+      <Character name="۶" resource="p2f4d6" width="156" height="190" />
+      <Character name="६" resource="p2f4d6" width="156" height="190" />
+      <Character name="๖" resource="p2f4d6" width="156" height="190" />
+      <Character name="7" resource="p2f4d7" width="156" height="190" />
+      <Character name="٧" resource="p2f4d7" width="156" height="190" />
+      <Character name="۷" resource="p2f4d7" width="156" height="190" />
+      <Character name="७" resource="p2f4d7" width="156" height="190" />
+      <Character name="๗" resource="p2f4d7" width="156" height="190" />
+      <Character name="8" resource="p2f4d8" width="156" height="190" />
+      <Character name="٨" resource="p2f4d8" width="156" height="190" />
+      <Character name="۸" resource="p2f4d8" width="156" height="190" />
+      <Character name="८" resource="p2f4d8" width="156" height="190" />
+      <Character name="๘" resource="p2f4d8" width="156" height="190" />
+      <Character name="9" resource="p2f4d9" width="156" height="190" />
+      <Character name="٩" resource="p2f4d9" width="156" height="190" />
+      <Character name="۹" resource="p2f4d9" width="156" height="190" />
+      <Character name="९" resource="p2f4d9" width="156" height="190" />
+      <Character name="๙" resource="p2f4d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p2f5">
+      <Character name="0" resource="p2f5d0" width="156" height="190" />
+      <Character name="٠" resource="p2f5d0" width="156" height="190" />
+      <Character name="۰" resource="p2f5d0" width="156" height="190" />
+      <Character name="०" resource="p2f5d0" width="156" height="190" />
+      <Character name="๐" resource="p2f5d0" width="156" height="190" />
+      <Character name="1" resource="p2f5d1" width="156" height="190" />
+      <Character name="١" resource="p2f5d1" width="156" height="190" />
+      <Character name="۱" resource="p2f5d1" width="156" height="190" />
+      <Character name="१" resource="p2f5d1" width="156" height="190" />
+      <Character name="๑" resource="p2f5d1" width="156" height="190" />
+      <Character name="2" resource="p2f5d2" width="156" height="190" />
+      <Character name="٢" resource="p2f5d2" width="156" height="190" />
+      <Character name="۲" resource="p2f5d2" width="156" height="190" />
+      <Character name="२" resource="p2f5d2" width="156" height="190" />
+      <Character name="๒" resource="p2f5d2" width="156" height="190" />
+      <Character name="3" resource="p2f5d3" width="156" height="190" />
+      <Character name="٣" resource="p2f5d3" width="156" height="190" />
+      <Character name="۳" resource="p2f5d3" width="156" height="190" />
+      <Character name="३" resource="p2f5d3" width="156" height="190" />
+      <Character name="๓" resource="p2f5d3" width="156" height="190" />
+      <Character name="4" resource="p2f5d4" width="156" height="190" />
+      <Character name="٤" resource="p2f5d4" width="156" height="190" />
+      <Character name="۴" resource="p2f5d4" width="156" height="190" />
+      <Character name="४" resource="p2f5d4" width="156" height="190" />
+      <Character name="๔" resource="p2f5d4" width="156" height="190" />
+      <Character name="5" resource="p2f5d5" width="156" height="190" />
+      <Character name="٥" resource="p2f5d5" width="156" height="190" />
+      <Character name="۵" resource="p2f5d5" width="156" height="190" />
+      <Character name="५" resource="p2f5d5" width="156" height="190" />
+      <Character name="๕" resource="p2f5d5" width="156" height="190" />
+      <Character name="6" resource="p2f5d6" width="156" height="190" />
+      <Character name="٦" resource="p2f5d6" width="156" height="190" />
+      <Character name="۶" resource="p2f5d6" width="156" height="190" />
+      <Character name="६" resource="p2f5d6" width="156" height="190" />
+      <Character name="๖" resource="p2f5d6" width="156" height="190" />
+      <Character name="7" resource="p2f5d7" width="156" height="190" />
+      <Character name="٧" resource="p2f5d7" width="156" height="190" />
+      <Character name="۷" resource="p2f5d7" width="156" height="190" />
+      <Character name="७" resource="p2f5d7" width="156" height="190" />
+      <Character name="๗" resource="p2f5d7" width="156" height="190" />
+      <Character name="8" resource="p2f5d8" width="156" height="190" />
+      <Character name="٨" resource="p2f5d8" width="156" height="190" />
+      <Character name="۸" resource="p2f5d8" width="156" height="190" />
+      <Character name="८" resource="p2f5d8" width="156" height="190" />
+      <Character name="๘" resource="p2f5d8" width="156" height="190" />
+      <Character name="9" resource="p2f5d9" width="156" height="190" />
+      <Character name="٩" resource="p2f5d9" width="156" height="190" />
+      <Character name="۹" resource="p2f5d9" width="156" height="190" />
+      <Character name="९" resource="p2f5d9" width="156" height="190" />
+      <Character name="๙" resource="p2f5d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p2f6">
+      <Character name="0" resource="p2f6d0" width="156" height="190" />
+      <Character name="٠" resource="p2f6d0" width="156" height="190" />
+      <Character name="۰" resource="p2f6d0" width="156" height="190" />
+      <Character name="०" resource="p2f6d0" width="156" height="190" />
+      <Character name="๐" resource="p2f6d0" width="156" height="190" />
+      <Character name="1" resource="p2f6d1" width="156" height="190" />
+      <Character name="١" resource="p2f6d1" width="156" height="190" />
+      <Character name="۱" resource="p2f6d1" width="156" height="190" />
+      <Character name="१" resource="p2f6d1" width="156" height="190" />
+      <Character name="๑" resource="p2f6d1" width="156" height="190" />
+      <Character name="2" resource="p2f6d2" width="156" height="190" />
+      <Character name="٢" resource="p2f6d2" width="156" height="190" />
+      <Character name="۲" resource="p2f6d2" width="156" height="190" />
+      <Character name="२" resource="p2f6d2" width="156" height="190" />
+      <Character name="๒" resource="p2f6d2" width="156" height="190" />
+      <Character name="3" resource="p2f6d3" width="156" height="190" />
+      <Character name="٣" resource="p2f6d3" width="156" height="190" />
+      <Character name="۳" resource="p2f6d3" width="156" height="190" />
+      <Character name="३" resource="p2f6d3" width="156" height="190" />
+      <Character name="๓" resource="p2f6d3" width="156" height="190" />
+      <Character name="4" resource="p2f6d4" width="156" height="190" />
+      <Character name="٤" resource="p2f6d4" width="156" height="190" />
+      <Character name="۴" resource="p2f6d4" width="156" height="190" />
+      <Character name="४" resource="p2f6d4" width="156" height="190" />
+      <Character name="๔" resource="p2f6d4" width="156" height="190" />
+      <Character name="5" resource="p2f6d5" width="156" height="190" />
+      <Character name="٥" resource="p2f6d5" width="156" height="190" />
+      <Character name="۵" resource="p2f6d5" width="156" height="190" />
+      <Character name="५" resource="p2f6d5" width="156" height="190" />
+      <Character name="๕" resource="p2f6d5" width="156" height="190" />
+      <Character name="6" resource="p2f6d6" width="156" height="190" />
+      <Character name="٦" resource="p2f6d6" width="156" height="190" />
+      <Character name="۶" resource="p2f6d6" width="156" height="190" />
+      <Character name="६" resource="p2f6d6" width="156" height="190" />
+      <Character name="๖" resource="p2f6d6" width="156" height="190" />
+      <Character name="7" resource="p2f6d7" width="156" height="190" />
+      <Character name="٧" resource="p2f6d7" width="156" height="190" />
+      <Character name="۷" resource="p2f6d7" width="156" height="190" />
+      <Character name="७" resource="p2f6d7" width="156" height="190" />
+      <Character name="๗" resource="p2f6d7" width="156" height="190" />
+      <Character name="8" resource="p2f6d8" width="156" height="190" />
+      <Character name="٨" resource="p2f6d8" width="156" height="190" />
+      <Character name="۸" resource="p2f6d8" width="156" height="190" />
+      <Character name="८" resource="p2f6d8" width="156" height="190" />
+      <Character name="๘" resource="p2f6d8" width="156" height="190" />
+      <Character name="9" resource="p2f6d9" width="156" height="190" />
+      <Character name="٩" resource="p2f6d9" width="156" height="190" />
+      <Character name="۹" resource="p2f6d9" width="156" height="190" />
+      <Character name="९" resource="p2f6d9" width="156" height="190" />
+      <Character name="๙" resource="p2f6d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p3f0">
+      <Character name="0" resource="p3f0d0" width="156" height="190" />
+      <Character name="٠" resource="p3f0d0" width="156" height="190" />
+      <Character name="۰" resource="p3f0d0" width="156" height="190" />
+      <Character name="०" resource="p3f0d0" width="156" height="190" />
+      <Character name="๐" resource="p3f0d0" width="156" height="190" />
+      <Character name="1" resource="p3f0d1" width="156" height="190" />
+      <Character name="١" resource="p3f0d1" width="156" height="190" />
+      <Character name="۱" resource="p3f0d1" width="156" height="190" />
+      <Character name="१" resource="p3f0d1" width="156" height="190" />
+      <Character name="๑" resource="p3f0d1" width="156" height="190" />
+      <Character name="2" resource="p3f0d2" width="156" height="190" />
+      <Character name="٢" resource="p3f0d2" width="156" height="190" />
+      <Character name="۲" resource="p3f0d2" width="156" height="190" />
+      <Character name="२" resource="p3f0d2" width="156" height="190" />
+      <Character name="๒" resource="p3f0d2" width="156" height="190" />
+      <Character name="3" resource="p3f0d3" width="156" height="190" />
+      <Character name="٣" resource="p3f0d3" width="156" height="190" />
+      <Character name="۳" resource="p3f0d3" width="156" height="190" />
+      <Character name="३" resource="p3f0d3" width="156" height="190" />
+      <Character name="๓" resource="p3f0d3" width="156" height="190" />
+      <Character name="4" resource="p3f0d4" width="156" height="190" />
+      <Character name="٤" resource="p3f0d4" width="156" height="190" />
+      <Character name="۴" resource="p3f0d4" width="156" height="190" />
+      <Character name="४" resource="p3f0d4" width="156" height="190" />
+      <Character name="๔" resource="p3f0d4" width="156" height="190" />
+      <Character name="5" resource="p3f0d5" width="156" height="190" />
+      <Character name="٥" resource="p3f0d5" width="156" height="190" />
+      <Character name="۵" resource="p3f0d5" width="156" height="190" />
+      <Character name="५" resource="p3f0d5" width="156" height="190" />
+      <Character name="๕" resource="p3f0d5" width="156" height="190" />
+      <Character name="6" resource="p3f0d6" width="156" height="190" />
+      <Character name="٦" resource="p3f0d6" width="156" height="190" />
+      <Character name="۶" resource="p3f0d6" width="156" height="190" />
+      <Character name="६" resource="p3f0d6" width="156" height="190" />
+      <Character name="๖" resource="p3f0d6" width="156" height="190" />
+      <Character name="7" resource="p3f0d7" width="156" height="190" />
+      <Character name="٧" resource="p3f0d7" width="156" height="190" />
+      <Character name="۷" resource="p3f0d7" width="156" height="190" />
+      <Character name="७" resource="p3f0d7" width="156" height="190" />
+      <Character name="๗" resource="p3f0d7" width="156" height="190" />
+      <Character name="8" resource="p3f0d8" width="156" height="190" />
+      <Character name="٨" resource="p3f0d8" width="156" height="190" />
+      <Character name="۸" resource="p3f0d8" width="156" height="190" />
+      <Character name="८" resource="p3f0d8" width="156" height="190" />
+      <Character name="๘" resource="p3f0d8" width="156" height="190" />
+      <Character name="9" resource="p3f0d9" width="156" height="190" />
+      <Character name="٩" resource="p3f0d9" width="156" height="190" />
+      <Character name="۹" resource="p3f0d9" width="156" height="190" />
+      <Character name="९" resource="p3f0d9" width="156" height="190" />
+      <Character name="๙" resource="p3f0d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p3f1">
+      <Character name="0" resource="p3f1d0" width="156" height="190" />
+      <Character name="٠" resource="p3f1d0" width="156" height="190" />
+      <Character name="۰" resource="p3f1d0" width="156" height="190" />
+      <Character name="०" resource="p3f1d0" width="156" height="190" />
+      <Character name="๐" resource="p3f1d0" width="156" height="190" />
+      <Character name="1" resource="p3f1d1" width="156" height="190" />
+      <Character name="١" resource="p3f1d1" width="156" height="190" />
+      <Character name="۱" resource="p3f1d1" width="156" height="190" />
+      <Character name="१" resource="p3f1d1" width="156" height="190" />
+      <Character name="๑" resource="p3f1d1" width="156" height="190" />
+      <Character name="2" resource="p3f1d2" width="156" height="190" />
+      <Character name="٢" resource="p3f1d2" width="156" height="190" />
+      <Character name="۲" resource="p3f1d2" width="156" height="190" />
+      <Character name="२" resource="p3f1d2" width="156" height="190" />
+      <Character name="๒" resource="p3f1d2" width="156" height="190" />
+      <Character name="3" resource="p3f1d3" width="156" height="190" />
+      <Character name="٣" resource="p3f1d3" width="156" height="190" />
+      <Character name="۳" resource="p3f1d3" width="156" height="190" />
+      <Character name="३" resource="p3f1d3" width="156" height="190" />
+      <Character name="๓" resource="p3f1d3" width="156" height="190" />
+      <Character name="4" resource="p3f1d4" width="156" height="190" />
+      <Character name="٤" resource="p3f1d4" width="156" height="190" />
+      <Character name="۴" resource="p3f1d4" width="156" height="190" />
+      <Character name="४" resource="p3f1d4" width="156" height="190" />
+      <Character name="๔" resource="p3f1d4" width="156" height="190" />
+      <Character name="5" resource="p3f1d5" width="156" height="190" />
+      <Character name="٥" resource="p3f1d5" width="156" height="190" />
+      <Character name="۵" resource="p3f1d5" width="156" height="190" />
+      <Character name="५" resource="p3f1d5" width="156" height="190" />
+      <Character name="๕" resource="p3f1d5" width="156" height="190" />
+      <Character name="6" resource="p3f1d6" width="156" height="190" />
+      <Character name="٦" resource="p3f1d6" width="156" height="190" />
+      <Character name="۶" resource="p3f1d6" width="156" height="190" />
+      <Character name="६" resource="p3f1d6" width="156" height="190" />
+      <Character name="๖" resource="p3f1d6" width="156" height="190" />
+      <Character name="7" resource="p3f1d7" width="156" height="190" />
+      <Character name="٧" resource="p3f1d7" width="156" height="190" />
+      <Character name="۷" resource="p3f1d7" width="156" height="190" />
+      <Character name="७" resource="p3f1d7" width="156" height="190" />
+      <Character name="๗" resource="p3f1d7" width="156" height="190" />
+      <Character name="8" resource="p3f1d8" width="156" height="190" />
+      <Character name="٨" resource="p3f1d8" width="156" height="190" />
+      <Character name="۸" resource="p3f1d8" width="156" height="190" />
+      <Character name="८" resource="p3f1d8" width="156" height="190" />
+      <Character name="๘" resource="p3f1d8" width="156" height="190" />
+      <Character name="9" resource="p3f1d9" width="156" height="190" />
+      <Character name="٩" resource="p3f1d9" width="156" height="190" />
+      <Character name="۹" resource="p3f1d9" width="156" height="190" />
+      <Character name="९" resource="p3f1d9" width="156" height="190" />
+      <Character name="๙" resource="p3f1d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p3f2">
+      <Character name="0" resource="p3f2d0" width="156" height="190" />
+      <Character name="٠" resource="p3f2d0" width="156" height="190" />
+      <Character name="۰" resource="p3f2d0" width="156" height="190" />
+      <Character name="०" resource="p3f2d0" width="156" height="190" />
+      <Character name="๐" resource="p3f2d0" width="156" height="190" />
+      <Character name="1" resource="p3f2d1" width="156" height="190" />
+      <Character name="١" resource="p3f2d1" width="156" height="190" />
+      <Character name="۱" resource="p3f2d1" width="156" height="190" />
+      <Character name="१" resource="p3f2d1" width="156" height="190" />
+      <Character name="๑" resource="p3f2d1" width="156" height="190" />
+      <Character name="2" resource="p3f2d2" width="156" height="190" />
+      <Character name="٢" resource="p3f2d2" width="156" height="190" />
+      <Character name="۲" resource="p3f2d2" width="156" height="190" />
+      <Character name="२" resource="p3f2d2" width="156" height="190" />
+      <Character name="๒" resource="p3f2d2" width="156" height="190" />
+      <Character name="3" resource="p3f2d3" width="156" height="190" />
+      <Character name="٣" resource="p3f2d3" width="156" height="190" />
+      <Character name="۳" resource="p3f2d3" width="156" height="190" />
+      <Character name="३" resource="p3f2d3" width="156" height="190" />
+      <Character name="๓" resource="p3f2d3" width="156" height="190" />
+      <Character name="4" resource="p3f2d4" width="156" height="190" />
+      <Character name="٤" resource="p3f2d4" width="156" height="190" />
+      <Character name="۴" resource="p3f2d4" width="156" height="190" />
+      <Character name="४" resource="p3f2d4" width="156" height="190" />
+      <Character name="๔" resource="p3f2d4" width="156" height="190" />
+      <Character name="5" resource="p3f2d5" width="156" height="190" />
+      <Character name="٥" resource="p3f2d5" width="156" height="190" />
+      <Character name="۵" resource="p3f2d5" width="156" height="190" />
+      <Character name="५" resource="p3f2d5" width="156" height="190" />
+      <Character name="๕" resource="p3f2d5" width="156" height="190" />
+      <Character name="6" resource="p3f2d6" width="156" height="190" />
+      <Character name="٦" resource="p3f2d6" width="156" height="190" />
+      <Character name="۶" resource="p3f2d6" width="156" height="190" />
+      <Character name="६" resource="p3f2d6" width="156" height="190" />
+      <Character name="๖" resource="p3f2d6" width="156" height="190" />
+      <Character name="7" resource="p3f2d7" width="156" height="190" />
+      <Character name="٧" resource="p3f2d7" width="156" height="190" />
+      <Character name="۷" resource="p3f2d7" width="156" height="190" />
+      <Character name="७" resource="p3f2d7" width="156" height="190" />
+      <Character name="๗" resource="p3f2d7" width="156" height="190" />
+      <Character name="8" resource="p3f2d8" width="156" height="190" />
+      <Character name="٨" resource="p3f2d8" width="156" height="190" />
+      <Character name="۸" resource="p3f2d8" width="156" height="190" />
+      <Character name="८" resource="p3f2d8" width="156" height="190" />
+      <Character name="๘" resource="p3f2d8" width="156" height="190" />
+      <Character name="9" resource="p3f2d9" width="156" height="190" />
+      <Character name="٩" resource="p3f2d9" width="156" height="190" />
+      <Character name="۹" resource="p3f2d9" width="156" height="190" />
+      <Character name="९" resource="p3f2d9" width="156" height="190" />
+      <Character name="๙" resource="p3f2d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p3f3">
+      <Character name="0" resource="p3f3d0" width="156" height="190" />
+      <Character name="٠" resource="p3f3d0" width="156" height="190" />
+      <Character name="۰" resource="p3f3d0" width="156" height="190" />
+      <Character name="०" resource="p3f3d0" width="156" height="190" />
+      <Character name="๐" resource="p3f3d0" width="156" height="190" />
+      <Character name="1" resource="p3f3d1" width="156" height="190" />
+      <Character name="١" resource="p3f3d1" width="156" height="190" />
+      <Character name="۱" resource="p3f3d1" width="156" height="190" />
+      <Character name="१" resource="p3f3d1" width="156" height="190" />
+      <Character name="๑" resource="p3f3d1" width="156" height="190" />
+      <Character name="2" resource="p3f3d2" width="156" height="190" />
+      <Character name="٢" resource="p3f3d2" width="156" height="190" />
+      <Character name="۲" resource="p3f3d2" width="156" height="190" />
+      <Character name="२" resource="p3f3d2" width="156" height="190" />
+      <Character name="๒" resource="p3f3d2" width="156" height="190" />
+      <Character name="3" resource="p3f3d3" width="156" height="190" />
+      <Character name="٣" resource="p3f3d3" width="156" height="190" />
+      <Character name="۳" resource="p3f3d3" width="156" height="190" />
+      <Character name="३" resource="p3f3d3" width="156" height="190" />
+      <Character name="๓" resource="p3f3d3" width="156" height="190" />
+      <Character name="4" resource="p3f3d4" width="156" height="190" />
+      <Character name="٤" resource="p3f3d4" width="156" height="190" />
+      <Character name="۴" resource="p3f3d4" width="156" height="190" />
+      <Character name="४" resource="p3f3d4" width="156" height="190" />
+      <Character name="๔" resource="p3f3d4" width="156" height="190" />
+      <Character name="5" resource="p3f3d5" width="156" height="190" />
+      <Character name="٥" resource="p3f3d5" width="156" height="190" />
+      <Character name="۵" resource="p3f3d5" width="156" height="190" />
+      <Character name="५" resource="p3f3d5" width="156" height="190" />
+      <Character name="๕" resource="p3f3d5" width="156" height="190" />
+      <Character name="6" resource="p3f3d6" width="156" height="190" />
+      <Character name="٦" resource="p3f3d6" width="156" height="190" />
+      <Character name="۶" resource="p3f3d6" width="156" height="190" />
+      <Character name="६" resource="p3f3d6" width="156" height="190" />
+      <Character name="๖" resource="p3f3d6" width="156" height="190" />
+      <Character name="7" resource="p3f3d7" width="156" height="190" />
+      <Character name="٧" resource="p3f3d7" width="156" height="190" />
+      <Character name="۷" resource="p3f3d7" width="156" height="190" />
+      <Character name="७" resource="p3f3d7" width="156" height="190" />
+      <Character name="๗" resource="p3f3d7" width="156" height="190" />
+      <Character name="8" resource="p3f3d8" width="156" height="190" />
+      <Character name="٨" resource="p3f3d8" width="156" height="190" />
+      <Character name="۸" resource="p3f3d8" width="156" height="190" />
+      <Character name="८" resource="p3f3d8" width="156" height="190" />
+      <Character name="๘" resource="p3f3d8" width="156" height="190" />
+      <Character name="9" resource="p3f3d9" width="156" height="190" />
+      <Character name="٩" resource="p3f3d9" width="156" height="190" />
+      <Character name="۹" resource="p3f3d9" width="156" height="190" />
+      <Character name="९" resource="p3f3d9" width="156" height="190" />
+      <Character name="๙" resource="p3f3d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p3f4">
+      <Character name="0" resource="p3f4d0" width="156" height="190" />
+      <Character name="٠" resource="p3f4d0" width="156" height="190" />
+      <Character name="۰" resource="p3f4d0" width="156" height="190" />
+      <Character name="०" resource="p3f4d0" width="156" height="190" />
+      <Character name="๐" resource="p3f4d0" width="156" height="190" />
+      <Character name="1" resource="p3f4d1" width="156" height="190" />
+      <Character name="١" resource="p3f4d1" width="156" height="190" />
+      <Character name="۱" resource="p3f4d1" width="156" height="190" />
+      <Character name="१" resource="p3f4d1" width="156" height="190" />
+      <Character name="๑" resource="p3f4d1" width="156" height="190" />
+      <Character name="2" resource="p3f4d2" width="156" height="190" />
+      <Character name="٢" resource="p3f4d2" width="156" height="190" />
+      <Character name="۲" resource="p3f4d2" width="156" height="190" />
+      <Character name="२" resource="p3f4d2" width="156" height="190" />
+      <Character name="๒" resource="p3f4d2" width="156" height="190" />
+      <Character name="3" resource="p3f4d3" width="156" height="190" />
+      <Character name="٣" resource="p3f4d3" width="156" height="190" />
+      <Character name="۳" resource="p3f4d3" width="156" height="190" />
+      <Character name="३" resource="p3f4d3" width="156" height="190" />
+      <Character name="๓" resource="p3f4d3" width="156" height="190" />
+      <Character name="4" resource="p3f4d4" width="156" height="190" />
+      <Character name="٤" resource="p3f4d4" width="156" height="190" />
+      <Character name="۴" resource="p3f4d4" width="156" height="190" />
+      <Character name="४" resource="p3f4d4" width="156" height="190" />
+      <Character name="๔" resource="p3f4d4" width="156" height="190" />
+      <Character name="5" resource="p3f4d5" width="156" height="190" />
+      <Character name="٥" resource="p3f4d5" width="156" height="190" />
+      <Character name="۵" resource="p3f4d5" width="156" height="190" />
+      <Character name="५" resource="p3f4d5" width="156" height="190" />
+      <Character name="๕" resource="p3f4d5" width="156" height="190" />
+      <Character name="6" resource="p3f4d6" width="156" height="190" />
+      <Character name="٦" resource="p3f4d6" width="156" height="190" />
+      <Character name="۶" resource="p3f4d6" width="156" height="190" />
+      <Character name="६" resource="p3f4d6" width="156" height="190" />
+      <Character name="๖" resource="p3f4d6" width="156" height="190" />
+      <Character name="7" resource="p3f4d7" width="156" height="190" />
+      <Character name="٧" resource="p3f4d7" width="156" height="190" />
+      <Character name="۷" resource="p3f4d7" width="156" height="190" />
+      <Character name="७" resource="p3f4d7" width="156" height="190" />
+      <Character name="๗" resource="p3f4d7" width="156" height="190" />
+      <Character name="8" resource="p3f4d8" width="156" height="190" />
+      <Character name="٨" resource="p3f4d8" width="156" height="190" />
+      <Character name="۸" resource="p3f4d8" width="156" height="190" />
+      <Character name="८" resource="p3f4d8" width="156" height="190" />
+      <Character name="๘" resource="p3f4d8" width="156" height="190" />
+      <Character name="9" resource="p3f4d9" width="156" height="190" />
+      <Character name="٩" resource="p3f4d9" width="156" height="190" />
+      <Character name="۹" resource="p3f4d9" width="156" height="190" />
+      <Character name="९" resource="p3f4d9" width="156" height="190" />
+      <Character name="๙" resource="p3f4d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p3f5">
+      <Character name="0" resource="p3f5d0" width="156" height="190" />
+      <Character name="٠" resource="p3f5d0" width="156" height="190" />
+      <Character name="۰" resource="p3f5d0" width="156" height="190" />
+      <Character name="०" resource="p3f5d0" width="156" height="190" />
+      <Character name="๐" resource="p3f5d0" width="156" height="190" />
+      <Character name="1" resource="p3f5d1" width="156" height="190" />
+      <Character name="١" resource="p3f5d1" width="156" height="190" />
+      <Character name="۱" resource="p3f5d1" width="156" height="190" />
+      <Character name="१" resource="p3f5d1" width="156" height="190" />
+      <Character name="๑" resource="p3f5d1" width="156" height="190" />
+      <Character name="2" resource="p3f5d2" width="156" height="190" />
+      <Character name="٢" resource="p3f5d2" width="156" height="190" />
+      <Character name="۲" resource="p3f5d2" width="156" height="190" />
+      <Character name="२" resource="p3f5d2" width="156" height="190" />
+      <Character name="๒" resource="p3f5d2" width="156" height="190" />
+      <Character name="3" resource="p3f5d3" width="156" height="190" />
+      <Character name="٣" resource="p3f5d3" width="156" height="190" />
+      <Character name="۳" resource="p3f5d3" width="156" height="190" />
+      <Character name="३" resource="p3f5d3" width="156" height="190" />
+      <Character name="๓" resource="p3f5d3" width="156" height="190" />
+      <Character name="4" resource="p3f5d4" width="156" height="190" />
+      <Character name="٤" resource="p3f5d4" width="156" height="190" />
+      <Character name="۴" resource="p3f5d4" width="156" height="190" />
+      <Character name="४" resource="p3f5d4" width="156" height="190" />
+      <Character name="๔" resource="p3f5d4" width="156" height="190" />
+      <Character name="5" resource="p3f5d5" width="156" height="190" />
+      <Character name="٥" resource="p3f5d5" width="156" height="190" />
+      <Character name="۵" resource="p3f5d5" width="156" height="190" />
+      <Character name="५" resource="p3f5d5" width="156" height="190" />
+      <Character name="๕" resource="p3f5d5" width="156" height="190" />
+      <Character name="6" resource="p3f5d6" width="156" height="190" />
+      <Character name="٦" resource="p3f5d6" width="156" height="190" />
+      <Character name="۶" resource="p3f5d6" width="156" height="190" />
+      <Character name="६" resource="p3f5d6" width="156" height="190" />
+      <Character name="๖" resource="p3f5d6" width="156" height="190" />
+      <Character name="7" resource="p3f5d7" width="156" height="190" />
+      <Character name="٧" resource="p3f5d7" width="156" height="190" />
+      <Character name="۷" resource="p3f5d7" width="156" height="190" />
+      <Character name="७" resource="p3f5d7" width="156" height="190" />
+      <Character name="๗" resource="p3f5d7" width="156" height="190" />
+      <Character name="8" resource="p3f5d8" width="156" height="190" />
+      <Character name="٨" resource="p3f5d8" width="156" height="190" />
+      <Character name="۸" resource="p3f5d8" width="156" height="190" />
+      <Character name="८" resource="p3f5d8" width="156" height="190" />
+      <Character name="๘" resource="p3f5d8" width="156" height="190" />
+      <Character name="9" resource="p3f5d9" width="156" height="190" />
+      <Character name="٩" resource="p3f5d9" width="156" height="190" />
+      <Character name="۹" resource="p3f5d9" width="156" height="190" />
+      <Character name="९" resource="p3f5d9" width="156" height="190" />
+      <Character name="๙" resource="p3f5d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p3f6">
+      <Character name="0" resource="p3f6d0" width="156" height="190" />
+      <Character name="٠" resource="p3f6d0" width="156" height="190" />
+      <Character name="۰" resource="p3f6d0" width="156" height="190" />
+      <Character name="०" resource="p3f6d0" width="156" height="190" />
+      <Character name="๐" resource="p3f6d0" width="156" height="190" />
+      <Character name="1" resource="p3f6d1" width="156" height="190" />
+      <Character name="١" resource="p3f6d1" width="156" height="190" />
+      <Character name="۱" resource="p3f6d1" width="156" height="190" />
+      <Character name="१" resource="p3f6d1" width="156" height="190" />
+      <Character name="๑" resource="p3f6d1" width="156" height="190" />
+      <Character name="2" resource="p3f6d2" width="156" height="190" />
+      <Character name="٢" resource="p3f6d2" width="156" height="190" />
+      <Character name="۲" resource="p3f6d2" width="156" height="190" />
+      <Character name="२" resource="p3f6d2" width="156" height="190" />
+      <Character name="๒" resource="p3f6d2" width="156" height="190" />
+      <Character name="3" resource="p3f6d3" width="156" height="190" />
+      <Character name="٣" resource="p3f6d3" width="156" height="190" />
+      <Character name="۳" resource="p3f6d3" width="156" height="190" />
+      <Character name="३" resource="p3f6d3" width="156" height="190" />
+      <Character name="๓" resource="p3f6d3" width="156" height="190" />
+      <Character name="4" resource="p3f6d4" width="156" height="190" />
+      <Character name="٤" resource="p3f6d4" width="156" height="190" />
+      <Character name="۴" resource="p3f6d4" width="156" height="190" />
+      <Character name="४" resource="p3f6d4" width="156" height="190" />
+      <Character name="๔" resource="p3f6d4" width="156" height="190" />
+      <Character name="5" resource="p3f6d5" width="156" height="190" />
+      <Character name="٥" resource="p3f6d5" width="156" height="190" />
+      <Character name="۵" resource="p3f6d5" width="156" height="190" />
+      <Character name="५" resource="p3f6d5" width="156" height="190" />
+      <Character name="๕" resource="p3f6d5" width="156" height="190" />
+      <Character name="6" resource="p3f6d6" width="156" height="190" />
+      <Character name="٦" resource="p3f6d6" width="156" height="190" />
+      <Character name="۶" resource="p3f6d6" width="156" height="190" />
+      <Character name="६" resource="p3f6d6" width="156" height="190" />
+      <Character name="๖" resource="p3f6d6" width="156" height="190" />
+      <Character name="7" resource="p3f6d7" width="156" height="190" />
+      <Character name="٧" resource="p3f6d7" width="156" height="190" />
+      <Character name="۷" resource="p3f6d7" width="156" height="190" />
+      <Character name="७" resource="p3f6d7" width="156" height="190" />
+      <Character name="๗" resource="p3f6d7" width="156" height="190" />
+      <Character name="8" resource="p3f6d8" width="156" height="190" />
+      <Character name="٨" resource="p3f6d8" width="156" height="190" />
+      <Character name="۸" resource="p3f6d8" width="156" height="190" />
+      <Character name="८" resource="p3f6d8" width="156" height="190" />
+      <Character name="๘" resource="p3f6d8" width="156" height="190" />
+      <Character name="9" resource="p3f6d9" width="156" height="190" />
+      <Character name="٩" resource="p3f6d9" width="156" height="190" />
+      <Character name="۹" resource="p3f6d9" width="156" height="190" />
+      <Character name="९" resource="p3f6d9" width="156" height="190" />
+      <Character name="๙" resource="p3f6d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p4f0">
+      <Character name="0" resource="p4f0d0" width="156" height="190" />
+      <Character name="٠" resource="p4f0d0" width="156" height="190" />
+      <Character name="۰" resource="p4f0d0" width="156" height="190" />
+      <Character name="०" resource="p4f0d0" width="156" height="190" />
+      <Character name="๐" resource="p4f0d0" width="156" height="190" />
+      <Character name="1" resource="p4f0d1" width="156" height="190" />
+      <Character name="١" resource="p4f0d1" width="156" height="190" />
+      <Character name="۱" resource="p4f0d1" width="156" height="190" />
+      <Character name="१" resource="p4f0d1" width="156" height="190" />
+      <Character name="๑" resource="p4f0d1" width="156" height="190" />
+      <Character name="2" resource="p4f0d2" width="156" height="190" />
+      <Character name="٢" resource="p4f0d2" width="156" height="190" />
+      <Character name="۲" resource="p4f0d2" width="156" height="190" />
+      <Character name="२" resource="p4f0d2" width="156" height="190" />
+      <Character name="๒" resource="p4f0d2" width="156" height="190" />
+      <Character name="3" resource="p4f0d3" width="156" height="190" />
+      <Character name="٣" resource="p4f0d3" width="156" height="190" />
+      <Character name="۳" resource="p4f0d3" width="156" height="190" />
+      <Character name="३" resource="p4f0d3" width="156" height="190" />
+      <Character name="๓" resource="p4f0d3" width="156" height="190" />
+      <Character name="4" resource="p4f0d4" width="156" height="190" />
+      <Character name="٤" resource="p4f0d4" width="156" height="190" />
+      <Character name="۴" resource="p4f0d4" width="156" height="190" />
+      <Character name="४" resource="p4f0d4" width="156" height="190" />
+      <Character name="๔" resource="p4f0d4" width="156" height="190" />
+      <Character name="5" resource="p4f0d5" width="156" height="190" />
+      <Character name="٥" resource="p4f0d5" width="156" height="190" />
+      <Character name="۵" resource="p4f0d5" width="156" height="190" />
+      <Character name="५" resource="p4f0d5" width="156" height="190" />
+      <Character name="๕" resource="p4f0d5" width="156" height="190" />
+      <Character name="6" resource="p4f0d6" width="156" height="190" />
+      <Character name="٦" resource="p4f0d6" width="156" height="190" />
+      <Character name="۶" resource="p4f0d6" width="156" height="190" />
+      <Character name="६" resource="p4f0d6" width="156" height="190" />
+      <Character name="๖" resource="p4f0d6" width="156" height="190" />
+      <Character name="7" resource="p4f0d7" width="156" height="190" />
+      <Character name="٧" resource="p4f0d7" width="156" height="190" />
+      <Character name="۷" resource="p4f0d7" width="156" height="190" />
+      <Character name="७" resource="p4f0d7" width="156" height="190" />
+      <Character name="๗" resource="p4f0d7" width="156" height="190" />
+      <Character name="8" resource="p4f0d8" width="156" height="190" />
+      <Character name="٨" resource="p4f0d8" width="156" height="190" />
+      <Character name="۸" resource="p4f0d8" width="156" height="190" />
+      <Character name="८" resource="p4f0d8" width="156" height="190" />
+      <Character name="๘" resource="p4f0d8" width="156" height="190" />
+      <Character name="9" resource="p4f0d9" width="156" height="190" />
+      <Character name="٩" resource="p4f0d9" width="156" height="190" />
+      <Character name="۹" resource="p4f0d9" width="156" height="190" />
+      <Character name="९" resource="p4f0d9" width="156" height="190" />
+      <Character name="๙" resource="p4f0d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p4f1">
+      <Character name="0" resource="p4f1d0" width="156" height="190" />
+      <Character name="٠" resource="p4f1d0" width="156" height="190" />
+      <Character name="۰" resource="p4f1d0" width="156" height="190" />
+      <Character name="०" resource="p4f1d0" width="156" height="190" />
+      <Character name="๐" resource="p4f1d0" width="156" height="190" />
+      <Character name="1" resource="p4f1d1" width="156" height="190" />
+      <Character name="١" resource="p4f1d1" width="156" height="190" />
+      <Character name="۱" resource="p4f1d1" width="156" height="190" />
+      <Character name="१" resource="p4f1d1" width="156" height="190" />
+      <Character name="๑" resource="p4f1d1" width="156" height="190" />
+      <Character name="2" resource="p4f1d2" width="156" height="190" />
+      <Character name="٢" resource="p4f1d2" width="156" height="190" />
+      <Character name="۲" resource="p4f1d2" width="156" height="190" />
+      <Character name="२" resource="p4f1d2" width="156" height="190" />
+      <Character name="๒" resource="p4f1d2" width="156" height="190" />
+      <Character name="3" resource="p4f1d3" width="156" height="190" />
+      <Character name="٣" resource="p4f1d3" width="156" height="190" />
+      <Character name="۳" resource="p4f1d3" width="156" height="190" />
+      <Character name="३" resource="p4f1d3" width="156" height="190" />
+      <Character name="๓" resource="p4f1d3" width="156" height="190" />
+      <Character name="4" resource="p4f1d4" width="156" height="190" />
+      <Character name="٤" resource="p4f1d4" width="156" height="190" />
+      <Character name="۴" resource="p4f1d4" width="156" height="190" />
+      <Character name="४" resource="p4f1d4" width="156" height="190" />
+      <Character name="๔" resource="p4f1d4" width="156" height="190" />
+      <Character name="5" resource="p4f1d5" width="156" height="190" />
+      <Character name="٥" resource="p4f1d5" width="156" height="190" />
+      <Character name="۵" resource="p4f1d5" width="156" height="190" />
+      <Character name="५" resource="p4f1d5" width="156" height="190" />
+      <Character name="๕" resource="p4f1d5" width="156" height="190" />
+      <Character name="6" resource="p4f1d6" width="156" height="190" />
+      <Character name="٦" resource="p4f1d6" width="156" height="190" />
+      <Character name="۶" resource="p4f1d6" width="156" height="190" />
+      <Character name="६" resource="p4f1d6" width="156" height="190" />
+      <Character name="๖" resource="p4f1d6" width="156" height="190" />
+      <Character name="7" resource="p4f1d7" width="156" height="190" />
+      <Character name="٧" resource="p4f1d7" width="156" height="190" />
+      <Character name="۷" resource="p4f1d7" width="156" height="190" />
+      <Character name="७" resource="p4f1d7" width="156" height="190" />
+      <Character name="๗" resource="p4f1d7" width="156" height="190" />
+      <Character name="8" resource="p4f1d8" width="156" height="190" />
+      <Character name="٨" resource="p4f1d8" width="156" height="190" />
+      <Character name="۸" resource="p4f1d8" width="156" height="190" />
+      <Character name="८" resource="p4f1d8" width="156" height="190" />
+      <Character name="๘" resource="p4f1d8" width="156" height="190" />
+      <Character name="9" resource="p4f1d9" width="156" height="190" />
+      <Character name="٩" resource="p4f1d9" width="156" height="190" />
+      <Character name="۹" resource="p4f1d9" width="156" height="190" />
+      <Character name="९" resource="p4f1d9" width="156" height="190" />
+      <Character name="๙" resource="p4f1d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p4f2">
+      <Character name="0" resource="p4f2d0" width="156" height="190" />
+      <Character name="٠" resource="p4f2d0" width="156" height="190" />
+      <Character name="۰" resource="p4f2d0" width="156" height="190" />
+      <Character name="०" resource="p4f2d0" width="156" height="190" />
+      <Character name="๐" resource="p4f2d0" width="156" height="190" />
+      <Character name="1" resource="p4f2d1" width="156" height="190" />
+      <Character name="١" resource="p4f2d1" width="156" height="190" />
+      <Character name="۱" resource="p4f2d1" width="156" height="190" />
+      <Character name="१" resource="p4f2d1" width="156" height="190" />
+      <Character name="๑" resource="p4f2d1" width="156" height="190" />
+      <Character name="2" resource="p4f2d2" width="156" height="190" />
+      <Character name="٢" resource="p4f2d2" width="156" height="190" />
+      <Character name="۲" resource="p4f2d2" width="156" height="190" />
+      <Character name="२" resource="p4f2d2" width="156" height="190" />
+      <Character name="๒" resource="p4f2d2" width="156" height="190" />
+      <Character name="3" resource="p4f2d3" width="156" height="190" />
+      <Character name="٣" resource="p4f2d3" width="156" height="190" />
+      <Character name="۳" resource="p4f2d3" width="156" height="190" />
+      <Character name="३" resource="p4f2d3" width="156" height="190" />
+      <Character name="๓" resource="p4f2d3" width="156" height="190" />
+      <Character name="4" resource="p4f2d4" width="156" height="190" />
+      <Character name="٤" resource="p4f2d4" width="156" height="190" />
+      <Character name="۴" resource="p4f2d4" width="156" height="190" />
+      <Character name="४" resource="p4f2d4" width="156" height="190" />
+      <Character name="๔" resource="p4f2d4" width="156" height="190" />
+      <Character name="5" resource="p4f2d5" width="156" height="190" />
+      <Character name="٥" resource="p4f2d5" width="156" height="190" />
+      <Character name="۵" resource="p4f2d5" width="156" height="190" />
+      <Character name="५" resource="p4f2d5" width="156" height="190" />
+      <Character name="๕" resource="p4f2d5" width="156" height="190" />
+      <Character name="6" resource="p4f2d6" width="156" height="190" />
+      <Character name="٦" resource="p4f2d6" width="156" height="190" />
+      <Character name="۶" resource="p4f2d6" width="156" height="190" />
+      <Character name="६" resource="p4f2d6" width="156" height="190" />
+      <Character name="๖" resource="p4f2d6" width="156" height="190" />
+      <Character name="7" resource="p4f2d7" width="156" height="190" />
+      <Character name="٧" resource="p4f2d7" width="156" height="190" />
+      <Character name="۷" resource="p4f2d7" width="156" height="190" />
+      <Character name="७" resource="p4f2d7" width="156" height="190" />
+      <Character name="๗" resource="p4f2d7" width="156" height="190" />
+      <Character name="8" resource="p4f2d8" width="156" height="190" />
+      <Character name="٨" resource="p4f2d8" width="156" height="190" />
+      <Character name="۸" resource="p4f2d8" width="156" height="190" />
+      <Character name="८" resource="p4f2d8" width="156" height="190" />
+      <Character name="๘" resource="p4f2d8" width="156" height="190" />
+      <Character name="9" resource="p4f2d9" width="156" height="190" />
+      <Character name="٩" resource="p4f2d9" width="156" height="190" />
+      <Character name="۹" resource="p4f2d9" width="156" height="190" />
+      <Character name="९" resource="p4f2d9" width="156" height="190" />
+      <Character name="๙" resource="p4f2d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p4f3">
+      <Character name="0" resource="p4f3d0" width="156" height="190" />
+      <Character name="٠" resource="p4f3d0" width="156" height="190" />
+      <Character name="۰" resource="p4f3d0" width="156" height="190" />
+      <Character name="०" resource="p4f3d0" width="156" height="190" />
+      <Character name="๐" resource="p4f3d0" width="156" height="190" />
+      <Character name="1" resource="p4f3d1" width="156" height="190" />
+      <Character name="١" resource="p4f3d1" width="156" height="190" />
+      <Character name="۱" resource="p4f3d1" width="156" height="190" />
+      <Character name="१" resource="p4f3d1" width="156" height="190" />
+      <Character name="๑" resource="p4f3d1" width="156" height="190" />
+      <Character name="2" resource="p4f3d2" width="156" height="190" />
+      <Character name="٢" resource="p4f3d2" width="156" height="190" />
+      <Character name="۲" resource="p4f3d2" width="156" height="190" />
+      <Character name="२" resource="p4f3d2" width="156" height="190" />
+      <Character name="๒" resource="p4f3d2" width="156" height="190" />
+      <Character name="3" resource="p4f3d3" width="156" height="190" />
+      <Character name="٣" resource="p4f3d3" width="156" height="190" />
+      <Character name="۳" resource="p4f3d3" width="156" height="190" />
+      <Character name="३" resource="p4f3d3" width="156" height="190" />
+      <Character name="๓" resource="p4f3d3" width="156" height="190" />
+      <Character name="4" resource="p4f3d4" width="156" height="190" />
+      <Character name="٤" resource="p4f3d4" width="156" height="190" />
+      <Character name="۴" resource="p4f3d4" width="156" height="190" />
+      <Character name="४" resource="p4f3d4" width="156" height="190" />
+      <Character name="๔" resource="p4f3d4" width="156" height="190" />
+      <Character name="5" resource="p4f3d5" width="156" height="190" />
+      <Character name="٥" resource="p4f3d5" width="156" height="190" />
+      <Character name="۵" resource="p4f3d5" width="156" height="190" />
+      <Character name="५" resource="p4f3d5" width="156" height="190" />
+      <Character name="๕" resource="p4f3d5" width="156" height="190" />
+      <Character name="6" resource="p4f3d6" width="156" height="190" />
+      <Character name="٦" resource="p4f3d6" width="156" height="190" />
+      <Character name="۶" resource="p4f3d6" width="156" height="190" />
+      <Character name="६" resource="p4f3d6" width="156" height="190" />
+      <Character name="๖" resource="p4f3d6" width="156" height="190" />
+      <Character name="7" resource="p4f3d7" width="156" height="190" />
+      <Character name="٧" resource="p4f3d7" width="156" height="190" />
+      <Character name="۷" resource="p4f3d7" width="156" height="190" />
+      <Character name="७" resource="p4f3d7" width="156" height="190" />
+      <Character name="๗" resource="p4f3d7" width="156" height="190" />
+      <Character name="8" resource="p4f3d8" width="156" height="190" />
+      <Character name="٨" resource="p4f3d8" width="156" height="190" />
+      <Character name="۸" resource="p4f3d8" width="156" height="190" />
+      <Character name="८" resource="p4f3d8" width="156" height="190" />
+      <Character name="๘" resource="p4f3d8" width="156" height="190" />
+      <Character name="9" resource="p4f3d9" width="156" height="190" />
+      <Character name="٩" resource="p4f3d9" width="156" height="190" />
+      <Character name="۹" resource="p4f3d9" width="156" height="190" />
+      <Character name="९" resource="p4f3d9" width="156" height="190" />
+      <Character name="๙" resource="p4f3d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p4f4">
+      <Character name="0" resource="p4f4d0" width="156" height="190" />
+      <Character name="٠" resource="p4f4d0" width="156" height="190" />
+      <Character name="۰" resource="p4f4d0" width="156" height="190" />
+      <Character name="०" resource="p4f4d0" width="156" height="190" />
+      <Character name="๐" resource="p4f4d0" width="156" height="190" />
+      <Character name="1" resource="p4f4d1" width="156" height="190" />
+      <Character name="١" resource="p4f4d1" width="156" height="190" />
+      <Character name="۱" resource="p4f4d1" width="156" height="190" />
+      <Character name="१" resource="p4f4d1" width="156" height="190" />
+      <Character name="๑" resource="p4f4d1" width="156" height="190" />
+      <Character name="2" resource="p4f4d2" width="156" height="190" />
+      <Character name="٢" resource="p4f4d2" width="156" height="190" />
+      <Character name="۲" resource="p4f4d2" width="156" height="190" />
+      <Character name="२" resource="p4f4d2" width="156" height="190" />
+      <Character name="๒" resource="p4f4d2" width="156" height="190" />
+      <Character name="3" resource="p4f4d3" width="156" height="190" />
+      <Character name="٣" resource="p4f4d3" width="156" height="190" />
+      <Character name="۳" resource="p4f4d3" width="156" height="190" />
+      <Character name="३" resource="p4f4d3" width="156" height="190" />
+      <Character name="๓" resource="p4f4d3" width="156" height="190" />
+      <Character name="4" resource="p4f4d4" width="156" height="190" />
+      <Character name="٤" resource="p4f4d4" width="156" height="190" />
+      <Character name="۴" resource="p4f4d4" width="156" height="190" />
+      <Character name="४" resource="p4f4d4" width="156" height="190" />
+      <Character name="๔" resource="p4f4d4" width="156" height="190" />
+      <Character name="5" resource="p4f4d5" width="156" height="190" />
+      <Character name="٥" resource="p4f4d5" width="156" height="190" />
+      <Character name="۵" resource="p4f4d5" width="156" height="190" />
+      <Character name="५" resource="p4f4d5" width="156" height="190" />
+      <Character name="๕" resource="p4f4d5" width="156" height="190" />
+      <Character name="6" resource="p4f4d6" width="156" height="190" />
+      <Character name="٦" resource="p4f4d6" width="156" height="190" />
+      <Character name="۶" resource="p4f4d6" width="156" height="190" />
+      <Character name="६" resource="p4f4d6" width="156" height="190" />
+      <Character name="๖" resource="p4f4d6" width="156" height="190" />
+      <Character name="7" resource="p4f4d7" width="156" height="190" />
+      <Character name="٧" resource="p4f4d7" width="156" height="190" />
+      <Character name="۷" resource="p4f4d7" width="156" height="190" />
+      <Character name="७" resource="p4f4d7" width="156" height="190" />
+      <Character name="๗" resource="p4f4d7" width="156" height="190" />
+      <Character name="8" resource="p4f4d8" width="156" height="190" />
+      <Character name="٨" resource="p4f4d8" width="156" height="190" />
+      <Character name="۸" resource="p4f4d8" width="156" height="190" />
+      <Character name="८" resource="p4f4d8" width="156" height="190" />
+      <Character name="๘" resource="p4f4d8" width="156" height="190" />
+      <Character name="9" resource="p4f4d9" width="156" height="190" />
+      <Character name="٩" resource="p4f4d9" width="156" height="190" />
+      <Character name="۹" resource="p4f4d9" width="156" height="190" />
+      <Character name="९" resource="p4f4d9" width="156" height="190" />
+      <Character name="๙" resource="p4f4d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p4f5">
+      <Character name="0" resource="p4f5d0" width="156" height="190" />
+      <Character name="٠" resource="p4f5d0" width="156" height="190" />
+      <Character name="۰" resource="p4f5d0" width="156" height="190" />
+      <Character name="०" resource="p4f5d0" width="156" height="190" />
+      <Character name="๐" resource="p4f5d0" width="156" height="190" />
+      <Character name="1" resource="p4f5d1" width="156" height="190" />
+      <Character name="١" resource="p4f5d1" width="156" height="190" />
+      <Character name="۱" resource="p4f5d1" width="156" height="190" />
+      <Character name="१" resource="p4f5d1" width="156" height="190" />
+      <Character name="๑" resource="p4f5d1" width="156" height="190" />
+      <Character name="2" resource="p4f5d2" width="156" height="190" />
+      <Character name="٢" resource="p4f5d2" width="156" height="190" />
+      <Character name="۲" resource="p4f5d2" width="156" height="190" />
+      <Character name="२" resource="p4f5d2" width="156" height="190" />
+      <Character name="๒" resource="p4f5d2" width="156" height="190" />
+      <Character name="3" resource="p4f5d3" width="156" height="190" />
+      <Character name="٣" resource="p4f5d3" width="156" height="190" />
+      <Character name="۳" resource="p4f5d3" width="156" height="190" />
+      <Character name="३" resource="p4f5d3" width="156" height="190" />
+      <Character name="๓" resource="p4f5d3" width="156" height="190" />
+      <Character name="4" resource="p4f5d4" width="156" height="190" />
+      <Character name="٤" resource="p4f5d4" width="156" height="190" />
+      <Character name="۴" resource="p4f5d4" width="156" height="190" />
+      <Character name="४" resource="p4f5d4" width="156" height="190" />
+      <Character name="๔" resource="p4f5d4" width="156" height="190" />
+      <Character name="5" resource="p4f5d5" width="156" height="190" />
+      <Character name="٥" resource="p4f5d5" width="156" height="190" />
+      <Character name="۵" resource="p4f5d5" width="156" height="190" />
+      <Character name="५" resource="p4f5d5" width="156" height="190" />
+      <Character name="๕" resource="p4f5d5" width="156" height="190" />
+      <Character name="6" resource="p4f5d6" width="156" height="190" />
+      <Character name="٦" resource="p4f5d6" width="156" height="190" />
+      <Character name="۶" resource="p4f5d6" width="156" height="190" />
+      <Character name="६" resource="p4f5d6" width="156" height="190" />
+      <Character name="๖" resource="p4f5d6" width="156" height="190" />
+      <Character name="7" resource="p4f5d7" width="156" height="190" />
+      <Character name="٧" resource="p4f5d7" width="156" height="190" />
+      <Character name="۷" resource="p4f5d7" width="156" height="190" />
+      <Character name="७" resource="p4f5d7" width="156" height="190" />
+      <Character name="๗" resource="p4f5d7" width="156" height="190" />
+      <Character name="8" resource="p4f5d8" width="156" height="190" />
+      <Character name="٨" resource="p4f5d8" width="156" height="190" />
+      <Character name="۸" resource="p4f5d8" width="156" height="190" />
+      <Character name="८" resource="p4f5d8" width="156" height="190" />
+      <Character name="๘" resource="p4f5d8" width="156" height="190" />
+      <Character name="9" resource="p4f5d9" width="156" height="190" />
+      <Character name="٩" resource="p4f5d9" width="156" height="190" />
+      <Character name="۹" resource="p4f5d9" width="156" height="190" />
+      <Character name="९" resource="p4f5d9" width="156" height="190" />
+      <Character name="๙" resource="p4f5d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p4f6">
+      <Character name="0" resource="p4f6d0" width="156" height="190" />
+      <Character name="٠" resource="p4f6d0" width="156" height="190" />
+      <Character name="۰" resource="p4f6d0" width="156" height="190" />
+      <Character name="०" resource="p4f6d0" width="156" height="190" />
+      <Character name="๐" resource="p4f6d0" width="156" height="190" />
+      <Character name="1" resource="p4f6d1" width="156" height="190" />
+      <Character name="١" resource="p4f6d1" width="156" height="190" />
+      <Character name="۱" resource="p4f6d1" width="156" height="190" />
+      <Character name="१" resource="p4f6d1" width="156" height="190" />
+      <Character name="๑" resource="p4f6d1" width="156" height="190" />
+      <Character name="2" resource="p4f6d2" width="156" height="190" />
+      <Character name="٢" resource="p4f6d2" width="156" height="190" />
+      <Character name="۲" resource="p4f6d2" width="156" height="190" />
+      <Character name="२" resource="p4f6d2" width="156" height="190" />
+      <Character name="๒" resource="p4f6d2" width="156" height="190" />
+      <Character name="3" resource="p4f6d3" width="156" height="190" />
+      <Character name="٣" resource="p4f6d3" width="156" height="190" />
+      <Character name="۳" resource="p4f6d3" width="156" height="190" />
+      <Character name="३" resource="p4f6d3" width="156" height="190" />
+      <Character name="๓" resource="p4f6d3" width="156" height="190" />
+      <Character name="4" resource="p4f6d4" width="156" height="190" />
+      <Character name="٤" resource="p4f6d4" width="156" height="190" />
+      <Character name="۴" resource="p4f6d4" width="156" height="190" />
+      <Character name="४" resource="p4f6d4" width="156" height="190" />
+      <Character name="๔" resource="p4f6d4" width="156" height="190" />
+      <Character name="5" resource="p4f6d5" width="156" height="190" />
+      <Character name="٥" resource="p4f6d5" width="156" height="190" />
+      <Character name="۵" resource="p4f6d5" width="156" height="190" />
+      <Character name="५" resource="p4f6d5" width="156" height="190" />
+      <Character name="๕" resource="p4f6d5" width="156" height="190" />
+      <Character name="6" resource="p4f6d6" width="156" height="190" />
+      <Character name="٦" resource="p4f6d6" width="156" height="190" />
+      <Character name="۶" resource="p4f6d6" width="156" height="190" />
+      <Character name="६" resource="p4f6d6" width="156" height="190" />
+      <Character name="๖" resource="p4f6d6" width="156" height="190" />
+      <Character name="7" resource="p4f6d7" width="156" height="190" />
+      <Character name="٧" resource="p4f6d7" width="156" height="190" />
+      <Character name="۷" resource="p4f6d7" width="156" height="190" />
+      <Character name="७" resource="p4f6d7" width="156" height="190" />
+      <Character name="๗" resource="p4f6d7" width="156" height="190" />
+      <Character name="8" resource="p4f6d8" width="156" height="190" />
+      <Character name="٨" resource="p4f6d8" width="156" height="190" />
+      <Character name="۸" resource="p4f6d8" width="156" height="190" />
+      <Character name="८" resource="p4f6d8" width="156" height="190" />
+      <Character name="๘" resource="p4f6d8" width="156" height="190" />
+      <Character name="9" resource="p4f6d9" width="156" height="190" />
+      <Character name="٩" resource="p4f6d9" width="156" height="190" />
+      <Character name="۹" resource="p4f6d9" width="156" height="190" />
+      <Character name="९" resource="p4f6d9" width="156" height="190" />
+      <Character name="๙" resource="p4f6d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p5f0">
+      <Character name="0" resource="p5f0d0" width="156" height="190" />
+      <Character name="٠" resource="p5f0d0" width="156" height="190" />
+      <Character name="۰" resource="p5f0d0" width="156" height="190" />
+      <Character name="०" resource="p5f0d0" width="156" height="190" />
+      <Character name="๐" resource="p5f0d0" width="156" height="190" />
+      <Character name="1" resource="p5f0d1" width="156" height="190" />
+      <Character name="١" resource="p5f0d1" width="156" height="190" />
+      <Character name="۱" resource="p5f0d1" width="156" height="190" />
+      <Character name="१" resource="p5f0d1" width="156" height="190" />
+      <Character name="๑" resource="p5f0d1" width="156" height="190" />
+      <Character name="2" resource="p5f0d2" width="156" height="190" />
+      <Character name="٢" resource="p5f0d2" width="156" height="190" />
+      <Character name="۲" resource="p5f0d2" width="156" height="190" />
+      <Character name="२" resource="p5f0d2" width="156" height="190" />
+      <Character name="๒" resource="p5f0d2" width="156" height="190" />
+      <Character name="3" resource="p5f0d3" width="156" height="190" />
+      <Character name="٣" resource="p5f0d3" width="156" height="190" />
+      <Character name="۳" resource="p5f0d3" width="156" height="190" />
+      <Character name="३" resource="p5f0d3" width="156" height="190" />
+      <Character name="๓" resource="p5f0d3" width="156" height="190" />
+      <Character name="4" resource="p5f0d4" width="156" height="190" />
+      <Character name="٤" resource="p5f0d4" width="156" height="190" />
+      <Character name="۴" resource="p5f0d4" width="156" height="190" />
+      <Character name="४" resource="p5f0d4" width="156" height="190" />
+      <Character name="๔" resource="p5f0d4" width="156" height="190" />
+      <Character name="5" resource="p5f0d5" width="156" height="190" />
+      <Character name="٥" resource="p5f0d5" width="156" height="190" />
+      <Character name="۵" resource="p5f0d5" width="156" height="190" />
+      <Character name="५" resource="p5f0d5" width="156" height="190" />
+      <Character name="๕" resource="p5f0d5" width="156" height="190" />
+      <Character name="6" resource="p5f0d6" width="156" height="190" />
+      <Character name="٦" resource="p5f0d6" width="156" height="190" />
+      <Character name="۶" resource="p5f0d6" width="156" height="190" />
+      <Character name="६" resource="p5f0d6" width="156" height="190" />
+      <Character name="๖" resource="p5f0d6" width="156" height="190" />
+      <Character name="7" resource="p5f0d7" width="156" height="190" />
+      <Character name="٧" resource="p5f0d7" width="156" height="190" />
+      <Character name="۷" resource="p5f0d7" width="156" height="190" />
+      <Character name="७" resource="p5f0d7" width="156" height="190" />
+      <Character name="๗" resource="p5f0d7" width="156" height="190" />
+      <Character name="8" resource="p5f0d8" width="156" height="190" />
+      <Character name="٨" resource="p5f0d8" width="156" height="190" />
+      <Character name="۸" resource="p5f0d8" width="156" height="190" />
+      <Character name="८" resource="p5f0d8" width="156" height="190" />
+      <Character name="๘" resource="p5f0d8" width="156" height="190" />
+      <Character name="9" resource="p5f0d9" width="156" height="190" />
+      <Character name="٩" resource="p5f0d9" width="156" height="190" />
+      <Character name="۹" resource="p5f0d9" width="156" height="190" />
+      <Character name="९" resource="p5f0d9" width="156" height="190" />
+      <Character name="๙" resource="p5f0d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p5f1">
+      <Character name="0" resource="p5f1d0" width="156" height="190" />
+      <Character name="٠" resource="p5f1d0" width="156" height="190" />
+      <Character name="۰" resource="p5f1d0" width="156" height="190" />
+      <Character name="०" resource="p5f1d0" width="156" height="190" />
+      <Character name="๐" resource="p5f1d0" width="156" height="190" />
+      <Character name="1" resource="p5f1d1" width="156" height="190" />
+      <Character name="١" resource="p5f1d1" width="156" height="190" />
+      <Character name="۱" resource="p5f1d1" width="156" height="190" />
+      <Character name="१" resource="p5f1d1" width="156" height="190" />
+      <Character name="๑" resource="p5f1d1" width="156" height="190" />
+      <Character name="2" resource="p5f1d2" width="156" height="190" />
+      <Character name="٢" resource="p5f1d2" width="156" height="190" />
+      <Character name="۲" resource="p5f1d2" width="156" height="190" />
+      <Character name="२" resource="p5f1d2" width="156" height="190" />
+      <Character name="๒" resource="p5f1d2" width="156" height="190" />
+      <Character name="3" resource="p5f1d3" width="156" height="190" />
+      <Character name="٣" resource="p5f1d3" width="156" height="190" />
+      <Character name="۳" resource="p5f1d3" width="156" height="190" />
+      <Character name="३" resource="p5f1d3" width="156" height="190" />
+      <Character name="๓" resource="p5f1d3" width="156" height="190" />
+      <Character name="4" resource="p5f1d4" width="156" height="190" />
+      <Character name="٤" resource="p5f1d4" width="156" height="190" />
+      <Character name="۴" resource="p5f1d4" width="156" height="190" />
+      <Character name="४" resource="p5f1d4" width="156" height="190" />
+      <Character name="๔" resource="p5f1d4" width="156" height="190" />
+      <Character name="5" resource="p5f1d5" width="156" height="190" />
+      <Character name="٥" resource="p5f1d5" width="156" height="190" />
+      <Character name="۵" resource="p5f1d5" width="156" height="190" />
+      <Character name="५" resource="p5f1d5" width="156" height="190" />
+      <Character name="๕" resource="p5f1d5" width="156" height="190" />
+      <Character name="6" resource="p5f1d6" width="156" height="190" />
+      <Character name="٦" resource="p5f1d6" width="156" height="190" />
+      <Character name="۶" resource="p5f1d6" width="156" height="190" />
+      <Character name="६" resource="p5f1d6" width="156" height="190" />
+      <Character name="๖" resource="p5f1d6" width="156" height="190" />
+      <Character name="7" resource="p5f1d7" width="156" height="190" />
+      <Character name="٧" resource="p5f1d7" width="156" height="190" />
+      <Character name="۷" resource="p5f1d7" width="156" height="190" />
+      <Character name="७" resource="p5f1d7" width="156" height="190" />
+      <Character name="๗" resource="p5f1d7" width="156" height="190" />
+      <Character name="8" resource="p5f1d8" width="156" height="190" />
+      <Character name="٨" resource="p5f1d8" width="156" height="190" />
+      <Character name="۸" resource="p5f1d8" width="156" height="190" />
+      <Character name="८" resource="p5f1d8" width="156" height="190" />
+      <Character name="๘" resource="p5f1d8" width="156" height="190" />
+      <Character name="9" resource="p5f1d9" width="156" height="190" />
+      <Character name="٩" resource="p5f1d9" width="156" height="190" />
+      <Character name="۹" resource="p5f1d9" width="156" height="190" />
+      <Character name="९" resource="p5f1d9" width="156" height="190" />
+      <Character name="๙" resource="p5f1d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p5f2">
+      <Character name="0" resource="p5f2d0" width="156" height="190" />
+      <Character name="٠" resource="p5f2d0" width="156" height="190" />
+      <Character name="۰" resource="p5f2d0" width="156" height="190" />
+      <Character name="०" resource="p5f2d0" width="156" height="190" />
+      <Character name="๐" resource="p5f2d0" width="156" height="190" />
+      <Character name="1" resource="p5f2d1" width="156" height="190" />
+      <Character name="١" resource="p5f2d1" width="156" height="190" />
+      <Character name="۱" resource="p5f2d1" width="156" height="190" />
+      <Character name="१" resource="p5f2d1" width="156" height="190" />
+      <Character name="๑" resource="p5f2d1" width="156" height="190" />
+      <Character name="2" resource="p5f2d2" width="156" height="190" />
+      <Character name="٢" resource="p5f2d2" width="156" height="190" />
+      <Character name="۲" resource="p5f2d2" width="156" height="190" />
+      <Character name="२" resource="p5f2d2" width="156" height="190" />
+      <Character name="๒" resource="p5f2d2" width="156" height="190" />
+      <Character name="3" resource="p5f2d3" width="156" height="190" />
+      <Character name="٣" resource="p5f2d3" width="156" height="190" />
+      <Character name="۳" resource="p5f2d3" width="156" height="190" />
+      <Character name="३" resource="p5f2d3" width="156" height="190" />
+      <Character name="๓" resource="p5f2d3" width="156" height="190" />
+      <Character name="4" resource="p5f2d4" width="156" height="190" />
+      <Character name="٤" resource="p5f2d4" width="156" height="190" />
+      <Character name="۴" resource="p5f2d4" width="156" height="190" />
+      <Character name="४" resource="p5f2d4" width="156" height="190" />
+      <Character name="๔" resource="p5f2d4" width="156" height="190" />
+      <Character name="5" resource="p5f2d5" width="156" height="190" />
+      <Character name="٥" resource="p5f2d5" width="156" height="190" />
+      <Character name="۵" resource="p5f2d5" width="156" height="190" />
+      <Character name="५" resource="p5f2d5" width="156" height="190" />
+      <Character name="๕" resource="p5f2d5" width="156" height="190" />
+      <Character name="6" resource="p5f2d6" width="156" height="190" />
+      <Character name="٦" resource="p5f2d6" width="156" height="190" />
+      <Character name="۶" resource="p5f2d6" width="156" height="190" />
+      <Character name="६" resource="p5f2d6" width="156" height="190" />
+      <Character name="๖" resource="p5f2d6" width="156" height="190" />
+      <Character name="7" resource="p5f2d7" width="156" height="190" />
+      <Character name="٧" resource="p5f2d7" width="156" height="190" />
+      <Character name="۷" resource="p5f2d7" width="156" height="190" />
+      <Character name="७" resource="p5f2d7" width="156" height="190" />
+      <Character name="๗" resource="p5f2d7" width="156" height="190" />
+      <Character name="8" resource="p5f2d8" width="156" height="190" />
+      <Character name="٨" resource="p5f2d8" width="156" height="190" />
+      <Character name="۸" resource="p5f2d8" width="156" height="190" />
+      <Character name="८" resource="p5f2d8" width="156" height="190" />
+      <Character name="๘" resource="p5f2d8" width="156" height="190" />
+      <Character name="9" resource="p5f2d9" width="156" height="190" />
+      <Character name="٩" resource="p5f2d9" width="156" height="190" />
+      <Character name="۹" resource="p5f2d9" width="156" height="190" />
+      <Character name="९" resource="p5f2d9" width="156" height="190" />
+      <Character name="๙" resource="p5f2d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p5f3">
+      <Character name="0" resource="p5f3d0" width="156" height="190" />
+      <Character name="٠" resource="p5f3d0" width="156" height="190" />
+      <Character name="۰" resource="p5f3d0" width="156" height="190" />
+      <Character name="०" resource="p5f3d0" width="156" height="190" />
+      <Character name="๐" resource="p5f3d0" width="156" height="190" />
+      <Character name="1" resource="p5f3d1" width="156" height="190" />
+      <Character name="١" resource="p5f3d1" width="156" height="190" />
+      <Character name="۱" resource="p5f3d1" width="156" height="190" />
+      <Character name="१" resource="p5f3d1" width="156" height="190" />
+      <Character name="๑" resource="p5f3d1" width="156" height="190" />
+      <Character name="2" resource="p5f3d2" width="156" height="190" />
+      <Character name="٢" resource="p5f3d2" width="156" height="190" />
+      <Character name="۲" resource="p5f3d2" width="156" height="190" />
+      <Character name="२" resource="p5f3d2" width="156" height="190" />
+      <Character name="๒" resource="p5f3d2" width="156" height="190" />
+      <Character name="3" resource="p5f3d3" width="156" height="190" />
+      <Character name="٣" resource="p5f3d3" width="156" height="190" />
+      <Character name="۳" resource="p5f3d3" width="156" height="190" />
+      <Character name="३" resource="p5f3d3" width="156" height="190" />
+      <Character name="๓" resource="p5f3d3" width="156" height="190" />
+      <Character name="4" resource="p5f3d4" width="156" height="190" />
+      <Character name="٤" resource="p5f3d4" width="156" height="190" />
+      <Character name="۴" resource="p5f3d4" width="156" height="190" />
+      <Character name="४" resource="p5f3d4" width="156" height="190" />
+      <Character name="๔" resource="p5f3d4" width="156" height="190" />
+      <Character name="5" resource="p5f3d5" width="156" height="190" />
+      <Character name="٥" resource="p5f3d5" width="156" height="190" />
+      <Character name="۵" resource="p5f3d5" width="156" height="190" />
+      <Character name="५" resource="p5f3d5" width="156" height="190" />
+      <Character name="๕" resource="p5f3d5" width="156" height="190" />
+      <Character name="6" resource="p5f3d6" width="156" height="190" />
+      <Character name="٦" resource="p5f3d6" width="156" height="190" />
+      <Character name="۶" resource="p5f3d6" width="156" height="190" />
+      <Character name="६" resource="p5f3d6" width="156" height="190" />
+      <Character name="๖" resource="p5f3d6" width="156" height="190" />
+      <Character name="7" resource="p5f3d7" width="156" height="190" />
+      <Character name="٧" resource="p5f3d7" width="156" height="190" />
+      <Character name="۷" resource="p5f3d7" width="156" height="190" />
+      <Character name="७" resource="p5f3d7" width="156" height="190" />
+      <Character name="๗" resource="p5f3d7" width="156" height="190" />
+      <Character name="8" resource="p5f3d8" width="156" height="190" />
+      <Character name="٨" resource="p5f3d8" width="156" height="190" />
+      <Character name="۸" resource="p5f3d8" width="156" height="190" />
+      <Character name="८" resource="p5f3d8" width="156" height="190" />
+      <Character name="๘" resource="p5f3d8" width="156" height="190" />
+      <Character name="9" resource="p5f3d9" width="156" height="190" />
+      <Character name="٩" resource="p5f3d9" width="156" height="190" />
+      <Character name="۹" resource="p5f3d9" width="156" height="190" />
+      <Character name="९" resource="p5f3d9" width="156" height="190" />
+      <Character name="๙" resource="p5f3d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p5f4">
+      <Character name="0" resource="p5f4d0" width="156" height="190" />
+      <Character name="٠" resource="p5f4d0" width="156" height="190" />
+      <Character name="۰" resource="p5f4d0" width="156" height="190" />
+      <Character name="०" resource="p5f4d0" width="156" height="190" />
+      <Character name="๐" resource="p5f4d0" width="156" height="190" />
+      <Character name="1" resource="p5f4d1" width="156" height="190" />
+      <Character name="١" resource="p5f4d1" width="156" height="190" />
+      <Character name="۱" resource="p5f4d1" width="156" height="190" />
+      <Character name="१" resource="p5f4d1" width="156" height="190" />
+      <Character name="๑" resource="p5f4d1" width="156" height="190" />
+      <Character name="2" resource="p5f4d2" width="156" height="190" />
+      <Character name="٢" resource="p5f4d2" width="156" height="190" />
+      <Character name="۲" resource="p5f4d2" width="156" height="190" />
+      <Character name="२" resource="p5f4d2" width="156" height="190" />
+      <Character name="๒" resource="p5f4d2" width="156" height="190" />
+      <Character name="3" resource="p5f4d3" width="156" height="190" />
+      <Character name="٣" resource="p5f4d3" width="156" height="190" />
+      <Character name="۳" resource="p5f4d3" width="156" height="190" />
+      <Character name="३" resource="p5f4d3" width="156" height="190" />
+      <Character name="๓" resource="p5f4d3" width="156" height="190" />
+      <Character name="4" resource="p5f4d4" width="156" height="190" />
+      <Character name="٤" resource="p5f4d4" width="156" height="190" />
+      <Character name="۴" resource="p5f4d4" width="156" height="190" />
+      <Character name="४" resource="p5f4d4" width="156" height="190" />
+      <Character name="๔" resource="p5f4d4" width="156" height="190" />
+      <Character name="5" resource="p5f4d5" width="156" height="190" />
+      <Character name="٥" resource="p5f4d5" width="156" height="190" />
+      <Character name="۵" resource="p5f4d5" width="156" height="190" />
+      <Character name="५" resource="p5f4d5" width="156" height="190" />
+      <Character name="๕" resource="p5f4d5" width="156" height="190" />
+      <Character name="6" resource="p5f4d6" width="156" height="190" />
+      <Character name="٦" resource="p5f4d6" width="156" height="190" />
+      <Character name="۶" resource="p5f4d6" width="156" height="190" />
+      <Character name="६" resource="p5f4d6" width="156" height="190" />
+      <Character name="๖" resource="p5f4d6" width="156" height="190" />
+      <Character name="7" resource="p5f4d7" width="156" height="190" />
+      <Character name="٧" resource="p5f4d7" width="156" height="190" />
+      <Character name="۷" resource="p5f4d7" width="156" height="190" />
+      <Character name="७" resource="p5f4d7" width="156" height="190" />
+      <Character name="๗" resource="p5f4d7" width="156" height="190" />
+      <Character name="8" resource="p5f4d8" width="156" height="190" />
+      <Character name="٨" resource="p5f4d8" width="156" height="190" />
+      <Character name="۸" resource="p5f4d8" width="156" height="190" />
+      <Character name="८" resource="p5f4d8" width="156" height="190" />
+      <Character name="๘" resource="p5f4d8" width="156" height="190" />
+      <Character name="9" resource="p5f4d9" width="156" height="190" />
+      <Character name="٩" resource="p5f4d9" width="156" height="190" />
+      <Character name="۹" resource="p5f4d9" width="156" height="190" />
+      <Character name="९" resource="p5f4d9" width="156" height="190" />
+      <Character name="๙" resource="p5f4d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p5f5">
+      <Character name="0" resource="p5f5d0" width="156" height="190" />
+      <Character name="٠" resource="p5f5d0" width="156" height="190" />
+      <Character name="۰" resource="p5f5d0" width="156" height="190" />
+      <Character name="०" resource="p5f5d0" width="156" height="190" />
+      <Character name="๐" resource="p5f5d0" width="156" height="190" />
+      <Character name="1" resource="p5f5d1" width="156" height="190" />
+      <Character name="١" resource="p5f5d1" width="156" height="190" />
+      <Character name="۱" resource="p5f5d1" width="156" height="190" />
+      <Character name="१" resource="p5f5d1" width="156" height="190" />
+      <Character name="๑" resource="p5f5d1" width="156" height="190" />
+      <Character name="2" resource="p5f5d2" width="156" height="190" />
+      <Character name="٢" resource="p5f5d2" width="156" height="190" />
+      <Character name="۲" resource="p5f5d2" width="156" height="190" />
+      <Character name="२" resource="p5f5d2" width="156" height="190" />
+      <Character name="๒" resource="p5f5d2" width="156" height="190" />
+      <Character name="3" resource="p5f5d3" width="156" height="190" />
+      <Character name="٣" resource="p5f5d3" width="156" height="190" />
+      <Character name="۳" resource="p5f5d3" width="156" height="190" />
+      <Character name="३" resource="p5f5d3" width="156" height="190" />
+      <Character name="๓" resource="p5f5d3" width="156" height="190" />
+      <Character name="4" resource="p5f5d4" width="156" height="190" />
+      <Character name="٤" resource="p5f5d4" width="156" height="190" />
+      <Character name="۴" resource="p5f5d4" width="156" height="190" />
+      <Character name="४" resource="p5f5d4" width="156" height="190" />
+      <Character name="๔" resource="p5f5d4" width="156" height="190" />
+      <Character name="5" resource="p5f5d5" width="156" height="190" />
+      <Character name="٥" resource="p5f5d5" width="156" height="190" />
+      <Character name="۵" resource="p5f5d5" width="156" height="190" />
+      <Character name="५" resource="p5f5d5" width="156" height="190" />
+      <Character name="๕" resource="p5f5d5" width="156" height="190" />
+      <Character name="6" resource="p5f5d6" width="156" height="190" />
+      <Character name="٦" resource="p5f5d6" width="156" height="190" />
+      <Character name="۶" resource="p5f5d6" width="156" height="190" />
+      <Character name="६" resource="p5f5d6" width="156" height="190" />
+      <Character name="๖" resource="p5f5d6" width="156" height="190" />
+      <Character name="7" resource="p5f5d7" width="156" height="190" />
+      <Character name="٧" resource="p5f5d7" width="156" height="190" />
+      <Character name="۷" resource="p5f5d7" width="156" height="190" />
+      <Character name="७" resource="p5f5d7" width="156" height="190" />
+      <Character name="๗" resource="p5f5d7" width="156" height="190" />
+      <Character name="8" resource="p5f5d8" width="156" height="190" />
+      <Character name="٨" resource="p5f5d8" width="156" height="190" />
+      <Character name="۸" resource="p5f5d8" width="156" height="190" />
+      <Character name="८" resource="p5f5d8" width="156" height="190" />
+      <Character name="๘" resource="p5f5d8" width="156" height="190" />
+      <Character name="9" resource="p5f5d9" width="156" height="190" />
+      <Character name="٩" resource="p5f5d9" width="156" height="190" />
+      <Character name="۹" resource="p5f5d9" width="156" height="190" />
+      <Character name="९" resource="p5f5d9" width="156" height="190" />
+      <Character name="๙" resource="p5f5d9" width="156" height="190" />
+    </BitmapFont>
+    <BitmapFont name="p5f6">
+      <Character name="0" resource="p5f6d0" width="156" height="190" />
+      <Character name="٠" resource="p5f6d0" width="156" height="190" />
+      <Character name="۰" resource="p5f6d0" width="156" height="190" />
+      <Character name="०" resource="p5f6d0" width="156" height="190" />
+      <Character name="๐" resource="p5f6d0" width="156" height="190" />
+      <Character name="1" resource="p5f6d1" width="156" height="190" />
+      <Character name="١" resource="p5f6d1" width="156" height="190" />
+      <Character name="۱" resource="p5f6d1" width="156" height="190" />
+      <Character name="१" resource="p5f6d1" width="156" height="190" />
+      <Character name="๑" resource="p5f6d1" width="156" height="190" />
+      <Character name="2" resource="p5f6d2" width="156" height="190" />
+      <Character name="٢" resource="p5f6d2" width="156" height="190" />
+      <Character name="۲" resource="p5f6d2" width="156" height="190" />
+      <Character name="२" resource="p5f6d2" width="156" height="190" />
+      <Character name="๒" resource="p5f6d2" width="156" height="190" />
+      <Character name="3" resource="p5f6d3" width="156" height="190" />
+      <Character name="٣" resource="p5f6d3" width="156" height="190" />
+      <Character name="۳" resource="p5f6d3" width="156" height="190" />
+      <Character name="३" resource="p5f6d3" width="156" height="190" />
+      <Character name="๓" resource="p5f6d3" width="156" height="190" />
+      <Character name="4" resource="p5f6d4" width="156" height="190" />
+      <Character name="٤" resource="p5f6d4" width="156" height="190" />
+      <Character name="۴" resource="p5f6d4" width="156" height="190" />
+      <Character name="४" resource="p5f6d4" width="156" height="190" />
+      <Character name="๔" resource="p5f6d4" width="156" height="190" />
+      <Character name="5" resource="p5f6d5" width="156" height="190" />
+      <Character name="٥" resource="p5f6d5" width="156" height="190" />
+      <Character name="۵" resource="p5f6d5" width="156" height="190" />
+      <Character name="५" resource="p5f6d5" width="156" height="190" />
+      <Character name="๕" resource="p5f6d5" width="156" height="190" />
+      <Character name="6" resource="p5f6d6" width="156" height="190" />
+      <Character name="٦" resource="p5f6d6" width="156" height="190" />
+      <Character name="۶" resource="p5f6d6" width="156" height="190" />
+      <Character name="६" resource="p5f6d6" width="156" height="190" />
+      <Character name="๖" resource="p5f6d6" width="156" height="190" />
+      <Character name="7" resource="p5f6d7" width="156" height="190" />
+      <Character name="٧" resource="p5f6d7" width="156" height="190" />
+      <Character name="۷" resource="p5f6d7" width="156" height="190" />
+      <Character name="७" resource="p5f6d7" width="156" height="190" />
+      <Character name="๗" resource="p5f6d7" width="156" height="190" />
+      <Character name="8" resource="p5f6d8" width="156" height="190" />
+      <Character name="٨" resource="p5f6d8" width="156" height="190" />
+      <Character name="۸" resource="p5f6d8" width="156" height="190" />
+      <Character name="८" resource="p5f6d8" width="156" height="190" />
+      <Character name="๘" resource="p5f6d8" width="156" height="190" />
+      <Character name="9" resource="p5f6d9" width="156" height="190" />
+      <Character name="٩" resource="p5f6d9" width="156" height="190" />
+      <Character name="۹" resource="p5f6d9" width="156" height="190" />
+      <Character name="९" resource="p5f6d9" width="156" height="190" />
+      <Character name="๙" resource="p5f6d9" width="156" height="190" />
+    </BitmapFont>
+  </BitmapFonts>
+  <UserConfigurations>
+    <ListConfiguration id="palette" displayName="color_label" defaultValue="0">
+      <ListOption id="0" displayName="palette_0" screenReaderText="desc_0" icon="swatch_1" />
+      <ListOption id="1" displayName="palette_1" screenReaderText="desc_1" icon="swatch_2" />
+      <ListOption id="2" displayName="palette_2" screenReaderText="desc_2" icon="swatch_3" />
+      <ListOption id="3" displayName="palette_3" screenReaderText="desc_3" icon="swatch_4" />
+      <ListOption id="4" displayName="palette_4" screenReaderText="desc_4" icon="swatch_5" />
+    </ListConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#000000">
+    <ListConfiguration id="palette">
+      <ListOption id="0">
+        <Group name="palette1" x="0" y="0" width="480" height="480">
+          <Group name="layerp1f0" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep1f0" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 0 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p1f0" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p1f0" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp1f1" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep1f1" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 1 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p1f1" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p1f1" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp1f2" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep1f2" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 2 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p1f2" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p1f2" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp1f3" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep1f3" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 3 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p1f3" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p1f3" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp1f4" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep1f4" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 4 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p1f4" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p1f4" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp1f5" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep1f5" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 5 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p1f5" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p1f5" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp1f6" x="0" y="0" width="480" height="480" alpha="0">
+            <Variant mode="AMBIENT" target="alpha" value="255" />
+            <DigitalClock x="0" y="63" width="480" height="180">
+              <TimeText x="0" y="0" width="480" height="180" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                <BitmapFont family="p1f6" size="180" color="#FFFFFF" />
+              </TimeText>
+            </DigitalClock>
+            <DigitalClock x="0" y="237" width="480" height="180">
+              <TimeText x="0" y="0" width="480" height="180" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                <BitmapFont family="p1f6" size="180" color="#FFFFFF" />
+              </TimeText>
+            </DigitalClock>
+          </Group>
+        </Group>
+      </ListOption>
+      <ListOption id="1">
+        <Group name="palette2" x="0" y="0" width="480" height="480">
+          <Group name="layerp2f0" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep2f0" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 0 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p2f0" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p2f0" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp2f1" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep2f1" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 1 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p2f1" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p2f1" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp2f2" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep2f2" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 2 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p2f2" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p2f2" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp2f3" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep2f3" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 3 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p2f3" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p2f3" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp2f4" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep2f4" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 4 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p2f4" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p2f4" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp2f5" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep2f5" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 5 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p2f5" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p2f5" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp2f6" x="0" y="0" width="480" height="480" alpha="0">
+            <Variant mode="AMBIENT" target="alpha" value="255" />
+            <DigitalClock x="0" y="63" width="480" height="180">
+              <TimeText x="0" y="0" width="480" height="180" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                <BitmapFont family="p2f6" size="180" color="#FFFFFF" />
+              </TimeText>
+            </DigitalClock>
+            <DigitalClock x="0" y="237" width="480" height="180">
+              <TimeText x="0" y="0" width="480" height="180" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                <BitmapFont family="p2f6" size="180" color="#FFFFFF" />
+              </TimeText>
+            </DigitalClock>
+          </Group>
+        </Group>
+      </ListOption>
+      <ListOption id="2">
+        <Group name="palette3" x="0" y="0" width="480" height="480">
+          <Group name="layerp3f0" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep3f0" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 0 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p3f0" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p3f0" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp3f1" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep3f1" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 1 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p3f1" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p3f1" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp3f2" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep3f2" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 2 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p3f2" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p3f2" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp3f3" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep3f3" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 3 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p3f3" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p3f3" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp3f4" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep3f4" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 4 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p3f4" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p3f4" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp3f5" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep3f5" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 5 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p3f5" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p3f5" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp3f6" x="0" y="0" width="480" height="480" alpha="0">
+            <Variant mode="AMBIENT" target="alpha" value="255" />
+            <DigitalClock x="0" y="63" width="480" height="180">
+              <TimeText x="0" y="0" width="480" height="180" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                <BitmapFont family="p3f6" size="180" color="#FFFFFF" />
+              </TimeText>
+            </DigitalClock>
+            <DigitalClock x="0" y="237" width="480" height="180">
+              <TimeText x="0" y="0" width="480" height="180" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                <BitmapFont family="p3f6" size="180" color="#FFFFFF" />
+              </TimeText>
+            </DigitalClock>
+          </Group>
+        </Group>
+      </ListOption>
+      <ListOption id="3">
+        <Group name="palette4" x="0" y="0" width="480" height="480">
+          <Group name="layerp4f0" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep4f0" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 0 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p4f0" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p4f0" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp4f1" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep4f1" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 1 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p4f1" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p4f1" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp4f2" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep4f2" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 2 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p4f2" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p4f2" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp4f3" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep4f3" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 3 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p4f3" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p4f3" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp4f4" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep4f4" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 4 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p4f4" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p4f4" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp4f5" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep4f5" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 5 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p4f5" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p4f5" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp4f6" x="0" y="0" width="480" height="480" alpha="0">
+            <Variant mode="AMBIENT" target="alpha" value="255" />
+            <DigitalClock x="0" y="63" width="480" height="180">
+              <TimeText x="0" y="0" width="480" height="180" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                <BitmapFont family="p4f6" size="180" color="#FFFFFF" />
+              </TimeText>
+            </DigitalClock>
+            <DigitalClock x="0" y="237" width="480" height="180">
+              <TimeText x="0" y="0" width="480" height="180" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                <BitmapFont family="p4f6" size="180" color="#FFFFFF" />
+              </TimeText>
+            </DigitalClock>
+          </Group>
+        </Group>
+      </ListOption>
+      <ListOption id="4">
+        <Group name="palette5" x="0" y="0" width="480" height="480">
+          <Group name="layerp5f0" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep5f0" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 0 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p5f0" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p5f0" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp5f1" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep5f1" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 1 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p5f1" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p5f1" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp5f2" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep5f2" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 2 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p5f2" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p5f2" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp5f3" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep5f3" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 3 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p5f3" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p5f3" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp5f4" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep5f4" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 4 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p5f4" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p5f4" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp5f5" x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <Group name="fadep5f5" x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([SECOND] % 6) == 5 ? 255 : 0">
+                <Animation duration="0.9" fps="15" interpolation="LINEAR" />
+              </Transform>
+              <DigitalClock x="0" y="53" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p5f5" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+              <DigitalClock x="0" y="237" width="480" height="190">
+                <TimeText x="0" y="0" width="480" height="190" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                  <BitmapFont family="p5f5" size="190" color="#FFFFFF" />
+                </TimeText>
+              </DigitalClock>
+            </Group>
+          </Group>
+          <Group name="layerp5f6" x="0" y="0" width="480" height="480" alpha="0">
+            <Variant mode="AMBIENT" target="alpha" value="255" />
+            <DigitalClock x="0" y="63" width="480" height="180">
+              <TimeText x="0" y="0" width="480" height="180" align="CENTER" format="hh" hourFormat="SYNC_TO_DEVICE">
+                <BitmapFont family="p5f6" size="180" color="#FFFFFF" />
+              </TimeText>
+            </DigitalClock>
+            <DigitalClock x="0" y="237" width="480" height="180">
+              <TimeText x="0" y="0" width="480" height="180" align="CENTER" format="mm" hourFormat="SYNC_TO_DEVICE">
+                <BitmapFont family="p5f6" size="180" color="#FFFFFF" />
+              </TimeText>
+            </DigitalClock>
+          </Group>
+        </Group>
+      </ListOption>
+    </ListConfiguration>
+  </Scene>
+</WatchFace>

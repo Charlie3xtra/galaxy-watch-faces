@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">彩虹光辉</string>
+  <string name="palette_0">I</string>
+  <string name="desc_0">彩虹</string>
+  <string name="palette_1">II</string>
+  <string name="desc_1">橙色、白色和粉色</string>
+  <string name="palette_2">III</string>
+  <string name="desc_2">粉色、紫色和蓝色</string>
+  <string name="palette_3">IV</string>
+  <string name="desc_3">蓝色、粉色和白色</string>
+  <string name="palette_4">V</string>
+  <string name="desc_4">黄色、白色、紫色和黑色</string>
+  <string name="color_label">配色</string>
+</resources>

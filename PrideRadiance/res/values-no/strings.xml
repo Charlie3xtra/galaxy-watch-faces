@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Pride-utstråling</string>
+  <string name="palette_0">1</string>
+  <string name="desc_0">Regnbue</string>
+  <string name="palette_1">2</string>
+  <string name="desc_1">Oransje, hvit og rosa</string>
+  <string name="palette_2">3</string>
+  <string name="desc_2">Rosa, lilla og blå</string>
+  <string name="palette_3">4</string>
+  <string name="desc_3">Blå, rosa og hvit</string>
+  <string name="palette_4">5</string>
+  <string name="desc_4">Gul, hvit, lilla og svart</string>
+  <string name="color_label">Farge</string>
+</resources>

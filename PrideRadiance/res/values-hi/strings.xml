@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">प्राइड रेडियंस</string>
+  <string name="palette_0">I</string>
+  <string name="desc_0">इंद्रधनुष</string>
+  <string name="palette_1">II</string>
+  <string name="desc_1">नारंगी, सफ़ेद और गुलाबी</string>
+  <string name="palette_2">III</string>
+  <string name="desc_2">गुलाबी, बैंगनी और नीला</string>
+  <string name="palette_3">IV</string>
+  <string name="desc_3">नीला, गुलाबी और सफ़ेद</string>
+  <string name="palette_4">V</string>
+  <string name="desc_4">पीला, सफ़ेद, बैंगनी और काला</string>
+  <string name="color_label">रंग</string>
+</resources>

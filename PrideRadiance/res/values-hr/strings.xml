@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Sjaj Pridea</string>
+  <string name="palette_0">I</string>
+  <string name="desc_0">Duga</string>
+  <string name="palette_1">II</string>
+  <string name="desc_1">Narančasta, bijela i ružičasta</string>
+  <string name="palette_2">III</string>
+  <string name="desc_2">Ružičasta, ljubičasta i plava</string>
+  <string name="palette_3">IV</string>
+  <string name="desc_3">Plava, ružičasta i bijela</string>
+  <string name="palette_4">V</string>
+  <string name="desc_4">Žuta, bijela, ljubičasta i crna</string>
+  <string name="color_label">Boja</string>
+</resources>

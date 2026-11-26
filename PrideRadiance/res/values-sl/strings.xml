@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Sij ponosa</string>
+  <string name="palette_0">I</string>
+  <string name="desc_0">Mavrica</string>
+  <string name="palette_1">II</string>
+  <string name="desc_1">Oranžna, bela in rožnata</string>
+  <string name="palette_2">III</string>
+  <string name="desc_2">Rožnata, vijolična in modra</string>
+  <string name="palette_3">IV</string>
+  <string name="desc_3">Modra, rožnata in bela</string>
+  <string name="palette_4">V</string>
+  <string name="desc_4">Rumena, bela, vijolična in črna</string>
+  <string name="color_label">Barva</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">프라이드 래디언스</string>
+  <string name="palette_0">I</string>
+  <string name="desc_0">무지개색</string>
+  <string name="palette_1">II</string>
+  <string name="desc_1">주황색, 흰색, 분홍색</string>
+  <string name="palette_2">III</string>
+  <string name="desc_2">분홍색, 보라색, 파란색</string>
+  <string name="palette_3">IV</string>
+  <string name="desc_3">파란색, 분홍색, 흰색</string>
+  <string name="palette_4">V</string>
+  <string name="desc_4">노란색, 흰색, 보라색, 검은색</string>
+  <string name="color_label">색상</string>
+</resources>

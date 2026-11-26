@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">プライドラディアンス</string>
+  <string name="palette_0">I</string>
+  <string name="desc_0">レインボー</string>
+  <string name="palette_1">II</string>
+  <string name="desc_1">オレンジ、ホワイト、ピンク</string>
+  <string name="palette_2">III</string>
+  <string name="desc_2">ピンク、パープル、ブルー</string>
+  <string name="palette_3">IV</string>
+  <string name="desc_3">ブルー、ピンク、ホワイト</string>
+  <string name="palette_4">V</string>
+  <string name="desc_4">イエロー、ホワイト、パープル、ブラック</string>
+  <string name="color_label">カラー</string>
+</resources>

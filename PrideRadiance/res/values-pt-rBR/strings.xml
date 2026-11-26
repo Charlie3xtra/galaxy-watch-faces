@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Brilho do Orgulho</string>
+  <string name="palette_0">I</string>
+  <string name="desc_0">I</string>
+  <string name="palette_1">II</string>
+  <string name="desc_1">II</string>
+  <string name="palette_2">III</string>
+  <string name="desc_2">III</string>
+  <string name="palette_3">IV</string>
+  <string name="desc_3">IV</string>
+  <string name="palette_4">V</string>
+  <string name="desc_4">V</string>
+  <string name="color_label">Cor</string>
+</resources>

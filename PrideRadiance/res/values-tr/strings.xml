@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Pride Işığı</string>
+  <string name="palette_0">I</string>
+  <string name="desc_0">Gökkuşağı</string>
+  <string name="palette_1">II</string>
+  <string name="desc_1">Turuncu, Beyaz ve Pembe</string>
+  <string name="palette_2">III</string>
+  <string name="desc_2">Pembe, Mor ve Mavi</string>
+  <string name="palette_3">IV</string>
+  <string name="desc_3">Mavi, Pembe ve Beyaz</string>
+  <string name="palette_4">V</string>
+  <string name="desc_4">Sarı, Beyaz, Mor ve Siyah</string>
+  <string name="color_label">Renk</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Ακτίνες Περηφάνιας</string>
+  <string name="palette_0">I</string>
+  <string name="desc_0">Ουράνιο τόξο</string>
+  <string name="palette_1">II</string>
+  <string name="desc_1">Πορτοκαλί, λευκό και ροζ</string>
+  <string name="palette_2">III</string>
+  <string name="desc_2">Ροζ, μοβ και μπλε</string>
+  <string name="palette_3">IV</string>
+  <string name="desc_3">Μπλε, ροζ και λευκό</string>
+  <string name="palette_4">V</string>
+  <string name="desc_4">Κίτρινο, λευκό, μοβ και μαύρο</string>
+  <string name="color_label">Χρώμα</string>
+</resources>

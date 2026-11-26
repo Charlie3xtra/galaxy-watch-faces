@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Pride (promienie)</string>
+  <string name="palette_0">I</string>
+  <string name="desc_0">Tęczowy</string>
+  <string name="palette_1">II</string>
+  <string name="desc_1">Pomarańczowy, biały i różowy</string>
+  <string name="palette_2">III</string>
+  <string name="desc_2">Różowy, purpurowy i niebieski</string>
+  <string name="palette_3">IV</string>
+  <string name="desc_3">Niebieski, różowy i biały</string>
+  <string name="palette_4">V</string>
+  <string name="desc_4">Żółty, biały, purpurowy i czarny</string>
+  <string name="color_label">Kolor</string>
+</resources>

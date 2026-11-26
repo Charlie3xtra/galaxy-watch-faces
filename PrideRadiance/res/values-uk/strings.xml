@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Прайд осяйний</string>
+  <string name="palette_0">I</string>
+  <string name="desc_0">Веселковий</string>
+  <string name="palette_1">II</string>
+  <string name="desc_1">Оранжевий, білий і рожевий</string>
+  <string name="palette_2">III</string>
+  <string name="desc_2">Рожевий, бузковий і синій</string>
+  <string name="palette_3">IV</string>
+  <string name="desc_3">Синій, рожевий і білий</string>
+  <string name="palette_4">V</string>
+  <string name="desc_4">Жовтий, білий, бузковий і чорний</string>
+  <string name="color_label">Колір</string>
+</resources>

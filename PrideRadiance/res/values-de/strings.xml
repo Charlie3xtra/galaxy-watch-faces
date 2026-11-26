@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Pride Leuchten</string>
+  <string name="palette_0">I</string>
+  <string name="desc_0">Regenbogen</string>
+  <string name="palette_1">II</string>
+  <string name="desc_1">Orange, weiß und rosa</string>
+  <string name="palette_2">III</string>
+  <string name="desc_2">Rosa, lila und blau</string>
+  <string name="palette_3">IV</string>
+  <string name="desc_3">Blau, rosa und weiß</string>
+  <string name="palette_4">V</string>
+  <string name="desc_4">Gelb, weiß, lila und schwarz</string>
+  <string name="color_label">Farbe</string>
+</resources>

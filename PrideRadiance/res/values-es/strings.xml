@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Orgullo radiante</string>
+  <string name="palette_0">I</string>
+  <string name="desc_0">Arcoíris</string>
+  <string name="palette_1">II</string>
+  <string name="desc_1">Naranja, blanco y rosa</string>
+  <string name="palette_2">III</string>
+  <string name="desc_2">Rosa, morado y azul</string>
+  <string name="palette_3">IV</string>
+  <string name="desc_3">Azul, rosa y blanco</string>
+  <string name="palette_4">V</string>
+  <string name="desc_4">Amarillo, blanco, morado y negro</string>
+  <string name="color_label">Color</string>
+</resources>

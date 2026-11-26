@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">גאווה זוהרת</string>
+  <string name="palette_0">I</string>
+  <string name="desc_0">קשת בענן</string>
+  <string name="palette_1">II</string>
+  <string name="desc_1">כתום, לבן וורוד</string>
+  <string name="palette_2">III</string>
+  <string name="desc_2">ורוד, סגול וכחול</string>
+  <string name="palette_3">IV</string>
+  <string name="desc_3">כחול, ורוד ולבן</string>
+  <string name="palette_4">V</string>
+  <string name="desc_4">צהוב, לבן, סגול ושחור</string>
+  <string name="color_label">צבע</string>
+</resources>

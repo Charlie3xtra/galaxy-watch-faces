@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Rayonnement Pride</string>
+  <string name="palette_0">I</string>
+  <string name="desc_0">Arc-en-ciel</string>
+  <string name="palette_1">II</string>
+  <string name="desc_1">Orange, blanc et rose</string>
+  <string name="palette_2">III</string>
+  <string name="desc_2">Rose, violet et bleu</string>
+  <string name="palette_3">IV</string>
+  <string name="desc_3">Bleu, rose et blanc</string>
+  <string name="palette_4">V</string>
+  <string name="desc_4">Jaune, blanc, violet et noir</string>
+  <string name="color_label">Couleur</string>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Сияние прайда</string>
+  <string name="palette_0">I</string>
+  <string name="desc_0">Радуга</string>
+  <string name="palette_1">II</string>
+  <string name="desc_1">Оранжевый, белый и розовый</string>
+  <string name="palette_2">III</string>
+  <string name="desc_2">Розовый, лиловый и синий</string>
+  <string name="palette_3">IV</string>
+  <string name="desc_3">Синий, розовый и белый</string>
+  <string name="palette_4">V</string>
+  <string name="desc_4">Желтый, белый, лиловый и черный</string>
+  <string name="color_label">Цвет</string>
+</resources>
