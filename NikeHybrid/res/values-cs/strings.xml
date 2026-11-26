@@ -37,6 +37,9 @@
   <string name="quick_heartrate">Tepová frekvence</string>
   <string name="quick_battery">Baterie</string>
   <string name="quick_date">Dnešní datum</string>
+  <string name="quick_weather">Počasí</string>
+  <string name="quick_weather_rich">Teplota</string>
+  <string name="quick_weather_uv_index">UV index</string>
   <string name="quick_off">Vypnuto</string>
   <string name="bezel">Dole uprostřed</string>
   <string name="music_caption">HUDBA</string>

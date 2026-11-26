@@ -33,6 +33,9 @@
       <ListOption id="heartrate" displayName="quick_heartrate" />
       <ListOption id="battery" displayName="quick_battery" />
       <ListOption id="date" displayName="quick_date" />
+      <ListOption id="weather" displayName="quick_weather" />
+      <ListOption id="weather_rich" displayName="quick_weather_rich" />
+      <ListOption id="weather_uv_index" displayName="quick_weather_uv_index" />
       <ListOption id="off" displayName="quick_off" />
     </ListConfiguration>
     <ListConfiguration id="art_top_right" displayName="corner_top_right" defaultValue="workout">
@@ -44,6 +47,9 @@
       <ListOption id="heartrate" displayName="quick_heartrate" />
       <ListOption id="battery" displayName="quick_battery" />
       <ListOption id="date" displayName="quick_date" />
+      <ListOption id="weather" displayName="quick_weather" />
+      <ListOption id="weather_rich" displayName="quick_weather_rich" />
+      <ListOption id="weather_uv_index" displayName="quick_weather_uv_index" />
       <ListOption id="off" displayName="quick_off" />
     </ListConfiguration>
     <ListConfiguration id="art_bottom_left" displayName="corner_bottom_left" defaultValue="messages">
@@ -55,6 +61,9 @@
       <ListOption id="heartrate" displayName="quick_heartrate" />
       <ListOption id="battery" displayName="quick_battery" />
       <ListOption id="date" displayName="quick_date" />
+      <ListOption id="weather" displayName="quick_weather" />
+      <ListOption id="weather_rich" displayName="quick_weather_rich" />
+      <ListOption id="weather_uv_index" displayName="quick_weather_uv_index" />
       <ListOption id="off" displayName="quick_off" />
     </ListConfiguration>
     <ListConfiguration id="art_bottom_right" displayName="corner_bottom_right" defaultValue="music">
@@ -66,6 +75,9 @@
       <ListOption id="heartrate" displayName="quick_heartrate" />
       <ListOption id="battery" displayName="quick_battery" />
       <ListOption id="date" displayName="quick_date" />
+      <ListOption id="weather" displayName="quick_weather" />
+      <ListOption id="weather_rich" displayName="quick_weather_rich" />
+      <ListOption id="weather_uv_index" displayName="quick_weather_uv_index" />
       <ListOption id="off" displayName="quick_off" />
     </ListConfiguration>
   </UserConfigurations>
@@ -2354,7 +2366,7 @@
     </Group>
     <ListConfiguration id="art_top_left">
       <ListOption id="phone">
-        <Group name="top_left_phone" x="71" y="55" width="66" height="66">
+        <Group name="top_left_phone" x="48" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="PHONE" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
           <PartDraw x="1" y="1" width="64" height="64">
@@ -2368,7 +2380,7 @@
         </Group>
       </ListOption>
       <ListOption id="workout">
-        <Group name="top_left_workout" x="71" y="55" width="66" height="66">
+        <Group name="top_left_workout" x="48" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="com.samsung.android.wear.shealth" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
           <PartDraw x="1" y="1" width="64" height="64">
@@ -2382,7 +2394,7 @@
         </Group>
       </ListOption>
       <ListOption id="messages">
-        <Group name="top_left_messages" x="71" y="55" width="66" height="66">
+        <Group name="top_left_messages" x="48" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="MESSAGE" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
           <PartDraw x="1" y="1" width="64" height="64">
@@ -2396,21 +2408,21 @@
         </Group>
       </ListOption>
       <ListOption id="music">
-        <Group name="top_left_music" x="71" y="55" width="66" height="66">
+        <Group name="top_left_music" x="48" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="MUSIC_PLAYER" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
-          <PartText x="-6" y="3" width="67" height="24" angle="-35">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="SYNC_TO_DEVICE" size="16" color="[CONFIGURATION.palette.0]">@string/music_caption</Font>
-            </Text>
+          <PartText x="0" y="0" width="66" height="66">
+            <TextCircular centerX="168.9" centerY="127.87" width="302.56" height="302.56" startAngle="293.4194020124577" endAngle="316.4194020124577" direction="CLOCKWISE" align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="15" color="[CONFIGURATION.palette.0]">@string/music_caption</Font>
+            </TextCircular>
           </PartText>
-          <PartImage x="31" y="32" width="24" height="27" tintColor="[CONFIGURATION.palette.0]">
+          <PartImage x="11" y="13" width="25" height="27" tintColor="[CONFIGURATION.palette.0]">
             <Image resource="corner_note" />
           </PartImage>
         </Group>
       </ListOption>
       <ListOption id="alarm">
-        <Group name="top_left_alarm" x="71" y="55" width="66" height="66">
+        <Group name="top_left_alarm" x="48" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="ALARM" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
           <PartDraw x="1" y="1" width="64" height="64">
@@ -2424,46 +2436,83 @@
         </Group>
       </ListOption>
       <ListOption id="heartrate">
-        <Group name="top_left_heartrate" x="71" y="55" width="66" height="66">
+        <Group name="top_left_heartrate" x="48" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="HEALTH_HEART_RATE" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
-          <PartDraw x="1" y="1" width="64" height="64">
-            <Ellipse x="0" y="0" width="64" height="64">
-              <Fill color="#FF1B1B1B" />
-            </Ellipse>
-          </PartDraw>
-          <PartImage x="15" y="17" width="35" height="32" tintColor="[CONFIGURATION.palette.0]">
+          <PartImage x="8" y="11" width="31" height="31" tintColor="#FFFF527C">
             <Image resource="corner_heartrate" />
           </PartImage>
+          <Condition>
+            <Expressions>
+              <Expression name="pulse">[HEART_RATE] &gt; 0</Expression>
+            </Expressions>
+            <Compare expression="pulse">
+              <PartText x="0" y="0" width="66" height="66">
+                <TextCircular centerX="168.9" centerY="127.87" width="302.56" height="302.56" startAngle="294.4194020124577" endAngle="315.4194020124577" direction="CLOCKWISE" align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">
+                    <Template>%s<Parameter expression="[HEART_RATE]" />
+                    </Template>
+                  </Font>
+                </TextCircular>
+              </PartText>
+            </Compare>
+            <Default>
+              <PartText x="0" y="0" width="66" height="66">
+                <TextCircular centerX="168.9" centerY="127.87" width="302.56" height="302.56" startAngle="294.4194020124577" endAngle="315.4194020124577" direction="CLOCKWISE" align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">—</Font>
+                </TextCircular>
+              </PartText>
+            </Default>
+          </Condition>
         </Group>
       </ListOption>
       <ListOption id="battery">
-        <Group name="top_left_battery" x="71" y="55" width="66" height="66">
+        <Group name="top_left_battery" x="48" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="BATTERY_STATUS" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
-          <PartDraw x="1" y="1" width="64" height="64">
-            <Ellipse x="0" y="0" width="64" height="64">
-              <Fill color="#FF1B1B1B" />
-            </Ellipse>
-          </PartDraw>
-          <PartDraw x="0" y="0" width="66" height="66">
-            <Arc centerX="33" centerY="33" width="56" height="56" startAngle="0" endAngle="360">
-              <Transform target="endAngle" value="[BATTERY_PERCENT]*3.6" />
-              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
-            </Arc>
-          </PartDraw>
-          <PartText x="4" y="19" width="58" height="29" angle="0">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
-                <Template>%s<Parameter expression="[BATTERY_PERCENT]" />
+          <PartText x="0" y="0" width="66" height="66">
+            <TextCircular centerX="168.9" centerY="127.87" width="355.56" height="355.56" startAngle="293.9194020124577" endAngle="315.9194020124577" direction="CLOCKWISE" align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">
+                <Template>%s%%<Parameter expression="[BATTERY_PERCENT]" />
                 </Template>
               </Font>
-            </Text>
+            </TextCircular>
           </PartText>
+          <Condition>
+            <Expressions>
+              <Expression name="normal">[BATTERY_PERCENT] &gt; 20</Expression>
+            </Expressions>
+            <Compare expression="normal">
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="168.9" centerY="127.87" width="307.69" height="307.69" startAngle="296.4194020124577" endAngle="313.4194020124577">
+                  <Stroke thickness="4" color="#FF383838" />
+                </Arc>
+              </PartDraw>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="168.9" centerY="127.87" width="307.69" height="307.69" startAngle="296.4194020124577" endAngle="313.4194020124577">
+                  <Transform target="endAngle" value="296.4194020124577 + 17.0 * clamp([BATTERY_PERCENT]/100.0,0,1)" />
+                  <Stroke thickness="4" color="#FF53D76A" />
+                </Arc>
+              </PartDraw>
+            </Compare>
+            <Default>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="168.9" centerY="127.87" width="307.69" height="307.69" startAngle="296.4194020124577" endAngle="313.4194020124577">
+                  <Stroke thickness="4" color="#FF383838" />
+                </Arc>
+              </PartDraw>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="168.9" centerY="127.87" width="307.69" height="307.69" startAngle="296.4194020124577" endAngle="313.4194020124577">
+                  <Transform target="endAngle" value="296.4194020124577 + 17.0 * clamp([BATTERY_PERCENT]/100.0,0,1)" />
+                  <Stroke thickness="4" color="#FFFC5855" />
+                </Arc>
+              </PartDraw>
+            </Default>
+          </Condition>
         </Group>
       </ListOption>
       <ListOption id="date">
-        <Group name="top_left_date" x="71" y="55" width="66" height="66">
+        <Group name="top_left_date" x="48" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="CALENDAR" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
           <PartDraw x="1" y="1" width="64" height="64">
@@ -2489,36 +2538,211 @@
           </PartText>
         </Group>
       </ListOption>
+      <ListOption id="weather">
+        <Group name="top_left_weather" x="48" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
+          <Launch target="com.samsung.android.watch.weather" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <Condition>
+            <Expressions>
+              <Expression name="weather">[WEATHER.IS_AVAILABLE] &amp;&amp; ![WEATHER.IS_ERROR]</Expression>
+            </Expressions>
+            <Compare expression="weather">
+              <PartText x="0" y="0" width="66" height="66">
+                <TextCircular centerX="168.9" centerY="127.87" width="302.56" height="302.56" startAngle="293.9194020124577" endAngle="315.9194020124577" direction="CLOCKWISE" align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">
+                    <Template>%s°<Parameter expression="[WEATHER.TEMPERATURE]" />
+                    </Template>
+                  </Font>
+                </TextCircular>
+              </PartText>
+              <Condition>
+                <Expressions>
+                  <Expression name="cloud">[WEATHER.CONDITION] == 2</Expression>
+                  <Expression name="partly">[WEATHER.CONDITION] == 14</Expression>
+                  <Expression name="fog">[WEATHER.CONDITION] == 3 || [WEATHER.CONDITION] == 13</Expression>
+                  <Expression name="rain">[WEATHER.CONDITION] == 4 || [WEATHER.CONDITION] == 6 || [WEATHER.CONDITION] == 12</Expression>
+                  <Expression name="snow">[WEATHER.CONDITION] == 5 || [WEATHER.CONDITION] == 7 || [WEATHER.CONDITION] == 11</Expression>
+                  <Expression name="storm">[WEATHER.CONDITION] == 9</Expression>
+                  <Expression name="sleet">[WEATHER.CONDITION] == 10</Expression>
+                  <Expression name="wind">[WEATHER.CONDITION] == 15</Expression>
+                  <Expression name="clear">[WEATHER.CONDITION] == 1 || [WEATHER.CONDITION] == 8</Expression>
+                </Expressions>
+                <Compare expression="cloud">
+                  <PartImage x="6" y="9" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_cloud" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="partly">
+                  <PartImage x="6" y="9" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_partly" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="fog">
+                  <PartImage x="6" y="9" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_fog" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="rain">
+                  <PartImage x="6" y="9" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_rain" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="snow">
+                  <PartImage x="6" y="9" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_snow" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="storm">
+                  <PartImage x="6" y="9" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_storm" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="sleet">
+                  <PartImage x="6" y="9" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_sleet" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="wind">
+                  <PartImage x="6" y="9" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_wind" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="clear">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="day">[WEATHER.IS_DAY]</Expression>
+                    </Expressions>
+                    <Compare expression="day">
+                      <PartImage x="7" y="10" width="33" height="33" tintColor="[CONFIGURATION.palette.0]">
+                        <Image resource="corner_sun" />
+                      </PartImage>
+                    </Compare>
+                    <Default>
+                      <PartImage x="7" y="10" width="33" height="33" tintColor="[CONFIGURATION.palette.0]">
+                        <Image resource="corner_moon" />
+                      </PartImage>
+                    </Default>
+                  </Condition>
+                </Compare>
+                <Default>
+                  <PartImage x="9" y="12" width="28" height="28" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_unavailable" />
+                  </PartImage>
+                </Default>
+              </Condition>
+            </Compare>
+            <Default>
+              <PartImage x="17" y="16" width="32" height="31" tintColor="[CONFIGURATION.palette.0]">
+                <Image resource="corner_unavailable" />
+              </PartImage>
+            </Default>
+          </Condition>
+        </Group>
+      </ListOption>
+      <ListOption id="weather_rich">
+        <Group name="top_left_weather_rich" x="48" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
+          <Launch target="com.samsung.android.watch.weather" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <Condition>
+            <Expressions>
+              <Expression name="live">[WEATHER.IS_AVAILABLE] &amp;&amp; ![WEATHER.IS_ERROR]</Expression>
+            </Expressions>
+            <Compare expression="live">
+              <PartText x="0" y="0" width="66" height="66">
+                <TextCircular centerX="168.9" centerY="127.87" width="358.97" height="358.97" startAngle="293.4194020124577" endAngle="316.4194020124577" direction="CLOCKWISE" align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">
+                    <Template>%s°<Parameter expression="[WEATHER.TEMPERATURE]" />
+                    </Template>
+                  </Font>
+                </TextCircular>
+              </PartText>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="168.9" centerY="127.87" width="312.82" height="312.82" startAngle="296.4194020124577" endAngle="313.4194020124577">
+                  <Stroke thickness="4" color="#FF383838" />
+                </Arc>
+              </PartDraw>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="168.9" centerY="127.87" width="312.82" height="312.82" startAngle="296.4194020124577" endAngle="313.4194020124577">
+                  <Transform target="endAngle" value="296.4194020124577 + 17.0 * clamp(([WEATHER.TEMPERATURE] - [WEATHER.DAY_TEMPERATURE_LOW])/max(1,[WEATHER.DAY_TEMPERATURE_HIGH] - [WEATHER.DAY_TEMPERATURE_LOW]),0,1)" />
+                  <Stroke thickness="4" color="#FFF6A34F" />
+                </Arc>
+              </PartDraw>
+            </Compare>
+            <Default>
+              <PartImage x="17" y="16" width="32" height="31" tintColor="[CONFIGURATION.palette.0]">
+                <Image resource="corner_unavailable" />
+              </PartImage>
+            </Default>
+          </Condition>
+        </Group>
+      </ListOption>
+      <ListOption id="weather_uv_index">
+        <Group name="top_left_weather_uv_index" x="48" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
+          <Launch target="com.samsung.android.watch.weather" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <Condition>
+            <Expressions>
+              <Expression name="live">[WEATHER.IS_AVAILABLE] &amp;&amp; ![WEATHER.IS_ERROR]</Expression>
+            </Expressions>
+            <Compare expression="live">
+              <PartText x="0" y="0" width="66" height="66">
+                <TextCircular centerX="168.9" centerY="127.87" width="358.97" height="358.97" startAngle="293.9194020124577" endAngle="315.9194020124577" direction="CLOCKWISE" align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="16" color="[CONFIGURATION.palette.0]">
+                    <Template>UV %s<Parameter expression="[WEATHER.UV_INDEX]" />
+                    </Template>
+                  </Font>
+                </TextCircular>
+              </PartText>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="168.9" centerY="127.87" width="312.82" height="312.82" startAngle="296.4194020124577" endAngle="313.4194020124577">
+                  <Stroke thickness="4" color="#FF383838" />
+                </Arc>
+              </PartDraw>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="168.9" centerY="127.87" width="312.82" height="312.82" startAngle="296.4194020124577" endAngle="313.4194020124577">
+                  <Transform target="endAngle" value="296.4194020124577 + 17.0 * clamp([WEATHER.UV_INDEX]/11.0,0,1)" />
+                  <Stroke thickness="4" color="#FFCD89DE" />
+                </Arc>
+              </PartDraw>
+            </Compare>
+            <Default>
+              <PartImage x="17" y="16" width="32" height="31" tintColor="[CONFIGURATION.palette.0]">
+                <Image resource="corner_unavailable" />
+              </PartImage>
+            </Default>
+          </Condition>
+        </Group>
+      </ListOption>
       <ListOption id="off">
         <Group name="top_left_off" x="0" y="0" width="1" height="1" />
       </ListOption>
     </ListConfiguration>
-    <ComplicationSlot x="70" y="54" width="68" height="68" slotId="1" displayName="top_left" supportedTypes="EMPTY SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE RANGED_VALUE GOAL_PROGRESS">
+    <ComplicationSlot x="41" y="89" width="80" height="80" slotId="1" displayName="top_left" supportedTypes="EMPTY SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE RANGED_VALUE GOAL_PROGRESS">
       <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" />
-      <BoundingOval x="0" y="0" width="68" height="68" />
+      <BoundingOval x="0" y="0" width="80" height="80" />
       <Complication type="EMPTY" />
       <Complication type="SHORT_TEXT">
-        <Group name="top_left_SHORT_TEXT" x="0" y="0" width="68" height="68">
+        <Group name="top_left_SHORT_TEXT" x="6" y="6" width="68" height="68" scaleX="1.17" scaleY="1.17">
           <PartDraw x="0" y="0" width="68" height="68">
             <Ellipse x="0" y="0" width="68" height="68">
               <Fill color="#FF191919" />
             </Ellipse>
           </PartDraw>
-          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-          <PartText x="4" y="29" width="60" height="30" angle="0">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+          <PartText x="0" y="0" width="66" height="66">
+            <TextCircular centerX="168.9" centerY="127.87" width="304.27" height="304.27" startAngle="293.4194020124577" endAngle="316.4194020124577" direction="CLOCKWISE" align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="15" color="[CONFIGURATION.palette.0]">
                 <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
                 </Template>
               </Font>
-            </Text>
+            </TextCircular>
           </PartText>
+          <PartImage x="12" y="15" width="26" height="26" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
         </Group>
       </Complication>
       <Complication type="MONOCHROMATIC_IMAGE">
-        <Group name="top_left_MONOCHROMATIC_IMAGE" x="0" y="0" width="68" height="68">
+        <Group name="top_left_MONOCHROMATIC_IMAGE" x="6" y="6" width="68" height="68" scaleX="1.17" scaleY="1.17">
           <PartDraw x="0" y="0" width="68" height="68">
             <Ellipse x="0" y="0" width="68" height="68">
               <Fill color="#FF191919" />
@@ -2530,7 +2754,7 @@
         </Group>
       </Complication>
       <Complication type="SMALL_IMAGE">
-        <Group name="top_left_SMALL_IMAGE" x="0" y="0" width="68" height="68">
+        <Group name="top_left_SMALL_IMAGE" x="6" y="6" width="68" height="68" scaleX="1.17" scaleY="1.17">
           <PartDraw x="0" y="0" width="68" height="68">
             <Ellipse x="0" y="0" width="68" height="68">
               <Fill color="#FF191919" />
@@ -2542,54 +2766,58 @@
         </Group>
       </Complication>
       <Complication type="RANGED_VALUE">
-        <Group name="top_left_RANGED_VALUE" x="0" y="0" width="68" height="68">
+        <Group name="top_left_RANGED_VALUE" x="6" y="6" width="68" height="68" scaleX="1.17" scaleY="1.17">
           <PartDraw x="0" y="0" width="68" height="68">
             <Ellipse x="0" y="0" width="68" height="68">
               <Fill color="#FF191919" />
             </Ellipse>
           </PartDraw>
-          <PartDraw x="0" y="0" width="68" height="68">
-            <Arc centerX="34" centerY="34" width="61" height="61" startAngle="0" endAngle="360">
-              <Transform target="endAngle" value="clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(0.0001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)*360" />
-              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
+          <PartDraw x="0" y="0" width="66" height="66">
+            <Arc centerX="168.9" centerY="127.87" width="307.69" height="307.69" startAngle="296.4194020124577" endAngle="313.4194020124577">
+              <Stroke thickness="4" color="#FF383838" />
             </Arc>
           </PartDraw>
-          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-          <PartText x="4" y="29" width="60" height="30" angle="0">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+          <PartDraw x="0" y="0" width="66" height="66">
+            <Arc centerX="168.9" centerY="127.87" width="307.69" height="307.69" startAngle="296.4194020124577" endAngle="313.4194020124577">
+              <Transform target="endAngle" value="296.4194020124577 + 17.0 * clamp(([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN])/max(0.0001,[COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]),0,1)" />
+              <Stroke thickness="4" color="[CONFIGURATION.palette.0]" />
+            </Arc>
+          </PartDraw>
+          <PartText x="0" y="0" width="66" height="66">
+            <TextCircular centerX="168.9" centerY="127.87" width="357.26" height="357.26" startAngle="293.9194020124577" endAngle="315.9194020124577" direction="CLOCKWISE" align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="15" color="[CONFIGURATION.palette.0]">
                 <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
                 </Template>
               </Font>
-            </Text>
+            </TextCircular>
           </PartText>
         </Group>
       </Complication>
       <Complication type="GOAL_PROGRESS">
-        <Group name="top_left_GOAL_PROGRESS" x="0" y="0" width="68" height="68">
+        <Group name="top_left_GOAL_PROGRESS" x="6" y="6" width="68" height="68" scaleX="1.17" scaleY="1.17">
           <PartDraw x="0" y="0" width="68" height="68">
             <Ellipse x="0" y="0" width="68" height="68">
               <Fill color="#FF191919" />
             </Ellipse>
           </PartDraw>
-          <PartDraw x="0" y="0" width="68" height="68">
-            <Arc centerX="34" centerY="34" width="61" height="61" startAngle="0" endAngle="360">
-              <Transform target="endAngle" value="clamp([COMPLICATION.GOAL_PROGRESS_VALUE]/max(0.0001,[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]),0,1)*360" />
-              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
+          <PartDraw x="0" y="0" width="66" height="66">
+            <Arc centerX="168.9" centerY="127.87" width="307.69" height="307.69" startAngle="296.4194020124577" endAngle="313.4194020124577">
+              <Stroke thickness="4" color="#FF383838" />
             </Arc>
           </PartDraw>
-          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-          <PartText x="4" y="29" width="60" height="30" angle="0">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+          <PartDraw x="0" y="0" width="66" height="66">
+            <Arc centerX="168.9" centerY="127.87" width="307.69" height="307.69" startAngle="296.4194020124577" endAngle="313.4194020124577">
+              <Transform target="endAngle" value="296.4194020124577 + 17.0 * clamp([COMPLICATION.GOAL_PROGRESS_VALUE]/max(0.0001,[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]),0,1)" />
+              <Stroke thickness="4" color="[CONFIGURATION.palette.0]" />
+            </Arc>
+          </PartDraw>
+          <PartText x="0" y="0" width="66" height="66">
+            <TextCircular centerX="168.9" centerY="127.87" width="357.26" height="357.26" startAngle="293.9194020124577" endAngle="315.9194020124577" direction="CLOCKWISE" align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="15" color="[CONFIGURATION.palette.0]">
                 <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
                 </Template>
               </Font>
-            </Text>
+            </TextCircular>
           </PartText>
         </Group>
       </Complication>
@@ -2597,7 +2825,7 @@
     </ComplicationSlot>
     <ListConfiguration id="art_top_right">
       <ListOption id="phone">
-        <Group name="top_right_phone" x="343" y="55" width="66" height="66">
+        <Group name="top_right_phone" x="366" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="PHONE" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
           <PartDraw x="1" y="1" width="64" height="64">
@@ -2611,7 +2839,7 @@
         </Group>
       </ListOption>
       <ListOption id="workout">
-        <Group name="top_right_workout" x="343" y="55" width="66" height="66">
+        <Group name="top_right_workout" x="366" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="com.samsung.android.wear.shealth" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
           <PartDraw x="1" y="1" width="64" height="64">
@@ -2625,7 +2853,7 @@
         </Group>
       </ListOption>
       <ListOption id="messages">
-        <Group name="top_right_messages" x="343" y="55" width="66" height="66">
+        <Group name="top_right_messages" x="366" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="MESSAGE" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
           <PartDraw x="1" y="1" width="64" height="64">
@@ -2639,21 +2867,21 @@
         </Group>
       </ListOption>
       <ListOption id="music">
-        <Group name="top_right_music" x="343" y="55" width="66" height="66">
+        <Group name="top_right_music" x="366" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="MUSIC_PLAYER" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
-          <PartText x="-6" y="3" width="67" height="24" angle="-35">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="SYNC_TO_DEVICE" size="16" color="[CONFIGURATION.palette.0]">@string/music_caption</Font>
-            </Text>
+          <PartText x="0" y="0" width="66" height="66">
+            <TextCircular centerX="-102.9" centerY="127.87" width="302.56" height="302.56" startAngle="43.58059798754232" endAngle="66.58059798754232" direction="CLOCKWISE" align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="15" color="[CONFIGURATION.palette.0]">@string/music_caption</Font>
+            </TextCircular>
           </PartText>
-          <PartImage x="31" y="32" width="24" height="27" tintColor="[CONFIGURATION.palette.0]">
+          <PartImage x="30" y="13" width="25" height="27" tintColor="[CONFIGURATION.palette.0]">
             <Image resource="corner_note" />
           </PartImage>
         </Group>
       </ListOption>
       <ListOption id="alarm">
-        <Group name="top_right_alarm" x="343" y="55" width="66" height="66">
+        <Group name="top_right_alarm" x="366" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="ALARM" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
           <PartDraw x="1" y="1" width="64" height="64">
@@ -2667,46 +2895,83 @@
         </Group>
       </ListOption>
       <ListOption id="heartrate">
-        <Group name="top_right_heartrate" x="343" y="55" width="66" height="66">
+        <Group name="top_right_heartrate" x="366" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="HEALTH_HEART_RATE" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
-          <PartDraw x="1" y="1" width="64" height="64">
-            <Ellipse x="0" y="0" width="64" height="64">
-              <Fill color="#FF1B1B1B" />
-            </Ellipse>
-          </PartDraw>
-          <PartImage x="15" y="17" width="35" height="32" tintColor="[CONFIGURATION.palette.0]">
+          <PartImage x="27" y="11" width="31" height="31" tintColor="#FFFF527C">
             <Image resource="corner_heartrate" />
           </PartImage>
+          <Condition>
+            <Expressions>
+              <Expression name="pulse">[HEART_RATE] &gt; 0</Expression>
+            </Expressions>
+            <Compare expression="pulse">
+              <PartText x="0" y="0" width="66" height="66">
+                <TextCircular centerX="-102.9" centerY="127.87" width="302.56" height="302.56" startAngle="44.58059798754232" endAngle="65.58059798754232" direction="CLOCKWISE" align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">
+                    <Template>%s<Parameter expression="[HEART_RATE]" />
+                    </Template>
+                  </Font>
+                </TextCircular>
+              </PartText>
+            </Compare>
+            <Default>
+              <PartText x="0" y="0" width="66" height="66">
+                <TextCircular centerX="-102.9" centerY="127.87" width="302.56" height="302.56" startAngle="44.58059798754232" endAngle="65.58059798754232" direction="CLOCKWISE" align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">—</Font>
+                </TextCircular>
+              </PartText>
+            </Default>
+          </Condition>
         </Group>
       </ListOption>
       <ListOption id="battery">
-        <Group name="top_right_battery" x="343" y="55" width="66" height="66">
+        <Group name="top_right_battery" x="366" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="BATTERY_STATUS" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
-          <PartDraw x="1" y="1" width="64" height="64">
-            <Ellipse x="0" y="0" width="64" height="64">
-              <Fill color="#FF1B1B1B" />
-            </Ellipse>
-          </PartDraw>
-          <PartDraw x="0" y="0" width="66" height="66">
-            <Arc centerX="33" centerY="33" width="56" height="56" startAngle="0" endAngle="360">
-              <Transform target="endAngle" value="[BATTERY_PERCENT]*3.6" />
-              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
-            </Arc>
-          </PartDraw>
-          <PartText x="4" y="19" width="58" height="29" angle="0">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
-                <Template>%s<Parameter expression="[BATTERY_PERCENT]" />
+          <PartText x="0" y="0" width="66" height="66">
+            <TextCircular centerX="-102.9" centerY="127.87" width="355.56" height="355.56" startAngle="44.08059798754232" endAngle="66.08059798754232" direction="CLOCKWISE" align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">
+                <Template>%s%%<Parameter expression="[BATTERY_PERCENT]" />
                 </Template>
               </Font>
-            </Text>
+            </TextCircular>
           </PartText>
+          <Condition>
+            <Expressions>
+              <Expression name="normal">[BATTERY_PERCENT] &gt; 20</Expression>
+            </Expressions>
+            <Compare expression="normal">
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="-102.9" centerY="127.87" width="307.69" height="307.69" startAngle="46.58059798754232" endAngle="63.58059798754232">
+                  <Stroke thickness="4" color="#FF383838" />
+                </Arc>
+              </PartDraw>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="-102.9" centerY="127.87" width="307.69" height="307.69" startAngle="46.58059798754232" endAngle="63.58059798754232">
+                  <Transform target="endAngle" value="46.58059798754232 + 17.0 * clamp([BATTERY_PERCENT]/100.0,0,1)" />
+                  <Stroke thickness="4" color="#FF53D76A" />
+                </Arc>
+              </PartDraw>
+            </Compare>
+            <Default>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="-102.9" centerY="127.87" width="307.69" height="307.69" startAngle="46.58059798754232" endAngle="63.58059798754232">
+                  <Stroke thickness="4" color="#FF383838" />
+                </Arc>
+              </PartDraw>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="-102.9" centerY="127.87" width="307.69" height="307.69" startAngle="46.58059798754232" endAngle="63.58059798754232">
+                  <Transform target="endAngle" value="46.58059798754232 + 17.0 * clamp([BATTERY_PERCENT]/100.0,0,1)" />
+                  <Stroke thickness="4" color="#FFFC5855" />
+                </Arc>
+              </PartDraw>
+            </Default>
+          </Condition>
         </Group>
       </ListOption>
       <ListOption id="date">
-        <Group name="top_right_date" x="343" y="55" width="66" height="66">
+        <Group name="top_right_date" x="366" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="CALENDAR" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
           <PartDraw x="1" y="1" width="64" height="64">
@@ -2732,36 +2997,211 @@
           </PartText>
         </Group>
       </ListOption>
+      <ListOption id="weather">
+        <Group name="top_right_weather" x="366" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
+          <Launch target="com.samsung.android.watch.weather" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <Condition>
+            <Expressions>
+              <Expression name="weather">[WEATHER.IS_AVAILABLE] &amp;&amp; ![WEATHER.IS_ERROR]</Expression>
+            </Expressions>
+            <Compare expression="weather">
+              <PartText x="0" y="0" width="66" height="66">
+                <TextCircular centerX="-102.9" centerY="127.87" width="302.56" height="302.56" startAngle="44.08059798754232" endAngle="66.08059798754232" direction="CLOCKWISE" align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">
+                    <Template>%s°<Parameter expression="[WEATHER.TEMPERATURE]" />
+                    </Template>
+                  </Font>
+                </TextCircular>
+              </PartText>
+              <Condition>
+                <Expressions>
+                  <Expression name="cloud">[WEATHER.CONDITION] == 2</Expression>
+                  <Expression name="partly">[WEATHER.CONDITION] == 14</Expression>
+                  <Expression name="fog">[WEATHER.CONDITION] == 3 || [WEATHER.CONDITION] == 13</Expression>
+                  <Expression name="rain">[WEATHER.CONDITION] == 4 || [WEATHER.CONDITION] == 6 || [WEATHER.CONDITION] == 12</Expression>
+                  <Expression name="snow">[WEATHER.CONDITION] == 5 || [WEATHER.CONDITION] == 7 || [WEATHER.CONDITION] == 11</Expression>
+                  <Expression name="storm">[WEATHER.CONDITION] == 9</Expression>
+                  <Expression name="sleet">[WEATHER.CONDITION] == 10</Expression>
+                  <Expression name="wind">[WEATHER.CONDITION] == 15</Expression>
+                  <Expression name="clear">[WEATHER.CONDITION] == 1 || [WEATHER.CONDITION] == 8</Expression>
+                </Expressions>
+                <Compare expression="cloud">
+                  <PartImage x="26" y="9" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_cloud" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="partly">
+                  <PartImage x="26" y="9" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_partly" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="fog">
+                  <PartImage x="26" y="9" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_fog" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="rain">
+                  <PartImage x="26" y="9" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_rain" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="snow">
+                  <PartImage x="26" y="9" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_snow" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="storm">
+                  <PartImage x="26" y="9" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_storm" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="sleet">
+                  <PartImage x="26" y="9" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_sleet" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="wind">
+                  <PartImage x="26" y="9" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_wind" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="clear">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="day">[WEATHER.IS_DAY]</Expression>
+                    </Expressions>
+                    <Compare expression="day">
+                      <PartImage x="26" y="10" width="33" height="33" tintColor="[CONFIGURATION.palette.0]">
+                        <Image resource="corner_sun" />
+                      </PartImage>
+                    </Compare>
+                    <Default>
+                      <PartImage x="26" y="10" width="33" height="33" tintColor="[CONFIGURATION.palette.0]">
+                        <Image resource="corner_moon" />
+                      </PartImage>
+                    </Default>
+                  </Condition>
+                </Compare>
+                <Default>
+                  <PartImage x="29" y="12" width="28" height="28" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_unavailable" />
+                  </PartImage>
+                </Default>
+              </Condition>
+            </Compare>
+            <Default>
+              <PartImage x="17" y="16" width="32" height="31" tintColor="[CONFIGURATION.palette.0]">
+                <Image resource="corner_unavailable" />
+              </PartImage>
+            </Default>
+          </Condition>
+        </Group>
+      </ListOption>
+      <ListOption id="weather_rich">
+        <Group name="top_right_weather_rich" x="366" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
+          <Launch target="com.samsung.android.watch.weather" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <Condition>
+            <Expressions>
+              <Expression name="live">[WEATHER.IS_AVAILABLE] &amp;&amp; ![WEATHER.IS_ERROR]</Expression>
+            </Expressions>
+            <Compare expression="live">
+              <PartText x="0" y="0" width="66" height="66">
+                <TextCircular centerX="-102.9" centerY="127.87" width="358.97" height="358.97" startAngle="43.58059798754232" endAngle="66.58059798754232" direction="CLOCKWISE" align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">
+                    <Template>%s°<Parameter expression="[WEATHER.TEMPERATURE]" />
+                    </Template>
+                  </Font>
+                </TextCircular>
+              </PartText>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="-102.9" centerY="127.87" width="312.82" height="312.82" startAngle="46.58059798754232" endAngle="63.58059798754232">
+                  <Stroke thickness="4" color="#FF383838" />
+                </Arc>
+              </PartDraw>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="-102.9" centerY="127.87" width="312.82" height="312.82" startAngle="46.58059798754232" endAngle="63.58059798754232">
+                  <Transform target="endAngle" value="46.58059798754232 + 17.0 * clamp(([WEATHER.TEMPERATURE] - [WEATHER.DAY_TEMPERATURE_LOW])/max(1,[WEATHER.DAY_TEMPERATURE_HIGH] - [WEATHER.DAY_TEMPERATURE_LOW]),0,1)" />
+                  <Stroke thickness="4" color="#FFF6A34F" />
+                </Arc>
+              </PartDraw>
+            </Compare>
+            <Default>
+              <PartImage x="17" y="16" width="32" height="31" tintColor="[CONFIGURATION.palette.0]">
+                <Image resource="corner_unavailable" />
+              </PartImage>
+            </Default>
+          </Condition>
+        </Group>
+      </ListOption>
+      <ListOption id="weather_uv_index">
+        <Group name="top_right_weather_uv_index" x="366" y="96" width="66" height="66" scaleX="1.17" scaleY="1.17">
+          <Launch target="com.samsung.android.watch.weather" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <Condition>
+            <Expressions>
+              <Expression name="live">[WEATHER.IS_AVAILABLE] &amp;&amp; ![WEATHER.IS_ERROR]</Expression>
+            </Expressions>
+            <Compare expression="live">
+              <PartText x="0" y="0" width="66" height="66">
+                <TextCircular centerX="-102.9" centerY="127.87" width="358.97" height="358.97" startAngle="44.08059798754232" endAngle="66.08059798754232" direction="CLOCKWISE" align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="16" color="[CONFIGURATION.palette.0]">
+                    <Template>UV %s<Parameter expression="[WEATHER.UV_INDEX]" />
+                    </Template>
+                  </Font>
+                </TextCircular>
+              </PartText>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="-102.9" centerY="127.87" width="312.82" height="312.82" startAngle="46.58059798754232" endAngle="63.58059798754232">
+                  <Stroke thickness="4" color="#FF383838" />
+                </Arc>
+              </PartDraw>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="-102.9" centerY="127.87" width="312.82" height="312.82" startAngle="46.58059798754232" endAngle="63.58059798754232">
+                  <Transform target="endAngle" value="46.58059798754232 + 17.0 * clamp([WEATHER.UV_INDEX]/11.0,0,1)" />
+                  <Stroke thickness="4" color="#FFCD89DE" />
+                </Arc>
+              </PartDraw>
+            </Compare>
+            <Default>
+              <PartImage x="17" y="16" width="32" height="31" tintColor="[CONFIGURATION.palette.0]">
+                <Image resource="corner_unavailable" />
+              </PartImage>
+            </Default>
+          </Condition>
+        </Group>
+      </ListOption>
       <ListOption id="off">
         <Group name="top_right_off" x="0" y="0" width="1" height="1" />
       </ListOption>
     </ListConfiguration>
-    <ComplicationSlot x="342" y="54" width="68" height="68" slotId="2" displayName="top_right" supportedTypes="EMPTY SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE RANGED_VALUE GOAL_PROGRESS">
+    <ComplicationSlot x="359" y="89" width="80" height="80" slotId="2" displayName="top_right" supportedTypes="EMPTY SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE RANGED_VALUE GOAL_PROGRESS">
       <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" />
-      <BoundingOval x="0" y="0" width="68" height="68" />
+      <BoundingOval x="0" y="0" width="80" height="80" />
       <Complication type="EMPTY" />
       <Complication type="SHORT_TEXT">
-        <Group name="top_right_SHORT_TEXT" x="0" y="0" width="68" height="68">
+        <Group name="top_right_SHORT_TEXT" x="6" y="6" width="68" height="68" scaleX="1.17" scaleY="1.17">
           <PartDraw x="0" y="0" width="68" height="68">
             <Ellipse x="0" y="0" width="68" height="68">
               <Fill color="#FF191919" />
             </Ellipse>
           </PartDraw>
-          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-          <PartText x="4" y="29" width="60" height="30" angle="0">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+          <PartText x="0" y="0" width="66" height="66">
+            <TextCircular centerX="-102.9" centerY="127.87" width="304.27" height="304.27" startAngle="43.58059798754232" endAngle="66.58059798754232" direction="CLOCKWISE" align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="15" color="[CONFIGURATION.palette.0]">
                 <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
                 </Template>
               </Font>
-            </Text>
+            </TextCircular>
           </PartText>
+          <PartImage x="30" y="15" width="26" height="26" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
         </Group>
       </Complication>
       <Complication type="MONOCHROMATIC_IMAGE">
-        <Group name="top_right_MONOCHROMATIC_IMAGE" x="0" y="0" width="68" height="68">
+        <Group name="top_right_MONOCHROMATIC_IMAGE" x="6" y="6" width="68" height="68" scaleX="1.17" scaleY="1.17">
           <PartDraw x="0" y="0" width="68" height="68">
             <Ellipse x="0" y="0" width="68" height="68">
               <Fill color="#FF191919" />
@@ -2773,7 +3213,7 @@
         </Group>
       </Complication>
       <Complication type="SMALL_IMAGE">
-        <Group name="top_right_SMALL_IMAGE" x="0" y="0" width="68" height="68">
+        <Group name="top_right_SMALL_IMAGE" x="6" y="6" width="68" height="68" scaleX="1.17" scaleY="1.17">
           <PartDraw x="0" y="0" width="68" height="68">
             <Ellipse x="0" y="0" width="68" height="68">
               <Fill color="#FF191919" />
@@ -2785,54 +3225,58 @@
         </Group>
       </Complication>
       <Complication type="RANGED_VALUE">
-        <Group name="top_right_RANGED_VALUE" x="0" y="0" width="68" height="68">
+        <Group name="top_right_RANGED_VALUE" x="6" y="6" width="68" height="68" scaleX="1.17" scaleY="1.17">
           <PartDraw x="0" y="0" width="68" height="68">
             <Ellipse x="0" y="0" width="68" height="68">
               <Fill color="#FF191919" />
             </Ellipse>
           </PartDraw>
-          <PartDraw x="0" y="0" width="68" height="68">
-            <Arc centerX="34" centerY="34" width="61" height="61" startAngle="0" endAngle="360">
-              <Transform target="endAngle" value="clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(0.0001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)*360" />
-              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
+          <PartDraw x="0" y="0" width="66" height="66">
+            <Arc centerX="-102.9" centerY="127.87" width="307.69" height="307.69" startAngle="46.58059798754232" endAngle="63.58059798754232">
+              <Stroke thickness="4" color="#FF383838" />
             </Arc>
           </PartDraw>
-          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-          <PartText x="4" y="29" width="60" height="30" angle="0">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+          <PartDraw x="0" y="0" width="66" height="66">
+            <Arc centerX="-102.9" centerY="127.87" width="307.69" height="307.69" startAngle="46.58059798754232" endAngle="63.58059798754232">
+              <Transform target="endAngle" value="46.58059798754232 + 17.0 * clamp(([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN])/max(0.0001,[COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]),0,1)" />
+              <Stroke thickness="4" color="[CONFIGURATION.palette.0]" />
+            </Arc>
+          </PartDraw>
+          <PartText x="0" y="0" width="66" height="66">
+            <TextCircular centerX="-102.9" centerY="127.87" width="357.26" height="357.26" startAngle="44.08059798754232" endAngle="66.08059798754232" direction="CLOCKWISE" align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="15" color="[CONFIGURATION.palette.0]">
                 <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
                 </Template>
               </Font>
-            </Text>
+            </TextCircular>
           </PartText>
         </Group>
       </Complication>
       <Complication type="GOAL_PROGRESS">
-        <Group name="top_right_GOAL_PROGRESS" x="0" y="0" width="68" height="68">
+        <Group name="top_right_GOAL_PROGRESS" x="6" y="6" width="68" height="68" scaleX="1.17" scaleY="1.17">
           <PartDraw x="0" y="0" width="68" height="68">
             <Ellipse x="0" y="0" width="68" height="68">
               <Fill color="#FF191919" />
             </Ellipse>
           </PartDraw>
-          <PartDraw x="0" y="0" width="68" height="68">
-            <Arc centerX="34" centerY="34" width="61" height="61" startAngle="0" endAngle="360">
-              <Transform target="endAngle" value="clamp([COMPLICATION.GOAL_PROGRESS_VALUE]/max(0.0001,[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]),0,1)*360" />
-              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
+          <PartDraw x="0" y="0" width="66" height="66">
+            <Arc centerX="-102.9" centerY="127.87" width="307.69" height="307.69" startAngle="46.58059798754232" endAngle="63.58059798754232">
+              <Stroke thickness="4" color="#FF383838" />
             </Arc>
           </PartDraw>
-          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-          <PartText x="4" y="29" width="60" height="30" angle="0">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+          <PartDraw x="0" y="0" width="66" height="66">
+            <Arc centerX="-102.9" centerY="127.87" width="307.69" height="307.69" startAngle="46.58059798754232" endAngle="63.58059798754232">
+              <Transform target="endAngle" value="46.58059798754232 + 17.0 * clamp([COMPLICATION.GOAL_PROGRESS_VALUE]/max(0.0001,[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]),0,1)" />
+              <Stroke thickness="4" color="[CONFIGURATION.palette.0]" />
+            </Arc>
+          </PartDraw>
+          <PartText x="0" y="0" width="66" height="66">
+            <TextCircular centerX="-102.9" centerY="127.87" width="357.26" height="357.26" startAngle="44.08059798754232" endAngle="66.08059798754232" direction="CLOCKWISE" align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="15" color="[CONFIGURATION.palette.0]">
                 <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
                 </Template>
               </Font>
-            </Text>
+            </TextCircular>
           </PartText>
         </Group>
       </Complication>
@@ -2840,7 +3284,7 @@
     </ComplicationSlot>
     <ListConfiguration id="art_bottom_left">
       <ListOption id="phone">
-        <Group name="bottom_left_phone" x="71" y="359" width="66" height="66">
+        <Group name="bottom_left_phone" x="48" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="PHONE" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
           <PartDraw x="1" y="1" width="64" height="64">
@@ -2854,7 +3298,7 @@
         </Group>
       </ListOption>
       <ListOption id="workout">
-        <Group name="bottom_left_workout" x="71" y="359" width="66" height="66">
+        <Group name="bottom_left_workout" x="48" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="com.samsung.android.wear.shealth" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
           <PartDraw x="1" y="1" width="64" height="64">
@@ -2868,7 +3312,7 @@
         </Group>
       </ListOption>
       <ListOption id="messages">
-        <Group name="bottom_left_messages" x="71" y="359" width="66" height="66">
+        <Group name="bottom_left_messages" x="48" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="MESSAGE" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
           <PartDraw x="1" y="1" width="64" height="64">
@@ -2882,21 +3326,21 @@
         </Group>
       </ListOption>
       <ListOption id="music">
-        <Group name="bottom_left_music" x="71" y="359" width="66" height="66">
+        <Group name="bottom_left_music" x="48" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="MUSIC_PLAYER" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
-          <PartText x="-6" y="3" width="67" height="24" angle="-35">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="SYNC_TO_DEVICE" size="16" color="[CONFIGURATION.palette.0]">@string/music_caption</Font>
-            </Text>
+          <PartText x="0" y="0" width="66" height="66">
+            <TextCircular centerX="168.9" centerY="-61.87" width="302.56" height="302.56" startAngle="246.58059798754232" endAngle="223.58059798754232" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="15" color="[CONFIGURATION.palette.0]">@string/music_caption</Font>
+            </TextCircular>
           </PartText>
-          <PartImage x="31" y="32" width="24" height="27" tintColor="[CONFIGURATION.palette.0]">
+          <PartImage x="11" y="26" width="25" height="27" tintColor="[CONFIGURATION.palette.0]">
             <Image resource="corner_note" />
           </PartImage>
         </Group>
       </ListOption>
       <ListOption id="alarm">
-        <Group name="bottom_left_alarm" x="71" y="359" width="66" height="66">
+        <Group name="bottom_left_alarm" x="48" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="ALARM" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
           <PartDraw x="1" y="1" width="64" height="64">
@@ -2910,46 +3354,83 @@
         </Group>
       </ListOption>
       <ListOption id="heartrate">
-        <Group name="bottom_left_heartrate" x="71" y="359" width="66" height="66">
+        <Group name="bottom_left_heartrate" x="48" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="HEALTH_HEART_RATE" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
-          <PartDraw x="1" y="1" width="64" height="64">
-            <Ellipse x="0" y="0" width="64" height="64">
-              <Fill color="#FF1B1B1B" />
-            </Ellipse>
-          </PartDraw>
-          <PartImage x="15" y="17" width="35" height="32" tintColor="[CONFIGURATION.palette.0]">
+          <PartImage x="8" y="24" width="31" height="31" tintColor="#FFFF527C">
             <Image resource="corner_heartrate" />
           </PartImage>
+          <Condition>
+            <Expressions>
+              <Expression name="pulse">[HEART_RATE] &gt; 0</Expression>
+            </Expressions>
+            <Compare expression="pulse">
+              <PartText x="0" y="0" width="66" height="66">
+                <TextCircular centerX="168.9" centerY="-61.87" width="302.56" height="302.56" startAngle="245.58059798754232" endAngle="224.58059798754232" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">
+                    <Template>%s<Parameter expression="[HEART_RATE]" />
+                    </Template>
+                  </Font>
+                </TextCircular>
+              </PartText>
+            </Compare>
+            <Default>
+              <PartText x="0" y="0" width="66" height="66">
+                <TextCircular centerX="168.9" centerY="-61.87" width="302.56" height="302.56" startAngle="245.58059798754232" endAngle="224.58059798754232" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">—</Font>
+                </TextCircular>
+              </PartText>
+            </Default>
+          </Condition>
         </Group>
       </ListOption>
       <ListOption id="battery">
-        <Group name="bottom_left_battery" x="71" y="359" width="66" height="66">
+        <Group name="bottom_left_battery" x="48" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="BATTERY_STATUS" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
-          <PartDraw x="1" y="1" width="64" height="64">
-            <Ellipse x="0" y="0" width="64" height="64">
-              <Fill color="#FF1B1B1B" />
-            </Ellipse>
-          </PartDraw>
-          <PartDraw x="0" y="0" width="66" height="66">
-            <Arc centerX="33" centerY="33" width="56" height="56" startAngle="0" endAngle="360">
-              <Transform target="endAngle" value="[BATTERY_PERCENT]*3.6" />
-              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
-            </Arc>
-          </PartDraw>
-          <PartText x="4" y="19" width="58" height="29" angle="0">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
-                <Template>%s<Parameter expression="[BATTERY_PERCENT]" />
+          <PartText x="0" y="0" width="66" height="66">
+            <TextCircular centerX="168.9" centerY="-61.87" width="355.56" height="355.56" startAngle="246.08059798754232" endAngle="224.08059798754232" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">
+                <Template>%s%%<Parameter expression="[BATTERY_PERCENT]" />
                 </Template>
               </Font>
-            </Text>
+            </TextCircular>
           </PartText>
+          <Condition>
+            <Expressions>
+              <Expression name="normal">[BATTERY_PERCENT] &gt; 20</Expression>
+            </Expressions>
+            <Compare expression="normal">
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="168.9" centerY="-61.87" width="307.69" height="307.69" startAngle="226.58059798754232" endAngle="243.58059798754232">
+                  <Stroke thickness="4" color="#FF383838" />
+                </Arc>
+              </PartDraw>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="168.9" centerY="-61.87" width="307.69" height="307.69" startAngle="226.58059798754232" endAngle="243.58059798754232">
+                  <Transform target="endAngle" value="226.58059798754232 + 17.0 * clamp([BATTERY_PERCENT]/100.0,0,1)" />
+                  <Stroke thickness="4" color="#FF53D76A" />
+                </Arc>
+              </PartDraw>
+            </Compare>
+            <Default>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="168.9" centerY="-61.87" width="307.69" height="307.69" startAngle="226.58059798754232" endAngle="243.58059798754232">
+                  <Stroke thickness="4" color="#FF383838" />
+                </Arc>
+              </PartDraw>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="168.9" centerY="-61.87" width="307.69" height="307.69" startAngle="226.58059798754232" endAngle="243.58059798754232">
+                  <Transform target="endAngle" value="226.58059798754232 + 17.0 * clamp([BATTERY_PERCENT]/100.0,0,1)" />
+                  <Stroke thickness="4" color="#FFFC5855" />
+                </Arc>
+              </PartDraw>
+            </Default>
+          </Condition>
         </Group>
       </ListOption>
       <ListOption id="date">
-        <Group name="bottom_left_date" x="71" y="359" width="66" height="66">
+        <Group name="bottom_left_date" x="48" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="CALENDAR" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
           <PartDraw x="1" y="1" width="64" height="64">
@@ -2975,36 +3456,211 @@
           </PartText>
         </Group>
       </ListOption>
+      <ListOption id="weather">
+        <Group name="bottom_left_weather" x="48" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
+          <Launch target="com.samsung.android.watch.weather" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <Condition>
+            <Expressions>
+              <Expression name="weather">[WEATHER.IS_AVAILABLE] &amp;&amp; ![WEATHER.IS_ERROR]</Expression>
+            </Expressions>
+            <Compare expression="weather">
+              <PartText x="0" y="0" width="66" height="66">
+                <TextCircular centerX="168.9" centerY="-61.87" width="302.56" height="302.56" startAngle="246.08059798754232" endAngle="224.08059798754232" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">
+                    <Template>%s°<Parameter expression="[WEATHER.TEMPERATURE]" />
+                    </Template>
+                  </Font>
+                </TextCircular>
+              </PartText>
+              <Condition>
+                <Expressions>
+                  <Expression name="cloud">[WEATHER.CONDITION] == 2</Expression>
+                  <Expression name="partly">[WEATHER.CONDITION] == 14</Expression>
+                  <Expression name="fog">[WEATHER.CONDITION] == 3 || [WEATHER.CONDITION] == 13</Expression>
+                  <Expression name="rain">[WEATHER.CONDITION] == 4 || [WEATHER.CONDITION] == 6 || [WEATHER.CONDITION] == 12</Expression>
+                  <Expression name="snow">[WEATHER.CONDITION] == 5 || [WEATHER.CONDITION] == 7 || [WEATHER.CONDITION] == 11</Expression>
+                  <Expression name="storm">[WEATHER.CONDITION] == 9</Expression>
+                  <Expression name="sleet">[WEATHER.CONDITION] == 10</Expression>
+                  <Expression name="wind">[WEATHER.CONDITION] == 15</Expression>
+                  <Expression name="clear">[WEATHER.CONDITION] == 1 || [WEATHER.CONDITION] == 8</Expression>
+                </Expressions>
+                <Compare expression="cloud">
+                  <PartImage x="6" y="23" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_cloud" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="partly">
+                  <PartImage x="6" y="23" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_partly" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="fog">
+                  <PartImage x="6" y="23" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_fog" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="rain">
+                  <PartImage x="6" y="23" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_rain" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="snow">
+                  <PartImage x="6" y="23" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_snow" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="storm">
+                  <PartImage x="6" y="23" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_storm" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="sleet">
+                  <PartImage x="6" y="23" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_sleet" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="wind">
+                  <PartImage x="6" y="23" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_wind" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="clear">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="day">[WEATHER.IS_DAY]</Expression>
+                    </Expressions>
+                    <Compare expression="day">
+                      <PartImage x="7" y="23" width="33" height="33" tintColor="[CONFIGURATION.palette.0]">
+                        <Image resource="corner_sun" />
+                      </PartImage>
+                    </Compare>
+                    <Default>
+                      <PartImage x="7" y="23" width="33" height="33" tintColor="[CONFIGURATION.palette.0]">
+                        <Image resource="corner_moon" />
+                      </PartImage>
+                    </Default>
+                  </Condition>
+                </Compare>
+                <Default>
+                  <PartImage x="9" y="26" width="28" height="28" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_unavailable" />
+                  </PartImage>
+                </Default>
+              </Condition>
+            </Compare>
+            <Default>
+              <PartImage x="17" y="16" width="32" height="31" tintColor="[CONFIGURATION.palette.0]">
+                <Image resource="corner_unavailable" />
+              </PartImage>
+            </Default>
+          </Condition>
+        </Group>
+      </ListOption>
+      <ListOption id="weather_rich">
+        <Group name="bottom_left_weather_rich" x="48" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
+          <Launch target="com.samsung.android.watch.weather" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <Condition>
+            <Expressions>
+              <Expression name="live">[WEATHER.IS_AVAILABLE] &amp;&amp; ![WEATHER.IS_ERROR]</Expression>
+            </Expressions>
+            <Compare expression="live">
+              <PartText x="0" y="0" width="66" height="66">
+                <TextCircular centerX="168.9" centerY="-61.87" width="358.97" height="358.97" startAngle="246.58059798754232" endAngle="223.58059798754232" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">
+                    <Template>%s°<Parameter expression="[WEATHER.TEMPERATURE]" />
+                    </Template>
+                  </Font>
+                </TextCircular>
+              </PartText>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="168.9" centerY="-61.87" width="312.82" height="312.82" startAngle="226.58059798754232" endAngle="243.58059798754232">
+                  <Stroke thickness="4" color="#FF383838" />
+                </Arc>
+              </PartDraw>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="168.9" centerY="-61.87" width="312.82" height="312.82" startAngle="226.58059798754232" endAngle="243.58059798754232">
+                  <Transform target="endAngle" value="226.58059798754232 + 17.0 * clamp(([WEATHER.TEMPERATURE] - [WEATHER.DAY_TEMPERATURE_LOW])/max(1,[WEATHER.DAY_TEMPERATURE_HIGH] - [WEATHER.DAY_TEMPERATURE_LOW]),0,1)" />
+                  <Stroke thickness="4" color="#FFF6A34F" />
+                </Arc>
+              </PartDraw>
+            </Compare>
+            <Default>
+              <PartImage x="17" y="16" width="32" height="31" tintColor="[CONFIGURATION.palette.0]">
+                <Image resource="corner_unavailable" />
+              </PartImage>
+            </Default>
+          </Condition>
+        </Group>
+      </ListOption>
+      <ListOption id="weather_uv_index">
+        <Group name="bottom_left_weather_uv_index" x="48" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
+          <Launch target="com.samsung.android.watch.weather" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <Condition>
+            <Expressions>
+              <Expression name="live">[WEATHER.IS_AVAILABLE] &amp;&amp; ![WEATHER.IS_ERROR]</Expression>
+            </Expressions>
+            <Compare expression="live">
+              <PartText x="0" y="0" width="66" height="66">
+                <TextCircular centerX="168.9" centerY="-61.87" width="358.97" height="358.97" startAngle="246.08059798754232" endAngle="224.08059798754232" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="16" color="[CONFIGURATION.palette.0]">
+                    <Template>UV %s<Parameter expression="[WEATHER.UV_INDEX]" />
+                    </Template>
+                  </Font>
+                </TextCircular>
+              </PartText>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="168.9" centerY="-61.87" width="312.82" height="312.82" startAngle="226.58059798754232" endAngle="243.58059798754232">
+                  <Stroke thickness="4" color="#FF383838" />
+                </Arc>
+              </PartDraw>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="168.9" centerY="-61.87" width="312.82" height="312.82" startAngle="226.58059798754232" endAngle="243.58059798754232">
+                  <Transform target="endAngle" value="226.58059798754232 + 17.0 * clamp([WEATHER.UV_INDEX]/11.0,0,1)" />
+                  <Stroke thickness="4" color="#FFCD89DE" />
+                </Arc>
+              </PartDraw>
+            </Compare>
+            <Default>
+              <PartImage x="17" y="16" width="32" height="31" tintColor="[CONFIGURATION.palette.0]">
+                <Image resource="corner_unavailable" />
+              </PartImage>
+            </Default>
+          </Condition>
+        </Group>
+      </ListOption>
       <ListOption id="off">
         <Group name="bottom_left_off" x="0" y="0" width="1" height="1" />
       </ListOption>
     </ListConfiguration>
-    <ComplicationSlot x="70" y="358" width="68" height="68" slotId="3" displayName="bottom_left" supportedTypes="EMPTY SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE RANGED_VALUE GOAL_PROGRESS">
+    <ComplicationSlot x="41" y="311" width="80" height="80" slotId="3" displayName="bottom_left" supportedTypes="EMPTY SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE RANGED_VALUE GOAL_PROGRESS">
       <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" />
-      <BoundingOval x="0" y="0" width="68" height="68" />
+      <BoundingOval x="0" y="0" width="80" height="80" />
       <Complication type="EMPTY" />
       <Complication type="SHORT_TEXT">
-        <Group name="bottom_left_SHORT_TEXT" x="0" y="0" width="68" height="68">
+        <Group name="bottom_left_SHORT_TEXT" x="6" y="6" width="68" height="68" scaleX="1.17" scaleY="1.17">
           <PartDraw x="0" y="0" width="68" height="68">
             <Ellipse x="0" y="0" width="68" height="68">
               <Fill color="#FF191919" />
             </Ellipse>
           </PartDraw>
-          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-          <PartText x="4" y="29" width="60" height="30" angle="0">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+          <PartText x="0" y="0" width="66" height="66">
+            <TextCircular centerX="168.9" centerY="-61.87" width="304.27" height="304.27" startAngle="246.58059798754232" endAngle="223.58059798754232" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="15" color="[CONFIGURATION.palette.0]">
                 <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
                 </Template>
               </Font>
-            </Text>
+            </TextCircular>
           </PartText>
+          <PartImage x="12" y="27" width="26" height="26" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
         </Group>
       </Complication>
       <Complication type="MONOCHROMATIC_IMAGE">
-        <Group name="bottom_left_MONOCHROMATIC_IMAGE" x="0" y="0" width="68" height="68">
+        <Group name="bottom_left_MONOCHROMATIC_IMAGE" x="6" y="6" width="68" height="68" scaleX="1.17" scaleY="1.17">
           <PartDraw x="0" y="0" width="68" height="68">
             <Ellipse x="0" y="0" width="68" height="68">
               <Fill color="#FF191919" />
@@ -3016,7 +3672,7 @@
         </Group>
       </Complication>
       <Complication type="SMALL_IMAGE">
-        <Group name="bottom_left_SMALL_IMAGE" x="0" y="0" width="68" height="68">
+        <Group name="bottom_left_SMALL_IMAGE" x="6" y="6" width="68" height="68" scaleX="1.17" scaleY="1.17">
           <PartDraw x="0" y="0" width="68" height="68">
             <Ellipse x="0" y="0" width="68" height="68">
               <Fill color="#FF191919" />
@@ -3028,54 +3684,58 @@
         </Group>
       </Complication>
       <Complication type="RANGED_VALUE">
-        <Group name="bottom_left_RANGED_VALUE" x="0" y="0" width="68" height="68">
+        <Group name="bottom_left_RANGED_VALUE" x="6" y="6" width="68" height="68" scaleX="1.17" scaleY="1.17">
           <PartDraw x="0" y="0" width="68" height="68">
             <Ellipse x="0" y="0" width="68" height="68">
               <Fill color="#FF191919" />
             </Ellipse>
           </PartDraw>
-          <PartDraw x="0" y="0" width="68" height="68">
-            <Arc centerX="34" centerY="34" width="61" height="61" startAngle="0" endAngle="360">
-              <Transform target="endAngle" value="clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(0.0001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)*360" />
-              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
+          <PartDraw x="0" y="0" width="66" height="66">
+            <Arc centerX="168.9" centerY="-61.87" width="307.69" height="307.69" startAngle="226.58059798754232" endAngle="243.58059798754232">
+              <Stroke thickness="4" color="#FF383838" />
             </Arc>
           </PartDraw>
-          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-          <PartText x="4" y="29" width="60" height="30" angle="0">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+          <PartDraw x="0" y="0" width="66" height="66">
+            <Arc centerX="168.9" centerY="-61.87" width="307.69" height="307.69" startAngle="226.58059798754232" endAngle="243.58059798754232">
+              <Transform target="endAngle" value="226.58059798754232 + 17.0 * clamp(([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN])/max(0.0001,[COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]),0,1)" />
+              <Stroke thickness="4" color="[CONFIGURATION.palette.0]" />
+            </Arc>
+          </PartDraw>
+          <PartText x="0" y="0" width="66" height="66">
+            <TextCircular centerX="168.9" centerY="-61.87" width="357.26" height="357.26" startAngle="246.08059798754232" endAngle="224.08059798754232" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="15" color="[CONFIGURATION.palette.0]">
                 <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
                 </Template>
               </Font>
-            </Text>
+            </TextCircular>
           </PartText>
         </Group>
       </Complication>
       <Complication type="GOAL_PROGRESS">
-        <Group name="bottom_left_GOAL_PROGRESS" x="0" y="0" width="68" height="68">
+        <Group name="bottom_left_GOAL_PROGRESS" x="6" y="6" width="68" height="68" scaleX="1.17" scaleY="1.17">
           <PartDraw x="0" y="0" width="68" height="68">
             <Ellipse x="0" y="0" width="68" height="68">
               <Fill color="#FF191919" />
             </Ellipse>
           </PartDraw>
-          <PartDraw x="0" y="0" width="68" height="68">
-            <Arc centerX="34" centerY="34" width="61" height="61" startAngle="0" endAngle="360">
-              <Transform target="endAngle" value="clamp([COMPLICATION.GOAL_PROGRESS_VALUE]/max(0.0001,[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]),0,1)*360" />
-              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
+          <PartDraw x="0" y="0" width="66" height="66">
+            <Arc centerX="168.9" centerY="-61.87" width="307.69" height="307.69" startAngle="226.58059798754232" endAngle="243.58059798754232">
+              <Stroke thickness="4" color="#FF383838" />
             </Arc>
           </PartDraw>
-          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-          <PartText x="4" y="29" width="60" height="30" angle="0">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+          <PartDraw x="0" y="0" width="66" height="66">
+            <Arc centerX="168.9" centerY="-61.87" width="307.69" height="307.69" startAngle="226.58059798754232" endAngle="243.58059798754232">
+              <Transform target="endAngle" value="226.58059798754232 + 17.0 * clamp([COMPLICATION.GOAL_PROGRESS_VALUE]/max(0.0001,[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]),0,1)" />
+              <Stroke thickness="4" color="[CONFIGURATION.palette.0]" />
+            </Arc>
+          </PartDraw>
+          <PartText x="0" y="0" width="66" height="66">
+            <TextCircular centerX="168.9" centerY="-61.87" width="357.26" height="357.26" startAngle="246.08059798754232" endAngle="224.08059798754232" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="15" color="[CONFIGURATION.palette.0]">
                 <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
                 </Template>
               </Font>
-            </Text>
+            </TextCircular>
           </PartText>
         </Group>
       </Complication>
@@ -3083,7 +3743,7 @@
     </ComplicationSlot>
     <ListConfiguration id="art_bottom_right">
       <ListOption id="phone">
-        <Group name="bottom_right_phone" x="343" y="359" width="66" height="66">
+        <Group name="bottom_right_phone" x="366" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="PHONE" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
           <PartDraw x="1" y="1" width="64" height="64">
@@ -3097,7 +3757,7 @@
         </Group>
       </ListOption>
       <ListOption id="workout">
-        <Group name="bottom_right_workout" x="343" y="359" width="66" height="66">
+        <Group name="bottom_right_workout" x="366" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="com.samsung.android.wear.shealth" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
           <PartDraw x="1" y="1" width="64" height="64">
@@ -3111,7 +3771,7 @@
         </Group>
       </ListOption>
       <ListOption id="messages">
-        <Group name="bottom_right_messages" x="343" y="359" width="66" height="66">
+        <Group name="bottom_right_messages" x="366" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="MESSAGE" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
           <PartDraw x="1" y="1" width="64" height="64">
@@ -3125,21 +3785,21 @@
         </Group>
       </ListOption>
       <ListOption id="music">
-        <Group name="bottom_right_music" x="343" y="359" width="66" height="66">
+        <Group name="bottom_right_music" x="366" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="MUSIC_PLAYER" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
-          <PartText x="-6" y="3" width="67" height="24" angle="-35">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="SYNC_TO_DEVICE" size="16" color="[CONFIGURATION.palette.0]">@string/music_caption</Font>
-            </Text>
+          <PartText x="0" y="0" width="66" height="66">
+            <TextCircular centerX="-102.9" centerY="-61.87" width="302.56" height="302.56" startAngle="136.41940201245768" endAngle="113.4194020124577" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="15" color="[CONFIGURATION.palette.0]">@string/music_caption</Font>
+            </TextCircular>
           </PartText>
-          <PartImage x="31" y="32" width="24" height="27" tintColor="[CONFIGURATION.palette.0]">
+          <PartImage x="30" y="26" width="25" height="27" tintColor="[CONFIGURATION.palette.0]">
             <Image resource="corner_note" />
           </PartImage>
         </Group>
       </ListOption>
       <ListOption id="alarm">
-        <Group name="bottom_right_alarm" x="343" y="359" width="66" height="66">
+        <Group name="bottom_right_alarm" x="366" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="ALARM" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
           <PartDraw x="1" y="1" width="64" height="64">
@@ -3153,46 +3813,83 @@
         </Group>
       </ListOption>
       <ListOption id="heartrate">
-        <Group name="bottom_right_heartrate" x="343" y="359" width="66" height="66">
+        <Group name="bottom_right_heartrate" x="366" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="HEALTH_HEART_RATE" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
-          <PartDraw x="1" y="1" width="64" height="64">
-            <Ellipse x="0" y="0" width="64" height="64">
-              <Fill color="#FF1B1B1B" />
-            </Ellipse>
-          </PartDraw>
-          <PartImage x="15" y="17" width="35" height="32" tintColor="[CONFIGURATION.palette.0]">
+          <PartImage x="27" y="24" width="31" height="31" tintColor="#FFFF527C">
             <Image resource="corner_heartrate" />
           </PartImage>
+          <Condition>
+            <Expressions>
+              <Expression name="pulse">[HEART_RATE] &gt; 0</Expression>
+            </Expressions>
+            <Compare expression="pulse">
+              <PartText x="0" y="0" width="66" height="66">
+                <TextCircular centerX="-102.9" centerY="-61.87" width="302.56" height="302.56" startAngle="135.41940201245768" endAngle="114.4194020124577" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">
+                    <Template>%s<Parameter expression="[HEART_RATE]" />
+                    </Template>
+                  </Font>
+                </TextCircular>
+              </PartText>
+            </Compare>
+            <Default>
+              <PartText x="0" y="0" width="66" height="66">
+                <TextCircular centerX="-102.9" centerY="-61.87" width="302.56" height="302.56" startAngle="135.41940201245768" endAngle="114.4194020124577" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">—</Font>
+                </TextCircular>
+              </PartText>
+            </Default>
+          </Condition>
         </Group>
       </ListOption>
       <ListOption id="battery">
-        <Group name="bottom_right_battery" x="343" y="359" width="66" height="66">
+        <Group name="bottom_right_battery" x="366" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="BATTERY_STATUS" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
-          <PartDraw x="1" y="1" width="64" height="64">
-            <Ellipse x="0" y="0" width="64" height="64">
-              <Fill color="#FF1B1B1B" />
-            </Ellipse>
-          </PartDraw>
-          <PartDraw x="0" y="0" width="66" height="66">
-            <Arc centerX="33" centerY="33" width="56" height="56" startAngle="0" endAngle="360">
-              <Transform target="endAngle" value="[BATTERY_PERCENT]*3.6" />
-              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
-            </Arc>
-          </PartDraw>
-          <PartText x="4" y="19" width="58" height="29" angle="0">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
-                <Template>%s<Parameter expression="[BATTERY_PERCENT]" />
+          <PartText x="0" y="0" width="66" height="66">
+            <TextCircular centerX="-102.9" centerY="-61.87" width="355.56" height="355.56" startAngle="135.91940201245768" endAngle="113.9194020124577" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">
+                <Template>%s%%<Parameter expression="[BATTERY_PERCENT]" />
                 </Template>
               </Font>
-            </Text>
+            </TextCircular>
           </PartText>
+          <Condition>
+            <Expressions>
+              <Expression name="normal">[BATTERY_PERCENT] &gt; 20</Expression>
+            </Expressions>
+            <Compare expression="normal">
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="-102.9" centerY="-61.87" width="307.69" height="307.69" startAngle="116.4194020124577" endAngle="133.41940201245768">
+                  <Stroke thickness="4" color="#FF383838" />
+                </Arc>
+              </PartDraw>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="-102.9" centerY="-61.87" width="307.69" height="307.69" startAngle="116.4194020124577" endAngle="133.41940201245768">
+                  <Transform target="endAngle" value="116.4194020124577 + 16.999999999999986 * clamp([BATTERY_PERCENT]/100.0,0,1)" />
+                  <Stroke thickness="4" color="#FF53D76A" />
+                </Arc>
+              </PartDraw>
+            </Compare>
+            <Default>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="-102.9" centerY="-61.87" width="307.69" height="307.69" startAngle="116.4194020124577" endAngle="133.41940201245768">
+                  <Stroke thickness="4" color="#FF383838" />
+                </Arc>
+              </PartDraw>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="-102.9" centerY="-61.87" width="307.69" height="307.69" startAngle="116.4194020124577" endAngle="133.41940201245768">
+                  <Transform target="endAngle" value="116.4194020124577 + 16.999999999999986 * clamp([BATTERY_PERCENT]/100.0,0,1)" />
+                  <Stroke thickness="4" color="#FFFC5855" />
+                </Arc>
+              </PartDraw>
+            </Default>
+          </Condition>
         </Group>
       </ListOption>
       <ListOption id="date">
-        <Group name="bottom_right_date" x="343" y="359" width="66" height="66">
+        <Group name="bottom_right_date" x="366" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
           <Launch target="CALENDAR" />
           <Variant mode="AMBIENT" target="alpha" value="76" />
           <PartDraw x="1" y="1" width="64" height="64">
@@ -3218,36 +3915,211 @@
           </PartText>
         </Group>
       </ListOption>
+      <ListOption id="weather">
+        <Group name="bottom_right_weather" x="366" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
+          <Launch target="com.samsung.android.watch.weather" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <Condition>
+            <Expressions>
+              <Expression name="weather">[WEATHER.IS_AVAILABLE] &amp;&amp; ![WEATHER.IS_ERROR]</Expression>
+            </Expressions>
+            <Compare expression="weather">
+              <PartText x="0" y="0" width="66" height="66">
+                <TextCircular centerX="-102.9" centerY="-61.87" width="302.56" height="302.56" startAngle="135.91940201245768" endAngle="113.9194020124577" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">
+                    <Template>%s°<Parameter expression="[WEATHER.TEMPERATURE]" />
+                    </Template>
+                  </Font>
+                </TextCircular>
+              </PartText>
+              <Condition>
+                <Expressions>
+                  <Expression name="cloud">[WEATHER.CONDITION] == 2</Expression>
+                  <Expression name="partly">[WEATHER.CONDITION] == 14</Expression>
+                  <Expression name="fog">[WEATHER.CONDITION] == 3 || [WEATHER.CONDITION] == 13</Expression>
+                  <Expression name="rain">[WEATHER.CONDITION] == 4 || [WEATHER.CONDITION] == 6 || [WEATHER.CONDITION] == 12</Expression>
+                  <Expression name="snow">[WEATHER.CONDITION] == 5 || [WEATHER.CONDITION] == 7 || [WEATHER.CONDITION] == 11</Expression>
+                  <Expression name="storm">[WEATHER.CONDITION] == 9</Expression>
+                  <Expression name="sleet">[WEATHER.CONDITION] == 10</Expression>
+                  <Expression name="wind">[WEATHER.CONDITION] == 15</Expression>
+                  <Expression name="clear">[WEATHER.CONDITION] == 1 || [WEATHER.CONDITION] == 8</Expression>
+                </Expressions>
+                <Compare expression="cloud">
+                  <PartImage x="26" y="23" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_cloud" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="partly">
+                  <PartImage x="26" y="23" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_partly" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="fog">
+                  <PartImage x="26" y="23" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_fog" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="rain">
+                  <PartImage x="26" y="23" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_rain" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="snow">
+                  <PartImage x="26" y="23" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_snow" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="storm">
+                  <PartImage x="26" y="23" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_storm" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="sleet">
+                  <PartImage x="26" y="23" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_sleet" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="wind">
+                  <PartImage x="26" y="23" width="34" height="34" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_wind" />
+                  </PartImage>
+                </Compare>
+                <Compare expression="clear">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="day">[WEATHER.IS_DAY]</Expression>
+                    </Expressions>
+                    <Compare expression="day">
+                      <PartImage x="26" y="23" width="33" height="33" tintColor="[CONFIGURATION.palette.0]">
+                        <Image resource="corner_sun" />
+                      </PartImage>
+                    </Compare>
+                    <Default>
+                      <PartImage x="26" y="23" width="33" height="33" tintColor="[CONFIGURATION.palette.0]">
+                        <Image resource="corner_moon" />
+                      </PartImage>
+                    </Default>
+                  </Condition>
+                </Compare>
+                <Default>
+                  <PartImage x="29" y="26" width="28" height="28" tintColor="[CONFIGURATION.palette.0]">
+                    <Image resource="corner_unavailable" />
+                  </PartImage>
+                </Default>
+              </Condition>
+            </Compare>
+            <Default>
+              <PartImage x="17" y="16" width="32" height="31" tintColor="[CONFIGURATION.palette.0]">
+                <Image resource="corner_unavailable" />
+              </PartImage>
+            </Default>
+          </Condition>
+        </Group>
+      </ListOption>
+      <ListOption id="weather_rich">
+        <Group name="bottom_right_weather_rich" x="366" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
+          <Launch target="com.samsung.android.watch.weather" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <Condition>
+            <Expressions>
+              <Expression name="live">[WEATHER.IS_AVAILABLE] &amp;&amp; ![WEATHER.IS_ERROR]</Expression>
+            </Expressions>
+            <Compare expression="live">
+              <PartText x="0" y="0" width="66" height="66">
+                <TextCircular centerX="-102.9" centerY="-61.87" width="358.97" height="358.97" startAngle="136.41940201245768" endAngle="113.4194020124577" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">
+                    <Template>%s°<Parameter expression="[WEATHER.TEMPERATURE]" />
+                    </Template>
+                  </Font>
+                </TextCircular>
+              </PartText>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="-102.9" centerY="-61.87" width="312.82" height="312.82" startAngle="116.4194020124577" endAngle="133.41940201245768">
+                  <Stroke thickness="4" color="#FF383838" />
+                </Arc>
+              </PartDraw>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="-102.9" centerY="-61.87" width="312.82" height="312.82" startAngle="116.4194020124577" endAngle="133.41940201245768">
+                  <Transform target="endAngle" value="116.4194020124577 + 16.999999999999986 * clamp(([WEATHER.TEMPERATURE] - [WEATHER.DAY_TEMPERATURE_LOW])/max(1,[WEATHER.DAY_TEMPERATURE_HIGH] - [WEATHER.DAY_TEMPERATURE_LOW]),0,1)" />
+                  <Stroke thickness="4" color="#FFF6A34F" />
+                </Arc>
+              </PartDraw>
+            </Compare>
+            <Default>
+              <PartImage x="17" y="16" width="32" height="31" tintColor="[CONFIGURATION.palette.0]">
+                <Image resource="corner_unavailable" />
+              </PartImage>
+            </Default>
+          </Condition>
+        </Group>
+      </ListOption>
+      <ListOption id="weather_uv_index">
+        <Group name="bottom_right_weather_uv_index" x="366" y="318" width="66" height="66" scaleX="1.17" scaleY="1.17">
+          <Launch target="com.samsung.android.watch.weather" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <Condition>
+            <Expressions>
+              <Expression name="live">[WEATHER.IS_AVAILABLE] &amp;&amp; ![WEATHER.IS_ERROR]</Expression>
+            </Expressions>
+            <Compare expression="live">
+              <PartText x="0" y="0" width="66" height="66">
+                <TextCircular centerX="-102.9" centerY="-61.87" width="358.97" height="358.97" startAngle="135.91940201245768" endAngle="113.9194020124577" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="16" color="[CONFIGURATION.palette.0]">
+                    <Template>UV %s<Parameter expression="[WEATHER.UV_INDEX]" />
+                    </Template>
+                  </Font>
+                </TextCircular>
+              </PartText>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="-102.9" centerY="-61.87" width="312.82" height="312.82" startAngle="116.4194020124577" endAngle="133.41940201245768">
+                  <Stroke thickness="4" color="#FF383838" />
+                </Arc>
+              </PartDraw>
+              <PartDraw x="0" y="0" width="66" height="66">
+                <Arc centerX="-102.9" centerY="-61.87" width="312.82" height="312.82" startAngle="116.4194020124577" endAngle="133.41940201245768">
+                  <Transform target="endAngle" value="116.4194020124577 + 16.999999999999986 * clamp([WEATHER.UV_INDEX]/11.0,0,1)" />
+                  <Stroke thickness="4" color="#FFCD89DE" />
+                </Arc>
+              </PartDraw>
+            </Compare>
+            <Default>
+              <PartImage x="17" y="16" width="32" height="31" tintColor="[CONFIGURATION.palette.0]">
+                <Image resource="corner_unavailable" />
+              </PartImage>
+            </Default>
+          </Condition>
+        </Group>
+      </ListOption>
       <ListOption id="off">
         <Group name="bottom_right_off" x="0" y="0" width="1" height="1" />
       </ListOption>
     </ListConfiguration>
-    <ComplicationSlot x="342" y="358" width="68" height="68" slotId="4" displayName="bottom_right" supportedTypes="EMPTY SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE RANGED_VALUE GOAL_PROGRESS">
+    <ComplicationSlot x="359" y="311" width="80" height="80" slotId="4" displayName="bottom_right" supportedTypes="EMPTY SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE RANGED_VALUE GOAL_PROGRESS">
       <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" />
-      <BoundingOval x="0" y="0" width="68" height="68" />
+      <BoundingOval x="0" y="0" width="80" height="80" />
       <Complication type="EMPTY" />
       <Complication type="SHORT_TEXT">
-        <Group name="bottom_right_SHORT_TEXT" x="0" y="0" width="68" height="68">
+        <Group name="bottom_right_SHORT_TEXT" x="6" y="6" width="68" height="68" scaleX="1.17" scaleY="1.17">
           <PartDraw x="0" y="0" width="68" height="68">
             <Ellipse x="0" y="0" width="68" height="68">
               <Fill color="#FF191919" />
             </Ellipse>
           </PartDraw>
-          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-          <PartText x="4" y="29" width="60" height="30" angle="0">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+          <PartText x="0" y="0" width="66" height="66">
+            <TextCircular centerX="-102.9" centerY="-61.87" width="304.27" height="304.27" startAngle="136.41940201245768" endAngle="113.4194020124577" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="15" color="[CONFIGURATION.palette.0]">
                 <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
                 </Template>
               </Font>
-            </Text>
+            </TextCircular>
           </PartText>
+          <PartImage x="30" y="27" width="26" height="26" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
         </Group>
       </Complication>
       <Complication type="MONOCHROMATIC_IMAGE">
-        <Group name="bottom_right_MONOCHROMATIC_IMAGE" x="0" y="0" width="68" height="68">
+        <Group name="bottom_right_MONOCHROMATIC_IMAGE" x="6" y="6" width="68" height="68" scaleX="1.17" scaleY="1.17">
           <PartDraw x="0" y="0" width="68" height="68">
             <Ellipse x="0" y="0" width="68" height="68">
               <Fill color="#FF191919" />
@@ -3259,7 +4131,7 @@
         </Group>
       </Complication>
       <Complication type="SMALL_IMAGE">
-        <Group name="bottom_right_SMALL_IMAGE" x="0" y="0" width="68" height="68">
+        <Group name="bottom_right_SMALL_IMAGE" x="6" y="6" width="68" height="68" scaleX="1.17" scaleY="1.17">
           <PartDraw x="0" y="0" width="68" height="68">
             <Ellipse x="0" y="0" width="68" height="68">
               <Fill color="#FF191919" />
@@ -3271,54 +4143,58 @@
         </Group>
       </Complication>
       <Complication type="RANGED_VALUE">
-        <Group name="bottom_right_RANGED_VALUE" x="0" y="0" width="68" height="68">
+        <Group name="bottom_right_RANGED_VALUE" x="6" y="6" width="68" height="68" scaleX="1.17" scaleY="1.17">
           <PartDraw x="0" y="0" width="68" height="68">
             <Ellipse x="0" y="0" width="68" height="68">
               <Fill color="#FF191919" />
             </Ellipse>
           </PartDraw>
-          <PartDraw x="0" y="0" width="68" height="68">
-            <Arc centerX="34" centerY="34" width="61" height="61" startAngle="0" endAngle="360">
-              <Transform target="endAngle" value="clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(0.0001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)*360" />
-              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
+          <PartDraw x="0" y="0" width="66" height="66">
+            <Arc centerX="-102.9" centerY="-61.87" width="307.69" height="307.69" startAngle="116.4194020124577" endAngle="133.41940201245768">
+              <Stroke thickness="4" color="#FF383838" />
             </Arc>
           </PartDraw>
-          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-          <PartText x="4" y="29" width="60" height="30" angle="0">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+          <PartDraw x="0" y="0" width="66" height="66">
+            <Arc centerX="-102.9" centerY="-61.87" width="307.69" height="307.69" startAngle="116.4194020124577" endAngle="133.41940201245768">
+              <Transform target="endAngle" value="116.4194020124577 + 16.999999999999986 * clamp(([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN])/max(0.0001,[COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN]),0,1)" />
+              <Stroke thickness="4" color="[CONFIGURATION.palette.0]" />
+            </Arc>
+          </PartDraw>
+          <PartText x="0" y="0" width="66" height="66">
+            <TextCircular centerX="-102.9" centerY="-61.87" width="357.26" height="357.26" startAngle="135.91940201245768" endAngle="113.9194020124577" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="15" color="[CONFIGURATION.palette.0]">
                 <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
                 </Template>
               </Font>
-            </Text>
+            </TextCircular>
           </PartText>
         </Group>
       </Complication>
       <Complication type="GOAL_PROGRESS">
-        <Group name="bottom_right_GOAL_PROGRESS" x="0" y="0" width="68" height="68">
+        <Group name="bottom_right_GOAL_PROGRESS" x="6" y="6" width="68" height="68" scaleX="1.17" scaleY="1.17">
           <PartDraw x="0" y="0" width="68" height="68">
             <Ellipse x="0" y="0" width="68" height="68">
               <Fill color="#FF191919" />
             </Ellipse>
           </PartDraw>
-          <PartDraw x="0" y="0" width="68" height="68">
-            <Arc centerX="34" centerY="34" width="61" height="61" startAngle="0" endAngle="360">
-              <Transform target="endAngle" value="clamp([COMPLICATION.GOAL_PROGRESS_VALUE]/max(0.0001,[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]),0,1)*360" />
-              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
+          <PartDraw x="0" y="0" width="66" height="66">
+            <Arc centerX="-102.9" centerY="-61.87" width="307.69" height="307.69" startAngle="116.4194020124577" endAngle="133.41940201245768">
+              <Stroke thickness="4" color="#FF383838" />
             </Arc>
           </PartDraw>
-          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-          <PartText x="4" y="29" width="60" height="30" angle="0">
-            <Text align="CENTER" ellipsis="TRUE">
-              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+          <PartDraw x="0" y="0" width="66" height="66">
+            <Arc centerX="-102.9" centerY="-61.87" width="307.69" height="307.69" startAngle="116.4194020124577" endAngle="133.41940201245768">
+              <Transform target="endAngle" value="116.4194020124577 + 16.999999999999986 * clamp([COMPLICATION.GOAL_PROGRESS_VALUE]/max(0.0001,[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]),0,1)" />
+              <Stroke thickness="4" color="[CONFIGURATION.palette.0]" />
+            </Arc>
+          </PartDraw>
+          <PartText x="0" y="0" width="66" height="66">
+            <TextCircular centerX="-102.9" centerY="-61.87" width="357.26" height="357.26" startAngle="135.91940201245768" endAngle="113.9194020124577" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="15" color="[CONFIGURATION.palette.0]">
                 <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
                 </Template>
               </Font>
-            </Text>
+            </TextCircular>
           </PartText>
         </Group>
       </Complication>

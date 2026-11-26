@@ -37,6 +37,9 @@
   <string name="quick_heartrate">Ritm cardiac</string>
   <string name="quick_battery">Baterie</string>
   <string name="quick_date">Data de astăzi</string>
+  <string name="quick_weather">Vremea</string>
+  <string name="quick_weather_rich">Temperatură</string>
+  <string name="quick_weather_uv_index">Indice UV</string>
   <string name="quick_off">Nimic</string>
   <string name="bezel">Mijloc jos</string>
   <string name="music_caption">MUZICĂ</string>

@@ -1,11 +1,12 @@
 """Olympus corner artwork, launch targets and native Wear OS data slots."""
 from PIL import Image, ImageDraw
+import rich_corners as rich
 import xml.etree.ElementTree as ET
 
-corners=[('top_left',104,88,'phone'),('top_right',376,88,'workout'),
-         ('bottom_left',104,392,'messages'),('bottom_right',376,392,'music')]
+corners=[('top_left',81,129,'phone'),('top_right',399,129,'workout'),
+         ('bottom_left',81,351,'messages'),('bottom_right',399,351,'music')]
 targets={'phone':'PHONE','workout':'com.samsung.android.wear.shealth',
-         'messages':'MESSAGE','music':'MUSIC_PLAYER','alarm':'ALARM','heartrate':'HEALTH_HEART_RATE','battery':'BATTERY_STATUS','date':'CALENDAR'}
+         'messages':'MESSAGE','music':'MUSIC_PLAYER','alarm':'ALARM','heartrate':'HEALTH_HEART_RATE','battery':'BATTERY_STATUS','date':'CALENDAR','weather':'com.samsung.android.watch.weather','weather_rich':'com.samsung.android.watch.weather','weather_uv_index':'com.samsung.android.watch.weather'}
 def artwork(draw,catalog,gallery):
     for name,area,bg in [('phone',(74,65,107,97),26),('workout',(308,63,342,100),26),
                          ('messages',(70,380,115,419),26),('note',(321,396,347,427),0)]:
@@ -16,6 +17,8 @@ def artwork(draw,catalog,gallery):
         im=Image.open(next(catalog.glob(pattern))).convert('RGBA')
         mask=im.getchannel('A');mask=mask.crop(mask.getbbox())
         im=Image.new('RGBA',mask.size,'white');im.putalpha(mask);im.save(draw/f'corner_{key}.png')
+
+    rich.artwork(draw,catalog)
 
 def add(p,tag,**attrs):
     return ET.SubElement(p,tag,{k:str(v) for k,v in attrs.items()})
@@ -42,49 +45,44 @@ def corners_scene(scene):
         cfg=add(scene,'ListConfiguration',id='art_'+pos)
         for name,target in targets.items():
             opt=add(cfg,'ListOption',id=name)
-            g=add(opt,'Group',name=pos+'_'+name,**box(x-33,y-33,66,66))
+            g=add(opt,'Group',name=pos+'_'+name,**box(x-33,y-33,66,66),scaleX=rich.SCALE,scaleY=rich.SCALE)
             add(g,'Launch',target=target)
             add(g,'Variant',mode='AMBIENT',target='alpha',value='76')
-            if name=='music':
-                # The gallery separates the angled label and the note, without a platter.
-                text(g,'@string/music_caption',-6,3,67,24,16,ink,-35)
-                pic(g,'corner_note',31,32,24,27,ink)
-            elif name in ('battery','date'):
+            if name in ('music','heartrate','battery','weather','weather_rich','weather_uv_index'):
+                rich.render(g,name,x,y,ink)
+            elif name=='date':
                 ellipse(g,1,1,64,64,'#FF1B1B1B')
-                if name=='date':
-                    text(g,'[DAY_OF_WEEK_S]',5,7,56,20,13,ink)
-                    text(g,'[DAY_Z]',5,25,56,34,24,ink)
-                else:
-                    part=add(g,'PartDraw',**box(0,0,66,66))
-                    ring=add(part,'Arc',centerX=33,centerY=33,width=56,height=56,startAngle=0,endAngle=360)
-                    add(ring,'Transform',target='endAngle',value='[BATTERY_PERCENT]*3.6')
-                    add(ring,'Stroke',thickness=3,color=ink)
-                    text(g,'[BATTERY_PERCENT]',4,19,58,29,19,ink)
+                text(g,'[DAY_OF_WEEK_S]',5,7,56,20,13,ink)
+                text(g,'[DAY_Z]',5,25,56,34,24,ink)
             else:
                 ellipse(g,1,1,64,64,'#FF1B1B1B')
                 w,h={'phone':(32,32),'workout':(34,38),'messages':(40,33),'alarm':(32,34),'heartrate':(35,32)}[name]
                 pic(g,'corner_'+name,(66-w)//2,(66-h)//2,w,h,ink)
         add(add(cfg,'ListOption',id='off'),'Group',name=pos+'_off',**box(0,0,1,1))
         types=['SHORT_TEXT','MONOCHROMATIC_IMAGE','SMALL_IMAGE','RANGED_VALUE','GOAL_PROGRESS']
-        slot=add(scene,'ComplicationSlot',**box(x-34,y-34,68,68),slotId=ident,displayName=pos,supportedTypes='EMPTY '+' '.join(types))
+        slot=add(scene,'ComplicationSlot',**box(x-40,y-40,80,80),slotId=ident,displayName=pos,supportedTypes='EMPTY '+' '.join(types))
         add(slot,'DefaultProviderPolicy',defaultSystemProvider='EMPTY',defaultSystemProviderType='EMPTY')
-        add(slot,'BoundingOval',**box(0,0,68,68))
+        add(slot,'BoundingOval',**box(0,0,80,80))
         add(slot,'Complication',type='EMPTY')
         for kind in types:
-            view=add(add(slot,'Complication',type=kind),'Group',name=pos+'_'+kind,**box(0,0,68,68))
+            view=add(add(slot,'Complication',type=kind),'Group',name=pos+'_'+kind,**box(6,6,68,68),scaleX=rich.SCALE,scaleY=rich.SCALE)
             # Opaque disk covers the shortcut beneath when the user supplies data.
             ellipse(view,0,0,68,68,'#FF191919')
             if kind in ('SMALL_IMAGE','MONOCHROMATIC_IMAGE'):
                 pic(view,f'[COMPLICATION.{kind}]',14,14,40,40,ink if kind=='MONOCHROMATIC_IMAGE' else None)
+            elif kind=='SHORT_TEXT':
+                # GraphicCornerTextImage: the data source supplies its own glyph and value.
+                rich.arc_text(view,x,y,178,23,15,ink,'%s',('[COMPLICATION.TEXT]',))
+                dx,dy=x-240,y-240
+                radius=(dx*dx+dy*dy)**.5
+                pic(view,'[COMPLICATION.MONOCHROMATIC_IMAGE]',round(21+dx/radius*11),round(21+dy/radius*11),26,26,ink)
             else:
-                if kind!='SHORT_TEXT':
-                    d=add(view,'PartDraw',**box(0,0,68,68))
-                    r=add(d,'Arc',centerX=34,centerY=34,width=61,height=61,startAngle=0,endAngle=360)
-                    expr=('clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(0.0001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)' if kind=='RANGED_VALUE' else 'clamp([COMPLICATION.GOAL_PROGRESS_VALUE]/max(0.0001,[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]),0,1)')
-                    add(r,'Transform',target='endAngle',value=expr+'*360')
-                    add(r,'Stroke',thickness=3,color=ink)
-                pic(view,'[COMPLICATION.MONOCHROMATIC_IMAGE]',24,8,20,20,ink)
-                text(view,'[COMPLICATION.TEXT]',4,29,60,30,19,ink)
+                if kind=='RANGED_VALUE':
+                    frac='([COMPLICATION.RANGED_VALUE_VALUE] - [COMPLICATION.RANGED_VALUE_MIN])/max(0.0001,[COMPLICATION.RANGED_VALUE_MAX] - [COMPLICATION.RANGED_VALUE_MIN])'
+                else:
+                    frac='[COMPLICATION.GOAL_PROGRESS_VALUE]/max(0.0001,[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE])'
+                rich.gauge(view,x,y,180,frac,ink)
+                rich.arc_text(view,x,y,209,22,15,ink,'%s',('[COMPLICATION.TEXT]',))
         add(slot,'Variant',mode='AMBIENT',target='alpha',value=76)
 
     # The fifth slot remains empty until a data source is explicitly selected.
@@ -111,14 +109,16 @@ def localization(labels,strings):
     strings['music_caption']=labels.get('MUSIC_STOPPED_LARGE_UTILITY',strings['quick_music'])
 
 def preview(im,draw,gallery):
-    # Match the active default, including the invitation to open Music.
     for pos,x,y,key in corners:
         if key=='music':
+            # Apple reference retains the actual curved glyphs in the static picker.
             crop=gallery.crop((285,357,346,426)).convert('RGBA')
             crop.putalpha(crop.convert('L').point(lambda v:min(255,v*1.23)))
-            im.alpha_composite(crop.resize((62,69)),(x-32,y-36))
+            im.alpha_composite(crop.resize((70,78),Image.Resampling.LANCZOS),(x-35,y-39))
         else:
-            ImageDraw.Draw(im).ellipse((x-32,y-32,x+32,y+32),fill='#1b1b1b')
+            radius=round(32*rich.SCALE)
+            ImageDraw.Draw(im).ellipse((x-radius,y-radius,x+radius,y+radius),fill='#1b1b1b')
             mask=Image.open(draw/f'corner_{key}.png').getchannel('A')
-            w,h={'phone':(32,32),'workout':(34,38),'messages':(40,33)}[key]
+            sw,sh={'phone':(32,32),'workout':(34,38),'messages':(40,33)}[key]
+            w,h=round(sw*rich.SCALE),round(sh*rich.SCALE)
             im.paste('#cbd0d2',(x-w//2,y-h//2,x-w//2+w,y-h//2+h),mask.resize((w,h),Image.Resampling.LANCZOS))

@@ -37,6 +37,9 @@
   <string name="quick_heartrate">Kalp Atış Hızı</string>
   <string name="quick_battery">Pil</string>
   <string name="quick_date">Bugünün Tarihi</string>
+  <string name="quick_weather">Hava Durumu</string>
+  <string name="quick_weather_rich">Sıcaklık</string>
+  <string name="quick_weather_uv_index">UV İndeksi</string>
   <string name="quick_off">Kapalı</string>
   <string name="bezel">Orta Alt</string>
   <string name="music_caption">MÜZİK</string>

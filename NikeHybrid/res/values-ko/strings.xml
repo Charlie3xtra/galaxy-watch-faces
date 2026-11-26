@@ -37,6 +37,9 @@
   <string name="quick_heartrate">심박수</string>
   <string name="quick_battery">배터리</string>
   <string name="quick_date">오늘 날짜</string>
+  <string name="quick_weather">날씨</string>
+  <string name="quick_weather_rich">온도</string>
+  <string name="quick_weather_uv_index">자외선 지수</string>
   <string name="quick_off">끔</string>
   <string name="bezel">하단 중앙</string>
   <string name="music_caption">음악</string>

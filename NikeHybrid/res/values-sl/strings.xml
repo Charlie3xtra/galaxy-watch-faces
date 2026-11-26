@@ -37,6 +37,9 @@
   <string name="quick_heartrate">Srčni utrip</string>
   <string name="quick_battery">Baterija</string>
   <string name="quick_date">Današnji datum</string>
+  <string name="quick_weather">Vreme</string>
+  <string name="quick_weather_rich">Temperatura</string>
+  <string name="quick_weather_uv_index">Indeks UV</string>
   <string name="quick_off">Brez</string>
   <string name="bezel">Na sredini spodaj</string>
   <string name="music_caption">GLASBA</string>

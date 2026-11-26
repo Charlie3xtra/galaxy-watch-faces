@@ -37,6 +37,9 @@
   <string name="quick_heartrate">心拍数</string>
   <string name="quick_battery">バッテリー</string>
   <string name="quick_date">今日の日付</string>
+  <string name="quick_weather">天気</string>
+  <string name="quick_weather_rich">温度</string>
+  <string name="quick_weather_uv_index">UV指数</string>
   <string name="quick_off">オフ</string>
   <string name="bezel">中央下</string>
   <string name="music_caption">ミュージック</string>

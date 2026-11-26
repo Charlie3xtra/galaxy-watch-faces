@@ -37,6 +37,9 @@
   <string name="quick_heartrate">Puls</string>
   <string name="quick_battery">Batteri</string>
   <string name="quick_date">Dags dato</string>
+  <string name="quick_weather">Vejr</string>
+  <string name="quick_weather_rich">Temperatur</string>
+  <string name="quick_weather_uv_index">UV-indeks</string>
   <string name="quick_off">Fra</string>
   <string name="bezel">Nederst midt for</string>
   <string name="music_caption">MUSIK</string>

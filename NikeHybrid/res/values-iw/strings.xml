@@ -37,6 +37,9 @@
   <string name="quick_heartrate">קצב לב</string>
   <string name="quick_battery">סוללה</string>
   <string name="quick_date">התאריך של היום</string>
+  <string name="quick_weather">מזג אוויר</string>
+  <string name="quick_weather_rich">טמפרטורה</string>
+  <string name="quick_weather_uv_index">אינדקס קרינה</string>
   <string name="quick_off">ללא</string>
   <string name="bezel">באמצע למטה</string>
   <string name="music_caption">מוזיקה</string>

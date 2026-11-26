@@ -37,6 +37,9 @@
   <string name="quick_heartrate">Серцевий ритм</string>
   <string name="quick_battery">Заряд</string>
   <string name="quick_date">Сьогодні</string>
+  <string name="quick_weather">Погода</string>
+  <string name="quick_weather_rich">Температура</string>
+  <string name="quick_weather_uv_index">Індекс УФ</string>
   <string name="quick_off">Немає</string>
   <string name="bezel">Внизу по центру</string>
   <string name="music_caption">МУЗИКА</string>

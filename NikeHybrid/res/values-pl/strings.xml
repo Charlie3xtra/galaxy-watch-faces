@@ -37,6 +37,9 @@
   <string name="quick_heartrate">Tętno</string>
   <string name="quick_battery">Bateria</string>
   <string name="quick_date">Dzisiejsza data</string>
+  <string name="quick_weather">Pogoda</string>
+  <string name="quick_weather_rich">Temperatura</string>
+  <string name="quick_weather_uv_index">Indeks UV</string>
   <string name="quick_off">Wył.</string>
   <string name="bezel">Środkowa dolna</string>
   <string name="music_caption">MUZYKA</string>

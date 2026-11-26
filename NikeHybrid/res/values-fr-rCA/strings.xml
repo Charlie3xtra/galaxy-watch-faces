@@ -37,6 +37,9 @@
   <string name="quick_heartrate">Fréquence cardiaque</string>
   <string name="quick_battery">Batterie</string>
   <string name="quick_date">Date d’aujourd’hui</string>
+  <string name="quick_weather">Température</string>
+  <string name="quick_weather_rich">Température</string>
+  <string name="quick_weather_uv_index">Indice UV</string>
   <string name="quick_off">Non</string>
   <string name="bezel">En bas au centre</string>
   <string name="music_caption">MUSIQUE</string>

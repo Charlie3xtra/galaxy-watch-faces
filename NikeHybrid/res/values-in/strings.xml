@@ -37,6 +37,9 @@
   <string name="quick_heartrate">Detak Jantung</string>
   <string name="quick_battery">Baterai</string>
   <string name="quick_date">Tanggal Hari Ini</string>
+  <string name="quick_weather">Cuaca</string>
+  <string name="quick_weather_rich">Suhu</string>
+  <string name="quick_weather_uv_index">Indeks UV</string>
   <string name="quick_off">Mati</string>
   <string name="bezel">Tengah Bawah</string>
   <string name="music_caption">MUSIK</string>

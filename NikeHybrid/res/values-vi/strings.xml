@@ -37,6 +37,9 @@
   <string name="quick_heartrate">Nhịp tim</string>
   <string name="quick_battery">Pin</string>
   <string name="quick_date">Ngày hôm nay</string>
+  <string name="quick_weather">Thời tiết</string>
+  <string name="quick_weather_rich">Nhiệt độ</string>
+  <string name="quick_weather_uv_index">Chỉ số UV</string>
   <string name="quick_off">Tắt</string>
   <string name="bezel">Dưới cùng ở giữa</string>
   <string name="music_caption">NHẠC</string>

@@ -37,6 +37,9 @@
   <string name="quick_heartrate">อัตราการเต้นของหัวใจ</string>
   <string name="quick_battery">แบตเตอรี่</string>
   <string name="quick_date">วันที่ของวันนี้</string>
+  <string name="quick_weather">สภาพอากาศ</string>
+  <string name="quick_weather_rich">อุณหภูมิ</string>
+  <string name="quick_weather_uv_index">ดัชนีรังสี UV</string>
   <string name="quick_off">ปิด</string>
   <string name="bezel">ด้านล่างกึ่งกลาง</string>
   <string name="music_caption">เพลง</string>

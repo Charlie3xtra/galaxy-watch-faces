@@ -37,6 +37,9 @@
   <string name="quick_heartrate">Pulzusszám</string>
   <string name="quick_battery">Akkumulátor</string>
   <string name="quick_date">Mai dátum</string>
+  <string name="quick_weather">Időjárás</string>
+  <string name="quick_weather_rich">Hőmérséklet</string>
+  <string name="quick_weather_uv_index">UV-index</string>
   <string name="quick_off">Ki</string>
   <string name="bezel">Középen lent</string>
   <string name="music_caption">ZENE</string>

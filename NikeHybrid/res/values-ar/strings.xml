@@ -37,6 +37,9 @@
   <string name="quick_heartrate">معدل نبض القلب</string>
   <string name="quick_battery">البطارية</string>
   <string name="quick_date">تاريخ اليوم</string>
+  <string name="quick_weather">الطقس</string>
+  <string name="quick_weather_rich">درجة الحرارة</string>
+  <string name="quick_weather_uv_index">أشعة فوق البنفسجية</string>
   <string name="quick_off">إيقاف</string>
   <string name="bezel">أسفل المنتصف</string>
   <string name="music_caption">الموسيقى</string>

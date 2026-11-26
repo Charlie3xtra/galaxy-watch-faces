@@ -37,6 +37,9 @@
   <string name="quick_heartrate">Hart­slag</string>
   <string name="quick_battery">Batterij</string>
   <string name="quick_date">Huidige datum</string>
+  <string name="quick_weather">Weer</string>
+  <string name="quick_weather_rich">Temperatuur</string>
+  <string name="quick_weather_uv_index">UV-index</string>
   <string name="quick_off">Uit</string>
   <string name="bezel">Middenonder</string>
   <string name="music_caption">MUZIEK</string>

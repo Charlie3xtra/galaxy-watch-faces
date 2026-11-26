@@ -37,6 +37,9 @@
   <string name="quick_heartrate">Καρδιακοί παλμοί</string>
   <string name="quick_battery">Μπαταρία</string>
   <string name="quick_date">Σημερινή ημερομηνία</string>
+  <string name="quick_weather">Καιρός</string>
+  <string name="quick_weather_rich">Θερμοκρασία</string>
+  <string name="quick_weather_uv_index">Δείκτης UV</string>
   <string name="quick_off">Όχι</string>
   <string name="bezel">Κάτω στη μέση</string>
   <string name="music_caption">ΜΟΥΣΙΚΗ</string>
