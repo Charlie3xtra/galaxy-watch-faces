@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Глобус Nike</string>
+  <string name="color">КОЛІР</string>
+  <string name="color_0">10:09</string>
+  <string name="color_1">Чорний/Синій</string>
+  <string name="color_2">Синє полумʼя</string>
+  <string name="color_3">Яскраво-зелений/синій</string>
+  <string name="color_4">Класичне хакі</string>
+  <string name="color_5">Гарячий пісок</string>
+  <string name="color_6">Синій/червоний</string>
+  <string name="color_7">Зелений/сірий</string>
+  <string name="color_8">Сірий/синій</string>
+  <string name="color_9">Іскристий вольт</string>
+  <string name="color_10">Альпійське сяйво</string>
+  <string name="color_11">Синя стрічка</string>
+  <string name="color_12">Нічний чорний</string>
+  <string name="color_13">Сірий серпанок</string>
+  <string name="color_14">Іскристий вольт</string>
+  <string name="color_15">Пастельна крейда</string>
+  <string name="color_16">Зелений спалах</string>
+  <string name="color_17">Сірий асфальт</string>
+  <string name="color_18">Активний синій/помаранчевий</string>
+  <string name="color_19">Чарівний жар</string>
+  <string name="color_20">Опівнічне небо</string>
+  <string name="color_21">Чиста платина</string>
+  <string name="color_22">Секвоя/помаранчевий</string>
+  <string name="color_23">Зіркове сяйво/рожевий</string>
+</resources>

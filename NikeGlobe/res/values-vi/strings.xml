@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Globe</string>
+  <string name="color">MÀU</string>
+  <string name="color_0">10:09</string>
+  <string name="color_1">Đen/Xanh dương</string>
+  <string name="color_2">Xanh ngọn lửa</string>
+  <string name="color_3">Lục sáng/Xanh dương</string>
+  <string name="color_4">Xanh kaki lính</string>
+  <string name="color_5">Đá sa mạc</string>
+  <string name="color_6">Xanh dương/Đỏ</string>
+  <string name="color_7">Xanh lá/Xám</string>
+  <string name="color_8">Xám/Xanh dương</string>
+  <string name="color_9">Xanh Volt Splash</string>
+  <string name="color_10">Hồng hoàng hôn</string>
+  <string name="color_11">Ruy băng xanh</string>
+  <string name="color_12">Đen trời đêm</string>
+  <string name="color_13">Xám nhạt</string>
+  <string name="color_14">Xanh Volt Splash</string>
+  <string name="color_15">Trắng phấn êm dịu</string>
+  <string name="color_16">Xanh tia lửa điện</string>
+  <string name="color_17">Xám bê tông</string>
+  <string name="color_18">Xanh hoàng gia/Cam</string>
+  <string name="color_19">Hồng than lửa</string>
+  <string name="color_20">Trời đêm thẳm</string>
+  <string name="color_21">Bạch kim</string>
+  <string name="color_22">Xanh củ tùng/Cam</string>
+  <string name="color_23">Ánh sao/Hồng</string>
+</resources>

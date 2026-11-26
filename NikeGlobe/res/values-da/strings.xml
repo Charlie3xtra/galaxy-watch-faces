@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike – globus</string>
+  <string name="color">FARVE</string>
+  <string name="color_0">10:09</string>
+  <string name="color_1">Black/Blue</string>
+  <string name="color_2">Blue Flame</string>
+  <string name="color_3">Bright Green/Blue</string>
+  <string name="color_4">Mørk kaki</string>
+  <string name="color_5">Desert Stone</string>
+  <string name="color_6">Blå/rød</string>
+  <string name="color_7">Grøn/grå</string>
+  <string name="color_8">Grå/blå</string>
+  <string name="color_9">Volt Splash</string>
+  <string name="color_10">Alpenglow Pink</string>
+  <string name="color_11">Blue Ribbon</string>
+  <string name="color_12">Midnight Black</string>
+  <string name="color_13">Veiled Grey</string>
+  <string name="color_14">Volt Splash</string>
+  <string name="color_15">Chalk Calm</string>
+  <string name="color_16">Green Spark</string>
+  <string name="color_17">Pavement Grey</string>
+  <string name="color_18">Game Royal/Orange</string>
+  <string name="color_19">Magic Ember</string>
+  <string name="color_20">Midnight Sky</string>
+  <string name="color_21">Pure Platinum</string>
+  <string name="color_22">Sequoia/Orange</string>
+  <string name="color_23">Starlight/Pink</string>
+</resources>

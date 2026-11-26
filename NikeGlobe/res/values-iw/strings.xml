@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">‏Nike גלובוס</string>
+  <string name="color">צבע</string>
+  <string name="color_0">10:09</string>
+  <string name="color_1">שחור/כחול</string>
+  <string name="color_2">להבה כחולה</string>
+  <string name="color_3">ירוק בהיר/כחול</string>
+  <string name="color_4">חאקי דגמ״ח</string>
+  <string name="color_5">אבן מדבר</string>
+  <string name="color_6">כחול/אדום</string>
+  <string name="color_7">ירוק/אפור</string>
+  <string name="color_8">אפור/כחול</string>
+  <string name="color_9">ליים מעודן</string>
+  <string name="color_10">ורוד אלפים</string>
+  <string name="color_11">עיטור כחול</string>
+  <string name="color_12">שחור חצות</string>
+  <string name="color_13">אפור מעודן</string>
+  <string name="color_14">ליים מעודן</string>
+  <string name="color_15">כתום רגוע</string>
+  <string name="color_16">ניצוץ ירוק</string>
+  <string name="color_17">אפור אבן</string>
+  <string name="color_18">כחול ספורט/כתום</string>
+  <string name="color_19">גחלת קסומה</string>
+  <string name="color_20">שמי הלילה</string>
+  <string name="color_21">פלטינה טהורה</string>
+  <string name="color_22">סקוויה/כתום</string>
+  <string name="color_23">אור כוכבים/ורוד</string>
+</resources>

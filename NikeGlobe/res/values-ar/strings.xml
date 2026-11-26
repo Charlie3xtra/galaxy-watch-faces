@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">كرة أرضية بعلامة Nike</string>
+  <string name="color">اللون</string>
+  <string name="color_0">10:09</string>
+  <string name="color_1">أسود/أزرق</string>
+  <string name="color_2">أزرق ناري</string>
+  <string name="color_3">أخضر ساطع/أزرق</string>
+  <string name="color_4">كاكي زيتي</string>
+  <string name="color_5">صحرواي حجري</string>
+  <string name="color_6">أزرق/أحمر</string>
+  <string name="color_7">أخضر/رمادي</string>
+  <string name="color_8">رمادي/أزرق</string>
+  <string name="color_9">فولت نيون</string>
+  <string name="color_10">وردي الغروب</string>
+  <string name="color_11">أزرق الأبطال</string>
+  <string name="color_12">أسود ليلي</string>
+  <string name="color_13">رمادي ضبابي</string>
+  <string name="color_14">فولت نيون</string>
+  <string name="color_15">أبيض كلسي هادئ</string>
+  <string name="color_16">أخضر حيوي</string>
+  <string name="color_17">رمادي إسمنتي</string>
+  <string name="color_18">أزرق ملكي رياضي/برتقالي</string>
+  <string name="color_19">وردي دافئ</string>
+  <string name="color_20">أسود سماء الليل</string>
+  <string name="color_21">بلاتين</string>
+  <string name="color_22">شجرة السيكويا/برتقالي</string>
+  <string name="color_23">ضوء النجوم/وردي</string>
+</resources>

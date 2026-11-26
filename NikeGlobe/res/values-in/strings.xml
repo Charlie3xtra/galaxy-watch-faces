@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Globe</string>
+  <string name="color">WARNA</string>
+  <string name="color_0">10:09</string>
+  <string name="color_1">Hitam/Biru</string>
+  <string name="color_2">Biru Api</string>
+  <string name="color_3">Hijau Cerah/Biru</string>
+  <string name="color_4">Hijau Gelap</string>
+  <string name="color_5">Krem Gurun</string>
+  <string name="color_6">Biru/Merah</string>
+  <string name="color_7">Hijau/Abu-Abu</string>
+  <string name="color_8">Abu-Abu/Biru</string>
+  <string name="color_9">Hijau Volt</string>
+  <string name="color_10">Pink Alpenglow</string>
+  <string name="color_11">Blue Ribbon</string>
+  <string name="color_12">Hitam Kelam</string>
+  <string name="color_13">Abu-Abu Pucat</string>
+  <string name="color_14">Hijau Volt</string>
+  <string name="color_15">Krem Kapur Tenang</string>
+  <string name="color_16">Percikan Hijau</string>
+  <string name="color_17">Abu-Abu Trotoar</string>
+  <string name="color_18">Biru Akik/Oranye</string>
+  <string name="color_19">Pink Senja</string>
+  <string name="color_20">Hitam Malam</string>
+  <string name="color_21">Platinum Murni</string>
+  <string name="color_22">Sequoia/Oranye</string>
+  <string name="color_23">Putih Pucat Metalik/Pink</string>
+</resources>

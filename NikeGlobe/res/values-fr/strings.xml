@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Globe</string>
+  <string name="color">COULEUR</string>
+  <string name="color_0">10:09</string>
+  <string name="color_1">Black/Blue</string>
+  <string name="color_2">Blue Flame</string>
+  <string name="color_3">Vert vif/bleu</string>
+  <string name="color_4">Kaki cargo</string>
+  <string name="color_5">Desert Stone</string>
+  <string name="color_6">Bleu/rouge</string>
+  <string name="color_7">Vert/gris</string>
+  <string name="color_8">Gris/bleu</string>
+  <string name="color_9">Splash Volt</string>
+  <string name="color_10">Rose Alpenglow</string>
+  <string name="color_11">Blue Ribbon</string>
+  <string name="color_12">Noir nuit</string>
+  <string name="color_13">Gris voilé</string>
+  <string name="color_14">Splash Volt</string>
+  <string name="color_15">Craie Calm</string>
+  <string name="color_16">Vert étincelle</string>
+  <string name="color_17">Gris asphalte</string>
+  <string name="color_18">Game royal/orange</string>
+  <string name="color_19">Tison magique</string>
+  <string name="color_20">Midnight Sky</string>
+  <string name="color_21">Platine pur</string>
+  <string name="color_22">Séquoia/orange</string>
+  <string name="color_23">Comète/rose</string>
+</resources>

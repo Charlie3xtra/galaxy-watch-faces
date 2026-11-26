@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Globe</string>
+  <string name="color">CULORI</string>
+  <string name="color_0">10:09</string>
+  <string name="color_1">Negru/Albastru</string>
+  <string name="color_2">Flacără albastră</string>
+  <string name="color_3">Verde strălucitor/Albastru</string>
+  <string name="color_4">Kaki cargo</string>
+  <string name="color_5">Piatră deșertică</string>
+  <string name="color_6">Albastru/roșu</string>
+  <string name="color_7">Verde/gri</string>
+  <string name="color_8">Gri/albastru</string>
+  <string name="color_9">Volt scânteie</string>
+  <string name="color_10">Roz strălucitor alpin</string>
+  <string name="color_11">Fundă albastră</string>
+  <string name="color_12">Negru nocturn</string>
+  <string name="color_13">Gri pal</string>
+  <string name="color_14">Volt scânteie</string>
+  <string name="color_15">Cretă serenă</string>
+  <string name="color_16">Verde Spark</string>
+  <string name="color_17">Gri pavaj</string>
+  <string name="color_18">Albastru Game Royal/Portocaliu</string>
+  <string name="color_19">Cărămiziu magic</string>
+  <string name="color_20">Cer nocturn</string>
+  <string name="color_21">Platină pură</string>
+  <string name="color_22">Sequoia/Portocaliu</string>
+  <string name="color_23">Strălucire stelară/Roz</string>
+</resources>

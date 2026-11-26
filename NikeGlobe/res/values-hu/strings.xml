@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Globe</string>
+  <string name="color">SZÍN</string>
+  <string name="color_0">10:09</string>
+  <string name="color_1">Fekete-kék</string>
+  <string name="color_2">Kék láng</string>
+  <string name="color_3">Élénkzöld-kék</string>
+  <string name="color_4">Cargo khaki</string>
+  <string name="color_5">Sivatagi kő</string>
+  <string name="color_6">Kék-piros</string>
+  <string name="color_7">Zöld-szürke</string>
+  <string name="color_8">Szürke-kék</string>
+  <string name="color_9">Neonzöld csobbanás</string>
+  <string name="color_10">Alpenglow rózsaszín</string>
+  <string name="color_11">Kék szalag</string>
+  <string name="color_12">Éjféli fekete</string>
+  <string name="color_13">Fátyolszürke</string>
+  <string name="color_14">Neonzöld csobbanás</string>
+  <string name="color_15">Pasztellkrétaszín</string>
+  <string name="color_16">Vadzöld</string>
+  <string name="color_17">Aszfaltszürke</string>
+  <string name="color_18">Game Royal színű-narancs</string>
+  <string name="color_19">Parázsszín</string>
+  <string name="color_20">Éjféli égbolt</string>
+  <string name="color_21">Platinaszín</string>
+  <string name="color_22">Sötét mamutfenyőzöld-narancs</string>
+  <string name="color_23">Csillagfény-rózsaszín</string>
+</resources>

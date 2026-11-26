@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Globe</string>
+  <string name="color">ЦВЕТ</string>
+  <string name="color_0">10:09</string>
+  <string name="color_1">Черный/Синий</string>
+  <string name="color_2">Синее пламя</string>
+  <string name="color_3">Сочная зелень/Синий</string>
+  <string name="color_4">Рабочий хаки</string>
+  <string name="color_5">Песчаный камень</string>
+  <string name="color_6">Синий/Красный</string>
+  <string name="color_7">Зеленый/Серый</string>
+  <string name="color_8">Серый/Синий</string>
+  <string name="color_9">Искристый вольт</string>
+  <string name="color_10">Розовый закат</string>
+  <string name="color_11">Динамичный синий</string>
+  <string name="color_12">Черная ночь</string>
+  <string name="color_13">Бледно-серый</string>
+  <string name="color_14">Искристый вольт</string>
+  <string name="color_15">Пастельный мел</string>
+  <string name="color_16">Зеленая искра</string>
+  <string name="color_17">Серый асфальт</string>
+  <string name="color_18">Активный синий/Оранжевый</string>
+  <string name="color_19">Волшебная искра</string>
+  <string name="color_20">Полночное небо</string>
+  <string name="color_21">Чистая платина</string>
+  <string name="color_22">Секвойя/Оранжевый</string>
+  <string name="color_23">Сияющая звезда/Розовый</string>
+</resources>

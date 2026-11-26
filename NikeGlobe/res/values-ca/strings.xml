@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Globus de Nike</string>
+  <string name="color">COLOR</string>
+  <string name="color_0">10:09</string>
+  <string name="color_1">Negre i blau</string>
+  <string name="color_2">Blau flama</string>
+  <string name="color_3">Verd brillant i blau</string>
+  <string name="color_4">Caqui militar</string>
+  <string name="color_5">Pedra del desert</string>
+  <string name="color_6">Blau i vermell</string>
+  <string name="color_7">Verd i gris</string>
+  <string name="color_8">Gris i blau</string>
+  <string name="color_9">Volt Splash</string>
+  <string name="color_10">Rosa boreal</string>
+  <string name="color_11">Blau setí</string>
+  <string name="color_12">Negre mitjanit</string>
+  <string name="color_13">Gris desgastat</string>
+  <string name="color_14">Volt Splash</string>
+  <string name="color_15">Guix càlid</string>
+  <string name="color_16">Espurna verda</string>
+  <string name="color_17">Gris asfalt</string>
+  <string name="color_18">Blau Game Royal i taronja</string>
+  <string name="color_19">Brasa màgica</string>
+  <string name="color_20">Cel de mitjanit</string>
+  <string name="color_21">Platí pur</string>
+  <string name="color_22">Sequoia i taronja</string>
+  <string name="color_23">Blanc estel·lar i rosa</string>
+</resources>

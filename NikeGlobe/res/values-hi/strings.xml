@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Globe</string>
+  <string name="color">रंग</string>
+  <string name="color_0">10:09</string>
+  <string name="color_1">काला/नीला</string>
+  <string name="color_2">ब्लू फ़्लेम</string>
+  <string name="color_3">चमकीला हरा/नीला</string>
+  <string name="color_4">कार्गो ख़ाकी</string>
+  <string name="color_5">डेज़र्ट स्टोन</string>
+  <string name="color_6">नीला/लाल</string>
+  <string name="color_7">हरा/धूसर</string>
+  <string name="color_8">धूसर/नीला</string>
+  <string name="color_9">वोल्ट स्प्लैश</string>
+  <string name="color_10">आल्पेनग्लो पिंक</string>
+  <string name="color_11">ब्लू रिबन</string>
+  <string name="color_12">मिडनाइट ब्लैक</string>
+  <string name="color_13">वेल्ड ग्रे</string>
+  <string name="color_14">वोल्ट स्प्लैश</string>
+  <string name="color_15">चॉक काम</string>
+  <string name="color_16">ग्रीन स्पार्क</string>
+  <string name="color_17">पेवमेंट ग्रे</string>
+  <string name="color_18">गेम रॉयल/नारंगी</string>
+  <string name="color_19">मैजिक एंबर</string>
+  <string name="color_20">मिडनाइट स्काई</string>
+  <string name="color_21">प्योर प्लेटिनम</string>
+  <string name="color_22">सिकोया/नारंगी</string>
+  <string name="color_23">स्टारलाइट/गुलाबी</string>
+</resources>

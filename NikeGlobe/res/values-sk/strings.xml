@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Globe</string>
+  <string name="color">FARBA</string>
+  <string name="color_0">10:09</string>
+  <string name="color_1">Čierna/modrá</string>
+  <string name="color_2">Modrý plameň</string>
+  <string name="color_3">Jasná zelená/modrá</string>
+  <string name="color_4">Cargo kaki</string>
+  <string name="color_5">Púštny kameň</string>
+  <string name="color_6">Modrá/červená</string>
+  <string name="color_7">Zelená/sivá</string>
+  <string name="color_8">Sivá/modrá</string>
+  <string name="color_9">Iskrivý Volt</string>
+  <string name="color_10">Ružové zore</string>
+  <string name="color_11">Modrá stuha</string>
+  <string name="color_12">Polnočná čierna</string>
+  <string name="color_13">Jemná šedá</string>
+  <string name="color_14">Iskrivý Volt</string>
+  <string name="color_15">Kriedová biela</string>
+  <string name="color_16">Jagavá zelená</string>
+  <string name="color_17">Betónová šedá</string>
+  <string name="color_18">Kráľovská modrá/oranžová</string>
+  <string name="color_19">Čarovný uhlík</string>
+  <string name="color_20">Polnočná obloha</string>
+  <string name="color_21">Platinová</string>
+  <string name="color_22">Sekvoja/oranžová</string>
+  <string name="color_23">Hviezdna/ružová</string>
+</resources>

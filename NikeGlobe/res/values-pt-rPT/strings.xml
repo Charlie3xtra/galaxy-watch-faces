@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike globo</string>
+  <string name="color">COR</string>
+  <string name="color_0">10:09</string>
+  <string name="color_1">Preto/Azul</string>
+  <string name="color_2">Azul Flame</string>
+  <string name="color_3">Azul/Verde Bright</string>
+  <string name="color_4">Caqui cargo</string>
+  <string name="color_5">Desert Stone</string>
+  <string name="color_6">Azul/vermelho</string>
+  <string name="color_7">Verde/cinzento</string>
+  <string name="color_8">Cinzento/azul</string>
+  <string name="color_9">Volt Splash</string>
+  <string name="color_10">Rosa Alpenglow</string>
+  <string name="color_11">Blue Ribbon</string>
+  <string name="color_12">Preto Midnight</string>
+  <string name="color_13">Cinzento Veiled</string>
+  <string name="color_14">Volt Splash</string>
+  <string name="color_15">Giz Calm</string>
+  <string name="color_16">Verde Spark</string>
+  <string name="color_17">Cinzento Pavement</string>
+  <string name="color_18">Game Royal/Laranja</string>
+  <string name="color_19">Brasa mágica</string>
+  <string name="color_20">Midnight Sky</string>
+  <string name="color_21">Platina pura</string>
+  <string name="color_22">Sequoia/Laranja</string>
+  <string name="color_23">Starlight/Rosa</string>
+</resources>

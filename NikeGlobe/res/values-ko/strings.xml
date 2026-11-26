@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike 글로브</string>
+  <string name="color">색상</string>
+  <string name="color_0">10:09</string>
+  <string name="color_1">블랙/블루</string>
+  <string name="color_2">블루 플레임</string>
+  <string name="color_3">브라이트 그린/블루</string>
+  <string name="color_4">카고 카키</string>
+  <string name="color_5">데저트 스톤</string>
+  <string name="color_6">블루/레드</string>
+  <string name="color_7">그린/그레이</string>
+  <string name="color_8">그레이/블루</string>
+  <string name="color_9">볼트 스플래시</string>
+  <string name="color_10">알펜글로우 핑크</string>
+  <string name="color_11">블루 리본</string>
+  <string name="color_12">미드나이트 블랙</string>
+  <string name="color_13">베일드 그레이</string>
+  <string name="color_14">볼트 스플래시</string>
+  <string name="color_15">초크 캄</string>
+  <string name="color_16">그린 스파크</string>
+  <string name="color_17">페이브먼트 그레이</string>
+  <string name="color_18">게임 로열/오렌지</string>
+  <string name="color_19">매직 엠버</string>
+  <string name="color_20">미드나이트 스카이</string>
+  <string name="color_21">퓨어 플래티넘</string>
+  <string name="color_22">세쿼이아/오렌지</string>
+  <string name="color_23">스타라이트/핑크</string>
+</resources>

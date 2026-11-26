@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nikeグローブ</string>
+  <string name="color">カラー</string>
+  <string name="color_0">10:09</string>
+  <string name="color_1">ブラック/ブルー</string>
+  <string name="color_2">ブルーフレーム</string>
+  <string name="color_3">ブライトグリーン/ブルー</string>
+  <string name="color_4">カーゴカーキ</string>
+  <string name="color_5">デザートストーン</string>
+  <string name="color_6">ブルー/レッド</string>
+  <string name="color_7">グリーン/グレイ</string>
+  <string name="color_8">グレイ/ブルー</string>
+  <string name="color_9">ボルトスプラッシュ</string>
+  <string name="color_10">アルペングローピンク</string>
+  <string name="color_11">ブルーリボン</string>
+  <string name="color_12">ミッドナイトブラック</string>
+  <string name="color_13">ベールドグレー</string>
+  <string name="color_14">ボルトスプラッシュ</string>
+  <string name="color_15">チョークカーム</string>
+  <string name="color_16">グリーンスパーク</string>
+  <string name="color_17">ペイブメントグレー</string>
+  <string name="color_18">ゲームロイヤル/オレンジ</string>
+  <string name="color_19">マジックエンバー</string>
+  <string name="color_20">ミッドナイトスカイ</string>
+  <string name="color_21">ピュアプラチナム</string>
+  <string name="color_22">セコイア/オレンジ</string>
+  <string name="color_23">スターライト/ピンク</string>
+</resources>

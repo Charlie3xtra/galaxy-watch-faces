@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike地球</string>
+  <string name="color">颜色</string>
+  <string name="color_0">10:09</string>
+  <string name="color_1">黑配蓝色</string>
+  <string name="color_2">焰蓝色</string>
+  <string name="color_3">亮绿配蓝色</string>
+  <string name="color_4">军裤卡其色</string>
+  <string name="color_5">砂岩色</string>
+  <string name="color_6">蓝配红色</string>
+  <string name="color_7">绿配灰色</string>
+  <string name="color_8">灰配蓝色</string>
+  <string name="color_9">荧光黄绿色</string>
+  <string name="color_10">山霞粉色</string>
+  <string name="color_11">缎带蓝色</string>
+  <string name="color_12">午夜黑色</string>
+  <string name="color_13">朦胧灰色</string>
+  <string name="color_14">荧光黄绿色</string>
+  <string name="color_15">清静粉白色</string>
+  <string name="color_16">火花绿色</string>
+  <string name="color_17">巷陌灰色</string>
+  <string name="color_18">动感宝蓝配橙色</string>
+  <string name="color_19">橙粉色</string>
+  <string name="color_20">夜空色</string>
+  <string name="color_21">白金色</string>
+  <string name="color_22">暗杉绿配橙色</string>
+  <string name="color_23">星光色配粉色</string>
+</resources>
