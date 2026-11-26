@@ -4,9 +4,9 @@
 
 适用于支持 WFF 4 的 Wear OS 6 或更新版本。安装后在手表的表盘选择器中选用；在系统编辑页可选 I–V 五组配色。名称和配色辅助说明使用固件的本地化资源。
 
-十个数字的三角网格、纹理坐标、五组颜色及息屏参数来自 watchOS 24S132 的 NTKPlumeriaFaceBundle.bundle。默认配色以 Apple 官方 10:09 预览的局部色光为参考，分别映射到小时、分钟的固件轮廓。亮屏时先显示完整数字，局部光束在两种曝光匹配的纹理间渐变；各数字共用同一光晕渲染流程。高光、光晕、运动速度和圆屏布局是移植近似；未复现原生 Metal 渲染或运动传感器联动。
+十个数字的几何与纹理坐标取自 24S132 固件。默认配色沿轮廓播放 64 帧光流。flow.py 对应 plumeriaFragmentShader 的循环位置、平滑衰减及颜色混合，并参考 bloomCompositeFragment 处理光晕。initLayerAndInstanceStructs 中的长度初始化为 0.30 + 0.25 × 随机值，步进范围按 30 帧基准为 0.0015–0.0024。移植版将亮屏光流预先渲染为 WFF 动画资源，初始相位、循环闭合、光晕滤波与圆屏排版为适配值。
 
-[下载彩虹光辉 1.2](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/pride-radiance-v1.2/PrideRadiance-1.2.apk) · [1.2 亮屏实机截图](PrideRadiance/active.png) · [息屏实机截图](PrideRadiance/ambient.png)
+[下载彩虹光辉 1.3](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/pride-radiance-v1.3/PrideRadiance-1.3.apk) · [默认配色动态预览](PrideRadiance/flow-preview.webp) · [同时间对照](PrideRadiance/comparison-1.3.png)
 
 ## 艺术家 Artist
 

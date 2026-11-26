@@ -121,6 +121,24 @@ def localized(properties):
             store(ROOT/f"res/values{q}/strings.xml",xml)
 
 
+def trim_fonts(mesh_dir):
+    """Use proportional advances while fading only the outside of the glow."""
+    for digit in range(10):
+        atlas=mesh_uv(mesh_dir/f"{digit}.usda")
+        xs=np.where(atlas[:,:,0]>=0)[1]
+        box=(max(0,int(xs.min())-9),0,min(W,int(xs.max())+11),H)
+        for path in DRAW.glob(f"p*f*d{digit}.png"):
+            style,phase=map(int,re.match(r"p(\d+)f(\d+)",path.stem).groups())
+            if style==1 and phase!=FRAMES:
+                continue
+            pix=np.asarray(Image.open(path).convert("RGB").crop(box),dtype=float)/255
+            yy,xx=np.mgrid[:H,:pix.shape[1]]
+            edge=np.minimum.reduce((xx,pix.shape[1]-1-xx,yy,H-1-yy))
+            alpha=np.clip(pix.max(2)*12,0,1)
+            rgb=pix/np.maximum(alpha[:,:,None],1e-7)
+            alpha*=np.clip(edge/4,0,1)
+            Image.fromarray(np.uint8(255*np.clip(np.dstack([rgb,alpha]),0,1))).save(path)
+
 def scene(settings):
     root=ET.Element("WatchFace",width="480",height="480",clipShape="CIRCLE")
     fonts=CHILD(root,"BitmapFonts")
@@ -139,13 +157,18 @@ def scene(settings):
         CHILD(config,"ListOption",id=str(style-1),displayName=f"palette_{style-1}",screenReaderText=f"desc_{style-1}",icon=f"swatch_{style}")
         variant=CHILD(group,"ListOption",id=str(style-1))
         field=CHILD(variant,"Group",name=f"palette{style}",x="0",y="0",width="480",height="480")
-        for frame in (0,1,FRAMES):
+        if style==1:
+            from flow import scene as flow_scene
+            live=CHILD(field,"Group",name="flow",x="0",y="0",width="480",height="480")
+            CHILD(live,"Variant",mode="AMBIENT",target="alpha",value="0")
+            flow_scene(live)
+        for frame in ((FRAMES,) if style==1 else (0,1,FRAMES)):
             name=f"p{style}f{frame}"
             for family in ([name,f"m1f{frame}"] if style==1 and frame<FRAMES else [name]):
                 font=CHILD(fonts,"BitmapFont",name=family)
                 for digit in range(10):
                     for zero in (48,0x660,0x6f0,0x966,0xe50):
-                        CHILD(font,"Character",name=chr(zero+digit),resource=f"{family}d{digit}",width=str(W),height=str(H))
+                        CHILD(font,"Character",name=chr(zero+digit),resource=f"{family}d{digit}",width=str(Image.open(DRAW/f"{family}d{digit}.png").width),height=str(H))
             ambient = frame==FRAMES
             layer=CHILD(field,"Group",name=f"layer{name}",x="0",y="0",width="480",height="480",alpha="0" if ambient else "255")
             CHILD(layer,"Variant",mode="AMBIENT",target="alpha",value="255" if ambient else "0")
@@ -155,10 +178,10 @@ def scene(settings):
                 fade=CHILD(layer,"Group",name=f"sheen{name}",x="0",y="0",width="480",height="480")
                 opacity=CHILD(fade,"Transform",target="alpha",value="([SECOND] % 8) < 4 ? 255 : 0")
                 CHILD(opacity,"Animation",duration="3.8",fps="12",interpolation="LINEAR")
-            scale=.95 if ambient else .94
+            scale=1.02 if ambient else 1.04
             for y,fmt in ROWS:
                 height=round(H*scale)
-                clock=CHILD(fade,"DigitalClock",x="0",y=str(round(240+(y-240)*scale-height/2)),width="480",height=str(height))
+                clock=CHILD(fade,"DigitalClock",x="0",y=str(round(240+(y-240)*.95-height/2)),width="480",height=str(height))
                 text=CHILD(clock,"TimeText",x="0",y="0",width="480",height=str(height),align="CENTER",format=fmt,hourFormat="SYNC_TO_DEVICE")
                 family=f"m1f{frame}" if style==1 and not ambient and fmt=="mm" else name
                 CHILD(text,"BitmapFont",family=family,size=str(height),color="#FFFFFF")
@@ -172,7 +195,6 @@ if __name__=="__main__":
     props=args.model/"解析/属性表"
     settings=read(props/BUNDLE/"PlumeriaSettings.plist.json")
     localized(props)
-    scene(settings)
     for digit in range(10):
         uv=mesh_uv(args.model/"解析/媒体"/BUNDLE/f"{digit}.usda")
         for style in range(1,6):
@@ -181,11 +203,9 @@ if __name__=="__main__":
                     continue
                 im=render(uv,settings,style,phase,digit,phase==FRAMES)
                 im.save(DRAW/f"p{style}f{phase}d{digit}.png",compress_level=5)
-    from reference_light import bake
-    bake(args.model/"解析/媒体"/BUNDLE,ROOT/"reference.png",DRAW,FRAMES)
     # Match both opaque endpoints to one exposure. A moving highlight changes only part
     # of each digit, so the time remains readable even on the first interactive frame.
-    for prefix in ("p1","m1","p2","p3","p4","p5"):
+    for prefix in ("p2","p3","p4","p5"):
         for digit in range(10):
             files=[DRAW/f"{prefix}f{phase}d{digit}.png" for phase in (0,1,5)]
             anchor,positive,negative=[np.asarray(Image.open(f).convert("RGB"),dtype=float) for f in files]
@@ -194,13 +214,8 @@ if __name__=="__main__":
                 rgb=.65*anchor+.35*endpoint*exposure
                 Image.fromarray(np.clip(np.rint(rgb),0,255).astype("uint8")).save(dest)
             files[2].unlink()
-    preview=Image.new("RGB",(480,480))
-    height=round(H*.94)
-    width=round(W*height/H)
-    for row,digits in enumerate(("10","09")):
-        y=round(240+(ROWS[row][0]-240)*.94-height/2)
-        for col,digit in enumerate(digits):
-            path=DRAW/f"{('p' if row==0 else 'm')}1f0d{digit}.png"
-            glyph=Image.open(path).resize((width,height), Image.Resampling.LANCZOS)
-            preview.paste(glyph,(240-width+col*width,y))
-    preview.save(DRAW/"preview.png")
+    trim_fonts(args.model/"解析/媒体"/BUNDLE)
+    scene(settings)
+    from flow import generate
+    cfg=dict(settings["base"],**settings["colorway1"])
+    generate(args.model/"解析/媒体"/BUNDLE,ROOT/"reference.png",DRAW,mesh_uv,cfg,colors(cfg)/255)
