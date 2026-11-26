@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">Taiteilija</string>
+    <string name="retry">Yritä uudelleen</string>
+    <string name="setup_error">Kellotaulun määritys epäonnistui.</string>
+    <string name="manual_selection">Pidä nykyistä kellotaulua painettuna ja valitse %1$s.</string>
+    <string name="wake_notice">Tunnin kuluttua muotokuva vaihtuu, kun näyttö seuraavan kerran syttyy.</string>
+    <string name="tap_description">Vaihda muotokuvaa napauttamalla.</string>
+</resources>

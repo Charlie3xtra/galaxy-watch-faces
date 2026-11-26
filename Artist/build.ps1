@@ -12,7 +12,10 @@ $dir=Join-Path $env:TEMP ("artist-v2-"+[guid]::NewGuid())
 $null=New-Item -Type Directory "$dir/java","$dir/lib","$dir/dex"
 $key="$env:USERPROFILE/.android/artist-local.p12"
 if(!(Test-Path $key)){throw "Missing signing key used by Artist 1.0"}
+Run "$BuildTools/aapt2.exe" @('compile','--dir',"$PSScriptRoot/engine/res",'-o',"$dir/host-symbols.zip")
+Run "$BuildTools/aapt2.exe" @('link','-I',$Platform,'--manifest',"$PSScriptRoot/engine/AndroidManifest.xml",'--java',"$dir/generated",'-o',"$dir/host-symbols.apk","$dir/host-symbols.zip")
 $src=Get-ChildItem "$PSScriptRoot/engine/src/*.java" | ForEach-Object FullName
+$src=@($src)+"$dir/generated/local/artist/watchface/R.java"
 Run javac (@('-encoding','UTF-8','--release','8','-cp',"$Platform;$WearableJar;$env:TEMP/artist-push/wear-sdk.jar",'-d',"$dir/java")+$src)
 Run jar @('cf',"$dir/engine.jar",'-C',"$dir/java",'.')
 Push-Location "$dir/lib"
@@ -31,7 +34,7 @@ foreach($target in @('face','engine')) {
   Run "$BuildTools/aapt2.exe" (@('link','-I',$Platform,'--manifest',"$project/AndroidManifest.xml",'--min-sdk-version','36','--target-sdk-version','36','-o',$raw,"$dir/$target.zip")+$extra)
   if($target -eq 'engine'){Run jar @('uf',$raw,'-C',"$dir/dex",'classes.dex')}
   Run "$BuildTools/zipalign.exe" @('-f','4',$raw,"$dir/aligned-$target.apk")
-  $out=if($target -eq "face"){"$dir/validated-face.apk"}else{"$PSScriptRoot/Artist-4.3.apk"}
+  $out=if($target -eq "face"){"$dir/validated-face.apk"}else{"$PSScriptRoot/Artist-4.4.apk"}
   Run "$BuildTools/apksigner.bat" @('sign','--v4-signing-enabled','false','--ks',$key,'--ks-pass','pass:android','--ks-key-alias','artist','--out',$out,"$dir/aligned-$target.apk")
   Run "$BuildTools/apksigner.bat" @('verify','--verbose',$out)
   if($target -eq "face"){
@@ -42,8 +45,3 @@ foreach($target in @('face','engine')) {
     [IO.File]::WriteAllText("$PSScriptRoot/engine/assets/push-token.txt",$matches[1])
   }
 }
-
-
-
-
-

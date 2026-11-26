@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">藝術家</string>
+    <string name="retry">重試</string>
+    <string name="setup_error">無法設定錶面。</string>
+    <string name="manual_selection">按住目前的錶面，然後選擇「%1$s」。</string>
+    <string name="wake_notice">超過一小時後，下次螢幕亮起時會更換人像。</string>
+    <string name="tap_description">點一下即可更換人像。</string>
+</resources>

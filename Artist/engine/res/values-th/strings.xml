@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">ศิลปิน</string>
+    <string name="retry">ลองอีกครั้ง</string>
+    <string name="setup_error">ตั้งค่าหน้าปัดไม่ได้</string>
+    <string name="manual_selection">แตะหน้าปัดปัจจุบันค้างไว้ แล้วเลือก %1$s</string>
+    <string name="wake_notice">หลังผ่านไปหนึ่งชั่วโมง ภาพใบหน้าจะเปลี่ยนเมื่อหน้าจอสว่างขึ้นอีกครั้ง</string>
+    <string name="tap_description">แตะเพื่อเปลี่ยนภาพใบหน้า</string>
+</resources>

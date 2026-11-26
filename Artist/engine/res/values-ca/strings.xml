@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">Artista</string>
+    <string name="retry">Torna-ho a provar</string>
+    <string name="setup_error">No s’ha pogut configurar l’esfera.</string>
+    <string name="manual_selection">Mantén premuda l’esfera actual i selecciona «%1$s».</string>
+    <string name="wake_notice">Passada una hora, el retrat canvia quan es torna a encendre la pantalla.</string>
+    <string name="tap_description">Toca per canviar el retrat.</string>
+</resources>

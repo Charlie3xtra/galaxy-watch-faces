@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">Artiste</string>
+    <string name="retry">Réessayer</string>
+    <string name="setup_error">Impossible de configurer le cadran.</string>
+    <string name="manual_selection">Appuyez longuement sur le cadran actuel, puis sélectionnez « %1$s ».</string>
+    <string name="wake_notice">Après une heure, le portrait change au prochain allumage de l’écran.</string>
+    <string name="tap_description">Touchez pour changer de portrait.</string>
+</resources>

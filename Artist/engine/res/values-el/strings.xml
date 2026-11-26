@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">Καλλιτέχνης</string>
+    <string name="retry">Δοκιμή ξανά</string>
+    <string name="setup_error">Δεν ήταν δυνατή η ρύθμιση της πρόσοψης.</string>
+    <string name="manual_selection">Πατήστε παρατεταμένα την τρέχουσα πρόσοψη και επιλέξτε «%1$s».</string>
+    <string name="wake_notice">Μετά από μία ώρα, το πορτρέτο αλλάζει την επόμενη φορά που ανάβει η οθόνη.</string>
+    <string name="tap_description">Πατήστε για αλλαγή πορτρέτου.</string>
+</resources>

@@ -1,6 +1,7 @@
 package local.artist.engine;
 
 import android.app.Activity;
+import local.artist.watchface.R;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.*;
@@ -29,14 +30,14 @@ public final class WakeSettings extends Activity {
     }
     private void fail(Throwable err) {
         closeUpload();android.util.Log.e("ArtistPush","Watch face registration",err);
-        status.setText("登记失败："+err.getMessage());
-        apply.setVisibility(android.view.View.VISIBLE);apply.setText("重试");apply.setEnabled(true);
+        status.setText(R.string.setup_error);
+        apply.setVisibility(android.view.View.VISIBLE);apply.setText(R.string.retry);apply.setEnabled(true);
     }
     @Override public void onCreate(Bundle state) {
         super.onCreate(state);
         LinearLayout panel=new LinearLayout(this);panel.setOrientation(1);panel.setGravity(Gravity.CENTER);
         int pad=Math.round(getResources().getDisplayMetrics().density*22);panel.setPadding(pad,0,pad,0);
-        status=new TextView(this);status.setGravity(Gravity.CENTER);status.setText("艺术家");panel.addView(status);
+        status=new TextView(this);status.setGravity(Gravity.CENTER);status.setText(R.string.face_name);panel.addView(status);
         apply=new Button(this);
         apply.setVisibility(android.view.View.GONE);
         panel.addView(apply);
@@ -51,11 +52,11 @@ public final class WakeSettings extends Activity {
     }
     private void register() {
         apply.setEnabled(false);
-        if(manager==null){fail(new IllegalStateException("系统未提供 Watch Face Push"));return;}
-        if(getPackageManager().resolveService(new Intent("com.google.wear.ACTION_PUSH_WATCH_FACES"),PackageManager.MATCH_SYSTEM_ONLY)==null){fail(new IllegalStateException("未发现系统表盘登记服务"));return;}
+        if(manager==null){fail(new IllegalStateException("Watch Face Push unavailable"));return;}
+        if(getPackageManager().resolveService(new Intent("com.google.wear.ACTION_PUSH_WATCH_FACES"),PackageManager.MATCH_SYSTEM_ONLY)==null){fail(new IllegalStateException("System watch face service unavailable"));return;}
         manager.listWatchFaceSlots(getMainExecutor(),callback((ListWatchFaceSlotsResponse response)->{
             for(WatchFaceSlot face:response.getInstalledWatchFaceSlots()){
-                if(face.getPackageName().equals(getPackageName()+".watchfacepush.portrait") && face.getVersionCode()>=7){ready(face);return;}
+                if(face.getPackageName().equals(getPackageName()+".watchfacepush.portrait") && face.getVersionCode()>=9){ready(face);return;}
                 if(face.getPackageName().equals(getPackageName()+".watchfacepush.artist") || face.getPackageName().equals(getPackageName()+".watchfacepush.portrait")){
 
                     push(face.getSlotId());return;
@@ -90,11 +91,11 @@ public final class WakeSettings extends Activity {
         }));
     }
     private void finishSetup(){
-        android.content.ComponentName launcher=new android.content.ComponentName(this,"local.artist.engine.SetupLauncher");
+        android.content.ComponentName launcher=new android.content.ComponentName(this,"local.artist.engine.LocalizedSetupLauncher");
         getPackageManager().setComponentEnabledSetting(launcher,PackageManager.COMPONENT_ENABLED_STATE_DISABLED,PackageManager.DONT_KILL_APP);
         finish();
     }
-    private void manualSelection(){status.setText("长按当前表盘，在表盘列表选择「艺术家 Artist」");}
+    private void manualSelection(){status.setText(getString(R.string.manual_selection,getString(R.string.face_name)));}
     private void activate(){
         manager.setWatchFaceAsActive(slot,getMainExecutor(),new OutcomeReceiver<Void,WatchFacePushManager.SetActiveException>(){
             public void onResult(Void unused){
@@ -111,10 +112,3 @@ public final class WakeSettings extends Activity {
         else manualSelection();
     }
 }
-
-
-
-
-
-
-

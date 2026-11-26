@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">Umetnik</string>
+    <string name="retry">Poskusi znova</string>
+    <string name="setup_error">Številčnice ni bilo mogoče nastaviti.</string>
+    <string name="manual_selection">Pridržite trenutno številčnico in izberite »%1$s«.</string>
+    <string name="wake_notice">Po eni uri se portret spremeni ob naslednjem vklopu zaslona.</string>
+    <string name="tap_description">Dotaknite se za zamenjavo portreta.</string>
+</resources>

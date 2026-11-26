@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">아티스트</string>
+    <string name="retry">다시 시도</string>
+    <string name="setup_error">워치 페이스를 설정할 수 없습니다.</string>
+    <string name="manual_selection">현재 워치 페이스를 길게 누른 다음 %1$s을(를) 선택하세요.</string>
+    <string name="wake_notice">한 시간이 지난 후 화면이 다시 켜지면 얼굴이 바뀝니다.</string>
+    <string name="tap_description">탭하여 얼굴을 바꾸세요.</string>
+</resources>

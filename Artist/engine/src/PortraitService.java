@@ -27,7 +27,7 @@ public final class PortraitService extends ComplicationProviderService {
         Icon image=Icon.createWithData(cachedAtlas,0,cachedAtlas.length);
         manager.updateComplicationData(id,new ComplicationData.Builder(type)
             .setLongText(ComplicationText.plainText(forward?"A":"B"))
-            .setContentDescription(ComplicationText.plainText("艺术家，点按生成人像"))
+            .setContentDescription(ComplicationText.plainText(getString(local.artist.watchface.R.string.tap_description)))
             .setSmallImage(image).setImageStyle(ComplicationData.IMAGE_STYLE_PHOTO)
             .setBurnInProtectionSmallImage(image).setTapAction(tap).build());
     }

@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">Nghệ sĩ</string>
+    <string name="retry">Thử lại</string>
+    <string name="setup_error">Không thể thiết lập mặt đồng hồ.</string>
+    <string name="manual_selection">Nhấn giữ mặt đồng hồ hiện tại rồi chọn %1$s.</string>
+    <string name="wake_notice">Sau một giờ, chân dung sẽ đổi vào lần tiếp theo màn hình bật sáng.</string>
+    <string name="tap_description">Chạm để đổi chân dung.</string>
+</resources>

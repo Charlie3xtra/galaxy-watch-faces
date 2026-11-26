@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">कलाकार</string>
+    <string name="retry">फिर कोशिश करें</string>
+    <string name="setup_error">वॉच फ़ेस सेट नहीं हो सका।</string>
+    <string name="manual_selection">मौजूदा वॉच फ़ेस को दबाकर रखें और %1$s चुनें।</string>
+    <string name="wake_notice">एक घंटे के बाद, अगली बार स्क्रीन चालू होने पर चेहरा बदल जाएगा।</string>
+    <string name="tap_description">चेहरा बदलने के लिए टैप करें।</string>
+</resources>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">Umělecký</string>
+    <string name="retry">Zkusit znovu</string>
+    <string name="setup_error">Ciferník se nepodařilo nastavit.</string>
+    <string name="manual_selection">Podržte aktuální ciferník a vyberte „%1$s“.</string>
+    <string name="wake_notice">Po hodině se portrét změní při příštím rozsvícení obrazovky.</string>
+    <string name="tap_description">Klepnutím změníte portrét.</string>
+</resources>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">Artist</string>
+    <string name="retry">Reîncearcă</string>
+    <string name="setup_error">Cadranul nu a putut fi configurat.</string>
+    <string name="manual_selection">Ține apăsat cadranul actual și selectează „%1$s”.</string>
+    <string name="wake_notice">După o oră, portretul se schimbă la următoarea aprindere a ecranului.</string>
+    <string name="tap_description">Atinge pentru a schimba portretul.</string>
+</resources>

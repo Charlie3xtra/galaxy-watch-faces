@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">Kunstner</string>
+    <string name="retry">Prøv igjen</string>
+    <string name="setup_error">Kunne ikke konfigurere urskiven.</string>
+    <string name="manual_selection">Trykk og hold på den gjeldende urskiven, og velg %1$s.</string>
+    <string name="wake_notice">Etter en time endres portrettet neste gang skjermen slås på.</string>
+    <string name="tap_description">Trykk for å bytte portrett.</string>
+</resources>

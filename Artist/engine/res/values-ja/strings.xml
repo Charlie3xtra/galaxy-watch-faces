@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">アーティスト</string>
+    <string name="retry">再試行</string>
+    <string name="setup_error">文字盤を設定できませんでした。</string>
+    <string name="manual_selection">現在の文字盤を長押しして「%1$s」を選んでください。</string>
+    <string name="wake_notice">1時間経過後、次に画面が点灯すると顔が変わります。</string>
+    <string name="tap_description">タップすると顔が変わります。</string>
+</resources>

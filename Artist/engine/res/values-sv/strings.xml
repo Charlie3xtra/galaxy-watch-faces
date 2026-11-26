@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">Konstnär</string>
+    <string name="retry">Försök igen</string>
+    <string name="setup_error">Det gick inte att ställa in urtavlan.</string>
+    <string name="manual_selection">Håll ned den nuvarande urtavlan och välj %1$s.</string>
+    <string name="wake_notice">Efter en timme ändras porträttet nästa gång skärmen tänds.</string>
+    <string name="tap_description">Tryck för att byta porträtt.</string>
+</resources>

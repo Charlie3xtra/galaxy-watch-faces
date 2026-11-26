@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">الفنان</string>
+    <string name="retry">إعادة المحاولة</string>
+    <string name="setup_error">تعذّر إعداد واجهة الساعة.</string>
+    <string name="manual_selection">اضغط مطولًا على واجهة الساعة الحالية ثم اختر «%1$s».</string>
+    <string name="wake_notice">بعد مرور ساعة، تتغيّر الصورة عند إضاءة الشاشة مجددًا.</string>
+    <string name="tap_description">انقر لتغيير الصورة.</string>
+</resources>

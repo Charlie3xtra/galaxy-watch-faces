@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">艺术家</string>
+    <string name="retry">重试</string>
+    <string name="setup_error">表盘设置失败。</string>
+    <string name="manual_selection">长按当前表盘，然后选择「%1$s」。</string>
+    <string name="wake_notice">超过一小时后，下次亮屏时更换人像。</string>
+    <string name="tap_description">点按更换人像。</string>
+</resources>

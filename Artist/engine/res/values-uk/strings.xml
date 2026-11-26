@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">Художній</string>
+    <string name="retry">Повторити</string>
+    <string name="setup_error">Не вдалося налаштувати циферблат.</string>
+    <string name="manual_selection">Натисніть і утримуйте поточний циферблат, потім виберіть «%1$s».</string>
+    <string name="wake_notice">За годину портрет зміниться під час наступного ввімкнення екрана.</string>
+    <string name="tap_description">Торкніться, щоб змінити портрет.</string>
+</resources>

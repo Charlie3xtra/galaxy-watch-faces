@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">Künstler:in</string>
+    <string name="retry">Erneut versuchen</string>
+    <string name="setup_error">Das Zifferblatt konnte nicht eingerichtet werden.</string>
+    <string name="manual_selection">Halte das aktuelle Zifferblatt gedrückt und wähle „%1$s“.</string>
+    <string name="wake_notice">Nach einer Stunde wechselt das Porträt beim nächsten Einschalten des Displays.</string>
+    <string name="tap_description">Tippe, um das Porträt zu wechseln.</string>
+</resources>

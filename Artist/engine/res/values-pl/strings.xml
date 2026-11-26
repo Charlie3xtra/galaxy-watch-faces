@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">Artysta</string>
+    <string name="retry">Ponów próbę</string>
+    <string name="setup_error">Nie udało się skonfigurować tarczy.</string>
+    <string name="manual_selection">Przytrzymaj obecną tarczę i wybierz „%1$s”.</string>
+    <string name="wake_notice">Po godzinie portret zmieni się przy następnym włączeniu ekranu.</string>
+    <string name="tap_description">Dotknij, aby zmienić portret.</string>
+</resources>

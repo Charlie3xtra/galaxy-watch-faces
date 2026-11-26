@@ -12,6 +12,66 @@
       <Character name="7" resource="glyph_7" width="37" height="71" />
       <Character name="8" resource="glyph_8" width="40" height="71" />
       <Character name="9" resource="glyph_9" width="38" height="71" />
+      <Character name="٠" resource="glyph_0" width="39" height="71" />
+      <Character name="١" resource="glyph_1" width="27" height="71" />
+      <Character name="٢" resource="glyph_2" width="38" height="71" />
+      <Character name="٣" resource="glyph_3" width="38" height="71" />
+      <Character name="٤" resource="glyph_4" width="39" height="71" />
+      <Character name="٥" resource="glyph_5" width="40" height="71" />
+      <Character name="٦" resource="glyph_6" width="38" height="71" />
+      <Character name="٧" resource="glyph_7" width="37" height="71" />
+      <Character name="٨" resource="glyph_8" width="40" height="71" />
+      <Character name="٩" resource="glyph_9" width="38" height="71" />
+      <Character name="۰" resource="glyph_0" width="39" height="71" />
+      <Character name="۱" resource="glyph_1" width="27" height="71" />
+      <Character name="۲" resource="glyph_2" width="38" height="71" />
+      <Character name="۳" resource="glyph_3" width="38" height="71" />
+      <Character name="۴" resource="glyph_4" width="39" height="71" />
+      <Character name="۵" resource="glyph_5" width="40" height="71" />
+      <Character name="۶" resource="glyph_6" width="38" height="71" />
+      <Character name="۷" resource="glyph_7" width="37" height="71" />
+      <Character name="۸" resource="glyph_8" width="40" height="71" />
+      <Character name="۹" resource="glyph_9" width="38" height="71" />
+      <Character name="०" resource="glyph_0" width="39" height="71" />
+      <Character name="१" resource="glyph_1" width="27" height="71" />
+      <Character name="२" resource="glyph_2" width="38" height="71" />
+      <Character name="३" resource="glyph_3" width="38" height="71" />
+      <Character name="४" resource="glyph_4" width="39" height="71" />
+      <Character name="५" resource="glyph_5" width="40" height="71" />
+      <Character name="६" resource="glyph_6" width="38" height="71" />
+      <Character name="७" resource="glyph_7" width="37" height="71" />
+      <Character name="८" resource="glyph_8" width="40" height="71" />
+      <Character name="९" resource="glyph_9" width="38" height="71" />
+      <Character name="๐" resource="glyph_0" width="39" height="71" />
+      <Character name="๑" resource="glyph_1" width="27" height="71" />
+      <Character name="๒" resource="glyph_2" width="38" height="71" />
+      <Character name="๓" resource="glyph_3" width="38" height="71" />
+      <Character name="๔" resource="glyph_4" width="39" height="71" />
+      <Character name="๕" resource="glyph_5" width="40" height="71" />
+      <Character name="๖" resource="glyph_6" width="38" height="71" />
+      <Character name="๗" resource="glyph_7" width="37" height="71" />
+      <Character name="๘" resource="glyph_8" width="40" height="71" />
+      <Character name="๙" resource="glyph_9" width="38" height="71" />
+      <Character name="০" resource="glyph_0" width="39" height="71" />
+      <Character name="১" resource="glyph_1" width="27" height="71" />
+      <Character name="২" resource="glyph_2" width="38" height="71" />
+      <Character name="৩" resource="glyph_3" width="38" height="71" />
+      <Character name="৪" resource="glyph_4" width="39" height="71" />
+      <Character name="৫" resource="glyph_5" width="40" height="71" />
+      <Character name="৬" resource="glyph_6" width="38" height="71" />
+      <Character name="৭" resource="glyph_7" width="37" height="71" />
+      <Character name="৮" resource="glyph_8" width="40" height="71" />
+      <Character name="৯" resource="glyph_9" width="38" height="71" />
+      <Character name="０" resource="glyph_0" width="39" height="71" />
+      <Character name="１" resource="glyph_1" width="27" height="71" />
+      <Character name="２" resource="glyph_2" width="38" height="71" />
+      <Character name="３" resource="glyph_3" width="38" height="71" />
+      <Character name="４" resource="glyph_4" width="39" height="71" />
+      <Character name="５" resource="glyph_5" width="40" height="71" />
+      <Character name="６" resource="glyph_6" width="38" height="71" />
+      <Character name="７" resource="glyph_7" width="37" height="71" />
+      <Character name="８" resource="glyph_8" width="40" height="71" />
+      <Character name="９" resource="glyph_9" width="38" height="71" />
     </BitmapFont>
   </BitmapFonts>
   <Scene backgroundColor="#000000">
@@ -73,6 +133,3 @@
     </Group>
   </Scene>
 </WatchFace>
-
-
-

@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">Artis</string>
+    <string name="retry">Coba lagi</string>
+    <string name="setup_error">Tampilan jam tidak dapat disiapkan.</string>
+    <string name="manual_selection">Sentuh lama tampilan jam saat ini, lalu pilih %1$s.</string>
+    <string name="wake_notice">Setelah satu jam, potret berubah saat layar menyala kembali.</string>
+    <string name="tap_description">Ketuk untuk mengganti potret.</string>
+</resources>

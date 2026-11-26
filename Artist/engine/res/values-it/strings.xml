@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">Artista</string>
+    <string name="retry">Riprova</string>
+    <string name="setup_error">Impossibile configurare il quadrante.</string>
+    <string name="manual_selection">Tieni premuto il quadrante attuale e scegli «%1$s».</string>
+    <string name="wake_notice">Dopo un’ora, il ritratto cambia alla successiva accensione dello schermo.</string>
+    <string name="tap_description">Tocca per cambiare ritratto.</string>
+</resources>

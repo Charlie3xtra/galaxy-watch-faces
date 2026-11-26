@@ -1,0 +1,8 @@
+<resources>
+    <string name="face_name">Umjetnički</string>
+    <string name="retry">Pokušaj ponovno</string>
+    <string name="setup_error">Nije moguće postaviti brojčanik.</string>
+    <string name="manual_selection">Pritisnite i držite trenutačni brojčanik pa odaberite „%1$s”.</string>
+    <string name="wake_notice">Nakon jednog sata portret se mijenja pri sljedećem uključivanju zaslona.</string>
+    <string name="tap_description">Dodirnite za promjenu portreta.</string>
+</resources>
