@@ -140,31 +140,6 @@ part=add(large,'PartImage',**box(90,272,32,107),tintColor=ink)
 add(part,'Image',resource='dots')
 preview.paste(purple,(90,272,122,379),mask)
 preview.save(DRAW/'preview.png')
-types=['SHORT_TEXT','MONOCHROMATIC_IMAGE','SMALL_IMAGE','PHOTO_IMAGE']
-slot=add(scene,'ComplicationSlot',**box(0,0,480,480),slotId=1,supportedTypes='EMPTY '+' '.join(types))
-add(slot,'BoundingOval',**box(12,12,456,456))
-add(slot,'Complication',type='EMPTY')
-for kind in types:
-    g=group(add(slot,'Complication',type=kind))
-    bg=add(g,'PartDraw',**box(0,0,480,480))
-    add(add(bg,'Rectangle',**box(0,0,480,480)),'Fill',color='#000000')
-    fg=group(g)
-    ambient(fg,70)
-    clock=add(fg,'DigitalClock',**box(72,57,336,96))
-    t=add(clock,'TimeText',**box(0,0,336,96),format='h:mm',align='CENTER')
-    add(t,'Font',family='SYNC_TO_DEVICE',size=76,color=ink)
-    if kind=='SHORT_TEXT':
-        part=add(fg,'PartImage',**box(188,174,104,104),tintColor=ink)
-        add(part,'Image',resource='[COMPLICATION.MONOCHROMATIC_IMAGE]')
-        part=add(fg,'PartText',**box(83,284,314,86))
-        text=add(part,'Text',align='CENTER')
-        f=add(text,'Font',family='SYNC_TO_DEVICE',size=52,color=ink)
-        temp=add(f,'Template')
-        temp.text='%s'
-        add(temp,'Parameter',expression='[COMPLICATION.TEXT]')
-    else:
-        part=add(fg,'PartImage',**box(145,197,190,190),**({'tintColor':ink} if kind=='MONOCHROMATIC_IMAGE' else {}))
-        add(part,'Image',resource=f'[COMPLICATION.{kind}]')
 write(RES/'raw/watchface.xml',face)
 print(len(palette),'colors')
 

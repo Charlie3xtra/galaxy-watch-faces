@@ -36,6 +36,6 @@ Artist 目录含生成器、WFF 场景和本地 PowerShell 构建脚本。重新
 
 ## X-Large · 大文字
 
-[Download X-Large 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/xlarge-1.0). Standalone WFF 4 face for API 36+. Empty slot shows stacked hours and minutes. Choose a complication in the native editor to put the time above it. Tested with the Galaxy battery provider. The selectable region includes both time and data because the layout changes together.
+[下载大文字 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/xlarge-1.1)。纯时间表盘，亮屏和息屏均以两行显示时间。三星原生编辑器提供 27 种配色。
 
 The default lavender and three numeral silhouettes were sampled from the Apple gallery image. The other digits use the closest measured SF Compact Rounded weight from build 24S132. The 26 additional solid colors use firmware catalog components. Round-screen spacing and ambient dimming are adaptations. Apple provider graphics, seasonal palettes, color sliders and alternate numeral scripts are outside this release. Build the included Android resources directly with XLarge/build.ps1. Regeneration additionally needs Pillow, NumPy, and the extracted 24S132 directory structure referenced in generate.py.
