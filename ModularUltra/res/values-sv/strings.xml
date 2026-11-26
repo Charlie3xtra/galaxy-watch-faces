@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Moduler Ultra</string>
+  <string name="style">STIL</string>
+  <string name="edge">VRIDRING</string>
+  <string name="color">FÄRG</string>
+  <string name="nightmode">Night Mode</string>
+  <string name="default">T:M I</string>
+  <string name="default_with_seconds">T:M:S I</string>
+  <string name="large">T:M II</string>
+  <string name="large_with_seconds">T:M:S II</string>
+  <string name="xlarge">T:M III</string>
+  <string name="xlarge_with_seconds">T:M:S III</string>
+  <string name="seconds">SEKUNDER</string>
+  <string name="none">INGEN</string>
+  <string name="top_left">Uppe till vänster</string>
+  <string name="top">Upptill</string>
+  <string name="top_right">Uppe till höger</string>
+  <string name="center">Mitten</string>
+  <string name="bottom_left">Nedtill vänster</string>
+  <string name="bottom_center">Nedtill mitten</string>
+  <string name="bottom_right">Nedtill höger</string>
+  <string name="adventurer">Adventurer</string>
+  <string name="ocean">Ocean</string>
+  <string name="performance">Performance</string>
+  <string name="burgundy">Burgundy</string>
+  <string name="desert">Desert</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Modulární – ultra</string>
+  <string name="style">STYL</string>
+  <string name="edge">LUNETA</string>
+  <string name="color">BARVY</string>
+  <string name="nightmode">Night Mode</string>
+  <string name="default">H:M I</string>
+  <string name="default_with_seconds">H:M:S I</string>
+  <string name="large">H:M II</string>
+  <string name="large_with_seconds">H:M:S II</string>
+  <string name="xlarge">H:M III</string>
+  <string name="xlarge_with_seconds">H:M:S III</string>
+  <string name="seconds">SEKUNDY</string>
+  <string name="none">ŽÁDNÉ ÚDAJE</string>
+  <string name="top_left">Vlevo nahoře</string>
+  <string name="top">Nahoře</string>
+  <string name="top_right">Vpravo nahoře</string>
+  <string name="center">Uprostřed</string>
+  <string name="bottom_left">Vlevo dole</string>
+  <string name="bottom_center">Dole uprostřed</string>
+  <string name="bottom_right">Vpravo dole</string>
+  <string name="adventurer">Adventurer</string>
+  <string name="ocean">Ocean</string>
+  <string name="performance">Performance</string>
+  <string name="burgundy">Burgundy</string>
+  <string name="desert">Desert</string>
+</resources>

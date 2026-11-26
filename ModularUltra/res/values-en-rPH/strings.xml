@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Modular Ultra</string>
+  <string name="style">STYLE</string>
+  <string name="edge">BEZEL</string>
+  <string name="color">COLOR</string>
+  <string name="nightmode">Night Mode</string>
+  <string name="default">H:M I</string>
+  <string name="default_with_seconds">H:M:S I</string>
+  <string name="large">H:M II</string>
+  <string name="large_with_seconds">H:M:S II</string>
+  <string name="xlarge">H:M III</string>
+  <string name="xlarge_with_seconds">H:M:S III</string>
+  <string name="seconds">SECONDS</string>
+  <string name="none">NONE</string>
+  <string name="top_left">Top Left</string>
+  <string name="top">Top</string>
+  <string name="top_right">Top Right</string>
+  <string name="center">Middle</string>
+  <string name="bottom_left">Bottom Left</string>
+  <string name="bottom_center">Bottom Middle</string>
+  <string name="bottom_right">Bottom Right</string>
+  <string name="adventurer">Adventurer</string>
+  <string name="ocean">Ocean</string>
+  <string name="performance">Performance</string>
+  <string name="burgundy">Burgundy</string>
+  <string name="desert">Desert</string>
+</resources>

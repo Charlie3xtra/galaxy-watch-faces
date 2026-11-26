@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Ultra組合</string>
+  <string name="style">樣式</string>
+  <string name="edge">錶圈</string>
+  <string name="color">顏色</string>
+  <string name="nightmode">夜間模式</string>
+  <string name="default">時分I</string>
+  <string name="default_with_seconds">時分秒I</string>
+  <string name="large">時分II</string>
+  <string name="large_with_seconds">時分秒II</string>
+  <string name="xlarge">時分III</string>
+  <string name="xlarge_with_seconds">時分秒III</string>
+  <string name="seconds">秒</string>
+  <string name="none">無</string>
+  <string name="top_left">左上</string>
+  <string name="top">頂部</string>
+  <string name="top_right">右上</string>
+  <string name="center">中間</string>
+  <string name="bottom_left">左下</string>
+  <string name="bottom_center">中下</string>
+  <string name="bottom_right">右下</string>
+  <string name="adventurer">探險橙</string>
+  <string name="ocean">海洋藍</string>
+  <string name="performance">金黃</string>
+  <string name="burgundy">酒紅</string>
+  <string name="desert">沙色</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">モジュラーUltra</string>
+  <string name="style">スタイル</string>
+  <string name="edge">ベゼル</string>
+  <string name="color">カラー</string>
+  <string name="nightmode">Night Mode</string>
+  <string name="default">時:分 I</string>
+  <string name="default_with_seconds">時:分:秒 I</string>
+  <string name="large">時:分 II</string>
+  <string name="large_with_seconds">時:分:秒 II</string>
+  <string name="xlarge">時:分 III</string>
+  <string name="xlarge_with_seconds">時:分:秒 III</string>
+  <string name="seconds">秒</string>
+  <string name="none">なし</string>
+  <string name="top_left">左上</string>
+  <string name="top">上</string>
+  <string name="top_right">右上</string>
+  <string name="center">中</string>
+  <string name="bottom_left">左下</string>
+  <string name="bottom_center">中央下</string>
+  <string name="bottom_right">右下</string>
+  <string name="adventurer">Adventurer</string>
+  <string name="ocean">Ocean</string>
+  <string name="performance">Performance</string>
+  <string name="burgundy">Burgundy</string>
+  <string name="desert">Desert</string>
+</resources>

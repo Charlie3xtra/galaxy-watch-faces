@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Modularna Ultra</string>
+  <string name="style">SLOG</string>
+  <string name="edge">LUNETA</string>
+  <string name="color">BARVA</string>
+  <string name="nightmode">Night Mode</string>
+  <string name="default">U:M I</string>
+  <string name="default_with_seconds">U:M:S I</string>
+  <string name="large">U:M II</string>
+  <string name="large_with_seconds">U:M:S II</string>
+  <string name="xlarge">U:M III</string>
+  <string name="xlarge_with_seconds">U:M:S III</string>
+  <string name="seconds">SEKUNDE</string>
+  <string name="none">BREZ</string>
+  <string name="top_left">Zgoraj levo</string>
+  <string name="top">Zgoraj</string>
+  <string name="top_right">Zgoraj desno</string>
+  <string name="center">Na sredini</string>
+  <string name="bottom_left">Spodaj levo</string>
+  <string name="bottom_center">Na sredini spodaj</string>
+  <string name="bottom_right">Spodaj desno</string>
+  <string name="adventurer">Adventurer</string>
+  <string name="ocean">Ocean</string>
+  <string name="performance">Performance</string>
+  <string name="burgundy">Burgundy</string>
+  <string name="desert">Desert</string>
+</resources>

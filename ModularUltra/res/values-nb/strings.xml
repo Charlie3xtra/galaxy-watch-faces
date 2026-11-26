@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Modulær ultra</string>
+  <string name="style">STIL</string>
+  <string name="edge">RING</string>
+  <string name="color">FARGE</string>
+  <string name="nightmode">Night Mode</string>
+  <string name="default">T:M 1</string>
+  <string name="default_with_seconds">T:M:S 1</string>
+  <string name="large">T:M 2</string>
+  <string name="large_with_seconds">T:M:S 2</string>
+  <string name="xlarge">T:M 3</string>
+  <string name="xlarge_with_seconds">T:M:S 3</string>
+  <string name="seconds">SEKUNDER</string>
+  <string name="none">INGEN</string>
+  <string name="top_left">Oppe til venstre</string>
+  <string name="top">Øverst</string>
+  <string name="top_right">Oppe til høyre</string>
+  <string name="center">Midten</string>
+  <string name="bottom_left">Nede til venstre</string>
+  <string name="bottom_center">Nede i midten</string>
+  <string name="bottom_right">Nede til høyre</string>
+  <string name="adventurer">Adventurer</string>
+  <string name="ocean">Ocean</string>
+  <string name="performance">Performance</string>
+  <string name="burgundy">Burgundy</string>
+  <string name="desert">Desert</string>
+</resources>

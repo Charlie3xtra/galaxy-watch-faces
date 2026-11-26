@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Modüler Ultra</string>
+  <string name="style">STİL</string>
+  <string name="edge">KENAR</string>
+  <string name="color">RENK</string>
+  <string name="nightmode">Night Mode</string>
+  <string name="default">S:D I</string>
+  <string name="default_with_seconds">S:D:S I</string>
+  <string name="large">S:D II</string>
+  <string name="large_with_seconds">S:D:S II</string>
+  <string name="xlarge">S:D III</string>
+  <string name="xlarge_with_seconds">S:D:S III</string>
+  <string name="seconds">SANİYE</string>
+  <string name="none">YOK</string>
+  <string name="top_left">Sol Üst</string>
+  <string name="top">Üst</string>
+  <string name="top_right">Sağ Üst</string>
+  <string name="center">Orta</string>
+  <string name="bottom_left">Sol Alt</string>
+  <string name="bottom_center">Orta Alt</string>
+  <string name="bottom_right">Sağ Alt</string>
+  <string name="adventurer">Adventurer</string>
+  <string name="ocean">Ocean</string>
+  <string name="performance">Performance</string>
+  <string name="burgundy">Burgundy</string>
+  <string name="desert">Desert</string>
+</resources>

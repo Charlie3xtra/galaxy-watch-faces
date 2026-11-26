@@ -1,0 +1,1605 @@
+<?xml version='1.0' encoding='utf-8'?>
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <UserConfigurations>
+    <ColorConfiguration id="tone" displayName="color" defaultValue="0">
+      <ColorOption id="0" displayName="adventurer" colors="#FFFF5400" />
+      <ColorOption id="1" displayName="ocean" colors="#FF47BBFC" />
+      <ColorOption id="2" displayName="performance" colors="#FFFFD255" />
+      <ColorOption id="3" displayName="burgundy" colors="#FF8C583E" />
+      <ColorOption id="4" displayName="desert" colors="#FFB88649" />
+    </ColorConfiguration>
+    <ListConfiguration id="layout" displayName="style" defaultValue="default">
+      <ListOption id="default" displayName="default" icon="sample_default" />
+      <ListOption id="default_with_seconds" displayName="default_with_seconds" icon="sample_default_with_seconds" />
+      <ListOption id="large" displayName="large" icon="sample_large" />
+      <ListOption id="large_with_seconds" displayName="large_with_seconds" icon="sample_large_with_seconds" />
+      <ListOption id="xlarge" displayName="xlarge" icon="sample_xlarge" />
+      <ListOption id="xlarge_with_seconds" displayName="xlarge_with_seconds" icon="sample_xlarge_with_seconds" />
+    </ListConfiguration>
+    <ListConfiguration id="bezel" displayName="edge" defaultValue="seconds">
+      <ListOption id="seconds" displayName="seconds" />
+      <ListOption id="none" displayName="none" />
+    </ListConfiguration>
+    <BooleanConfiguration id="night" displayName="nightmode" defaultValue="FALSE" />
+  </UserConfigurations>
+  <BitmapFonts>
+    <BitmapFont name="default">
+      <Character name="0" resource="default_0" width="56" height="69" />
+      <Character name="٠" resource="default_0" width="56" height="69" />
+      <Character name="۰" resource="default_0" width="56" height="69" />
+      <Character name="०" resource="default_0" width="56" height="69" />
+      <Character name="1" resource="default_1" width="56" height="69" />
+      <Character name="١" resource="default_1" width="56" height="69" />
+      <Character name="۱" resource="default_1" width="56" height="69" />
+      <Character name="१" resource="default_1" width="56" height="69" />
+      <Character name="2" resource="default_2" width="56" height="69" />
+      <Character name="٢" resource="default_2" width="56" height="69" />
+      <Character name="۲" resource="default_2" width="56" height="69" />
+      <Character name="२" resource="default_2" width="56" height="69" />
+      <Character name="3" resource="default_3" width="56" height="69" />
+      <Character name="٣" resource="default_3" width="56" height="69" />
+      <Character name="۳" resource="default_3" width="56" height="69" />
+      <Character name="३" resource="default_3" width="56" height="69" />
+      <Character name="4" resource="default_4" width="56" height="69" />
+      <Character name="٤" resource="default_4" width="56" height="69" />
+      <Character name="۴" resource="default_4" width="56" height="69" />
+      <Character name="४" resource="default_4" width="56" height="69" />
+      <Character name="5" resource="default_5" width="56" height="69" />
+      <Character name="٥" resource="default_5" width="56" height="69" />
+      <Character name="۵" resource="default_5" width="56" height="69" />
+      <Character name="५" resource="default_5" width="56" height="69" />
+      <Character name="6" resource="default_6" width="56" height="69" />
+      <Character name="٦" resource="default_6" width="56" height="69" />
+      <Character name="۶" resource="default_6" width="56" height="69" />
+      <Character name="६" resource="default_6" width="56" height="69" />
+      <Character name="7" resource="default_7" width="56" height="69" />
+      <Character name="٧" resource="default_7" width="56" height="69" />
+      <Character name="۷" resource="default_7" width="56" height="69" />
+      <Character name="७" resource="default_7" width="56" height="69" />
+      <Character name="8" resource="default_8" width="56" height="69" />
+      <Character name="٨" resource="default_8" width="56" height="69" />
+      <Character name="۸" resource="default_8" width="56" height="69" />
+      <Character name="८" resource="default_8" width="56" height="69" />
+      <Character name="9" resource="default_9" width="56" height="69" />
+      <Character name="٩" resource="default_9" width="56" height="69" />
+      <Character name="۹" resource="default_9" width="56" height="69" />
+      <Character name="९" resource="default_9" width="56" height="69" />
+      <Character name=":" resource="default_colon" width="19" height="69" />
+    </BitmapFont>
+    <BitmapFont name="default_with_seconds">
+      <Character name="0" resource="default_with_seconds_0" width="40" height="69" />
+      <Character name="٠" resource="default_with_seconds_0" width="40" height="69" />
+      <Character name="۰" resource="default_with_seconds_0" width="40" height="69" />
+      <Character name="०" resource="default_with_seconds_0" width="40" height="69" />
+      <Character name="1" resource="default_with_seconds_1" width="40" height="69" />
+      <Character name="١" resource="default_with_seconds_1" width="40" height="69" />
+      <Character name="۱" resource="default_with_seconds_1" width="40" height="69" />
+      <Character name="१" resource="default_with_seconds_1" width="40" height="69" />
+      <Character name="2" resource="default_with_seconds_2" width="40" height="69" />
+      <Character name="٢" resource="default_with_seconds_2" width="40" height="69" />
+      <Character name="۲" resource="default_with_seconds_2" width="40" height="69" />
+      <Character name="२" resource="default_with_seconds_2" width="40" height="69" />
+      <Character name="3" resource="default_with_seconds_3" width="40" height="69" />
+      <Character name="٣" resource="default_with_seconds_3" width="40" height="69" />
+      <Character name="۳" resource="default_with_seconds_3" width="40" height="69" />
+      <Character name="३" resource="default_with_seconds_3" width="40" height="69" />
+      <Character name="4" resource="default_with_seconds_4" width="40" height="69" />
+      <Character name="٤" resource="default_with_seconds_4" width="40" height="69" />
+      <Character name="۴" resource="default_with_seconds_4" width="40" height="69" />
+      <Character name="४" resource="default_with_seconds_4" width="40" height="69" />
+      <Character name="5" resource="default_with_seconds_5" width="40" height="69" />
+      <Character name="٥" resource="default_with_seconds_5" width="40" height="69" />
+      <Character name="۵" resource="default_with_seconds_5" width="40" height="69" />
+      <Character name="५" resource="default_with_seconds_5" width="40" height="69" />
+      <Character name="6" resource="default_with_seconds_6" width="40" height="69" />
+      <Character name="٦" resource="default_with_seconds_6" width="40" height="69" />
+      <Character name="۶" resource="default_with_seconds_6" width="40" height="69" />
+      <Character name="६" resource="default_with_seconds_6" width="40" height="69" />
+      <Character name="7" resource="default_with_seconds_7" width="40" height="69" />
+      <Character name="٧" resource="default_with_seconds_7" width="40" height="69" />
+      <Character name="۷" resource="default_with_seconds_7" width="40" height="69" />
+      <Character name="७" resource="default_with_seconds_7" width="40" height="69" />
+      <Character name="8" resource="default_with_seconds_8" width="40" height="69" />
+      <Character name="٨" resource="default_with_seconds_8" width="40" height="69" />
+      <Character name="۸" resource="default_with_seconds_8" width="40" height="69" />
+      <Character name="८" resource="default_with_seconds_8" width="40" height="69" />
+      <Character name="9" resource="default_with_seconds_9" width="40" height="69" />
+      <Character name="٩" resource="default_with_seconds_9" width="40" height="69" />
+      <Character name="۹" resource="default_with_seconds_9" width="40" height="69" />
+      <Character name="९" resource="default_with_seconds_9" width="40" height="69" />
+      <Character name=":" resource="default_with_seconds_colon" width="13" height="69" />
+    </BitmapFont>
+    <BitmapFont name="large">
+      <Character name="0" resource="large_0" width="60" height="82" />
+      <Character name="٠" resource="large_0" width="60" height="82" />
+      <Character name="۰" resource="large_0" width="60" height="82" />
+      <Character name="०" resource="large_0" width="60" height="82" />
+      <Character name="1" resource="large_1" width="60" height="82" />
+      <Character name="١" resource="large_1" width="60" height="82" />
+      <Character name="۱" resource="large_1" width="60" height="82" />
+      <Character name="१" resource="large_1" width="60" height="82" />
+      <Character name="2" resource="large_2" width="60" height="82" />
+      <Character name="٢" resource="large_2" width="60" height="82" />
+      <Character name="۲" resource="large_2" width="60" height="82" />
+      <Character name="२" resource="large_2" width="60" height="82" />
+      <Character name="3" resource="large_3" width="60" height="82" />
+      <Character name="٣" resource="large_3" width="60" height="82" />
+      <Character name="۳" resource="large_3" width="60" height="82" />
+      <Character name="३" resource="large_3" width="60" height="82" />
+      <Character name="4" resource="large_4" width="60" height="82" />
+      <Character name="٤" resource="large_4" width="60" height="82" />
+      <Character name="۴" resource="large_4" width="60" height="82" />
+      <Character name="४" resource="large_4" width="60" height="82" />
+      <Character name="5" resource="large_5" width="60" height="82" />
+      <Character name="٥" resource="large_5" width="60" height="82" />
+      <Character name="۵" resource="large_5" width="60" height="82" />
+      <Character name="५" resource="large_5" width="60" height="82" />
+      <Character name="6" resource="large_6" width="60" height="82" />
+      <Character name="٦" resource="large_6" width="60" height="82" />
+      <Character name="۶" resource="large_6" width="60" height="82" />
+      <Character name="६" resource="large_6" width="60" height="82" />
+      <Character name="7" resource="large_7" width="60" height="82" />
+      <Character name="٧" resource="large_7" width="60" height="82" />
+      <Character name="۷" resource="large_7" width="60" height="82" />
+      <Character name="७" resource="large_7" width="60" height="82" />
+      <Character name="8" resource="large_8" width="60" height="82" />
+      <Character name="٨" resource="large_8" width="60" height="82" />
+      <Character name="۸" resource="large_8" width="60" height="82" />
+      <Character name="८" resource="large_8" width="60" height="82" />
+      <Character name="9" resource="large_9" width="60" height="82" />
+      <Character name="٩" resource="large_9" width="60" height="82" />
+      <Character name="۹" resource="large_9" width="60" height="82" />
+      <Character name="९" resource="large_9" width="60" height="82" />
+      <Character name=":" resource="large_colon" width="19" height="82" />
+    </BitmapFont>
+    <BitmapFont name="large_with_seconds">
+      <Character name="0" resource="large_with_seconds_0" width="42" height="82" />
+      <Character name="٠" resource="large_with_seconds_0" width="42" height="82" />
+      <Character name="۰" resource="large_with_seconds_0" width="42" height="82" />
+      <Character name="०" resource="large_with_seconds_0" width="42" height="82" />
+      <Character name="1" resource="large_with_seconds_1" width="42" height="82" />
+      <Character name="١" resource="large_with_seconds_1" width="42" height="82" />
+      <Character name="۱" resource="large_with_seconds_1" width="42" height="82" />
+      <Character name="१" resource="large_with_seconds_1" width="42" height="82" />
+      <Character name="2" resource="large_with_seconds_2" width="42" height="82" />
+      <Character name="٢" resource="large_with_seconds_2" width="42" height="82" />
+      <Character name="۲" resource="large_with_seconds_2" width="42" height="82" />
+      <Character name="२" resource="large_with_seconds_2" width="42" height="82" />
+      <Character name="3" resource="large_with_seconds_3" width="42" height="82" />
+      <Character name="٣" resource="large_with_seconds_3" width="42" height="82" />
+      <Character name="۳" resource="large_with_seconds_3" width="42" height="82" />
+      <Character name="३" resource="large_with_seconds_3" width="42" height="82" />
+      <Character name="4" resource="large_with_seconds_4" width="42" height="82" />
+      <Character name="٤" resource="large_with_seconds_4" width="42" height="82" />
+      <Character name="۴" resource="large_with_seconds_4" width="42" height="82" />
+      <Character name="४" resource="large_with_seconds_4" width="42" height="82" />
+      <Character name="5" resource="large_with_seconds_5" width="42" height="82" />
+      <Character name="٥" resource="large_with_seconds_5" width="42" height="82" />
+      <Character name="۵" resource="large_with_seconds_5" width="42" height="82" />
+      <Character name="५" resource="large_with_seconds_5" width="42" height="82" />
+      <Character name="6" resource="large_with_seconds_6" width="42" height="82" />
+      <Character name="٦" resource="large_with_seconds_6" width="42" height="82" />
+      <Character name="۶" resource="large_with_seconds_6" width="42" height="82" />
+      <Character name="६" resource="large_with_seconds_6" width="42" height="82" />
+      <Character name="7" resource="large_with_seconds_7" width="42" height="82" />
+      <Character name="٧" resource="large_with_seconds_7" width="42" height="82" />
+      <Character name="۷" resource="large_with_seconds_7" width="42" height="82" />
+      <Character name="७" resource="large_with_seconds_7" width="42" height="82" />
+      <Character name="8" resource="large_with_seconds_8" width="42" height="82" />
+      <Character name="٨" resource="large_with_seconds_8" width="42" height="82" />
+      <Character name="۸" resource="large_with_seconds_8" width="42" height="82" />
+      <Character name="८" resource="large_with_seconds_8" width="42" height="82" />
+      <Character name="9" resource="large_with_seconds_9" width="42" height="82" />
+      <Character name="٩" resource="large_with_seconds_9" width="42" height="82" />
+      <Character name="۹" resource="large_with_seconds_9" width="42" height="82" />
+      <Character name="९" resource="large_with_seconds_9" width="42" height="82" />
+      <Character name=":" resource="large_with_seconds_colon" width="13" height="82" />
+    </BitmapFont>
+    <BitmapFont name="xlarge">
+      <Character name="0" resource="xlarge_0" width="64" height="95" />
+      <Character name="٠" resource="xlarge_0" width="64" height="95" />
+      <Character name="۰" resource="xlarge_0" width="64" height="95" />
+      <Character name="०" resource="xlarge_0" width="64" height="95" />
+      <Character name="1" resource="xlarge_1" width="64" height="95" />
+      <Character name="١" resource="xlarge_1" width="64" height="95" />
+      <Character name="۱" resource="xlarge_1" width="64" height="95" />
+      <Character name="१" resource="xlarge_1" width="64" height="95" />
+      <Character name="2" resource="xlarge_2" width="64" height="95" />
+      <Character name="٢" resource="xlarge_2" width="64" height="95" />
+      <Character name="۲" resource="xlarge_2" width="64" height="95" />
+      <Character name="२" resource="xlarge_2" width="64" height="95" />
+      <Character name="3" resource="xlarge_3" width="64" height="95" />
+      <Character name="٣" resource="xlarge_3" width="64" height="95" />
+      <Character name="۳" resource="xlarge_3" width="64" height="95" />
+      <Character name="३" resource="xlarge_3" width="64" height="95" />
+      <Character name="4" resource="xlarge_4" width="64" height="95" />
+      <Character name="٤" resource="xlarge_4" width="64" height="95" />
+      <Character name="۴" resource="xlarge_4" width="64" height="95" />
+      <Character name="४" resource="xlarge_4" width="64" height="95" />
+      <Character name="5" resource="xlarge_5" width="64" height="95" />
+      <Character name="٥" resource="xlarge_5" width="64" height="95" />
+      <Character name="۵" resource="xlarge_5" width="64" height="95" />
+      <Character name="५" resource="xlarge_5" width="64" height="95" />
+      <Character name="6" resource="xlarge_6" width="64" height="95" />
+      <Character name="٦" resource="xlarge_6" width="64" height="95" />
+      <Character name="۶" resource="xlarge_6" width="64" height="95" />
+      <Character name="६" resource="xlarge_6" width="64" height="95" />
+      <Character name="7" resource="xlarge_7" width="64" height="95" />
+      <Character name="٧" resource="xlarge_7" width="64" height="95" />
+      <Character name="۷" resource="xlarge_7" width="64" height="95" />
+      <Character name="७" resource="xlarge_7" width="64" height="95" />
+      <Character name="8" resource="xlarge_8" width="64" height="95" />
+      <Character name="٨" resource="xlarge_8" width="64" height="95" />
+      <Character name="۸" resource="xlarge_8" width="64" height="95" />
+      <Character name="८" resource="xlarge_8" width="64" height="95" />
+      <Character name="9" resource="xlarge_9" width="64" height="95" />
+      <Character name="٩" resource="xlarge_9" width="64" height="95" />
+      <Character name="۹" resource="xlarge_9" width="64" height="95" />
+      <Character name="९" resource="xlarge_9" width="64" height="95" />
+      <Character name=":" resource="xlarge_colon" width="19" height="95" />
+    </BitmapFont>
+    <BitmapFont name="xlarge_with_seconds">
+      <Character name="0" resource="xlarge_with_seconds_0" width="44" height="95" />
+      <Character name="٠" resource="xlarge_with_seconds_0" width="44" height="95" />
+      <Character name="۰" resource="xlarge_with_seconds_0" width="44" height="95" />
+      <Character name="०" resource="xlarge_with_seconds_0" width="44" height="95" />
+      <Character name="1" resource="xlarge_with_seconds_1" width="44" height="95" />
+      <Character name="١" resource="xlarge_with_seconds_1" width="44" height="95" />
+      <Character name="۱" resource="xlarge_with_seconds_1" width="44" height="95" />
+      <Character name="१" resource="xlarge_with_seconds_1" width="44" height="95" />
+      <Character name="2" resource="xlarge_with_seconds_2" width="44" height="95" />
+      <Character name="٢" resource="xlarge_with_seconds_2" width="44" height="95" />
+      <Character name="۲" resource="xlarge_with_seconds_2" width="44" height="95" />
+      <Character name="२" resource="xlarge_with_seconds_2" width="44" height="95" />
+      <Character name="3" resource="xlarge_with_seconds_3" width="44" height="95" />
+      <Character name="٣" resource="xlarge_with_seconds_3" width="44" height="95" />
+      <Character name="۳" resource="xlarge_with_seconds_3" width="44" height="95" />
+      <Character name="३" resource="xlarge_with_seconds_3" width="44" height="95" />
+      <Character name="4" resource="xlarge_with_seconds_4" width="44" height="95" />
+      <Character name="٤" resource="xlarge_with_seconds_4" width="44" height="95" />
+      <Character name="۴" resource="xlarge_with_seconds_4" width="44" height="95" />
+      <Character name="४" resource="xlarge_with_seconds_4" width="44" height="95" />
+      <Character name="5" resource="xlarge_with_seconds_5" width="44" height="95" />
+      <Character name="٥" resource="xlarge_with_seconds_5" width="44" height="95" />
+      <Character name="۵" resource="xlarge_with_seconds_5" width="44" height="95" />
+      <Character name="५" resource="xlarge_with_seconds_5" width="44" height="95" />
+      <Character name="6" resource="xlarge_with_seconds_6" width="44" height="95" />
+      <Character name="٦" resource="xlarge_with_seconds_6" width="44" height="95" />
+      <Character name="۶" resource="xlarge_with_seconds_6" width="44" height="95" />
+      <Character name="६" resource="xlarge_with_seconds_6" width="44" height="95" />
+      <Character name="7" resource="xlarge_with_seconds_7" width="44" height="95" />
+      <Character name="٧" resource="xlarge_with_seconds_7" width="44" height="95" />
+      <Character name="۷" resource="xlarge_with_seconds_7" width="44" height="95" />
+      <Character name="७" resource="xlarge_with_seconds_7" width="44" height="95" />
+      <Character name="8" resource="xlarge_with_seconds_8" width="44" height="95" />
+      <Character name="٨" resource="xlarge_with_seconds_8" width="44" height="95" />
+      <Character name="۸" resource="xlarge_with_seconds_8" width="44" height="95" />
+      <Character name="८" resource="xlarge_with_seconds_8" width="44" height="95" />
+      <Character name="9" resource="xlarge_with_seconds_9" width="44" height="95" />
+      <Character name="٩" resource="xlarge_with_seconds_9" width="44" height="95" />
+      <Character name="۹" resource="xlarge_with_seconds_9" width="44" height="95" />
+      <Character name="९" resource="xlarge_with_seconds_9" width="44" height="95" />
+      <Character name=":" resource="xlarge_with_seconds_colon" width="13" height="95" />
+    </BitmapFont>
+  </BitmapFonts>
+  <Scene backgroundColor="#000000">
+    <ListConfiguration id="bezel">
+      <ListOption id="seconds">
+        <Group name="seconds_ring" x="0" y="0" width="480" height="480">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : #FF999999" />
+          <PartDraw x="0" y="0" width="480" height="480" angle="0">
+            <Transform target="alpha" value="[SECOND] &gt;= 0 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="62" />
+            <RoundRectangle x="238" y="6" width="4" height="13" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="6">
+            <Transform target="alpha" value="[SECOND] &gt;= 1 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="12">
+            <Transform target="alpha" value="[SECOND] &gt;= 2 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="18">
+            <Transform target="alpha" value="[SECOND] &gt;= 3 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="24">
+            <Transform target="alpha" value="[SECOND] &gt;= 4 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="30">
+            <Transform target="alpha" value="[SECOND] &gt;= 5 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="62" />
+            <RoundRectangle x="238" y="6" width="4" height="13" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="36">
+            <Transform target="alpha" value="[SECOND] &gt;= 6 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="42">
+            <Transform target="alpha" value="[SECOND] &gt;= 7 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="48">
+            <Transform target="alpha" value="[SECOND] &gt;= 8 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="54">
+            <Transform target="alpha" value="[SECOND] &gt;= 9 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="60">
+            <Transform target="alpha" value="[SECOND] &gt;= 10 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="62" />
+            <RoundRectangle x="238" y="6" width="4" height="13" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="66">
+            <Transform target="alpha" value="[SECOND] &gt;= 11 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="72">
+            <Transform target="alpha" value="[SECOND] &gt;= 12 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="78">
+            <Transform target="alpha" value="[SECOND] &gt;= 13 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="84">
+            <Transform target="alpha" value="[SECOND] &gt;= 14 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="90">
+            <Transform target="alpha" value="[SECOND] &gt;= 15 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="62" />
+            <RoundRectangle x="238" y="6" width="4" height="13" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="96">
+            <Transform target="alpha" value="[SECOND] &gt;= 16 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="102">
+            <Transform target="alpha" value="[SECOND] &gt;= 17 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="108">
+            <Transform target="alpha" value="[SECOND] &gt;= 18 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="114">
+            <Transform target="alpha" value="[SECOND] &gt;= 19 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="120">
+            <Transform target="alpha" value="[SECOND] &gt;= 20 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="62" />
+            <RoundRectangle x="238" y="6" width="4" height="13" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="126">
+            <Transform target="alpha" value="[SECOND] &gt;= 21 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="132">
+            <Transform target="alpha" value="[SECOND] &gt;= 22 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="138">
+            <Transform target="alpha" value="[SECOND] &gt;= 23 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="144">
+            <Transform target="alpha" value="[SECOND] &gt;= 24 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="150">
+            <Transform target="alpha" value="[SECOND] &gt;= 25 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="62" />
+            <RoundRectangle x="238" y="6" width="4" height="13" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="156">
+            <Transform target="alpha" value="[SECOND] &gt;= 26 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="162">
+            <Transform target="alpha" value="[SECOND] &gt;= 27 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="168">
+            <Transform target="alpha" value="[SECOND] &gt;= 28 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="174">
+            <Transform target="alpha" value="[SECOND] &gt;= 29 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="180">
+            <Transform target="alpha" value="[SECOND] &gt;= 30 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="62" />
+            <RoundRectangle x="238" y="6" width="4" height="13" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="186">
+            <Transform target="alpha" value="[SECOND] &gt;= 31 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="192">
+            <Transform target="alpha" value="[SECOND] &gt;= 32 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="198">
+            <Transform target="alpha" value="[SECOND] &gt;= 33 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="204">
+            <Transform target="alpha" value="[SECOND] &gt;= 34 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="210">
+            <Transform target="alpha" value="[SECOND] &gt;= 35 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="62" />
+            <RoundRectangle x="238" y="6" width="4" height="13" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="216">
+            <Transform target="alpha" value="[SECOND] &gt;= 36 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="222">
+            <Transform target="alpha" value="[SECOND] &gt;= 37 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="228">
+            <Transform target="alpha" value="[SECOND] &gt;= 38 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="234">
+            <Transform target="alpha" value="[SECOND] &gt;= 39 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="240">
+            <Transform target="alpha" value="[SECOND] &gt;= 40 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="62" />
+            <RoundRectangle x="238" y="6" width="4" height="13" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="246">
+            <Transform target="alpha" value="[SECOND] &gt;= 41 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="252">
+            <Transform target="alpha" value="[SECOND] &gt;= 42 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="258">
+            <Transform target="alpha" value="[SECOND] &gt;= 43 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="264">
+            <Transform target="alpha" value="[SECOND] &gt;= 44 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="270">
+            <Transform target="alpha" value="[SECOND] &gt;= 45 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="62" />
+            <RoundRectangle x="238" y="6" width="4" height="13" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="276">
+            <Transform target="alpha" value="[SECOND] &gt;= 46 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="282">
+            <Transform target="alpha" value="[SECOND] &gt;= 47 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="288">
+            <Transform target="alpha" value="[SECOND] &gt;= 48 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="294">
+            <Transform target="alpha" value="[SECOND] &gt;= 49 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="300">
+            <Transform target="alpha" value="[SECOND] &gt;= 50 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="62" />
+            <RoundRectangle x="238" y="6" width="4" height="13" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="306">
+            <Transform target="alpha" value="[SECOND] &gt;= 51 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="312">
+            <Transform target="alpha" value="[SECOND] &gt;= 52 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="318">
+            <Transform target="alpha" value="[SECOND] &gt;= 53 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="324">
+            <Transform target="alpha" value="[SECOND] &gt;= 54 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="330">
+            <Transform target="alpha" value="[SECOND] &gt;= 55 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="62" />
+            <RoundRectangle x="238" y="6" width="4" height="13" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="336">
+            <Transform target="alpha" value="[SECOND] &gt;= 56 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="342">
+            <Transform target="alpha" value="[SECOND] &gt;= 57 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="348">
+            <Transform target="alpha" value="[SECOND] &gt;= 58 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="480" height="480" angle="354">
+            <Transform target="alpha" value="[SECOND] &gt;= 59 ? 240 : 62" />
+            <Variant mode="AMBIENT" target="alpha" value="22" />
+            <RoundRectangle x="239" y="6" width="2" height="7" cornerRadiusX="1" cornerRadiusY="1">
+              <Fill color="#FFFFFFFF" />
+            </RoundRectangle>
+          </PartDraw>
+        </Group>
+      </ListOption>
+    </ListConfiguration>
+    <ListConfiguration id="layout">
+      <ListOption id="default">
+        <Group name="clock_default" x="0" y="0" width="480" height="480">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : #FFFFFFFF" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : #FFC2C2C2" />
+          <DigitalClock x="0" y="0" width="480" height="480" alpha="255">
+            <TimeText x="35" y="132" width="410" height="105" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER">
+              <BitmapFont family="default" size="69" color="#FFFFFFFF" />
+            </TimeText>
+          </DigitalClock>
+        </Group>
+      </ListOption>
+      <ListOption id="default_with_seconds">
+        <Group name="clock_default_with_seconds" x="0" y="0" width="480" height="480">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : #FFFFFFFF" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : #FFC2C2C2" />
+          <DigitalClock x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <TimeText x="35" y="132" width="410" height="105" format="hh:mm:ss" hourFormat="SYNC_TO_DEVICE" align="CENTER">
+              <BitmapFont family="default_with_seconds" size="69" color="#FFFFFFFF" />
+            </TimeText>
+          </DigitalClock>
+          <DigitalClock x="0" y="0" width="480" height="480" alpha="0">
+            <Variant mode="AMBIENT" target="alpha" value="255" />
+            <TimeText x="35" y="132" width="410" height="105" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER">
+              <BitmapFont family="default" size="69" color="#FFFFFFFF" />
+            </TimeText>
+          </DigitalClock>
+        </Group>
+      </ListOption>
+      <ListOption id="large">
+        <Group name="clock_large" x="0" y="0" width="480" height="480">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : #FFFFFFFF" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : #FFC2C2C2" />
+          <DigitalClock x="0" y="0" width="480" height="480" alpha="255">
+            <TimeText x="35" y="132" width="410" height="105" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER">
+              <BitmapFont family="large" size="82" color="#FFFFFFFF" />
+            </TimeText>
+          </DigitalClock>
+        </Group>
+      </ListOption>
+      <ListOption id="large_with_seconds">
+        <Group name="clock_large_with_seconds" x="0" y="0" width="480" height="480">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : #FFFFFFFF" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : #FFC2C2C2" />
+          <DigitalClock x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <TimeText x="35" y="132" width="410" height="105" format="hh:mm:ss" hourFormat="SYNC_TO_DEVICE" align="CENTER">
+              <BitmapFont family="large_with_seconds" size="82" color="#FFFFFFFF" />
+            </TimeText>
+          </DigitalClock>
+          <DigitalClock x="0" y="0" width="480" height="480" alpha="0">
+            <Variant mode="AMBIENT" target="alpha" value="255" />
+            <TimeText x="35" y="132" width="410" height="105" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER">
+              <BitmapFont family="large" size="82" color="#FFFFFFFF" />
+            </TimeText>
+          </DigitalClock>
+        </Group>
+      </ListOption>
+      <ListOption id="xlarge">
+        <Group name="clock_xlarge" x="0" y="0" width="480" height="480">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : #FFFFFFFF" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : #FFC2C2C2" />
+          <DigitalClock x="0" y="0" width="480" height="480" alpha="255">
+            <TimeText x="35" y="132" width="410" height="105" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER">
+              <BitmapFont family="xlarge" size="95" color="#FFFFFFFF" />
+            </TimeText>
+          </DigitalClock>
+        </Group>
+      </ListOption>
+      <ListOption id="xlarge_with_seconds">
+        <Group name="clock_xlarge_with_seconds" x="0" y="0" width="480" height="480">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : #FFFFFFFF" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : #FFC2C2C2" />
+          <DigitalClock x="0" y="0" width="480" height="480" alpha="255">
+            <Variant mode="AMBIENT" target="alpha" value="0" />
+            <TimeText x="35" y="132" width="410" height="105" format="hh:mm:ss" hourFormat="SYNC_TO_DEVICE" align="CENTER">
+              <BitmapFont family="xlarge_with_seconds" size="95" color="#FFFFFFFF" />
+            </TimeText>
+          </DigitalClock>
+          <DigitalClock x="0" y="0" width="480" height="480" alpha="0">
+            <Variant mode="AMBIENT" target="alpha" value="255" />
+            <TimeText x="35" y="132" width="410" height="105" format="hh:mm" hourFormat="SYNC_TO_DEVICE" align="CENTER">
+              <BitmapFont family="xlarge" size="95" color="#FFFFFFFF" />
+            </TimeText>
+          </DigitalClock>
+        </Group>
+      </ListOption>
+    </ListConfiguration>
+    <ComplicationSlot slotId="1" displayName="top_left" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY" x="106" y="51" width="74" height="74">
+      <BoundingOval x="0" y="0" width="74" height="74" />
+      <DefaultProviderPolicy defaultSystemProvider="WATCH_BATTERY" defaultSystemProviderType="RANGED_VALUE" />
+      <Complication type="RANGED_VALUE">
+        <PartDraw x="0" y="0" width="74" height="74">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="74" height="74" cornerRadiusX="37" cornerRadiusY="37">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="top_left_ranged_value" x="0" y="0" width="74" height="74">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartDraw x="0" y="0" width="74" height="74" alpha="52">
+            <Arc centerX="37" centerY="37" width="66" height="66" startAngle="215" endAngle="505">
+              <Stroke color="#FFFFFFFF" thickness="3" />
+            </Arc>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="74" height="74" alpha="255">
+            <Arc centerX="37" centerY="37" width="66" height="66" startAngle="215" endAngle="505">
+              <Transform target="endAngle" value="215+290*clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(0.001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)" />
+              <Stroke color="#FFFFFFFF" thickness="3" />
+            </Arc>
+          </PartDraw>
+          <PartImage x="25" y="8" width="24" height="24">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <Condition>
+            <Expressions>
+              <Expression name="long_reading">textLength([COMPLICATION.TEXT]) &gt; 5</Expression>
+            </Expressions>
+            <Compare expression="long_reading">
+              <PartText x="2" y="32" width="70" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="15" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="textLength([COMPLICATION.TEXT])&gt;0 ? [COMPLICATION.TEXT] : numberFormat(&quot;#&quot;,[COMPLICATION.RANGED_VALUE_VALUE])" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Compare>
+            <Default>
+              <PartText x="3" y="32" width="68" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="21" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="textLength([COMPLICATION.TEXT])&gt;0 ? [COMPLICATION.TEXT] : numberFormat(&quot;#&quot;,[COMPLICATION.RANGED_VALUE_VALUE])" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Default>
+          </Condition>
+        </Group>
+      </Complication>
+      <Complication type="SHORT_TEXT">
+        <PartDraw x="0" y="0" width="74" height="74">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="74" height="74" cornerRadiusX="37" cornerRadiusY="37">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="top_left_short_text" x="0" y="0" width="74" height="74">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartImage x="25" y="8" width="24" height="24">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <Condition>
+            <Expressions>
+              <Expression name="long_reading">textLength([COMPLICATION.TEXT]) &gt; 5</Expression>
+            </Expressions>
+            <Compare expression="long_reading">
+              <PartText x="2" y="32" width="70" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="15" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Compare>
+            <Default>
+              <PartText x="3" y="32" width="68" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="21" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Default>
+          </Condition>
+        </Group>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <PartDraw x="0" y="0" width="74" height="74">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="74" height="74" cornerRadiusX="37" cornerRadiusY="37">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="top_left_monochromatic_image" x="0" y="0" width="74" height="74">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartImage x="17" y="17" width="40" height="40">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+        </Group>
+      </Complication>
+      <Complication type="EMPTY" />
+    </ComplicationSlot>
+    <ComplicationSlot slotId="2" displayName="top" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY" x="203" y="40" width="74" height="74">
+      <BoundingOval x="0" y="0" width="74" height="74" />
+      <DefaultProviderPolicy defaultSystemProvider="DATE" defaultSystemProviderType="SHORT_TEXT" />
+      <Complication type="RANGED_VALUE">
+        <PartDraw x="0" y="0" width="74" height="74">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="74" height="74" cornerRadiusX="37" cornerRadiusY="37">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="top_ranged_value" x="0" y="0" width="74" height="74">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartDraw x="0" y="0" width="74" height="74" alpha="52">
+            <Arc centerX="37" centerY="37" width="66" height="66" startAngle="215" endAngle="505">
+              <Stroke color="#FFFFFFFF" thickness="3" />
+            </Arc>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="74" height="74" alpha="255">
+            <Arc centerX="37" centerY="37" width="66" height="66" startAngle="215" endAngle="505">
+              <Transform target="endAngle" value="215+290*clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(0.001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)" />
+              <Stroke color="#FFFFFFFF" thickness="3" />
+            </Arc>
+          </PartDraw>
+          <PartImage x="25" y="8" width="24" height="24">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <Condition>
+            <Expressions>
+              <Expression name="long_reading">textLength([COMPLICATION.TEXT]) &gt; 5</Expression>
+            </Expressions>
+            <Compare expression="long_reading">
+              <PartText x="2" y="32" width="70" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="15" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="textLength([COMPLICATION.TEXT])&gt;0 ? [COMPLICATION.TEXT] : numberFormat(&quot;#&quot;,[COMPLICATION.RANGED_VALUE_VALUE])" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Compare>
+            <Default>
+              <PartText x="3" y="32" width="68" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="21" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="textLength([COMPLICATION.TEXT])&gt;0 ? [COMPLICATION.TEXT] : numberFormat(&quot;#&quot;,[COMPLICATION.RANGED_VALUE_VALUE])" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Default>
+          </Condition>
+        </Group>
+      </Complication>
+      <Complication type="SHORT_TEXT">
+        <PartDraw x="0" y="0" width="74" height="74">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="74" height="74" cornerRadiusX="37" cornerRadiusY="37">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="top_short_text" x="0" y="0" width="74" height="74">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartImage x="25" y="8" width="24" height="24">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <Condition>
+            <Expressions>
+              <Expression name="long_reading">textLength([COMPLICATION.TEXT]) &gt; 5</Expression>
+            </Expressions>
+            <Compare expression="long_reading">
+              <PartText x="2" y="32" width="70" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="15" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Compare>
+            <Default>
+              <PartText x="3" y="32" width="68" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="21" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Default>
+          </Condition>
+        </Group>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <PartDraw x="0" y="0" width="74" height="74">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="74" height="74" cornerRadiusX="37" cornerRadiusY="37">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="top_monochromatic_image" x="0" y="0" width="74" height="74">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartImage x="17" y="17" width="40" height="40">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+        </Group>
+      </Complication>
+      <Complication type="EMPTY" />
+    </ComplicationSlot>
+    <ComplicationSlot slotId="3" displayName="top_right" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY" x="300" y="51" width="74" height="74">
+      <BoundingOval x="0" y="0" width="74" height="74" />
+      <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" primaryProvider="com.samsung.android.watch.weather/com.samsung.android.watch.weather.complication.WeatherComplicationService" primaryProviderType="SHORT_TEXT" />
+      <Complication type="RANGED_VALUE">
+        <PartDraw x="0" y="0" width="74" height="74">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="74" height="74" cornerRadiusX="37" cornerRadiusY="37">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="top_right_ranged_value" x="0" y="0" width="74" height="74">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartDraw x="0" y="0" width="74" height="74" alpha="52">
+            <Arc centerX="37" centerY="37" width="66" height="66" startAngle="215" endAngle="505">
+              <Stroke color="#FFFFFFFF" thickness="3" />
+            </Arc>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="74" height="74" alpha="255">
+            <Arc centerX="37" centerY="37" width="66" height="66" startAngle="215" endAngle="505">
+              <Transform target="endAngle" value="215+290*clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(0.001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)" />
+              <Stroke color="#FFFFFFFF" thickness="3" />
+            </Arc>
+          </PartDraw>
+          <PartImage x="25" y="8" width="24" height="24">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <Condition>
+            <Expressions>
+              <Expression name="long_reading">textLength([COMPLICATION.TEXT]) &gt; 5</Expression>
+            </Expressions>
+            <Compare expression="long_reading">
+              <PartText x="2" y="32" width="70" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="15" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="textLength([COMPLICATION.TEXT])&gt;0 ? [COMPLICATION.TEXT] : numberFormat(&quot;#&quot;,[COMPLICATION.RANGED_VALUE_VALUE])" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Compare>
+            <Default>
+              <PartText x="3" y="32" width="68" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="21" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="textLength([COMPLICATION.TEXT])&gt;0 ? [COMPLICATION.TEXT] : numberFormat(&quot;#&quot;,[COMPLICATION.RANGED_VALUE_VALUE])" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Default>
+          </Condition>
+        </Group>
+      </Complication>
+      <Complication type="SHORT_TEXT">
+        <PartDraw x="0" y="0" width="74" height="74">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="74" height="74" cornerRadiusX="37" cornerRadiusY="37">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="top_right_short_text" x="0" y="0" width="74" height="74">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartImage x="25" y="8" width="24" height="24">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <Condition>
+            <Expressions>
+              <Expression name="long_reading">textLength([COMPLICATION.TEXT]) &gt; 5</Expression>
+            </Expressions>
+            <Compare expression="long_reading">
+              <PartText x="2" y="32" width="70" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="15" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Compare>
+            <Default>
+              <PartText x="3" y="32" width="68" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="21" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Default>
+          </Condition>
+        </Group>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <PartDraw x="0" y="0" width="74" height="74">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="74" height="74" cornerRadiusX="37" cornerRadiusY="37">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="top_right_monochromatic_image" x="0" y="0" width="74" height="74">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartImage x="17" y="17" width="40" height="40">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+        </Group>
+      </Complication>
+      <Complication type="EMPTY" />
+    </ComplicationSlot>
+    <ComplicationSlot slotId="4" displayName="center" supportedTypes="LONG_TEXT SHORT_TEXT RANGED_VALUE MONOCHROMATIC_IMAGE EMPTY" x="81" y="237" width="318" height="80">
+      <BoundingRoundBox x="0" y="0" width="318" height="80" cornerRadius="17" />
+      <DefaultProviderPolicy defaultSystemProvider="NEXT_EVENT" defaultSystemProviderType="LONG_TEXT" />
+      <Complication type="LONG_TEXT">
+        <PartDraw x="0" y="0" width="318" height="80">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="318" height="80" cornerRadiusX="17" cornerRadiusY="17">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="center_long_text" x="0" y="0" width="318" height="80">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartImage x="16" y="20" width="40" height="40">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <PartText x="63" y="6" width="243" height="28">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="18" color="#FFFFFFFF">
+                <Template>%s<Parameter expression="[COMPLICATION.TITLE]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+          <PartText x="60" y="33" width="246" height="41">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="24" color="#FFFFFFFF">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="SHORT_TEXT">
+        <PartDraw x="0" y="0" width="318" height="80">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="318" height="80" cornerRadiusX="17" cornerRadiusY="17">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="center_short_text" x="0" y="0" width="318" height="80">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartImage x="16" y="20" width="40" height="40">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <PartText x="63" y="6" width="243" height="28">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="18" color="#FFFFFFFF">
+                <Template>%s<Parameter expression="[COMPLICATION.TITLE]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+          <PartText x="60" y="33" width="246" height="41">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="24" color="#FFFFFFFF">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="RANGED_VALUE">
+        <PartDraw x="0" y="0" width="318" height="80">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="318" height="80" cornerRadiusX="17" cornerRadiusY="17">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="center_ranged_value" x="0" y="0" width="318" height="80">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartImage x="16" y="20" width="40" height="40">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <PartText x="63" y="6" width="243" height="28">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="18" color="#FFFFFFFF">
+                <Template>%s<Parameter expression="[COMPLICATION.TITLE]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+          <PartText x="60" y="33" width="246" height="41">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="24" color="#FFFFFFFF">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <PartDraw x="0" y="0" width="318" height="80">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="318" height="80" cornerRadiusX="17" cornerRadiusY="17">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="center_monochromatic_image" x="0" y="0" width="318" height="80">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartImage x="139" y="20" width="40" height="40">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+        </Group>
+      </Complication>
+      <Complication type="EMPTY" />
+    </ComplicationSlot>
+    <ComplicationSlot slotId="5" displayName="bottom_left" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY" x="106" y="345" width="74" height="74">
+      <BoundingOval x="0" y="0" width="74" height="74" />
+      <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" primaryProvider="com.samsung.android.wear.shealth/com.samsung.android.wear.shealth.complications.heartrate.HeartrateComplicationProviderService" primaryProviderType="SHORT_TEXT" />
+      <Complication type="RANGED_VALUE">
+        <PartDraw x="0" y="0" width="74" height="74">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="74" height="74" cornerRadiusX="37" cornerRadiusY="37">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="bottom_left_ranged_value" x="0" y="0" width="74" height="74">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartDraw x="0" y="0" width="74" height="74" alpha="52">
+            <Arc centerX="37" centerY="37" width="66" height="66" startAngle="215" endAngle="505">
+              <Stroke color="#FFFFFFFF" thickness="3" />
+            </Arc>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="74" height="74" alpha="255">
+            <Arc centerX="37" centerY="37" width="66" height="66" startAngle="215" endAngle="505">
+              <Transform target="endAngle" value="215+290*clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(0.001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)" />
+              <Stroke color="#FFFFFFFF" thickness="3" />
+            </Arc>
+          </PartDraw>
+          <PartImage x="25" y="8" width="24" height="24">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <Condition>
+            <Expressions>
+              <Expression name="long_reading">textLength([COMPLICATION.TEXT]) &gt; 5</Expression>
+            </Expressions>
+            <Compare expression="long_reading">
+              <PartText x="2" y="32" width="70" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="15" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="textLength([COMPLICATION.TEXT])&gt;0 ? [COMPLICATION.TEXT] : numberFormat(&quot;#&quot;,[COMPLICATION.RANGED_VALUE_VALUE])" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Compare>
+            <Default>
+              <PartText x="3" y="32" width="68" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="21" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="textLength([COMPLICATION.TEXT])&gt;0 ? [COMPLICATION.TEXT] : numberFormat(&quot;#&quot;,[COMPLICATION.RANGED_VALUE_VALUE])" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Default>
+          </Condition>
+        </Group>
+      </Complication>
+      <Complication type="SHORT_TEXT">
+        <PartDraw x="0" y="0" width="74" height="74">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="74" height="74" cornerRadiusX="37" cornerRadiusY="37">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="bottom_left_short_text" x="0" y="0" width="74" height="74">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartImage x="25" y="8" width="24" height="24">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <Condition>
+            <Expressions>
+              <Expression name="long_reading">textLength([COMPLICATION.TEXT]) &gt; 5</Expression>
+            </Expressions>
+            <Compare expression="long_reading">
+              <PartText x="2" y="32" width="70" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="15" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Compare>
+            <Default>
+              <PartText x="3" y="32" width="68" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="21" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Default>
+          </Condition>
+        </Group>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <PartDraw x="0" y="0" width="74" height="74">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="74" height="74" cornerRadiusX="37" cornerRadiusY="37">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="bottom_left_monochromatic_image" x="0" y="0" width="74" height="74">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartImage x="17" y="17" width="40" height="40">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+        </Group>
+      </Complication>
+      <Complication type="EMPTY" />
+    </ComplicationSlot>
+    <ComplicationSlot slotId="6" displayName="bottom_center" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY" x="203" y="355" width="74" height="74">
+      <BoundingOval x="0" y="0" width="74" height="74" />
+      <DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" primaryProvider="com.samsung.android.wear.shealth/com.samsung.android.wear.shealth.complications.steps.StepsComplicationProviderService" primaryProviderType="SHORT_TEXT" />
+      <Complication type="RANGED_VALUE">
+        <PartDraw x="0" y="0" width="74" height="74">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="74" height="74" cornerRadiusX="37" cornerRadiusY="37">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="bottom_center_ranged_value" x="0" y="0" width="74" height="74">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartDraw x="0" y="0" width="74" height="74" alpha="52">
+            <Arc centerX="37" centerY="37" width="66" height="66" startAngle="215" endAngle="505">
+              <Stroke color="#FFFFFFFF" thickness="3" />
+            </Arc>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="74" height="74" alpha="255">
+            <Arc centerX="37" centerY="37" width="66" height="66" startAngle="215" endAngle="505">
+              <Transform target="endAngle" value="215+290*clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(0.001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)" />
+              <Stroke color="#FFFFFFFF" thickness="3" />
+            </Arc>
+          </PartDraw>
+          <PartImage x="25" y="8" width="24" height="24">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <Condition>
+            <Expressions>
+              <Expression name="long_reading">textLength([COMPLICATION.TEXT]) &gt; 5</Expression>
+            </Expressions>
+            <Compare expression="long_reading">
+              <PartText x="2" y="32" width="70" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="15" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="textLength([COMPLICATION.TEXT])&gt;0 ? [COMPLICATION.TEXT] : numberFormat(&quot;#&quot;,[COMPLICATION.RANGED_VALUE_VALUE])" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Compare>
+            <Default>
+              <PartText x="3" y="32" width="68" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="21" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="textLength([COMPLICATION.TEXT])&gt;0 ? [COMPLICATION.TEXT] : numberFormat(&quot;#&quot;,[COMPLICATION.RANGED_VALUE_VALUE])" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Default>
+          </Condition>
+        </Group>
+      </Complication>
+      <Complication type="SHORT_TEXT">
+        <PartDraw x="0" y="0" width="74" height="74">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="74" height="74" cornerRadiusX="37" cornerRadiusY="37">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="bottom_center_short_text" x="0" y="0" width="74" height="74">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartImage x="25" y="8" width="24" height="24">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <Condition>
+            <Expressions>
+              <Expression name="long_reading">textLength([COMPLICATION.TEXT]) &gt; 5</Expression>
+            </Expressions>
+            <Compare expression="long_reading">
+              <PartText x="2" y="32" width="70" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="15" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Compare>
+            <Default>
+              <PartText x="3" y="32" width="68" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="21" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Default>
+          </Condition>
+        </Group>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <PartDraw x="0" y="0" width="74" height="74">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="74" height="74" cornerRadiusX="37" cornerRadiusY="37">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="bottom_center_monochromatic_image" x="0" y="0" width="74" height="74">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartImage x="17" y="17" width="40" height="40">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+        </Group>
+      </Complication>
+      <Complication type="EMPTY" />
+    </ComplicationSlot>
+    <ComplicationSlot slotId="7" displayName="bottom_right" supportedTypes="RANGED_VALUE SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY" x="300" y="345" width="74" height="74">
+      <BoundingOval x="0" y="0" width="74" height="74" />
+      <DefaultProviderPolicy defaultSystemProvider="SUNRISE_SUNSET" defaultSystemProviderType="SHORT_TEXT" />
+      <Complication type="RANGED_VALUE">
+        <PartDraw x="0" y="0" width="74" height="74">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="74" height="74" cornerRadiusX="37" cornerRadiusY="37">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="bottom_right_ranged_value" x="0" y="0" width="74" height="74">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartDraw x="0" y="0" width="74" height="74" alpha="52">
+            <Arc centerX="37" centerY="37" width="66" height="66" startAngle="215" endAngle="505">
+              <Stroke color="#FFFFFFFF" thickness="3" />
+            </Arc>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="74" height="74" alpha="255">
+            <Arc centerX="37" centerY="37" width="66" height="66" startAngle="215" endAngle="505">
+              <Transform target="endAngle" value="215+290*clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(0.001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)" />
+              <Stroke color="#FFFFFFFF" thickness="3" />
+            </Arc>
+          </PartDraw>
+          <PartImage x="25" y="8" width="24" height="24">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <Condition>
+            <Expressions>
+              <Expression name="long_reading">textLength([COMPLICATION.TEXT]) &gt; 5</Expression>
+            </Expressions>
+            <Compare expression="long_reading">
+              <PartText x="2" y="32" width="70" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="15" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="textLength([COMPLICATION.TEXT])&gt;0 ? [COMPLICATION.TEXT] : numberFormat(&quot;#&quot;,[COMPLICATION.RANGED_VALUE_VALUE])" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Compare>
+            <Default>
+              <PartText x="3" y="32" width="68" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="21" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="textLength([COMPLICATION.TEXT])&gt;0 ? [COMPLICATION.TEXT] : numberFormat(&quot;#&quot;,[COMPLICATION.RANGED_VALUE_VALUE])" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Default>
+          </Condition>
+        </Group>
+      </Complication>
+      <Complication type="SHORT_TEXT">
+        <PartDraw x="0" y="0" width="74" height="74">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="74" height="74" cornerRadiusX="37" cornerRadiusY="37">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="bottom_right_short_text" x="0" y="0" width="74" height="74">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartImage x="25" y="8" width="24" height="24">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <Condition>
+            <Expressions>
+              <Expression name="long_reading">textLength([COMPLICATION.TEXT]) &gt; 5</Expression>
+            </Expressions>
+            <Compare expression="long_reading">
+              <PartText x="2" y="32" width="70" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="15" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Compare>
+            <Default>
+              <PartText x="3" y="32" width="68" height="32">
+                <Text align="CENTER" ellipsis="TRUE">
+                  <Font family="SYNC_TO_DEVICE" size="21" color="#FFFFFFFF">
+                    <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                    </Template>
+                  </Font>
+                </Text>
+              </PartText>
+            </Default>
+          </Condition>
+        </Group>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <PartDraw x="0" y="0" width="74" height="74">
+          <Variant mode="AMBIENT" target="alpha" value="0" />
+          <RoundRectangle x="0" y="0" width="74" height="74" cornerRadiusX="37" cornerRadiusY="37">
+            <Fill color="#FF202022" />
+          </RoundRectangle>
+        </PartDraw>
+        <Group name="bottom_right_monochromatic_image" x="0" y="0" width="74" height="74">
+          <Transform target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="tintColor" value="[CONFIGURATION.night] ? #FFFF0000 : [CONFIGURATION.tone.0]" />
+          <Variant mode="AMBIENT" target="alpha" value="160" />
+          <PartImage x="17" y="17" width="40" height="40">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+        </Group>
+      </Complication>
+      <Complication type="EMPTY" />
+    </ComplicationSlot>
+  </Scene>
+</WatchFace>

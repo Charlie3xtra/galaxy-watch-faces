@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Αρθρωτό Ultra</string>
+  <string name="style">ΣΤΙΛ</string>
+  <string name="edge">ΚΑΣΤΟΝΙ</string>
+  <string name="color">ΧΡΩΜΑ</string>
+  <string name="nightmode">Night Mode</string>
+  <string name="default">Ω:Λ I</string>
+  <string name="default_with_seconds">Ω:Λ:Δ I</string>
+  <string name="large">Ω:Λ II</string>
+  <string name="large_with_seconds">Ω:Λ:Δ II</string>
+  <string name="xlarge">Ω:Λ III</string>
+  <string name="xlarge_with_seconds">Ω:Λ:Δ III</string>
+  <string name="seconds">ΔΕΥΤΕΡΟΛΕΠΤΑ</string>
+  <string name="none">ΚΑΝΕΝΑ</string>
+  <string name="top_left">Πάνω αριστερά</string>
+  <string name="top">Πάνω</string>
+  <string name="top_right">Πάνω δεξιά</string>
+  <string name="center">Μέση</string>
+  <string name="bottom_left">Κάτω αριστερά</string>
+  <string name="bottom_center">Κάτω στη μέση</string>
+  <string name="bottom_right">Κάτω δεξιά</string>
+  <string name="adventurer">Adventurer</string>
+  <string name="ocean">Ocean</string>
+  <string name="performance">Performance</string>
+  <string name="burgundy">Burgundy</string>
+  <string name="desert">Desert</string>
+</resources>

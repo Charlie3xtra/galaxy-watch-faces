@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Modularni Ultra</string>
+  <string name="style">STIL</string>
+  <string name="edge">OBRUB</string>
+  <string name="color">BOJA</string>
+  <string name="nightmode">Night Mode</string>
+  <string name="default">H:M I</string>
+  <string name="default_with_seconds">H:M:S I</string>
+  <string name="large">H:M II</string>
+  <string name="large_with_seconds">H:M:S II</string>
+  <string name="xlarge">H:M III</string>
+  <string name="xlarge_with_seconds">H:M:S III</string>
+  <string name="seconds">SEKUNDE</string>
+  <string name="none">BEZ</string>
+  <string name="top_left">Gore lijevo</string>
+  <string name="top">Vrh</string>
+  <string name="top_right">Gore desno</string>
+  <string name="center">Sredina</string>
+  <string name="bottom_left">Dolje lijevo</string>
+  <string name="bottom_center">Dolje u sredini</string>
+  <string name="bottom_right">Dolje desno</string>
+  <string name="adventurer">Adventurer</string>
+  <string name="ocean">Ocean</string>
+  <string name="performance">Performance</string>
+  <string name="burgundy">Burgundy</string>
+  <string name="desert">Desert</string>
+</resources>

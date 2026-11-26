@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">मॉड्यूलर अल्ट्रा</string>
+  <string name="style">शैली</string>
+  <string name="edge">बेज़ेल</string>
+  <string name="color">रंग</string>
+  <string name="nightmode">Night Mode</string>
+  <string name="default">H:M I</string>
+  <string name="default_with_seconds">H:M:S I</string>
+  <string name="large">H:M II</string>
+  <string name="large_with_seconds">H:M:S II</string>
+  <string name="xlarge">H:M III</string>
+  <string name="xlarge_with_seconds">H:M:S III</string>
+  <string name="seconds">सेकंड</string>
+  <string name="none">कोई नहीं</string>
+  <string name="top_left">ऊपर बाएँ</string>
+  <string name="top">ऊपर</string>
+  <string name="top_right">ऊपर दाएँ</string>
+  <string name="center">मध्य में</string>
+  <string name="bottom_left">नीचे बाएँ</string>
+  <string name="bottom_center">नीचे मध्य</string>
+  <string name="bottom_right">नीचे दाएँ</string>
+  <string name="adventurer">Adventurer</string>
+  <string name="ocean">Ocean</string>
+  <string name="performance">Performance</string>
+  <string name="burgundy">Burgundy</string>
+  <string name="desert">Desert</string>
+</resources>

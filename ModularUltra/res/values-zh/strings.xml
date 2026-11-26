@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Ultra模块</string>
+  <string name="style">样式</string>
+  <string name="edge">表圈</string>
+  <string name="color">颜色</string>
+  <string name="nightmode">夜间模式</string>
+  <string name="default">时:分I</string>
+  <string name="default_with_seconds">时:分:秒I</string>
+  <string name="large">时:分II</string>
+  <string name="large_with_seconds">时:分:秒II</string>
+  <string name="xlarge">时:分III</string>
+  <string name="xlarge_with_seconds">时:分:秒III</string>
+  <string name="seconds">秒</string>
+  <string name="none">无</string>
+  <string name="top_left">左上</string>
+  <string name="top">顶部</string>
+  <string name="top_right">右上</string>
+  <string name="center">中间</string>
+  <string name="bottom_left">左下</string>
+  <string name="bottom_center">底部居中</string>
+  <string name="bottom_right">右下</string>
+  <string name="adventurer">探险橙</string>
+  <string name="ocean">海洋蓝</string>
+  <string name="performance">金黄</string>
+  <string name="burgundy">酒红</string>
+  <string name="desert">沙色</string>
+</resources>

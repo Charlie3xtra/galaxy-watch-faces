@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Модули Ultra</string>
+  <string name="style">СТИЛЬ</string>
+  <string name="edge">БЕЗЕЛЬ</string>
+  <string name="color">ЦВЕТ</string>
+  <string name="nightmode">Night Mode</string>
+  <string name="default">Ч:М I</string>
+  <string name="default_with_seconds">Ч:М:С I</string>
+  <string name="large">Ч:М II</string>
+  <string name="large_with_seconds">Ч:М:С II</string>
+  <string name="xlarge">Ч:М III</string>
+  <string name="xlarge_with_seconds">Ч:М:С III</string>
+  <string name="seconds">СЕКУНДЫ</string>
+  <string name="none">НЕТ</string>
+  <string name="top_left">Вверху слева</string>
+  <string name="top">Вверху</string>
+  <string name="top_right">Вверху справа</string>
+  <string name="center">Посередине</string>
+  <string name="bottom_left">Внизу слева</string>
+  <string name="bottom_center">Внизу посередине</string>
+  <string name="bottom_right">Внизу справа</string>
+  <string name="adventurer">Adventurer</string>
+  <string name="ocean">Ocean</string>
+  <string name="performance">Performance</string>
+  <string name="burgundy">Burgundy</string>
+  <string name="desert">Desert</string>
+</resources>

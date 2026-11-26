@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Moduláris Ultra</string>
+  <string name="style">STÍLUS</string>
+  <string name="edge">LÜNETTA</string>
+  <string name="color">SZÍN</string>
+  <string name="nightmode">Night Mode</string>
+  <string name="default">Ó:P I</string>
+  <string name="default_with_seconds">Ó:P:MP I</string>
+  <string name="large">Ó:P II</string>
+  <string name="large_with_seconds">Ó:P:MP II</string>
+  <string name="xlarge">Ó:P III</string>
+  <string name="xlarge_with_seconds">Ó:P:MP III</string>
+  <string name="seconds">MÁSODPERC</string>
+  <string name="none">NINCS</string>
+  <string name="top_left">Balra fent</string>
+  <string name="top">Fent</string>
+  <string name="top_right">Jobbra fent</string>
+  <string name="center">Középen</string>
+  <string name="bottom_left">Balra lent</string>
+  <string name="bottom_center">Középen lent</string>
+  <string name="bottom_right">Jobbra lent</string>
+  <string name="adventurer">Adventurer</string>
+  <string name="ocean">Ocean</string>
+  <string name="performance">Performance</string>
+  <string name="burgundy">Burgundy</string>
+  <string name="desert">Desert</string>
+</resources>

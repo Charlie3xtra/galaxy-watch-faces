@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">מודולרי Ultra</string>
+  <string name="style">סגנון</string>
+  <string name="edge">מסגרת</string>
+  <string name="color">צבע</string>
+  <string name="nightmode">Night Mode</string>
+  <string name="default">שע׳ ודק׳ I</string>
+  <string name="default_with_seconds">שע׳, דק׳ ושני׳ I</string>
+  <string name="large">שע׳ ודק׳ II</string>
+  <string name="large_with_seconds">שע׳, דק׳ ושני׳ II</string>
+  <string name="xlarge">שע׳ ודק׳ IIII</string>
+  <string name="xlarge_with_seconds">שע׳, דק׳ ושני׳ III</string>
+  <string name="seconds">שניות</string>
+  <string name="none">ללא</string>
+  <string name="top_left">שמאל למעלה</string>
+  <string name="top">למעלה</string>
+  <string name="top_right">ימין למעלה</string>
+  <string name="center">באמצע</string>
+  <string name="bottom_left">שמאל למטה</string>
+  <string name="bottom_center">באמצע למטה</string>
+  <string name="bottom_right">ימין למטה</string>
+  <string name="adventurer">Adventurer</string>
+  <string name="ocean">Ocean</string>
+  <string name="performance">Performance</string>
+  <string name="burgundy">Burgundy</string>
+  <string name="desert">Desert</string>
+</resources>

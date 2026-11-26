@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">모듈 Ultra</string>
+  <string name="style">스타일</string>
+  <string name="edge">베젤</string>
+  <string name="color">색상</string>
+  <string name="nightmode">Night Mode</string>
+  <string name="default">시:분 I</string>
+  <string name="default_with_seconds">시:분:초 I</string>
+  <string name="large">시:분 II</string>
+  <string name="large_with_seconds">시:분:초 II</string>
+  <string name="xlarge">시:분 III</string>
+  <string name="xlarge_with_seconds">시:분:초 III</string>
+  <string name="seconds">초</string>
+  <string name="none">없음</string>
+  <string name="top_left">왼쪽 상단</string>
+  <string name="top">상단</string>
+  <string name="top_right">오른쪽 상단</string>
+  <string name="center">중간</string>
+  <string name="bottom_left">왼쪽 하단</string>
+  <string name="bottom_center">하단 중앙</string>
+  <string name="bottom_right">오른쪽 하단</string>
+  <string name="adventurer">Adventurer</string>
+  <string name="ocean">Ocean</string>
+  <string name="performance">Performance</string>
+  <string name="burgundy">Burgundy</string>
+  <string name="desert">Desert</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">โมดูลาร์ Ultra</string>
+  <string name="style">สไตล์</string>
+  <string name="edge">ขอบ</string>
+  <string name="color">สี</string>
+  <string name="nightmode">Night Mode</string>
+  <string name="default">ชม:นาที I</string>
+  <string name="default_with_seconds">ชม:นาที:วิ I</string>
+  <string name="large">ชม:นาที II</string>
+  <string name="large_with_seconds">ชม:นาที:วิ II</string>
+  <string name="xlarge">ชม:นาที III</string>
+  <string name="xlarge_with_seconds">ชม:นาที:วิ III</string>
+  <string name="seconds">วินาที</string>
+  <string name="none">ไม่มี</string>
+  <string name="top_left">ด้านบนซ้าย</string>
+  <string name="top">ด้านบน</string>
+  <string name="top_right">ด้านบนขวา</string>
+  <string name="center">กึ่งกลาง</string>
+  <string name="bottom_left">ด้านล่างซ้าย</string>
+  <string name="bottom_center">ด้านล่างกึ่งกลาง</string>
+  <string name="bottom_right">ด้านล่างขวา</string>
+  <string name="adventurer">Adventurer</string>
+  <string name="ocean">Ocean</string>
+  <string name="performance">Performance</string>
+  <string name="burgundy">Burgundy</string>
+  <string name="desert">Desert</string>
+</resources>

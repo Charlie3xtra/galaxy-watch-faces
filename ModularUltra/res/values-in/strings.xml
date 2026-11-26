@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Modular Ultra</string>
+  <string name="style">GAYA</string>
+  <string name="edge">BEZEL</string>
+  <string name="color">WARNA</string>
+  <string name="nightmode">Night Mode</string>
+  <string name="default">J.M I</string>
+  <string name="default_with_seconds">J.M.D I</string>
+  <string name="large">J.M II</string>
+  <string name="large_with_seconds">J.M.D II</string>
+  <string name="xlarge">J.M III</string>
+  <string name="xlarge_with_seconds">J.M.D III</string>
+  <string name="seconds">DETIK</string>
+  <string name="none">TIDAK ADA</string>
+  <string name="top_left">Kiri Atas</string>
+  <string name="top">Bagian Atas</string>
+  <string name="top_right">Kanan Atas</string>
+  <string name="center">Tengah</string>
+  <string name="bottom_left">Kiri Bawah</string>
+  <string name="bottom_center">Tengah Bawah</string>
+  <string name="bottom_right">Kanan Bawah</string>
+  <string name="adventurer">Adventurer</string>
+  <string name="ocean">Ocean</string>
+  <string name="performance">Performance</string>
+  <string name="burgundy">Burgundy</string>
+  <string name="desert">Desert</string>
+</resources>

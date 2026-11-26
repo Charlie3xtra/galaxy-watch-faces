@@ -141,3 +141,13 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 从 watchOS 24S132 的 NTKProteusFaceBundle 读取 Neptune 常规及圆体字形，按小时计算字重，再将原有矩形数字带映射到圆屏。整点前两秒使用 23 档字重过渡。提供六款配色、彩色盘底、上方文字和下方圆形组件。息屏黑底来自固件，数字亮度按 Galaxy 屏幕适配。Apple 的点按波动和表冠展开尚未移植。两图均来自 Galaxy Watch。
 
 [下载轮廓 1.2](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/contour-1.2/Contour-1.2.apk) · [双组件真机截图](Contour/screenshots/active-1.2.png) · [常规字形预览](Contour/screenshots/style_sharp.png) · [圆体字形预览](Contour/screenshots/style_soft.png)
+
+## Ultra 模块 Modular Ultra
+
+| 亮屏示例 | 息屏示例 |
+| :---: | :---: |
+| <img src="ModularUltra/screenshots/gallery.png" width="220" alt="Ultra 模块亮屏示例"> | <img src="ModularUltra/screenshots/gallery-ambient.png" width="220" alt="Ultra 模块息屏示例"> |
+
+七个系统组件位、六种时间样式、五种配色，可选秒数表圈和手动红色夜间模式。时间数字来自 watchOS 24S132 的 Foghorn 字体，布局适配 Galaxy 圆屏。组件接入 Wear OS 数据源，示例图使用固定读数。Apple 训练负荷、水深和海拔表圈暂未移植。
+
+[下载 Ultra 模块 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/modular-ultra-1.0/ModularUltra-1.0.apk)
