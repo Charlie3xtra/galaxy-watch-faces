@@ -1,0 +1,5 @@
+<resources>
+  <style name="PortraitSurface" parent="@android:style/Theme.Material.NoActionBar">
+    <item name="android:colorControlHighlight">@android:color/transparent</item>
+  </style>
+</resources>
