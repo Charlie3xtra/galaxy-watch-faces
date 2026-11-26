@@ -79,7 +79,7 @@ public final class WakeSettings extends Activity {
     private void ready(WatchFaceSlot face) {
         closeUpload();slot=face.getSlotId();android.util.Log.i("ArtistPush","Registered "+face.getPackageName());
         manager.isWatchFaceActive(face.getPackageName(),getMainExecutor(),callback(active->{
-            if(active){finish();return;}
+            if(active){finishSetup();return;}
             if(getPreferences(0).getBoolean("activationUsed",false)){
                 manualSelection();return;
             }
@@ -89,11 +89,16 @@ public final class WakeSettings extends Activity {
             requestPermissions(new String[]{ACTIVATE},1);
         }));
     }
+    private void finishSetup(){
+        android.content.ComponentName launcher=new android.content.ComponentName(this,"local.artist.engine.SetupLauncher");
+        getPackageManager().setComponentEnabledSetting(launcher,PackageManager.COMPONENT_ENABLED_STATE_DISABLED,PackageManager.DONT_KILL_APP);
+        finish();
+    }
     private void manualSelection(){status.setText("长按当前表盘，在表盘列表选择「艺术家 Artist」");}
     private void activate(){
         manager.setWatchFaceAsActive(slot,getMainExecutor(),new OutcomeReceiver<Void,WatchFacePushManager.SetActiveException>(){
             public void onResult(Void unused){
-                getPreferences(0).edit().putBoolean("activationUsed",true).apply();finish();
+                getPreferences(0).edit().putBoolean("activationUsed",true).apply();finishSetup();
             }
             public void onError(WatchFacePushManager.SetActiveException err){
                 android.util.Log.w("ArtistPush","System activation",err);manualSelection();
@@ -106,6 +111,7 @@ public final class WakeSettings extends Activity {
         else manualSelection();
     }
 }
+
 
 
 
