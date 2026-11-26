@@ -140,10 +140,11 @@ def scene(settings):
         field=CHILD(variant,"Group",name=f"palette{style}",x="0",y="0",width="480",height="480")
         for frame in range(FRAMES+1):
             name=f"p{style}f{frame}"
-            font=CHILD(fonts,"BitmapFont",name=name)
-            for digit in range(10):
-                for zero in (48,0x660,0x6f0,0x966,0xe50):
-                    CHILD(font,"Character",name=chr(zero+digit),resource=f"{name}d{digit}",width=str(W),height=str(H))
+            for family in ([name,f"m1f{frame}"] if style==1 and frame<FRAMES else [name]):
+                font=CHILD(fonts,"BitmapFont",name=family)
+                for digit in range(10):
+                    for zero in (48,0x660,0x6f0,0x966,0xe50):
+                        CHILD(font,"Character",name=chr(zero+digit),resource=f"{family}d{digit}",width=str(W),height=str(H))
             ambient = frame==FRAMES
             layer=CHILD(field,"Group",name=f"layer{name}",x="0",y="0",width="480",height="480",alpha="0" if ambient else "255")
             CHILD(layer,"Variant",mode="AMBIENT",target="alpha",value="255" if ambient else "0")
@@ -159,7 +160,8 @@ def scene(settings):
                 height=round(H*scale)
                 clock=CHILD(fade,"DigitalClock",x="0",y=str(round(240+(y-240)*scale-height/2)),width="480",height=str(height))
                 text=CHILD(clock,"TimeText",x="0",y="0",width="480",height=str(height),align="CENTER",format=fmt,hourFormat="SYNC_TO_DEVICE")
-                CHILD(text,"BitmapFont",family=name,size=str(height),color="#FFFFFF")
+                family=f"m1f{frame}" if style==1 and not ambient and fmt=="mm" else name
+                CHILD(text,"BitmapFont",family=family,size=str(height),color="#FFFFFF")
     store(ROOT/"res/raw/watchface.xml",root)
 
 
@@ -177,8 +179,10 @@ if __name__=="__main__":
             for phase in range(FRAMES+1):
                 im=render(uv,settings,style,phase,digit,phase==FRAMES)
                 im.save(DRAW/f"p{style}f{phase}d{digit}.png",compress_level=5)
+    from reference_light import bake
+    bake(args.model/"解析/媒体"/BUNDLE,ROOT/"reference.png",DRAW,FRAMES)
     preview=Image.new("RGB",(480,480))
     for row,digits in enumerate(("10","09")):
         for col,digit in enumerate(digits):
-            preview.paste(Image.open(DRAW/f"p1f0d{digit}.png"),(240-W+col*W,(148,332)[row]-H//2))
+            preview.paste(Image.open(DRAW/f"{('p' if row==0 else 'm')}1f0d{digit}.png"),(240-W+col*W,(148,332)[row]-H//2))
     preview.save(DRAW/"preview.png")

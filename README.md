@@ -4,9 +4,9 @@
 
 适用于支持 WFF 4 的 Wear OS 6 或更新版本。安装后在手表的表盘选择器中选用；在系统编辑页可选 I–V 五组配色。名称和配色辅助说明使用固件的本地化资源。
 
-十个数字的三角网格、纹理坐标、五组颜色及息屏参数来自 watchOS 24S132 的 NTKPlumeriaFaceBundle.bundle。光束以六个烘焙状态和 WFF 透明度动画重现。高光、光晕、运动速度和圆屏布局是移植近似；未复现原生 Metal 渲染或运动传感器联动。
+十个数字的三角网格、纹理坐标、五组颜色及息屏参数来自 watchOS 24S132 的 NTKPlumeriaFaceBundle.bundle。默认配色以 Apple 官方 10:09 预览的局部色光为参考，分别映射到小时、分钟的固件轮廓。光束以六个烘焙状态和 WFF 透明度动画重现。高光、光晕、运动速度和圆屏布局是移植近似；未复现原生 Metal 渲染或运动传感器联动。
 
-[下载彩虹光辉 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/pride-radiance-v1.0/PrideRadiance-1.0.apk) · [亮屏实机截图](PrideRadiance/active.png) · [息屏实机截图](PrideRadiance/ambient.png)
+[下载彩虹光辉 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/pride-radiance-v1.1/PrideRadiance-1.1.apk) · [默认配色与官方预览对比](PrideRadiance/comparison.png) · [息屏实机截图](PrideRadiance/ambient.png)
 
 ## 艺术家 Artist
 
