@@ -8,6 +8,10 @@ COUNT=32
 FRAME_MS=500
 SIZE=(174,196)
 ROWS=(140,340)
+PINK_PAD=24
+
+def tile_size(style):
+    return (228,265) if style==2 else SIZE
 
 def key_name(style, asset, frame):
     prefix="key" if style==1 else f"key{style}"
@@ -28,13 +32,14 @@ def scene(parent, style):
             digit_scene(face,2*sec+int(odd),style)
 
 def digit_scene(parent,frame,style):
+    size=tile_size(style)
     hour="([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])"
     for row,(prefix,number) in enumerate((("h",hour),("m","[MINUTE]"))):
         digits=(f"floor({number} / 10)",f"({number} % 10)")
         for col,source in enumerate(digits):
             name=f"{prefix}{col}"
-            x=240-SIZE[0]//2
-            node=child(parent,"Group",name=name,x=str(x),y=str(ROWS[row]-SIZE[1]//2),width=str(SIZE[0]),height=str(SIZE[1]))
+            x=240-size[0]//2
+            node=child(parent,"Group",name=name,x=str(x),y=str(ROWS[row]-size[1]//2),width=str(size[0]),height=str(size[1]))
             # The narrower 1 needs less horizontal advance than a round digit.
             sign=(-1,1)[col]
             child(node,"Transform",target="x",value=f"{x} + {sign} * (({digits[1-col]} == 1) ? 48 : 72)")
@@ -44,12 +49,14 @@ def digit_scene(parent,frame,style):
             for d in range(limit):
                 child(expressions,"Expression",name=f"d{d}").text=f"{source} == {d}"
                 choice=child(cond,"Compare",expression=f"d{d}")
-                part=child(choice,"PartImage",x="0",y="0",width=str(SIZE[0]),height=str(SIZE[1]))
+                part=child(choice,"PartImage",x="0",y="0",width=str(size[0]),height=str(size[1]))
+                if style==2:
+                    part.set("blendMode","SCREEN")
                 asset=f"{prefix if d==0 else 'n'}{d}"
                 child(part,"Image",resource=key_name(style,asset,frame))
 
 
-def bake_digit(uv,source,reference_center,colors,settings,seed):
+def bake_digit(uv,source,reference_center,colors,settings,seed,padded=False):
     h,w=uv.shape[:2]
     y,x=np.nonzero(uv[:,:,0]>=0)
     u,v=uv[y,x].T
@@ -100,12 +107,17 @@ def bake_digit(uv,source,reference_center,colors,settings,seed):
     target=np.median([f.mean() for f in frames])
     result=[]
     frames=[np.clip(f*(target/max(f.mean(),1e-8)),0,1) for f in frames]
-    yy,xx=np.mgrid[:h,:w]
-    edge=np.minimum.reduce((yy-7,h-8-yy,xx,w-1-xx))
-    t=np.clip(edge/8,0,1)
-    feather=t*t*(3-2*t)
-    # A shared matte keeps the two interpolation buffers opaque wherever a digit is bright.
-    alpha=np.clip(np.maximum.reduce([f.max(2) for f in frames])*16,0,1)
+    peak=np.maximum.reduce([f.max(2) for f in frames])
+    if padded:
+        # Bloom decays on a padded mesh. Dim transparent halos allow neighbouring glyphs to overlap.
+        feather=1
+        alpha=np.clip(peak,0,1)
+    else:
+        yy,xx=np.mgrid[:h,:w]
+        edge=np.minimum.reduce((yy-7,h-8-yy,xx,w-1-xx))
+        t=np.clip(edge/8,0,1)
+        feather=t*t*(3-2*t)
+        alpha=np.clip(peak*16,0,1)
     for f in frames:
         res=np.dstack([f/np.maximum(alpha[:,:,None],1e-7),alpha*feather])
         result.append(Image.fromarray(np.uint8(np.clip(res,0,1)*255)))
@@ -114,12 +126,16 @@ def bake_digit(uv,source,reference_center,colors,settings,seed):
 def generate(model,art,draw,mesh_uv,settings,palette,style):
     source=np.asarray(Image.open(art).convert("RGB")) if style==1 else None
     frames={}
+    size=tile_size(style)
     for d in range(10):
         uv=mesh_uv(model/f"{d}.usda")
+        if style==2:
+            uv=np.pad(uv,((PINK_PAD,PINK_PAD),(PINK_PAD,PINK_PAD),(0,0)),constant_values=-1)
         for row in (("h","m") if d==0 else ("n",)):
             center=((134,155) if d==1 else (250,155)) if (row=="h" or (row=="n" and d!=9)) else ((142,330) if d==0 else (276,331))
-            imgs=bake_digit(uv,source,center,palette,settings,5371+d+(30 if row=="m" else 0))
-            imgs=[im.crop((0,7,im.width,im.height-7)) for im in imgs]
+            imgs=bake_digit(uv,source,center,palette,settings,5371+d+(30 if row=="m" else 0),padded=style==2)
+            if style!=2:
+                imgs=[im.crop((0,7,im.width,im.height-7)) for im in imgs]
             for idx,im in enumerate(imgs):
                 im.save(draw/(key_name(style,f"{row}{d}",idx)+".png"))
             if d in (1,0,9):
@@ -130,14 +146,14 @@ def generate(model,art,draw,mesh_uv,settings,palette,style):
         for row,(prefix,pair) in enumerate((("h",(1,0)),("m",(0,9)))):
             for col,d in enumerate(pair):
                 dx=(48 if pair[1-col]==1 else 72)*(-1,1)[col]
-                im=frames[prefix if d==0 else "n",d][n].resize(SIZE,Image.Resampling.LANCZOS)
-                canvas.alpha_composite(im,(240+dx-SIZE[0]//2,ROWS[row]-SIZE[1]//2))
+                im=frames[prefix if d==0 else "n",d][n].resize(size,Image.Resampling.LANCZOS)
+                canvas.alpha_composite(im,(240+dx-size[0]//2,ROWS[row]-size[1]//2))
         previews.append(canvas.convert("RGB"))
     if style==1:
         previews[0].save(draw/"preview.png")
     import os, shutil, subprocess
     ffmpeg=os.environ.get("FFMPEG") or shutil.which("ffmpeg") or next(draw.parents[2].glob("work/decoders/imageio_ffmpeg/binaries/ffmpeg*.exe"))
-    with subprocess.Popen([str(ffmpeg),"-v","error","-y","-f","rawvideo","-pix_fmt","rgb24","-s","480x480","-r","30","-i","-","-c:v","libx264","-crf","16","-pix_fmt","yuv420p","-movflags","+faststart",str(draw.parents[1]/f"flow-preview-1.5-{style}.mp4")],stdin=subprocess.PIPE) as proc:
+    with subprocess.Popen([str(ffmpeg),"-v","error","-y","-f","rawvideo","-pix_fmt","rgb24","-s","480x480","-r","30","-i","-","-c:v","libx264","-crf","16","-pix_fmt","yuv420p","-movflags","+faststart",str(draw.parents[1]/f"flow-preview-1.6-{style}.mp4")],stdin=subprocess.PIPE) as proc:
         for idx,current in enumerate(previews):
             following=previews[(idx+1)%COUNT]
             for step in range(15):

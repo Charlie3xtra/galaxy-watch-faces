@@ -8,7 +8,7 @@
 
 息屏按各配色的 tritium 设置生成，使用专用颜色、色段长度、字形加宽和无外发光的静态绘制。相位与亮度映射仍是移植值，尚无同机同刻的 Apple 实拍校准。
 
-[下载彩虹光辉 1.5](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/pride-radiance-v1.5/PrideRadiance-1.5.apk) · [配色 II–V 动态对照](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/pride-radiance-v1.5/colorways-II-V-1.5.mp4) · [Galaxy Watch 息屏实拍截图](PrideRadiance/ambient-1.4.png)
+[下载彩虹光辉 1.6](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/pride-radiance-v1.6/PrideRadiance-1.6.apk) · [橙粉色光晕修正前后对照](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/pride-radiance-v1.6/pink-spacing-1.6.png) · [配色 II–V 动态对照](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/pride-radiance-v1.5/colorways-II-V-1.5.mp4) · [Galaxy Watch 息屏实拍截图](PrideRadiance/ambient-1.4.png)
 
 ## 艺术家 Artist
 
