@@ -141,7 +141,16 @@ for i,key in enumerate(colors):
     contrast=ink('proteus_'+key+'_digitContrast',bundle) if i>=3 else '#FF161616'
     el(palette,'ColorOption',id=i,displayName=f'c{i}',colors=main+' '+contrast)
 stylecfg=el(config,'ListConfiguration',id='style',displayName='style',defaultValue='sharp')
-for style in fonts:el(stylecfg,'ListOption',id=style,displayName=style)
+for style in fonts:
+    icon=f'option_{style}'
+    el(stylecfg,'ListOption',id=style,displayName=style,icon=icon)
+    # Show the same enlarged numeral and weight so its terminals can be compared.
+    sample=Image.open(out/f'{style}_2_22.png')
+    sample=sample.crop(sample.getchannel('A').getbbox())
+    sample.thumbnail((98,98),Image.Resampling.LANCZOS)
+    tile=Image.new('RGBA',(128,128))
+    tile.alpha_composite(sample,((128-sample.width)//2,(128-sample.height)//2))
+    tile.save(out/(icon+'.png'))
 el(config,'BooleanConfiguration',id='colored',displayName='dial',defaultValue='FALSE')
 scene=el(face,'Scene',backgroundColor='#000000')
 bg=group(scene)
@@ -175,7 +184,7 @@ comp=el(slot,'Complication',type='SHORT_TEXT')
 font=el(el(el(comp,'PartText',**box(0,0,132,44)),'Text',align='CENTER'),'Font',family='SYNC_TO_DEVICE',size=27,color='#FFFFFFFF')
 tpl=el(font,'Template');tpl.text='%s';el(tpl,'Parameter',expression='[COMPLICATION.TEXT]')
 clock=el(scene,'AnalogClock',**box())
-for tag,key,length in [('HourHand','hour',87),('MinuteHand','minute',145),('SecondHand','second',178)]:
+for tag,key,length in [('HourHand','hour',95),('MinuteHand','minute',157),('SecondHand','second',178)]:
     w=22
     tail=15 if key=='second' else 4
     h=length+tail+4
@@ -187,7 +196,7 @@ for tag,key,length in [('HourHand','hour',87),('MinuteHand','minute',145),('Seco
         d.ellipse((cx-6,cy-6,cx+6,cy+6),fill='black')
     else:
         d.line((cx,20,cx,cy),fill='white',width=13)
-        d.rounded_rectangle((cx-22,8,cx+22,cy-40),radius=22,fill='white')
+        d.rounded_rectangle((cx-24,8,cx+24,cy-40),radius=24,fill='white')
     im.resize((w,h),Image.Resampling.LANCZOS).save(out/(key+'.png'))
     hand=el(clock,tag,resource=key,**box(240-w//2,238-length,w,h),pivotX='.5',pivotY=(length+2)/h)
     if key=='second':
@@ -213,17 +222,17 @@ for loc in labels.glob('*.lproj'):
     for s in [suffix]+{'zh_CN':['-zh','-b+zh+Hans'],'zh_TW':['-b+zh+Hant'],'no':['-nb']}.get(code,[]):
         save(tree,root/('res/values'+s)/'strings.xml')
 
-def preview(hour,minute,aod):
+def preview(hour,minute,aod,style='sharp'):
     dial=Image.new('RGBA',(480,480),'black')
     for index in range(12):
         dist=(index-hour)%12
         level=22 if dist==0 else 2*(dist-1)
-        key=f'sharp_{index}_{level}'
+        key=f'{style}_{index}_{level}'
         mask=Image.open(out/(key+'.png')).getchannel('A')
         color=Image.new('RGBA',mask.size,'#'+ink(colors[0],core)[3:])
         color.putalpha(mask.point(lambda x:round(x*135/255)) if aod else mask)
         dial.alpha_composite(color,locations[key][:2])
-    for key,length,angle in [('hour',87,hour*30+minute/2),('minute',145,minute*6),('second',178,180)]:
+    for key,length,angle in [('hour',95,hour*30+minute/2),('minute',157,minute*6),('second',178,180)]:
         if key=='second' and aod:continue
         layer=Image.new('RGBA',dial.size)
         layer.alpha_composite(Image.open(out/(key+'.png')),(229,238-length))
@@ -236,3 +245,6 @@ screens.mkdir(exist_ok=True)
 preview(10,9,False).save(out/'preview.png')
 shutil.copy(out/'preview.png',screens/'preview.png')
 preview(10,9,True).save(screens/'ambient-preview.png')
+
+for style in fonts:
+    preview(2,9,False,style).save(screens/f'style_{style}.png')

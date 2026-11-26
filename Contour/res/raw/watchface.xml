@@ -10,8 +10,8 @@
       <ColorOption id="5" displayName="c5" colors="#FFE0FF00 #FF000000" />
     </ColorConfiguration>
     <ListConfiguration id="style" displayName="style" defaultValue="sharp">
-      <ListOption id="sharp" displayName="sharp" />
-      <ListOption id="soft" displayName="soft" />
+      <ListOption id="sharp" displayName="sharp" icon="option_sharp" />
+      <ListOption id="soft" displayName="soft" icon="option_soft" />
     </ListConfiguration>
     <BooleanConfiguration id="colored" displayName="dial" defaultValue="FALSE" />
   </UserConfigurations>
@@ -5116,8 +5116,8 @@
       </Complication>
     </ComplicationSlot>
     <AnalogClock x="0" y="0" width="480" height="480">
-      <HourHand resource="hour" x="229" y="151" width="22" height="95" pivotX=".5" pivotY="0.9368421052631579" />
-      <MinuteHand resource="minute" x="229" y="93" width="22" height="153" pivotX=".5" pivotY="0.9607843137254902" />
+      <HourHand resource="hour" x="229" y="143" width="22" height="103" pivotX=".5" pivotY="0.941747572815534" />
+      <MinuteHand resource="minute" x="229" y="81" width="22" height="165" pivotX=".5" pivotY="0.9636363636363636" />
       <SecondHand resource="second" x="229" y="60" width="22" height="197" pivotX=".5" pivotY="0.9137055837563451">
         <Variant mode="AMBIENT" target="alpha" value="0" />
         <Sweep frequency="15" />
