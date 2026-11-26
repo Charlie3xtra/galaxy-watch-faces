@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <WatchFace width="480" height="480" clipShape="CIRCLE">
   <UserConfigurations>
-    <ColorConfiguration id="palette" displayName="color" defaultValue="0">
+    <ColorConfiguration id="palette" displayName="color" defaultValue="62">
       <ColorOption id="0" displayName="palette_0" colors="#FFAEAFFF #FF7A7BFF" />
       <ColorOption id="1" displayName="palette_1" colors="#FFFF6848 #FFF4ACA5" />
       <ColorOption id="2" displayName="palette_2" colors="#FFFFEB7D #FFD5F2BD" />
@@ -64,6 +64,7 @@
       <ColorOption id="59" displayName="palette_59" colors="#FFAEA192 #FFAEA192" />
       <ColorOption id="60" displayName="palette_60" colors="#FFFFEDCF #FFFFEDCF" />
       <ColorOption id="61" displayName="palette_61" colors="#FF9C9BA3 #FF9C9BA3" />
+      <ColorOption id="62" displayName="rainbow" colors="#FFE13454 #FFFF8542 #FFFFDE44 #FF1785B8 #FF8548B3" />
     </ColorConfiguration>
     <ListConfiguration id="symbols" displayName="symbols" defaultValue="western">
       <ListOption id="western" displayName="western" />
@@ -277,47 +278,254 @@
           <ListConfiguration id="style">
             <ListOption id="filled">
               <Group name="western_filled" x="0" y="0" width="480" height="480">
-                <Variant mode="AMBIENT" target="alpha" value="52" />
-                <DigitalClock x="85" y="65" width="310" height="166">
-                  <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
-                    <BitmapFont family="western_filled" size="166" color="[CONFIGURATION.palette.0]" />
-                  </TimeText>
-                </DigitalClock>
-                <DigitalClock x="85" y="249" width="310" height="166">
-                  <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
-                    <BitmapFont family="western_filled" size="166" color="[CONFIGURATION.palette.1]" />
-                  </TimeText>
-                </DigitalClock>
+                <Condition>
+                  <Expressions>
+                    <Expression name="rainbow">[CONFIGURATION.palette.0] == #FFE13454 &amp;&amp; [CONFIGURATION.palette.1] == #FFFF8542</Expression>
+                  </Expressions>
+                  <Compare expression="rainbow">
+                    <Group name="pride" x="0" y="0" width="480" height="480">
+                      <Group name="rainbow_western_filled_0" x="85" y="65" width="310" height="166">
+                        <PartDraw x="0" y="0" width="310" height="166">
+                          <Variant mode="AMBIENT" target="alpha" value="212" />
+                          <Rectangle x="0" y="0" width="310" height="166">
+                            <Fill color="#FFFFFFFF">
+                              <LinearGradient startX="155" startY="0" endX="155" endY="350" positions="0 0.2 0.4 0.6 0.8 1" colors="#FFE13454 #FFFF8542 #FFFFDE44 #FF84E98C #FF1785B8 #FF8548B3" />
+                            </Fill>
+                          </Rectangle>
+                        </PartDraw>
+                        <Group name="time_mask" renderMode="MASK" x="0" y="0" width="310" height="166">
+                          <Group name="normal_ink" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="76" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                                <BitmapFont family="western_filled" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                          <Group name="ambient_outline" alpha="0" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="255" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                                <BitmapFont family="western_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                        </Group>
+                      </Group>
+                      <Group name="rainbow_western_filled_1" x="85" y="249" width="310" height="166">
+                        <PartDraw x="0" y="0" width="310" height="166">
+                          <Variant mode="AMBIENT" target="alpha" value="212" />
+                          <Rectangle x="0" y="0" width="310" height="166">
+                            <Fill color="#FFFFFFFF">
+                              <LinearGradient startX="155" startY="-184" endX="155" endY="166" positions="0 0.2 0.4 0.6 0.8 1" colors="#FFE13454 #FFFF8542 #FFFFDE44 #FF84E98C #FF1785B8 #FF8548B3" />
+                            </Fill>
+                          </Rectangle>
+                        </PartDraw>
+                        <Group name="time_mask" renderMode="MASK" x="0" y="0" width="310" height="166">
+                          <Group name="normal_ink" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="76" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                                <BitmapFont family="western_filled" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                          <Group name="ambient_outline" alpha="0" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="255" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                                <BitmapFont family="western_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                        </Group>
+                      </Group>
+                    </Group>
+                  </Compare>
+                  <Default>
+                    <Group name="solid" x="0" y="0" width="480" height="480">
+                      <Variant mode="AMBIENT" target="alpha" value="52" />
+                      <DigitalClock x="85" y="65" width="310" height="166">
+                        <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                          <BitmapFont family="western_filled" size="166" color="[CONFIGURATION.palette.0]" />
+                        </TimeText>
+                      </DigitalClock>
+                      <DigitalClock x="85" y="249" width="310" height="166">
+                        <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                          <BitmapFont family="western_filled" size="166" color="[CONFIGURATION.palette.1]" />
+                        </TimeText>
+                      </DigitalClock>
+                    </Group>
+                  </Default>
+                </Condition>
               </Group>
             </ListOption>
             <ListOption id="mixed">
               <Group name="western_mixed" x="0" y="0" width="480" height="480">
-                <Variant mode="AMBIENT" target="alpha" value="52" />
-                <DigitalClock x="85" y="65" width="310" height="166">
-                  <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
-                    <BitmapFont family="western_filled" size="166" color="[CONFIGURATION.palette.0]" />
-                  </TimeText>
-                </DigitalClock>
-                <DigitalClock x="85" y="249" width="310" height="166">
-                  <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
-                    <BitmapFont family="western_outline" size="166" color="[CONFIGURATION.palette.1]" />
-                  </TimeText>
-                </DigitalClock>
+                <Condition>
+                  <Expressions>
+                    <Expression name="rainbow">[CONFIGURATION.palette.0] == #FFE13454 &amp;&amp; [CONFIGURATION.palette.1] == #FFFF8542</Expression>
+                  </Expressions>
+                  <Compare expression="rainbow">
+                    <Group name="pride" x="0" y="0" width="480" height="480">
+                      <Group name="rainbow_western_filled_0" x="85" y="65" width="310" height="166">
+                        <PartDraw x="0" y="0" width="310" height="166">
+                          <Variant mode="AMBIENT" target="alpha" value="212" />
+                          <Rectangle x="0" y="0" width="310" height="166">
+                            <Fill color="#FFFFFFFF">
+                              <LinearGradient startX="155" startY="0" endX="155" endY="350" positions="0 0.2 0.4 0.6 0.8 1" colors="#FFE13454 #FFFF8542 #FFFFDE44 #FF84E98C #FF1785B8 #FF8548B3" />
+                            </Fill>
+                          </Rectangle>
+                        </PartDraw>
+                        <Group name="time_mask" renderMode="MASK" x="0" y="0" width="310" height="166">
+                          <Group name="normal_ink" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="76" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                                <BitmapFont family="western_filled" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                          <Group name="ambient_outline" alpha="0" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="255" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                                <BitmapFont family="western_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                        </Group>
+                      </Group>
+                      <Group name="rainbow_western_outline_1" x="85" y="249" width="310" height="166">
+                        <PartDraw x="0" y="0" width="310" height="166">
+                          <Variant mode="AMBIENT" target="alpha" value="212" />
+                          <Rectangle x="0" y="0" width="310" height="166">
+                            <Fill color="#FFFFFFFF">
+                              <LinearGradient startX="155" startY="-184" endX="155" endY="166" positions="0 0.2 0.4 0.6 0.8 1" colors="#FFE13454 #FFFF8542 #FFFFDE44 #FF84E98C #FF1785B8 #FF8548B3" />
+                            </Fill>
+                          </Rectangle>
+                        </PartDraw>
+                        <Group name="time_mask" renderMode="MASK" x="0" y="0" width="310" height="166">
+                          <Group name="normal_ink" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="76" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                                <BitmapFont family="western_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                          <Group name="ambient_outline" alpha="0" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="255" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                                <BitmapFont family="western_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                        </Group>
+                      </Group>
+                    </Group>
+                  </Compare>
+                  <Default>
+                    <Group name="solid" x="0" y="0" width="480" height="480">
+                      <Variant mode="AMBIENT" target="alpha" value="52" />
+                      <DigitalClock x="85" y="65" width="310" height="166">
+                        <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                          <BitmapFont family="western_filled" size="166" color="[CONFIGURATION.palette.0]" />
+                        </TimeText>
+                      </DigitalClock>
+                      <DigitalClock x="85" y="249" width="310" height="166">
+                        <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                          <BitmapFont family="western_outline" size="166" color="[CONFIGURATION.palette.1]" />
+                        </TimeText>
+                      </DigitalClock>
+                    </Group>
+                  </Default>
+                </Condition>
               </Group>
             </ListOption>
             <ListOption id="outline">
               <Group name="western_outline" x="0" y="0" width="480" height="480">
-                <Variant mode="AMBIENT" target="alpha" value="52" />
-                <DigitalClock x="85" y="65" width="310" height="166">
-                  <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
-                    <BitmapFont family="western_outline" size="166" color="[CONFIGURATION.palette.0]" />
-                  </TimeText>
-                </DigitalClock>
-                <DigitalClock x="85" y="249" width="310" height="166">
-                  <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
-                    <BitmapFont family="western_outline" size="166" color="[CONFIGURATION.palette.1]" />
-                  </TimeText>
-                </DigitalClock>
+                <Condition>
+                  <Expressions>
+                    <Expression name="rainbow">[CONFIGURATION.palette.0] == #FFE13454 &amp;&amp; [CONFIGURATION.palette.1] == #FFFF8542</Expression>
+                  </Expressions>
+                  <Compare expression="rainbow">
+                    <Group name="pride" x="0" y="0" width="480" height="480">
+                      <Group name="rainbow_western_outline_0" x="85" y="65" width="310" height="166">
+                        <PartDraw x="0" y="0" width="310" height="166">
+                          <Variant mode="AMBIENT" target="alpha" value="212" />
+                          <Rectangle x="0" y="0" width="310" height="166">
+                            <Fill color="#FFFFFFFF">
+                              <LinearGradient startX="155" startY="0" endX="155" endY="350" positions="0 0.2 0.4 0.6 0.8 1" colors="#FFE13454 #FFFF8542 #FFFFDE44 #FF84E98C #FF1785B8 #FF8548B3" />
+                            </Fill>
+                          </Rectangle>
+                        </PartDraw>
+                        <Group name="time_mask" renderMode="MASK" x="0" y="0" width="310" height="166">
+                          <Group name="normal_ink" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="76" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                                <BitmapFont family="western_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                          <Group name="ambient_outline" alpha="0" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="255" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                                <BitmapFont family="western_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                        </Group>
+                      </Group>
+                      <Group name="rainbow_western_outline_1" x="85" y="249" width="310" height="166">
+                        <PartDraw x="0" y="0" width="310" height="166">
+                          <Variant mode="AMBIENT" target="alpha" value="212" />
+                          <Rectangle x="0" y="0" width="310" height="166">
+                            <Fill color="#FFFFFFFF">
+                              <LinearGradient startX="155" startY="-184" endX="155" endY="166" positions="0 0.2 0.4 0.6 0.8 1" colors="#FFE13454 #FFFF8542 #FFFFDE44 #FF84E98C #FF1785B8 #FF8548B3" />
+                            </Fill>
+                          </Rectangle>
+                        </PartDraw>
+                        <Group name="time_mask" renderMode="MASK" x="0" y="0" width="310" height="166">
+                          <Group name="normal_ink" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="76" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                                <BitmapFont family="western_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                          <Group name="ambient_outline" alpha="0" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="255" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                                <BitmapFont family="western_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                        </Group>
+                      </Group>
+                    </Group>
+                  </Compare>
+                  <Default>
+                    <Group name="solid" x="0" y="0" width="480" height="480">
+                      <Variant mode="AMBIENT" target="alpha" value="52" />
+                      <DigitalClock x="85" y="65" width="310" height="166">
+                        <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                          <BitmapFont family="western_outline" size="166" color="[CONFIGURATION.palette.0]" />
+                        </TimeText>
+                      </DigitalClock>
+                      <DigitalClock x="85" y="249" width="310" height="166">
+                        <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                          <BitmapFont family="western_outline" size="166" color="[CONFIGURATION.palette.1]" />
+                        </TimeText>
+                      </DigitalClock>
+                    </Group>
+                  </Default>
+                </Condition>
               </Group>
             </ListOption>
           </ListConfiguration>
@@ -328,47 +536,254 @@
           <ListConfiguration id="style">
             <ListOption id="filled">
               <Group name="eastern_filled" x="0" y="0" width="480" height="480">
-                <Variant mode="AMBIENT" target="alpha" value="52" />
-                <DigitalClock x="85" y="65" width="310" height="166">
-                  <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
-                    <BitmapFont family="eastern_filled" size="166" color="[CONFIGURATION.palette.0]" />
-                  </TimeText>
-                </DigitalClock>
-                <DigitalClock x="85" y="249" width="310" height="166">
-                  <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
-                    <BitmapFont family="eastern_filled" size="166" color="[CONFIGURATION.palette.1]" />
-                  </TimeText>
-                </DigitalClock>
+                <Condition>
+                  <Expressions>
+                    <Expression name="rainbow">[CONFIGURATION.palette.0] == #FFE13454 &amp;&amp; [CONFIGURATION.palette.1] == #FFFF8542</Expression>
+                  </Expressions>
+                  <Compare expression="rainbow">
+                    <Group name="pride" x="0" y="0" width="480" height="480">
+                      <Group name="rainbow_eastern_filled_0" x="85" y="65" width="310" height="166">
+                        <PartDraw x="0" y="0" width="310" height="166">
+                          <Variant mode="AMBIENT" target="alpha" value="212" />
+                          <Rectangle x="0" y="0" width="310" height="166">
+                            <Fill color="#FFFFFFFF">
+                              <LinearGradient startX="155" startY="0" endX="155" endY="350" positions="0 0.2 0.4 0.6 0.8 1" colors="#FFE13454 #FFFF8542 #FFFFDE44 #FF84E98C #FF1785B8 #FF8548B3" />
+                            </Fill>
+                          </Rectangle>
+                        </PartDraw>
+                        <Group name="time_mask" renderMode="MASK" x="0" y="0" width="310" height="166">
+                          <Group name="normal_ink" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="76" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                                <BitmapFont family="eastern_filled" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                          <Group name="ambient_outline" alpha="0" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="255" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                                <BitmapFont family="eastern_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                        </Group>
+                      </Group>
+                      <Group name="rainbow_eastern_filled_1" x="85" y="249" width="310" height="166">
+                        <PartDraw x="0" y="0" width="310" height="166">
+                          <Variant mode="AMBIENT" target="alpha" value="212" />
+                          <Rectangle x="0" y="0" width="310" height="166">
+                            <Fill color="#FFFFFFFF">
+                              <LinearGradient startX="155" startY="-184" endX="155" endY="166" positions="0 0.2 0.4 0.6 0.8 1" colors="#FFE13454 #FFFF8542 #FFFFDE44 #FF84E98C #FF1785B8 #FF8548B3" />
+                            </Fill>
+                          </Rectangle>
+                        </PartDraw>
+                        <Group name="time_mask" renderMode="MASK" x="0" y="0" width="310" height="166">
+                          <Group name="normal_ink" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="76" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                                <BitmapFont family="eastern_filled" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                          <Group name="ambient_outline" alpha="0" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="255" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                                <BitmapFont family="eastern_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                        </Group>
+                      </Group>
+                    </Group>
+                  </Compare>
+                  <Default>
+                    <Group name="solid" x="0" y="0" width="480" height="480">
+                      <Variant mode="AMBIENT" target="alpha" value="52" />
+                      <DigitalClock x="85" y="65" width="310" height="166">
+                        <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                          <BitmapFont family="eastern_filled" size="166" color="[CONFIGURATION.palette.0]" />
+                        </TimeText>
+                      </DigitalClock>
+                      <DigitalClock x="85" y="249" width="310" height="166">
+                        <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                          <BitmapFont family="eastern_filled" size="166" color="[CONFIGURATION.palette.1]" />
+                        </TimeText>
+                      </DigitalClock>
+                    </Group>
+                  </Default>
+                </Condition>
               </Group>
             </ListOption>
             <ListOption id="mixed">
               <Group name="eastern_mixed" x="0" y="0" width="480" height="480">
-                <Variant mode="AMBIENT" target="alpha" value="52" />
-                <DigitalClock x="85" y="65" width="310" height="166">
-                  <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
-                    <BitmapFont family="eastern_filled" size="166" color="[CONFIGURATION.palette.0]" />
-                  </TimeText>
-                </DigitalClock>
-                <DigitalClock x="85" y="249" width="310" height="166">
-                  <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
-                    <BitmapFont family="eastern_outline" size="166" color="[CONFIGURATION.palette.1]" />
-                  </TimeText>
-                </DigitalClock>
+                <Condition>
+                  <Expressions>
+                    <Expression name="rainbow">[CONFIGURATION.palette.0] == #FFE13454 &amp;&amp; [CONFIGURATION.palette.1] == #FFFF8542</Expression>
+                  </Expressions>
+                  <Compare expression="rainbow">
+                    <Group name="pride" x="0" y="0" width="480" height="480">
+                      <Group name="rainbow_eastern_filled_0" x="85" y="65" width="310" height="166">
+                        <PartDraw x="0" y="0" width="310" height="166">
+                          <Variant mode="AMBIENT" target="alpha" value="212" />
+                          <Rectangle x="0" y="0" width="310" height="166">
+                            <Fill color="#FFFFFFFF">
+                              <LinearGradient startX="155" startY="0" endX="155" endY="350" positions="0 0.2 0.4 0.6 0.8 1" colors="#FFE13454 #FFFF8542 #FFFFDE44 #FF84E98C #FF1785B8 #FF8548B3" />
+                            </Fill>
+                          </Rectangle>
+                        </PartDraw>
+                        <Group name="time_mask" renderMode="MASK" x="0" y="0" width="310" height="166">
+                          <Group name="normal_ink" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="76" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                                <BitmapFont family="eastern_filled" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                          <Group name="ambient_outline" alpha="0" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="255" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                                <BitmapFont family="eastern_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                        </Group>
+                      </Group>
+                      <Group name="rainbow_eastern_outline_1" x="85" y="249" width="310" height="166">
+                        <PartDraw x="0" y="0" width="310" height="166">
+                          <Variant mode="AMBIENT" target="alpha" value="212" />
+                          <Rectangle x="0" y="0" width="310" height="166">
+                            <Fill color="#FFFFFFFF">
+                              <LinearGradient startX="155" startY="-184" endX="155" endY="166" positions="0 0.2 0.4 0.6 0.8 1" colors="#FFE13454 #FFFF8542 #FFFFDE44 #FF84E98C #FF1785B8 #FF8548B3" />
+                            </Fill>
+                          </Rectangle>
+                        </PartDraw>
+                        <Group name="time_mask" renderMode="MASK" x="0" y="0" width="310" height="166">
+                          <Group name="normal_ink" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="76" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                                <BitmapFont family="eastern_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                          <Group name="ambient_outline" alpha="0" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="255" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                                <BitmapFont family="eastern_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                        </Group>
+                      </Group>
+                    </Group>
+                  </Compare>
+                  <Default>
+                    <Group name="solid" x="0" y="0" width="480" height="480">
+                      <Variant mode="AMBIENT" target="alpha" value="52" />
+                      <DigitalClock x="85" y="65" width="310" height="166">
+                        <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                          <BitmapFont family="eastern_filled" size="166" color="[CONFIGURATION.palette.0]" />
+                        </TimeText>
+                      </DigitalClock>
+                      <DigitalClock x="85" y="249" width="310" height="166">
+                        <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                          <BitmapFont family="eastern_outline" size="166" color="[CONFIGURATION.palette.1]" />
+                        </TimeText>
+                      </DigitalClock>
+                    </Group>
+                  </Default>
+                </Condition>
               </Group>
             </ListOption>
             <ListOption id="outline">
               <Group name="eastern_outline" x="0" y="0" width="480" height="480">
-                <Variant mode="AMBIENT" target="alpha" value="52" />
-                <DigitalClock x="85" y="65" width="310" height="166">
-                  <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
-                    <BitmapFont family="eastern_outline" size="166" color="[CONFIGURATION.palette.0]" />
-                  </TimeText>
-                </DigitalClock>
-                <DigitalClock x="85" y="249" width="310" height="166">
-                  <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
-                    <BitmapFont family="eastern_outline" size="166" color="[CONFIGURATION.palette.1]" />
-                  </TimeText>
-                </DigitalClock>
+                <Condition>
+                  <Expressions>
+                    <Expression name="rainbow">[CONFIGURATION.palette.0] == #FFE13454 &amp;&amp; [CONFIGURATION.palette.1] == #FFFF8542</Expression>
+                  </Expressions>
+                  <Compare expression="rainbow">
+                    <Group name="pride" x="0" y="0" width="480" height="480">
+                      <Group name="rainbow_eastern_outline_0" x="85" y="65" width="310" height="166">
+                        <PartDraw x="0" y="0" width="310" height="166">
+                          <Variant mode="AMBIENT" target="alpha" value="212" />
+                          <Rectangle x="0" y="0" width="310" height="166">
+                            <Fill color="#FFFFFFFF">
+                              <LinearGradient startX="155" startY="0" endX="155" endY="350" positions="0 0.2 0.4 0.6 0.8 1" colors="#FFE13454 #FFFF8542 #FFFFDE44 #FF84E98C #FF1785B8 #FF8548B3" />
+                            </Fill>
+                          </Rectangle>
+                        </PartDraw>
+                        <Group name="time_mask" renderMode="MASK" x="0" y="0" width="310" height="166">
+                          <Group name="normal_ink" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="76" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                                <BitmapFont family="eastern_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                          <Group name="ambient_outline" alpha="0" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="255" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                                <BitmapFont family="eastern_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                        </Group>
+                      </Group>
+                      <Group name="rainbow_eastern_outline_1" x="85" y="249" width="310" height="166">
+                        <PartDraw x="0" y="0" width="310" height="166">
+                          <Variant mode="AMBIENT" target="alpha" value="212" />
+                          <Rectangle x="0" y="0" width="310" height="166">
+                            <Fill color="#FFFFFFFF">
+                              <LinearGradient startX="155" startY="-184" endX="155" endY="166" positions="0 0.2 0.4 0.6 0.8 1" colors="#FFE13454 #FFFF8542 #FFFFDE44 #FF84E98C #FF1785B8 #FF8548B3" />
+                            </Fill>
+                          </Rectangle>
+                        </PartDraw>
+                        <Group name="time_mask" renderMode="MASK" x="0" y="0" width="310" height="166">
+                          <Group name="normal_ink" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="76" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                                <BitmapFont family="eastern_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                          <Group name="ambient_outline" alpha="0" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="255" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                                <BitmapFont family="eastern_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                        </Group>
+                      </Group>
+                    </Group>
+                  </Compare>
+                  <Default>
+                    <Group name="solid" x="0" y="0" width="480" height="480">
+                      <Variant mode="AMBIENT" target="alpha" value="52" />
+                      <DigitalClock x="85" y="65" width="310" height="166">
+                        <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                          <BitmapFont family="eastern_outline" size="166" color="[CONFIGURATION.palette.0]" />
+                        </TimeText>
+                      </DigitalClock>
+                      <DigitalClock x="85" y="249" width="310" height="166">
+                        <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                          <BitmapFont family="eastern_outline" size="166" color="[CONFIGURATION.palette.1]" />
+                        </TimeText>
+                      </DigitalClock>
+                    </Group>
+                  </Default>
+                </Condition>
               </Group>
             </ListOption>
           </ListConfiguration>
@@ -379,47 +794,254 @@
           <ListConfiguration id="style">
             <ListOption id="filled">
               <Group name="deva_filled" x="0" y="0" width="480" height="480">
-                <Variant mode="AMBIENT" target="alpha" value="52" />
-                <DigitalClock x="85" y="65" width="310" height="166">
-                  <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
-                    <BitmapFont family="deva_filled" size="166" color="[CONFIGURATION.palette.0]" />
-                  </TimeText>
-                </DigitalClock>
-                <DigitalClock x="85" y="249" width="310" height="166">
-                  <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
-                    <BitmapFont family="deva_filled" size="166" color="[CONFIGURATION.palette.1]" />
-                  </TimeText>
-                </DigitalClock>
+                <Condition>
+                  <Expressions>
+                    <Expression name="rainbow">[CONFIGURATION.palette.0] == #FFE13454 &amp;&amp; [CONFIGURATION.palette.1] == #FFFF8542</Expression>
+                  </Expressions>
+                  <Compare expression="rainbow">
+                    <Group name="pride" x="0" y="0" width="480" height="480">
+                      <Group name="rainbow_deva_filled_0" x="85" y="65" width="310" height="166">
+                        <PartDraw x="0" y="0" width="310" height="166">
+                          <Variant mode="AMBIENT" target="alpha" value="212" />
+                          <Rectangle x="0" y="0" width="310" height="166">
+                            <Fill color="#FFFFFFFF">
+                              <LinearGradient startX="155" startY="0" endX="155" endY="350" positions="0 0.2 0.4 0.6 0.8 1" colors="#FFE13454 #FFFF8542 #FFFFDE44 #FF84E98C #FF1785B8 #FF8548B3" />
+                            </Fill>
+                          </Rectangle>
+                        </PartDraw>
+                        <Group name="time_mask" renderMode="MASK" x="0" y="0" width="310" height="166">
+                          <Group name="normal_ink" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="76" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                                <BitmapFont family="deva_filled" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                          <Group name="ambient_outline" alpha="0" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="255" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                                <BitmapFont family="deva_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                        </Group>
+                      </Group>
+                      <Group name="rainbow_deva_filled_1" x="85" y="249" width="310" height="166">
+                        <PartDraw x="0" y="0" width="310" height="166">
+                          <Variant mode="AMBIENT" target="alpha" value="212" />
+                          <Rectangle x="0" y="0" width="310" height="166">
+                            <Fill color="#FFFFFFFF">
+                              <LinearGradient startX="155" startY="-184" endX="155" endY="166" positions="0 0.2 0.4 0.6 0.8 1" colors="#FFE13454 #FFFF8542 #FFFFDE44 #FF84E98C #FF1785B8 #FF8548B3" />
+                            </Fill>
+                          </Rectangle>
+                        </PartDraw>
+                        <Group name="time_mask" renderMode="MASK" x="0" y="0" width="310" height="166">
+                          <Group name="normal_ink" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="76" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                                <BitmapFont family="deva_filled" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                          <Group name="ambient_outline" alpha="0" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="255" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                                <BitmapFont family="deva_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                        </Group>
+                      </Group>
+                    </Group>
+                  </Compare>
+                  <Default>
+                    <Group name="solid" x="0" y="0" width="480" height="480">
+                      <Variant mode="AMBIENT" target="alpha" value="52" />
+                      <DigitalClock x="85" y="65" width="310" height="166">
+                        <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                          <BitmapFont family="deva_filled" size="166" color="[CONFIGURATION.palette.0]" />
+                        </TimeText>
+                      </DigitalClock>
+                      <DigitalClock x="85" y="249" width="310" height="166">
+                        <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                          <BitmapFont family="deva_filled" size="166" color="[CONFIGURATION.palette.1]" />
+                        </TimeText>
+                      </DigitalClock>
+                    </Group>
+                  </Default>
+                </Condition>
               </Group>
             </ListOption>
             <ListOption id="mixed">
               <Group name="deva_mixed" x="0" y="0" width="480" height="480">
-                <Variant mode="AMBIENT" target="alpha" value="52" />
-                <DigitalClock x="85" y="65" width="310" height="166">
-                  <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
-                    <BitmapFont family="deva_filled" size="166" color="[CONFIGURATION.palette.0]" />
-                  </TimeText>
-                </DigitalClock>
-                <DigitalClock x="85" y="249" width="310" height="166">
-                  <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
-                    <BitmapFont family="deva_outline" size="166" color="[CONFIGURATION.palette.1]" />
-                  </TimeText>
-                </DigitalClock>
+                <Condition>
+                  <Expressions>
+                    <Expression name="rainbow">[CONFIGURATION.palette.0] == #FFE13454 &amp;&amp; [CONFIGURATION.palette.1] == #FFFF8542</Expression>
+                  </Expressions>
+                  <Compare expression="rainbow">
+                    <Group name="pride" x="0" y="0" width="480" height="480">
+                      <Group name="rainbow_deva_filled_0" x="85" y="65" width="310" height="166">
+                        <PartDraw x="0" y="0" width="310" height="166">
+                          <Variant mode="AMBIENT" target="alpha" value="212" />
+                          <Rectangle x="0" y="0" width="310" height="166">
+                            <Fill color="#FFFFFFFF">
+                              <LinearGradient startX="155" startY="0" endX="155" endY="350" positions="0 0.2 0.4 0.6 0.8 1" colors="#FFE13454 #FFFF8542 #FFFFDE44 #FF84E98C #FF1785B8 #FF8548B3" />
+                            </Fill>
+                          </Rectangle>
+                        </PartDraw>
+                        <Group name="time_mask" renderMode="MASK" x="0" y="0" width="310" height="166">
+                          <Group name="normal_ink" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="76" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                                <BitmapFont family="deva_filled" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                          <Group name="ambient_outline" alpha="0" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="255" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                                <BitmapFont family="deva_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                        </Group>
+                      </Group>
+                      <Group name="rainbow_deva_outline_1" x="85" y="249" width="310" height="166">
+                        <PartDraw x="0" y="0" width="310" height="166">
+                          <Variant mode="AMBIENT" target="alpha" value="212" />
+                          <Rectangle x="0" y="0" width="310" height="166">
+                            <Fill color="#FFFFFFFF">
+                              <LinearGradient startX="155" startY="-184" endX="155" endY="166" positions="0 0.2 0.4 0.6 0.8 1" colors="#FFE13454 #FFFF8542 #FFFFDE44 #FF84E98C #FF1785B8 #FF8548B3" />
+                            </Fill>
+                          </Rectangle>
+                        </PartDraw>
+                        <Group name="time_mask" renderMode="MASK" x="0" y="0" width="310" height="166">
+                          <Group name="normal_ink" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="76" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                                <BitmapFont family="deva_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                          <Group name="ambient_outline" alpha="0" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="255" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                                <BitmapFont family="deva_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                        </Group>
+                      </Group>
+                    </Group>
+                  </Compare>
+                  <Default>
+                    <Group name="solid" x="0" y="0" width="480" height="480">
+                      <Variant mode="AMBIENT" target="alpha" value="52" />
+                      <DigitalClock x="85" y="65" width="310" height="166">
+                        <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                          <BitmapFont family="deva_filled" size="166" color="[CONFIGURATION.palette.0]" />
+                        </TimeText>
+                      </DigitalClock>
+                      <DigitalClock x="85" y="249" width="310" height="166">
+                        <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                          <BitmapFont family="deva_outline" size="166" color="[CONFIGURATION.palette.1]" />
+                        </TimeText>
+                      </DigitalClock>
+                    </Group>
+                  </Default>
+                </Condition>
               </Group>
             </ListOption>
             <ListOption id="outline">
               <Group name="deva_outline" x="0" y="0" width="480" height="480">
-                <Variant mode="AMBIENT" target="alpha" value="52" />
-                <DigitalClock x="85" y="65" width="310" height="166">
-                  <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
-                    <BitmapFont family="deva_outline" size="166" color="[CONFIGURATION.palette.0]" />
-                  </TimeText>
-                </DigitalClock>
-                <DigitalClock x="85" y="249" width="310" height="166">
-                  <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
-                    <BitmapFont family="deva_outline" size="166" color="[CONFIGURATION.palette.1]" />
-                  </TimeText>
-                </DigitalClock>
+                <Condition>
+                  <Expressions>
+                    <Expression name="rainbow">[CONFIGURATION.palette.0] == #FFE13454 &amp;&amp; [CONFIGURATION.palette.1] == #FFFF8542</Expression>
+                  </Expressions>
+                  <Compare expression="rainbow">
+                    <Group name="pride" x="0" y="0" width="480" height="480">
+                      <Group name="rainbow_deva_outline_0" x="85" y="65" width="310" height="166">
+                        <PartDraw x="0" y="0" width="310" height="166">
+                          <Variant mode="AMBIENT" target="alpha" value="212" />
+                          <Rectangle x="0" y="0" width="310" height="166">
+                            <Fill color="#FFFFFFFF">
+                              <LinearGradient startX="155" startY="0" endX="155" endY="350" positions="0 0.2 0.4 0.6 0.8 1" colors="#FFE13454 #FFFF8542 #FFFFDE44 #FF84E98C #FF1785B8 #FF8548B3" />
+                            </Fill>
+                          </Rectangle>
+                        </PartDraw>
+                        <Group name="time_mask" renderMode="MASK" x="0" y="0" width="310" height="166">
+                          <Group name="normal_ink" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="76" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                                <BitmapFont family="deva_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                          <Group name="ambient_outline" alpha="0" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="255" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                                <BitmapFont family="deva_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                        </Group>
+                      </Group>
+                      <Group name="rainbow_deva_outline_1" x="85" y="249" width="310" height="166">
+                        <PartDraw x="0" y="0" width="310" height="166">
+                          <Variant mode="AMBIENT" target="alpha" value="212" />
+                          <Rectangle x="0" y="0" width="310" height="166">
+                            <Fill color="#FFFFFFFF">
+                              <LinearGradient startX="155" startY="-184" endX="155" endY="166" positions="0 0.2 0.4 0.6 0.8 1" colors="#FFE13454 #FFFF8542 #FFFFDE44 #FF84E98C #FF1785B8 #FF8548B3" />
+                            </Fill>
+                          </Rectangle>
+                        </PartDraw>
+                        <Group name="time_mask" renderMode="MASK" x="0" y="0" width="310" height="166">
+                          <Group name="normal_ink" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="76" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                                <BitmapFont family="deva_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                          <Group name="ambient_outline" alpha="0" x="0" y="0" width="310" height="166">
+                            <Variant mode="AMBIENT" target="alpha" value="255" />
+                            <DigitalClock x="0" y="0" width="310" height="166">
+                              <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                                <BitmapFont family="deva_outline" size="166" color="#FFFFFFFF" />
+                              </TimeText>
+                            </DigitalClock>
+                          </Group>
+                        </Group>
+                      </Group>
+                    </Group>
+                  </Compare>
+                  <Default>
+                    <Group name="solid" x="0" y="0" width="480" height="480">
+                      <Variant mode="AMBIENT" target="alpha" value="52" />
+                      <DigitalClock x="85" y="65" width="310" height="166">
+                        <TimeText x="0" y="0" width="310" height="166" format="h" align="END">
+                          <BitmapFont family="deva_outline" size="166" color="[CONFIGURATION.palette.0]" />
+                        </TimeText>
+                      </DigitalClock>
+                      <DigitalClock x="85" y="249" width="310" height="166">
+                        <TimeText x="0" y="0" width="310" height="166" format="mm" align="END">
+                          <BitmapFont family="deva_outline" size="166" color="[CONFIGURATION.palette.1]" />
+                        </TimeText>
+                      </DigitalClock>
+                    </Group>
+                  </Default>
+                </Condition>
               </Group>
             </ListOption>
           </ListConfiguration>

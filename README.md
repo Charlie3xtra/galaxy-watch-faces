@@ -42,4 +42,4 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 
 ## 双行数字 · Numerals Duo
 
-[下载 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/numerals-duo-1.0)。使用 24S132 固件表盘程序内嵌的 Tokyo 和 Tokyo Outline 字形。原生编辑器支持三套数字、实心 / 混合 / 空心样式与 62 种配色。默认两行颜色取自 Apple 的 10:09 预览，圆屏布局和息屏亮度按 Galaxy 调校。此版实现固定色，未实现 Apple 的彩虹渐变。直接运行 NumeralsDuo/build.ps1 可用现成资源构建。
+[下载 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/numerals-duo-1.1)。使用 24S132 固件表盘程序内嵌的 Tokyo 和 Tokyo Outline 字形。原生编辑器支持三套数字、实心 / 混合 / 空心样式与 62 种配色。另有彩虹选项。新版默认使用从上到下贯穿两行的六色渐变，原官方预览的紫色组合仍可选。渐变取自 24S132 的 NTKPrideColorUtils，息屏叠加 Tokyo Outline 并降低填充强度。直接运行 NumeralsDuo/build.ps1 可用现成资源构建。
