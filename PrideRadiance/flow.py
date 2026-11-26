@@ -9,7 +9,11 @@ FRAME_MS=500
 SIZE=(174,196)
 ROWS=(140,340)
 
-def scene(parent):
+def key_name(style, asset, frame):
+    prefix="key" if style==1 else f"key{style}"
+    return f"{prefix}_{asset}_{frame:02}"
+
+def scene(parent, style):
     for odd in (False, True):
         layer=child(parent,"Group",name=f"buffer{int(odd)}",x="0",y="0",width="480",height="480")
         if odd:
@@ -21,9 +25,9 @@ def scene(parent):
             phase_expr="([SECONDS_IN_DAY] % 16)" if odd else "(([SECONDS_IN_DAY] + ([MILLISECOND] >= 500 ? 1 : 0)) % 16)"
             child(tests,"Expression",name=f"s{sec}").text=f"{phase_expr} == {sec}"
             face=child(phase,"Compare",expression=f"s{sec}")
-            digit_scene(face,2*sec+int(odd))
+            digit_scene(face,2*sec+int(odd),style)
 
-def digit_scene(parent,frame):
+def digit_scene(parent,frame,style):
     hour="([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])"
     for row,(prefix,number) in enumerate((("h",hour),("m","[MINUTE]"))):
         digits=(f"floor({number} / 10)",f"({number} % 10)")
@@ -42,7 +46,7 @@ def digit_scene(parent,frame):
                 choice=child(cond,"Compare",expression=f"d{d}")
                 part=child(choice,"PartImage",x="0",y="0",width=str(SIZE[0]),height=str(SIZE[1]))
                 asset=f"{prefix if d==0 else 'n'}{d}"
-                child(part,"Image",resource=f"key_{asset}_{frame:02}")
+                child(part,"Image",resource=key_name(style,asset,frame))
 
 
 def bake_digit(uv,source,reference_center,colors,settings,seed):
@@ -54,13 +58,17 @@ def bake_digit(uv,source,reference_center,colors,settings,seed):
     width=np.maximum(np.abs(np.gradient(uv[:,:,0],axis=0))+np.abs(np.gradient(uv[:,:,0],axis=1)),.01)
     du=np.minimum(width[y,x],.45)/3
     coverage=sum(np.clip(2-4*np.abs(.5-(u+offset-.15)/.70),0,1) for offset in (-du,0,du))/3
-    X=np.clip((reference_center[0]+x-w/2).astype(int),0,source.shape[1]-1)
-    Y=np.clip((reference_center[1]+y-h/2).astype(int),0,source.shape[0]-1)
-    light=source[Y,X].astype(float)/255
+    if source is not None:
+        X=np.clip((reference_center[0]+x-w/2).astype(int),0,source.shape[1]-1)
+        Y=np.clip((reference_center[1]+y-h/2).astype(int),0,source.shape[0]-1)
+        light=source[Y,X].astype(float)/255
     layers=[]
     for k,color in enumerate(colors):
-        weight=np.maximum(0,light@(color/(np.linalg.norm(color)+1e-5))-.65*light.max(1))**3
-        anchor=np.angle(np.sum(weight*np.exp(2j*np.pi*v)))/(2*np.pi)
+        if source is None:
+            anchor=rng.random()
+        else:
+            weight=np.maximum(0,light@(color/(np.linalg.norm(color)+1e-5))-.65*light.max(1))**3
+            anchor=np.angle(np.sum(weight*np.exp(2j*np.pi*v)))/(2*np.pi)
         depth=k/(len(colors)-1)
         spread=(settings["jitterScaleNear"]*(1-depth)+settings["jitterScaleFar"]*depth)*8
         dx,dy=np.rint((rng.random(2)-.5)*2*spread*[settings["jitterAspectRatio"],1]).astype(int)
@@ -103,8 +111,8 @@ def bake_digit(uv,source,reference_center,colors,settings,seed):
         result.append(Image.fromarray(np.uint8(np.clip(res,0,1)*255)))
     return result
 
-def generate(model,art,draw,mesh_uv,settings,palette):
-    source=np.asarray(Image.open(art).convert("RGB"))
+def generate(model,art,draw,mesh_uv,settings,palette,style):
+    source=np.asarray(Image.open(art).convert("RGB")) if style==1 else None
     frames={}
     for d in range(10):
         uv=mesh_uv(model/f"{d}.usda")
@@ -113,7 +121,7 @@ def generate(model,art,draw,mesh_uv,settings,palette):
             imgs=bake_digit(uv,source,center,palette,settings,5371+d+(30 if row=="m" else 0))
             imgs=[im.crop((0,7,im.width,im.height-7)) for im in imgs]
             for idx,im in enumerate(imgs):
-                im.save(draw/f"key_{row}{d}_{idx:02}.png")
+                im.save(draw/(key_name(style,f"{row}{d}",idx)+".png"))
             if d in (1,0,9):
                 frames[row,d]=imgs
     previews=[]
@@ -125,10 +133,11 @@ def generate(model,art,draw,mesh_uv,settings,palette):
                 im=frames[prefix if d==0 else "n",d][n].resize(SIZE,Image.Resampling.LANCZOS)
                 canvas.alpha_composite(im,(240+dx-SIZE[0]//2,ROWS[row]-SIZE[1]//2))
         previews.append(canvas.convert("RGB"))
-    previews[0].save(draw/"preview.png")
+    if style==1:
+        previews[0].save(draw/"preview.png")
     import os, shutil, subprocess
     ffmpeg=os.environ.get("FFMPEG") or shutil.which("ffmpeg") or next(draw.parents[2].glob("work/decoders/imageio_ffmpeg/binaries/ffmpeg*.exe"))
-    with subprocess.Popen([str(ffmpeg),"-v","error","-y","-f","rawvideo","-pix_fmt","rgb24","-s","480x480","-r","30","-i","-","-c:v","libx264","-crf","16","-pix_fmt","yuv420p","-movflags","+faststart",str(draw.parents[1]/"flow-preview-1.4.mp4")],stdin=subprocess.PIPE) as proc:
+    with subprocess.Popen([str(ffmpeg),"-v","error","-y","-f","rawvideo","-pix_fmt","rgb24","-s","480x480","-r","30","-i","-","-c:v","libx264","-crf","16","-pix_fmt","yuv420p","-movflags","+faststart",str(draw.parents[1]/f"flow-preview-1.5-{style}.mp4")],stdin=subprocess.PIPE) as proc:
         for idx,current in enumerate(previews):
             following=previews[(idx+1)%COUNT]
             for step in range(15):

@@ -153,7 +153,7 @@ def trim_fonts(mesh_dir):
         atlas=mesh_uv(mesh_dir/f"{digit}.usda")
         xs=np.where(atlas[:,:,0]>=0)[1]
         box=(max(0,int(xs.min())-9),0,min(W,int(xs.max())+11),H)
-        for path in DRAW.glob(f"p*f*d{digit}.png"):
+        for path in DRAW.glob(f"p*f{FRAMES}d{digit}.png"):
             style,phase=map(int,re.match(r"p(\d+)f(\d+)",path.stem).groups())
             if style==1 and phase!=FRAMES:
                 continue
@@ -183,34 +183,24 @@ def scene(settings):
         CHILD(config,"ListOption",id=str(style-1),displayName=f"palette_{style-1}",screenReaderText=f"desc_{style-1}",icon=f"swatch_{style}")
         variant=CHILD(group,"ListOption",id=str(style-1))
         field=CHILD(variant,"Group",name=f"palette{style}",x="0",y="0",width="480",height="480")
-        if style==1:
-            from flow import scene as flow_scene
-            live=CHILD(field,"Group",name="flow",x="0",y="0",width="480",height="480")
-            CHILD(live,"Variant",mode="AMBIENT",target="alpha",value="0")
-            flow_scene(live)
-        for frame in ((FRAMES,) if style==1 else (0,1,FRAMES)):
-            name=f"p{style}f{frame}"
-            for family in ([name,f"m1f{frame}"] if style==1 and frame<FRAMES else [name]):
-                font=CHILD(fonts,"BitmapFont",name=family)
-                for digit in range(10):
-                    for zero in (48,0x660,0x6f0,0x966,0xe50):
-                        CHILD(font,"Character",name=chr(zero+digit),resource=f"{family}d{digit}",width=str(Image.open(DRAW/f"{family}d{digit}.png").width),height=str(H))
-            ambient = frame==FRAMES
-            layer=CHILD(field,"Group",name=f"layer{name}",x="0",y="0",width="480",height="480",alpha="0" if ambient else "255")
-            CHILD(layer,"Variant",mode="AMBIENT",target="alpha",value="255" if ambient else "0")
-            fade=layer
-            if frame==1:
-                # The opaque base is already visible on wake. Only the second texture blends.
-                fade=CHILD(layer,"Group",name=f"sheen{name}",x="0",y="0",width="480",height="480")
-                opacity=CHILD(fade,"Transform",target="alpha",value="([SECOND] % 8) < 4 ? 255 : 0")
-                CHILD(opacity,"Animation",duration="3.8",fps="30",interpolation="LINEAR")
-            scale=1.02 if ambient else 1.04
-            for y,fmt in ROWS:
-                height=round(H*scale)
-                clock=CHILD(fade,"DigitalClock",x="0",y=str(round(240+(y-240)*.95-height/2)),width="480",height=str(height))
-                text=CHILD(clock,"TimeText",x="0",y="0",width="480",height=str(height),align="CENTER",format=fmt,hourFormat="SYNC_TO_DEVICE")
-                family=f"m1f{frame}" if style==1 and not ambient and fmt=="mm" else name
-                CHILD(text,"BitmapFont",family=family,size=str(height),color="#FFFFFF")
+        from flow import scene as flow_scene
+        live=CHILD(field,"Group",name="flow",x="0",y="0",width="480",height="480")
+        CHILD(live,"Variant",mode="AMBIENT",target="alpha",value="0")
+        flow_scene(live,style)
+        family=f"p{style}f{FRAMES}"
+        font=CHILD(fonts,"BitmapFont",name=family)
+        for digit in range(10):
+            resource=f"{family}d{digit}"
+            width=str(Image.open(DRAW/f"{resource}.png").width)
+            for zero in (48,0x660,0x6f0,0x966,0xe50):
+                CHILD(font,"Character",name=chr(zero+digit),resource=resource,width=width,height=str(H))
+        layer=CHILD(field,"Group",name=f"ambient{style}",x="0",y="0",width="480",height="480",alpha="0")
+        CHILD(layer,"Variant",mode="AMBIENT",target="alpha",value="255")
+        height=round(H*1.02)
+        for y,fmt in ROWS:
+            clock=CHILD(layer,"DigitalClock",x="0",y=str(round(240+(y-240)*.95-height/2)),width="480",height=str(height))
+            text=CHILD(clock,"TimeText",x="0",y="0",width="480",height=str(height),align="CENTER",format=fmt,hourFormat="SYNC_TO_DEVICE")
+            CHILD(text,"BitmapFont",family=family,size=str(height),color="#FFFFFF")
     store(ROOT/"res/raw/watchface.xml",root)
 
 
@@ -222,27 +212,13 @@ if __name__=="__main__":
     settings=read(props/BUNDLE/"PlumeriaSettings.plist.json")
     localized(props)
     for digit in range(10):
-        uv=mesh_uv(args.model/"解析/媒体"/BUNDLE/f"{digit}.usda")
         ambient_uv=mesh_uv(args.model/"解析/媒体"/BUNDLE/f"{digit}.usda",settings["tritiumBase"]["fontEnlargement"])
         for style in range(1,6):
-            for phase in (0,1,5,FRAMES):
-                if style==1 and phase!=FRAMES:
-                    continue
-                im=ambient_digit(ambient_uv,settings,style,digit) if phase==FRAMES else render(uv,settings,style,phase,digit,False)
-                im.save(DRAW/f"p{style}f{phase}d{digit}.png",compress_level=5)
-    # Match both opaque endpoints to one exposure. A moving highlight changes only part
-    # of each digit, so the time remains readable even on the first interactive frame.
-    for prefix in ("p2","p3","p4","p5"):
-        for digit in range(10):
-            files=[DRAW/f"{prefix}f{phase}d{digit}.png" for phase in (0,1,5)]
-            anchor,positive,negative=[np.asarray(Image.open(f).convert("RGB"),dtype=float) for f in files]
-            for dest,endpoint in zip(files, (negative,positive)):
-                exposure=anchor.mean()/max(endpoint.mean(),1e-6)
-                rgb=.65*anchor+.35*endpoint*exposure
-                Image.fromarray(np.clip(np.rint(rgb),0,255).astype("uint8")).save(dest)
-            files[2].unlink()
+            im=ambient_digit(ambient_uv,settings,style,digit)
+            im.save(DRAW/f"p{style}f{FRAMES}d{digit}.png",compress_level=5)
     trim_fonts(args.model/"解析/媒体"/BUNDLE)
     scene(settings)
     from flow import generate
-    cfg=dict(settings["base"],**settings["colorway1"])
-    generate(args.model/"解析/媒体"/BUNDLE,ROOT/"reference.png",DRAW,mesh_uv,cfg,colors(cfg)/255)
+    for style in range(1,6):
+        cfg=settings["base"] | settings[f"colorway{style}"]
+        generate(args.model/"解析/媒体"/BUNDLE,ROOT/"reference.png",DRAW,mesh_uv,cfg,colors(cfg)/255,style)
