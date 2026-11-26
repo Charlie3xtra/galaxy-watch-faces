@@ -87,7 +87,12 @@ def field(colors,lens, gallery=False):
             # Interior samples across the same boundary in the Apple 10:09 reference.
             ramp=np.array([REF.getpixel(p) for p in [(290,182),(300,142),(300,129),(299,101),(96,361)]])
         else:
-            ramp=np.minimum(255,ramp*1.22+11)
+            # Lift dark stops using available channel headroom. Tint the pale end
+            # with the selected pigment so the lens stays visible over a light field.
+            peak=ramp.max(axis=1,keepdims=True)
+            gain=np.minimum(1.22,255/np.maximum(peak,1))
+            tint=np.array([0,0,0,.14,.25])[:,None]
+            ramp=(1-tint)*ramp*gain+tint*ramp[2]
         # Keep the interior on the same color boundary; local refraction is applied at the rim.
     return Image.fromarray(np.uint8(np.stack([np.interp(phase,stops,ramp[:,i]) for i in range(3)],axis=-1)).round())
 
