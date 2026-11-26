@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="retry">ลองอีกครั้ง</string>
+  <string name="setup_error">ตั้งค่าหน้าปัดไม่ได้</string>
+  <string name="manual_selection">แตะหน้าปัดปัจจุบันค้างไว้ แล้วเลือก %1$s</string>
+  <string name="face_name">Hermès Maritime</string>
+  <string name="color">สี</string>
+  <string name="noir">Noir</string>
+  <string name="blanc">Blanc</string>
+  <string name="start">เริ่ม</string>
+  <string name="resume">ทำต่อ</string>
+  <string name="sync">เชื่อมข้อมูล</string>
+  <string name="reset">รีเซ็ต</string>
+  <string name="pause">หยุดพัก</string>
+  <string name="minutes">นาที</string>
+  <string name="paused">หยุดพักอยู่</string>
+</resources>

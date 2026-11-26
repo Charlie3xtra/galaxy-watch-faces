@@ -1,0 +1,1987 @@
+<?xml version='1.0' encoding='utf-8'?>
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <UserConfigurations>
+    <ColorConfiguration id="palette" displayName="color" defaultValue="0">
+      <ColorOption id="0" displayName="noir" colors="#FF000000 #FFFFFFFF #4D009EFF #FF009EFF #FFFF6700" />
+      <ColorOption id="1" displayName="blanc" colors="#FFDFE5EA #FF00212F #4D00A1FF #FF00A1FF #FF01171E" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <BitmapFonts>
+    <BitmapFont name="race_digits">
+      <Character name="0" resource="race_0" width="54" height="84" />
+      <Character name="1" resource="race_1" width="30" height="84" />
+      <Character name="2" resource="race_2" width="54" height="84" />
+      <Character name="3" resource="race_3" width="54" height="84" />
+      <Character name="4" resource="race_4" width="54" height="84" />
+      <Character name="5" resource="race_5" width="54" height="84" />
+      <Character name="6" resource="race_6" width="54" height="84" />
+      <Character name="7" resource="race_7" width="54" height="84" />
+      <Character name="8" resource="race_8" width="54" height="84" />
+      <Character name="9" resource="race_9" width="54" height="84" />
+      <Character name=":" resource="race_colon" width="20" height="84" />
+    </BitmapFont>
+  </BitmapFonts>
+  <Scene backgroundColor="#000000">
+    <Group name="daytime" x="0" y="0" width="480" height="480" alpha="255">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Rectangle x="0" y="0" width="480" height="480">
+          <Fill color="[CONFIGURATION.palette.0]" />
+        </Rectangle>
+      </PartDraw>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+          <Stroke color="[CONFIGURATION.palette.2]" thickness="21" />
+        </Arc>
+      </PartDraw>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+          <Transform target="endAngle" value="360 * clamp([SECOND_MILLISECOND]/60,0,1)" />
+          <Stroke color="[CONFIGURATION.palette.3]" thickness="21" />
+        </Arc>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="n0">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 0</Expression>
+          <Expression name="n1">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 1</Expression>
+          <Expression name="n2">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 2</Expression>
+          <Expression name="n3">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 3</Expression>
+          <Expression name="n4">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 4</Expression>
+          <Expression name="n5">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 5</Expression>
+          <Expression name="n6">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 6</Expression>
+          <Expression name="n7">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 7</Expression>
+          <Expression name="n8">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 8</Expression>
+          <Expression name="n9">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 9</Expression>
+          <Expression name="n10">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 10</Expression>
+          <Expression name="n11">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 11</Expression>
+          <Expression name="n12">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 12</Expression>
+          <Expression name="n13">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 13</Expression>
+          <Expression name="n14">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 14</Expression>
+          <Expression name="n15">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 15</Expression>
+          <Expression name="n16">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 16</Expression>
+          <Expression name="n17">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 17</Expression>
+          <Expression name="n18">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 18</Expression>
+          <Expression name="n19">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 19</Expression>
+          <Expression name="n20">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 20</Expression>
+          <Expression name="n21">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 21</Expression>
+          <Expression name="n22">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 22</Expression>
+          <Expression name="n23">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 23</Expression>
+        </Expressions>
+        <Compare expression="n0">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day0" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n1">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day1" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n2">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day2" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n3">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day3" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n4">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day4" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n5">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day5" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n6">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day6" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n7">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day7" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n8">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day8" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n9">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day9" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n10">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day10" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n11">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day11" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n12">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day12" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n13">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day13" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n14">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day14" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n15">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day15" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n16">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day16" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n17">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day17" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n18">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day18" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n19">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day19" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n20">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day20" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n21">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day21" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n22">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day22" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n23">
+          <PartImage x="108" y="86" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day23" />
+          </PartImage>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="n0">[MINUTE] == 0</Expression>
+          <Expression name="n1">[MINUTE] == 1</Expression>
+          <Expression name="n2">[MINUTE] == 2</Expression>
+          <Expression name="n3">[MINUTE] == 3</Expression>
+          <Expression name="n4">[MINUTE] == 4</Expression>
+          <Expression name="n5">[MINUTE] == 5</Expression>
+          <Expression name="n6">[MINUTE] == 6</Expression>
+          <Expression name="n7">[MINUTE] == 7</Expression>
+          <Expression name="n8">[MINUTE] == 8</Expression>
+          <Expression name="n9">[MINUTE] == 9</Expression>
+          <Expression name="n10">[MINUTE] == 10</Expression>
+          <Expression name="n11">[MINUTE] == 11</Expression>
+          <Expression name="n12">[MINUTE] == 12</Expression>
+          <Expression name="n13">[MINUTE] == 13</Expression>
+          <Expression name="n14">[MINUTE] == 14</Expression>
+          <Expression name="n15">[MINUTE] == 15</Expression>
+          <Expression name="n16">[MINUTE] == 16</Expression>
+          <Expression name="n17">[MINUTE] == 17</Expression>
+          <Expression name="n18">[MINUTE] == 18</Expression>
+          <Expression name="n19">[MINUTE] == 19</Expression>
+          <Expression name="n20">[MINUTE] == 20</Expression>
+          <Expression name="n21">[MINUTE] == 21</Expression>
+          <Expression name="n22">[MINUTE] == 22</Expression>
+          <Expression name="n23">[MINUTE] == 23</Expression>
+          <Expression name="n24">[MINUTE] == 24</Expression>
+          <Expression name="n25">[MINUTE] == 25</Expression>
+          <Expression name="n26">[MINUTE] == 26</Expression>
+          <Expression name="n27">[MINUTE] == 27</Expression>
+          <Expression name="n28">[MINUTE] == 28</Expression>
+          <Expression name="n29">[MINUTE] == 29</Expression>
+          <Expression name="n30">[MINUTE] == 30</Expression>
+          <Expression name="n31">[MINUTE] == 31</Expression>
+          <Expression name="n32">[MINUTE] == 32</Expression>
+          <Expression name="n33">[MINUTE] == 33</Expression>
+          <Expression name="n34">[MINUTE] == 34</Expression>
+          <Expression name="n35">[MINUTE] == 35</Expression>
+          <Expression name="n36">[MINUTE] == 36</Expression>
+          <Expression name="n37">[MINUTE] == 37</Expression>
+          <Expression name="n38">[MINUTE] == 38</Expression>
+          <Expression name="n39">[MINUTE] == 39</Expression>
+          <Expression name="n40">[MINUTE] == 40</Expression>
+          <Expression name="n41">[MINUTE] == 41</Expression>
+          <Expression name="n42">[MINUTE] == 42</Expression>
+          <Expression name="n43">[MINUTE] == 43</Expression>
+          <Expression name="n44">[MINUTE] == 44</Expression>
+          <Expression name="n45">[MINUTE] == 45</Expression>
+          <Expression name="n46">[MINUTE] == 46</Expression>
+          <Expression name="n47">[MINUTE] == 47</Expression>
+          <Expression name="n48">[MINUTE] == 48</Expression>
+          <Expression name="n49">[MINUTE] == 49</Expression>
+          <Expression name="n50">[MINUTE] == 50</Expression>
+          <Expression name="n51">[MINUTE] == 51</Expression>
+          <Expression name="n52">[MINUTE] == 52</Expression>
+          <Expression name="n53">[MINUTE] == 53</Expression>
+          <Expression name="n54">[MINUTE] == 54</Expression>
+          <Expression name="n55">[MINUTE] == 55</Expression>
+          <Expression name="n56">[MINUTE] == 56</Expression>
+          <Expression name="n57">[MINUTE] == 57</Expression>
+          <Expression name="n58">[MINUTE] == 58</Expression>
+          <Expression name="n59">[MINUTE] == 59</Expression>
+        </Expressions>
+        <Compare expression="n0">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day00" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n1">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day01" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n2">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day02" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n3">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day03" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n4">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day04" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n5">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day05" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n6">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day06" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n7">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day07" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n8">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day08" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n9">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day09" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n10">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day10" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n11">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day11" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n12">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day12" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n13">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day13" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n14">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day14" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n15">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day15" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n16">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day16" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n17">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day17" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n18">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day18" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n19">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day19" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n20">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day20" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n21">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day21" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n22">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day22" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n23">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day23" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n24">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day24" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n25">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day25" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n26">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day26" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n27">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day27" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n28">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day28" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n29">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day29" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n30">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day30" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n31">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day31" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n32">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day32" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n33">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day33" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n34">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day34" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n35">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day35" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n36">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day36" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n37">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day37" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n38">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day38" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n39">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day39" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n40">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day40" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n41">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day41" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n42">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day42" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n43">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day43" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n44">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day44" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n45">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day45" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n46">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day46" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n47">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day47" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n48">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day48" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n49">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day49" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n50">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day50" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n51">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day51" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n52">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day52" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n53">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day53" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n54">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day54" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n55">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day55" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n56">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day56" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n57">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day57" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n58">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day58" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n59">
+          <PartImage x="108" y="235" width="264" height="148" tintColor="[CONFIGURATION.palette.1]">
+            <Image resource="day59" />
+          </PartImage>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="test">[SECOND] &gt;= 45</Expression>
+        </Expressions>
+        <Compare expression="test">
+          <PartImage x="12" y="197" width="11" height="86" tintColor="#FF071518">
+            <Image resource="wordmark" />
+          </PartImage>
+        </Compare>
+        <Default>
+          <PartImage x="12" y="197" width="11" height="86" tintColor="[CONFIGURATION.palette.4]">
+            <Image resource="wordmark" />
+          </PartImage>
+        </Default>
+      </Condition>
+    </Group>
+    <Group name="ambient" x="0" y="0" width="480" height="480" alpha="0">
+      <Variant mode="AMBIENT" target="alpha" value="255" />
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Rectangle x="0" y="0" width="480" height="480">
+          <Fill color="#FF000000" />
+        </Rectangle>
+      </PartDraw>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+          <Stroke color="#FF123441" thickness="21" />
+        </Arc>
+      </PartDraw>
+      <Condition>
+        <Expressions>
+          <Expression name="n0">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 0</Expression>
+          <Expression name="n1">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 1</Expression>
+          <Expression name="n2">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 2</Expression>
+          <Expression name="n3">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 3</Expression>
+          <Expression name="n4">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 4</Expression>
+          <Expression name="n5">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 5</Expression>
+          <Expression name="n6">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 6</Expression>
+          <Expression name="n7">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 7</Expression>
+          <Expression name="n8">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 8</Expression>
+          <Expression name="n9">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 9</Expression>
+          <Expression name="n10">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 10</Expression>
+          <Expression name="n11">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 11</Expression>
+          <Expression name="n12">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 12</Expression>
+          <Expression name="n13">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 13</Expression>
+          <Expression name="n14">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 14</Expression>
+          <Expression name="n15">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 15</Expression>
+          <Expression name="n16">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 16</Expression>
+          <Expression name="n17">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 17</Expression>
+          <Expression name="n18">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 18</Expression>
+          <Expression name="n19">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 19</Expression>
+          <Expression name="n20">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 20</Expression>
+          <Expression name="n21">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 21</Expression>
+          <Expression name="n22">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 22</Expression>
+          <Expression name="n23">([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) == 23</Expression>
+        </Expressions>
+        <Compare expression="n0">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night0" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n1">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night1" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n2">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night2" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n3">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night3" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n4">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night4" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n5">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night5" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n6">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night6" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n7">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night7" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n8">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night8" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n9">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night9" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n10">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night10" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n11">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night11" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n12">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night12" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n13">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night13" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n14">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night14" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n15">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night15" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n16">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night16" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n17">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night17" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n18">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night18" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n19">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night19" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n20">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night20" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n21">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night21" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n22">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night22" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n23">
+          <PartImage x="108" y="95" width="264" height="148" tintColor="#FFFFFFFF">
+            <Image resource="night23" />
+          </PartImage>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="n0">[MINUTE] == 0</Expression>
+          <Expression name="n1">[MINUTE] == 1</Expression>
+          <Expression name="n2">[MINUTE] == 2</Expression>
+          <Expression name="n3">[MINUTE] == 3</Expression>
+          <Expression name="n4">[MINUTE] == 4</Expression>
+          <Expression name="n5">[MINUTE] == 5</Expression>
+          <Expression name="n6">[MINUTE] == 6</Expression>
+          <Expression name="n7">[MINUTE] == 7</Expression>
+          <Expression name="n8">[MINUTE] == 8</Expression>
+          <Expression name="n9">[MINUTE] == 9</Expression>
+          <Expression name="n10">[MINUTE] == 10</Expression>
+          <Expression name="n11">[MINUTE] == 11</Expression>
+          <Expression name="n12">[MINUTE] == 12</Expression>
+          <Expression name="n13">[MINUTE] == 13</Expression>
+          <Expression name="n14">[MINUTE] == 14</Expression>
+          <Expression name="n15">[MINUTE] == 15</Expression>
+          <Expression name="n16">[MINUTE] == 16</Expression>
+          <Expression name="n17">[MINUTE] == 17</Expression>
+          <Expression name="n18">[MINUTE] == 18</Expression>
+          <Expression name="n19">[MINUTE] == 19</Expression>
+          <Expression name="n20">[MINUTE] == 20</Expression>
+          <Expression name="n21">[MINUTE] == 21</Expression>
+          <Expression name="n22">[MINUTE] == 22</Expression>
+          <Expression name="n23">[MINUTE] == 23</Expression>
+          <Expression name="n24">[MINUTE] == 24</Expression>
+          <Expression name="n25">[MINUTE] == 25</Expression>
+          <Expression name="n26">[MINUTE] == 26</Expression>
+          <Expression name="n27">[MINUTE] == 27</Expression>
+          <Expression name="n28">[MINUTE] == 28</Expression>
+          <Expression name="n29">[MINUTE] == 29</Expression>
+          <Expression name="n30">[MINUTE] == 30</Expression>
+          <Expression name="n31">[MINUTE] == 31</Expression>
+          <Expression name="n32">[MINUTE] == 32</Expression>
+          <Expression name="n33">[MINUTE] == 33</Expression>
+          <Expression name="n34">[MINUTE] == 34</Expression>
+          <Expression name="n35">[MINUTE] == 35</Expression>
+          <Expression name="n36">[MINUTE] == 36</Expression>
+          <Expression name="n37">[MINUTE] == 37</Expression>
+          <Expression name="n38">[MINUTE] == 38</Expression>
+          <Expression name="n39">[MINUTE] == 39</Expression>
+          <Expression name="n40">[MINUTE] == 40</Expression>
+          <Expression name="n41">[MINUTE] == 41</Expression>
+          <Expression name="n42">[MINUTE] == 42</Expression>
+          <Expression name="n43">[MINUTE] == 43</Expression>
+          <Expression name="n44">[MINUTE] == 44</Expression>
+          <Expression name="n45">[MINUTE] == 45</Expression>
+          <Expression name="n46">[MINUTE] == 46</Expression>
+          <Expression name="n47">[MINUTE] == 47</Expression>
+          <Expression name="n48">[MINUTE] == 48</Expression>
+          <Expression name="n49">[MINUTE] == 49</Expression>
+          <Expression name="n50">[MINUTE] == 50</Expression>
+          <Expression name="n51">[MINUTE] == 51</Expression>
+          <Expression name="n52">[MINUTE] == 52</Expression>
+          <Expression name="n53">[MINUTE] == 53</Expression>
+          <Expression name="n54">[MINUTE] == 54</Expression>
+          <Expression name="n55">[MINUTE] == 55</Expression>
+          <Expression name="n56">[MINUTE] == 56</Expression>
+          <Expression name="n57">[MINUTE] == 57</Expression>
+          <Expression name="n58">[MINUTE] == 58</Expression>
+          <Expression name="n59">[MINUTE] == 59</Expression>
+        </Expressions>
+        <Compare expression="n0">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night00" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n1">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night01" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n2">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night02" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n3">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night03" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n4">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night04" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n5">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night05" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n6">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night06" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n7">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night07" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n8">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night08" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n9">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night09" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n10">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night10" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n11">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night11" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n12">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night12" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n13">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night13" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n14">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night14" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n15">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night15" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n16">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night16" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n17">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night17" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n18">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night18" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n19">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night19" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n20">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night20" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n21">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night21" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n22">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night22" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n23">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night23" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n24">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night24" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n25">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night25" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n26">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night26" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n27">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night27" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n28">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night28" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n29">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night29" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n30">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night30" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n31">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night31" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n32">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night32" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n33">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night33" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n34">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night34" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n35">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night35" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n36">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night36" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n37">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night37" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n38">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night38" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n39">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night39" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n40">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night40" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n41">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night41" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n42">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night42" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n43">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night43" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n44">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night44" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n45">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night45" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n46">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night46" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n47">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night47" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n48">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night48" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n49">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night49" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n50">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night50" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n51">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night51" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n52">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night52" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n53">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night53" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n54">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night54" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n55">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night55" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n56">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night56" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n57">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night57" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n58">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night58" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n59">
+          <PartImage x="108" y="229" width="264" height="148" tintColor="#FF00A1FF">
+            <Image resource="night59" />
+          </PartImage>
+        </Compare>
+      </Condition>
+      <PartImage x="12" y="197" width="11" height="86" tintColor="#FF4295BC">
+        <Image resource="wordmark" />
+      </PartImage>
+    </Group>
+    <ComplicationSlot x="0" y="0" width="480" height="480" slotId="1" displayName="face_name" supportedTypes="RANGED_VALUE EMPTY">
+      <DefaultProviderPolicy primaryProvider="local.hermes.maritime/local.hermes.maritime.RaceProvider" primaryProviderType="RANGED_VALUE" defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" />
+      <BoundingOval x="0" y="0" width="480" height="480" />
+      <Complication type="EMPTY" />
+      <Complication type="RANGED_VALUE">
+        <Condition>
+          <Expressions>
+            <Expression name="test">[COMPLICATION.TEXT] == "running" || [COMPLICATION.TEXT] == "paused" || [COMPLICATION.TEXT] == "overtime"</Expression>
+          </Expressions>
+          <Compare expression="test">
+            <Condition>
+              <Expressions>
+                <Expression name="test">[CONFIGURATION.palette.0] == #FF000000</Expression>
+              </Expressions>
+              <Compare expression="test">
+                <Group name="race_noir0" x="0" y="0" width="480" height="480" alpha="255">
+                  <Variant mode="AMBIENT" target="alpha" value="0" />
+                  <PartDraw x="0" y="0" width="480" height="480">
+                    <Rectangle x="0" y="0" width="480" height="480">
+                      <Fill color="#FF000000" />
+                    </Rectangle>
+                  </PartDraw>
+                  <Group name="readout_noir0" x="0" y="0" width="480" height="480" alpha="255">
+                    <PartDraw x="0" y="0" width="480" height="480">
+                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                        <Stroke color="#4D009EFF" thickness="21" />
+                      </Arc>
+                    </PartDraw>
+                    <Condition>
+                      <Expressions>
+                        <Expression name="test">[COMPLICATION.TEXT] == "running"</Expression>
+                      </Expressions>
+                      <Compare expression="test">
+                        <Condition>
+                          <Expressions>
+                            <Expression name="test">(([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400) &gt; 0</Expression>
+                          </Expressions>
+                          <Compare expression="test">
+                            <Condition>
+                              <Expressions>
+                                <Expression name="test">(([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400) &lt;= 60</Expression>
+                              </Expressions>
+                              <Compare expression="test">
+                                <PartDraw x="0" y="0" width="480" height="480">
+                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                    <Transform target="endAngle" value="360 * clamp(((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60.0,0,1)" />
+                                    <Stroke color="#FFFF6700" thickness="21" />
+                                  </Arc>
+                                </PartDraw>
+                              </Compare>
+                              <Default>
+                                <PartDraw x="0" y="0" width="480" height="480">
+                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                    <Transform target="endAngle" value="360 * clamp(((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/(([COMPLICATION.RANGED_VALUE_MAX]-86400)),0,1)" />
+                                    <Stroke color="#FF009EFF" thickness="21" />
+                                  </Arc>
+                                </PartDraw>
+                              </Default>
+                            </Condition>
+                            <PartText x="58" y="161" width="364" height="125">
+                              <Text align="CENTER">
+                                <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
+                                  <Template>%02d:%02d<Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60)" />
+                                    <Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)" />
+                                  </Template>
+                                </BitmapFont>
+                              </Text>
+                            </PartText>
+                          </Compare>
+                          <Default>
+                            <PartDraw x="0" y="0" width="480" height="480">
+                              <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                <Transform target="endAngle" value="360 * clamp(1.0*(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)/60.0,0,1)" />
+                                <Stroke color="#FFEE7A34" thickness="21" />
+                              </Arc>
+                            </PartDraw>
+                            <PartText x="58" y="161" width="364" height="125">
+                              <Text align="CENTER">
+                                <BitmapFont family="race_digits" size="82" color="#FFEE7A34">
+                                  <Template>%02d:%02d<Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60)" />
+                                    <Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)" />
+                                  </Template>
+                                </BitmapFont>
+                              </Text>
+                            </PartText>
+                          </Default>
+                        </Condition>
+                      </Compare>
+                      <Default>
+                        <Condition>
+                          <Expressions>
+                            <Expression name="test">[COMPLICATION.TEXT] == "paused"</Expression>
+                          </Expressions>
+                          <Compare expression="test">
+                            <Condition>
+                              <Expressions>
+                                <Expression name="test">[COMPLICATION.RANGED_VALUE_VALUE] &gt; 0</Expression>
+                              </Expressions>
+                              <Compare expression="test">
+                                <Condition>
+                                  <Expressions>
+                                    <Expression name="test">[COMPLICATION.RANGED_VALUE_VALUE] &lt;= 60</Expression>
+                                  </Expressions>
+                                  <Compare expression="test">
+                                    <PartDraw x="0" y="0" width="480" height="480">
+                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                        <Transform target="endAngle" value="360 * clamp(([COMPLICATION.RANGED_VALUE_VALUE])/60.0,0,1)" />
+                                        <Stroke color="#FFFF6700" thickness="21" />
+                                      </Arc>
+                                    </PartDraw>
+                                  </Compare>
+                                  <Default>
+                                    <PartDraw x="0" y="0" width="480" height="480">
+                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                        <Transform target="endAngle" value="360 * clamp(([COMPLICATION.RANGED_VALUE_VALUE])/((-[COMPLICATION.RANGED_VALUE_MIN])),0,1)" />
+                                        <Stroke color="#FF009EFF" thickness="21" />
+                                      </Arc>
+                                    </PartDraw>
+                                  </Default>
+                                </Condition>
+                                <PartText x="58" y="161" width="364" height="125">
+                                  <Text align="CENTER">
+                                    <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
+                                      <Template>%02d:%02d<Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])/60)" />
+                                        <Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)" />
+                                      </Template>
+                                    </BitmapFont>
+                                  </Text>
+                                </PartText>
+                              </Compare>
+                              <Default>
+                                <PartDraw x="0" y="0" width="480" height="480">
+                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                    <Transform target="endAngle" value="360 * clamp(1.0*(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)/60.0,0,1)" />
+                                    <Stroke color="#FFEE7A34" thickness="21" />
+                                  </Arc>
+                                </PartDraw>
+                                <PartText x="58" y="161" width="364" height="125">
+                                  <Text align="CENTER">
+                                    <BitmapFont family="race_digits" size="82" color="#FFEE7A34">
+                                      <Template>%02d:%02d<Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])/60)" />
+                                        <Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)" />
+                                      </Template>
+                                    </BitmapFont>
+                                  </Text>
+                                </PartText>
+                              </Default>
+                            </Condition>
+                          </Compare>
+                          <Default>
+                            <Condition>
+                              <Expressions>
+                                <Expression name="test">(-[COMPLICATION.RANGED_VALUE_VALUE]) &gt; 0</Expression>
+                              </Expressions>
+                              <Compare expression="test">
+                                <Condition>
+                                  <Expressions>
+                                    <Expression name="test">(-[COMPLICATION.RANGED_VALUE_VALUE]) &lt;= 60</Expression>
+                                  </Expressions>
+                                  <Compare expression="test">
+                                    <PartDraw x="0" y="0" width="480" height="480">
+                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                        <Transform target="endAngle" value="360 * clamp(((-[COMPLICATION.RANGED_VALUE_VALUE]))/60.0,0,1)" />
+                                        <Stroke color="#FFFF6700" thickness="21" />
+                                      </Arc>
+                                    </PartDraw>
+                                  </Compare>
+                                  <Default>
+                                    <PartDraw x="0" y="0" width="480" height="480">
+                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                        <Transform target="endAngle" value="360 * clamp(((-[COMPLICATION.RANGED_VALUE_VALUE]))/((-[COMPLICATION.RANGED_VALUE_MIN])),0,1)" />
+                                        <Stroke color="#FF009EFF" thickness="21" />
+                                      </Arc>
+                                    </PartDraw>
+                                  </Default>
+                                </Condition>
+                                <PartText x="58" y="161" width="364" height="125">
+                                  <Text align="CENTER">
+                                    <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
+                                      <Template>%02d:%02d<Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))/60)" />
+                                        <Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)" />
+                                      </Template>
+                                    </BitmapFont>
+                                  </Text>
+                                </PartText>
+                              </Compare>
+                              <Default>
+                                <PartDraw x="0" y="0" width="480" height="480">
+                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                    <Transform target="endAngle" value="360 * clamp(1.0*(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)/60.0,0,1)" />
+                                    <Stroke color="#FFEE7A34" thickness="21" />
+                                  </Arc>
+                                </PartDraw>
+                                <PartText x="58" y="161" width="364" height="125">
+                                  <Text align="CENTER">
+                                    <BitmapFont family="race_digits" size="82" color="#FFEE7A34">
+                                      <Template>%02d:%02d<Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))/60)" />
+                                        <Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)" />
+                                      </Template>
+                                    </BitmapFont>
+                                  </Text>
+                                </PartText>
+                              </Default>
+                            </Condition>
+                          </Default>
+                        </Condition>
+                      </Default>
+                    </Condition>
+                    <PartText x="115" y="120" width="250" height="44">
+                      <Text align="CENTER">
+                        <Font family="SYNC_TO_DEVICE" size="25" color="#FF0099D6">
+                          <Template>%s:%s<Parameter expression="([IS_24_HOUR_MODE] ? [HOUR_0_23_Z] : [HOUR_1_12])" />
+                            <Parameter expression="[MINUTE_Z]" />
+                          </Template>
+                        </Font>
+                      </Text>
+                    </PartText>
+                    <Condition>
+                      <Expressions>
+                        <Expression name="test">[COMPLICATION.TEXT] != "running"</Expression>
+                      </Expressions>
+                      <Compare expression="test">
+                        <PartText x="105" y="303" width="270" height="52">
+                          <Text align="CENTER">
+                            <Font family="SYNC_TO_DEVICE" size="22" color="#FF00A1FF">@string/paused</Font>
+                          </Text>
+                        </PartText>
+                      </Compare>
+                    </Condition>
+                  </Group>
+                </Group>
+                <Group name="race_noir1" x="0" y="0" width="480" height="480" alpha="0">
+                  <Variant mode="AMBIENT" target="alpha" value="255" />
+                  <PartDraw x="0" y="0" width="480" height="480">
+                    <Rectangle x="0" y="0" width="480" height="480">
+                      <Fill color="#FF000000" />
+                    </Rectangle>
+                  </PartDraw>
+                  <Group name="readout_noir1" x="0" y="0" width="480" height="480" alpha="95">
+                    <PartDraw x="0" y="0" width="480" height="480">
+                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                        <Stroke color="#FF27323A" thickness="21" />
+                      </Arc>
+                    </PartDraw>
+                    <Condition>
+                      <Expressions>
+                        <Expression name="test">[COMPLICATION.TEXT] == "running"</Expression>
+                      </Expressions>
+                      <Compare expression="test">
+                        <Condition>
+                          <Expressions>
+                            <Expression name="test">(([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400) &gt; 0</Expression>
+                          </Expressions>
+                          <Compare expression="test">
+                            <Condition>
+                              <Expressions>
+                                <Expression name="test">(([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400) &lt;= 60</Expression>
+                              </Expressions>
+                              <Compare expression="test">
+                                <PartDraw x="0" y="0" width="480" height="480">
+                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                    <Transform target="endAngle" value="360 * clamp(((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60.0,0,1)" />
+                                    <Stroke color="#FFFF6700" thickness="21" />
+                                  </Arc>
+                                </PartDraw>
+                              </Compare>
+                              <Default>
+                                <PartDraw x="0" y="0" width="480" height="480">
+                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                    <Transform target="endAngle" value="360 * clamp(((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/(([COMPLICATION.RANGED_VALUE_MAX]-86400)),0,1)" />
+                                    <Stroke color="#FF009EFF" thickness="21" />
+                                  </Arc>
+                                </PartDraw>
+                              </Default>
+                            </Condition>
+                            <PartText x="58" y="161" width="364" height="125">
+                              <Text align="CENTER">
+                                <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
+                                  <Template>%02d:%02d<Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60)" />
+                                    <Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)" />
+                                  </Template>
+                                </BitmapFont>
+                              </Text>
+                            </PartText>
+                          </Compare>
+                          <Default>
+                            <PartDraw x="0" y="0" width="480" height="480">
+                              <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                <Transform target="endAngle" value="360 * clamp(1.0*(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)/60.0,0,1)" />
+                                <Stroke color="#FFEE7A34" thickness="21" />
+                              </Arc>
+                            </PartDraw>
+                            <PartText x="58" y="161" width="364" height="125">
+                              <Text align="CENTER">
+                                <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
+                                  <Template>%02d:%02d<Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60)" />
+                                    <Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)" />
+                                  </Template>
+                                </BitmapFont>
+                              </Text>
+                            </PartText>
+                          </Default>
+                        </Condition>
+                      </Compare>
+                      <Default>
+                        <Condition>
+                          <Expressions>
+                            <Expression name="test">[COMPLICATION.TEXT] == "paused"</Expression>
+                          </Expressions>
+                          <Compare expression="test">
+                            <Condition>
+                              <Expressions>
+                                <Expression name="test">[COMPLICATION.RANGED_VALUE_VALUE] &gt; 0</Expression>
+                              </Expressions>
+                              <Compare expression="test">
+                                <Condition>
+                                  <Expressions>
+                                    <Expression name="test">[COMPLICATION.RANGED_VALUE_VALUE] &lt;= 60</Expression>
+                                  </Expressions>
+                                  <Compare expression="test">
+                                    <PartDraw x="0" y="0" width="480" height="480">
+                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                        <Transform target="endAngle" value="360 * clamp(([COMPLICATION.RANGED_VALUE_VALUE])/60.0,0,1)" />
+                                        <Stroke color="#FFFF6700" thickness="21" />
+                                      </Arc>
+                                    </PartDraw>
+                                  </Compare>
+                                  <Default>
+                                    <PartDraw x="0" y="0" width="480" height="480">
+                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                        <Transform target="endAngle" value="360 * clamp(([COMPLICATION.RANGED_VALUE_VALUE])/((-[COMPLICATION.RANGED_VALUE_MIN])),0,1)" />
+                                        <Stroke color="#FF009EFF" thickness="21" />
+                                      </Arc>
+                                    </PartDraw>
+                                  </Default>
+                                </Condition>
+                                <PartText x="58" y="161" width="364" height="125">
+                                  <Text align="CENTER">
+                                    <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
+                                      <Template>%02d:%02d<Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])/60)" />
+                                        <Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)" />
+                                      </Template>
+                                    </BitmapFont>
+                                  </Text>
+                                </PartText>
+                              </Compare>
+                              <Default>
+                                <PartDraw x="0" y="0" width="480" height="480">
+                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                    <Transform target="endAngle" value="360 * clamp(1.0*(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)/60.0,0,1)" />
+                                    <Stroke color="#FFEE7A34" thickness="21" />
+                                  </Arc>
+                                </PartDraw>
+                                <PartText x="58" y="161" width="364" height="125">
+                                  <Text align="CENTER">
+                                    <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
+                                      <Template>%02d:%02d<Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])/60)" />
+                                        <Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)" />
+                                      </Template>
+                                    </BitmapFont>
+                                  </Text>
+                                </PartText>
+                              </Default>
+                            </Condition>
+                          </Compare>
+                          <Default>
+                            <Condition>
+                              <Expressions>
+                                <Expression name="test">(-[COMPLICATION.RANGED_VALUE_VALUE]) &gt; 0</Expression>
+                              </Expressions>
+                              <Compare expression="test">
+                                <Condition>
+                                  <Expressions>
+                                    <Expression name="test">(-[COMPLICATION.RANGED_VALUE_VALUE]) &lt;= 60</Expression>
+                                  </Expressions>
+                                  <Compare expression="test">
+                                    <PartDraw x="0" y="0" width="480" height="480">
+                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                        <Transform target="endAngle" value="360 * clamp(((-[COMPLICATION.RANGED_VALUE_VALUE]))/60.0,0,1)" />
+                                        <Stroke color="#FFFF6700" thickness="21" />
+                                      </Arc>
+                                    </PartDraw>
+                                  </Compare>
+                                  <Default>
+                                    <PartDraw x="0" y="0" width="480" height="480">
+                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                        <Transform target="endAngle" value="360 * clamp(((-[COMPLICATION.RANGED_VALUE_VALUE]))/((-[COMPLICATION.RANGED_VALUE_MIN])),0,1)" />
+                                        <Stroke color="#FF009EFF" thickness="21" />
+                                      </Arc>
+                                    </PartDraw>
+                                  </Default>
+                                </Condition>
+                                <PartText x="58" y="161" width="364" height="125">
+                                  <Text align="CENTER">
+                                    <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
+                                      <Template>%02d:%02d<Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))/60)" />
+                                        <Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)" />
+                                      </Template>
+                                    </BitmapFont>
+                                  </Text>
+                                </PartText>
+                              </Compare>
+                              <Default>
+                                <PartDraw x="0" y="0" width="480" height="480">
+                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                    <Transform target="endAngle" value="360 * clamp(1.0*(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)/60.0,0,1)" />
+                                    <Stroke color="#FFEE7A34" thickness="21" />
+                                  </Arc>
+                                </PartDraw>
+                                <PartText x="58" y="161" width="364" height="125">
+                                  <Text align="CENTER">
+                                    <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
+                                      <Template>%02d:%02d<Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))/60)" />
+                                        <Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)" />
+                                      </Template>
+                                    </BitmapFont>
+                                  </Text>
+                                </PartText>
+                              </Default>
+                            </Condition>
+                          </Default>
+                        </Condition>
+                      </Default>
+                    </Condition>
+                    <PartText x="115" y="120" width="250" height="44">
+                      <Text align="CENTER">
+                        <Font family="SYNC_TO_DEVICE" size="25" color="#FFADBFC9">
+                          <Template>%s:%s<Parameter expression="([IS_24_HOUR_MODE] ? [HOUR_0_23_Z] : [HOUR_1_12])" />
+                            <Parameter expression="[MINUTE_Z]" />
+                          </Template>
+                        </Font>
+                      </Text>
+                    </PartText>
+                    <Condition>
+                      <Expressions>
+                        <Expression name="test">[COMPLICATION.TEXT] != "running"</Expression>
+                      </Expressions>
+                      <Compare expression="test">
+                        <PartText x="105" y="303" width="270" height="52">
+                          <Text align="CENTER">
+                            <Font family="SYNC_TO_DEVICE" size="22" color="#FF00A1FF">@string/paused</Font>
+                          </Text>
+                        </PartText>
+                      </Compare>
+                    </Condition>
+                  </Group>
+                </Group>
+              </Compare>
+              <Default>
+                <Group name="race_blanc0" x="0" y="0" width="480" height="480" alpha="255">
+                  <Variant mode="AMBIENT" target="alpha" value="0" />
+                  <PartDraw x="0" y="0" width="480" height="480">
+                    <Rectangle x="0" y="0" width="480" height="480">
+                      <Fill color="#FFDFE5EA" />
+                    </Rectangle>
+                  </PartDraw>
+                  <Group name="readout_blanc0" x="0" y="0" width="480" height="480" alpha="255">
+                    <PartDraw x="0" y="0" width="480" height="480">
+                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                        <Stroke color="#4D00A1FF" thickness="21" />
+                      </Arc>
+                    </PartDraw>
+                    <Condition>
+                      <Expressions>
+                        <Expression name="test">[COMPLICATION.TEXT] == "running"</Expression>
+                      </Expressions>
+                      <Compare expression="test">
+                        <Condition>
+                          <Expressions>
+                            <Expression name="test">(([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400) &gt; 0</Expression>
+                          </Expressions>
+                          <Compare expression="test">
+                            <Condition>
+                              <Expressions>
+                                <Expression name="test">(([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400) &lt;= 60</Expression>
+                              </Expressions>
+                              <Compare expression="test">
+                                <PartDraw x="0" y="0" width="480" height="480">
+                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                    <Transform target="endAngle" value="360 * clamp(((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60.0,0,1)" />
+                                    <Stroke color="#FFFF6700" thickness="21" />
+                                  </Arc>
+                                </PartDraw>
+                              </Compare>
+                              <Default>
+                                <PartDraw x="0" y="0" width="480" height="480">
+                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                    <Transform target="endAngle" value="360 * clamp(((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/(([COMPLICATION.RANGED_VALUE_MAX]-86400)),0,1)" />
+                                    <Stroke color="#FF00A1FF" thickness="21" />
+                                  </Arc>
+                                </PartDraw>
+                              </Default>
+                            </Condition>
+                            <PartText x="58" y="161" width="364" height="125">
+                              <Text align="CENTER">
+                                <BitmapFont family="race_digits" size="82" color="#FF01171E">
+                                  <Template>%02d:%02d<Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60)" />
+                                    <Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)" />
+                                  </Template>
+                                </BitmapFont>
+                              </Text>
+                            </PartText>
+                          </Compare>
+                          <Default>
+                            <PartDraw x="0" y="0" width="480" height="480">
+                              <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                <Transform target="endAngle" value="360 * clamp(1.0*(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)/60.0,0,1)" />
+                                <Stroke color="#FFED712E" thickness="21" />
+                              </Arc>
+                            </PartDraw>
+                            <PartText x="58" y="161" width="364" height="125">
+                              <Text align="CENTER">
+                                <BitmapFont family="race_digits" size="82" color="#FFFF6700">
+                                  <Template>%02d:%02d<Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60)" />
+                                    <Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)" />
+                                  </Template>
+                                </BitmapFont>
+                              </Text>
+                            </PartText>
+                          </Default>
+                        </Condition>
+                      </Compare>
+                      <Default>
+                        <Condition>
+                          <Expressions>
+                            <Expression name="test">[COMPLICATION.TEXT] == "paused"</Expression>
+                          </Expressions>
+                          <Compare expression="test">
+                            <Condition>
+                              <Expressions>
+                                <Expression name="test">[COMPLICATION.RANGED_VALUE_VALUE] &gt; 0</Expression>
+                              </Expressions>
+                              <Compare expression="test">
+                                <Condition>
+                                  <Expressions>
+                                    <Expression name="test">[COMPLICATION.RANGED_VALUE_VALUE] &lt;= 60</Expression>
+                                  </Expressions>
+                                  <Compare expression="test">
+                                    <PartDraw x="0" y="0" width="480" height="480">
+                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                        <Transform target="endAngle" value="360 * clamp(([COMPLICATION.RANGED_VALUE_VALUE])/60.0,0,1)" />
+                                        <Stroke color="#FFFF6700" thickness="21" />
+                                      </Arc>
+                                    </PartDraw>
+                                  </Compare>
+                                  <Default>
+                                    <PartDraw x="0" y="0" width="480" height="480">
+                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                        <Transform target="endAngle" value="360 * clamp(([COMPLICATION.RANGED_VALUE_VALUE])/((-[COMPLICATION.RANGED_VALUE_MIN])),0,1)" />
+                                        <Stroke color="#FF00A1FF" thickness="21" />
+                                      </Arc>
+                                    </PartDraw>
+                                  </Default>
+                                </Condition>
+                                <PartText x="58" y="161" width="364" height="125">
+                                  <Text align="CENTER">
+                                    <BitmapFont family="race_digits" size="82" color="#FF01171E">
+                                      <Template>%02d:%02d<Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])/60)" />
+                                        <Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)" />
+                                      </Template>
+                                    </BitmapFont>
+                                  </Text>
+                                </PartText>
+                              </Compare>
+                              <Default>
+                                <PartDraw x="0" y="0" width="480" height="480">
+                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                    <Transform target="endAngle" value="360 * clamp(1.0*(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)/60.0,0,1)" />
+                                    <Stroke color="#FFED712E" thickness="21" />
+                                  </Arc>
+                                </PartDraw>
+                                <PartText x="58" y="161" width="364" height="125">
+                                  <Text align="CENTER">
+                                    <BitmapFont family="race_digits" size="82" color="#FFFF6700">
+                                      <Template>%02d:%02d<Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])/60)" />
+                                        <Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)" />
+                                      </Template>
+                                    </BitmapFont>
+                                  </Text>
+                                </PartText>
+                              </Default>
+                            </Condition>
+                          </Compare>
+                          <Default>
+                            <Condition>
+                              <Expressions>
+                                <Expression name="test">(-[COMPLICATION.RANGED_VALUE_VALUE]) &gt; 0</Expression>
+                              </Expressions>
+                              <Compare expression="test">
+                                <Condition>
+                                  <Expressions>
+                                    <Expression name="test">(-[COMPLICATION.RANGED_VALUE_VALUE]) &lt;= 60</Expression>
+                                  </Expressions>
+                                  <Compare expression="test">
+                                    <PartDraw x="0" y="0" width="480" height="480">
+                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                        <Transform target="endAngle" value="360 * clamp(((-[COMPLICATION.RANGED_VALUE_VALUE]))/60.0,0,1)" />
+                                        <Stroke color="#FFFF6700" thickness="21" />
+                                      </Arc>
+                                    </PartDraw>
+                                  </Compare>
+                                  <Default>
+                                    <PartDraw x="0" y="0" width="480" height="480">
+                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                        <Transform target="endAngle" value="360 * clamp(((-[COMPLICATION.RANGED_VALUE_VALUE]))/((-[COMPLICATION.RANGED_VALUE_MIN])),0,1)" />
+                                        <Stroke color="#FF00A1FF" thickness="21" />
+                                      </Arc>
+                                    </PartDraw>
+                                  </Default>
+                                </Condition>
+                                <PartText x="58" y="161" width="364" height="125">
+                                  <Text align="CENTER">
+                                    <BitmapFont family="race_digits" size="82" color="#FF01171E">
+                                      <Template>%02d:%02d<Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))/60)" />
+                                        <Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)" />
+                                      </Template>
+                                    </BitmapFont>
+                                  </Text>
+                                </PartText>
+                              </Compare>
+                              <Default>
+                                <PartDraw x="0" y="0" width="480" height="480">
+                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                    <Transform target="endAngle" value="360 * clamp(1.0*(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)/60.0,0,1)" />
+                                    <Stroke color="#FFED712E" thickness="21" />
+                                  </Arc>
+                                </PartDraw>
+                                <PartText x="58" y="161" width="364" height="125">
+                                  <Text align="CENTER">
+                                    <BitmapFont family="race_digits" size="82" color="#FFFF6700">
+                                      <Template>%02d:%02d<Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))/60)" />
+                                        <Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)" />
+                                      </Template>
+                                    </BitmapFont>
+                                  </Text>
+                                </PartText>
+                              </Default>
+                            </Condition>
+                          </Default>
+                        </Condition>
+                      </Default>
+                    </Condition>
+                    <PartText x="115" y="120" width="250" height="44">
+                      <Text align="CENTER">
+                        <Font family="SYNC_TO_DEVICE" size="25" color="#FF00A1FF">
+                          <Template>%s:%s<Parameter expression="([IS_24_HOUR_MODE] ? [HOUR_0_23_Z] : [HOUR_1_12])" />
+                            <Parameter expression="[MINUTE_Z]" />
+                          </Template>
+                        </Font>
+                      </Text>
+                    </PartText>
+                    <Condition>
+                      <Expressions>
+                        <Expression name="test">[COMPLICATION.TEXT] != "running"</Expression>
+                      </Expressions>
+                      <Compare expression="test">
+                        <PartText x="105" y="303" width="270" height="52">
+                          <Text align="CENTER">
+                            <Font family="SYNC_TO_DEVICE" size="22" color="#FF00A1FF">@string/paused</Font>
+                          </Text>
+                        </PartText>
+                      </Compare>
+                    </Condition>
+                  </Group>
+                </Group>
+                <Group name="race_blanc1" x="0" y="0" width="480" height="480" alpha="0">
+                  <Variant mode="AMBIENT" target="alpha" value="255" />
+                  <PartDraw x="0" y="0" width="480" height="480">
+                    <Rectangle x="0" y="0" width="480" height="480">
+                      <Fill color="#FF000000" />
+                    </Rectangle>
+                  </PartDraw>
+                  <Group name="readout_blanc1" x="0" y="0" width="480" height="480" alpha="95">
+                    <PartDraw x="0" y="0" width="480" height="480">
+                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                        <Stroke color="#FF27323A" thickness="21" />
+                      </Arc>
+                    </PartDraw>
+                    <Condition>
+                      <Expressions>
+                        <Expression name="test">[COMPLICATION.TEXT] == "running"</Expression>
+                      </Expressions>
+                      <Compare expression="test">
+                        <Condition>
+                          <Expressions>
+                            <Expression name="test">(([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400) &gt; 0</Expression>
+                          </Expressions>
+                          <Compare expression="test">
+                            <Condition>
+                              <Expressions>
+                                <Expression name="test">(([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400) &lt;= 60</Expression>
+                              </Expressions>
+                              <Compare expression="test">
+                                <PartDraw x="0" y="0" width="480" height="480">
+                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                    <Transform target="endAngle" value="360 * clamp(((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60.0,0,1)" />
+                                    <Stroke color="#FFFF6700" thickness="21" />
+                                  </Arc>
+                                </PartDraw>
+                              </Compare>
+                              <Default>
+                                <PartDraw x="0" y="0" width="480" height="480">
+                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                    <Transform target="endAngle" value="360 * clamp(((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/(([COMPLICATION.RANGED_VALUE_MAX]-86400)),0,1)" />
+                                    <Stroke color="#FF00A1FF" thickness="21" />
+                                  </Arc>
+                                </PartDraw>
+                              </Default>
+                            </Condition>
+                            <PartText x="58" y="161" width="364" height="125">
+                              <Text align="CENTER">
+                                <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
+                                  <Template>%02d:%02d<Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60)" />
+                                    <Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)" />
+                                  </Template>
+                                </BitmapFont>
+                              </Text>
+                            </PartText>
+                          </Compare>
+                          <Default>
+                            <PartDraw x="0" y="0" width="480" height="480">
+                              <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                <Transform target="endAngle" value="360 * clamp(1.0*(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)/60.0,0,1)" />
+                                <Stroke color="#FFED712E" thickness="21" />
+                              </Arc>
+                            </PartDraw>
+                            <PartText x="58" y="161" width="364" height="125">
+                              <Text align="CENTER">
+                                <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
+                                  <Template>%02d:%02d<Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60)" />
+                                    <Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)" />
+                                  </Template>
+                                </BitmapFont>
+                              </Text>
+                            </PartText>
+                          </Default>
+                        </Condition>
+                      </Compare>
+                      <Default>
+                        <Condition>
+                          <Expressions>
+                            <Expression name="test">[COMPLICATION.TEXT] == "paused"</Expression>
+                          </Expressions>
+                          <Compare expression="test">
+                            <Condition>
+                              <Expressions>
+                                <Expression name="test">[COMPLICATION.RANGED_VALUE_VALUE] &gt; 0</Expression>
+                              </Expressions>
+                              <Compare expression="test">
+                                <Condition>
+                                  <Expressions>
+                                    <Expression name="test">[COMPLICATION.RANGED_VALUE_VALUE] &lt;= 60</Expression>
+                                  </Expressions>
+                                  <Compare expression="test">
+                                    <PartDraw x="0" y="0" width="480" height="480">
+                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                        <Transform target="endAngle" value="360 * clamp(([COMPLICATION.RANGED_VALUE_VALUE])/60.0,0,1)" />
+                                        <Stroke color="#FFFF6700" thickness="21" />
+                                      </Arc>
+                                    </PartDraw>
+                                  </Compare>
+                                  <Default>
+                                    <PartDraw x="0" y="0" width="480" height="480">
+                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                        <Transform target="endAngle" value="360 * clamp(([COMPLICATION.RANGED_VALUE_VALUE])/((-[COMPLICATION.RANGED_VALUE_MIN])),0,1)" />
+                                        <Stroke color="#FF00A1FF" thickness="21" />
+                                      </Arc>
+                                    </PartDraw>
+                                  </Default>
+                                </Condition>
+                                <PartText x="58" y="161" width="364" height="125">
+                                  <Text align="CENTER">
+                                    <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
+                                      <Template>%02d:%02d<Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])/60)" />
+                                        <Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)" />
+                                      </Template>
+                                    </BitmapFont>
+                                  </Text>
+                                </PartText>
+                              </Compare>
+                              <Default>
+                                <PartDraw x="0" y="0" width="480" height="480">
+                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                    <Transform target="endAngle" value="360 * clamp(1.0*(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)/60.0,0,1)" />
+                                    <Stroke color="#FFED712E" thickness="21" />
+                                  </Arc>
+                                </PartDraw>
+                                <PartText x="58" y="161" width="364" height="125">
+                                  <Text align="CENTER">
+                                    <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
+                                      <Template>%02d:%02d<Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])/60)" />
+                                        <Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)" />
+                                      </Template>
+                                    </BitmapFont>
+                                  </Text>
+                                </PartText>
+                              </Default>
+                            </Condition>
+                          </Compare>
+                          <Default>
+                            <Condition>
+                              <Expressions>
+                                <Expression name="test">(-[COMPLICATION.RANGED_VALUE_VALUE]) &gt; 0</Expression>
+                              </Expressions>
+                              <Compare expression="test">
+                                <Condition>
+                                  <Expressions>
+                                    <Expression name="test">(-[COMPLICATION.RANGED_VALUE_VALUE]) &lt;= 60</Expression>
+                                  </Expressions>
+                                  <Compare expression="test">
+                                    <PartDraw x="0" y="0" width="480" height="480">
+                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                        <Transform target="endAngle" value="360 * clamp(((-[COMPLICATION.RANGED_VALUE_VALUE]))/60.0,0,1)" />
+                                        <Stroke color="#FFFF6700" thickness="21" />
+                                      </Arc>
+                                    </PartDraw>
+                                  </Compare>
+                                  <Default>
+                                    <PartDraw x="0" y="0" width="480" height="480">
+                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                        <Transform target="endAngle" value="360 * clamp(((-[COMPLICATION.RANGED_VALUE_VALUE]))/((-[COMPLICATION.RANGED_VALUE_MIN])),0,1)" />
+                                        <Stroke color="#FF00A1FF" thickness="21" />
+                                      </Arc>
+                                    </PartDraw>
+                                  </Default>
+                                </Condition>
+                                <PartText x="58" y="161" width="364" height="125">
+                                  <Text align="CENTER">
+                                    <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
+                                      <Template>%02d:%02d<Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))/60)" />
+                                        <Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)" />
+                                      </Template>
+                                    </BitmapFont>
+                                  </Text>
+                                </PartText>
+                              </Compare>
+                              <Default>
+                                <PartDraw x="0" y="0" width="480" height="480">
+                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                                    <Transform target="endAngle" value="360 * clamp(1.0*(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)/60.0,0,1)" />
+                                    <Stroke color="#FFED712E" thickness="21" />
+                                  </Arc>
+                                </PartDraw>
+                                <PartText x="58" y="161" width="364" height="125">
+                                  <Text align="CENTER">
+                                    <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
+                                      <Template>%02d:%02d<Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))/60)" />
+                                        <Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)" />
+                                      </Template>
+                                    </BitmapFont>
+                                  </Text>
+                                </PartText>
+                              </Default>
+                            </Condition>
+                          </Default>
+                        </Condition>
+                      </Default>
+                    </Condition>
+                    <PartText x="115" y="120" width="250" height="44">
+                      <Text align="CENTER">
+                        <Font family="SYNC_TO_DEVICE" size="25" color="#FFADBFC9">
+                          <Template>%s:%s<Parameter expression="([IS_24_HOUR_MODE] ? [HOUR_0_23_Z] : [HOUR_1_12])" />
+                            <Parameter expression="[MINUTE_Z]" />
+                          </Template>
+                        </Font>
+                      </Text>
+                    </PartText>
+                    <Condition>
+                      <Expressions>
+                        <Expression name="test">[COMPLICATION.TEXT] != "running"</Expression>
+                      </Expressions>
+                      <Compare expression="test">
+                        <PartText x="105" y="303" width="270" height="52">
+                          <Text align="CENTER">
+                            <Font family="SYNC_TO_DEVICE" size="22" color="#FF00A1FF">@string/paused</Font>
+                          </Text>
+                        </PartText>
+                      </Compare>
+                    </Condition>
+                  </Group>
+                </Group>
+              </Default>
+            </Condition>
+          </Compare>
+        </Condition>
+      </Complication>
+    </ComplicationSlot>
+  </Scene>
+</WatchFace>

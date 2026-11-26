@@ -107,3 +107,13 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 以 24S132 的 NTKMagmaFaceBundle、Victory 字体和 Nike 图标为依据。原版使用 Metal 弹簧网格，本版用预计算的局部位移纹理近似点按和换分钟的回摆，并用 WFF 加速度变换响应腕动。十组单色支持切换背景和多语言名称。点按响应以数字为单位，三星系统会叠加触摸反馈。机械表冠未实现。息屏使用静态描边。真实步伐和抬腕的力度尚未与 Apple Watch 真机校准。
 
 1.1 将亮屏、息屏和选择器中的数字及标志以圆心为基准等比放大 9%。[新版尺寸预览](NikeBounce/res/drawable-nodpi/preview.png)。
+
+## Hermès 航海 · Hermès Maritime
+
+| 正常读时 | 帆船赛倒计时 | 息屏 |
+| --- | --- | --- |
+| <img src="HermesMaritime/screenshots/active.png" width="180" alt="蓝色秒圈"> | <img src="HermesMaritime/screenshots/countdown.png" width="180" alt="最后六秒"> | <img src="HermesMaritime/screenshots/ambient.png" width="180" alt="息屏蓝白数字"> |
+
+[下载 Hermès 航海 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/hermes-maritime-1.0) · [起航后正计时实拍](HermesMaritime/screenshots/countup.png)
+
+单 APK，安装后打开一次登记 WFF 表盘。亮屏使用 24S132 的 Squall 专用 Cape Cod 字体、Hermès 字标和黑白配色。秒圈以圆屏轮廓重排。点按表盘可设定 1 至 60 分钟倒计时，初始为 5 分钟。跑表支持暂停、继续、就近整分钟同步、还原和到零自动正计时。无需后台常驻。起航音、原版触感和 Apple Ultra 操作按钮未移植。息屏字形使用固件 Link 可变字体，字间连接与原版过渡尚未逐组合核验。

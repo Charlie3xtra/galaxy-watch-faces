@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="retry">Prøv igen</string>
+  <string name="setup_error">Urskiven kunne ikke indstilles.</string>
+  <string name="manual_selection">Hold fingeren på den aktuelle urskive, og vælg %1$s.</string>
+  <string name="face_name">Hermès Maritime</string>
+  <string name="color">FARVE</string>
+  <string name="noir">Noir</string>
+  <string name="blanc">Blanc</string>
+  <string name="start">Start</string>
+  <string name="resume">Fortsæt</string>
+  <string name="sync">Synkroniser</string>
+  <string name="reset">Nulstil</string>
+  <string name="pause">Sæt på pause</string>
+  <string name="minutes">Minutter</string>
+  <string name="paused">På pause</string>
+</resources>

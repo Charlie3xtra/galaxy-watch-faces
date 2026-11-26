@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="retry">إعادة المحاولة</string>
+  <string name="setup_error">تعذّر إعداد واجهة الساعة.</string>
+  <string name="manual_selection">اضغط مطولًا على واجهة الساعة الحالية ثم اختر «%1$s».</string>
+  <string name="face_name">‏Hermès Maritime</string>
+  <string name="color">اللون</string>
+  <string name="noir">Noir</string>
+  <string name="blanc">Blanc</string>
+  <string name="start">بدء</string>
+  <string name="resume">استئناف</string>
+  <string name="sync">مزامنة</string>
+  <string name="reset">إعادة التعيين</string>
+  <string name="pause">إيقاف مؤقت</string>
+  <string name="minutes">دقائق</string>
+  <string name="paused">متوقف مؤقتًا</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="retry">Opnieuw proberen</string>
+  <string name="setup_error">De wijzerplaat kan niet worden ingesteld.</string>
+  <string name="manual_selection">Houd de huidige wijzerplaat ingedrukt en kies ‘%1$s’.</string>
+  <string name="face_name">Hermès-maritiem</string>
+  <string name="color">KLEUR</string>
+  <string name="noir">Noir</string>
+  <string name="blanc">Blanc</string>
+  <string name="start">Start</string>
+  <string name="resume">Hervat</string>
+  <string name="sync">Synchr.</string>
+  <string name="reset">Opnieuw</string>
+  <string name="pause">Pauzeer</string>
+  <string name="minutes">Minuten</string>
+  <string name="paused">Pauze</string>
+</resources>

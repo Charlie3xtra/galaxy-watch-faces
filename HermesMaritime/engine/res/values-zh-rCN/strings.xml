@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="retry">重试</string>
+  <string name="setup_error">表盘设置失败。</string>
+  <string name="manual_selection">长按当前表盘，然后选择「%1$s」。</string>
+  <string name="face_name">Hermès航海</string>
+  <string name="color">颜色</string>
+  <string name="noir">黑色</string>
+  <string name="blanc">白色</string>
+  <string name="start">开始</string>
+  <string name="resume">继续</string>
+  <string name="sync">同步</string>
+  <string name="reset">还原</string>
+  <string name="pause">暂停</string>
+  <string name="minutes">分钟</string>
+  <string name="paused">已暂停</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Hermès Maritime</string>
+  <string name="color">BOJA</string>
+  <string name="noir">Noir</string>
+  <string name="blanc">Blanc</string>
+  <string name="start">Pokreni</string>
+  <string name="resume">Nastavi</string>
+  <string name="sync">Sinkroniziraj</string>
+  <string name="reset">Resetiraj</string>
+  <string name="pause">Pauziraj</string>
+  <string name="minutes">Minute</string>
+  <string name="paused">Pauzirano</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="retry">Riprova</string>
+  <string name="setup_error">Impossibile configurare il quadrante.</string>
+  <string name="manual_selection">Tieni premuto il quadrante attuale e scegli «%1$s».</string>
+  <string name="face_name">Hermès Maritime</string>
+  <string name="color">COLORE</string>
+  <string name="noir">Noir</string>
+  <string name="blanc">Blanc</string>
+  <string name="start">Avvia</string>
+  <string name="resume">Riprendi</string>
+  <string name="sync">Sincronizza</string>
+  <string name="reset">Azzera</string>
+  <string name="pause">Metti in pausa</string>
+  <string name="minutes">Minuti</string>
+  <string name="paused">In pausa</string>
+</resources>

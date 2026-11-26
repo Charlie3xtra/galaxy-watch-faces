@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Hermès Maritime</string>
+  <string name="color">MÀU</string>
+  <string name="noir">Noir</string>
+  <string name="blanc">Blanc</string>
+  <string name="start">Bắt đầu</string>
+  <string name="resume">Tiếp tục</string>
+  <string name="sync">Đồng bộ hóa</string>
+  <string name="reset">Đặt lại</string>
+  <string name="pause">Tạm dừng</string>
+  <string name="minutes">Phút</string>
+  <string name="paused">Đã tạm dừng</string>
+</resources>

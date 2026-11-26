@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="retry">फिर कोशिश करें</string>
+  <string name="setup_error">वॉच फ़ेस सेट नहीं हो सका।</string>
+  <string name="manual_selection">मौजूदा वॉच फ़ेस को दबाकर रखें और %1$s चुनें।</string>
+  <string name="face_name">Hermès Maritime</string>
+  <string name="color">रंग</string>
+  <string name="noir">Noir</string>
+  <string name="blanc">Blanc</string>
+  <string name="start">आरंभ</string>
+  <string name="resume">जारी रखें</string>
+  <string name="sync">सिंक करें</string>
+  <string name="reset">रीसेट करें</string>
+  <string name="pause">पॉज़ करें</string>
+  <string name="minutes">मिनट</string>
+  <string name="paused">पॉज़ किया गया</string>
+</resources>

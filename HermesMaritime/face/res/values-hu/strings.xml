@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Hermès Maritime</string>
+  <string name="color">SZÍN</string>
+  <string name="noir">Noir</string>
+  <string name="blanc">Blanc</string>
+  <string name="start">Indítás</string>
+  <string name="resume">Folytatás</string>
+  <string name="sync">Szinkronizálás</string>
+  <string name="reset">Alaphelyzetbe állítás</string>
+  <string name="pause">Szünet</string>
+  <string name="minutes">Perc</string>
+  <string name="paused">Szüneteltetve</string>
+</resources>

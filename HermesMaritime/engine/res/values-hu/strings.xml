@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="retry">Újrapróbálás</string>
+  <string name="setup_error">Nem sikerült beállítani a számlapot.</string>
+  <string name="manual_selection">Tartsa nyomva a jelenlegi számlapot, majd válassza ezt: %1$s.</string>
+  <string name="face_name">Hermès Maritime</string>
+  <string name="color">SZÍN</string>
+  <string name="noir">Noir</string>
+  <string name="blanc">Blanc</string>
+  <string name="start">Indítás</string>
+  <string name="resume">Folytatás</string>
+  <string name="sync">Szinkronizálás</string>
+  <string name="reset">Alaphelyzetbe állítás</string>
+  <string name="pause">Szünet</string>
+  <string name="minutes">Perc</string>
+  <string name="paused">Szüneteltetve</string>
+</resources>

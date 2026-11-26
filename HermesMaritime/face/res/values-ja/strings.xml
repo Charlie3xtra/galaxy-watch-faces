@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Hermès Maritime</string>
+  <string name="color">カラー</string>
+  <string name="noir">黒</string>
+  <string name="blanc">白</string>
+  <string name="start">開始</string>
+  <string name="resume">再開</string>
+  <string name="sync">同期</string>
+  <string name="reset">リセット</string>
+  <string name="pause">一時停止</string>
+  <string name="minutes">分</string>
+  <string name="paused">一時停止</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="retry">Tekrar dene</string>
+  <string name="setup_error">Saat kadranı ayarlanamadı.</string>
+  <string name="manual_selection">Geçerli kadrana basılı tutup %1$s seçeneğini belirleyin.</string>
+  <string name="face_name">Hermès Maritime</string>
+  <string name="color">RENK</string>
+  <string name="noir">Noir</string>
+  <string name="blanc">Blanc</string>
+  <string name="start">Başlat</string>
+  <string name="resume">Sürdür</string>
+  <string name="sync">Eşzamanla</string>
+  <string name="reset">Sıfırla</string>
+  <string name="pause">Duraklat</string>
+  <string name="minutes">Dakika</string>
+  <string name="paused">Duraklatıldı</string>
+</resources>

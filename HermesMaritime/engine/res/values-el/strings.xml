@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="retry">Δοκιμή ξανά</string>
+  <string name="setup_error">Δεν ήταν δυνατή η ρύθμιση της πρόσοψης.</string>
+  <string name="manual_selection">Πατήστε παρατεταμένα την τρέχουσα πρόσοψη και επιλέξτε «%1$s».</string>
+  <string name="face_name">Hermès Maritime</string>
+  <string name="color">ΧΡΩΜΑ</string>
+  <string name="noir">Noir</string>
+  <string name="blanc">Blanc</string>
+  <string name="start">Έναρξη</string>
+  <string name="resume">Συνέχιση</string>
+  <string name="sync">Συγχρονισμός</string>
+  <string name="reset">Επαναφορά</string>
+  <string name="pause">Παύση</string>
+  <string name="minutes">Λεπτά</string>
+  <string name="paused">Σε παύση</string>
+</resources>

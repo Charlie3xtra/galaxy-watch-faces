@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="retry">Cuba lagi</string>
+  <string name="setup_error">Muka jam tidak dapat disediakan.</string>
+  <string name="manual_selection">Sentuh dan tahan muka jam semasa, kemudian pilih %1$s.</string>
+  <string name="face_name">Hermès Maritime</string>
+  <string name="color">WARNA</string>
+  <string name="noir">Noir</string>
+  <string name="blanc">Blanc</string>
+  <string name="start">Mula</string>
+  <string name="resume">Teruskan</string>
+  <string name="sync">Selaraskan</string>
+  <string name="reset">Reset</string>
+  <string name="pause">Jeda</string>
+  <string name="minutes">Minit</string>
+  <string name="paused">Dijeda</string>
+</resources>

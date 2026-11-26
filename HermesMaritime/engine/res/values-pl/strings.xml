@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="retry">Ponów próbę</string>
+  <string name="setup_error">Nie udało się skonfigurować tarczy.</string>
+  <string name="manual_selection">Przytrzymaj obecną tarczę i wybierz „%1$s”.</string>
+  <string name="face_name">Hermès Maritime</string>
+  <string name="color">KOLOR</string>
+  <string name="noir">Noir</string>
+  <string name="blanc">Blanc</string>
+  <string name="start">Uruchom</string>
+  <string name="resume">Wznów</string>
+  <string name="sync">Synchronizuj</string>
+  <string name="reset">Wyzeruj</string>
+  <string name="pause">Wstrzymaj</string>
+  <string name="minutes">Minuty</string>
+  <string name="paused">Wstrzymano</string>
+</resources>

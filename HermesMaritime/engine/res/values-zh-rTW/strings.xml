@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="retry">重試</string>
+  <string name="setup_error">無法設定錶面。</string>
+  <string name="manual_selection">按住目前的錶面，然後選擇「%1$s」。</string>
+  <string name="face_name">Hermès航海</string>
+  <string name="color">顏色</string>
+  <string name="noir">Noir黑色</string>
+  <string name="blanc">Blanc白色</string>
+  <string name="start">開始</string>
+  <string name="resume">繼續</string>
+  <string name="sync">同步</string>
+  <string name="reset">重置</string>
+  <string name="pause">暫停</string>
+  <string name="minutes">分鐘</string>
+  <string name="paused">已暫停</string>
+</resources>

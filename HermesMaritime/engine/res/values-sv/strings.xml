@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="retry">Försök igen</string>
+  <string name="setup_error">Det gick inte att ställa in urtavlan.</string>
+  <string name="manual_selection">Håll ned den nuvarande urtavlan och välj %1$s.</string>
+  <string name="face_name">Hermès Maritime</string>
+  <string name="color">FÄRG</string>
+  <string name="noir">Noir</string>
+  <string name="blanc">Blanc</string>
+  <string name="start">Starta</string>
+  <string name="resume">Fortsätt</string>
+  <string name="sync">Synka</string>
+  <string name="reset">Nollställ</string>
+  <string name="pause">Pausa</string>
+  <string name="minutes">Minuter</string>
+  <string name="paused">Pausad</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="retry">Повторити</string>
+  <string name="setup_error">Не вдалося налаштувати циферблат.</string>
+  <string name="manual_selection">Натисніть і утримуйте поточний циферблат, потім виберіть «%1$s».</string>
+  <string name="face_name">Hermès Maritime</string>
+  <string name="color">КОЛІР</string>
+  <string name="noir">Noir</string>
+  <string name="blanc">Blanc</string>
+  <string name="start">Почати</string>
+  <string name="resume">Поновити</string>
+  <string name="sync">Синхронізувати</string>
+  <string name="reset">Скинути</string>
+  <string name="pause">Призупинити</string>
+  <string name="minutes">Хвилини</string>
+  <string name="paused">Призупинено</string>
+</resources>

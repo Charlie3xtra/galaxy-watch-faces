@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="retry">Retry</string>
+  <string name="setup_error">Could not set up the watch face.</string>
+  <string name="manual_selection">Touch and hold your current watch face, then select %1$s.</string>
+  <string name="face_name">Hermès Maritime</string>
+  <string name="color">COLOUR</string>
+  <string name="noir">Noir</string>
+  <string name="blanc">Blanc</string>
+  <string name="start">Start</string>
+  <string name="resume">Resume</string>
+  <string name="sync">Sync</string>
+  <string name="reset">Reset</string>
+  <string name="pause">Pause</string>
+  <string name="minutes">Minutes</string>
+  <string name="paused">Paused</string>
+</resources>
