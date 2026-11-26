@@ -92,8 +92,10 @@ cfg=sub(face,'UserConfigurations'); pal=sub(cfg,'ColorConfiguration',id='tone',d
 for i,v in enumerate(palette.values()):sub(pal,'ColorOption',id=i,displayName=f'c{i}',colors=v)
 sub(cfg,'BooleanConfiguration',id='background',displayName='bg',defaultValue='TRUE')
 scene=sub(face,'Scene',backgroundColor='#000000')
+layout_scale=1.09
 for ambient in (False,True):
-    g=sub(scene,'Group',name='ambient' if ambient else 'interactive',**box(0,0,480,480),alpha=0 if ambient else 255)
+    g=sub(scene,'Group',name='ambient' if ambient else 'interactive',**box(0,0,480,480),
+          scaleX=layout_scale,scaleY=layout_scale,pivotX=0.5,pivotY=0.5,alpha=0 if ambient else 255)
     sub(g,'Variant',mode='AMBIENT',target='alpha',value=255 if ambient else 0)
     if not ambient: fill(g,'#FFFFFFFF')
     for row,num,y in [('h','([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])',56),('m','[MINUTE]',225)]:
@@ -155,4 +157,8 @@ for row,y in [('10',56),('09',225)]:
     for d,x in [(a,240-(widths[b]+10)/2),(b,240+(widths[a]+10)/2)]:
         preview.paste('black',(round(x-width/2),y,round(x-width/2)+width,y+height),masks[d])
 preview.paste('#'+logo_color[-6:],(198,405,282,435),logo.resize((84,30),Image.Resampling.LANCZOS))
+half=240/layout_scale
+preview=preview.resize((480,480),Image.Resampling.LANCZOS,box=(240-half,240-half,240+half,240+half))
+circle=Image.new('L',preview.size);ImageDraw.Draw(circle).ellipse((0,0,479,479),fill=255)
+preview.putalpha(circle)
 preview.save(draw/'preview.png')

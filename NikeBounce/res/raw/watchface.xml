@@ -16,7 +16,7 @@
     <BooleanConfiguration id="background" displayName="bg" defaultValue="TRUE" />
   </UserConfigurations>
   <Scene backgroundColor="#000000">
-    <Group name="interactive" x="0" y="0" width="480" height="480" alpha="255">
+    <Group name="interactive" x="0" y="0" width="480" height="480" scaleX="1.09" scaleY="1.09" pivotX="0.5" pivotY="0.5" alpha="255">
       <Variant mode="AMBIENT" target="alpha" value="0" />
       <PartDraw x="0" y="0" width="480" height="480">
         <Rectangle x="0" y="0" width="480" height="480">
@@ -1461,7 +1461,7 @@
         <Image resource="swoosh" />
       </PartImage>
     </Group>
-    <Group name="ambient" x="0" y="0" width="480" height="480" alpha="0">
+    <Group name="ambient" x="0" y="0" width="480" height="480" scaleX="1.09" scaleY="1.09" pivotX="0.5" pivotY="0.5" alpha="0">
       <Variant mode="AMBIENT" target="alpha" value="255" />
       <Condition>
         <Expressions>

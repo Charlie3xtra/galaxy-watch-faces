@@ -102,6 +102,8 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 | --- | --- |
 | <img src="NikeBounce/screenshots/tap.gif" width="220" alt="点按不同数字，笔画局部形变后回位"> | <img src="NikeBounce/screenshots/ambient.png" width="220" alt="息屏描边数字"> |
 
-[下载 Nike 回弹 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/nike-bounce-1.0) · [亮屏截图](NikeBounce/screenshots/active.png)
+[下载 Nike 回弹 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/nike-bounce-1.1) · [亮屏截图](NikeBounce/screenshots/active.png)
 
 以 24S132 的 NTKMagmaFaceBundle、Victory 字体和 Nike 图标为依据。原版使用 Metal 弹簧网格，本版用预计算的局部位移纹理近似点按和换分钟的回摆，并用 WFF 加速度变换响应腕动。十组单色支持切换背景和多语言名称。点按响应以数字为单位，三星系统会叠加触摸反馈。机械表冠未实现。息屏使用静态描边。真实步伐和抬腕的力度尚未与 Apple Watch 真机校准。
+
+1.1 将亮屏、息屏和选择器中的数字及标志以圆心为基准等比放大 9%。[新版尺寸预览](NikeBounce/res/drawable-nodpi/preview.png)。
