@@ -1,0 +1,3214 @@
+<?xml version='1.0' encoding='utf-8'?>
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <UserConfigurations>
+    <ColorConfiguration id="palette" displayName="color" defaultValue="0">
+      <ColorOption id="0" displayName="p0" colors="#FFCDEC01 #FF5F7CFF #FF010101 #FFD8D8D8" />
+      <ColorOption id="1" displayName="p1" colors="#FF5E7BFF #FF00E480 #FFD8D8D8 #FF000000" />
+      <ColorOption id="2" displayName="p2" colors="#FF00E480 #FFA852FF #FF000000 #FFD8D8D8" />
+      <ColorOption id="3" displayName="p3" colors="#FFA852FF #FFFF743F #FFD8D8D8 #FF000000" />
+      <ColorOption id="4" displayName="p4" colors="#FFFF743F #FFFF35B6 #FF000000 #FFD8D8D8" />
+      <ColorOption id="5" displayName="p5" colors="#FFFF35B6 #FF00BDD4 #FFD8D8D8 #FF000000" />
+      <ColorOption id="6" displayName="p6" colors="#FF00BDD4 #FFFF386B #FF000000 #FFD8D8D8" />
+      <ColorOption id="7" displayName="p7" colors="#FFFF386B #FFFFF028 #FFD8D8D8 #FF000000" />
+      <ColorOption id="8" displayName="p8" colors="#FFFFF028 #FFA852FF #FF000000 #FFD8D8D8" />
+      <ColorOption id="9" displayName="p9" colors="#FFA852FF #FF00E480 #FFD8D8D8 #FF000000" />
+      <ColorOption id="10" displayName="p10" colors="#FF00E480 #FFFF35B6 #FF000000 #FFD8D8D8" />
+      <ColorOption id="11" displayName="p11" colors="#FFFF35B6 #FF0095FF #FFD8D8D8 #FF000000" />
+      <ColorOption id="12" displayName="p12" colors="#FF0095FF #FFFF743F #FF000000 #FFD8D8D8" />
+      <ColorOption id="13" displayName="p13" colors="#FFFF743F #FFCDEC00 #FFD8D8D8 #FF000000" />
+      <ColorOption id="14" displayName="p14" colors="#FFCDEC00 #FF5E7BFF #FF000000 #FFD8D8D8" />
+    </ColorConfiguration>
+    <ListConfiguration id="numerals" displayName="numerals" defaultValue="western">
+      <ListOption id="western" displayName="western" />
+      <ListOption id="eastern" displayName="eastern" />
+      <ListOption id="deva" displayName="deva" />
+    </ListConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#000000">
+    <Group x="0" y="0" width="480" height="480" name="group_0">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <Condition>
+        <Expressions>
+          <Expression name="even">[MINUTE]%2 == 0</Expression>
+        </Expressions>
+        <Compare expression="even">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Rectangle x="0" y="0" width="480" height="480">
+              <Fill color="[CONFIGURATION.palette.0]" />
+            </Rectangle>
+          </PartDraw>
+          <Group x="0" y="0" width="180" height="206" pivotX="0" pivotY="0" name="group_1">
+            <Transform target="x" value="75" />
+            <Transform target="y" value="75" />
+            <Transform target="scaleX" value="(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3)))/180" />
+            <Transform target="scaleY" value="(159+-24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1))/206" />
+            <ListConfiguration id="numerals">
+              <ListOption id="western">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 0</Expression>
+                    <Expression name="d1">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 1</Expression>
+                    <Expression name="d2">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 2</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_2" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+              <ListOption id="eastern">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 0</Expression>
+                    <Expression name="d1">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 1</Expression>
+                    <Expression name="d2">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 2</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_2" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+              <ListOption id="deva">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 0</Expression>
+                    <Expression name="d1">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 1</Expression>
+                    <Expression name="d2">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 2</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_2" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+            </ListConfiguration>
+          </Group>
+          <Group x="0" y="0" width="180" height="206" pivotX="0" pivotY="0" name="group_2">
+            <Transform target="x" value="(75+(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3)))+20)" />
+            <Transform target="y" value="75" />
+            <Transform target="scaleX" value="(310-(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))))/180" />
+            <Transform target="scaleY" value="(159+24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1))/206" />
+            <ListConfiguration id="numerals">
+              <ListOption id="western">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 0</Expression>
+                    <Expression name="d1">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 1</Expression>
+                    <Expression name="d2">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 2</Expression>
+                    <Expression name="d3">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 3</Expression>
+                    <Expression name="d4">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 4</Expression>
+                    <Expression name="d5">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 5</Expression>
+                    <Expression name="d6">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 6</Expression>
+                    <Expression name="d7">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 7</Expression>
+                    <Expression name="d8">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 8</Expression>
+                    <Expression name="d9">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 9</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_2" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d3">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_3" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d4">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_4" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d5">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_5" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d6">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_6" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d7">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_7" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d8">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_8" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d9">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_9" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+              <ListOption id="eastern">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 0</Expression>
+                    <Expression name="d1">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 1</Expression>
+                    <Expression name="d2">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 2</Expression>
+                    <Expression name="d3">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 3</Expression>
+                    <Expression name="d4">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 4</Expression>
+                    <Expression name="d5">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 5</Expression>
+                    <Expression name="d6">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 6</Expression>
+                    <Expression name="d7">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 7</Expression>
+                    <Expression name="d8">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 8</Expression>
+                    <Expression name="d9">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 9</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_2" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d3">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_3" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d4">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_4" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d5">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_5" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d6">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_6" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d7">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_7" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d8">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_8" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d9">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_9" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+              <ListOption id="deva">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 0</Expression>
+                    <Expression name="d1">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 1</Expression>
+                    <Expression name="d2">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 2</Expression>
+                    <Expression name="d3">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 3</Expression>
+                    <Expression name="d4">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 4</Expression>
+                    <Expression name="d5">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 5</Expression>
+                    <Expression name="d6">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 6</Expression>
+                    <Expression name="d7">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 7</Expression>
+                    <Expression name="d8">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 8</Expression>
+                    <Expression name="d9">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 9</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_2" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d3">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_3" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d4">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_4" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d5">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_5" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d6">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_6" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d7">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_7" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d8">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_8" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d9">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_9" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+            </ListConfiguration>
+          </Group>
+          <Group x="0" y="0" width="180" height="206" pivotX="0" pivotY="0" name="group_3">
+            <Transform target="x" value="75" />
+            <Transform target="y" value="(75+(159+-24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1))+20)" />
+            <Transform target="scaleX" value="(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3)))/180" />
+            <Transform target="scaleY" value="(310-(159+-24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1)))/206" />
+            <ListConfiguration id="numerals">
+              <ListOption id="western">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">[MINUTE_TENS_DIGIT] == 0</Expression>
+                    <Expression name="d1">[MINUTE_TENS_DIGIT] == 1</Expression>
+                    <Expression name="d2">[MINUTE_TENS_DIGIT] == 2</Expression>
+                    <Expression name="d3">[MINUTE_TENS_DIGIT] == 3</Expression>
+                    <Expression name="d4">[MINUTE_TENS_DIGIT] == 4</Expression>
+                    <Expression name="d5">[MINUTE_TENS_DIGIT] == 5</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_2" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d3">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_3" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d4">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_4" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d5">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_5" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+              <ListOption id="eastern">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">[MINUTE_TENS_DIGIT] == 0</Expression>
+                    <Expression name="d1">[MINUTE_TENS_DIGIT] == 1</Expression>
+                    <Expression name="d2">[MINUTE_TENS_DIGIT] == 2</Expression>
+                    <Expression name="d3">[MINUTE_TENS_DIGIT] == 3</Expression>
+                    <Expression name="d4">[MINUTE_TENS_DIGIT] == 4</Expression>
+                    <Expression name="d5">[MINUTE_TENS_DIGIT] == 5</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_2" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d3">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_3" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d4">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_4" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d5">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_5" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+              <ListOption id="deva">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">[MINUTE_TENS_DIGIT] == 0</Expression>
+                    <Expression name="d1">[MINUTE_TENS_DIGIT] == 1</Expression>
+                    <Expression name="d2">[MINUTE_TENS_DIGIT] == 2</Expression>
+                    <Expression name="d3">[MINUTE_TENS_DIGIT] == 3</Expression>
+                    <Expression name="d4">[MINUTE_TENS_DIGIT] == 4</Expression>
+                    <Expression name="d5">[MINUTE_TENS_DIGIT] == 5</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_2" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d3">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_3" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d4">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_4" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d5">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_5" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+            </ListConfiguration>
+          </Group>
+          <Group x="0" y="0" width="180" height="206" pivotX="0" pivotY="0" name="group_4">
+            <Transform target="x" value="(75+(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3)))+20)" />
+            <Transform target="y" value="(75+(159+24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1))+20)" />
+            <Transform target="scaleX" value="(310-(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))))/180" />
+            <Transform target="scaleY" value="(310-(159+24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1)))/206" />
+            <ListConfiguration id="numerals">
+              <ListOption id="western">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">[MINUTE_UNITS_DIGIT] == 0</Expression>
+                    <Expression name="d1">[MINUTE_UNITS_DIGIT] == 1</Expression>
+                    <Expression name="d2">[MINUTE_UNITS_DIGIT] == 2</Expression>
+                    <Expression name="d3">[MINUTE_UNITS_DIGIT] == 3</Expression>
+                    <Expression name="d4">[MINUTE_UNITS_DIGIT] == 4</Expression>
+                    <Expression name="d5">[MINUTE_UNITS_DIGIT] == 5</Expression>
+                    <Expression name="d6">[MINUTE_UNITS_DIGIT] == 6</Expression>
+                    <Expression name="d7">[MINUTE_UNITS_DIGIT] == 7</Expression>
+                    <Expression name="d8">[MINUTE_UNITS_DIGIT] == 8</Expression>
+                    <Expression name="d9">[MINUTE_UNITS_DIGIT] == 9</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_2" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d3">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_3" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d4">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_4" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d5">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_5" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d6">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_6" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d7">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_7" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d8">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_8" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d9">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="western_9" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+              <ListOption id="eastern">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">[MINUTE_UNITS_DIGIT] == 0</Expression>
+                    <Expression name="d1">[MINUTE_UNITS_DIGIT] == 1</Expression>
+                    <Expression name="d2">[MINUTE_UNITS_DIGIT] == 2</Expression>
+                    <Expression name="d3">[MINUTE_UNITS_DIGIT] == 3</Expression>
+                    <Expression name="d4">[MINUTE_UNITS_DIGIT] == 4</Expression>
+                    <Expression name="d5">[MINUTE_UNITS_DIGIT] == 5</Expression>
+                    <Expression name="d6">[MINUTE_UNITS_DIGIT] == 6</Expression>
+                    <Expression name="d7">[MINUTE_UNITS_DIGIT] == 7</Expression>
+                    <Expression name="d8">[MINUTE_UNITS_DIGIT] == 8</Expression>
+                    <Expression name="d9">[MINUTE_UNITS_DIGIT] == 9</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_2" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d3">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_3" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d4">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_4" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d5">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_5" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d6">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_6" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d7">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_7" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d8">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_8" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d9">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="eastern_9" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+              <ListOption id="deva">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">[MINUTE_UNITS_DIGIT] == 0</Expression>
+                    <Expression name="d1">[MINUTE_UNITS_DIGIT] == 1</Expression>
+                    <Expression name="d2">[MINUTE_UNITS_DIGIT] == 2</Expression>
+                    <Expression name="d3">[MINUTE_UNITS_DIGIT] == 3</Expression>
+                    <Expression name="d4">[MINUTE_UNITS_DIGIT] == 4</Expression>
+                    <Expression name="d5">[MINUTE_UNITS_DIGIT] == 5</Expression>
+                    <Expression name="d6">[MINUTE_UNITS_DIGIT] == 6</Expression>
+                    <Expression name="d7">[MINUTE_UNITS_DIGIT] == 7</Expression>
+                    <Expression name="d8">[MINUTE_UNITS_DIGIT] == 8</Expression>
+                    <Expression name="d9">[MINUTE_UNITS_DIGIT] == 9</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_2" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d3">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_3" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d4">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_4" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d5">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_5" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d6">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_6" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d7">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_7" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d8">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_8" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d9">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                      <Image resource="deva_9" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+            </ListConfiguration>
+          </Group>
+          <Group x="0" y="0" width="480" height="480" name="group_5">
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="[CONFIGURATION.palette.1]" />
+              </Rectangle>
+            </PartDraw>
+            <Group x="0" y="0" width="180" height="206" pivotX="0" pivotY="0" name="group_6">
+              <Transform target="x" value="75" />
+              <Transform target="y" value="75" />
+              <Transform target="scaleX" value="(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3)))/180" />
+              <Transform target="scaleY" value="(159+-24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1))/206" />
+              <ListConfiguration id="numerals">
+                <ListOption id="western">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 0</Expression>
+                      <Expression name="d1">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 1</Expression>
+                      <Expression name="d2">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 2</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_2" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+                <ListOption id="eastern">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 0</Expression>
+                      <Expression name="d1">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 1</Expression>
+                      <Expression name="d2">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 2</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_2" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+                <ListOption id="deva">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 0</Expression>
+                      <Expression name="d1">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 1</Expression>
+                      <Expression name="d2">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 2</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_2" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+              </ListConfiguration>
+            </Group>
+            <Group x="0" y="0" width="180" height="206" pivotX="0" pivotY="0" name="group_7">
+              <Transform target="x" value="(75+(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3)))+20)" />
+              <Transform target="y" value="75" />
+              <Transform target="scaleX" value="(310-(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))))/180" />
+              <Transform target="scaleY" value="(159+24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1))/206" />
+              <ListConfiguration id="numerals">
+                <ListOption id="western">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 0</Expression>
+                      <Expression name="d1">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 1</Expression>
+                      <Expression name="d2">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 2</Expression>
+                      <Expression name="d3">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 3</Expression>
+                      <Expression name="d4">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 4</Expression>
+                      <Expression name="d5">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 5</Expression>
+                      <Expression name="d6">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 6</Expression>
+                      <Expression name="d7">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 7</Expression>
+                      <Expression name="d8">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 8</Expression>
+                      <Expression name="d9">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 9</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_2" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d3">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_3" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d4">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_4" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d5">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_5" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d6">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_6" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d7">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_7" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d8">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_8" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d9">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_9" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+                <ListOption id="eastern">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 0</Expression>
+                      <Expression name="d1">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 1</Expression>
+                      <Expression name="d2">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 2</Expression>
+                      <Expression name="d3">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 3</Expression>
+                      <Expression name="d4">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 4</Expression>
+                      <Expression name="d5">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 5</Expression>
+                      <Expression name="d6">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 6</Expression>
+                      <Expression name="d7">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 7</Expression>
+                      <Expression name="d8">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 8</Expression>
+                      <Expression name="d9">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 9</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_2" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d3">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_3" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d4">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_4" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d5">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_5" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d6">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_6" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d7">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_7" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d8">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_8" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d9">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_9" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+                <ListOption id="deva">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 0</Expression>
+                      <Expression name="d1">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 1</Expression>
+                      <Expression name="d2">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 2</Expression>
+                      <Expression name="d3">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 3</Expression>
+                      <Expression name="d4">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 4</Expression>
+                      <Expression name="d5">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 5</Expression>
+                      <Expression name="d6">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 6</Expression>
+                      <Expression name="d7">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 7</Expression>
+                      <Expression name="d8">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 8</Expression>
+                      <Expression name="d9">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 9</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_2" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d3">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_3" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d4">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_4" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d5">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_5" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d6">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_6" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d7">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_7" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d8">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_8" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d9">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_9" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+              </ListConfiguration>
+            </Group>
+            <Group x="0" y="0" width="180" height="206" pivotX="0" pivotY="0" name="group_8">
+              <Transform target="x" value="75" />
+              <Transform target="y" value="(75+(159+-24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1))+20)" />
+              <Transform target="scaleX" value="(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3)))/180" />
+              <Transform target="scaleY" value="(310-(159+-24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1)))/206" />
+              <ListConfiguration id="numerals">
+                <ListOption id="western">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">[MINUTE_TENS_DIGIT] == 0</Expression>
+                      <Expression name="d1">[MINUTE_TENS_DIGIT] == 1</Expression>
+                      <Expression name="d2">[MINUTE_TENS_DIGIT] == 2</Expression>
+                      <Expression name="d3">[MINUTE_TENS_DIGIT] == 3</Expression>
+                      <Expression name="d4">[MINUTE_TENS_DIGIT] == 4</Expression>
+                      <Expression name="d5">[MINUTE_TENS_DIGIT] == 5</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_2" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d3">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_3" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d4">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_4" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d5">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_5" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+                <ListOption id="eastern">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">[MINUTE_TENS_DIGIT] == 0</Expression>
+                      <Expression name="d1">[MINUTE_TENS_DIGIT] == 1</Expression>
+                      <Expression name="d2">[MINUTE_TENS_DIGIT] == 2</Expression>
+                      <Expression name="d3">[MINUTE_TENS_DIGIT] == 3</Expression>
+                      <Expression name="d4">[MINUTE_TENS_DIGIT] == 4</Expression>
+                      <Expression name="d5">[MINUTE_TENS_DIGIT] == 5</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_2" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d3">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_3" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d4">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_4" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d5">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_5" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+                <ListOption id="deva">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">[MINUTE_TENS_DIGIT] == 0</Expression>
+                      <Expression name="d1">[MINUTE_TENS_DIGIT] == 1</Expression>
+                      <Expression name="d2">[MINUTE_TENS_DIGIT] == 2</Expression>
+                      <Expression name="d3">[MINUTE_TENS_DIGIT] == 3</Expression>
+                      <Expression name="d4">[MINUTE_TENS_DIGIT] == 4</Expression>
+                      <Expression name="d5">[MINUTE_TENS_DIGIT] == 5</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_2" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d3">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_3" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d4">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_4" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d5">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_5" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+              </ListConfiguration>
+            </Group>
+            <Group x="0" y="0" width="180" height="206" pivotX="0" pivotY="0" name="group_9">
+              <Transform target="x" value="(75+(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3)))+20)" />
+              <Transform target="y" value="(75+(159+24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1))+20)" />
+              <Transform target="scaleX" value="(310-(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))))/180" />
+              <Transform target="scaleY" value="(310-(159+24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1)))/206" />
+              <ListConfiguration id="numerals">
+                <ListOption id="western">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">[MINUTE_UNITS_DIGIT] == 0</Expression>
+                      <Expression name="d1">[MINUTE_UNITS_DIGIT] == 1</Expression>
+                      <Expression name="d2">[MINUTE_UNITS_DIGIT] == 2</Expression>
+                      <Expression name="d3">[MINUTE_UNITS_DIGIT] == 3</Expression>
+                      <Expression name="d4">[MINUTE_UNITS_DIGIT] == 4</Expression>
+                      <Expression name="d5">[MINUTE_UNITS_DIGIT] == 5</Expression>
+                      <Expression name="d6">[MINUTE_UNITS_DIGIT] == 6</Expression>
+                      <Expression name="d7">[MINUTE_UNITS_DIGIT] == 7</Expression>
+                      <Expression name="d8">[MINUTE_UNITS_DIGIT] == 8</Expression>
+                      <Expression name="d9">[MINUTE_UNITS_DIGIT] == 9</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_2" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d3">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_3" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d4">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_4" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d5">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_5" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d6">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_6" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d7">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_7" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d8">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_8" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d9">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="western_9" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+                <ListOption id="eastern">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">[MINUTE_UNITS_DIGIT] == 0</Expression>
+                      <Expression name="d1">[MINUTE_UNITS_DIGIT] == 1</Expression>
+                      <Expression name="d2">[MINUTE_UNITS_DIGIT] == 2</Expression>
+                      <Expression name="d3">[MINUTE_UNITS_DIGIT] == 3</Expression>
+                      <Expression name="d4">[MINUTE_UNITS_DIGIT] == 4</Expression>
+                      <Expression name="d5">[MINUTE_UNITS_DIGIT] == 5</Expression>
+                      <Expression name="d6">[MINUTE_UNITS_DIGIT] == 6</Expression>
+                      <Expression name="d7">[MINUTE_UNITS_DIGIT] == 7</Expression>
+                      <Expression name="d8">[MINUTE_UNITS_DIGIT] == 8</Expression>
+                      <Expression name="d9">[MINUTE_UNITS_DIGIT] == 9</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_2" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d3">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_3" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d4">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_4" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d5">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_5" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d6">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_6" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d7">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_7" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d8">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_8" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d9">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="eastern_9" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+                <ListOption id="deva">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">[MINUTE_UNITS_DIGIT] == 0</Expression>
+                      <Expression name="d1">[MINUTE_UNITS_DIGIT] == 1</Expression>
+                      <Expression name="d2">[MINUTE_UNITS_DIGIT] == 2</Expression>
+                      <Expression name="d3">[MINUTE_UNITS_DIGIT] == 3</Expression>
+                      <Expression name="d4">[MINUTE_UNITS_DIGIT] == 4</Expression>
+                      <Expression name="d5">[MINUTE_UNITS_DIGIT] == 5</Expression>
+                      <Expression name="d6">[MINUTE_UNITS_DIGIT] == 6</Expression>
+                      <Expression name="d7">[MINUTE_UNITS_DIGIT] == 7</Expression>
+                      <Expression name="d8">[MINUTE_UNITS_DIGIT] == 8</Expression>
+                      <Expression name="d9">[MINUTE_UNITS_DIGIT] == 9</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_2" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d3">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_3" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d4">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_4" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d5">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_5" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d6">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_6" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d7">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_7" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d8">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_8" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d9">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                        <Image resource="deva_9" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+              </ListConfiguration>
+            </Group>
+            <Group x="0" y="0" width="480" height="480" renderMode="MASK" name="group_10">
+              <PartDraw x="0" y="0" width="480" height="480">
+                <Rectangle x="0" y="0" width="480" height="480">
+                  <Fill color="#FFFFFF" />
+                </Rectangle>
+                <Transform target="y" value="480 - [SECOND_MILLISECOND]*8" />
+              </PartDraw>
+            </Group>
+          </Group>
+        </Compare>
+        <Default>
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Rectangle x="0" y="0" width="480" height="480">
+              <Fill color="[CONFIGURATION.palette.1]" />
+            </Rectangle>
+          </PartDraw>
+          <Group x="0" y="0" width="180" height="206" pivotX="0" pivotY="0" name="group_11">
+            <Transform target="x" value="75" />
+            <Transform target="y" value="75" />
+            <Transform target="scaleX" value="(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3)))/180" />
+            <Transform target="scaleY" value="(159+-24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1))/206" />
+            <ListConfiguration id="numerals">
+              <ListOption id="western">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 0</Expression>
+                    <Expression name="d1">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 1</Expression>
+                    <Expression name="d2">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 2</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_2" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+              <ListOption id="eastern">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 0</Expression>
+                    <Expression name="d1">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 1</Expression>
+                    <Expression name="d2">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 2</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_2" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+              <ListOption id="deva">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 0</Expression>
+                    <Expression name="d1">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 1</Expression>
+                    <Expression name="d2">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 2</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_2" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+            </ListConfiguration>
+          </Group>
+          <Group x="0" y="0" width="180" height="206" pivotX="0" pivotY="0" name="group_12">
+            <Transform target="x" value="(75+(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3)))+20)" />
+            <Transform target="y" value="75" />
+            <Transform target="scaleX" value="(310-(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))))/180" />
+            <Transform target="scaleY" value="(159+24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1))/206" />
+            <ListConfiguration id="numerals">
+              <ListOption id="western">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 0</Expression>
+                    <Expression name="d1">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 1</Expression>
+                    <Expression name="d2">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 2</Expression>
+                    <Expression name="d3">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 3</Expression>
+                    <Expression name="d4">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 4</Expression>
+                    <Expression name="d5">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 5</Expression>
+                    <Expression name="d6">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 6</Expression>
+                    <Expression name="d7">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 7</Expression>
+                    <Expression name="d8">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 8</Expression>
+                    <Expression name="d9">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 9</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_2" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d3">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_3" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d4">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_4" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d5">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_5" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d6">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_6" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d7">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_7" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d8">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_8" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d9">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_9" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+              <ListOption id="eastern">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 0</Expression>
+                    <Expression name="d1">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 1</Expression>
+                    <Expression name="d2">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 2</Expression>
+                    <Expression name="d3">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 3</Expression>
+                    <Expression name="d4">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 4</Expression>
+                    <Expression name="d5">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 5</Expression>
+                    <Expression name="d6">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 6</Expression>
+                    <Expression name="d7">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 7</Expression>
+                    <Expression name="d8">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 8</Expression>
+                    <Expression name="d9">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 9</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_2" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d3">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_3" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d4">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_4" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d5">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_5" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d6">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_6" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d7">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_7" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d8">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_8" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d9">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_9" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+              <ListOption id="deva">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 0</Expression>
+                    <Expression name="d1">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 1</Expression>
+                    <Expression name="d2">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 2</Expression>
+                    <Expression name="d3">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 3</Expression>
+                    <Expression name="d4">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 4</Expression>
+                    <Expression name="d5">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 5</Expression>
+                    <Expression name="d6">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 6</Expression>
+                    <Expression name="d7">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 7</Expression>
+                    <Expression name="d8">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 8</Expression>
+                    <Expression name="d9">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 9</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_2" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d3">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_3" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d4">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_4" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d5">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_5" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d6">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_6" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d7">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_7" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d8">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_8" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d9">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_9" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+            </ListConfiguration>
+          </Group>
+          <Group x="0" y="0" width="180" height="206" pivotX="0" pivotY="0" name="group_13">
+            <Transform target="x" value="75" />
+            <Transform target="y" value="(75+(159+-24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1))+20)" />
+            <Transform target="scaleX" value="(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3)))/180" />
+            <Transform target="scaleY" value="(310-(159+-24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1)))/206" />
+            <ListConfiguration id="numerals">
+              <ListOption id="western">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">[MINUTE_TENS_DIGIT] == 0</Expression>
+                    <Expression name="d1">[MINUTE_TENS_DIGIT] == 1</Expression>
+                    <Expression name="d2">[MINUTE_TENS_DIGIT] == 2</Expression>
+                    <Expression name="d3">[MINUTE_TENS_DIGIT] == 3</Expression>
+                    <Expression name="d4">[MINUTE_TENS_DIGIT] == 4</Expression>
+                    <Expression name="d5">[MINUTE_TENS_DIGIT] == 5</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_2" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d3">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_3" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d4">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_4" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d5">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_5" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+              <ListOption id="eastern">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">[MINUTE_TENS_DIGIT] == 0</Expression>
+                    <Expression name="d1">[MINUTE_TENS_DIGIT] == 1</Expression>
+                    <Expression name="d2">[MINUTE_TENS_DIGIT] == 2</Expression>
+                    <Expression name="d3">[MINUTE_TENS_DIGIT] == 3</Expression>
+                    <Expression name="d4">[MINUTE_TENS_DIGIT] == 4</Expression>
+                    <Expression name="d5">[MINUTE_TENS_DIGIT] == 5</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_2" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d3">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_3" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d4">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_4" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d5">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_5" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+              <ListOption id="deva">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">[MINUTE_TENS_DIGIT] == 0</Expression>
+                    <Expression name="d1">[MINUTE_TENS_DIGIT] == 1</Expression>
+                    <Expression name="d2">[MINUTE_TENS_DIGIT] == 2</Expression>
+                    <Expression name="d3">[MINUTE_TENS_DIGIT] == 3</Expression>
+                    <Expression name="d4">[MINUTE_TENS_DIGIT] == 4</Expression>
+                    <Expression name="d5">[MINUTE_TENS_DIGIT] == 5</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_2" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d3">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_3" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d4">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_4" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d5">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_5" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+            </ListConfiguration>
+          </Group>
+          <Group x="0" y="0" width="180" height="206" pivotX="0" pivotY="0" name="group_14">
+            <Transform target="x" value="(75+(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3)))+20)" />
+            <Transform target="y" value="(75+(159+24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1))+20)" />
+            <Transform target="scaleX" value="(310-(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))))/180" />
+            <Transform target="scaleY" value="(310-(159+24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1)))/206" />
+            <ListConfiguration id="numerals">
+              <ListOption id="western">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">[MINUTE_UNITS_DIGIT] == 0</Expression>
+                    <Expression name="d1">[MINUTE_UNITS_DIGIT] == 1</Expression>
+                    <Expression name="d2">[MINUTE_UNITS_DIGIT] == 2</Expression>
+                    <Expression name="d3">[MINUTE_UNITS_DIGIT] == 3</Expression>
+                    <Expression name="d4">[MINUTE_UNITS_DIGIT] == 4</Expression>
+                    <Expression name="d5">[MINUTE_UNITS_DIGIT] == 5</Expression>
+                    <Expression name="d6">[MINUTE_UNITS_DIGIT] == 6</Expression>
+                    <Expression name="d7">[MINUTE_UNITS_DIGIT] == 7</Expression>
+                    <Expression name="d8">[MINUTE_UNITS_DIGIT] == 8</Expression>
+                    <Expression name="d9">[MINUTE_UNITS_DIGIT] == 9</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_2" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d3">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_3" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d4">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_4" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d5">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_5" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d6">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_6" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d7">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_7" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d8">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_8" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d9">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="western_9" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+              <ListOption id="eastern">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">[MINUTE_UNITS_DIGIT] == 0</Expression>
+                    <Expression name="d1">[MINUTE_UNITS_DIGIT] == 1</Expression>
+                    <Expression name="d2">[MINUTE_UNITS_DIGIT] == 2</Expression>
+                    <Expression name="d3">[MINUTE_UNITS_DIGIT] == 3</Expression>
+                    <Expression name="d4">[MINUTE_UNITS_DIGIT] == 4</Expression>
+                    <Expression name="d5">[MINUTE_UNITS_DIGIT] == 5</Expression>
+                    <Expression name="d6">[MINUTE_UNITS_DIGIT] == 6</Expression>
+                    <Expression name="d7">[MINUTE_UNITS_DIGIT] == 7</Expression>
+                    <Expression name="d8">[MINUTE_UNITS_DIGIT] == 8</Expression>
+                    <Expression name="d9">[MINUTE_UNITS_DIGIT] == 9</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_2" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d3">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_3" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d4">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_4" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d5">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_5" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d6">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_6" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d7">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_7" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d8">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_8" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d9">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="eastern_9" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+              <ListOption id="deva">
+                <Condition>
+                  <Expressions>
+                    <Expression name="d0">[MINUTE_UNITS_DIGIT] == 0</Expression>
+                    <Expression name="d1">[MINUTE_UNITS_DIGIT] == 1</Expression>
+                    <Expression name="d2">[MINUTE_UNITS_DIGIT] == 2</Expression>
+                    <Expression name="d3">[MINUTE_UNITS_DIGIT] == 3</Expression>
+                    <Expression name="d4">[MINUTE_UNITS_DIGIT] == 4</Expression>
+                    <Expression name="d5">[MINUTE_UNITS_DIGIT] == 5</Expression>
+                    <Expression name="d6">[MINUTE_UNITS_DIGIT] == 6</Expression>
+                    <Expression name="d7">[MINUTE_UNITS_DIGIT] == 7</Expression>
+                    <Expression name="d8">[MINUTE_UNITS_DIGIT] == 8</Expression>
+                    <Expression name="d9">[MINUTE_UNITS_DIGIT] == 9</Expression>
+                  </Expressions>
+                  <Compare expression="d0">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_0" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d1">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_1" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d2">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_2" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d3">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_3" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d4">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_4" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d5">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_5" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d6">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_6" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d7">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_7" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d8">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_8" />
+                    </PartImage>
+                  </Compare>
+                  <Compare expression="d9">
+                    <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.3]">
+                      <Image resource="deva_9" />
+                    </PartImage>
+                  </Compare>
+                </Condition>
+              </ListOption>
+            </ListConfiguration>
+          </Group>
+          <Group x="0" y="0" width="480" height="480" name="group_15">
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="[CONFIGURATION.palette.0]" />
+              </Rectangle>
+            </PartDraw>
+            <Group x="0" y="0" width="180" height="206" pivotX="0" pivotY="0" name="group_16">
+              <Transform target="x" value="75" />
+              <Transform target="y" value="75" />
+              <Transform target="scaleX" value="(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3)))/180" />
+              <Transform target="scaleY" value="(159+-24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1))/206" />
+              <ListConfiguration id="numerals">
+                <ListOption id="western">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 0</Expression>
+                      <Expression name="d1">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 1</Expression>
+                      <Expression name="d2">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 2</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_2" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+                <ListOption id="eastern">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 0</Expression>
+                      <Expression name="d1">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 1</Expression>
+                      <Expression name="d2">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 2</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_2" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+                <ListOption id="deva">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 0</Expression>
+                      <Expression name="d1">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 1</Expression>
+                      <Expression name="d2">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 2</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_2" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+              </ListConfiguration>
+            </Group>
+            <Group x="0" y="0" width="180" height="206" pivotX="0" pivotY="0" name="group_17">
+              <Transform target="x" value="(75+(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3)))+20)" />
+              <Transform target="y" value="75" />
+              <Transform target="scaleX" value="(310-(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))))/180" />
+              <Transform target="scaleY" value="(159+24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1))/206" />
+              <ListConfiguration id="numerals">
+                <ListOption id="western">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 0</Expression>
+                      <Expression name="d1">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 1</Expression>
+                      <Expression name="d2">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 2</Expression>
+                      <Expression name="d3">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 3</Expression>
+                      <Expression name="d4">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 4</Expression>
+                      <Expression name="d5">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 5</Expression>
+                      <Expression name="d6">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 6</Expression>
+                      <Expression name="d7">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 7</Expression>
+                      <Expression name="d8">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 8</Expression>
+                      <Expression name="d9">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 9</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_2" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d3">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_3" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d4">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_4" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d5">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_5" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d6">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_6" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d7">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_7" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d8">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_8" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d9">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_9" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+                <ListOption id="eastern">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 0</Expression>
+                      <Expression name="d1">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 1</Expression>
+                      <Expression name="d2">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 2</Expression>
+                      <Expression name="d3">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 3</Expression>
+                      <Expression name="d4">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 4</Expression>
+                      <Expression name="d5">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 5</Expression>
+                      <Expression name="d6">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 6</Expression>
+                      <Expression name="d7">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 7</Expression>
+                      <Expression name="d8">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 8</Expression>
+                      <Expression name="d9">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 9</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_2" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d3">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_3" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d4">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_4" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d5">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_5" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d6">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_6" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d7">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_7" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d8">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_8" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d9">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_9" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+                <ListOption id="deva">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 0</Expression>
+                      <Expression name="d1">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 1</Expression>
+                      <Expression name="d2">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 2</Expression>
+                      <Expression name="d3">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 3</Expression>
+                      <Expression name="d4">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 4</Expression>
+                      <Expression name="d5">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 5</Expression>
+                      <Expression name="d6">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 6</Expression>
+                      <Expression name="d7">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 7</Expression>
+                      <Expression name="d8">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 8</Expression>
+                      <Expression name="d9">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 9</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_2" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d3">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_3" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d4">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_4" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d5">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_5" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d6">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_6" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d7">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_7" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d8">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_8" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d9">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_9" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+              </ListConfiguration>
+            </Group>
+            <Group x="0" y="0" width="180" height="206" pivotX="0" pivotY="0" name="group_18">
+              <Transform target="x" value="75" />
+              <Transform target="y" value="(75+(159+-24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1))+20)" />
+              <Transform target="scaleX" value="(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3)))/180" />
+              <Transform target="scaleY" value="(310-(159+-24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1)))/206" />
+              <ListConfiguration id="numerals">
+                <ListOption id="western">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">[MINUTE_TENS_DIGIT] == 0</Expression>
+                      <Expression name="d1">[MINUTE_TENS_DIGIT] == 1</Expression>
+                      <Expression name="d2">[MINUTE_TENS_DIGIT] == 2</Expression>
+                      <Expression name="d3">[MINUTE_TENS_DIGIT] == 3</Expression>
+                      <Expression name="d4">[MINUTE_TENS_DIGIT] == 4</Expression>
+                      <Expression name="d5">[MINUTE_TENS_DIGIT] == 5</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_2" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d3">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_3" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d4">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_4" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d5">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_5" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+                <ListOption id="eastern">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">[MINUTE_TENS_DIGIT] == 0</Expression>
+                      <Expression name="d1">[MINUTE_TENS_DIGIT] == 1</Expression>
+                      <Expression name="d2">[MINUTE_TENS_DIGIT] == 2</Expression>
+                      <Expression name="d3">[MINUTE_TENS_DIGIT] == 3</Expression>
+                      <Expression name="d4">[MINUTE_TENS_DIGIT] == 4</Expression>
+                      <Expression name="d5">[MINUTE_TENS_DIGIT] == 5</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_2" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d3">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_3" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d4">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_4" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d5">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_5" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+                <ListOption id="deva">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">[MINUTE_TENS_DIGIT] == 0</Expression>
+                      <Expression name="d1">[MINUTE_TENS_DIGIT] == 1</Expression>
+                      <Expression name="d2">[MINUTE_TENS_DIGIT] == 2</Expression>
+                      <Expression name="d3">[MINUTE_TENS_DIGIT] == 3</Expression>
+                      <Expression name="d4">[MINUTE_TENS_DIGIT] == 4</Expression>
+                      <Expression name="d5">[MINUTE_TENS_DIGIT] == 5</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_2" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d3">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_3" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d4">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_4" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d5">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_5" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+              </ListConfiguration>
+            </Group>
+            <Group x="0" y="0" width="180" height="206" pivotX="0" pivotY="0" name="group_19">
+              <Transform target="x" value="(75+(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3)))+20)" />
+              <Transform target="y" value="(75+(159+24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1))+20)" />
+              <Transform target="scaleX" value="(310-(130+33*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))))/180" />
+              <Transform target="scaleY" value="(310-(159+24*(2*(([MINUTE]%2) + (1-2*([MINUTE]%2))*pow(1-clamp([SECOND_MILLISECOND]*2,0,1),3))-1)))/206" />
+              <ListConfiguration id="numerals">
+                <ListOption id="western">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">[MINUTE_UNITS_DIGIT] == 0</Expression>
+                      <Expression name="d1">[MINUTE_UNITS_DIGIT] == 1</Expression>
+                      <Expression name="d2">[MINUTE_UNITS_DIGIT] == 2</Expression>
+                      <Expression name="d3">[MINUTE_UNITS_DIGIT] == 3</Expression>
+                      <Expression name="d4">[MINUTE_UNITS_DIGIT] == 4</Expression>
+                      <Expression name="d5">[MINUTE_UNITS_DIGIT] == 5</Expression>
+                      <Expression name="d6">[MINUTE_UNITS_DIGIT] == 6</Expression>
+                      <Expression name="d7">[MINUTE_UNITS_DIGIT] == 7</Expression>
+                      <Expression name="d8">[MINUTE_UNITS_DIGIT] == 8</Expression>
+                      <Expression name="d9">[MINUTE_UNITS_DIGIT] == 9</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_2" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d3">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_3" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d4">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_4" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d5">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_5" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d6">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_6" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d7">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_7" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d8">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_8" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d9">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="western_9" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+                <ListOption id="eastern">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">[MINUTE_UNITS_DIGIT] == 0</Expression>
+                      <Expression name="d1">[MINUTE_UNITS_DIGIT] == 1</Expression>
+                      <Expression name="d2">[MINUTE_UNITS_DIGIT] == 2</Expression>
+                      <Expression name="d3">[MINUTE_UNITS_DIGIT] == 3</Expression>
+                      <Expression name="d4">[MINUTE_UNITS_DIGIT] == 4</Expression>
+                      <Expression name="d5">[MINUTE_UNITS_DIGIT] == 5</Expression>
+                      <Expression name="d6">[MINUTE_UNITS_DIGIT] == 6</Expression>
+                      <Expression name="d7">[MINUTE_UNITS_DIGIT] == 7</Expression>
+                      <Expression name="d8">[MINUTE_UNITS_DIGIT] == 8</Expression>
+                      <Expression name="d9">[MINUTE_UNITS_DIGIT] == 9</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_2" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d3">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_3" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d4">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_4" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d5">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_5" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d6">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_6" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d7">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_7" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d8">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_8" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d9">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="eastern_9" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+                <ListOption id="deva">
+                  <Condition>
+                    <Expressions>
+                      <Expression name="d0">[MINUTE_UNITS_DIGIT] == 0</Expression>
+                      <Expression name="d1">[MINUTE_UNITS_DIGIT] == 1</Expression>
+                      <Expression name="d2">[MINUTE_UNITS_DIGIT] == 2</Expression>
+                      <Expression name="d3">[MINUTE_UNITS_DIGIT] == 3</Expression>
+                      <Expression name="d4">[MINUTE_UNITS_DIGIT] == 4</Expression>
+                      <Expression name="d5">[MINUTE_UNITS_DIGIT] == 5</Expression>
+                      <Expression name="d6">[MINUTE_UNITS_DIGIT] == 6</Expression>
+                      <Expression name="d7">[MINUTE_UNITS_DIGIT] == 7</Expression>
+                      <Expression name="d8">[MINUTE_UNITS_DIGIT] == 8</Expression>
+                      <Expression name="d9">[MINUTE_UNITS_DIGIT] == 9</Expression>
+                    </Expressions>
+                    <Compare expression="d0">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_0" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d1">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_1" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d2">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_2" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d3">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_3" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d4">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_4" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d5">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_5" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d6">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_6" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d7">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_7" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d8">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_8" />
+                      </PartImage>
+                    </Compare>
+                    <Compare expression="d9">
+                      <PartImage x="0" y="0" width="180" height="206" tintColor="[CONFIGURATION.palette.2]">
+                        <Image resource="deva_9" />
+                      </PartImage>
+                    </Compare>
+                  </Condition>
+                </ListOption>
+              </ListConfiguration>
+            </Group>
+            <Group x="0" y="0" width="480" height="480" renderMode="MASK" name="group_20">
+              <PartDraw x="0" y="0" width="480" height="480">
+                <Rectangle x="0" y="0" width="480" height="480">
+                  <Fill color="#FFFFFF" />
+                </Rectangle>
+                <Transform target="y" value="480 - [SECOND_MILLISECOND]*8" />
+              </PartDraw>
+            </Group>
+          </Group>
+        </Default>
+      </Condition>
+    </Group>
+    <Group x="0" y="0" width="480" height="480" alpha="0" name="group_21">
+      <Variant mode="AMBIENT" target="alpha" value="255" />
+      <Group x="0" y="0" width="180" height="206" pivotX="0" pivotY="0" name="group_22">
+        <Transform target="x" value="75" />
+        <Transform target="y" value="75" />
+        <Transform target="scaleX" value="(130+33*([MINUTE]%2))/180" />
+        <Transform target="scaleY" value="(159+-24*(2*([MINUTE]%2)-1))/206" />
+        <ListConfiguration id="numerals">
+          <ListOption id="western">
+            <Condition>
+              <Expressions>
+                <Expression name="d0">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 0</Expression>
+                <Expression name="d1">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 1</Expression>
+                <Expression name="d2">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 2</Expression>
+              </Expressions>
+              <Compare expression="d0">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_0" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d1">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_1" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d2">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_2" />
+                </PartImage>
+              </Compare>
+            </Condition>
+          </ListOption>
+          <ListOption id="eastern">
+            <Condition>
+              <Expressions>
+                <Expression name="d0">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 0</Expression>
+                <Expression name="d1">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 1</Expression>
+                <Expression name="d2">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 2</Expression>
+              </Expressions>
+              <Compare expression="d0">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_0" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d1">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_1" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d2">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_2" />
+                </PartImage>
+              </Compare>
+            </Condition>
+          </ListOption>
+          <ListOption id="deva">
+            <Condition>
+              <Expressions>
+                <Expression name="d0">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 0</Expression>
+                <Expression name="d1">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 1</Expression>
+                <Expression name="d2">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 2</Expression>
+              </Expressions>
+              <Compare expression="d0">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_0" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d1">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_1" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d2">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_2" />
+                </PartImage>
+              </Compare>
+            </Condition>
+          </ListOption>
+        </ListConfiguration>
+      </Group>
+      <Group x="0" y="0" width="180" height="206" pivotX="0" pivotY="0" name="group_23">
+        <Transform target="x" value="(75+(130+33*([MINUTE]%2))+20)" />
+        <Transform target="y" value="75" />
+        <Transform target="scaleX" value="(310-(130+33*([MINUTE]%2)))/180" />
+        <Transform target="scaleY" value="(159+24*(2*([MINUTE]%2)-1))/206" />
+        <ListConfiguration id="numerals">
+          <ListOption id="western">
+            <Condition>
+              <Expressions>
+                <Expression name="d0">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 0</Expression>
+                <Expression name="d1">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 1</Expression>
+                <Expression name="d2">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 2</Expression>
+                <Expression name="d3">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 3</Expression>
+                <Expression name="d4">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 4</Expression>
+                <Expression name="d5">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 5</Expression>
+                <Expression name="d6">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 6</Expression>
+                <Expression name="d7">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 7</Expression>
+                <Expression name="d8">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 8</Expression>
+                <Expression name="d9">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 9</Expression>
+              </Expressions>
+              <Compare expression="d0">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_0" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d1">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_1" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d2">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_2" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d3">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_3" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d4">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_4" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d5">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_5" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d6">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_6" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d7">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_7" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d8">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_8" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d9">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_9" />
+                </PartImage>
+              </Compare>
+            </Condition>
+          </ListOption>
+          <ListOption id="eastern">
+            <Condition>
+              <Expressions>
+                <Expression name="d0">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 0</Expression>
+                <Expression name="d1">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 1</Expression>
+                <Expression name="d2">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 2</Expression>
+                <Expression name="d3">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 3</Expression>
+                <Expression name="d4">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 4</Expression>
+                <Expression name="d5">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 5</Expression>
+                <Expression name="d6">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 6</Expression>
+                <Expression name="d7">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 7</Expression>
+                <Expression name="d8">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 8</Expression>
+                <Expression name="d9">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 9</Expression>
+              </Expressions>
+              <Compare expression="d0">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_0" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d1">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_1" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d2">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_2" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d3">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_3" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d4">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_4" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d5">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_5" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d6">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_6" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d7">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_7" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d8">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_8" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d9">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_9" />
+                </PartImage>
+              </Compare>
+            </Condition>
+          </ListOption>
+          <ListOption id="deva">
+            <Condition>
+              <Expressions>
+                <Expression name="d0">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 0</Expression>
+                <Expression name="d1">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 1</Expression>
+                <Expression name="d2">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 2</Expression>
+                <Expression name="d3">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 3</Expression>
+                <Expression name="d4">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 4</Expression>
+                <Expression name="d5">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 5</Expression>
+                <Expression name="d6">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 6</Expression>
+                <Expression name="d7">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 7</Expression>
+                <Expression name="d8">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 8</Expression>
+                <Expression name="d9">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 9</Expression>
+              </Expressions>
+              <Compare expression="d0">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_0" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d1">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_1" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d2">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_2" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d3">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_3" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d4">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_4" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d5">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_5" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d6">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_6" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d7">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_7" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d8">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_8" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d9">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_9" />
+                </PartImage>
+              </Compare>
+            </Condition>
+          </ListOption>
+        </ListConfiguration>
+      </Group>
+      <Group x="0" y="0" width="180" height="206" pivotX="0" pivotY="0" name="group_24">
+        <Transform target="x" value="75" />
+        <Transform target="y" value="(75+(159+-24*(2*([MINUTE]%2)-1))+20)" />
+        <Transform target="scaleX" value="(130+33*([MINUTE]%2))/180" />
+        <Transform target="scaleY" value="(310-(159+-24*(2*([MINUTE]%2)-1)))/206" />
+        <ListConfiguration id="numerals">
+          <ListOption id="western">
+            <Condition>
+              <Expressions>
+                <Expression name="d0">[MINUTE_TENS_DIGIT] == 0</Expression>
+                <Expression name="d1">[MINUTE_TENS_DIGIT] == 1</Expression>
+                <Expression name="d2">[MINUTE_TENS_DIGIT] == 2</Expression>
+                <Expression name="d3">[MINUTE_TENS_DIGIT] == 3</Expression>
+                <Expression name="d4">[MINUTE_TENS_DIGIT] == 4</Expression>
+                <Expression name="d5">[MINUTE_TENS_DIGIT] == 5</Expression>
+              </Expressions>
+              <Compare expression="d0">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_0" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d1">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_1" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d2">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_2" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d3">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_3" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d4">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_4" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d5">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_5" />
+                </PartImage>
+              </Compare>
+            </Condition>
+          </ListOption>
+          <ListOption id="eastern">
+            <Condition>
+              <Expressions>
+                <Expression name="d0">[MINUTE_TENS_DIGIT] == 0</Expression>
+                <Expression name="d1">[MINUTE_TENS_DIGIT] == 1</Expression>
+                <Expression name="d2">[MINUTE_TENS_DIGIT] == 2</Expression>
+                <Expression name="d3">[MINUTE_TENS_DIGIT] == 3</Expression>
+                <Expression name="d4">[MINUTE_TENS_DIGIT] == 4</Expression>
+                <Expression name="d5">[MINUTE_TENS_DIGIT] == 5</Expression>
+              </Expressions>
+              <Compare expression="d0">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_0" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d1">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_1" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d2">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_2" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d3">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_3" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d4">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_4" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d5">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_5" />
+                </PartImage>
+              </Compare>
+            </Condition>
+          </ListOption>
+          <ListOption id="deva">
+            <Condition>
+              <Expressions>
+                <Expression name="d0">[MINUTE_TENS_DIGIT] == 0</Expression>
+                <Expression name="d1">[MINUTE_TENS_DIGIT] == 1</Expression>
+                <Expression name="d2">[MINUTE_TENS_DIGIT] == 2</Expression>
+                <Expression name="d3">[MINUTE_TENS_DIGIT] == 3</Expression>
+                <Expression name="d4">[MINUTE_TENS_DIGIT] == 4</Expression>
+                <Expression name="d5">[MINUTE_TENS_DIGIT] == 5</Expression>
+              </Expressions>
+              <Compare expression="d0">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_0" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d1">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_1" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d2">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_2" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d3">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_3" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d4">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_4" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d5">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_5" />
+                </PartImage>
+              </Compare>
+            </Condition>
+          </ListOption>
+        </ListConfiguration>
+      </Group>
+      <Group x="0" y="0" width="180" height="206" pivotX="0" pivotY="0" name="group_25">
+        <Transform target="x" value="(75+(130+33*([MINUTE]%2))+20)" />
+        <Transform target="y" value="(75+(159+24*(2*([MINUTE]%2)-1))+20)" />
+        <Transform target="scaleX" value="(310-(130+33*([MINUTE]%2)))/180" />
+        <Transform target="scaleY" value="(310-(159+24*(2*([MINUTE]%2)-1)))/206" />
+        <ListConfiguration id="numerals">
+          <ListOption id="western">
+            <Condition>
+              <Expressions>
+                <Expression name="d0">[MINUTE_UNITS_DIGIT] == 0</Expression>
+                <Expression name="d1">[MINUTE_UNITS_DIGIT] == 1</Expression>
+                <Expression name="d2">[MINUTE_UNITS_DIGIT] == 2</Expression>
+                <Expression name="d3">[MINUTE_UNITS_DIGIT] == 3</Expression>
+                <Expression name="d4">[MINUTE_UNITS_DIGIT] == 4</Expression>
+                <Expression name="d5">[MINUTE_UNITS_DIGIT] == 5</Expression>
+                <Expression name="d6">[MINUTE_UNITS_DIGIT] == 6</Expression>
+                <Expression name="d7">[MINUTE_UNITS_DIGIT] == 7</Expression>
+                <Expression name="d8">[MINUTE_UNITS_DIGIT] == 8</Expression>
+                <Expression name="d9">[MINUTE_UNITS_DIGIT] == 9</Expression>
+              </Expressions>
+              <Compare expression="d0">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_0" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d1">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_1" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d2">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_2" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d3">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_3" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d4">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_4" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d5">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_5" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d6">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_6" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d7">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_7" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d8">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_8" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d9">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="western_9" />
+                </PartImage>
+              </Compare>
+            </Condition>
+          </ListOption>
+          <ListOption id="eastern">
+            <Condition>
+              <Expressions>
+                <Expression name="d0">[MINUTE_UNITS_DIGIT] == 0</Expression>
+                <Expression name="d1">[MINUTE_UNITS_DIGIT] == 1</Expression>
+                <Expression name="d2">[MINUTE_UNITS_DIGIT] == 2</Expression>
+                <Expression name="d3">[MINUTE_UNITS_DIGIT] == 3</Expression>
+                <Expression name="d4">[MINUTE_UNITS_DIGIT] == 4</Expression>
+                <Expression name="d5">[MINUTE_UNITS_DIGIT] == 5</Expression>
+                <Expression name="d6">[MINUTE_UNITS_DIGIT] == 6</Expression>
+                <Expression name="d7">[MINUTE_UNITS_DIGIT] == 7</Expression>
+                <Expression name="d8">[MINUTE_UNITS_DIGIT] == 8</Expression>
+                <Expression name="d9">[MINUTE_UNITS_DIGIT] == 9</Expression>
+              </Expressions>
+              <Compare expression="d0">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_0" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d1">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_1" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d2">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_2" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d3">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_3" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d4">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_4" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d5">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_5" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d6">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_6" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d7">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_7" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d8">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_8" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d9">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="eastern_9" />
+                </PartImage>
+              </Compare>
+            </Condition>
+          </ListOption>
+          <ListOption id="deva">
+            <Condition>
+              <Expressions>
+                <Expression name="d0">[MINUTE_UNITS_DIGIT] == 0</Expression>
+                <Expression name="d1">[MINUTE_UNITS_DIGIT] == 1</Expression>
+                <Expression name="d2">[MINUTE_UNITS_DIGIT] == 2</Expression>
+                <Expression name="d3">[MINUTE_UNITS_DIGIT] == 3</Expression>
+                <Expression name="d4">[MINUTE_UNITS_DIGIT] == 4</Expression>
+                <Expression name="d5">[MINUTE_UNITS_DIGIT] == 5</Expression>
+                <Expression name="d6">[MINUTE_UNITS_DIGIT] == 6</Expression>
+                <Expression name="d7">[MINUTE_UNITS_DIGIT] == 7</Expression>
+                <Expression name="d8">[MINUTE_UNITS_DIGIT] == 8</Expression>
+                <Expression name="d9">[MINUTE_UNITS_DIGIT] == 9</Expression>
+              </Expressions>
+              <Compare expression="d0">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_0" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d1">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_1" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d2">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_2" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d3">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_3" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d4">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_4" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d5">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_5" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d6">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_6" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d7">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_7" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d8">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_8" />
+                </PartImage>
+              </Compare>
+              <Compare expression="d9">
+                <PartImage x="0" y="0" width="180" height="206" tintColor="#FF707070">
+                  <Image resource="deva_9" />
+                </PartImage>
+              </Compare>
+            </Condition>
+          </ListOption>
+        </ListConfiguration>
+      </Group>
+    </Group>
+  </Scene>
+</WatchFace>

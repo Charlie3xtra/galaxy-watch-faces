@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Fluks</string>
+  <string name="numerals">ANGKA</string>
+  <string name="color">WARNA</string>
+  <string name="p0">10:09</string>
+  <string name="western">ARAB, BARAT</string>
+  <string name="eastern">ARAB, TIMUR</string>
+  <string name="deva">DEVANAGARI</string>
+  <string name="p1">I</string>
+  <string name="p2">II</string>
+  <string name="p3">III</string>
+  <string name="p4">IV</string>
+  <string name="p5">V</string>
+  <string name="p6">VI</string>
+  <string name="p7">VII</string>
+  <string name="p8">VIII</string>
+  <string name="p9">IX</string>
+  <string name="p10">X</string>
+  <string name="p11">XI</string>
+  <string name="p12">XII</string>
+  <string name="p13">XIII</string>
+  <string name="p14">XIV</string>
+</resources>

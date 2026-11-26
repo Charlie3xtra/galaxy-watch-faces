@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Flux</string>
+  <string name="numerals">TALL</string>
+  <string name="color">FARGE</string>
+  <string name="p0">10:09</string>
+  <string name="western">ARABISK, VESTLIG</string>
+  <string name="eastern">ARABISK, ØSTLIG</string>
+  <string name="deva">DEVANAGARI</string>
+  <string name="p1">1</string>
+  <string name="p2">2</string>
+  <string name="p3">3</string>
+  <string name="p4">4</string>
+  <string name="p5">5</string>
+  <string name="p6">6</string>
+  <string name="p7">7</string>
+  <string name="p8">8</string>
+  <string name="p9">9</string>
+  <string name="p10">10</string>
+  <string name="p11">11</string>
+  <string name="p12">12</string>
+  <string name="p13">13</string>
+  <string name="p14">14</string>
+</resources>
