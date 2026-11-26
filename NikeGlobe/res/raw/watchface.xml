@@ -247,738 +247,394 @@
     </BitmapFont>
   </BitmapFonts>
   <Scene backgroundColor="#000000">
-    <Group name="active" x="0" y="0" width="480" height="480" alpha="255">
-      <Variant mode="AMBIENT" target="alpha" value="0" />
-      <PartDraw x="0" y="0" width="480" height="480">
-        <Rectangle x="0" y="0" width="480" height="480">
-          <Fill color="[CONFIGURATION.palette.2]" />
-        </Rectangle>
-      </PartDraw>
-      <Condition>
-        <Expressions>
-          <Expression name="s0">[SECOND] == 0</Expression>
-          <Expression name="s1">[SECOND] == 1</Expression>
-          <Expression name="s2">[SECOND] == 2</Expression>
-          <Expression name="s3">[SECOND] == 3</Expression>
-          <Expression name="s4">[SECOND] == 4</Expression>
-          <Expression name="s5">[SECOND] == 5</Expression>
-          <Expression name="s6">[SECOND] == 6</Expression>
-          <Expression name="s7">[SECOND] == 7</Expression>
-          <Expression name="s8">[SECOND] == 8</Expression>
-          <Expression name="s9">[SECOND] == 9</Expression>
-          <Expression name="s10">[SECOND] == 10</Expression>
-          <Expression name="s11">[SECOND] == 11</Expression>
-          <Expression name="s12">[SECOND] == 12</Expression>
-          <Expression name="s13">[SECOND] == 13</Expression>
-          <Expression name="s14">[SECOND] == 14</Expression>
-          <Expression name="s15">[SECOND] == 15</Expression>
-          <Expression name="s16">[SECOND] == 16</Expression>
-          <Expression name="s17">[SECOND] == 17</Expression>
-          <Expression name="s18">[SECOND] == 18</Expression>
-          <Expression name="s19">[SECOND] == 19</Expression>
-          <Expression name="s20">[SECOND] == 20</Expression>
-          <Expression name="s21">[SECOND] == 21</Expression>
-          <Expression name="s22">[SECOND] == 22</Expression>
-          <Expression name="s23">[SECOND] == 23</Expression>
-          <Expression name="s24">[SECOND] == 24</Expression>
-          <Expression name="s25">[SECOND] == 25</Expression>
-          <Expression name="s26">[SECOND] == 26</Expression>
-          <Expression name="s27">[SECOND] == 27</Expression>
-          <Expression name="s28">[SECOND] == 28</Expression>
-          <Expression name="s29">[SECOND] == 29</Expression>
-          <Expression name="s30">[SECOND] == 30</Expression>
-          <Expression name="s31">[SECOND] == 31</Expression>
-          <Expression name="s32">[SECOND] == 32</Expression>
-          <Expression name="s33">[SECOND] == 33</Expression>
-          <Expression name="s34">[SECOND] == 34</Expression>
-          <Expression name="s35">[SECOND] == 35</Expression>
-          <Expression name="s36">[SECOND] == 36</Expression>
-          <Expression name="s37">[SECOND] == 37</Expression>
-          <Expression name="s38">[SECOND] == 38</Expression>
-          <Expression name="s39">[SECOND] == 39</Expression>
-          <Expression name="s40">[SECOND] == 40</Expression>
-          <Expression name="s41">[SECOND] == 41</Expression>
-          <Expression name="s42">[SECOND] == 42</Expression>
-          <Expression name="s43">[SECOND] == 43</Expression>
-          <Expression name="s44">[SECOND] == 44</Expression>
-          <Expression name="s45">[SECOND] == 45</Expression>
-          <Expression name="s46">[SECOND] == 46</Expression>
-          <Expression name="s47">[SECOND] == 47</Expression>
-          <Expression name="s48">[SECOND] == 48</Expression>
-          <Expression name="s49">[SECOND] == 49</Expression>
-          <Expression name="s50">[SECOND] == 50</Expression>
-          <Expression name="s51">[SECOND] == 51</Expression>
-          <Expression name="s52">[SECOND] == 52</Expression>
-          <Expression name="s53">[SECOND] == 53</Expression>
-          <Expression name="s54">[SECOND] == 54</Expression>
-          <Expression name="s55">[SECOND] == 55</Expression>
-          <Expression name="s56">[SECOND] == 56</Expression>
-          <Expression name="s57">[SECOND] == 57</Expression>
-          <Expression name="s58">[SECOND] == 58</Expression>
-          <Expression name="s59">[SECOND] == 59</Expression>
-        </Expressions>
-        <Compare expression="s0">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_0" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s1">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_1" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s2">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_2" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s3">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_3" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s4">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_4" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s5">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_5" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s6">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_6" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s7">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_7" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s8">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_8" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s9">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_9" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s10">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_10" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s11">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_11" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s12">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_12" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s13">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_13" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s14">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_14" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s15">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_15" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s16">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_16" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s17">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_17" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s18">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_18" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s19">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_19" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s20">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_20" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s21">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_21" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s22">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_22" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s23">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_23" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s24">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_24" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s25">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_25" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s26">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_26" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s27">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_27" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s28">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_28" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s29">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_29" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s30">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_30" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s31">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_31" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s32">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_32" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s33">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_33" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s34">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_34" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s35">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_35" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s36">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_36" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s37">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_37" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s38">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_38" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s39">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_39" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s40">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_40" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s41">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_41" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s42">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_42" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s43">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_43" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s44">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_44" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s45">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_45" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s46">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_46" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s47">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_47" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s48">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_48" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s49">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_49" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s50">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_50" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s51">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_51" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s52">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_52" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s53">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_53" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s54">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_54" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s55">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_55" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s56">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_56" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s57">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_57" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s58">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_58" />
-          </PartImage>
-        </Compare>
-        <Compare expression="s59">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
-            <Image resource="globe_59" />
-          </PartImage>
-        </Compare>
-      </Condition>
-      <DigitalClock x="105" y="132" width="270" height="110">
-        <TimeText x="0" y="0" width="270" height="110" format="h" align="CENTER">
-          <BitmapFont family="h_filled" size="110" color="[CONFIGURATION.palette.4]" />
-        </TimeText>
-      </DigitalClock>
-      <DigitalClock x="105" y="242" width="270" height="110">
-        <TimeText x="0" y="0" width="270" height="110" format="mm" align="CENTER">
-          <BitmapFont family="m_filled" size="110" color="[CONFIGURATION.palette.4]" />
-        </TimeText>
-      </DigitalClock>
-      <PartImage x="203" y="359" width="74" height="27" tintColor="[CONFIGURATION.palette.0]">
-        <Image resource="swoosh" />
-      </PartImage>
-    </Group>
-    <Group name="always_on" x="0" y="0" width="480" height="480" alpha="0">
-      <Variant mode="AMBIENT" target="alpha" value="255" />
-      <Condition>
-        <Expressions>
-          <Expression name="p0">[CONFIGURATION.palette.0] == #FFE26F73 &amp;&amp; [CONFIGURATION.palette.1] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.2] == #FF000000</Expression>
-          <Expression name="p1">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FF8B96A4 &amp;&amp; [CONFIGURATION.palette.2] == #FF3D3D3D</Expression>
-          <Expression name="p2">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF5600 &amp;&amp; [CONFIGURATION.palette.2] == #FF424C58</Expression>
-          <Expression name="p3">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFC1FF62 &amp;&amp; [CONFIGURATION.palette.2] == #FF7E8A99</Expression>
-          <Expression name="p4">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFBD8F &amp;&amp; [CONFIGURATION.palette.2] == #FF65624D</Expression>
-          <Expression name="p5">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF8E88 &amp;&amp; [CONFIGURATION.palette.2] == #FF85715B</Expression>
-          <Expression name="p6">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFEF444C &amp;&amp; [CONFIGURATION.palette.2] == #FF3D425F</Expression>
-          <Expression name="p7">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFDDDDAE &amp;&amp; [CONFIGURATION.palette.2] == #FF827445</Expression>
-          <Expression name="p8">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FF99AFF8 &amp;&amp; [CONFIGURATION.palette.2] == #FF888A99</Expression>
-          <Expression name="p9">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFEE85 &amp;&amp; [CONFIGURATION.palette.2] == #FFB2AE18</Expression>
-          <Expression name="p10">[CONFIGURATION.palette.0] == #FF191312 &amp;&amp; [CONFIGURATION.palette.1] == #FF1A1211 &amp;&amp; [CONFIGURATION.palette.2] == #FFFF9668</Expression>
-          <Expression name="p11">[CONFIGURATION.palette.0] == #FFF6F9FE &amp;&amp; [CONFIGURATION.palette.1] == #FFF6F9FE &amp;&amp; [CONFIGURATION.palette.2] == #FF3F608F</Expression>
-          <Expression name="p12">[CONFIGURATION.palette.0] == #FFFAFAF0 &amp;&amp; [CONFIGURATION.palette.1] == #FFFAFAF0 &amp;&amp; [CONFIGURATION.palette.2] == #FF000000</Expression>
-          <Expression name="p13">[CONFIGURATION.palette.0] == #FF14161A &amp;&amp; [CONFIGURATION.palette.1] == #FF14161A &amp;&amp; [CONFIGURATION.palette.2] == #FFE4DED5</Expression>
-          <Expression name="p14">[CONFIGURATION.palette.0] == #FF000000 &amp;&amp; [CONFIGURATION.palette.1] == #FF000000 &amp;&amp; [CONFIGURATION.palette.2] == #FFDCFF00</Expression>
-          <Expression name="p15">[CONFIGURATION.palette.0] == #FF000000 &amp;&amp; [CONFIGURATION.palette.1] == #FF000000 &amp;&amp; [CONFIGURATION.palette.2] == #FFF1CCB1</Expression>
-          <Expression name="p16">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFC5DCA0 &amp;&amp; [CONFIGURATION.palette.2] == #FF000000</Expression>
-          <Expression name="p17">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFE55A67 &amp;&amp; [CONFIGURATION.palette.2] == #FF31302F</Expression>
-          <Expression name="p18">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF7822 &amp;&amp; [CONFIGURATION.palette.2] == #FF63708A</Expression>
-          <Expression name="p19">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFB7E1F3 &amp;&amp; [CONFIGURATION.palette.2] == #FFF37A63</Expression>
-          <Expression name="p20">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFC0E08E &amp;&amp; [CONFIGURATION.palette.2] == #FF4D4E4E</Expression>
-          <Expression name="p21">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFEB50 &amp;&amp; [CONFIGURATION.palette.2] == #FF86867F</Expression>
-          <Expression name="p22">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF772F &amp;&amp; [CONFIGURATION.palette.2] == #FF5E5E51</Expression>
-          <Expression name="p23">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFD5CB &amp;&amp; [CONFIGURATION.palette.2] == #FF999585</Expression>
-        </Expressions>
-        <Compare expression="p0">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p1">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p2">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p3">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p4">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p5">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p6">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p7">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p8">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p9">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p10">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p11">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p12">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p13">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p14">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p15">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p16">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p17">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p18">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p19">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p20">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p21">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p22">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-        <Compare expression="p23">
-          <PartDraw x="0" y="0" width="480" height="480">
-            <Rectangle x="0" y="0" width="480" height="480">
-              <Fill color="#FF000000" />
-            </Rectangle>
-          </PartDraw>
-        </Compare>
-      </Condition>
-      <Condition>
-        <Expressions>
-          <Expression name="p0">[CONFIGURATION.palette.0] == #FFE26F73 &amp;&amp; [CONFIGURATION.palette.1] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.2] == #FF000000</Expression>
-          <Expression name="p1">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FF8B96A4 &amp;&amp; [CONFIGURATION.palette.2] == #FF3D3D3D</Expression>
-          <Expression name="p2">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF5600 &amp;&amp; [CONFIGURATION.palette.2] == #FF424C58</Expression>
-          <Expression name="p3">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFC1FF62 &amp;&amp; [CONFIGURATION.palette.2] == #FF7E8A99</Expression>
-          <Expression name="p4">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFBD8F &amp;&amp; [CONFIGURATION.palette.2] == #FF65624D</Expression>
-          <Expression name="p5">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF8E88 &amp;&amp; [CONFIGURATION.palette.2] == #FF85715B</Expression>
-          <Expression name="p6">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFEF444C &amp;&amp; [CONFIGURATION.palette.2] == #FF3D425F</Expression>
-          <Expression name="p7">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFDDDDAE &amp;&amp; [CONFIGURATION.palette.2] == #FF827445</Expression>
-          <Expression name="p8">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FF99AFF8 &amp;&amp; [CONFIGURATION.palette.2] == #FF888A99</Expression>
-          <Expression name="p9">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFEE85 &amp;&amp; [CONFIGURATION.palette.2] == #FFB2AE18</Expression>
-          <Expression name="p10">[CONFIGURATION.palette.0] == #FF191312 &amp;&amp; [CONFIGURATION.palette.1] == #FF1A1211 &amp;&amp; [CONFIGURATION.palette.2] == #FFFF9668</Expression>
-          <Expression name="p11">[CONFIGURATION.palette.0] == #FFF6F9FE &amp;&amp; [CONFIGURATION.palette.1] == #FFF6F9FE &amp;&amp; [CONFIGURATION.palette.2] == #FF3F608F</Expression>
-          <Expression name="p12">[CONFIGURATION.palette.0] == #FFFAFAF0 &amp;&amp; [CONFIGURATION.palette.1] == #FFFAFAF0 &amp;&amp; [CONFIGURATION.palette.2] == #FF000000</Expression>
-          <Expression name="p13">[CONFIGURATION.palette.0] == #FF14161A &amp;&amp; [CONFIGURATION.palette.1] == #FF14161A &amp;&amp; [CONFIGURATION.palette.2] == #FFE4DED5</Expression>
-          <Expression name="p14">[CONFIGURATION.palette.0] == #FF000000 &amp;&amp; [CONFIGURATION.palette.1] == #FF000000 &amp;&amp; [CONFIGURATION.palette.2] == #FFDCFF00</Expression>
-          <Expression name="p15">[CONFIGURATION.palette.0] == #FF000000 &amp;&amp; [CONFIGURATION.palette.1] == #FF000000 &amp;&amp; [CONFIGURATION.palette.2] == #FFF1CCB1</Expression>
-          <Expression name="p16">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFC5DCA0 &amp;&amp; [CONFIGURATION.palette.2] == #FF000000</Expression>
-          <Expression name="p17">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFE55A67 &amp;&amp; [CONFIGURATION.palette.2] == #FF31302F</Expression>
-          <Expression name="p18">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF7822 &amp;&amp; [CONFIGURATION.palette.2] == #FF63708A</Expression>
-          <Expression name="p19">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFB7E1F3 &amp;&amp; [CONFIGURATION.palette.2] == #FFF37A63</Expression>
-          <Expression name="p20">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFC0E08E &amp;&amp; [CONFIGURATION.palette.2] == #FF4D4E4E</Expression>
-          <Expression name="p21">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFEB50 &amp;&amp; [CONFIGURATION.palette.2] == #FF86867F</Expression>
-          <Expression name="p22">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF772F &amp;&amp; [CONFIGURATION.palette.2] == #FF5E5E51</Expression>
-          <Expression name="p23">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFD5CB &amp;&amp; [CONFIGURATION.palette.2] == #FF999585</Expression>
-        </Expressions>
-        <Compare expression="p0">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#55606060">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p1">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#FF666666">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p2">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#FF636A80">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p3">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#FF7E8A99">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p4">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#FF848066">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p5">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#FF806A58">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p6">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#FF606896">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p7">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#FF998A59">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p8">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#FF9799AC">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p9">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#FF858210">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p10">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#54FF9668">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p11">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#59A7CAFB">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p12">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#66B0B0B0">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p13">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#4DB0B0B0">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p14">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#40DCFF00">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p15">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#40F1CCB1">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p16">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#40C5DCA0">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p17">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#40BAB3AE">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p18">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#FF596E8C">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p19">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#FFB34740">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p20">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#FF666666">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p21">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#FF73736D">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p22">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#FF9E886F">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p23">
-          <PartImage x="66" y="66" width="348" height="348" tintColor="#FF787668">
-            <Image resource="globe_ambient" />
-          </PartImage>
-        </Compare>
-      </Condition>
-      <Group name="ambient_filled" x="105" y="132" width="270" height="220">
+    <Group name="composition" x="0" y="0" width="480" height="480" scaleX="1.2" scaleY="1.2" pivotX="0.5" pivotY="0.5">
+      <Group name="active" x="0" y="0" width="480" height="480" alpha="255">
+        <Variant mode="AMBIENT" target="alpha" value="0" />
+        <PartDraw x="0" y="0" width="480" height="480">
+          <Rectangle x="0" y="0" width="480" height="480">
+            <Fill color="[CONFIGURATION.palette.2]" />
+          </Rectangle>
+        </PartDraw>
+        <Condition>
+          <Expressions>
+            <Expression name="s0">[SECOND] == 0</Expression>
+            <Expression name="s1">[SECOND] == 1</Expression>
+            <Expression name="s2">[SECOND] == 2</Expression>
+            <Expression name="s3">[SECOND] == 3</Expression>
+            <Expression name="s4">[SECOND] == 4</Expression>
+            <Expression name="s5">[SECOND] == 5</Expression>
+            <Expression name="s6">[SECOND] == 6</Expression>
+            <Expression name="s7">[SECOND] == 7</Expression>
+            <Expression name="s8">[SECOND] == 8</Expression>
+            <Expression name="s9">[SECOND] == 9</Expression>
+            <Expression name="s10">[SECOND] == 10</Expression>
+            <Expression name="s11">[SECOND] == 11</Expression>
+            <Expression name="s12">[SECOND] == 12</Expression>
+            <Expression name="s13">[SECOND] == 13</Expression>
+            <Expression name="s14">[SECOND] == 14</Expression>
+            <Expression name="s15">[SECOND] == 15</Expression>
+            <Expression name="s16">[SECOND] == 16</Expression>
+            <Expression name="s17">[SECOND] == 17</Expression>
+            <Expression name="s18">[SECOND] == 18</Expression>
+            <Expression name="s19">[SECOND] == 19</Expression>
+            <Expression name="s20">[SECOND] == 20</Expression>
+            <Expression name="s21">[SECOND] == 21</Expression>
+            <Expression name="s22">[SECOND] == 22</Expression>
+            <Expression name="s23">[SECOND] == 23</Expression>
+            <Expression name="s24">[SECOND] == 24</Expression>
+            <Expression name="s25">[SECOND] == 25</Expression>
+            <Expression name="s26">[SECOND] == 26</Expression>
+            <Expression name="s27">[SECOND] == 27</Expression>
+            <Expression name="s28">[SECOND] == 28</Expression>
+            <Expression name="s29">[SECOND] == 29</Expression>
+            <Expression name="s30">[SECOND] == 30</Expression>
+            <Expression name="s31">[SECOND] == 31</Expression>
+            <Expression name="s32">[SECOND] == 32</Expression>
+            <Expression name="s33">[SECOND] == 33</Expression>
+            <Expression name="s34">[SECOND] == 34</Expression>
+            <Expression name="s35">[SECOND] == 35</Expression>
+            <Expression name="s36">[SECOND] == 36</Expression>
+            <Expression name="s37">[SECOND] == 37</Expression>
+            <Expression name="s38">[SECOND] == 38</Expression>
+            <Expression name="s39">[SECOND] == 39</Expression>
+            <Expression name="s40">[SECOND] == 40</Expression>
+            <Expression name="s41">[SECOND] == 41</Expression>
+            <Expression name="s42">[SECOND] == 42</Expression>
+            <Expression name="s43">[SECOND] == 43</Expression>
+            <Expression name="s44">[SECOND] == 44</Expression>
+            <Expression name="s45">[SECOND] == 45</Expression>
+            <Expression name="s46">[SECOND] == 46</Expression>
+            <Expression name="s47">[SECOND] == 47</Expression>
+            <Expression name="s48">[SECOND] == 48</Expression>
+            <Expression name="s49">[SECOND] == 49</Expression>
+            <Expression name="s50">[SECOND] == 50</Expression>
+            <Expression name="s51">[SECOND] == 51</Expression>
+            <Expression name="s52">[SECOND] == 52</Expression>
+            <Expression name="s53">[SECOND] == 53</Expression>
+            <Expression name="s54">[SECOND] == 54</Expression>
+            <Expression name="s55">[SECOND] == 55</Expression>
+            <Expression name="s56">[SECOND] == 56</Expression>
+            <Expression name="s57">[SECOND] == 57</Expression>
+            <Expression name="s58">[SECOND] == 58</Expression>
+            <Expression name="s59">[SECOND] == 59</Expression>
+          </Expressions>
+          <Compare expression="s0">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_0" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s1">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_1" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s2">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_2" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s3">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_3" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s4">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_4" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s5">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_5" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s6">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_6" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s7">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_7" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s8">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_8" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s9">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_9" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s10">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_10" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s11">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_11" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s12">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_12" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s13">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_13" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s14">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_14" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s15">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_15" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s16">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_16" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s17">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_17" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s18">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_18" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s19">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_19" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s20">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_20" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s21">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_21" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s22">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_22" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s23">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_23" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s24">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_24" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s25">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_25" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s26">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_26" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s27">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_27" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s28">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_28" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s29">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_29" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s30">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_30" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s31">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_31" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s32">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_32" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s33">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_33" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s34">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_34" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s35">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_35" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s36">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_36" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s37">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_37" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s38">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_38" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s39">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_39" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s40">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_40" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s41">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_41" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s42">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_42" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s43">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_43" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s44">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_44" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s45">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_45" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s46">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_46" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s47">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_47" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s48">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_48" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s49">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_49" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s50">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_50" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s51">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_51" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s52">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_52" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s53">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_53" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s54">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_54" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s55">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_55" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s56">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_56" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s57">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_57" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s58">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_58" />
+            </PartImage>
+          </Compare>
+          <Compare expression="s59">
+            <PartImage x="66" y="66" width="348" height="348" tintColor="[CONFIGURATION.palette.3]">
+              <Image resource="globe_59" />
+            </PartImage>
+          </Compare>
+        </Condition>
+        <DigitalClock x="105" y="132" width="270" height="110">
+          <TimeText x="0" y="0" width="270" height="110" format="h" align="CENTER">
+            <BitmapFont family="h_filled" size="110" color="[CONFIGURATION.palette.4]" />
+          </TimeText>
+        </DigitalClock>
+        <DigitalClock x="105" y="242" width="270" height="110">
+          <TimeText x="0" y="0" width="270" height="110" format="mm" align="CENTER">
+            <BitmapFont family="m_filled" size="110" color="[CONFIGURATION.palette.4]" />
+          </TimeText>
+        </DigitalClock>
+        <PartImage x="203" y="359" width="74" height="27" tintColor="[CONFIGURATION.palette.0]">
+          <Image resource="swoosh" />
+        </PartImage>
+      </Group>
+      <Group name="always_on" x="0" y="0" width="480" height="480" alpha="0">
+        <Variant mode="AMBIENT" target="alpha" value="255" />
         <Condition>
           <Expressions>
             <Expression name="p0">[CONFIGURATION.palette.0] == #FFE26F73 &amp;&amp; [CONFIGURATION.palette.1] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.2] == #FF000000</Expression>
@@ -1007,188 +663,174 @@
             <Expression name="p23">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFD5CB &amp;&amp; [CONFIGURATION.palette.2] == #FF999585</Expression>
           </Expressions>
           <Compare expression="p0">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FF636363" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p1">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFB1B3B3" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p2">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFB1B3B3" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p3">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFB1B3B3" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p4">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFB1B3B3" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p5">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFB1B3B3" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p6">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFB1B3B3" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p7">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFB1B3B3" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p8">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFB1B3B3" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p9">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFB1B3B3" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p10">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FF8E4F34" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p11">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FF2C415D" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p12">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FF6D6D6D" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p13">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FF656360" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p14">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FF767E11" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p15">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FF7C5E49" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p16">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FF576340" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p17">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FF44282C" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p18">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFB1B3B3" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p19">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFB1B3B3" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p20">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFB1B3B3" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p21">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFB1B3B3" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p22">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFB1B3B3" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
           <Compare expression="p23">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFB1B3B3" />
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Rectangle x="0" y="0" width="480" height="480">
+                <Fill color="#FF000000" />
               </Rectangle>
             </PartDraw>
           </Compare>
         </Condition>
-        <Group name="digits_filled" renderMode="MASK" x="0" y="0" width="270" height="220">
-          <DigitalClock x="0" y="0" width="270" height="110">
-            <TimeText x="0" y="0" width="270" height="110" format="h" align="CENTER">
-              <BitmapFont family="h_filled" size="110" color="#FFFFFFFF" />
-            </TimeText>
-          </DigitalClock>
-          <DigitalClock x="0" y="110" width="270" height="110">
-            <TimeText x="0" y="0" width="270" height="110" format="mm" align="CENTER">
-              <BitmapFont family="m_filled" size="110" color="#FFFFFFFF" />
-            </TimeText>
-          </DigitalClock>
-        </Group>
-      </Group>
-      <Group name="ambient_outline" x="105" y="132" width="270" height="220">
         <Condition>
           <Expressions>
             <Expression name="p0">[CONFIGURATION.palette.0] == #FFE26F73 &amp;&amp; [CONFIGURATION.palette.1] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.2] == #FF000000</Expression>
@@ -1217,543 +859,695 @@
             <Expression name="p23">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFD5CB &amp;&amp; [CONFIGURATION.palette.2] == #FF999585</Expression>
           </Expressions>
           <Compare expression="p0">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFB1B3B3" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#55606060">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p1">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFFFFFFF" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#FF666666">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p2">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFFFFFFF" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#FF636A80">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p3">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFFFFFFF" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#FF7E8A99">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p4">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFFFFFFF" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#FF848066">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p5">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFFFFFFF" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#FF806A58">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p6">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFFFFFFF" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#FF606896">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p7">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFFFFFFF" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#FF998A59">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p8">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFFFFFFF" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#FF9799AC">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p9">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFFFFFFF" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#FF858210">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p10">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFFF9668" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#54FF9668">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p11">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FF84ABDF" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#59A7CAFB">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p12">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFFAFAF0" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#66B0B0B0">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p13">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFE4DADC" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#4DB0B0B0">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p14">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFDCFF00" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#40DCFF00">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p15">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFF1CCB1" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#40F1CCB1">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p16">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFC5DCA0" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#40C5DCA0">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p17">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFE55A67" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#40BAB3AE">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p18">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFFFFFFF" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#FF596E8C">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p19">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFFFFFFF" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#FFB34740">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p20">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFFFFFFF" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#FF666666">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p21">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFFFFFFF" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#FF73736D">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p22">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFFFFFFF" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#FF9E886F">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
           <Compare expression="p23">
-            <PartDraw x="0" y="0" width="270" height="220">
-              <Rectangle x="0" y="0" width="270" height="220">
-                <Fill color="#FFFFFFFF" />
-              </Rectangle>
-            </PartDraw>
+            <PartImage x="66" y="66" width="348" height="348" tintColor="#FF787668">
+              <Image resource="globe_ambient" />
+            </PartImage>
           </Compare>
         </Condition>
-        <Group name="digits_outline" renderMode="MASK" x="0" y="0" width="270" height="220">
-          <DigitalClock x="0" y="0" width="270" height="110">
-            <TimeText x="0" y="0" width="270" height="110" format="h" align="CENTER">
-              <BitmapFont family="h_outline" size="110" color="#FFFFFFFF" />
-            </TimeText>
-          </DigitalClock>
-          <DigitalClock x="0" y="110" width="270" height="110">
-            <TimeText x="0" y="0" width="270" height="110" format="mm" align="CENTER">
-              <BitmapFont family="m_outline" size="110" color="#FFFFFFFF" />
-            </TimeText>
-          </DigitalClock>
+        <Group name="ambient_filled" x="105" y="132" width="270" height="220">
+          <Condition>
+            <Expressions>
+              <Expression name="p0">[CONFIGURATION.palette.0] == #FFE26F73 &amp;&amp; [CONFIGURATION.palette.1] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.2] == #FF000000</Expression>
+              <Expression name="p1">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FF8B96A4 &amp;&amp; [CONFIGURATION.palette.2] == #FF3D3D3D</Expression>
+              <Expression name="p2">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF5600 &amp;&amp; [CONFIGURATION.palette.2] == #FF424C58</Expression>
+              <Expression name="p3">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFC1FF62 &amp;&amp; [CONFIGURATION.palette.2] == #FF7E8A99</Expression>
+              <Expression name="p4">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFBD8F &amp;&amp; [CONFIGURATION.palette.2] == #FF65624D</Expression>
+              <Expression name="p5">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF8E88 &amp;&amp; [CONFIGURATION.palette.2] == #FF85715B</Expression>
+              <Expression name="p6">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFEF444C &amp;&amp; [CONFIGURATION.palette.2] == #FF3D425F</Expression>
+              <Expression name="p7">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFDDDDAE &amp;&amp; [CONFIGURATION.palette.2] == #FF827445</Expression>
+              <Expression name="p8">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FF99AFF8 &amp;&amp; [CONFIGURATION.palette.2] == #FF888A99</Expression>
+              <Expression name="p9">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFEE85 &amp;&amp; [CONFIGURATION.palette.2] == #FFB2AE18</Expression>
+              <Expression name="p10">[CONFIGURATION.palette.0] == #FF191312 &amp;&amp; [CONFIGURATION.palette.1] == #FF1A1211 &amp;&amp; [CONFIGURATION.palette.2] == #FFFF9668</Expression>
+              <Expression name="p11">[CONFIGURATION.palette.0] == #FFF6F9FE &amp;&amp; [CONFIGURATION.palette.1] == #FFF6F9FE &amp;&amp; [CONFIGURATION.palette.2] == #FF3F608F</Expression>
+              <Expression name="p12">[CONFIGURATION.palette.0] == #FFFAFAF0 &amp;&amp; [CONFIGURATION.palette.1] == #FFFAFAF0 &amp;&amp; [CONFIGURATION.palette.2] == #FF000000</Expression>
+              <Expression name="p13">[CONFIGURATION.palette.0] == #FF14161A &amp;&amp; [CONFIGURATION.palette.1] == #FF14161A &amp;&amp; [CONFIGURATION.palette.2] == #FFE4DED5</Expression>
+              <Expression name="p14">[CONFIGURATION.palette.0] == #FF000000 &amp;&amp; [CONFIGURATION.palette.1] == #FF000000 &amp;&amp; [CONFIGURATION.palette.2] == #FFDCFF00</Expression>
+              <Expression name="p15">[CONFIGURATION.palette.0] == #FF000000 &amp;&amp; [CONFIGURATION.palette.1] == #FF000000 &amp;&amp; [CONFIGURATION.palette.2] == #FFF1CCB1</Expression>
+              <Expression name="p16">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFC5DCA0 &amp;&amp; [CONFIGURATION.palette.2] == #FF000000</Expression>
+              <Expression name="p17">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFE55A67 &amp;&amp; [CONFIGURATION.palette.2] == #FF31302F</Expression>
+              <Expression name="p18">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF7822 &amp;&amp; [CONFIGURATION.palette.2] == #FF63708A</Expression>
+              <Expression name="p19">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFB7E1F3 &amp;&amp; [CONFIGURATION.palette.2] == #FFF37A63</Expression>
+              <Expression name="p20">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFC0E08E &amp;&amp; [CONFIGURATION.palette.2] == #FF4D4E4E</Expression>
+              <Expression name="p21">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFEB50 &amp;&amp; [CONFIGURATION.palette.2] == #FF86867F</Expression>
+              <Expression name="p22">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF772F &amp;&amp; [CONFIGURATION.palette.2] == #FF5E5E51</Expression>
+              <Expression name="p23">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFD5CB &amp;&amp; [CONFIGURATION.palette.2] == #FF999585</Expression>
+            </Expressions>
+            <Compare expression="p0">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FF636363" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p1">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFB1B3B3" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p2">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFB1B3B3" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p3">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFB1B3B3" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p4">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFB1B3B3" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p5">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFB1B3B3" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p6">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFB1B3B3" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p7">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFB1B3B3" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p8">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFB1B3B3" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p9">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFB1B3B3" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p10">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FF8E4F34" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p11">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FF2C415D" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p12">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FF6D6D6D" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p13">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FF656360" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p14">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FF767E11" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p15">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FF7C5E49" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p16">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FF576340" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p17">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FF44282C" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p18">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFB1B3B3" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p19">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFB1B3B3" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p20">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFB1B3B3" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p21">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFB1B3B3" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p22">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFB1B3B3" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p23">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFB1B3B3" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+          </Condition>
+          <Group name="digits_filled" renderMode="MASK" x="0" y="0" width="270" height="220">
+            <DigitalClock x="0" y="0" width="270" height="110">
+              <TimeText x="0" y="0" width="270" height="110" format="h" align="CENTER">
+                <BitmapFont family="h_filled" size="110" color="#FFFFFFFF" />
+              </TimeText>
+            </DigitalClock>
+            <DigitalClock x="0" y="110" width="270" height="110">
+              <TimeText x="0" y="0" width="270" height="110" format="mm" align="CENTER">
+                <BitmapFont family="m_filled" size="110" color="#FFFFFFFF" />
+              </TimeText>
+            </DigitalClock>
+          </Group>
         </Group>
+        <Group name="ambient_outline" x="105" y="132" width="270" height="220">
+          <Condition>
+            <Expressions>
+              <Expression name="p0">[CONFIGURATION.palette.0] == #FFE26F73 &amp;&amp; [CONFIGURATION.palette.1] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.2] == #FF000000</Expression>
+              <Expression name="p1">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FF8B96A4 &amp;&amp; [CONFIGURATION.palette.2] == #FF3D3D3D</Expression>
+              <Expression name="p2">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF5600 &amp;&amp; [CONFIGURATION.palette.2] == #FF424C58</Expression>
+              <Expression name="p3">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFC1FF62 &amp;&amp; [CONFIGURATION.palette.2] == #FF7E8A99</Expression>
+              <Expression name="p4">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFBD8F &amp;&amp; [CONFIGURATION.palette.2] == #FF65624D</Expression>
+              <Expression name="p5">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF8E88 &amp;&amp; [CONFIGURATION.palette.2] == #FF85715B</Expression>
+              <Expression name="p6">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFEF444C &amp;&amp; [CONFIGURATION.palette.2] == #FF3D425F</Expression>
+              <Expression name="p7">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFDDDDAE &amp;&amp; [CONFIGURATION.palette.2] == #FF827445</Expression>
+              <Expression name="p8">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FF99AFF8 &amp;&amp; [CONFIGURATION.palette.2] == #FF888A99</Expression>
+              <Expression name="p9">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFEE85 &amp;&amp; [CONFIGURATION.palette.2] == #FFB2AE18</Expression>
+              <Expression name="p10">[CONFIGURATION.palette.0] == #FF191312 &amp;&amp; [CONFIGURATION.palette.1] == #FF1A1211 &amp;&amp; [CONFIGURATION.palette.2] == #FFFF9668</Expression>
+              <Expression name="p11">[CONFIGURATION.palette.0] == #FFF6F9FE &amp;&amp; [CONFIGURATION.palette.1] == #FFF6F9FE &amp;&amp; [CONFIGURATION.palette.2] == #FF3F608F</Expression>
+              <Expression name="p12">[CONFIGURATION.palette.0] == #FFFAFAF0 &amp;&amp; [CONFIGURATION.palette.1] == #FFFAFAF0 &amp;&amp; [CONFIGURATION.palette.2] == #FF000000</Expression>
+              <Expression name="p13">[CONFIGURATION.palette.0] == #FF14161A &amp;&amp; [CONFIGURATION.palette.1] == #FF14161A &amp;&amp; [CONFIGURATION.palette.2] == #FFE4DED5</Expression>
+              <Expression name="p14">[CONFIGURATION.palette.0] == #FF000000 &amp;&amp; [CONFIGURATION.palette.1] == #FF000000 &amp;&amp; [CONFIGURATION.palette.2] == #FFDCFF00</Expression>
+              <Expression name="p15">[CONFIGURATION.palette.0] == #FF000000 &amp;&amp; [CONFIGURATION.palette.1] == #FF000000 &amp;&amp; [CONFIGURATION.palette.2] == #FFF1CCB1</Expression>
+              <Expression name="p16">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFC5DCA0 &amp;&amp; [CONFIGURATION.palette.2] == #FF000000</Expression>
+              <Expression name="p17">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFE55A67 &amp;&amp; [CONFIGURATION.palette.2] == #FF31302F</Expression>
+              <Expression name="p18">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF7822 &amp;&amp; [CONFIGURATION.palette.2] == #FF63708A</Expression>
+              <Expression name="p19">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFB7E1F3 &amp;&amp; [CONFIGURATION.palette.2] == #FFF37A63</Expression>
+              <Expression name="p20">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFC0E08E &amp;&amp; [CONFIGURATION.palette.2] == #FF4D4E4E</Expression>
+              <Expression name="p21">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFEB50 &amp;&amp; [CONFIGURATION.palette.2] == #FF86867F</Expression>
+              <Expression name="p22">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF772F &amp;&amp; [CONFIGURATION.palette.2] == #FF5E5E51</Expression>
+              <Expression name="p23">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFD5CB &amp;&amp; [CONFIGURATION.palette.2] == #FF999585</Expression>
+            </Expressions>
+            <Compare expression="p0">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFB1B3B3" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p1">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFFFFFFF" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p2">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFFFFFFF" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p3">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFFFFFFF" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p4">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFFFFFFF" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p5">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFFFFFFF" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p6">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFFFFFFF" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p7">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFFFFFFF" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p8">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFFFFFFF" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p9">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFFFFFFF" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p10">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFFF9668" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p11">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FF84ABDF" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p12">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFFAFAF0" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p13">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFE4DADC" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p14">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFDCFF00" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p15">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFF1CCB1" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p16">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFC5DCA0" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p17">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFE55A67" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p18">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFFFFFFF" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p19">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFFFFFFF" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p20">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFFFFFFF" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p21">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFFFFFFF" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p22">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFFFFFFF" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+            <Compare expression="p23">
+              <PartDraw x="0" y="0" width="270" height="220">
+                <Rectangle x="0" y="0" width="270" height="220">
+                  <Fill color="#FFFFFFFF" />
+                </Rectangle>
+              </PartDraw>
+            </Compare>
+          </Condition>
+          <Group name="digits_outline" renderMode="MASK" x="0" y="0" width="270" height="220">
+            <DigitalClock x="0" y="0" width="270" height="110">
+              <TimeText x="0" y="0" width="270" height="110" format="h" align="CENTER">
+                <BitmapFont family="h_outline" size="110" color="#FFFFFFFF" />
+              </TimeText>
+            </DigitalClock>
+            <DigitalClock x="0" y="110" width="270" height="110">
+              <TimeText x="0" y="0" width="270" height="110" format="mm" align="CENTER">
+                <BitmapFont family="m_outline" size="110" color="#FFFFFFFF" />
+              </TimeText>
+            </DigitalClock>
+          </Group>
+        </Group>
+        <Condition>
+          <Expressions>
+            <Expression name="p0">[CONFIGURATION.palette.0] == #FFE26F73 &amp;&amp; [CONFIGURATION.palette.1] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.2] == #FF000000</Expression>
+            <Expression name="p1">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FF8B96A4 &amp;&amp; [CONFIGURATION.palette.2] == #FF3D3D3D</Expression>
+            <Expression name="p2">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF5600 &amp;&amp; [CONFIGURATION.palette.2] == #FF424C58</Expression>
+            <Expression name="p3">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFC1FF62 &amp;&amp; [CONFIGURATION.palette.2] == #FF7E8A99</Expression>
+            <Expression name="p4">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFBD8F &amp;&amp; [CONFIGURATION.palette.2] == #FF65624D</Expression>
+            <Expression name="p5">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF8E88 &amp;&amp; [CONFIGURATION.palette.2] == #FF85715B</Expression>
+            <Expression name="p6">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFEF444C &amp;&amp; [CONFIGURATION.palette.2] == #FF3D425F</Expression>
+            <Expression name="p7">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFDDDDAE &amp;&amp; [CONFIGURATION.palette.2] == #FF827445</Expression>
+            <Expression name="p8">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FF99AFF8 &amp;&amp; [CONFIGURATION.palette.2] == #FF888A99</Expression>
+            <Expression name="p9">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFEE85 &amp;&amp; [CONFIGURATION.palette.2] == #FFB2AE18</Expression>
+            <Expression name="p10">[CONFIGURATION.palette.0] == #FF191312 &amp;&amp; [CONFIGURATION.palette.1] == #FF1A1211 &amp;&amp; [CONFIGURATION.palette.2] == #FFFF9668</Expression>
+            <Expression name="p11">[CONFIGURATION.palette.0] == #FFF6F9FE &amp;&amp; [CONFIGURATION.palette.1] == #FFF6F9FE &amp;&amp; [CONFIGURATION.palette.2] == #FF3F608F</Expression>
+            <Expression name="p12">[CONFIGURATION.palette.0] == #FFFAFAF0 &amp;&amp; [CONFIGURATION.palette.1] == #FFFAFAF0 &amp;&amp; [CONFIGURATION.palette.2] == #FF000000</Expression>
+            <Expression name="p13">[CONFIGURATION.palette.0] == #FF14161A &amp;&amp; [CONFIGURATION.palette.1] == #FF14161A &amp;&amp; [CONFIGURATION.palette.2] == #FFE4DED5</Expression>
+            <Expression name="p14">[CONFIGURATION.palette.0] == #FF000000 &amp;&amp; [CONFIGURATION.palette.1] == #FF000000 &amp;&amp; [CONFIGURATION.palette.2] == #FFDCFF00</Expression>
+            <Expression name="p15">[CONFIGURATION.palette.0] == #FF000000 &amp;&amp; [CONFIGURATION.palette.1] == #FF000000 &amp;&amp; [CONFIGURATION.palette.2] == #FFF1CCB1</Expression>
+            <Expression name="p16">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFC5DCA0 &amp;&amp; [CONFIGURATION.palette.2] == #FF000000</Expression>
+            <Expression name="p17">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFE55A67 &amp;&amp; [CONFIGURATION.palette.2] == #FF31302F</Expression>
+            <Expression name="p18">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF7822 &amp;&amp; [CONFIGURATION.palette.2] == #FF63708A</Expression>
+            <Expression name="p19">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFB7E1F3 &amp;&amp; [CONFIGURATION.palette.2] == #FFF37A63</Expression>
+            <Expression name="p20">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFC0E08E &amp;&amp; [CONFIGURATION.palette.2] == #FF4D4E4E</Expression>
+            <Expression name="p21">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFEB50 &amp;&amp; [CONFIGURATION.palette.2] == #FF86867F</Expression>
+            <Expression name="p22">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF772F &amp;&amp; [CONFIGURATION.palette.2] == #FF5E5E51</Expression>
+            <Expression name="p23">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFD5CB &amp;&amp; [CONFIGURATION.palette.2] == #FF999585</Expression>
+          </Expressions>
+          <Compare expression="p0">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFE26F73">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p1">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p2">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p3">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p4">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p5">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p6">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p7">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p8">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p9">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p10">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFF9668">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p11">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FF5A81B5">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p12">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFAFAF0">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p13">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFE4DED5">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p14">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFDCFF00">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p15">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFF1CCB1">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p16">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p17">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p18">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p19">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p20">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p21">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p22">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+          <Compare expression="p23">
+            <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
+              <Image resource="swoosh" />
+            </PartImage>
+          </Compare>
+        </Condition>
       </Group>
-      <Condition>
-        <Expressions>
-          <Expression name="p0">[CONFIGURATION.palette.0] == #FFE26F73 &amp;&amp; [CONFIGURATION.palette.1] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.2] == #FF000000</Expression>
-          <Expression name="p1">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FF8B96A4 &amp;&amp; [CONFIGURATION.palette.2] == #FF3D3D3D</Expression>
-          <Expression name="p2">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF5600 &amp;&amp; [CONFIGURATION.palette.2] == #FF424C58</Expression>
-          <Expression name="p3">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFC1FF62 &amp;&amp; [CONFIGURATION.palette.2] == #FF7E8A99</Expression>
-          <Expression name="p4">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFBD8F &amp;&amp; [CONFIGURATION.palette.2] == #FF65624D</Expression>
-          <Expression name="p5">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF8E88 &amp;&amp; [CONFIGURATION.palette.2] == #FF85715B</Expression>
-          <Expression name="p6">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFEF444C &amp;&amp; [CONFIGURATION.palette.2] == #FF3D425F</Expression>
-          <Expression name="p7">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFDDDDAE &amp;&amp; [CONFIGURATION.palette.2] == #FF827445</Expression>
-          <Expression name="p8">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FF99AFF8 &amp;&amp; [CONFIGURATION.palette.2] == #FF888A99</Expression>
-          <Expression name="p9">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFEE85 &amp;&amp; [CONFIGURATION.palette.2] == #FFB2AE18</Expression>
-          <Expression name="p10">[CONFIGURATION.palette.0] == #FF191312 &amp;&amp; [CONFIGURATION.palette.1] == #FF1A1211 &amp;&amp; [CONFIGURATION.palette.2] == #FFFF9668</Expression>
-          <Expression name="p11">[CONFIGURATION.palette.0] == #FFF6F9FE &amp;&amp; [CONFIGURATION.palette.1] == #FFF6F9FE &amp;&amp; [CONFIGURATION.palette.2] == #FF3F608F</Expression>
-          <Expression name="p12">[CONFIGURATION.palette.0] == #FFFAFAF0 &amp;&amp; [CONFIGURATION.palette.1] == #FFFAFAF0 &amp;&amp; [CONFIGURATION.palette.2] == #FF000000</Expression>
-          <Expression name="p13">[CONFIGURATION.palette.0] == #FF14161A &amp;&amp; [CONFIGURATION.palette.1] == #FF14161A &amp;&amp; [CONFIGURATION.palette.2] == #FFE4DED5</Expression>
-          <Expression name="p14">[CONFIGURATION.palette.0] == #FF000000 &amp;&amp; [CONFIGURATION.palette.1] == #FF000000 &amp;&amp; [CONFIGURATION.palette.2] == #FFDCFF00</Expression>
-          <Expression name="p15">[CONFIGURATION.palette.0] == #FF000000 &amp;&amp; [CONFIGURATION.palette.1] == #FF000000 &amp;&amp; [CONFIGURATION.palette.2] == #FFF1CCB1</Expression>
-          <Expression name="p16">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFC5DCA0 &amp;&amp; [CONFIGURATION.palette.2] == #FF000000</Expression>
-          <Expression name="p17">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFE55A67 &amp;&amp; [CONFIGURATION.palette.2] == #FF31302F</Expression>
-          <Expression name="p18">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF7822 &amp;&amp; [CONFIGURATION.palette.2] == #FF63708A</Expression>
-          <Expression name="p19">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFB7E1F3 &amp;&amp; [CONFIGURATION.palette.2] == #FFF37A63</Expression>
-          <Expression name="p20">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFC0E08E &amp;&amp; [CONFIGURATION.palette.2] == #FF4D4E4E</Expression>
-          <Expression name="p21">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFEB50 &amp;&amp; [CONFIGURATION.palette.2] == #FF86867F</Expression>
-          <Expression name="p22">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFF772F &amp;&amp; [CONFIGURATION.palette.2] == #FF5E5E51</Expression>
-          <Expression name="p23">[CONFIGURATION.palette.0] == #FFFFFFFF &amp;&amp; [CONFIGURATION.palette.1] == #FFFFD5CB &amp;&amp; [CONFIGURATION.palette.2] == #FF999585</Expression>
-        </Expressions>
-        <Compare expression="p0">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFE26F73">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p1">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p2">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p3">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p4">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p5">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p6">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p7">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p8">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p9">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p10">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFF9668">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p11">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FF5A81B5">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p12">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFAFAF0">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p13">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFE4DED5">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p14">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFDCFF00">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p15">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFF1CCB1">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p16">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p17">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p18">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p19">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p20">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p21">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p22">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-        <Compare expression="p23">
-          <PartImage x="203" y="359" width="74" height="27" tintColor="#FFFFFFFF">
-            <Image resource="swoosh" />
-          </PartImage>
-        </Compare>
-      </Condition>
     </Group>
-    <ComplicationSlot slotId="1" x="57" y="68" width="70" height="70" supportedTypes="EMPTY SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE">
-      <DefaultProviderPolicy defaultSystemProvider="STEP_COUNT" defaultSystemProviderType="SHORT_TEXT" primaryProvider="com.samsung.android.wear.shealth/com.samsung.android.wear.shealth.complications.exercise.WorkoutComplicationProviderService" primaryProviderType="MONOCHROMATIC_IMAGE" />
-      <BoundingOval x="0" y="0" width="70" height="70" />
-      <Complication type="EMPTY" />
-      <Complication type="SHORT_TEXT">
-        <Group name="workout_SHORT_TEXT" x="0" y="0" width="70" height="70">
-          <Variant mode="AMBIENT" target="alpha" value="90" />
-          <PartDraw x="3" y="3" width="64" height="64">
-            <Ellipse x="0" y="0" width="64" height="64">
-              <Fill color="#A51B1B1B" />
-            </Ellipse>
-          </PartDraw>
-          <PartImage x="21" y="8" width="28" height="28" tintColor="[CONFIGURATION.palette.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-          <PartText x="2" y="35" width="66" height="27">
-            <Text align="CENTER">
-              <Font family="SYNC_TO_DEVICE" size="18" color="[CONFIGURATION.palette.0]">
-                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
-                </Template>
-              </Font>
-            </Text>
-          </PartText>
-        </Group>
-      </Complication>
-      <Complication type="MONOCHROMATIC_IMAGE">
-        <Group name="workout_MONOCHROMATIC_IMAGE" x="0" y="0" width="70" height="70">
-          <Variant mode="AMBIENT" target="alpha" value="90" />
-          <PartDraw x="3" y="3" width="64" height="64">
-            <Ellipse x="0" y="0" width="64" height="64">
-              <Fill color="#A51B1B1B" />
-            </Ellipse>
-          </PartDraw>
-          <PartImage x="11" y="11" width="48" height="48" tintColor="[CONFIGURATION.palette.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-        </Group>
-      </Complication>
-      <Complication type="SMALL_IMAGE">
-        <Group name="workout_SMALL_IMAGE" x="0" y="0" width="70" height="70">
-          <Variant mode="AMBIENT" target="alpha" value="90" />
-          <PartDraw x="3" y="3" width="64" height="64">
-            <Ellipse x="0" y="0" width="64" height="64">
-              <Fill color="#A51B1B1B" />
-            </Ellipse>
-          </PartDraw>
-          <PartImage x="11" y="11" width="48" height="48">
-            <Image resource="[COMPLICATION.SMALL_IMAGE]" />
-          </PartImage>
-        </Group>
-      </Complication>
-    </ComplicationSlot>
-    <ComplicationSlot slotId="2" x="353" y="68" width="70" height="70" supportedTypes="EMPTY SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE">
-      <DefaultProviderPolicy defaultSystemProvider="UNREAD_NOTIFICATION_COUNT" defaultSystemProviderType="SHORT_TEXT" />
-      <BoundingOval x="0" y="0" width="70" height="70" />
-      <Complication type="EMPTY" />
-      <Complication type="SHORT_TEXT">
-        <Group name="messages_SHORT_TEXT" x="0" y="0" width="70" height="70">
-          <Variant mode="AMBIENT" target="alpha" value="90" />
-          <PartDraw x="3" y="3" width="64" height="64">
-            <Ellipse x="0" y="0" width="64" height="64">
-              <Fill color="#A51B1B1B" />
-            </Ellipse>
-          </PartDraw>
-          <PartImage x="21" y="8" width="28" height="28" tintColor="[CONFIGURATION.palette.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-          <PartText x="2" y="35" width="66" height="27">
-            <Text align="CENTER">
-              <Font family="SYNC_TO_DEVICE" size="18" color="[CONFIGURATION.palette.0]">
-                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
-                </Template>
-              </Font>
-            </Text>
-          </PartText>
-        </Group>
-      </Complication>
-      <Complication type="MONOCHROMATIC_IMAGE">
-        <Group name="messages_MONOCHROMATIC_IMAGE" x="0" y="0" width="70" height="70">
-          <Variant mode="AMBIENT" target="alpha" value="90" />
-          <PartDraw x="3" y="3" width="64" height="64">
-            <Ellipse x="0" y="0" width="64" height="64">
-              <Fill color="#A51B1B1B" />
-            </Ellipse>
-          </PartDraw>
-          <PartImage x="11" y="11" width="48" height="48" tintColor="[CONFIGURATION.palette.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-        </Group>
-      </Complication>
-      <Complication type="SMALL_IMAGE">
-        <Group name="messages_SMALL_IMAGE" x="0" y="0" width="70" height="70">
-          <Variant mode="AMBIENT" target="alpha" value="90" />
-          <PartDraw x="3" y="3" width="64" height="64">
-            <Ellipse x="0" y="0" width="64" height="64">
-              <Fill color="#A51B1B1B" />
-            </Ellipse>
-          </PartDraw>
-          <PartImage x="11" y="11" width="48" height="48">
-            <Image resource="[COMPLICATION.SMALL_IMAGE]" />
-          </PartImage>
-        </Group>
-      </Complication>
-    </ComplicationSlot>
-    <ComplicationSlot slotId="3" x="57" y="342" width="70" height="70" supportedTypes="EMPTY SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE">
-      <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" primaryProvider="com.samsung.android.watch.timer/com.samsung.android.watch.timer.complications.TimerComplicationProviderService" primaryProviderType="MONOCHROMATIC_IMAGE" />
-      <BoundingOval x="0" y="0" width="70" height="70" />
-      <Complication type="EMPTY" />
-      <Complication type="SHORT_TEXT">
-        <Group name="timer_SHORT_TEXT" x="0" y="0" width="70" height="70">
-          <Variant mode="AMBIENT" target="alpha" value="90" />
-          <PartDraw x="3" y="3" width="64" height="64">
-            <Ellipse x="0" y="0" width="64" height="64">
-              <Fill color="#A51B1B1B" />
-            </Ellipse>
-          </PartDraw>
-          <PartImage x="21" y="8" width="28" height="28" tintColor="[CONFIGURATION.palette.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-          <PartText x="2" y="35" width="66" height="27">
-            <Text align="CENTER">
-              <Font family="SYNC_TO_DEVICE" size="18" color="[CONFIGURATION.palette.0]">
-                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
-                </Template>
-              </Font>
-            </Text>
-          </PartText>
-        </Group>
-      </Complication>
-      <Complication type="MONOCHROMATIC_IMAGE">
-        <Group name="timer_MONOCHROMATIC_IMAGE" x="0" y="0" width="70" height="70">
-          <Variant mode="AMBIENT" target="alpha" value="90" />
-          <PartDraw x="3" y="3" width="64" height="64">
-            <Ellipse x="0" y="0" width="64" height="64">
-              <Fill color="#A51B1B1B" />
-            </Ellipse>
-          </PartDraw>
-          <PartImage x="11" y="11" width="48" height="48" tintColor="[CONFIGURATION.palette.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-        </Group>
-      </Complication>
-      <Complication type="SMALL_IMAGE">
-        <Group name="timer_SMALL_IMAGE" x="0" y="0" width="70" height="70">
-          <Variant mode="AMBIENT" target="alpha" value="90" />
-          <PartDraw x="3" y="3" width="64" height="64">
-            <Ellipse x="0" y="0" width="64" height="64">
-              <Fill color="#A51B1B1B" />
-            </Ellipse>
-          </PartDraw>
-          <PartImage x="11" y="11" width="48" height="48">
-            <Image resource="[COMPLICATION.SMALL_IMAGE]" />
-          </PartImage>
-        </Group>
-      </Complication>
-    </ComplicationSlot>
-    <ComplicationSlot slotId="4" x="353" y="342" width="70" height="70" supportedTypes="EMPTY SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE">
-      <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" primaryProvider="com.samsung.android.mediacontroller/com.samsung.android.mediacontroller.experiences.media.custom.complication.MediaComplicationProviderService" primaryProviderType="MONOCHROMATIC_IMAGE" />
-      <BoundingOval x="0" y="0" width="70" height="70" />
-      <Complication type="EMPTY" />
-      <Complication type="SHORT_TEXT">
-        <Group name="music_SHORT_TEXT" x="0" y="0" width="70" height="70">
-          <Variant mode="AMBIENT" target="alpha" value="90" />
-          <PartDraw x="3" y="3" width="64" height="64">
-            <Ellipse x="0" y="0" width="64" height="64">
-              <Fill color="#A51B1B1B" />
-            </Ellipse>
-          </PartDraw>
-          <PartImage x="21" y="8" width="28" height="28" tintColor="[CONFIGURATION.palette.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-          <PartText x="2" y="35" width="66" height="27">
-            <Text align="CENTER">
-              <Font family="SYNC_TO_DEVICE" size="18" color="[CONFIGURATION.palette.0]">
-                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
-                </Template>
-              </Font>
-            </Text>
-          </PartText>
-        </Group>
-      </Complication>
-      <Complication type="MONOCHROMATIC_IMAGE">
-        <Group name="music_MONOCHROMATIC_IMAGE" x="0" y="0" width="70" height="70">
-          <Variant mode="AMBIENT" target="alpha" value="90" />
-          <PartDraw x="3" y="3" width="64" height="64">
-            <Ellipse x="0" y="0" width="64" height="64">
-              <Fill color="#A51B1B1B" />
-            </Ellipse>
-          </PartDraw>
-          <PartImage x="11" y="11" width="48" height="48" tintColor="[CONFIGURATION.palette.0]">
-            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
-          </PartImage>
-        </Group>
-      </Complication>
-      <Complication type="SMALL_IMAGE">
-        <Group name="music_SMALL_IMAGE" x="0" y="0" width="70" height="70">
-          <Variant mode="AMBIENT" target="alpha" value="90" />
-          <PartDraw x="3" y="3" width="64" height="64">
-            <Ellipse x="0" y="0" width="64" height="64">
-              <Fill color="#A51B1B1B" />
-            </Ellipse>
-          </PartDraw>
-          <PartImage x="11" y="11" width="48" height="48">
-            <Image resource="[COMPLICATION.SMALL_IMAGE]" />
-          </PartImage>
-        </Group>
-      </Complication>
-    </ComplicationSlot>
   </Scene>
 </WatchFace>

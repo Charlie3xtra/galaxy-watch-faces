@@ -46,4 +46,4 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 
 ## Nike 地球 · Nike Globe
 
-[下载 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/nike-globe-1.0)。WFF 4 单 APK。亮屏跟随当前秒数显示固件中的 Globe_00 至 Globe_59，息屏切换到独立 Globe 网格。上下两行使用内嵌 Vivaldi 字体的小时和分钟连字。提供 23 种固件配色与一个参考官方预览图制作的黑底珊瑚色方案。圆屏四角使用 Wear OS 组件，默认绑定三星运动、未读通知、计时器与媒体控制。中央标志为装饰。APK 可直接从 NikeGlobe/build.ps1 构建，重新生成资源需要 Pillow、fontTools 和 24S132 提取目录。
+[下载 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/nike-globe-1.1)。WFF 4 单 APK。亮屏跟随当前秒数显示固件中的 Globe_00 至 Globe_59，息屏切换到独立 Globe 网格。上下两行使用内嵌 Vivaldi 字体的小时和分钟连字。提供 23 种固件配色与一个参考官方预览图制作的黑底珊瑚色方案。1.1 移除四角组件，网格、时间和标志整体放大 20%。中央标志为装饰。APK 可直接从 NikeGlobe/build.ps1 构建，重新生成资源需要 Pillow、fontTools 和 24S132 提取目录。

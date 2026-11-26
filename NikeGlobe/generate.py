@@ -147,7 +147,9 @@ config=lambda i:f'[CONFIGURATION.palette.{i}]'
 def background(parent,color):
     p=sub(parent,'PartDraw',**rect(0,0,480,480))
     sub(sub(p,'Rectangle',**rect(0,0,480,480)),'Fill',color=color)
-active=group(scene,'active')
+composition=group(scene,'composition')
+composition.attrib.update(scaleX='1.2',scaleY='1.2',pivotX='0.5',pivotY='0.5')
+active=group(composition,'active')
 mode(active,False)
 background(active,config(2))
 c,e=branch(active)
@@ -156,7 +158,7 @@ for sec in range(60):
 for row in ('h','m'):clock(active,row,'filled',config(4))
 picture(active,'swoosh',203,359,74,27,config(0))
 
-ambient=group(scene,'always_on')
+ambient=group(composition,'always_on')
 mode(ambient,True)
 def palette_cases(parent,index,draw_item):
     c,e=branch(parent)
@@ -178,32 +180,6 @@ for family,index in [('filled',2),('outline',3)]:
         t=sub(c,'TimeText',**rect(0,0,270,110),format='h' if row=='h' else 'mm',align='CENTER')
         sub(t,'BitmapFont',family=row+'_'+family,size=110,color='#FFFFFFFF')
 palette_cases(ambient,4,lambda node,col:picture(node,'swoosh',203,359,74,27,col))
-providers=[
- ('workout',92,103,'com.samsung.android.wear.shealth/com.samsung.android.wear.shealth.complications.exercise.WorkoutComplicationProviderService','STEP_COUNT'),
- ('messages',388,103,None,'UNREAD_NOTIFICATION_COUNT'),
- ('timer',92,377,'com.samsung.android.watch.timer/com.samsung.android.watch.timer.complications.TimerComplicationProviderService','EMPTY'),
- ('music',388,377,'com.samsung.android.mediacontroller/com.samsung.android.mediacontroller.experiences.media.custom.complication.MediaComplicationProviderService','EMPTY')]
-for index,(key,cx,cy,provider,fallback) in enumerate(providers,1):
-    slot=sub(scene,'ComplicationSlot',slotId=index,**rect(cx-35,cy-35,70,70),supportedTypes='EMPTY SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE')
-    policy=dict(defaultSystemProvider=fallback,defaultSystemProviderType='EMPTY' if fallback=='EMPTY' else 'SHORT_TEXT')
-    if provider:policy.update(primaryProvider=provider,primaryProviderType='MONOCHROMATIC_IMAGE')
-    sub(slot,'DefaultProviderPolicy',**policy)
-    sub(slot,'BoundingOval',**rect(0,0,70,70))
-    sub(slot,'Complication',type='EMPTY')
-    for k in ('SHORT_TEXT','MONOCHROMATIC_IMAGE','SMALL_IMAGE'):
-        g=sub(sub(slot,'Complication',type=k),'Group',name=f'{key}_{k}',**rect(0,0,70,70))
-        sub(g,'Variant',mode='AMBIENT',target='alpha',value=90)
-        p=sub(g,'PartDraw',**rect(3,3,64,64))
-        sub(sub(p,'Ellipse',**rect(0,0,64,64)),'Fill',color='#A51B1B1B')
-        if k=='SHORT_TEXT':
-            picture(g,'[COMPLICATION.MONOCHROMATIC_IMAGE]',21,8,28,28,config(0))
-            pt=sub(g,'PartText',**rect(2,35,66,27))
-            f=sub(sub(pt,'Text',align='CENTER'),'Font',family='SYNC_TO_DEVICE',size=18,color=config(0))
-            tpl=sub(f,'Template')
-            tpl.text='%s'
-            sub(tpl,'Parameter',expression='[COMPLICATION.TEXT]')
-        else:
-            picture(g,f'[COMPLICATION.{k}]',11,11,48,48,config(0) if k=='MONOCHROMATIC_IMAGE' else None)
 save_xml(ROOT/'res/raw/watchface.xml',face)
 
 def composite(preview,img,x,y,color):
@@ -216,7 +192,7 @@ for row,s,y in [('h','10',132),('m','09',242)]:
     im=sprites[(row+'_filled',s)]
     composite(preview,im,(480-im.width)//2,y,'white')
 composite(preview,Image.open(draw/'swoosh.png'),203,359,'#E26F73')
-preview.save(draw/'preview.png')
+preview.crop((40,40,440,440)).resize((480,480),Image.Resampling.LANCZOS).save(draw/'preview.png')
 for loc in props.glob('*.lproj'):
     data={}
     for path in loc.glob('*.json'):data.update(json.loads(path.read_text('utf8')))
