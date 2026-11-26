@@ -40,7 +40,13 @@
   <string name="quick_weather">Clima</string>
   <string name="quick_weather_rich">Temperatura</string>
   <string name="quick_weather_uv_index">Índice UV</string>
+  <string name="quick_timer">Timer</string>
+  <string name="quick_stopwatch">Cronómetro</string>
+  <string name="quick_world_clock">Reloj mundial</string>
+  <string name="quick_astronomy_luna">Luna</string>
+  <string name="quick_altitude">Elevation</string>
   <string name="quick_off">No</string>
   <string name="bezel">Abajo en medio</string>
+  <string name="timing_preset">Timer · Reloj mundial</string>
   <string name="music_caption">MÚSICA</string>
 </resources>

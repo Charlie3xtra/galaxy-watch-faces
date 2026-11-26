@@ -40,7 +40,13 @@
   <string name="quick_weather">Väder</string>
   <string name="quick_weather_rich">Temperatur</string>
   <string name="quick_weather_uv_index">UV-index</string>
+  <string name="quick_timer">Timer</string>
+  <string name="quick_stopwatch">Tidtagarur</string>
+  <string name="quick_world_clock">Världsklocka</string>
+  <string name="quick_astronomy_luna">MÅNEN</string>
+  <string name="quick_altitude">Höjd</string>
   <string name="quick_off">Av</string>
   <string name="bezel">Nedtill mitten</string>
+  <string name="timing_preset">Timer · Världsklocka</string>
   <string name="music_caption">MUSIK</string>
 </resources>

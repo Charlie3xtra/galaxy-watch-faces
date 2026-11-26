@@ -40,7 +40,13 @@
   <string name="quick_weather">Pogoda</string>
   <string name="quick_weather_rich">Temperatura</string>
   <string name="quick_weather_uv_index">Indeks UV</string>
+  <string name="quick_timer">Minutnik</string>
+  <string name="quick_stopwatch">Stoper</string>
+  <string name="quick_world_clock">Zegary świata</string>
+  <string name="quick_astronomy_luna">Księżyc</string>
+  <string name="quick_altitude">Wysokość n.p.m.</string>
   <string name="quick_off">Wył.</string>
   <string name="bezel">Środkowa dolna</string>
+  <string name="timing_preset">Minutnik · Zegary świata</string>
   <string name="music_caption">MUZYKA</string>
 </resources>

@@ -40,7 +40,13 @@
   <string name="quick_weather">Meteo</string>
   <string name="quick_weather_rich">Temperatura</string>
   <string name="quick_weather_uv_index">Indice UV</string>
+  <string name="quick_timer">Timer</string>
+  <string name="quick_stopwatch">Cronometro</string>
+  <string name="quick_world_clock">Ore locali</string>
+  <string name="quick_astronomy_luna">Luna</string>
+  <string name="quick_altitude">Altitudine</string>
   <string name="quick_off">Nessuna</string>
   <string name="bezel">In basso al centro</string>
+  <string name="timing_preset">Timer · Ore locali</string>
   <string name="music_caption">MUSICA</string>
 </resources>

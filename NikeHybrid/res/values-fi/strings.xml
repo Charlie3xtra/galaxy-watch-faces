@@ -40,7 +40,13 @@
   <string name="quick_weather">Sää</string>
   <string name="quick_weather_rich">Lämpötila</string>
   <string name="quick_weather_uv_index">UV-indeksi</string>
+  <string name="quick_timer">Ajastin</string>
+  <string name="quick_stopwatch">Ajanotto</string>
+  <string name="quick_world_clock">Maailmankello</string>
+  <string name="quick_astronomy_luna">Kuu</string>
+  <string name="quick_altitude">Korkeus</string>
   <string name="quick_off">Pois</string>
   <string name="bezel">Alhaalla keskellä</string>
+  <string name="timing_preset">Ajastin · Maailmankello</string>
   <string name="music_caption">MUSIIKKI</string>
 </resources>

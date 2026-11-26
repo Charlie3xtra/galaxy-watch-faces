@@ -40,7 +40,13 @@
   <string name="quick_weather">天氣</string>
   <string name="quick_weather_rich">温度</string>
   <string name="quick_weather_uv_index">紫外線指數</string>
+  <string name="quick_timer">計時器</string>
+  <string name="quick_stopwatch">秒錶</string>
+  <string name="quick_world_clock">世界時鐘</string>
+  <string name="quick_astronomy_luna">月球</string>
+  <string name="quick_altitude">高度</string>
   <string name="quick_off">關閉</string>
   <string name="bezel">中下</string>
+  <string name="timing_preset">計時器 · 世界時鐘</string>
   <string name="music_caption">音樂</string>
 </resources>

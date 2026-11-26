@@ -40,7 +40,13 @@
   <string name="quick_weather">מזג אוויר</string>
   <string name="quick_weather_rich">טמפרטורה</string>
   <string name="quick_weather_uv_index">אינדקס קרינה</string>
+  <string name="quick_timer">ספירה לאחור</string>
+  <string name="quick_stopwatch">שעון עצר</string>
+  <string name="quick_world_clock">שעון עולמי</string>
+  <string name="quick_astronomy_luna">הירח</string>
+  <string name="quick_altitude">גובה</string>
   <string name="quick_off">ללא</string>
   <string name="bezel">באמצע למטה</string>
+  <string name="timing_preset">ספירה לאחור · שעון עולמי</string>
   <string name="music_caption">מוזיקה</string>
 </resources>

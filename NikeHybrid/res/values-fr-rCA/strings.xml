@@ -40,7 +40,13 @@
   <string name="quick_weather">Température</string>
   <string name="quick_weather_rich">Température</string>
   <string name="quick_weather_uv_index">Indice UV</string>
+  <string name="quick_timer">Minuteur</string>
+  <string name="quick_stopwatch">Chronomètre</string>
+  <string name="quick_world_clock">Horloges</string>
+  <string name="quick_astronomy_luna">Lune</string>
+  <string name="quick_altitude">Altitude</string>
   <string name="quick_off">Non</string>
   <string name="bezel">En bas au centre</string>
+  <string name="timing_preset">Minuteur · Horloges</string>
   <string name="music_caption">MUSIQUE</string>
 </resources>

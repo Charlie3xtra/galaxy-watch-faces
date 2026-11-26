@@ -40,7 +40,13 @@
   <string name="quick_weather">Weer</string>
   <string name="quick_weather_rich">Temperatuur</string>
   <string name="quick_weather_uv_index">UV-index</string>
+  <string name="quick_timer">Timer</string>
+  <string name="quick_stopwatch">Stopwatch</string>
+  <string name="quick_world_clock">Wereldklok</string>
+  <string name="quick_astronomy_luna">Maan</string>
+  <string name="quick_altitude">Hoogte</string>
   <string name="quick_off">Uit</string>
   <string name="bezel">Middenonder</string>
+  <string name="timing_preset">Timer · Wereldklok</string>
   <string name="music_caption">MUZIEK</string>
 </resources>

@@ -40,7 +40,13 @@
   <string name="quick_weather">天気</string>
   <string name="quick_weather_rich">温度</string>
   <string name="quick_weather_uv_index">UV指数</string>
+  <string name="quick_timer">タイマー</string>
+  <string name="quick_stopwatch">ストップウォッチ</string>
+  <string name="quick_world_clock">世界時計</string>
+  <string name="quick_astronomy_luna">月</string>
+  <string name="quick_altitude">高度</string>
   <string name="quick_off">オフ</string>
   <string name="bezel">中央下</string>
+  <string name="timing_preset">タイマー · 世界時計</string>
   <string name="music_caption">ミュージック</string>
 </resources>

@@ -40,7 +40,13 @@
   <string name="quick_weather">Időjárás</string>
   <string name="quick_weather_rich">Hőmérséklet</string>
   <string name="quick_weather_uv_index">UV-index</string>
+  <string name="quick_timer">Időzítő</string>
+  <string name="quick_stopwatch">Stopperóra</string>
+  <string name="quick_world_clock">Világóra</string>
+  <string name="quick_astronomy_luna">Hold</string>
+  <string name="quick_altitude">Magasság</string>
   <string name="quick_off">Ki</string>
   <string name="bezel">Középen lent</string>
+  <string name="timing_preset">Időzítő · Világóra</string>
   <string name="music_caption">ZENE</string>
 </resources>

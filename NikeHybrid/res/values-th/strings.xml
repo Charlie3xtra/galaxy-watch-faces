@@ -40,7 +40,13 @@
   <string name="quick_weather">สภาพอากาศ</string>
   <string name="quick_weather_rich">อุณหภูมิ</string>
   <string name="quick_weather_uv_index">ดัชนีรังสี UV</string>
+  <string name="quick_timer">นาฬิกานับถอยหลัง</string>
+  <string name="quick_stopwatch">นาฬิกาจับเวลา</string>
+  <string name="quick_world_clock">นาฬิกาโลก</string>
+  <string name="quick_astronomy_luna">ดวงจันทร์</string>
+  <string name="quick_altitude">ความสูง</string>
   <string name="quick_off">ปิด</string>
   <string name="bezel">ด้านล่างกึ่งกลาง</string>
+  <string name="timing_preset">นาฬิกานับถอยหลัง · นาฬิกาโลก</string>
   <string name="music_caption">เพลง</string>
 </resources>

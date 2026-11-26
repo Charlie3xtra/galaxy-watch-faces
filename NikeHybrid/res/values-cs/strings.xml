@@ -40,7 +40,13 @@
   <string name="quick_weather">Počasí</string>
   <string name="quick_weather_rich">Teplota</string>
   <string name="quick_weather_uv_index">UV index</string>
+  <string name="quick_timer">Minutka</string>
+  <string name="quick_stopwatch">Stopky</string>
+  <string name="quick_world_clock">Světový čas</string>
+  <string name="quick_astronomy_luna">Měsíc</string>
+  <string name="quick_altitude">Nadmořská výška</string>
   <string name="quick_off">Vypnuto</string>
   <string name="bezel">Dole uprostřed</string>
+  <string name="timing_preset">Minutka · Světový čas</string>
   <string name="music_caption">HUDBA</string>
 </resources>

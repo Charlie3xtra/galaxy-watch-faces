@@ -40,7 +40,13 @@
   <string name="quick_weather">날씨</string>
   <string name="quick_weather_rich">온도</string>
   <string name="quick_weather_uv_index">자외선 지수</string>
+  <string name="quick_timer">타이머</string>
+  <string name="quick_stopwatch">스톱워치</string>
+  <string name="quick_world_clock">세계 시계</string>
+  <string name="quick_astronomy_luna">달</string>
+  <string name="quick_altitude">고도</string>
   <string name="quick_off">끔</string>
   <string name="bezel">하단 중앙</string>
+  <string name="timing_preset">타이머 · 세계 시계</string>
   <string name="music_caption">음악</string>
 </resources>

@@ -40,7 +40,13 @@
   <string name="quick_weather">الطقس</string>
   <string name="quick_weather_rich">درجة الحرارة</string>
   <string name="quick_weather_uv_index">أشعة فوق البنفسجية</string>
+  <string name="quick_timer">المؤقت</string>
+  <string name="quick_stopwatch">ساعة الإيقاف</string>
+  <string name="quick_world_clock">الساعة العالمية</string>
+  <string name="quick_astronomy_luna">القمر</string>
+  <string name="quick_altitude">الارتفاع</string>
   <string name="quick_off">إيقاف</string>
   <string name="bezel">أسفل المنتصف</string>
+  <string name="timing_preset">المؤقت · الساعة العالمية</string>
   <string name="music_caption">الموسيقى</string>
 </resources>

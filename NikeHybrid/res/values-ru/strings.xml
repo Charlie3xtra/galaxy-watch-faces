@@ -40,7 +40,13 @@
   <string name="quick_weather">Погода</string>
   <string name="quick_weather_rich">Температура</string>
   <string name="quick_weather_uv_index">УФ‑индекс</string>
+  <string name="quick_timer">Таймер</string>
+  <string name="quick_stopwatch">Секундомер</string>
+  <string name="quick_world_clock">Мировые часы</string>
+  <string name="quick_astronomy_luna">Луна</string>
+  <string name="quick_altitude">Высота</string>
   <string name="quick_off">Выкл.</string>
   <string name="bezel">Внизу посередине</string>
+  <string name="timing_preset">Таймер · Мировые часы</string>
   <string name="music_caption">МУЗЫКА</string>
 </resources>

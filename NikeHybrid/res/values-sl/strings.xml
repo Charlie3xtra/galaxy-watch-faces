@@ -40,7 +40,13 @@
   <string name="quick_weather">Vreme</string>
   <string name="quick_weather_rich">Temperatura</string>
   <string name="quick_weather_uv_index">Indeks UV</string>
+  <string name="quick_timer">Časovnik</string>
+  <string name="quick_stopwatch">Štoparica</string>
+  <string name="quick_world_clock">Svetovna ura</string>
+  <string name="quick_astronomy_luna">Luna</string>
+  <string name="quick_altitude">Višina</string>
   <string name="quick_off">Brez</string>
   <string name="bezel">Na sredini spodaj</string>
+  <string name="timing_preset">Časovnik · Svetovna ura</string>
   <string name="music_caption">GLASBA</string>
 </resources>

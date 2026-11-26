@@ -95,7 +95,7 @@ def stacked(p,ambient):
             branch=add(cond,'Compare',expression=name)
             # Hours below 10 are single digits, matching the watch time display.
             text=str(n) if idx==0 else f'{n:02}'
-            image(branch,('outline' if ambient else 'solid')+'_'+text,126,y,250,140,'[CONFIGURATION.palette.0]')
+            image(branch,('outline' if ambient else 'solid')+'_'+text,129,y+5,232,130,'[CONFIGURATION.palette.0]')
     image(p,'swoosh',45,231,74,27,'[CONFIGURATION.palette.1]')
 def ticks():
     im=Image.new('RGBA',(960,960))
@@ -159,7 +159,9 @@ for path in local.glob('*.lproj'):
     for k,s in [('full','FULLSCREEN'),('circle','CIRCULAR')]:
         strings[k]=labels['EDIT_OPTION_LABEL_ANALOG_DIAL_SHAPE_'+s]
     for i,k in enumerate(keys): strings['p'+str(i)]=names.get(k,names.get('victory.'+k,k))
-    corners.localization(labels,strings)
+    compass=local.parents[1]/'ComplicationBundles/NanoCompassComplications.bundle'
+    alt=compass/path.name/'AltimeterComplication.strings.json'
+    corners.localization(labels,strings,read(alt if alt.exists() else compass/'en.lproj/AltimeterComplication.strings.json')['ALTITUDE_COMPLICATION_NAME'])
     out=ET.Element('resources')
     for k,v in strings.items():add(out,'string',name=k).text=v.replace("'","\\'")
     suffix={'en':'','es_419':'-b+es+419','he':'-iw','id':'-in'}.get(code,'-'+code.replace('_','-r'))
@@ -167,7 +169,7 @@ for path in local.glob('*.lproj'):
         save(res/('values'+q)/'strings.xml',out)
 prev=Image.new('RGBA',(480,480))
 ImageDraw.Draw(prev).ellipse((0,0,479,479),fill='black')
-for asset,xy,size,col in [('solid_10',(126,86),(250,140),0),('solid_09',(126,230),(250,140),0),('swoosh',(45,231),(74,27),1)]:
+for asset,xy,size,col in [('solid_10',(129,91),(232,130),0),('solid_09',(129,235),(232,130),0),('swoosh',(45,231),(74,27),1)]:
     mask=Image.open(draw/(asset+'.png')).getchannel('A').resize(size,Image.Resampling.LANCZOS)
     prev.paste(rgbtuple(styles[0][col])+(255,),xy,mask)
 corners.preview(prev,draw,gallery)

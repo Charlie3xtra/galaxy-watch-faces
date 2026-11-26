@@ -40,7 +40,13 @@
   <string name="quick_weather">Καιρός</string>
   <string name="quick_weather_rich">Θερμοκρασία</string>
   <string name="quick_weather_uv_index">Δείκτης UV</string>
+  <string name="quick_timer">Χρονοδιακόπτης</string>
+  <string name="quick_stopwatch">Χρονόμετρο</string>
+  <string name="quick_world_clock">Παγκόσμια ώρα</string>
+  <string name="quick_astronomy_luna">Σελήνη</string>
+  <string name="quick_altitude">Υψόμετρο</string>
   <string name="quick_off">Όχι</string>
   <string name="bezel">Κάτω στη μέση</string>
+  <string name="timing_preset">Χρονοδιακόπτης · Παγκόσμια ώρα</string>
   <string name="music_caption">ΜΟΥΣΙΚΗ</string>
 </resources>

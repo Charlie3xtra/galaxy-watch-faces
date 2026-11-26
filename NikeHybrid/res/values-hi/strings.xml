@@ -40,7 +40,13 @@
   <string name="quick_weather">मौसम</string>
   <string name="quick_weather_rich">तापमान</string>
   <string name="quick_weather_uv_index">UV इंडेक्स</string>
+  <string name="quick_timer">टाइमर</string>
+  <string name="quick_stopwatch">विराम घड़ी</string>
+  <string name="quick_world_clock">विश्व घड़ी</string>
+  <string name="quick_astronomy_luna">चंद्रमा</string>
+  <string name="quick_altitude">ऊँचाई</string>
   <string name="quick_off">बंद</string>
   <string name="bezel">नीचे मध्य</string>
+  <string name="timing_preset">टाइमर · विश्व घड़ी</string>
   <string name="music_caption">संगीत</string>
 </resources>

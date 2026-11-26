@@ -40,7 +40,13 @@
   <string name="quick_weather">Vrijeme</string>
   <string name="quick_weather_rich">Temperatura</string>
   <string name="quick_weather_uv_index">UV indeks</string>
+  <string name="quick_timer">Brojač</string>
+  <string name="quick_stopwatch">Štoperica</string>
+  <string name="quick_world_clock">Svjetsko vrijeme</string>
+  <string name="quick_astronomy_luna">Mjesec</string>
+  <string name="quick_altitude">Nadmorska visina</string>
   <string name="quick_off">Isključeno</string>
   <string name="bezel">Dolje u sredini</string>
+  <string name="timing_preset">Brojač · Svjetsko vrijeme</string>
   <string name="music_caption">GLAZBA</string>
 </resources>

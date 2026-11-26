@@ -40,7 +40,13 @@
   <string name="quick_weather">Cuaca</string>
   <string name="quick_weather_rich">Suhu</string>
   <string name="quick_weather_uv_index">Indeks UV</string>
+  <string name="quick_timer">Pemasa</string>
+  <string name="quick_stopwatch">Jam Randik</string>
+  <string name="quick_world_clock">Jam Dunia</string>
+  <string name="quick_astronomy_luna">Bulan</string>
+  <string name="quick_altitude">Ketinggian</string>
   <string name="quick_off">Tak Aktif</string>
   <string name="bezel">Tengah Bawah</string>
+  <string name="timing_preset">Pemasa · Jam Dunia</string>
   <string name="music_caption">MUZIK</string>
 </resources>

@@ -1,1 +1,1 @@
-<WatchFaceInfo><Preview value="@drawable/preview"/><Editable value="true"/></WatchFaceInfo>
+<WatchFaceInfo><Preview value="@drawable/preview"/><Editable value="true"/><MultipleInstancesAllowed value="true"/><FlavorsSupported value="true"/></WatchFaceInfo>

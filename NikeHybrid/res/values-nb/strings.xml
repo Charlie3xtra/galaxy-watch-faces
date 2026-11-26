@@ -40,7 +40,13 @@
   <string name="quick_weather">Været</string>
   <string name="quick_weather_rich">Temperatur</string>
   <string name="quick_weather_uv_index">UV-indeks</string>
+  <string name="quick_timer">Nedtelling</string>
+  <string name="quick_stopwatch">Stoppeklokke</string>
+  <string name="quick_world_clock">Verdensklokke</string>
+  <string name="quick_astronomy_luna">Månen</string>
+  <string name="quick_altitude">Høyde</string>
   <string name="quick_off">Av</string>
   <string name="bezel">Nede i midten</string>
+  <string name="timing_preset">Nedtelling · Verdensklokke</string>
   <string name="music_caption">MUSIKK</string>
 </resources>

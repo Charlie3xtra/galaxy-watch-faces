@@ -40,7 +40,13 @@
   <string name="quick_weather">Vremea</string>
   <string name="quick_weather_rich">Temperatură</string>
   <string name="quick_weather_uv_index">Indice UV</string>
+  <string name="quick_timer">Temporizator</string>
+  <string name="quick_stopwatch">Cronometru</string>
+  <string name="quick_world_clock">Ceas global</string>
+  <string name="quick_astronomy_luna">Lună</string>
+  <string name="quick_altitude">Altitudine</string>
   <string name="quick_off">Nimic</string>
   <string name="bezel">Mijloc jos</string>
+  <string name="timing_preset">Temporizator · Ceas global</string>
   <string name="music_caption">MUZICĂ</string>
 </resources>

@@ -40,7 +40,13 @@
   <string name="quick_weather">Thời tiết</string>
   <string name="quick_weather_rich">Nhiệt độ</string>
   <string name="quick_weather_uv_index">Chỉ số UV</string>
+  <string name="quick_timer">Hẹn giờ</string>
+  <string name="quick_stopwatch">Bấm giờ</string>
+  <string name="quick_world_clock">Giờ quốc tế</string>
+  <string name="quick_astronomy_luna">Mặt Trăng</string>
+  <string name="quick_altitude">Độ cao</string>
   <string name="quick_off">Tắt</string>
   <string name="bezel">Dưới cùng ở giữa</string>
+  <string name="timing_preset">Hẹn giờ · Giờ quốc tế</string>
   <string name="music_caption">NHẠC</string>
 </resources>

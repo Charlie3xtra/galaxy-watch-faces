@@ -40,7 +40,13 @@
   <string name="quick_weather">Hava Durumu</string>
   <string name="quick_weather_rich">Sıcaklık</string>
   <string name="quick_weather_uv_index">UV İndeksi</string>
+  <string name="quick_timer">Sayaç</string>
+  <string name="quick_stopwatch">Kronometre</string>
+  <string name="quick_world_clock">Dünya Saati</string>
+  <string name="quick_astronomy_luna">Ay</string>
+  <string name="quick_altitude">Yükseklik</string>
   <string name="quick_off">Kapalı</string>
   <string name="bezel">Orta Alt</string>
+  <string name="timing_preset">Sayaç · Dünya Saati</string>
   <string name="music_caption">MÜZİK</string>
 </resources>
