@@ -56,20 +56,6 @@ def normal(ring):
     return tangent[:,[1,0]]*[-1,1]
 
 
-def nearest(rings):
-    yy,xx=np.mgrid[:HEIGHT,:WIDTH]
-    pixels=np.stack([xx,yy],axis=-1).reshape(-1,2)
-    points=np.concatenate(rings)*210+[WIDTH/2,HEIGHT/2]
-    axes=np.concatenate([normal(r) for r in rings])
-    ids=[]
-    for chunk in np.array_split(pixels,120):
-        ids.append(np.argmin(((chunk[:,None]-points[None,:])**2).sum(axis=2),axis=1))
-    ids=np.concatenate(ids)
-    delta=pixels-points[ids]
-    offset=(delta*axes[ids]).sum(axis=1)
-    return ids//SAMPLES,ids%SAMPLES,offset,np.linalg.norm(delta,axis=1)
-
-
 def sample(image,xy):
     x,y=xy.T
     x=np.clip(x,0,image.shape[1]-1.001)
@@ -89,8 +75,8 @@ def illuminate(paths, refpaths, image, center, scale, frame, frames):
         rp=refpaths[min(k,len(refpaths)-1)]
         phase=round(SAMPLES*.085*np.sin(2*np.pi*frame/frames))
         rp=np.roll(rp,-phase,axis=0)
-        target=path*210+[WIDTH/2,HEIGHT/2]
-        for strand in (-3.2,0,2.6):
+        target=path*196+[WIDTH/2,HEIGHT/2]
+        for strand in (-3.4,-1.6,0,1.8,3.3):
             offset=strand+1.3*np.sin(np.arange(SAMPLES)*2*np.pi/SAMPLES+strand)
             pos=(target+normal(path)*offset[:,None])*factor
             light=sample(image,rp*scale+center+normal(rp)*offset[:,None])
@@ -101,41 +87,16 @@ def illuminate(paths, refpaths, image, center, scale, frame, frames):
     thin=np.asarray(core,dtype=float)
     local=np.asarray(core.filter(ImageFilter.GaussianBlur(2.3)),dtype=float)
     halo=np.asarray(core.filter(ImageFilter.GaussianBlur(7)),dtype=float)
-    return Image.fromarray(np.clip(thin+local*.70+halo*1.75,0,255).astype("uint8"))
+    return Image.fromarray(np.clip(thin+local*.80+halo*1.45,0,255).astype("uint8"))
 
 def bake(model,reference,draw,frames):
     image=np.asarray(Image.open(reference).convert("RGB"),dtype=float)
     rings=[outlines(model/f"{d}.usda") for d in range(10)]
-    yy,xx=np.mgrid[:HEIGHT,:WIDTH]
-    edge=np.minimum.reduce([xx,WIDTH-1-xx,yy,HEIGHT-1-yy]).flatten()
     for digit,paths in enumerate(rings):
-        index,along,offset,radius=nearest(paths)
         for row in ("hour","minute"):
             key=("one" if digit==1 else "upper_zero") if row=="hour" else ("lower_zero" if digit==0 else "nine")
             ref,cx,cy,scale=LIGHTS[key]
-            refpaths=rings[ref]
-            for frame in range(frames):
-                name=f"p1f{frame}d{digit}" if row=="hour" else f"m1f{frame}d{digit}"
-                if ref != digit:
-                    light=illuminate(paths,refpaths,image,[cx,cy],scale,frame,frames)
-                    light.save(draw/f"{name}.png")
-                    continue
-                rgb=np.zeros((HEIGHT*WIDTH,3))
-                for k,path in enumerate(paths):
-                    mask=index==k
-                    rp=refpaths[min(k,len(refpaths)-1)]
-                    # Shift the optical sample along the curve; digits and counters stay fixed.
-                    steps=along[mask]+round(SAMPLES*.085*np.sin(2*np.pi*frame/frames))
-                    ids=steps%SAMPLES
-                    coords=rp[ids]*scale+[cx,cy]+normal(rp)[ids]*offset[mask,None]*(scale/210)
-                    if digit==ref:
-                        # Preserve the full 2D optical field at the reference pose.
-                        origin=np.stack([xx.flatten()[mask]-WIDTH/2,yy.flatten()[mask]-HEIGHT/2],axis=1)
-                        coords=origin*(scale/210)+[cx,cy]+(rp[ids]-rp[along[mask]])*scale
-                        coords+=(normal(rp)[ids]-normal(rp)[along[mask]])*offset[mask,None]*(scale/210)
-                    rgb[mask]=sample(image,coords)
-                # Reject bezel pixels and adjacent numerals outside the local light halo.
-                fade=np.clip((24-radius)/12,0,1)*np.clip(edge/8,0,1)
-                rgb*=fade[:,None]
-                name=f"p1f{frame}d{digit}" if row=="hour" else f"m1f{frame}d{digit}"
-                Image.fromarray(np.clip(rgb.reshape(HEIGHT,WIDTH,3),0,255).astype("uint8")).save(draw/f"{name}.png")
+            prefix="p" if row=="hour" else "m"
+            for phase in (0,1,5):
+                light=illuminate(paths,rings[ref],image,[cx,cy],scale,phase,frames)
+                light.save(draw/f"{prefix}1f{phase}d{digit}.png")
