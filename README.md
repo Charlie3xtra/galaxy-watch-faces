@@ -36,6 +36,6 @@ Artist 目录含生成器、WFF 场景和本地 PowerShell 构建脚本。重新
 
 ## X-Large · 大文字
 
-[下载大文字 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/xlarge-1.1)。纯时间表盘，亮屏和息屏均以两行显示时间。三星原生编辑器提供 27 种配色。
+[下载大文字 1.2](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/xlarge-1.2)。默认两行纯时间。选择一个组件后，时间连同冒号移到顶部一行，组件占据下方的大圆区。圆屏比例参考 [Apple Watch 使用手册第 148 页](https://help.apple.com/pdf/watch/9/en_US/apple-watch-user-guide-watchos9.pdf#page=148)。
 
 The default lavender and three numeral silhouettes were sampled from the Apple gallery image. The other digits use the closest measured SF Compact Rounded weight from build 24S132. The 26 additional solid colors use firmware catalog components. Round-screen spacing and ambient dimming are adaptations. Apple provider graphics, seasonal palettes, color sliders and alternate numeral scripts are outside this release. Build the included Android resources directly with XLarge/build.ps1. Regeneration additionally needs Pillow, NumPy, and the extracted 24S132 directory structure referenced in generate.py.

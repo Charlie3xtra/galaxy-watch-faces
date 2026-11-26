@@ -107,6 +107,17 @@ for p in RES.glob('values*/strings.xml'):
     title={'values':'Color','values-zh':'颜色','values-zh-rCN':'颜色','values-b+zh+Hans':'颜色','values-zh-rTW':'顏色','values-zh-rHK':'顏色','values-b+zh+Hant':'顏色','values-ja':'カラー','values-ko':'색상','values-fr':'Couleur','values-de':'Farbe','values-es':'Color','values-it':'Colore','values-ru':'Цвет','values-pt':'Cor'}.get(code)
     if title: add(tree,'string',name='ink_label').text=title
     write(p,tree)
+# A common line height maintains each glyph's overshoot and centers the colon.
+bitmap_fonts=add(face,'BitmapFonts')
+compact_font=add(bitmap_fonts,'BitmapFont',name='compact_time')
+for char,alpha_mask in [(str(n),m) for n,m in masks.items()]+[(':',mask)]:
+    tile=Image.new('RGBA',(alpha_mask.width+12,156))
+    white=Image.new('RGBA',alpha_mask.size,'white')
+    white.putalpha(alpha_mask)
+    tile.paste(white,(6,(156-alpha_mask.height)//2))
+    resource='compact_'+('colon' if char==':' else char)
+    tile.save(DRAW/(resource+'.png'))
+    add(compact_font,'Character',name=char,resource=resource,width=tile.width,height=tile.height)
 scene=add(face,'Scene',backgroundColor='#000000')
 ink='[CONFIGURATION.ink.0]'
 hour='([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])'
@@ -140,8 +151,39 @@ part=add(large,'PartImage',**box(90,272,32,107),tintColor=ink)
 add(part,'Image',resource='dots')
 preview.paste(purple,(90,272,122,379),mask)
 preview.save(DRAW/'preview.png')
+
+types=['SHORT_TEXT','MONOCHROMATIC_IMAGE','SMALL_IMAGE','PHOTO_IMAGE']
+slot=add(scene,'ComplicationSlot',**box(0,0,480,480),slotId=1,supportedTypes='EMPTY '+' '.join(types))
+add(slot,'BoundingOval',**box(12,12,456,456))
+add(slot,'Complication',type='EMPTY')
+for kind in types:
+    g=group(add(slot,'Complication',type=kind))
+    bg=add(g,'PartDraw',**box(0,0,480,480))
+    add(add(bg,'Rectangle',**box(0,0,480,480)),'Fill',color='#000000')
+    fg=group(g)
+    ambient(fg,70)
+    clock=add(fg,'DigitalClock',**box(54,65,372,91))
+    t=add(clock,'TimeText',**box(0,0,372,91),format='h:mm',align='CENTER')
+    add(t,'BitmapFont',family='compact_time',size=87,color=ink)
+    # Apple Watch User Guide for watchOS 9, page 148: platter/time height = 253/91.
+    platter=add(fg,'PartDraw',**box(116,174,248,248))
+    ambient(platter,0)
+    add(add(platter,'Ellipse',**box(0,0,248,248)),'Fill',color='#151515')
+    if kind=='SHORT_TEXT':
+        part=add(fg,'PartImage',**box(197,199,86,86),tintColor=ink)
+        add(part,'Image',resource='[COMPLICATION.MONOCHROMATIC_IMAGE]')
+        part=add(fg,'PartText',**box(127,290,226,81))
+        text=add(part,'Text',align='CENTER')
+        f=add(text,'Font',family='SYNC_TO_DEVICE',size=52,color=ink)
+        temp=add(f,'Template')
+        temp.text='%s'
+        add(temp,'Parameter',expression='[COMPLICATION.TEXT]')
+    else:
+        part=add(fg,'PartImage',**box(154,212,172,172),**({'tintColor':ink} if kind=='MONOCHROMATIC_IMAGE' else {}))
+        add(part,'Image',resource=f'[COMPLICATION.{kind}]')
 write(RES/'raw/watchface.xml',face)
 print(len(palette),'colors')
+
 
 
 
