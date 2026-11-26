@@ -28,4 +28,6 @@
   <string name="desert">沙色</string>
   <string name="feet">英尺</string>
   <string name="meters">米</string>
+  <string name="level">当前读数</string>
+  <string name="multi">多色</string>
 </resources>

@@ -28,4 +28,6 @@
   <string name="desert">Desert</string>
   <string name="feet">ФТ</string>
   <string name="meters">М</string>
+  <string name="level">Level</string>
+  <string name="multi">Multicolor</string>
 </resources>

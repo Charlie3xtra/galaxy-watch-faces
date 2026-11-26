@@ -28,4 +28,6 @@
   <string name="desert">Desert</string>
   <string name="feet">fod</string>
   <string name="meters">m</string>
+  <string name="level">Level</string>
+  <string name="multi">Multicolor</string>
 </resources>

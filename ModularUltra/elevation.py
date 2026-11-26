@@ -30,7 +30,7 @@ def add_bezel(scene,el,box,colored,ink):
 
     def base(comp):
         g=mode(comp)
-        colored(g,'[CONFIGURATION.tone.0]',ink('timeMinutes_night'),'[CONFIGURATION.tone.0]',ink('timeMinutes_night.tritium'))
+        colored(g,'#FFFFFFFF',ink('timeMinutes_night'),'#FFFFFFFF',ink('timeMinutes_night.tritium'))
         curve(g,321,222,22,14,'@string/feet')
         curve(g,39,222,22,14,'@string/meters')
         return g
@@ -63,10 +63,17 @@ def add_bezel(scene,el,box,colored,ink):
                 angle=side*(134-88*frac)
                 value=f'abs({alt})'+('/0.3048' if side<0 else '')
                 part=el(band,'PartDraw',**full,angle=round(angle,3))
-                el(part,'Transform',target='alpha',value=f'{value}>={n*spacing} ? 242 : 65')
+                el(part,'Transform',target='alpha',value=f'{value}>={n*spacing} ? 215 : 120')
                 major_step,mid_step=PERIODS[idx][:2] if side<0 else PERIODS[idx][2:]
                 major=n%major_step==0
-                el(el(part,'RoundRectangle',**box(238,7,4 if major else 3,13 if major else (10 if n%mid_step==0 else 6)),cornerRadiusX=1,cornerRadiusY=1),'Fill',color='#FFFFFFFF')
+                el(part,'Transform',target='tintColor',value='#FFFFFFFF')
+                el(el(part,'RoundRectangle',**box(238,7,4 if major else 3,13 if major else (10 if n%mid_step==0 else 6)),cornerRadiusX=1,cornerRadiusY=1),'Fill',color='#FF919599')
+            marker=el(band,'PartDraw',**full)
+            frac=f'clamp({value}/{abs(limit)},0,1)'
+            if m<0:frac=f'(1-{frac})'
+            el(marker,'Transform',target='angle',value=f'{side}*(134-88*{frac})')
+            dot=el(marker,'Ellipse',**box(233,5,14,14))
+            el(dot,'Stroke',thickness=4,color='[CONFIGURATION.scheme.0]')
             curve(band,side*139%360,213,29,14,'%s',[f'numberFormat("#",{limit})'],True)
     curve(valid,180,211,45,18,'≈ %s %s',[f'numberFormat("#",round({alt}))','"m"'],True)
     curve(el(cond,'Default'),180,211,45,18,'—',lower=True)

@@ -82,7 +82,8 @@ def icon(parent,bounds,source):
 face=ET.Element('WatchFace',width='480',height='480',clipShape='CIRCLE')
 cfg=el(face,'UserConfigurations')
 tones=['adventurer','ocean','performance','burgundy','desert']
-colors=el(cfg,'ColorConfiguration',id='tone',displayName='color',defaultValue='0')
+colors=el(cfg,'ColorConfiguration',id='scheme',displayName='color',defaultValue='multi')
+el(colors,'ColorOption',id='multi',displayName='multi',colors='#FF00CFFF')
 for i,tone in enumerate(tones):el(colors,'ColorOption',id=i,displayName=tone,colors=ink(tone))
 styles=el(cfg,'ListConfiguration',id='layout',displayName='style',defaultValue='default')
 sizes=['default','large','xlarge']
@@ -109,8 +110,8 @@ for i,st in enumerate(sizes):
         family=st+ss
         bm=el(registry,'BitmapFont',name=family)
         for ch in '0123456789:':
-            w=([56,60,64][i] if not ss else [40,42,44][i]) if ch!=':' else (19 if not ss else 13)
-            h=[69,82,95][i]
+            w=([61,64,68][i] if not ss else [40,42,44][i]) if ch!=':' else (19 if not ss else 13)
+            h=[75,85,95][i]
             l,t,r,b=f.getbbox(ch)
             mask=Image.new('L',(r-l+8,bottom-top+4));ImageDraw.Draw(mask).text((4-l,2-top),ch,font=f,fill=255)
             im=Image.new('RGBA',(w,h),'white')
@@ -130,7 +131,7 @@ scene=el(face,'Scene',backgroundColor='#000000')
 mint=ink('timeMinutes')
 edge=el(el(scene,'ListConfiguration',id='bezel_mode'),'ListOption',id='seconds')
 ring=el(edge,'Group',name='seconds_ring',**full)
-colored(ring,'[CONFIGURATION.tone.0]',ink('bezelMajorTick_night'),ink('bezelMajorTick.tritium'),ink('bezelMajorTick_night.tritium'))
+colored(ring,'[CONFIGURATION.scheme.0]',ink('bezelMajorTick_night'),ink('bezelMajorTick.tritium'),ink('bezelMajorTick_night.tritium'))
 for n in range(60):
     major=n%5==0
     part=el(ring,'PartDraw',**full,angle=n*6)
@@ -148,22 +149,22 @@ for i,st in enumerate(sizes):
             show_seconds=bool(ss) and not aod
             dc=el(wrapper,'DigitalClock',**full,alpha=0 if aod else 255)
             if ss:variant(dc,'alpha',255 if aod else 0)
-            tt=el(dc,'TimeText',**box(35,132,410,105),format='hh:mm:ss' if show_seconds else 'hh:mm',hourFormat='SYNC_TO_DEVICE',align='CENTER')
-            el(tt,'BitmapFont',family=family if show_seconds else st,size=[69,82,95][i],color='#FFFFFFFF')
+            tt=el(dc,'TimeText',**box(35,99,410,108),format='hh:mm:ss' if show_seconds else 'hh:mm',hourFormat='SYNC_TO_DEVICE',align='CENTER')
+            el(tt,'BitmapFont',family=family if show_seconds else st,size=[75,85,95][i],color='#FFFFFFFF')
 # The two rows fit inside the circular safe area. Only actual provider data is shown.
-slots=[('top_left',143,88,'WATCH_BATTERY','RANGED_VALUE',None),
-       ('top',240,77,'DATE','SHORT_TEXT',None),
-       ('top_right',337,88,'EMPTY','EMPTY',('com.samsung.android.watch.weather','complication.WeatherComplicationService','SHORT_TEXT')),
-       ('center',240,277,'NEXT_EVENT','LONG_TEXT',None),
-       ('bottom_left',143,382,'EMPTY','EMPTY',('com.samsung.android.wear.shealth','complications.heartrate.HeartrateComplicationProviderService','SHORT_TEXT')),
-       ('bottom_center',240,392,'STEP_COUNT','SHORT_TEXT',('com.samsung.android.wear.shealth','complications.steps.StepsComplicationProviderService','SHORT_TEXT')),
-       ('bottom_right',337,382,'SUNRISE_SUNSET','SHORT_TEXT',None)]
+slots=[('top_left',145,77,'EMPTY','EMPTY',None),
+       ('top',240,75,'DATE','SHORT_TEXT',None),
+       ('top_right',335,77,'EMPTY','EMPTY',None),
+       ('center',240,259,'WATCH_BATTERY','RANGED_VALUE',None),
+       ('bottom_left',145,372,'EMPTY','EMPTY',('com.samsung.android.wear.shealth','complications.heartrate.HeartrateComplicationProviderService','SHORT_TEXT')),
+       ('bottom_center',240,372,'EMPTY','EMPTY',('com.samsung.android.wear.shealth','complications.exercise.ExerciseRunningComplicationProviderService','MONOCHROMATIC_IMAGE')),
+       ('bottom_right',335,372,'EMPTY','EMPTY',('com.samsung.android.watch.weather','complication.UvIndexComplicationService','SHORT_TEXT'))]
 for idx,(key,x,y,default,datatype,provider) in enumerate(slots,1):
     wide=key=='center'
-    w,h=(318,80) if wide else (74,74)
+    w,h=(294,118) if wide else ((148,80) if key=='top' else (84,84))
     types=['LONG_TEXT','SHORT_TEXT','RANGED_VALUE','MONOCHROMATIC_IMAGE','EMPTY'] if wide else ['RANGED_VALUE','SHORT_TEXT','MONOCHROMATIC_IMAGE','EMPTY']
-    slot=el(scene,'ComplicationSlot',slotId=idx,displayName=key,supportedTypes=' '.join(types),**box(x-w//2,y-h//2,w,h))
-    if wide:el(slot,'BoundingRoundBox',**box(0,0,w,h),cornerRadius=17)
+    slot=el(scene,'ComplicationSlot',slotId=20+idx,displayName=key,supportedTypes=' '.join(types),**box(x-w//2,y-h//2,w,h))
+    if wide or key=='top':el(slot,'BoundingRoundBox',**box(0,0,w,h),cornerRadius=21)
     else:el(slot,'BoundingOval',**box(0,0,w,h))
     policy=dict(defaultSystemProvider=default,defaultSystemProviderType=datatype)
     if provider:
@@ -172,52 +173,61 @@ for idx,(key,x,y,default,datatype,provider) in enumerate(slots,1):
     for typ in types:
         view=el(slot,'Complication',type=typ)
         if typ=='EMPTY':continue
-        curved=typ=='SHORT_TEXT' and key in ('top','bottom_right')
-        if not curved:bg(view,box(0,0,w,h),17 if wide else w//2)
+        top=key=='top'
+        if not top:bg(view,box(0,0,w,h),21 if wide else w//2)
         g=el(view,'Group',name=key+'_'+typ.lower(),**box(0,0,w,h))
-        colored(g,'[CONFIGURATION.tone.0]',ink('primaryComplication_night'),'[CONFIGURATION.tone.0]',ink('primaryComplication_night.tritium'))
-        variant(g,'alpha',160)
-        img='[COMPLICATION.MONOCHROMATIC_IMAGE]'
+        white='#FFFFFFFF'
+        accent={'center':'#FF00D2BF','bottom_left':'#FFFF494B','bottom_center':'#FFAEED00','bottom_right':'#FFFFAE00'}.get(key,'#FFABB2BB')
+        def paint(group,color):
+            day=f'([CONFIGURATION.scheme.0]==#FF00CFFF ? {color} : [CONFIGURATION.scheme.0])'
+            colored(group,day,ink('primaryComplication_night'),day,ink('primaryComplication_night.tritium'))
+            variant(group,'alpha',155)
+        def layer(name,color):
+            node=el(g,'Group',name=key+'_'+typ.lower()+'_'+name,**box(0,0,w,h))
+            paint(node,color)
+            return node
+        detail=layer('detail',accent)
+        reading=layer('reading',white)
         val='[COMPLICATION.TEXT]'
-        if curved:
-            import math
-            angle=math.degrees(math.atan2(x-240,240-y))%360
-            radius=math.hypot(x-240,y-240)
-            direction=1 if key=='top' else -1
-            part=el(g,'PartText',**box(0,0,w,h))
-            curved_text=el(part,'TextCircular',centerX=240-x+w/2,centerY=240-y+h/2,
-                           width=2*radius,height=2*radius,startAngle=(angle-12*direction)%360,
-                           endAngle=(angle+12*direction)%360,direction='CLOCKWISE' if direction==1 else 'COUNTER_CLOCKWISE',align='CENTER')
-            font=el(curved_text,'Font',size=15,family='SYNC_TO_DEVICE',color='#FFFFFFFF')
-            tpl=el(font,'Template');tpl.text='%s';el(tpl,'Parameter',expression=val)
-        elif typ=='MONOCHROMATIC_IMAGE':
-            icon(g,box(w//2-20,h//2-20,40,40),img)
+        img='[COMPLICATION.MONOCHROMATIC_IMAGE]'
+        if top:
+            icon(detail,box(63,0,22,22),img)
+            text(reading,box(2,33,w-4,39),val,23)
+        elif wide and typ=='RANGED_VALUE':
+            fraction='clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(0.001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)'
+            for active in (False,True):
+                draw=el(detail,'PartDraw',**box(0,0,w,h))
+                arc=el(draw,'Arc',centerX=66,centerY=76,width=80,height=80,startAngle=270,endAngle=450)
+                if active:el(arc,'Transform',target='endAngle',value=f'270+180*{fraction}')
+                el(arc,'Stroke',thickness=14,color='#FFFFFFFF' if active else '#FF505355',cap='ROUND')
+            text(detail,box(25,50,82,44),'numberFormat("#",[COMPLICATION.RANGED_VALUE_VALUE])',30)
+            cond=el(reading,'Condition')
+            el(el(cond,'Expressions'),'Expression',name='has_title').text='textLength([COMPLICATION.TITLE])>0'
+            text(el(cond,'Compare',expression='has_title'),box(116,20,170,42),'[COMPLICATION.TITLE]',22)
+            default=el(cond,'Default')
+            icon(default,box(121,29,20,20),img)
+            part=el(default,'PartText',**box(144,20,130,42))
+            el(el(part,'Text',align='START'),'Font',family='SYNC_TO_DEVICE',size=20,color='#FFFFFFFF').text='@string/level' 
+            text(detail,box(119,59,160,42),f'textLength({val})>0 ? {val} : numberFormat("#",[COMPLICATION.RANGED_VALUE_VALUE])',26)
         elif wide:
-            icon(g,box(16,20,40,40),img)
-            text(g,box(63,6,w-75,28),'[COMPLICATION.TITLE]',18)
-            if typ=='RANGED_VALUE':
-                gauge=el(g,'PartDraw',**box(65,62,224,7))
-                track=el(gauge,'RoundRectangle',**box(0,0,224,6),cornerRadiusX=3,cornerRadiusY=3)
-                el(track,'Fill',color='#44FFFFFF')
-                bar=el(gauge,'RoundRectangle',**box(0,0,224,6),cornerRadiusX=3,cornerRadiusY=3)
-                el(bar,'Transform',target='width',value='224*clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(0.001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)')
-                el(bar,'Fill',color='#FFFFFFFF')
-                text(g,box(60,27,w-72,32),val,22)
-            else:
-                text(g,box(60,33,w-72,41),val,24)
+            icon(detail,box(22,33,51,51),img)
+            if typ!='MONOCHROMATIC_IMAGE':
+                text(reading,box(77,17,208,41),'[COMPLICATION.TITLE]',22)
+                text(detail,box(77,56,208,47),val,24)
+        elif typ=='MONOCHROMATIC_IMAGE':
+            icon(detail,box(17,17,50,50),img)
         else:
             if typ=='RANGED_VALUE':
-                for fg in (False,True):
-                    part=el(g,'PartDraw',**box(0,0,w,h),alpha=255 if fg else 52)
-                    arc=el(part,'Arc',centerX=37,centerY=37,width=66,height=66,startAngle=215,endAngle=505)
-                    if fg:el(arc,'Transform',target='endAngle',value='215+290*clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(0.001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)')
-                    el(arc,'Stroke',color='#FFFFFFFF',thickness=3)
-                val=f'textLength({val})>0 ? {val} : numberFormat("#",[COMPLICATION.RANGED_VALUE_VALUE])'
-            icon(g,box(25,8,24,24),img)
-            cond=el(g,'Condition')
-            el(el(cond,'Expressions'),'Expression',name='long_reading').text='textLength([COMPLICATION.TEXT]) > 5'
-            text(el(cond,'Compare',expression='long_reading'),box(2,32,70,32),val,15)
-            text(el(cond,'Default'),box(3,32,68,32),val,21)
+                draw=el(detail,'PartDraw',**box(0,0,w,h))
+                arc=el(draw,'Arc',centerX=42,centerY=42,width=72,height=72,startAngle=225,endAngle=495)
+                el(arc,'Transform',target='endAngle',value='225+270*clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(0.001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)')
+                el(arc,'Stroke',thickness=5,color='#FFFFFFFF',cap='ROUND')
+            icon(detail,box(31,9,22,22),img)
+            cond=el(reading,'Condition')
+            el(el(cond,'Expressions'),'Expression',name='long_reading').text='textLength([COMPLICATION.TEXT]) > 4'
+            text(el(cond,'Compare',expression='long_reading'),box(2,32,80,37),val,17)
+            text(el(cond,'Default'),box(3,27,78,45),val,30)
+            text(detail,box(5,59,74,21),'[COMPLICATION.TITLE]',13)
 from elevation import add_bezel
 add_bezel(scene,el,box,colored,ink)
 write_xml(face,root/'res/raw/watchface.xml')
@@ -235,9 +245,11 @@ for loc in (fw/'属性表'/bundle).glob('*.lproj'):
     for k,*_ in slots:data[k]=labels.get('SLOT_LABEL_'+k.upper(),k.replace('_',' ').title())
     for k in tones:data[k]=names.get('foghorn.'+k,names.get(k,k.title()))
     data.update(feet=local.get('FOGHORN_LABEL_FEET','FT'),meters=local.get('FOGHORN_LABEL_METERS','M'))
+    data['level']='Level'
+    data['multi']=labels.get('EDIT_OPTION_LABEL_MULTICOLOR','Multicolor')
     code=loc.stem
     if code.startswith('zh'):
-        data.update(nightmode='夜间模式' if code=='zh_CN' else '夜間模式',adventurer='探险橙' if code=='zh_CN' else '探險橙',ocean='海洋蓝' if code=='zh_CN' else '海洋藍',performance='金黄' if code=='zh_CN' else '金黃',burgundy='酒红' if code=='zh_CN' else '酒紅',desert='沙色')
+        data.update(level='当前读数' if code=='zh_CN' else '目前讀數',multi='多色',nightmode='夜间模式' if code=='zh_CN' else '夜間模式',adventurer='探险橙' if code=='zh_CN' else '探險橙',ocean='海洋蓝' if code=='zh_CN' else '海洋藍',performance='金黄' if code=='zh_CN' else '金黃',burgundy='酒红' if code=='zh_CN' else '酒紅',desert='沙色')
     tree=ET.Element('resources')
     for k,v in data.items():el(tree,'string',name=k).text=v.replace("'","\\'")
     suffix={'en':'','es_419':'-b+es+419','he':'-iw','id':'-in'}.get(code,'-'+code.replace('_','-r'))
@@ -249,35 +261,44 @@ from PIL import ImageColor
 def gallery(ambient):
     img=Image.new('RGBA',(480,480),'black')
     d=ImageDraw.Draw(img)
-    color='#A74B13' if ambient else '#FF6600'
-    # Fixed public example at +18 m in the firmware's first elevation range.
+    tint='#008EAB' if ambient else '#00CFFF'
+    white='#ADADAD' if ambient else '#FFFFFF'
     for side,count in [(-1,20),(1,30)]:
         for n in range(count+1):
             angle=math.radians(side*(134-88*n/count))
             def at(r):return (240+r*math.sin(angle),240-r*math.cos(angle))
-            d.line((at(233),at(220 if n%(2 if side<0 else 10)==0 else 226)),width=3,
-                   fill=color if n/count <= .6 else '#483122')
-    label=ImageFont.truetype('segoeui.ttf',16)
+            d.line((at(233),at(220 if n%(2 if side<0 else 10)==0 else 226)),width=3,fill='#77797D')
+        a=math.radians(side*(134-88*.6));x=240+228*math.sin(a);y=240-228*math.cos(a)
+        d.ellipse((x-6,y-6,x+6,y+6),fill='black',outline=tint,width=3)
+    def label(x,y,v,size,col):
+        d.text((x,y),v,font=ImageFont.truetype('segoeui.ttf',size),fill=col,anchor='mm')
     for x,y,v in [(101,67,'FT'),(379,67,'M'),(98,402,'100'),(382,402,'30'),(240,450,'≈ 18 m')]:
-        d.text((x,y),v,font=label,fill=color,anchor='mm')
+        label(x,y,v,15,tint)
+    d.rounded_rectangle((232,41,248,57),radius=3,outline='#AAAEB8',width=2)
+    d.line((233,47,247,47),fill='#AAAEB8',width=2)
+    label(240,88,'1 Apr',23,white)
     time=Image.open(out/'sample_default.png')
     if ambient:time.putalpha(time.getchannel('A').point(lambda v:int(v*.70)))
-    img.alpha_composite(time,(70,134))
-    regular=ImageFont.truetype('segoeui.ttf',21)
-    small=ImageFont.truetype('segoeui.ttf',15)
-    symbols=ImageFont.truetype('seguisym.ttf',22)
-    samples=[('▣','72%'),('▦','1 Apr'),('☀','18°'),('▦','Calendar'),('♥','68'),('↗','2450'),('☼','06:32')]
-    for (key,x,y,*_),(symbol,reading) in zip(slots,samples):
-        if key=='center':
-            if not ambient:img.alpha_composite(Image.open(out/'glass_318_80.png'),(81,237))
-            d.text((119,y),symbol,font=symbols,fill=color,anchor='mm')
-            d.text((255,y),reading,font=regular,fill=color,anchor='mm')
+    img.alpha_composite(time,(70,103))
+    if not ambient:img.alpha_composite(Image.open(out/'glass_294_118.png'),(93,200))
+    teal='#00D2BF'
+    d.arc((119,236,199,316),180,360,fill='#505355',width=13)
+    d.arc((119,236,199,316),180,310,fill=teal,width=13)
+    label(159,275,'72',28,teal);label(300,239,'Level',22,white);label(300,280,'72%',24,teal)
+    for x,col,symbol,reading in [(145,'#FF494B','♥','68'),(240,'#AEED00','',None),(335,'#FFAE00','☀','4')]:
+        if not ambient:img.alpha_composite(Image.open(out/'glass_84_84.png'),(x-42,330))
+        if reading:
+            if symbol=='☀':
+                d.ellipse((x-5,345,x+5,355),fill=col)
+                for n in range(8):
+                    a=n*math.pi/4;d.line((x+7*math.cos(a),350+7*math.sin(a),x+10*math.cos(a),350+10*math.sin(a)),fill=col,width=2)
+            else:label(x,350,symbol,20,col)
+            label(x,377,reading,30,white)
         else:
-            if key in ('top','bottom_right'):
-                d.text((x,y),reading,font=small,fill=color,anchor='mm');continue
-            if not ambient:img.alpha_composite(Image.open(out/'glass_74_74.png'),(x-37,y-37))
-            d.text((x,y-13),symbol,font=symbols,fill=color,anchor='mm')
-            d.text((x,y+12),reading,font=small if len(reading)>5 else regular,fill=color,anchor='mm')
+            runner=Image.open(root/'artwork/runner.png').convert('RGBA')
+            runner.thumbnail((48,48),Image.Resampling.LANCZOS)
+            art=Image.new('RGBA',runner.size,col);art.putalpha(runner.getchannel('A'))
+            img.alpha_composite(art,(x-art.width//2,372-art.height//2))
     return img
 gallery(False).save(out/'preview.png')
 for aod,filename in [(False,'gallery.png'),(True,'gallery-ambient.png')]:
