@@ -10,22 +10,4 @@
   <string name="natural">INGEN</string>
   <string name="background">BAKGRUND</string>
   <string name="duotone">DUPLEX</string>
-  <string name="personal">BILD</string>
-  <string name="photo01">BILD 01</string>
-  <string name="photo02">BILD 02</string>
-  <string name="photo03">BILD 03</string>
-  <string name="photo04">BILD 04</string>
-  <string name="photo05">BILD 05</string>
-  <string name="photo06">BILD 06</string>
-  <string name="photo07">BILD 07</string>
-  <string name="photo08">BILD 08</string>
-  <string name="photo09">BILD 09</string>
-  <string name="photo10">BILD 10</string>
-  <string name="photo11">BILD 11</string>
-  <string name="photo12">BILD 12</string>
-  <string name="photo13">BILD 13</string>
-  <string name="photo14">BILD 14</string>
-  <string name="photo15">BILD 15</string>
-  <string name="photo16">BILD 16</string>
-  <string name="photo17">BILD 17</string>
 </resources>

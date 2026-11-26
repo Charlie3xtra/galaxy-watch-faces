@@ -1,10 +1,8 @@
-"""Generate WFF Portraits. Requires Pillow, pillow-heif and the unpacked 24S132 firmware."""
-import json,os,plistlib
+"""Generate WFF Portraits. Requires Pillow and the unpacked 24S132 firmware."""
+import json,os
 from pathlib import Path
-from PIL import Image,ImageOps,ImageDraw,ImageFont,ImageStat
-import pillow_heif
+from PIL import Image,ImageOps,ImageDraw,ImageFont
 import xml.etree.ElementTree as ET
-pillow_heif.register_heif_opener()
 root=Path(__file__).resolve().parent
 fw=root.parent/'Watch8_5_24S132'
 if os.name=='nt':fw=Path('\\\\?\\'+str(fw))
@@ -16,10 +14,6 @@ def save(p,e):
     p.parent.mkdir(parents=True,exist_ok=True);ET.indent(e);ET.ElementTree(e).write(p,encoding='utf-8',xml_declaration=True)
 def image(p,key,rect):
     part=add(p,'PartImage',**rect);add(part,'Image',resource=key);return part
-def move(p,strength):
-    for axis,start in [('X',-16),('Y',-16)]:
-        t=add(p,'Transform',target=axis.lower(),value=f'{start} + clamp([ACCELEROMETER_{axis}],-6,6)*{strength}')
-        add(t,'Animation',duration='.16',interpolation='EASE_OUT',fps=30)
 def opts(p,key,options):
     config=add(p,'ListConfiguration',id=key)
     return [(v,add(config,'ListOption',id=v)) for v in options]
@@ -28,10 +22,8 @@ def choice(p,key,label,items,default):
     for v in items:add(config,'ListOption',id=v,displayName=v)
 face=ET.Element('WatchFace',width='480',height='480',clipShape='CIRCLE')
 cfg=add(face,'UserConfigurations')
-samples=sorted((fw/'filesystem'/bundle/'SampleResourceDirectories').iterdir())
-ids=[f'photo{i:02}' for i in range(1,len(samples)+1)]
 styles=['modern','classic','rounded'];effects=['natural','background','duotone']
-choice(cfg,'album','photos',ids+['personal'],ids[0]);choice(cfg,'font','typeface',styles,'modern')
+choice(cfg,'font','typeface',styles,'modern')
 choice(cfg,'effect','effect_label',effects,'natural');add(cfg,'PhotosConfiguration',id='user_photos',configType='MULTIPLE')
 fonts=add(face,'BitmapFonts');digits={}
 for key,file in zip(styles,['SFCompact.ttf','NewYork.ttf','SFCompactRounded.ttf']):
@@ -61,47 +53,31 @@ def dim(p,brightness):
     add(add(overlay,'Rectangle',**box()),'Fill',color='#FF000000')
 def ramp(im):
     return ImageOps.colorize(ImageOps.grayscale(im),'#172639','#E8C7A4')
-def scene_layer(p,sid,front):
-    # Use the same coordinate system for the inpainted background and the subject.
-    options=opts(p,'effect',effects)
-    for effect,option in options:
-        variant=('tone' if (effect=='duotone' or (effect=='background' and not front)) else 'raw')
-        group=add(option,'Group',name=f'{sid}_{effect}_{int(front)}',**box(-16,-16,512,512))
-        move(group,1.05 if front else -.36)
-        image(group,sid+('_fg_' if front else '_bg_')+variant,box(0,0,512,512))
 scene=add(face,'Scene',backgroundColor='#000000')
-for idx,(sid,opt) in enumerate(opts(scene,'album',ids+['personal'])):
-    if sid=='personal':
-        opt=add(opt,'Group',name='personal_album',**box())
-        part=add(opt,'PartImage',**box());add(part,'Photos',source='[CONFIGURATION.user_photos]',defaultImageResource='placeholder',change='TAP ON_VISIBLE',changeAfterEvery=3)
-        time(opt,85);dim(opt,.28);continue
-    folder=samples[idx];meta=plistlib.loads((folder/'Images.plist').read_bytes())['imageList'][0]
-    base=Image.open(folder/meta['baseImageURL']).convert('RGB')
-    back=Image.open(folder/meta['backgroundImageURL']).convert('RGB')
-    mask=Image.open(folder/meta['maskImageURL']).convert('L')
-    # Keep the square crop high enough to retain the negative space above the subject.
-    w,h=base.size;top=round((h-w)*.25);crop=(0,top,w,top+w)
-    base,back,mask=[im.crop(crop).resize((512,512),Image.Resampling.LANCZOS) for im in (base,back,mask)]
-    baseline=round((meta['timeElementUnitBaseline']*h-top)*512/w)-16
-    y=max(65,min(94,baseline-85))
-    # Check each digit region; a large head may hide an entire digit at Apple's rectangular baseline.
-    while y>65:
-        if max(ImageStat.Stat(mask.crop((x+16,y+22,x+66,y+92))).mean[0] for x in (120,175,248,303))<91:break
-        y-=2
-    for variant,bg,fg in [('raw',back,base),('tone',ramp(back),ramp(base))]:
-        bg.save(draw/(sid+'_bg_'+variant+'.webp'),quality=92,method=4)
-        subject=fg.convert('RGBA');subject.putalpha(mask);subject.save(draw/(sid+'_fg_'+variant+'.webp'),quality=94,method=4)
-    layer=add(opt,'Group',name=sid,**box());scene_layer(layer,sid,False)
-    time(layer,y);scene_layer(layer,sid,True)
-    dim(layer,.18+.14*meta['imageAOTBrightness'])
-    if idx==0:
-        prev=back.convert('RGBA')
-        d=ImageDraw.Draw(prev);d.text((256,y-1),'MON 7',fill='white',anchor='mm',font=ImageFont.truetype(str(next((fw/'系统字体').rglob('SFCompact.ttf'))),21))
-        x=256-sum(digits['modern'][ch].width for ch in '10:09')//2
-        for ch in '10:09':
-            stamp=digits['modern'][ch];prev.paste('white',(x,y+16,x+stamp.width,y+16+stamp.height),stamp);x+=stamp.width
-        prev.paste(base,(0,0),mask);prev=prev.crop((16,16,496,496));circle=Image.new('L',(480,480));ImageDraw.Draw(circle).ellipse((0,0,479,479),fill=255);prev.putalpha(circle);prev.save(draw/'preview.png')
-        base.resize((300,300)).save(draw/'placeholder.webp',quality=78)
+base=Image.open(root/'assets/dog.webp').resize((480,480),Image.Resampling.LANCZOS)
+mask=Image.open(root/'assets/subject.png').resize(base.size,Image.Resampling.LANCZOS)
+tone=ramp(base)
+for name,bg in [('natural',base),('background',Image.composite(base,tone,mask)),('duotone',tone)]:
+    bg.save(draw/('dog_'+name+'.webp'),quality=94)
+for name,option in opts(scene,'effect',effects):
+    image(option,'dog_'+name,box())
+time(scene,57)
+for variant,fg in [('raw',base),('tone',tone)]:
+    layer=fg.convert('RGBA');layer.putalpha(mask);layer.save(draw/('subject_'+variant+'.webp'),quality=94)
+for name,option in opts(scene,'effect',effects):
+    image(option,'subject_'+('tone' if name=='duotone' else 'raw'),box())
+Image.new('RGBA',(1,1)).save(draw/'empty_photo.png')
+album=add(scene,'Group',name='personal_album',**box())
+part=add(album,'PartImage',renderMode='ALL',**box())
+add(part,'Photos',source='[CONFIGURATION.user_photos]',defaultImageResource='empty_photo',change='TAP ON_VISIBLE',changeAfterEvery=3)
+time(album,57)
+dim(scene,.28)
+prev=base.convert('RGBA')
+d=ImageDraw.Draw(prev);d.text((240,41),'MON 7',fill='white',anchor='mm',font=ImageFont.truetype(str(next((fw/'系统字体').rglob('SFCompact.ttf'))),21))
+x=240-sum(digits['modern'][ch].width for ch in '10:09')//2
+for ch in '10:09':
+    stamp=digits['modern'][ch];prev.paste('white',(x,61,x+stamp.width,61+stamp.height),stamp);x+=stamp.width
+prev.paste(base,(0,0),mask);circle=Image.new('L',base.size);ImageDraw.Draw(circle).ellipse((0,0,479,479),fill=255);prev.putalpha(circle);prev.save(draw/'preview.png')
 save(res/'raw/watchface.xml',face)
 for loc in (fw/'解析/属性表'/bundle).glob('*.lproj'):
     data=json.loads((loc/'Localizable.strings.json').read_text('utf8'))
@@ -109,9 +85,8 @@ for loc in (fw/'解析/属性表'/bundle).glob('*.lproj'):
     labels={'face_name':data['FACE_STYLE_ULTRACUBE_IN_TITLE_CASE'],'photos':clock['EDIT_MODE_LABEL_PHOTO_CONTENT'],'typeface':data['EDIT_MODE_LABEL_TYPEFACE'],'effect_label':clock.get('EDIT_MODE_LABEL_COLOR','Color')}
     for k,v in zip(styles,['SAN_FRANCISCO','NEW_YORK','TOKYO']):labels[k]=data['EDIT_OPTION_LABEL_TYPEFACE_'+v]
     for k,v in zip(effects,['NONE','BACKGROUND','DUOTONE']):labels[k]=data['EDIT_OPTION_LABEL_EFFECT_'+v]
-    labels['personal']={'zh_CN':'个人照片','zh_TW':'個人照片','zh_HK':'個人相片','en':'My photos'}.get(loc.stem,clock['EDIT_MODE_LABEL_PHOTO_CONTENT'])
-    for i,key in enumerate(ids,1):labels[key]=f'{labels["photos"]} {i:02}'
     tree=ET.Element('resources')
     for k,v in labels.items():add(tree,'string',name=k).text=v.replace("'","\\'")
     code=loc.stem;q={'en':'','es_419':'-b+es+419','he':'-iw','id':'-in'}.get(code,'-'+code.replace('_','-r'))
     for suffix in [q]+{'zh_CN':['-zh','-b+zh+Hans'],'zh_TW':['-b+zh+Hant'],'no':['-nb']}.get(code,[]):save(res/('values'+suffix)/'strings.xml',tree)
+

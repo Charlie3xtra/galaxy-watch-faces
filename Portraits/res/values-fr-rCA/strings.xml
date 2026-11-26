@@ -10,22 +10,4 @@
   <string name="natural">AUCUNE</string>
   <string name="background">ARRIÈRE-PLAN</string>
   <string name="duotone">DEUX TONS</string>
-  <string name="personal">PHOTO</string>
-  <string name="photo01">PHOTO 01</string>
-  <string name="photo02">PHOTO 02</string>
-  <string name="photo03">PHOTO 03</string>
-  <string name="photo04">PHOTO 04</string>
-  <string name="photo05">PHOTO 05</string>
-  <string name="photo06">PHOTO 06</string>
-  <string name="photo07">PHOTO 07</string>
-  <string name="photo08">PHOTO 08</string>
-  <string name="photo09">PHOTO 09</string>
-  <string name="photo10">PHOTO 10</string>
-  <string name="photo11">PHOTO 11</string>
-  <string name="photo12">PHOTO 12</string>
-  <string name="photo13">PHOTO 13</string>
-  <string name="photo14">PHOTO 14</string>
-  <string name="photo15">PHOTO 15</string>
-  <string name="photo16">PHOTO 16</string>
-  <string name="photo17">PHOTO 17</string>
 </resources>

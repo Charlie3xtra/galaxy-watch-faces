@@ -10,22 +10,4 @@
   <string name="natural">EI</string>
   <string name="background">TAUSTA</string>
   <string name="duotone">KAKSISÄVY</string>
-  <string name="personal">KUVA</string>
-  <string name="photo01">KUVA 01</string>
-  <string name="photo02">KUVA 02</string>
-  <string name="photo03">KUVA 03</string>
-  <string name="photo04">KUVA 04</string>
-  <string name="photo05">KUVA 05</string>
-  <string name="photo06">KUVA 06</string>
-  <string name="photo07">KUVA 07</string>
-  <string name="photo08">KUVA 08</string>
-  <string name="photo09">KUVA 09</string>
-  <string name="photo10">KUVA 10</string>
-  <string name="photo11">KUVA 11</string>
-  <string name="photo12">KUVA 12</string>
-  <string name="photo13">KUVA 13</string>
-  <string name="photo14">KUVA 14</string>
-  <string name="photo15">KUVA 15</string>
-  <string name="photo16">KUVA 16</string>
-  <string name="photo17">KUVA 17</string>
 </resources>

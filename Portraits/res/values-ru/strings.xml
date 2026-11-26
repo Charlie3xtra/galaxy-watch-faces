@@ -10,22 +10,4 @@
   <string name="natural">НЕТ</string>
   <string name="background">ФОН</string>
   <string name="duotone">ДВА ЦВЕТА</string>
-  <string name="personal">ФОТО</string>
-  <string name="photo01">ФОТО 01</string>
-  <string name="photo02">ФОТО 02</string>
-  <string name="photo03">ФОТО 03</string>
-  <string name="photo04">ФОТО 04</string>
-  <string name="photo05">ФОТО 05</string>
-  <string name="photo06">ФОТО 06</string>
-  <string name="photo07">ФОТО 07</string>
-  <string name="photo08">ФОТО 08</string>
-  <string name="photo09">ФОТО 09</string>
-  <string name="photo10">ФОТО 10</string>
-  <string name="photo11">ФОТО 11</string>
-  <string name="photo12">ФОТО 12</string>
-  <string name="photo13">ФОТО 13</string>
-  <string name="photo14">ФОТО 14</string>
-  <string name="photo15">ФОТО 15</string>
-  <string name="photo16">ФОТО 16</string>
-  <string name="photo17">ФОТО 17</string>
 </resources>
