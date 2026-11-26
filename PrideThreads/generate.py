@@ -13,7 +13,11 @@ BUNDLE='NTKLilypadFaceBundle.bundle'
 PITCH=26
 HEIGHT=224
 ROW_Y=(32,224)
-ORIGIN=240-8*PITCH
+ACTIVE_PITCH=29
+
+def strand_layout(mode):
+    pitch=ACTIVE_PITCH if mode=="active" else PITCH
+    return 240-8*pitch,pitch
 E=ET.SubElement
 
 def write_xml(path,node):
@@ -80,6 +84,7 @@ def picture(parent,x,y,w,h,res,color):
     E(im,'Image',resource=res)
 
 def render_digits(node,mode,palette,masks):
+    origin,pitch=strand_layout(mode)
     for row,src in enumerate(('([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])','[MINUTE]')):
         val=(f'floor({src} / 10)',f'({src} % 10)')
         for side in range(2):
@@ -94,7 +99,7 @@ def render_digits(node,mode,palette,masks):
                         key=f'{mode}_{d}_{col}'
                         if key in masks:
                             k=first+col
-                            picture(choice,ORIGIN+k*PITCH,ROW_Y[row],PITCH,HEIGHT,key,palette[k])
+                            picture(choice,origin+k*pitch,ROW_Y[row],pitch,HEIGHT,key,palette[k])
 
 def pulse_frames():
     yy,xx=np.mgrid[:160,:PITCH]
@@ -110,12 +115,13 @@ def pulse_frames():
     frames[0].save(DRAW/'idle.png')
 
 def interactive(node,palette):
+    origin,pitch=strand_layout("active")
     for i,color in enumerate(palette):
-        x=ORIGIN+i*PITCH
-        picture(node,x,0,PITCH,480,'strand',color)
+        x=origin+i*pitch
+        picture(node,x,0,pitch,480,'strand',color)
     for trigger in ('ON_VISIBLE','TAP'):
         for i,color in enumerate(palette):
-            part=box('PartAnimatedImage',node,ORIGIN+i*PITCH,0,PITCH,480,tintColor=color)
+            part=box('PartAnimatedImage',node,origin+i*pitch,0,pitch,480,tintColor=color)
             E(part,'AnimatedImage',resource='pulse',format='WEBP',thumbnail='idle')
             E(part,'AnimationController',play=trigger,delayPlay=str(round(i*.022,3) if trigger=='ON_VISIBLE' else 0),beforePlaying='HIDE',afterPlaying='HIDE',repeat='FALSE')
 
@@ -157,12 +163,13 @@ def generate(fw):
     render_digits(ambient,'ambient',palettes[1],masks)
     write_xml(ROOT/'res/raw/watchface.xml',face)
     for i,mode in ((0,'active'),(1,'active'),(1,'ambient')):
+        origin,pitch=strand_layout(mode)
         canvas=Image.new('RGB',(480,480),'white' if i==0 else 'black')
         def paste(mask,x,y,color):
             canvas.paste(color,(x,y,x+mask.width,y+mask.height),mask)
         if mode=='active':
-            line=Image.open(DRAW/'strand.png').getchannel('A').resize((PITCH,480))
-            for k,c in enumerate(palettes[i]):paste(line,ORIGIN+k*PITCH,0,c)
+            line=Image.open(DRAW/'strand.png').getchannel('A').resize((pitch,480))
+            for k,c in enumerate(palettes[i]):paste(line,origin+k*pitch,0,c)
         for row,pair in enumerate(((1,0),(0,9))):
             for side,d in enumerate(pair):
                 first=5+(-1,1)[side]*(2 if pair[1-side]==1 or d==1 else 3)
@@ -170,9 +177,9 @@ def generate(fw):
                     mask=masks.get(f'{mode}_{d}_{col}')
                     if mask:
                         k=first+col
-                        alpha=mask.getchannel('A')
+                        alpha=mask.getchannel('A').resize((pitch,HEIGHT),Image.Resampling.LANCZOS)
                         if mode=='ambient':alpha=alpha.point(lambda v:round(v*135/255))
-                        paste(alpha,ORIGIN+k*PITCH,ROW_Y[row],palettes[i][k])
+                        paste(alpha,origin+k*pitch,ROW_Y[row],palettes[i][k])
         circular=Image.new('L',(480,480));from PIL import ImageDraw
         ImageDraw.Draw(circular).ellipse((0,0,479,479),fill=255)
         canvas=Image.composite(canvas,Image.new('RGB',canvas.size),circular)

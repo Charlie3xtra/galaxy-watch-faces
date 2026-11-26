@@ -4,7 +4,7 @@
 
 16 根彩线的宽度组成两行时间，点按一根线会触发局部振动。三星编辑器提供浅色和深色背景，表盘名称与背景名称跟随系统语言。支持 Wear OS 6 的 WFF 4 表盘选择器。
 
-[下载彩虹线条 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/pride-threads-v1.0/PrideThreads-1.0.apk) · [浅色编辑页](PrideThreads/watch-editor.png) · [深色编辑页](PrideThreads/watch-editor-dark.png)
+[下载彩虹线条 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/pride-threads-v1.1/PrideThreads-1.1.apk) · [浅色编辑页](PrideThreads/watch-editor.png) · [深色编辑页](PrideThreads/watch-editor-dark.png)
 
 24S132 的 NTKLilypadFaceBundle 提供数字图集、数字起止位置、灰度到线宽的查找表，以及两组各 16 个 RGBA 值。生成器复用单色遮罩，并按每根线的位置着色。圆屏布局参照官方 10:09 图调整。点按和亮屏振动使用 WFF 的 TAP 与 ON_VISIBLE 播放预绘波形。原版的噪声、跨线物理传播、腕部运动与数码表冠连续输入尚未复现。息屏使用黑底、窄线和静止数字。
 
@@ -16,9 +16,9 @@
 
 息屏按各配色的 tritium 设置生成，使用专用颜色、色段长度、字形加宽和无外发光的静态绘制。相位与亮度映射仍是移植值，尚无同机同刻的 Apple 实拍校准。
 
-[下载彩虹光辉 1.7](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/pride-radiance-v1.7/PrideRadiance-1.7.apk) · [紫色光晕修正前后对照](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/pride-radiance-v1.7/purple-compare-1.7.png) · [配色 II–V 动态对照](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/pride-radiance-v1.5/colorways-II-V-1.5.mp4) · [Galaxy Watch 息屏实拍截图](PrideRadiance/ambient-1.4.png)
+[下载彩虹光辉 1.9](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/pride-radiance-v1.9/PrideRadiance-1.9.apk) · [紫色光晕修正前后对照](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/pride-radiance-v1.7/purple-compare-1.7.png) · [配色 II–V 动态对照](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/pride-radiance-v1.5/colorways-II-V-1.5.mp4) · [Galaxy Watch 息屏实拍截图](PrideRadiance/ambient-1.4.png)
 
-[1.8 编辑器预览版](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/pride-radiance-v1.8) 由系统绘制双色圆点。[三星手表编辑页截图](PrideRadiance/editor-1.8.png)。WFF 4 格式验证通过，官方内存工具估算亮屏 325.97 MB，超过 100 MB 上限。1.7 为正式版。
+1.9 保留系统双色圆点、五组配色和每轮 32 个关键位置。亮屏光场纹理使用预乘透明度缩放，WFF 内存检查通过。
 
 ## 艺术家 Artist
 

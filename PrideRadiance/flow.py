@@ -9,6 +9,7 @@ FRAME_MS=500
 SIZE=(228,265)
 ROWS=(140,340)
 GLOW_PADDING=24
+TEXTURE_SIZE=(108,126)
 
 def key_name(style, asset, frame):
     prefix="key" if style==1 else f"key{style}"
@@ -122,6 +123,7 @@ def generate(model,art,draw,mesh_uv,settings,palette,style):
         for row in (("h","m") if d==0 else ("n",)):
             center=((134,155) if d==1 else (250,155)) if (row=="h" or (row=="n" and d!=9)) else ((142,330) if d==0 else (276,331))
             imgs=bake_digit(uv,source,center,palette,settings,5371+d+(30 if row=="m" else 0))
+            imgs=[im.resize(TEXTURE_SIZE,Image.Resampling.LANCZOS) for im in imgs]
             for idx,im in enumerate(imgs):
                 im.save(draw/(key_name(style,f"{row}{d}",idx)+".png"))
             if d in (1,0,9):
@@ -139,7 +141,7 @@ def generate(model,art,draw,mesh_uv,settings,palette,style):
         previews[0].save(draw/"preview.png")
     import os, shutil, subprocess
     ffmpeg=os.environ.get("FFMPEG") or shutil.which("ffmpeg") or next(draw.parents[2].glob("work/decoders/imageio_ffmpeg/binaries/ffmpeg*.exe"))
-    with subprocess.Popen([str(ffmpeg),"-v","error","-y","-f","rawvideo","-pix_fmt","rgb24","-s","480x480","-r","30","-i","-","-c:v","libx264","-crf","16","-pix_fmt","yuv420p","-movflags","+faststart",str(draw.parents[1]/f"flow-preview-1.7-{style}.mp4")],stdin=subprocess.PIPE) as proc:
+    with subprocess.Popen([str(ffmpeg),"-v","error","-y","-f","rawvideo","-pix_fmt","rgb24","-s","480x480","-r","30","-i","-","-c:v","libx264","-crf","16","-pix_fmt","yuv420p","-movflags","+faststart",str(draw.parents[1]/f"flow-preview-1.9-{style}.mp4")],stdin=subprocess.PIPE) as proc:
         for idx,current in enumerate(previews):
             following=previews[(idx+1)%COUNT]
             for step in range(15):
