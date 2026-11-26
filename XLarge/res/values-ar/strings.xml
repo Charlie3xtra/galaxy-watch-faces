@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">كبيرة جدًا</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">أحمر</string>
+  <string name="standard_orange">برتقالي</string>
+  <string name="standard_lightorange">برتقالي فاتح</string>
+  <string name="standard_yellow">أصفر</string>
+  <string name="standard_lightyellow">أصفر فاتح</string>
+  <string name="standard_lightgreen">أخضر فاتح</string>
+  <string name="standard_green">أخضر</string>
+  <string name="standard_lightblue">أزرق فاتح</string>
+  <string name="standard_blue">أزرق</string>
+  <string name="standard_navy">كحلي</string>
+  <string name="standard_purple">أرجواني</string>
+  <string name="standard_lightpurple">أرجواني خفيف</string>
+  <string name="standard_lightpink">زهري فاتح</string>
+  <string name="standard_pink">زهري</string>
+  <string name="standard_plum">خوخي</string>
+  <string name="standard_stone">حجري</string>
+  <string name="standard_warmgray">رمادي دافئ</string>
+  <string name="standard_cream">كريمي</string>
+  <string name="standard_gray">رمادي</string>
+  <string name="gossamer_color3">أحمر</string>
+  <string name="gossamer_color1">عشبي</string>
+  <string name="gossamer_color4">أزرق عميق</string>
+  <string name="gossamer_color8">برتقالي</string>
+  <string name="gossamer_color2">ضوء النجوم</string>
+  <string name="gossamer_color5">أخضر</string>
+  <string name="gossamer_color6">أزرق</string>
+</resources>

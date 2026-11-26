@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">X-Large</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">Rot</string>
+  <string name="standard_orange">Orange</string>
+  <string name="standard_lightorange">Hellorange</string>
+  <string name="standard_yellow">Gelb</string>
+  <string name="standard_lightyellow">Hellgelb</string>
+  <string name="standard_lightgreen">Hellgrün</string>
+  <string name="standard_green">Grün</string>
+  <string name="standard_lightblue">Hellblau</string>
+  <string name="standard_blue">Blau</string>
+  <string name="standard_navy">Marine</string>
+  <string name="standard_purple">Lila</string>
+  <string name="standard_lightpurple">Helllila</string>
+  <string name="standard_lightpink">Hellrosa</string>
+  <string name="standard_pink">Pink</string>
+  <string name="standard_plum">Pflaume</string>
+  <string name="standard_stone">Stein</string>
+  <string name="standard_warmgray">Warmes Grau</string>
+  <string name="standard_cream">Creme</string>
+  <string name="standard_gray">Grau</string>
+  <string name="gossamer_color3">Rot</string>
+  <string name="gossamer_color1">Klee</string>
+  <string name="gossamer_color4">Abyssblau</string>
+  <string name="gossamer_color8">Orange</string>
+  <string name="gossamer_color2">Sternenlicht</string>
+  <string name="gossamer_color5">Grün</string>
+  <string name="gossamer_color6">Blau</string>
+  <string name="ink_label">Farbe</string>
+</resources>

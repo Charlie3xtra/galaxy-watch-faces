@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">特大</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">レッド</string>
+  <string name="standard_orange">オレンジ</string>
+  <string name="standard_lightorange">ライトオレンジ</string>
+  <string name="standard_yellow">イエロー</string>
+  <string name="standard_lightyellow">ライトイエロー</string>
+  <string name="standard_lightgreen">ライトグリーン</string>
+  <string name="standard_green">グリーン</string>
+  <string name="standard_lightblue">ライトブルー</string>
+  <string name="standard_blue">ブルー</string>
+  <string name="standard_navy">ネイビー</string>
+  <string name="standard_purple">パープル</string>
+  <string name="standard_lightpurple">ライトパープル</string>
+  <string name="standard_lightpink">ライトピンク</string>
+  <string name="standard_pink">ピンク</string>
+  <string name="standard_plum">プラム</string>
+  <string name="standard_stone">ストーン</string>
+  <string name="standard_warmgray">ウォームグレイ</string>
+  <string name="standard_cream">クリーム</string>
+  <string name="standard_gray">グレイ</string>
+  <string name="gossamer_color3">レッド</string>
+  <string name="gossamer_color1">クローバー</string>
+  <string name="gossamer_color4">アビスブルー</string>
+  <string name="gossamer_color8">オレンジ</string>
+  <string name="gossamer_color2">スターライト</string>
+  <string name="gossamer_color5">グリーン</string>
+  <string name="gossamer_color6">ブルー</string>
+  <string name="ink_label">カラー</string>
+</resources>

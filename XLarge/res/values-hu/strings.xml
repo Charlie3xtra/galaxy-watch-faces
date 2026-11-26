@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Extra nagy</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">Vörös</string>
+  <string name="standard_orange">Narancssárga</string>
+  <string name="standard_lightorange">Világos narancs</string>
+  <string name="standard_yellow">Sárga</string>
+  <string name="standard_lightyellow">Világossárga</string>
+  <string name="standard_lightgreen">Világoszöld</string>
+  <string name="standard_green">Zöld</string>
+  <string name="standard_lightblue">Világoskék</string>
+  <string name="standard_blue">Kék</string>
+  <string name="standard_navy">Tengerészkék</string>
+  <string name="standard_purple">Lila</string>
+  <string name="standard_lightpurple">Világoslila</string>
+  <string name="standard_lightpink">Világos rózsaszín</string>
+  <string name="standard_pink">Rózsaszín</string>
+  <string name="standard_plum">Szilva</string>
+  <string name="standard_stone">Kavicsszürke</string>
+  <string name="standard_warmgray">Melegszürke</string>
+  <string name="standard_cream">Krém</string>
+  <string name="standard_gray">Szürke</string>
+  <string name="gossamer_color3">Vörös</string>
+  <string name="gossamer_color1">Rétzöld</string>
+  <string name="gossamer_color4">Mély indigókék</string>
+  <string name="gossamer_color8">Narancssárga</string>
+  <string name="gossamer_color2">Csillagfény</string>
+  <string name="gossamer_color5">Zöld</string>
+  <string name="gossamer_color6">Kék</string>
+</resources>

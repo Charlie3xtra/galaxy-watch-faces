@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Zelo veliko</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">Rdeča</string>
+  <string name="standard_orange">Oranžna</string>
+  <string name="standard_lightorange">Svetlo oranžna</string>
+  <string name="standard_yellow">Rumena</string>
+  <string name="standard_lightyellow">Svetlo rumena</string>
+  <string name="standard_lightgreen">Svetlo zelena</string>
+  <string name="standard_green">Zelena</string>
+  <string name="standard_lightblue">Svetlo modra</string>
+  <string name="standard_blue">Modra</string>
+  <string name="standard_navy">Mornarsko modra</string>
+  <string name="standard_purple">Vijolična</string>
+  <string name="standard_lightpurple">Svetlo vijolična</string>
+  <string name="standard_lightpink">Svetlo rožnata</string>
+  <string name="standard_pink">Rožnata</string>
+  <string name="standard_plum">Slivnato vijolična</string>
+  <string name="standard_stone">Kamnita</string>
+  <string name="standard_warmgray">Toplo siva</string>
+  <string name="standard_cream">Kremna</string>
+  <string name="standard_gray">Siva</string>
+  <string name="gossamer_color3">Rdeča</string>
+  <string name="gossamer_color1">Detelja</string>
+  <string name="gossamer_color4">Modra globina</string>
+  <string name="gossamer_color8">Oranžna</string>
+  <string name="gossamer_color2">Zvezdna svetloba</string>
+  <string name="gossamer_color5">Zelena</string>
+  <string name="gossamer_color6">Modra</string>
+</resources>

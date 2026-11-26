@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">X-Large</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">Kırmızı</string>
+  <string name="standard_orange">Turuncu</string>
+  <string name="standard_lightorange">Açık Turuncu</string>
+  <string name="standard_yellow">Sarı</string>
+  <string name="standard_lightyellow">Açık Sarı</string>
+  <string name="standard_lightgreen">Açık Yeşil</string>
+  <string name="standard_green">Yeşil</string>
+  <string name="standard_lightblue">Açık Mavi</string>
+  <string name="standard_blue">Mavi</string>
+  <string name="standard_navy">Lacivert</string>
+  <string name="standard_purple">Mor</string>
+  <string name="standard_lightpurple">Açık Mor</string>
+  <string name="standard_lightpink">Uçuk Pembe</string>
+  <string name="standard_pink">Pembe</string>
+  <string name="standard_plum">Kırmızı Erik</string>
+  <string name="standard_stone">Taş Rengi</string>
+  <string name="standard_warmgray">Sıcak Gri</string>
+  <string name="standard_cream">Krem</string>
+  <string name="standard_gray">Gri</string>
+  <string name="gossamer_color3">Kırmızı</string>
+  <string name="gossamer_color1">Yonca</string>
+  <string name="gossamer_color4">Koyu Abis</string>
+  <string name="gossamer_color8">Turuncu</string>
+  <string name="gossamer_color2">Yıldız Işığı</string>
+  <string name="gossamer_color5">Yeşil</string>
+  <string name="gossamer_color6">Mavi</string>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">큰글자</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">레드</string>
+  <string name="standard_orange">오렌지</string>
+  <string name="standard_lightorange">라이트 오렌지</string>
+  <string name="standard_yellow">옐로</string>
+  <string name="standard_lightyellow">라이트 옐로</string>
+  <string name="standard_lightgreen">라이트 그린</string>
+  <string name="standard_green">그린</string>
+  <string name="standard_lightblue">라이트 블루</string>
+  <string name="standard_blue">블루</string>
+  <string name="standard_navy">네이비</string>
+  <string name="standard_purple">퍼플</string>
+  <string name="standard_lightpurple">라이트 퍼플</string>
+  <string name="standard_lightpink">라이트 핑크</string>
+  <string name="standard_pink">핑크</string>
+  <string name="standard_plum">플럼</string>
+  <string name="standard_stone">스톤</string>
+  <string name="standard_warmgray">웜 그레이</string>
+  <string name="standard_cream">크림</string>
+  <string name="standard_gray">그레이</string>
+  <string name="gossamer_color3">레드</string>
+  <string name="gossamer_color1">클로버</string>
+  <string name="gossamer_color4">어비스 블루</string>
+  <string name="gossamer_color8">오렌지</string>
+  <string name="gossamer_color2">스타라이트</string>
+  <string name="gossamer_color5">그린</string>
+  <string name="gossamer_color6">블루</string>
+  <string name="ink_label">색상</string>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">ใหญ่พิเศษ</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">แดง</string>
+  <string name="standard_orange">ส้ม</string>
+  <string name="standard_lightorange">ส้มอ่อน</string>
+  <string name="standard_yellow">เหลือง</string>
+  <string name="standard_lightyellow">เหลืองอ่อน</string>
+  <string name="standard_lightgreen">เขียวอ่อน</string>
+  <string name="standard_green">เขียว</string>
+  <string name="standard_lightblue">ฟ้าอ่อน</string>
+  <string name="standard_blue">น้ำเงิน</string>
+  <string name="standard_navy">นาวี</string>
+  <string name="standard_purple">ม่วง</string>
+  <string name="standard_lightpurple">ม่วงอ่อน</string>
+  <string name="standard_lightpink">ชมพูอ่อน</string>
+  <string name="standard_pink">ชมพู</string>
+  <string name="standard_plum">พลัม</string>
+  <string name="standard_stone">สโตน</string>
+  <string name="standard_warmgray">เทาอุ่น</string>
+  <string name="standard_cream">ครีม</string>
+  <string name="standard_gray">เทา</string>
+  <string name="gossamer_color3">แดง</string>
+  <string name="gossamer_color1">เขียวโคลเวอร์</string>
+  <string name="gossamer_color4">น้ำเงินอะบิส</string>
+  <string name="gossamer_color8">ส้ม</string>
+  <string name="gossamer_color2">Starlight</string>
+  <string name="gossamer_color5">เขียว</string>
+  <string name="gossamer_color6">น้ำเงิน</string>
+</resources>

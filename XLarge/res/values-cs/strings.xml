@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Extra velký</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">Červená</string>
+  <string name="standard_orange">Oranžová</string>
+  <string name="standard_lightorange">Světle oranžová</string>
+  <string name="standard_yellow">Žlutá</string>
+  <string name="standard_lightyellow">Světle žlutá</string>
+  <string name="standard_lightgreen">Světle zelená</string>
+  <string name="standard_green">Zelená</string>
+  <string name="standard_lightblue">Světle modrá</string>
+  <string name="standard_blue">Modrá</string>
+  <string name="standard_navy">Námořnicky modrá</string>
+  <string name="standard_purple">Fialová</string>
+  <string name="standard_lightpurple">Světle fialová</string>
+  <string name="standard_lightpink">Světle růžová</string>
+  <string name="standard_pink">Růžová</string>
+  <string name="standard_plum">Švestková</string>
+  <string name="standard_stone">Kamenně šedá</string>
+  <string name="standard_warmgray">Teple šedá</string>
+  <string name="standard_cream">Smetanová</string>
+  <string name="standard_gray">Šedá</string>
+  <string name="gossamer_color3">Červená</string>
+  <string name="gossamer_color1">Jetelově zelená</string>
+  <string name="gossamer_color4">Hlubokomořsky modrá</string>
+  <string name="gossamer_color8">Oranžová</string>
+  <string name="gossamer_color2">Hvězdně bílá</string>
+  <string name="gossamer_color5">Zelená</string>
+  <string name="gossamer_color6">Modrá</string>
+</resources>

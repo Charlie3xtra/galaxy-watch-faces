@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">גדול</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">אדום</string>
+  <string name="standard_orange">כתום</string>
+  <string name="standard_lightorange">כתום בהיר</string>
+  <string name="standard_yellow">צהוב</string>
+  <string name="standard_lightyellow">צהוב בהיר</string>
+  <string name="standard_lightgreen">ירקרק</string>
+  <string name="standard_green">ירוק</string>
+  <string name="standard_lightblue">תכלת</string>
+  <string name="standard_blue">כחול</string>
+  <string name="standard_navy">כחול נייבי</string>
+  <string name="standard_purple">סגול</string>
+  <string name="standard_lightpurple">סגול בהיר</string>
+  <string name="standard_lightpink">ורוד בהיר</string>
+  <string name="standard_pink">ורוד</string>
+  <string name="standard_plum">שזיף</string>
+  <string name="standard_stone">אבן</string>
+  <string name="standard_warmgray">אפור חמים</string>
+  <string name="standard_cream">שמנת</string>
+  <string name="standard_gray">אפור</string>
+  <string name="gossamer_color3">אדום</string>
+  <string name="gossamer_color1">תלתן</string>
+  <string name="gossamer_color4">כחול מצולות</string>
+  <string name="gossamer_color8">כתום</string>
+  <string name="gossamer_color2">אור כוכבים</string>
+  <string name="gossamer_color5">ירוק</string>
+  <string name="gossamer_color6">כחול</string>
+</resources>

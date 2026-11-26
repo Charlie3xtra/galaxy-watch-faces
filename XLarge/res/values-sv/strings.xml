@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Extrastor</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">Röd</string>
+  <string name="standard_orange">Orange</string>
+  <string name="standard_lightorange">Ljusorange</string>
+  <string name="standard_yellow">Gul</string>
+  <string name="standard_lightyellow">Ljusgul</string>
+  <string name="standard_lightgreen">Ljusgrön</string>
+  <string name="standard_green">Grön</string>
+  <string name="standard_lightblue">Ljusblå</string>
+  <string name="standard_blue">Blå</string>
+  <string name="standard_navy">Marin</string>
+  <string name="standard_purple">Lila</string>
+  <string name="standard_lightpurple">Ljuslila</string>
+  <string name="standard_lightpink">Ljusrosa</string>
+  <string name="standard_pink">Rosa</string>
+  <string name="standard_plum">Plommon</string>
+  <string name="standard_stone">Stengrå</string>
+  <string name="standard_warmgray">Varmt grå</string>
+  <string name="standard_cream">Gräddvit</string>
+  <string name="standard_gray">Grå</string>
+  <string name="gossamer_color3">Röd</string>
+  <string name="gossamer_color1">Klöver</string>
+  <string name="gossamer_color4">Bläckblå</string>
+  <string name="gossamer_color8">Orange</string>
+  <string name="gossamer_color2">Stjärnglans</string>
+  <string name="gossamer_color5">Grön</string>
+  <string name="gossamer_color6">Blå</string>
+</resources>

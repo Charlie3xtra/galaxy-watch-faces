@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">X‑Large</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">Красный</string>
+  <string name="standard_orange">Оранжевый</string>
+  <string name="standard_lightorange">Светло-оранжевый</string>
+  <string name="standard_yellow">Желтый</string>
+  <string name="standard_lightyellow">Светло-желтый</string>
+  <string name="standard_lightgreen">Светло‑зеленый</string>
+  <string name="standard_green">Зеленый</string>
+  <string name="standard_lightblue">Светло-синий</string>
+  <string name="standard_blue">Синий</string>
+  <string name="standard_navy">Синева</string>
+  <string name="standard_purple">Лиловый</string>
+  <string name="standard_lightpurple">Светло-лиловый</string>
+  <string name="standard_lightpink">Светло-розовый</string>
+  <string name="standard_pink">Розовый</string>
+  <string name="standard_plum">Сливовый</string>
+  <string name="standard_stone">Песочный</string>
+  <string name="standard_warmgray">Теплый серый</string>
+  <string name="standard_cream">Кремовый</string>
+  <string name="standard_gray">Серый</string>
+  <string name="gossamer_color3">Красный</string>
+  <string name="gossamer_color1">Зеленый клевер</string>
+  <string name="gossamer_color4">Синий омут</string>
+  <string name="gossamer_color8">Оранжевый</string>
+  <string name="gossamer_color2">Сияющая звезда</string>
+  <string name="gossamer_color5">Зеленый</string>
+  <string name="gossamer_color6">Синий</string>
+  <string name="ink_label">Цвет</string>
+</resources>

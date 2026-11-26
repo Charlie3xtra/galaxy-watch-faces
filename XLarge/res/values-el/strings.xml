@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Πολύ μεγάλο</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">Κόκκινο</string>
+  <string name="standard_orange">Πορτοκαλί</string>
+  <string name="standard_lightorange">Ανοιχτό πορτοκαλί</string>
+  <string name="standard_yellow">Κίτρινο</string>
+  <string name="standard_lightyellow">Ανοιχτό κίτρινο</string>
+  <string name="standard_lightgreen">Ανοιχτό πράσινο</string>
+  <string name="standard_green">Πράσινο</string>
+  <string name="standard_lightblue">Γαλάζιο</string>
+  <string name="standard_blue">Μπλε</string>
+  <string name="standard_navy">Ναυτικό μπλε</string>
+  <string name="standard_purple">Μοβ</string>
+  <string name="standard_lightpurple">Ανοιχτό μοβ</string>
+  <string name="standard_lightpink">Ανοιχτό ροζ</string>
+  <string name="standard_pink">Ροζ</string>
+  <string name="standard_plum">Δαμασκηνί</string>
+  <string name="standard_stone">Λίθινο</string>
+  <string name="standard_warmgray">Ανοιχτό γκρι</string>
+  <string name="standard_cream">Κρεμ</string>
+  <string name="standard_gray">Γκρι</string>
+  <string name="gossamer_color3">Κόκκινο</string>
+  <string name="gossamer_color1">Τριφύλλι</string>
+  <string name="gossamer_color4">Βαθύ Μπλε</string>
+  <string name="gossamer_color8">Πορτοκαλί</string>
+  <string name="gossamer_color2">Αστροφεγγιά</string>
+  <string name="gossamer_color5">Πράσινο</string>
+  <string name="gossamer_color6">Μπλε</string>
+</resources>

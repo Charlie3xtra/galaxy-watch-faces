@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">XXL</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">Roșu</string>
+  <string name="standard_orange">Portocaliu</string>
+  <string name="standard_lightorange">Portocaliu deschis</string>
+  <string name="standard_yellow">Galben</string>
+  <string name="standard_lightyellow">Galben deschis</string>
+  <string name="standard_lightgreen">Verde deschis</string>
+  <string name="standard_green">Verde</string>
+  <string name="standard_lightblue">Albastru deschis</string>
+  <string name="standard_blue">Albastru</string>
+  <string name="standard_navy">Navy</string>
+  <string name="standard_purple">Violet</string>
+  <string name="standard_lightpurple">Violet deschis</string>
+  <string name="standard_lightpink">Roz deschis</string>
+  <string name="standard_pink">Roz</string>
+  <string name="standard_plum">Prună</string>
+  <string name="standard_stone">Gri-bej</string>
+  <string name="standard_warmgray">Gri cald</string>
+  <string name="standard_cream">Crem</string>
+  <string name="standard_gray">Gri</string>
+  <string name="gossamer_color3">Roșu</string>
+  <string name="gossamer_color1">Verde trifoi</string>
+  <string name="gossamer_color4">Albastru adânc</string>
+  <string name="gossamer_color8">Orange</string>
+  <string name="gossamer_color2">Strălucire stelară</string>
+  <string name="gossamer_color5">Verde</string>
+  <string name="gossamer_color6">Albastru</string>
+</resources>

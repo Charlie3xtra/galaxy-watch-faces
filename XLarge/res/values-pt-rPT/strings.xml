@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Enorme</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">Vermelho</string>
+  <string name="standard_orange">Laranja</string>
+  <string name="standard_lightorange">Laranja claro</string>
+  <string name="standard_yellow">Amarelo</string>
+  <string name="standard_lightyellow">Amarelo claro</string>
+  <string name="standard_lightgreen">Verde claro</string>
+  <string name="standard_green">Verde</string>
+  <string name="standard_lightblue">Azul claro</string>
+  <string name="standard_blue">Azul</string>
+  <string name="standard_navy">Azul-marinho</string>
+  <string name="standard_purple">Roxo</string>
+  <string name="standard_lightpurple">Roxo claro</string>
+  <string name="standard_lightpink">Rosa claro</string>
+  <string name="standard_pink">Rosa</string>
+  <string name="standard_plum">Ameixa</string>
+  <string name="standard_stone">Cor de pedra</string>
+  <string name="standard_warmgray">Cinza quente</string>
+  <string name="standard_cream">Creme</string>
+  <string name="standard_gray">Cinzento</string>
+  <string name="gossamer_color3">Vermelho</string>
+  <string name="gossamer_color1">Trevo</string>
+  <string name="gossamer_color4">Azul abissal</string>
+  <string name="gossamer_color8">Laranja</string>
+  <string name="gossamer_color2">Luz das estrelas</string>
+  <string name="gossamer_color5">Verde</string>
+  <string name="gossamer_color6">Azul</string>
+</resources>

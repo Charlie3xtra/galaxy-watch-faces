@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='utf-8'?>
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <UserConfigurations>
+    <ColorConfiguration id="ink" displayName="ink_label" defaultValue="0">
+      <ColorOption id="0" displayName="gallery" colors="#FFB8A4E1" />
+      <ColorOption id="1" displayName="standard_red" colors="#FFFF2942" />
+      <ColorOption id="2" displayName="standard_orange" colors="#FFF66546" />
+      <ColorOption id="3" displayName="standard_lightorange" colors="#FFFF9600" />
+      <ColorOption id="4" displayName="standard_yellow" colors="#FFFFDE43" />
+      <ColorOption id="5" displayName="standard_lightyellow" colors="#FFFFEC7C" />
+      <ColorOption id="6" displayName="standard_lightgreen" colors="#FFB1F3A0" />
+      <ColorOption id="7" displayName="standard_green" colors="#FF01DF70" />
+      <ColorOption id="8" displayName="standard_lightblue" colors="#FF5EC7FA" />
+      <ColorOption id="9" displayName="standard_blue" colors="#FF2193F9" />
+      <ColorOption id="10" displayName="standard_navy" colors="#FF56609E" />
+      <ColorOption id="11" displayName="standard_purple" colors="#FF797AFF" />
+      <ColorOption id="12" displayName="standard_lightpurple" colors="#FFB8A4E1" />
+      <ColorOption id="13" displayName="standard_lightpink" colors="#FFEC4678" />
+      <ColorOption id="14" displayName="standard_pink" colors="#FFFF1652" />
+      <ColorOption id="15" displayName="standard_plum" colors="#FF93424B" />
+      <ColorOption id="16" displayName="standard_stone" colors="#FF827160" />
+      <ColorOption id="17" displayName="standard_warmgray" colors="#FFAEA192" />
+      <ColorOption id="18" displayName="standard_cream" colors="#FFFFEDCF" />
+      <ColorOption id="19" displayName="standard_gray" colors="#FF9C9BA3" />
+      <ColorOption id="20" displayName="gossamer_color3" colors="#FFCB0028" />
+      <ColorOption id="21" displayName="gossamer_color1" colors="#FF5C8649" />
+      <ColorOption id="22" displayName="gossamer_color4" colors="#FF4A778B" />
+      <ColorOption id="23" displayName="gossamer_color8" colors="#FFFF5700" />
+      <ColorOption id="24" displayName="gossamer_color2" colors="#FFE6C5A4" />
+      <ColorOption id="25" displayName="gossamer_color5" colors="#FFB4F191" />
+      <ColorOption id="26" displayName="gossamer_color6" colors="#FF00B5FF" />
+    </ColorConfiguration>
+  </UserConfigurations>
+  <Scene backgroundColor="#000000">
+    <Group name="layer1" x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="67" />
+      <Condition>
+        <Expressions>
+          <Expression name="n1">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) / 10) == 1</Expression>
+          <Expression name="n2">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) / 10) == 2</Expression>
+        </Expressions>
+        <Compare expression="n1">
+          <PartImage x="186" y="78" width="61" height="149" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_1" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n2">
+          <PartImage x="147" y="77" width="100" height="151" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_2" />
+          </PartImage>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="n0">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) % 10) == 0</Expression>
+          <Expression name="n1">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) % 10) == 1</Expression>
+          <Expression name="n2">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) % 10) == 2</Expression>
+          <Expression name="n3">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) % 10) == 3</Expression>
+          <Expression name="n4">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) % 10) == 4</Expression>
+          <Expression name="n5">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) % 10) == 5</Expression>
+          <Expression name="n6">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) % 10) == 6</Expression>
+          <Expression name="n7">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) % 10) == 7</Expression>
+          <Expression name="n8">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) % 10) == 8</Expression>
+          <Expression name="n9">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12]) % 10) == 9</Expression>
+        </Expressions>
+        <Compare expression="n0">
+          <PartImage x="260" y="75" width="109" height="155" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_0" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n1">
+          <PartImage x="308" y="78" width="61" height="149" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_1" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n2">
+          <PartImage x="269" y="77" width="100" height="151" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_2" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n3">
+          <PartImage x="265" y="76" width="104" height="154" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_3" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n4">
+          <PartImage x="255" y="77" width="114" height="151" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_4" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n5">
+          <PartImage x="266" y="77" width="103" height="151" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_5" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n6">
+          <PartImage x="262" y="76" width="107" height="154" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_6" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n7">
+          <PartImage x="268" y="78" width="101" height="150" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_7" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n8">
+          <PartImage x="259" y="75" width="110" height="155" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_8" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n9">
+          <PartImage x="260" y="76" width="109" height="154" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_9" />
+          </PartImage>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="n0">floor([MINUTE] / 10) == 0</Expression>
+          <Expression name="n1">floor([MINUTE] / 10) == 1</Expression>
+          <Expression name="n2">floor([MINUTE] / 10) == 2</Expression>
+          <Expression name="n3">floor([MINUTE] / 10) == 3</Expression>
+          <Expression name="n4">floor([MINUTE] / 10) == 4</Expression>
+          <Expression name="n5">floor([MINUTE] / 10) == 5</Expression>
+        </Expressions>
+        <Compare expression="n0">
+          <PartImage x="138" y="248" width="109" height="155" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_0" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n1">
+          <PartImage x="186" y="251" width="61" height="149" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_1" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n2">
+          <PartImage x="147" y="250" width="100" height="151" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_2" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n3">
+          <PartImage x="143" y="249" width="104" height="154" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_3" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n4">
+          <PartImage x="133" y="250" width="114" height="151" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_4" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n5">
+          <PartImage x="144" y="250" width="103" height="151" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_5" />
+          </PartImage>
+        </Compare>
+      </Condition>
+      <Condition>
+        <Expressions>
+          <Expression name="n0">([MINUTE] % 10) == 0</Expression>
+          <Expression name="n1">([MINUTE] % 10) == 1</Expression>
+          <Expression name="n2">([MINUTE] % 10) == 2</Expression>
+          <Expression name="n3">([MINUTE] % 10) == 3</Expression>
+          <Expression name="n4">([MINUTE] % 10) == 4</Expression>
+          <Expression name="n5">([MINUTE] % 10) == 5</Expression>
+          <Expression name="n6">([MINUTE] % 10) == 6</Expression>
+          <Expression name="n7">([MINUTE] % 10) == 7</Expression>
+          <Expression name="n8">([MINUTE] % 10) == 8</Expression>
+          <Expression name="n9">([MINUTE] % 10) == 9</Expression>
+        </Expressions>
+        <Compare expression="n0">
+          <PartImage x="260" y="248" width="109" height="155" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_0" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n1">
+          <PartImage x="308" y="251" width="61" height="149" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_1" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n2">
+          <PartImage x="269" y="250" width="100" height="151" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_2" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n3">
+          <PartImage x="265" y="249" width="104" height="154" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_3" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n4">
+          <PartImage x="255" y="250" width="114" height="151" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_4" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n5">
+          <PartImage x="266" y="250" width="103" height="151" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_5" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n6">
+          <PartImage x="262" y="249" width="107" height="154" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_6" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n7">
+          <PartImage x="268" y="251" width="101" height="150" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_7" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n8">
+          <PartImage x="259" y="248" width="110" height="155" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_8" />
+          </PartImage>
+        </Compare>
+        <Compare expression="n9">
+          <PartImage x="260" y="249" width="109" height="154" tintColor="[CONFIGURATION.ink.0]">
+            <Image resource="digit_9" />
+          </PartImage>
+        </Compare>
+      </Condition>
+      <PartImage x="90" y="272" width="32" height="107" tintColor="[CONFIGURATION.ink.0]">
+        <Image resource="dots" />
+      </PartImage>
+    </Group>
+    <ComplicationSlot x="0" y="0" width="480" height="480" slotId="1" supportedTypes="EMPTY SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE PHOTO_IMAGE">
+      <BoundingOval x="12" y="12" width="456" height="456" />
+      <Complication type="EMPTY" />
+      <Complication type="SHORT_TEXT">
+        <Group name="layer2" x="0" y="0" width="480" height="480">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Rectangle x="0" y="0" width="480" height="480">
+              <Fill color="#000000" />
+            </Rectangle>
+          </PartDraw>
+          <Group name="layer3" x="0" y="0" width="480" height="480">
+            <Variant mode="AMBIENT" target="alpha" value="70" />
+            <DigitalClock x="72" y="57" width="336" height="96">
+              <TimeText x="0" y="0" width="336" height="96" format="h:mm" align="CENTER">
+                <Font family="SYNC_TO_DEVICE" size="76" color="[CONFIGURATION.ink.0]" />
+              </TimeText>
+            </DigitalClock>
+            <PartImage x="188" y="174" width="104" height="104" tintColor="[CONFIGURATION.ink.0]">
+              <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+            </PartImage>
+            <PartText x="83" y="284" width="314" height="86">
+              <Text align="CENTER">
+                <Font family="SYNC_TO_DEVICE" size="52" color="[CONFIGURATION.ink.0]">
+                  <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                  </Template>
+                </Font>
+              </Text>
+            </PartText>
+          </Group>
+        </Group>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <Group name="layer4" x="0" y="0" width="480" height="480">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Rectangle x="0" y="0" width="480" height="480">
+              <Fill color="#000000" />
+            </Rectangle>
+          </PartDraw>
+          <Group name="layer5" x="0" y="0" width="480" height="480">
+            <Variant mode="AMBIENT" target="alpha" value="70" />
+            <DigitalClock x="72" y="57" width="336" height="96">
+              <TimeText x="0" y="0" width="336" height="96" format="h:mm" align="CENTER">
+                <Font family="SYNC_TO_DEVICE" size="76" color="[CONFIGURATION.ink.0]" />
+              </TimeText>
+            </DigitalClock>
+            <PartImage x="145" y="197" width="190" height="190" tintColor="[CONFIGURATION.ink.0]">
+              <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+            </PartImage>
+          </Group>
+        </Group>
+      </Complication>
+      <Complication type="SMALL_IMAGE">
+        <Group name="layer6" x="0" y="0" width="480" height="480">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Rectangle x="0" y="0" width="480" height="480">
+              <Fill color="#000000" />
+            </Rectangle>
+          </PartDraw>
+          <Group name="layer7" x="0" y="0" width="480" height="480">
+            <Variant mode="AMBIENT" target="alpha" value="70" />
+            <DigitalClock x="72" y="57" width="336" height="96">
+              <TimeText x="0" y="0" width="336" height="96" format="h:mm" align="CENTER">
+                <Font family="SYNC_TO_DEVICE" size="76" color="[CONFIGURATION.ink.0]" />
+              </TimeText>
+            </DigitalClock>
+            <PartImage x="145" y="197" width="190" height="190">
+              <Image resource="[COMPLICATION.SMALL_IMAGE]" />
+            </PartImage>
+          </Group>
+        </Group>
+      </Complication>
+      <Complication type="PHOTO_IMAGE">
+        <Group name="layer8" x="0" y="0" width="480" height="480">
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Rectangle x="0" y="0" width="480" height="480">
+              <Fill color="#000000" />
+            </Rectangle>
+          </PartDraw>
+          <Group name="layer9" x="0" y="0" width="480" height="480">
+            <Variant mode="AMBIENT" target="alpha" value="70" />
+            <DigitalClock x="72" y="57" width="336" height="96">
+              <TimeText x="0" y="0" width="336" height="96" format="h:mm" align="CENTER">
+                <Font family="SYNC_TO_DEVICE" size="76" color="[CONFIGURATION.ink.0]" />
+              </TimeText>
+            </DigitalClock>
+            <PartImage x="145" y="197" width="190" height="190">
+              <Image resource="[COMPLICATION.PHOTO_IMAGE]" />
+            </PartImage>
+          </Group>
+        </Group>
+      </Complication>
+    </ComplicationSlot>
+  </Scene>
+</WatchFace>

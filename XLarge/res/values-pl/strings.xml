@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Rozmiar XL</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">Czerwony</string>
+  <string name="standard_orange">Pomarańczowy</string>
+  <string name="standard_lightorange">Jasnopomarańczowy</string>
+  <string name="standard_yellow">Żółty</string>
+  <string name="standard_lightyellow">Jasnożółty</string>
+  <string name="standard_lightgreen">Jasnozielony</string>
+  <string name="standard_green">Zielony</string>
+  <string name="standard_lightblue">Jasnoniebieski</string>
+  <string name="standard_blue">Niebieski</string>
+  <string name="standard_navy">Granat</string>
+  <string name="standard_purple">Fioletowy</string>
+  <string name="standard_lightpurple">Jasny fioletowy</string>
+  <string name="standard_lightpink">Jasnoróżowy</string>
+  <string name="standard_pink">Różowy</string>
+  <string name="standard_plum">Śliwkowy</string>
+  <string name="standard_stone">Kamienny</string>
+  <string name="standard_warmgray">Ciepły szary</string>
+  <string name="standard_cream">Kremowy</string>
+  <string name="standard_gray">Szary</string>
+  <string name="gossamer_color3">Czerwony</string>
+  <string name="gossamer_color1">Koniczyna</string>
+  <string name="gossamer_color4">Błękitna toń</string>
+  <string name="gossamer_color8">Pomarańczowy</string>
+  <string name="gossamer_color2">Księżycowa poświata</string>
+  <string name="gossamer_color5">Zielony</string>
+  <string name="gossamer_color6">Niebieski</string>
+</resources>

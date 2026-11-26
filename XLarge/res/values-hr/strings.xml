@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Veliki</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">Crvena</string>
+  <string name="standard_orange">Narančasta</string>
+  <string name="standard_lightorange">Svjetlonarančasta</string>
+  <string name="standard_yellow">Žuta</string>
+  <string name="standard_lightyellow">Svjetložuta</string>
+  <string name="standard_lightgreen">Svjetlozelena</string>
+  <string name="standard_green">Zelena</string>
+  <string name="standard_lightblue">Svjetloplava</string>
+  <string name="standard_blue">Plava</string>
+  <string name="standard_navy">Mornarskoplava</string>
+  <string name="standard_purple">Ljubičasta</string>
+  <string name="standard_lightpurple">Svjetloljubičasta</string>
+  <string name="standard_lightpink">Svjetloružičasta</string>
+  <string name="standard_pink">Ružičasta</string>
+  <string name="standard_plum">Šljiva ljubičasta</string>
+  <string name="standard_stone">Kamen</string>
+  <string name="standard_warmgray">Topla siva</string>
+  <string name="standard_cream">Krem</string>
+  <string name="standard_gray">Siva</string>
+  <string name="gossamer_color3">Crvena</string>
+  <string name="gossamer_color1">Djetelina</string>
+  <string name="gossamer_color4">Bezdan plava</string>
+  <string name="gossamer_color8">Narančasta</string>
+  <string name="gossamer_color2">Zvjezdano bijela</string>
+  <string name="gossamer_color5">Zelena</string>
+  <string name="gossamer_color6">Plava</string>
+</resources>

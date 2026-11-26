@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Екстра</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">Червоний</string>
+  <string name="standard_orange">Оранжевий</string>
+  <string name="standard_lightorange">Світлий оранж</string>
+  <string name="standard_yellow">Жовтий</string>
+  <string name="standard_lightyellow">Світло-жовтий</string>
+  <string name="standard_lightgreen">Світло-зелений</string>
+  <string name="standard_green">Зелений</string>
+  <string name="standard_lightblue">Блакитний</string>
+  <string name="standard_blue">Синій</string>
+  <string name="standard_navy">Темно-синій</string>
+  <string name="standard_purple">Бузковий</string>
+  <string name="standard_lightpurple">Світло-бузковий</string>
+  <string name="standard_lightpink">Світло-рожевий</string>
+  <string name="standard_pink">Рожевий</string>
+  <string name="standard_plum">Сливовий</string>
+  <string name="standard_stone">Камінь</string>
+  <string name="standard_warmgray">Теплий сірий</string>
+  <string name="standard_cream">Кремовий</string>
+  <string name="standard_gray">Сірий</string>
+  <string name="gossamer_color3">Червоний</string>
+  <string name="gossamer_color1">Зелений барвінок</string>
+  <string name="gossamer_color4">Океанська безодня</string>
+  <string name="gossamer_color8">Оранжевий</string>
+  <string name="gossamer_color2">Зіркове сяйво</string>
+  <string name="gossamer_color5">Зелений</string>
+  <string name="gossamer_color6">Синій</string>
+</resources>

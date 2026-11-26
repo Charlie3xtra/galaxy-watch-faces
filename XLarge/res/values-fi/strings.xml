@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">XL</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">Punainen</string>
+  <string name="standard_orange">Oranssi</string>
+  <string name="standard_lightorange">Vaaleanoranssi</string>
+  <string name="standard_yellow">Keltainen</string>
+  <string name="standard_lightyellow">Vaaleankeltainen</string>
+  <string name="standard_lightgreen">Vaaleanvihreä</string>
+  <string name="standard_green">Vihreä</string>
+  <string name="standard_lightblue">Vaaleansininen</string>
+  <string name="standard_blue">Sininen</string>
+  <string name="standard_navy">Laivastonsininen</string>
+  <string name="standard_purple">Violetti</string>
+  <string name="standard_lightpurple">Vaalean­violetti</string>
+  <string name="standard_lightpink">Vaaleanpunainen</string>
+  <string name="standard_pink">Pinkki</string>
+  <string name="standard_plum">Luumu</string>
+  <string name="standard_stone">Kivenharmaa</string>
+  <string name="standard_warmgray">Lämmin harmaa</string>
+  <string name="standard_cream">Kerma</string>
+  <string name="standard_gray">Harmaa</string>
+  <string name="gossamer_color3">Punainen</string>
+  <string name="gossamer_color1">Apilanvihreä</string>
+  <string name="gossamer_color4">Syvänteensininen</string>
+  <string name="gossamer_color8">Oranssi</string>
+  <string name="gossamer_color2">Tähtivalkea</string>
+  <string name="gossamer_color5">Vihreä</string>
+  <string name="gossamer_color6">Sininen</string>
+</resources>

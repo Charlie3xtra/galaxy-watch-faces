@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">XL</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">Rød</string>
+  <string name="standard_orange">Orange</string>
+  <string name="standard_lightorange">Lys orange</string>
+  <string name="standard_yellow">Gul</string>
+  <string name="standard_lightyellow">Lysegul</string>
+  <string name="standard_lightgreen">Lysegrøn</string>
+  <string name="standard_green">Grøn</string>
+  <string name="standard_lightblue">Lyseblå</string>
+  <string name="standard_blue">Blå</string>
+  <string name="standard_navy">Marineblå</string>
+  <string name="standard_purple">Lilla</string>
+  <string name="standard_lightpurple">Lyslilla</string>
+  <string name="standard_lightpink">Lyserød</string>
+  <string name="standard_pink">Pink</string>
+  <string name="standard_plum">Blomme</string>
+  <string name="standard_stone">Stenfarvet</string>
+  <string name="standard_warmgray">Varm grå</string>
+  <string name="standard_cream">Fløde</string>
+  <string name="standard_gray">Grå</string>
+  <string name="gossamer_color3">Rød</string>
+  <string name="gossamer_color1">Kløvergrøn</string>
+  <string name="gossamer_color4">Mørk dybhavsblå</string>
+  <string name="gossamer_color8">Orange</string>
+  <string name="gossamer_color2">Stjerneskær</string>
+  <string name="gossamer_color5">Grøn</string>
+  <string name="gossamer_color6">Blå</string>
+</resources>

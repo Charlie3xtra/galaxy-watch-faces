@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Rất lớn</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">Đỏ</string>
+  <string name="standard_orange">Cam</string>
+  <string name="standard_lightorange">Cam nhạt</string>
+  <string name="standard_yellow">Vàng</string>
+  <string name="standard_lightyellow">Vàng nhạt</string>
+  <string name="standard_lightgreen">Lục nhạt</string>
+  <string name="standard_green">Lục</string>
+  <string name="standard_lightblue">Lam nhạt</string>
+  <string name="standard_blue">Lam</string>
+  <string name="standard_navy">Navy</string>
+  <string name="standard_purple">Tía</string>
+  <string name="standard_lightpurple">Tía nhạt</string>
+  <string name="standard_lightpink">Hồng nhạt</string>
+  <string name="standard_pink">Hồng</string>
+  <string name="standard_plum">Mận</string>
+  <string name="standard_stone">Đá</string>
+  <string name="standard_warmgray">Xám ấm</string>
+  <string name="standard_cream">Kem</string>
+  <string name="standard_gray">Xám</string>
+  <string name="gossamer_color3">Đỏ</string>
+  <string name="gossamer_color1">Cỏ ba lá</string>
+  <string name="gossamer_color4">Xanh biển đậm</string>
+  <string name="gossamer_color8">Cam</string>
+  <string name="gossamer_color2">Màu ánh sao</string>
+  <string name="gossamer_color5">Lục</string>
+  <string name="gossamer_color6">Lam</string>
+</resources>

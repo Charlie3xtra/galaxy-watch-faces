@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Molt gran</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">Vermell</string>
+  <string name="standard_orange">Taronja</string>
+  <string name="standard_lightorange">Taronja clar</string>
+  <string name="standard_yellow">Groc</string>
+  <string name="standard_lightyellow">Groc clar</string>
+  <string name="standard_lightgreen">Verd clar</string>
+  <string name="standard_green">Verd</string>
+  <string name="standard_lightblue">Blau clar</string>
+  <string name="standard_blue">Blau</string>
+  <string name="standard_navy">Blau marí</string>
+  <string name="standard_purple">Morat</string>
+  <string name="standard_lightpurple">Morat clar</string>
+  <string name="standard_lightpink">Rosa suau</string>
+  <string name="standard_pink">Rosa</string>
+  <string name="standard_plum">Pruna</string>
+  <string name="standard_stone">Pedra</string>
+  <string name="standard_warmgray">Gris càlid</string>
+  <string name="standard_cream">Crema</string>
+  <string name="standard_gray">Gris</string>
+  <string name="gossamer_color3">Vermell</string>
+  <string name="gossamer_color1">Verd trèvol</string>
+  <string name="gossamer_color4">Abisme</string>
+  <string name="gossamer_color8">Taronja</string>
+  <string name="gossamer_color2">Blanc estel·lar</string>
+  <string name="gossamer_color5">Verd</string>
+  <string name="gossamer_color6">Blau</string>
+</resources>

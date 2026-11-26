@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">加大字體</string>
+  <string name="gallery">官方預覽</string>
+  <string name="standard_red">紅色</string>
+  <string name="standard_orange">橙色</string>
+  <string name="standard_lightorange">淺橙色</string>
+  <string name="standard_yellow">黃色</string>
+  <string name="standard_lightyellow">淺黃色</string>
+  <string name="standard_lightgreen">淺綠色</string>
+  <string name="standard_green">綠色</string>
+  <string name="standard_lightblue">淺藍色</string>
+  <string name="standard_blue">藍色</string>
+  <string name="standard_navy">海軍藍色</string>
+  <string name="standard_purple">紫色</string>
+  <string name="standard_lightpurple">淺紫色</string>
+  <string name="standard_lightpink">淡粉紅色</string>
+  <string name="standard_pink">粉紅色</string>
+  <string name="standard_plum">布冧紫色</string>
+  <string name="standard_stone">石色</string>
+  <string name="standard_warmgray">暖灰色</string>
+  <string name="standard_cream">忌廉色</string>
+  <string name="standard_gray">灰色</string>
+  <string name="gossamer_color3">紅色</string>
+  <string name="gossamer_color1">三葉草色</string>
+  <string name="gossamer_color4">深邃藍色</string>
+  <string name="gossamer_color8">橙色</string>
+  <string name="gossamer_color2">星光色</string>
+  <string name="gossamer_color5">綠色</string>
+  <string name="gossamer_color6">藍色</string>
+  <string name="ink_label">顏色</string>
+</resources>

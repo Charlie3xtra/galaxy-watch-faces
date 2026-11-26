@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">XL</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">Rojo</string>
+  <string name="standard_orange">Naranja</string>
+  <string name="standard_lightorange">Naranja claro</string>
+  <string name="standard_yellow">Amarillo</string>
+  <string name="standard_lightyellow">Amarillo claro</string>
+  <string name="standard_lightgreen">Verde claro</string>
+  <string name="standard_green">Verde</string>
+  <string name="standard_lightblue">Azul claro</string>
+  <string name="standard_blue">Azul</string>
+  <string name="standard_navy">Azul marino</string>
+  <string name="standard_purple">Morado</string>
+  <string name="standard_lightpurple">Morado claro</string>
+  <string name="standard_lightpink">Rosa claro</string>
+  <string name="standard_pink">Rosa</string>
+  <string name="standard_plum">Ciruela</string>
+  <string name="standard_stone">Piedra</string>
+  <string name="standard_warmgray">Gris cálido</string>
+  <string name="standard_cream">Crema</string>
+  <string name="standard_gray">Gris</string>
+  <string name="gossamer_color3">Rojo</string>
+  <string name="gossamer_color1">Verde trébol</string>
+  <string name="gossamer_color4">Abismo</string>
+  <string name="gossamer_color8">Naranja</string>
+  <string name="gossamer_color2">Blanco estrella</string>
+  <string name="gossamer_color5">Verde</string>
+  <string name="gossamer_color6">Azul</string>
+  <string name="ink_label">Color</string>
+</resources>

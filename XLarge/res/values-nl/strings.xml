@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">XL</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">Rood</string>
+  <string name="standard_orange">Oranje</string>
+  <string name="standard_lightorange">Lichtoranje</string>
+  <string name="standard_yellow">Geel</string>
+  <string name="standard_lightyellow">Lichtgeel</string>
+  <string name="standard_lightgreen">Lichtgroen</string>
+  <string name="standard_green">Groen</string>
+  <string name="standard_lightblue">Lichtblauw</string>
+  <string name="standard_blue">Blauw</string>
+  <string name="standard_navy">Marineblauw</string>
+  <string name="standard_purple">Paars</string>
+  <string name="standard_lightpurple">Lichtpaars</string>
+  <string name="standard_lightpink">Lichtroze</string>
+  <string name="standard_pink">Roze</string>
+  <string name="standard_plum">Pruimenpaars</string>
+  <string name="standard_stone">Steengrijs</string>
+  <string name="standard_warmgray">Warmgrijs</string>
+  <string name="standard_cream">Crème</string>
+  <string name="standard_gray">Grijs</string>
+  <string name="gossamer_color3">Rood</string>
+  <string name="gossamer_color1">Klaver</string>
+  <string name="gossamer_color4">Abyss-blauw</string>
+  <string name="gossamer_color8">Oranje</string>
+  <string name="gossamer_color2">Sterren­licht</string>
+  <string name="gossamer_color5">Groen</string>
+  <string name="gossamer_color6">Blauw</string>
+</resources>

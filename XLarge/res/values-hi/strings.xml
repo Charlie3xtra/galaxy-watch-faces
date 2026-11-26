@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">एक्स्ट्रा लार्ज</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">लाल</string>
+  <string name="standard_orange">नारंगी</string>
+  <string name="standard_lightorange">हल्का नारंगी</string>
+  <string name="standard_yellow">पीला</string>
+  <string name="standard_lightyellow">हल्का पीला</string>
+  <string name="standard_lightgreen">हल्का हरा</string>
+  <string name="standard_green">हरा</string>
+  <string name="standard_lightblue">हल्का नीला</string>
+  <string name="standard_blue">नीला</string>
+  <string name="standard_navy">नेवी</string>
+  <string name="standard_purple">जामुनी</string>
+  <string name="standard_lightpurple">हल्का जामुनी</string>
+  <string name="standard_lightpink">हल्का गुलाबी</string>
+  <string name="standard_pink">गुलाबी</string>
+  <string name="standard_plum">प्लम</string>
+  <string name="standard_stone">स्टोन</string>
+  <string name="standard_warmgray">वॉर्म ग्रे</string>
+  <string name="standard_cream">क्रीम</string>
+  <string name="standard_gray">धूसर</string>
+  <string name="gossamer_color3">लाल</string>
+  <string name="gossamer_color1">क्लोवर</string>
+  <string name="gossamer_color4">एबिस ब्लू</string>
+  <string name="gossamer_color8">नारंगी</string>
+  <string name="gossamer_color2">स्टारलाइट</string>
+  <string name="gossamer_color5">हरा</string>
+  <string name="gossamer_color6">नीला</string>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Lebih Besar</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">Merah</string>
+  <string name="standard_orange">Jingga</string>
+  <string name="standard_lightorange">Jingga Muda</string>
+  <string name="standard_yellow">Kuning</string>
+  <string name="standard_lightyellow">Kuning Muda</string>
+  <string name="standard_lightgreen">Hijau Muda</string>
+  <string name="standard_green">Hijau</string>
+  <string name="standard_lightblue">Biru Muda</string>
+  <string name="standard_blue">Biru</string>
+  <string name="standard_navy">Kelasi</string>
+  <string name="standard_purple">Ungu</string>
+  <string name="standard_lightpurple">Ungu Muda</string>
+  <string name="standard_lightpink">Merah Jambu Muda</string>
+  <string name="standard_pink">Merah Jambu</string>
+  <string name="standard_plum">Ijas</string>
+  <string name="standard_stone">Batu</string>
+  <string name="standard_warmgray">Kelabu Panas</string>
+  <string name="standard_cream">Putih Kuning</string>
+  <string name="standard_gray">Kelabu</string>
+  <string name="gossamer_color3">Merah</string>
+  <string name="gossamer_color1">Klover</string>
+  <string name="gossamer_color4">Biru Abis</string>
+  <string name="gossamer_color8">Jingga</string>
+  <string name="gossamer_color2">Cahaya Bintang</string>
+  <string name="gossamer_color5">Hijau</string>
+  <string name="gossamer_color6">Biru</string>
+</resources>

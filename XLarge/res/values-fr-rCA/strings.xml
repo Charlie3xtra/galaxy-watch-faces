@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Très grand</string>
+  <string name="gallery">10:09</string>
+  <string name="standard_red">Rouge</string>
+  <string name="standard_orange">Orange</string>
+  <string name="standard_lightorange">Orange clair</string>
+  <string name="standard_yellow">Jaune</string>
+  <string name="standard_lightyellow">Jaune clair</string>
+  <string name="standard_lightgreen">Vert clair</string>
+  <string name="standard_green">Vert</string>
+  <string name="standard_lightblue">Bleu clair</string>
+  <string name="standard_blue">Bleu</string>
+  <string name="standard_navy">Marine</string>
+  <string name="standard_purple">Violet</string>
+  <string name="standard_lightpurple">Violet clair</string>
+  <string name="standard_lightpink">Rose dragée</string>
+  <string name="standard_pink">Rose</string>
+  <string name="standard_plum">Prune</string>
+  <string name="standard_stone">Sable</string>
+  <string name="standard_warmgray">Gris chaud</string>
+  <string name="standard_cream">Crème</string>
+  <string name="standard_gray">Gris</string>
+  <string name="gossamer_color3">Rouge</string>
+  <string name="gossamer_color1">Trèfle</string>
+  <string name="gossamer_color4">Bleu abysse</string>
+  <string name="gossamer_color8">Orange</string>
+  <string name="gossamer_color2">Comète</string>
+  <string name="gossamer_color5">Vert</string>
+  <string name="gossamer_color6">Bleu</string>
+</resources>
