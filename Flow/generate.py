@@ -74,7 +74,7 @@ for name in ('red','orange','turquoise','lightBlue','midnightBlue','lavender','v
 
 axis=np.linspace(-110,590,464)
 y,x=np.meshgrid(axis,axis,indexing='ij')
-def field(colors,lens):
+def field(colors,lens, gallery=False):
     xx=x
     yy=y
     angle=np.arctan2(yy-275,xx-475)
@@ -83,7 +83,11 @@ def field(colors,lens):
     stops=[0.65,0.97,1.00,1.075,1.32]
     ramp=np.array(colors,float)
     if lens:
-        ramp=np.minimum(255,ramp*1.22+11)
+        if gallery:
+            # Interior samples across the same boundary in the Apple 10:09 reference.
+            ramp=np.array([REF.getpixel(p) for p in [(290,182),(300,142),(300,129),(299,101),(96,361)]])
+        else:
+            ramp=np.minimum(255,ramp*1.22+11)
         # Keep the interior on the same color boundary; local refraction is applied at the rim.
     return Image.fromarray(np.uint8(np.stack([np.interp(phase,stops,ramp[:,i]) for i in range(3)],axis=-1)).round())
 
@@ -93,13 +97,13 @@ cc=add(user,'ColorConfiguration',id='palette',displayName='color',defaultValue='
 for i,(_,ramp) in enumerate(palettes):
     add(cc,'ColorOption',id=i,displayName=f'p{i}',colors=' '.join(hexcode(ramp[k]) for k in (0,3,4)))
     for material in ('field','glass'):
-        field(ramp,material=='glass').save(DRAW/f'{material}_{i}.png')
+        field(ramp,material=='glass',i==0).save(DRAW/f'{material}_{i}.png')
 for key,options in [('typeface',['stencil','solid']),('background',['on','off'])]:
     conf=add(user,'ListConfiguration',id=key,displayName=key,defaultValue=options[0])
     for opt in options:add(conf,'ListOption',id=opt,displayName=opt)
 
 W,H=144,160
-directions={'left':(-6,0),'right':(6,0),'up':(0,-6),'down':(0,6)}
+directions={'left':(-21,0),'right':(21,0),'up':(0,-21),'down':(0,21)}
 fonts=add(face,'BitmapFonts')
 for style,blob in source_fonts():
     font=ImageFont.truetype(BytesIO(blob),640)
@@ -124,20 +128,20 @@ for style,blob in source_fonts():
         a=np.asarray(tile,dtype=float)/255
         soft=np.asarray(tile.filter(ImageFilter.GaussianBlur(2)),dtype=float)/255
         dy,dx=np.gradient(soft)
-        broad=np.asarray(tile.filter(ImageFilter.GaussianBlur(5)),dtype=float)/255
+        broad=np.asarray(tile.filter(ImageFilter.GaussianBlur(10)),dtype=float)/255
         gy,gx=np.gradient(broad)
         for key,(ox,oy) in directions.items():
-            weight=a*np.clip((gx*ox+gy*oy)*2.2,0,1)
+            weight=a*np.clip((gx*ox+gy*oy)*1.85,0,1)
             bevel=Image.new('RGBA',(W,H),'white')
             bevel.putalpha(Image.fromarray(np.uint8(255*weight)))
             asset=name+'_'+key
             bevel.save(DRAW/(asset+'.png'))
             for offset in (48,0x660,0x6f0,0x966):
                 add(bevel_fonts[key],'Character',name=chr(offset+n),resource=asset,width=W,height=H)
-        normal=np.clip(5*(dx+dy),-1,1)
-        edge=np.clip(7*np.hypot(dx,dy),0,1)
-        rgb=np.where(normal[:,:,None]>=0,np.array([255,233,255]),np.array([144,127,255]))
-        rim=np.dstack([rgb,255*a*edge*(.43+.49*np.abs(normal))])
+        normal=np.clip(4*(dx*.60+dy*.80),-1,1)
+        edge=np.clip(5.7*np.hypot(dx,dy),0,1)**1.65
+        rgb=np.where(normal[:,:,None]>=0,np.array([255,233,255]),np.array([190,163,255]))
+        rim=np.dstack([rgb,255*a*edge*(.18+.78*np.abs(normal))])
         Image.fromarray(rim.astype('uint8')).save(DRAW/f'{name}_edge.png')
 
 scene=add(face,'Scene',backgroundColor='#000000')

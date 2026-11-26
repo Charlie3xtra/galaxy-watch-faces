@@ -597,7 +597,7 @@
         </Group>
       </Group>
       <Group name="bevel_left" x="0" y="0" width="480" height="480">
-        <Group name="sample_left" x="-6" y="0" width="480" height="480">
+        <Group name="sample_left" x="-21" y="0" width="480" height="480">
           <Group name="glass_motion" x="0" y="0" width="480" height="480">
             <Gyro angle="clamp([ACCELEROMETER_ANGLE_X], -65, 65) * 1" x="clamp([ACCELEROMETER_ANGLE_Y], -55, 55) * 0.52" y="clamp([ACCELEROMETER_ANGLE_X], -55, 55) * -0.24" />
             <Condition>
@@ -688,7 +688,7 @@
         </Group>
       </Group>
       <Group name="bevel_right" x="0" y="0" width="480" height="480">
-        <Group name="sample_right" x="6" y="0" width="480" height="480">
+        <Group name="sample_right" x="21" y="0" width="480" height="480">
           <Group name="glass_motion" x="0" y="0" width="480" height="480">
             <Gyro angle="clamp([ACCELEROMETER_ANGLE_X], -65, 65) * 1" x="clamp([ACCELEROMETER_ANGLE_Y], -55, 55) * 0.52" y="clamp([ACCELEROMETER_ANGLE_X], -55, 55) * -0.24" />
             <Condition>
@@ -779,7 +779,7 @@
         </Group>
       </Group>
       <Group name="bevel_up" x="0" y="0" width="480" height="480">
-        <Group name="sample_up" x="0" y="-6" width="480" height="480">
+        <Group name="sample_up" x="0" y="-21" width="480" height="480">
           <Group name="glass_motion" x="0" y="0" width="480" height="480">
             <Gyro angle="clamp([ACCELEROMETER_ANGLE_X], -65, 65) * 1" x="clamp([ACCELEROMETER_ANGLE_Y], -55, 55) * 0.52" y="clamp([ACCELEROMETER_ANGLE_X], -55, 55) * -0.24" />
             <Condition>
@@ -870,7 +870,7 @@
         </Group>
       </Group>
       <Group name="bevel_down" x="0" y="0" width="480" height="480">
-        <Group name="sample_down" x="0" y="6" width="480" height="480">
+        <Group name="sample_down" x="0" y="21" width="480" height="480">
           <Group name="glass_motion" x="0" y="0" width="480" height="480">
             <Gyro angle="clamp([ACCELEROMETER_ANGLE_X], -65, 65) * 1" x="clamp([ACCELEROMETER_ANGLE_Y], -55, 55) * 0.52" y="clamp([ACCELEROMETER_ANGLE_X], -55, 55) * -0.24" />
             <Condition>
