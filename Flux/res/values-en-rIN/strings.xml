@@ -3,7 +3,8 @@
   <string name="face_name">Flux</string>
   <string name="numerals">NUMERALS</string>
   <string name="color">COLOUR</string>
-  <string name="p0">10:09</string>
+  <string name="p0">Dynamic</string>
+  <string name="p15">10:09</string>
   <string name="western">ARABIC, WESTERN</string>
   <string name="eastern">ARABIC, EASTERN</string>
   <string name="deva">DEVANAGARI</string>

@@ -3,7 +3,8 @@
   <string name="face_name">Flux</string>
   <string name="numerals">SIFFROR</string>
   <string name="color">FÄRG</string>
-  <string name="p0">10:09</string>
+  <string name="p0">Dynamisk</string>
+  <string name="p15">10:09</string>
   <string name="western">ARABISKA, VÄST</string>
   <string name="eastern">ARABISKA, ÖST</string>
   <string name="deva">DEVANAGARI</string>

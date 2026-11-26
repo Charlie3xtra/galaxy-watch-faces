@@ -3,7 +3,8 @@
   <string name="face_name">Flux</string>
   <string name="numerals">ČÍSLICE</string>
   <string name="color">FARBA</string>
-  <string name="p0">10:09</string>
+  <string name="p0">Dynamická</string>
+  <string name="p15">10:09</string>
   <string name="western">ARABSKÉ (ZÁPADNÉ)</string>
   <string name="eastern">ARABSKÉ (VÝCHODNÉ)</string>
   <string name="deva">DÉVANÁGARSKÉ</string>

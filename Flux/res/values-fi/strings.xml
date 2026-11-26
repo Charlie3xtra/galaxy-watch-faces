@@ -3,7 +3,8 @@
   <string name="face_name">Virtaus</string>
   <string name="numerals">NUMEROT</string>
   <string name="color">VÄRI</string>
-  <string name="p0">10:09</string>
+  <string name="p0">Dynaaminen</string>
+  <string name="p15">10:09</string>
   <string name="western">ARABIA, LÄNTINEN</string>
   <string name="eastern">ARABIA, ITÄINEN</string>
   <string name="deva">DEVANAGARI</string>

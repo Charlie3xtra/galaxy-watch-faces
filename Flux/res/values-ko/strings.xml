@@ -3,7 +3,8 @@
   <string name="face_name">플럭스</string>
   <string name="numerals">숫자</string>
   <string name="color">색상</string>
-  <string name="p0">10:09</string>
+  <string name="p0">다이내믹</string>
+  <string name="p15">10:09</string>
   <string name="western">서아라비아 숫자</string>
   <string name="eastern">동아라비아 숫자</string>
   <string name="deva">데바나가리 숫자</string>

@@ -3,7 +3,8 @@
   <string name="face_name">Заливка</string>
   <string name="numerals">ЦИФРЫ</string>
   <string name="color">ЦВЕТ</string>
-  <string name="p0">10:09</string>
+  <string name="p0">Динамика</string>
+  <string name="p15">10:09</string>
   <string name="western">АРАБСКИЕ (ЗАПАД)</string>
   <string name="eastern">АРАБСКИЕ (ВОСТОК)</string>
   <string name="deva">ДЕВАНАГАРИ</string>

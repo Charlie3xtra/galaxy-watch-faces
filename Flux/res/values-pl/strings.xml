@@ -3,7 +3,8 @@
   <string name="face_name">Przepływ</string>
   <string name="numerals">CYFRY</string>
   <string name="color">KOLOR</string>
-  <string name="p0">10:09</string>
+  <string name="p0">Dynamiczne</string>
+  <string name="p15">10:09</string>
   <string name="western">ARABSKIE, ZACHODNIE</string>
   <string name="eastern">ARABSKIE, WSCHODNIE</string>
   <string name="deva">DEWANAGARI</string>

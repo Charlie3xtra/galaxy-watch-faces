@@ -3,7 +3,8 @@
   <string name="face_name">フラックス</string>
   <string name="numerals">数字</string>
   <string name="color">カラー</string>
-  <string name="p0">10:09</string>
+  <string name="p0">ダイナミック</string>
+  <string name="p15">10:09</string>
   <string name="western">アラビア数字</string>
   <string name="eastern">インド数字</string>
   <string name="deva">デーバナーガリー数字</string>

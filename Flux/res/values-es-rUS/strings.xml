@@ -3,7 +3,8 @@
   <string name="face_name">Flujo</string>
   <string name="numerals">NÚMEROS</string>
   <string name="color">COLOR</string>
-  <string name="p0">10:09</string>
+  <string name="p0">Dinámicos</string>
+  <string name="p15">10:09</string>
   <string name="western">ARÁBIGOS OCCIDENTALES</string>
   <string name="eastern">ARÁBIGOS ORIENTALES</string>
   <string name="deva">DEVANAGARI</string>

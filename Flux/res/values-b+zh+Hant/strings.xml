@@ -3,7 +3,8 @@
   <string name="face_name">變動</string>
   <string name="numerals">數字</string>
   <string name="color">顏色</string>
-  <string name="p0">10:09</string>
+  <string name="p0">動態</string>
+  <string name="p15">10:09</string>
   <string name="western">阿拉伯數字</string>
   <string name="eastern">阿拉伯文數字</string>
   <string name="deva">天城文數字</string>

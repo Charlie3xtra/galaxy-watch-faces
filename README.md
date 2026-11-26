@@ -86,4 +86,4 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 | :---: | :---: |
 | <img src="Flux/screenshots/active.png" width="220" alt="流转亮屏"> | <img src="Flux/screenshots/ambient.png" width="220" alt="流转息屏"> |
 
-[下载流转 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/flux-1.0)。分界线随秒数从底部上升，背景与数字同步换色，整分钟交替上下色并调整数字布局。编辑器提供官方预览配色、固件中的 I–XIV 配色和三套数字。西阿拉伯数字 0、1、9 取形自官方图，其余字形用系统字体近似。圆屏布局、整分钟伸缩和黑底低亮息屏为 Galaxy 适配。原版的动态调色顺序、完整字形路径和息屏条带仍待还原。构建现有资源使用 Flux/build.ps1。重新生成资源还需原工作区的固件、官方预览图、Flow 本地化资源及 Windows 字体。
+[下载流转 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/flux-1.1) · [Galaxy Watch 跨分钟实录](Flux/screenshots/minute.mp4)。动态模式按 24S132 的 14 组背景色和字色循环，索引由年内日序、显示小时和分钟决定。三套数字的 12/24 小时路径来自固件，按四个关键形状、0.25 秒时长及原缓动曲线采样。少数路径指令数量或类型不同的字形在对应阶段切换轮廓。录屏中实际形变约每 100 毫秒更新一次。息屏采用本分钟静态原字形和低亮灰色。构建现有资源使用 Flux/build.ps1；重新生成时先运行 Flux/dolomite.py，再运行 Flux/generate.py，需要 24S132 提取文件、原工作区资料、NumPy、Pillow 和 fontTools。

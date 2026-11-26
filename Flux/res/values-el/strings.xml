@@ -3,7 +3,8 @@
   <string name="face_name">Ρευστότητα</string>
   <string name="numerals">ΑΡΙΘΜΟΙ</string>
   <string name="color">ΧΡΩΜΑ</string>
-  <string name="p0">10:09</string>
+  <string name="p0">Δυναμικό</string>
+  <string name="p15">10:09</string>
   <string name="western">ΑΡΑΒΙΚΟΙ, ΔΥΤΙΚΟΙ</string>
   <string name="eastern">ΑΡΑΒΙΚΟΙ, ΑΝΑΤΟΛΙΚΟΙ</string>
   <string name="deva">ΝΤΕΒΑΝΑΓΚΑΡΙ</string>

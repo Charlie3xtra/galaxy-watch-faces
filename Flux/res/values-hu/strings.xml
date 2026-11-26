@@ -3,7 +3,8 @@
   <string name="face_name">Fluxus</string>
   <string name="numerals">SZÁMOK</string>
   <string name="color">SZÍN</string>
-  <string name="p0">10:09</string>
+  <string name="p0">Dinamikus</string>
+  <string name="p15">10:09</string>
   <string name="western">ARAB, NYUGATI</string>
   <string name="eastern">ARAB, KELETI</string>
   <string name="deva">DÉVANÁGARI</string>

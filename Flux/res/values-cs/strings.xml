@@ -3,7 +3,8 @@
   <string name="face_name">Tok</string>
   <string name="numerals">ČÍSLICE</string>
   <string name="color">BARVY</string>
-  <string name="p0">10:09</string>
+  <string name="p0">Dynamická</string>
+  <string name="p15">10:09</string>
   <string name="western">ARABSKÉ, ZÁPADNÍ</string>
   <string name="eastern">ARABSKÉ, VÝCHODNÍ</string>
   <string name="deva">DÉVANÁGARÍ</string>

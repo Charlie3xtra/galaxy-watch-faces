@@ -3,7 +3,8 @@
   <string name="face_name">Flux</string>
   <string name="numerals">TAL</string>
   <string name="color">FARVE</string>
-  <string name="p0">10:09</string>
+  <string name="p0">Dynamisk</string>
+  <string name="p15">10:09</string>
   <string name="western">ARABISK, VESTLIG</string>
   <string name="eastern">ARABISK, ØSTLIG</string>
   <string name="deva">DEVANAGARI</string>

@@ -3,7 +3,8 @@
   <string name="face_name">Течія</string>
   <string name="numerals">ЦИФРИ</string>
   <string name="color">КОЛІР</string>
-  <string name="p0">10:09</string>
+  <string name="p0">Динамічний</string>
+  <string name="p15">10:09</string>
   <string name="western">ЗАХІДНОАРАБСЬКІ</string>
   <string name="eastern">СХІДНОАРАБСЬКІ</string>
   <string name="deva">ДЕВАНАГАРІ</string>
