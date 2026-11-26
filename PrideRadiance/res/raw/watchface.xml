@@ -263,17 +263,24 @@
     </BitmapFont>
   </BitmapFonts>
   <UserConfigurations>
-    <ListConfiguration id="palette" displayName="color_label" defaultValue="0">
-      <ListOption id="0" displayName="palette_0" screenReaderText="desc_0" icon="swatch_1" />
-      <ListOption id="1" displayName="palette_1" screenReaderText="desc_1" icon="swatch_2" />
-      <ListOption id="2" displayName="palette_2" screenReaderText="desc_2" icon="swatch_3" />
-      <ListOption id="3" displayName="palette_3" screenReaderText="desc_3" icon="swatch_4" />
-      <ListOption id="4" displayName="palette_4" screenReaderText="desc_4" icon="swatch_5" />
-    </ListConfiguration>
+    <ColorConfiguration id="palette" displayName="color_label" defaultValue="0">
+      <ColorOption id="0" displayName="palette_0" screenReaderText="desc_0" colors="#FFE40204 #FF004DFF" />
+      <ColorOption id="1" displayName="palette_1" screenReaderText="desc_1" colors="#FFFD9855 #FFD161A2" />
+      <ColorOption id="2" displayName="palette_2" screenReaderText="desc_2" colors="#FFD60370 #FF0038A8" />
+      <ColorOption id="3" displayName="palette_3" screenReaderText="desc_3" colors="#FF5BCEFA #FFF5A9B8" />
+      <ColorOption id="4" displayName="palette_4" screenReaderText="desc_4" colors="#FFFFF433 #FF9B59D0" />
+    </ColorConfiguration>
   </UserConfigurations>
   <Scene backgroundColor="#000000">
-    <ListConfiguration id="palette">
-      <ListOption id="0">
+    <Condition>
+      <Expressions>
+        <Expression name="style1">[CONFIGURATION.palette.0] == #FFE40204</Expression>
+        <Expression name="style2">[CONFIGURATION.palette.0] == #FFFD9855</Expression>
+        <Expression name="style3">[CONFIGURATION.palette.0] == #FFD60370</Expression>
+        <Expression name="style4">[CONFIGURATION.palette.0] == #FF5BCEFA</Expression>
+        <Expression name="style5">[CONFIGURATION.palette.0] == #FFFFF433</Expression>
+      </Expressions>
+      <Compare expression="style1">
         <Group name="palette1" x="0" y="0" width="480" height="480">
           <Group name="flow" x="0" y="0" width="480" height="480">
             <Variant mode="AMBIENT" target="alpha" value="0" />
@@ -6867,8 +6874,8 @@
             </DigitalClock>
           </Group>
         </Group>
-      </ListOption>
-      <ListOption id="1">
+      </Compare>
+      <Compare expression="style2">
         <Group name="palette2" x="0" y="0" width="480" height="480">
           <Group name="flow" x="0" y="0" width="480" height="480">
             <Variant mode="AMBIENT" target="alpha" value="0" />
@@ -13462,8 +13469,8 @@
             </DigitalClock>
           </Group>
         </Group>
-      </ListOption>
-      <ListOption id="2">
+      </Compare>
+      <Compare expression="style3">
         <Group name="palette3" x="0" y="0" width="480" height="480">
           <Group name="flow" x="0" y="0" width="480" height="480">
             <Variant mode="AMBIENT" target="alpha" value="0" />
@@ -20057,8 +20064,8 @@
             </DigitalClock>
           </Group>
         </Group>
-      </ListOption>
-      <ListOption id="3">
+      </Compare>
+      <Compare expression="style4">
         <Group name="palette4" x="0" y="0" width="480" height="480">
           <Group name="flow" x="0" y="0" width="480" height="480">
             <Variant mode="AMBIENT" target="alpha" value="0" />
@@ -26652,8 +26659,8 @@
             </DigitalClock>
           </Group>
         </Group>
-      </ListOption>
-      <ListOption id="4">
+      </Compare>
+      <Compare expression="style5">
         <Group name="palette5" x="0" y="0" width="480" height="480">
           <Group name="flow" x="0" y="0" width="480" height="480">
             <Variant mode="AMBIENT" target="alpha" value="0" />
@@ -33247,7 +33254,7 @@
             </DigitalClock>
           </Group>
         </Group>
-      </ListOption>
-    </ListConfiguration>
+      </Compare>
+    </Condition>
   </Scene>
 </WatchFace>

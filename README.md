@@ -10,6 +10,8 @@
 
 [下载彩虹光辉 1.7](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/pride-radiance-v1.7/PrideRadiance-1.7.apk) · [紫色光晕修正前后对照](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/pride-radiance-v1.7/purple-compare-1.7.png) · [配色 II–V 动态对照](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/pride-radiance-v1.5/colorways-II-V-1.5.mp4) · [Galaxy Watch 息屏实拍截图](PrideRadiance/ambient-1.4.png)
 
+[1.8 编辑器预览版](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/pride-radiance-v1.8) 由系统绘制双色圆点。[三星手表编辑页截图](PrideRadiance/editor-1.8.png)。WFF 4 格式验证通过，官方内存工具估算亮屏 325.97 MB，超过 100 MB 上限。1.7 为正式版。
+
 ## 艺术家 Artist
 
 在支持 Watch Face Push 的 Wear OS 6 或更新版本手表上安装 APK，并打开一次。首次替换当前表盘时，按 Wear OS 提示确认。首次使用从安装器点「打开」。艺术家仅在表盘选择器中展示，应用抽屉中没有图标。点按可换脸，距离上次换脸超过一小时后再次亮屏也会换脸。息屏显示同一张脸的轮廓。

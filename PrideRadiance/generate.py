@@ -1,5 +1,4 @@
 """Bake the firmware digit meshes into native WFF bitmap fonts (NumPy and Pillow)."""
-from PIL import ImageDraw
 import argparse
 import ast
 import colorsys
@@ -168,20 +167,18 @@ def trim_fonts(mesh_dir):
 def scene(settings):
     root=ET.Element("WatchFace",width="480",height="480",clipShape="CIRCLE")
     fonts=CHILD(root,"BitmapFonts")
-    config=CHILD(CHILD(root,"UserConfigurations"),"ListConfiguration",id="palette",displayName="color_label",defaultValue="0")
-    group=CHILD(CHILD(root,"Scene",backgroundColor="#000000"),"ListConfiguration",id="palette")
-    for style in range(1,6):
-        swatch=[tuple(c) for c in colors(settings[f"colorway{style}"])]
-        visible=list(dict.fromkeys(swatch))
-        if style==1:
-            visible=[swatch[i-1] for i in [3,7,9,2,4]]
-        badge=Image.new("RGBA",(144,144))
-        pen=ImageDraw.Draw(badge)
-        for i,c in enumerate(visible):
-            pen.pieslice((3,3,140,140),-90+360*i/len(visible),-90+360*(i+1)/len(visible),fill=c+(255,))
-        badge.resize((72,72),Image.Resampling.LANCZOS).save(DRAW/f"swatch_{style}.png")
-        CHILD(config,"ListOption",id=str(style-1),displayName=f"palette_{style-1}",screenReaderText=f"desc_{style-1}",icon=f"swatch_{style}")
-        variant=CHILD(group,"ListOption",id=str(style-1))
+    config=CHILD(CHILD(root,"UserConfigurations"),"ColorConfiguration",id="palette",displayName="color_label",defaultValue="0")
+    group=CHILD(CHILD(root,"Scene",backgroundColor="#000000"),"Condition")
+    tests=CHILD(group,"Expressions")
+    # Two firmware colors per option let the system editor draw its two-tone swatches.
+    pairs=((3,2),(2,4),(2,1),(2,1),(1,2))
+    for style,(first,second) in enumerate(pairs,1):
+        palette=colors(settings[f"colorway{style}"])
+        swatch=["#FF%02X%02X%02X" % tuple(palette[index-1]) for index in (first,second)]
+        CHILD(config,"ColorOption",id=str(style-1),displayName=f"palette_{style-1}",screenReaderText=f"desc_{style-1}",colors=" ".join(swatch))
+        name=f"style{style}"
+        CHILD(tests,"Expression",name=name).text=f"[CONFIGURATION.palette.0] == {swatch[0]}"
+        variant=CHILD(group,"Compare",expression=name)
         field=CHILD(variant,"Group",name=f"palette{style}",x="0",y="0",width="480",height="480")
         from flow import scene as flow_scene
         live=CHILD(field,"Group",name="flow",x="0",y="0",width="480",height="480")
