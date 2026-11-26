@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">California</string>
+  <string name="numbers">ČÍSLICE</string>
+  <string name="color">FARBA</string>
+  <string name="date">Date</string>
+  <string name="california">ŠTÝL CALIFORNIA</string>
+  <string name="roman">RÍMSKE</string>
+  <string name="numerals">ARABSKÉ (ZÁPADNÉ)</string>
+  <string name="pills">ČIARKY</string>
+  <string name="arabic">ARABSKÉ (VÝCHODNÉ)</string>
+  <string name="hindi">DÉVANÁGARSKÉ</string>
+  <string name="color_0">Krémová</string>
+  <string name="color_1">Čierna</string>
+  <string name="color_2">Hviezdna biela</string>
+  <string name="color_3">Hlbinná tmavomodrá</string>
+  <string name="color_4">Ďatelinová</string>
+  <string name="color_5">Červená</string>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">كاليفورنيا</string>
+  <string name="numbers">أرقام</string>
+  <string name="color">اللون</string>
+  <string name="date">Date</string>
+  <string name="california">كاليفورنيا</string>
+  <string name="roman">الرومانية</string>
+  <string name="numerals">العربية الغربية</string>
+  <string name="pills">كبسولات</string>
+  <string name="arabic">العربية الشرقية</string>
+  <string name="hindi">الديفاناغارية</string>
+  <string name="color_0">كريمي</string>
+  <string name="color_1">أسود</string>
+  <string name="color_2">ضوء النجوم</string>
+  <string name="color_3">أزرق عميق</string>
+  <string name="color_4">عشبي</string>
+  <string name="color_5">أحمر</string>
+</resources>

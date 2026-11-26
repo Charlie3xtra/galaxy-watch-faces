@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Californie</string>
+  <string name="numbers">CHIFFRES</string>
+  <string name="color">COULEUR</string>
+  <string name="date">Date</string>
+  <string name="california">CALIFORNIE</string>
+  <string name="roman">ROMAIN</string>
+  <string name="numerals">ARABE, OCCIDENTAL</string>
+  <string name="pills">PILULES</string>
+  <string name="arabic">ARABE, ORIENTAL</string>
+  <string name="hindi">DEVANAGARI</string>
+  <string name="color_0">Crème</string>
+  <string name="color_1">Noir</string>
+  <string name="color_2">Comète</string>
+  <string name="color_3">Bleu abysse</string>
+  <string name="color_4">Trèfle</string>
+  <string name="color_5">Rouge</string>
+</resources>

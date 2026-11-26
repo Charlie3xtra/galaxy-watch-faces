@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Kalifornija</string>
+  <string name="numbers">ŠTEVILKE</string>
+  <string name="color">BARVA</string>
+  <string name="date">Date</string>
+  <string name="california">KALIFORNIJA</string>
+  <string name="roman">RIMSKE</string>
+  <string name="numerals">ZAHODNO­ARABSKE</string>
+  <string name="pills">ČRTICE</string>
+  <string name="arabic">VZHODNO­ARABSKE</string>
+  <string name="hindi">DEVAN­AGARSKE</string>
+  <string name="color_0">Kremna</string>
+  <string name="color_1">Črna</string>
+  <string name="color_2">Zvezdna svetloba</string>
+  <string name="color_3">Modra globina</string>
+  <string name="color_4">Detelja</string>
+  <string name="color_5">Rdeča</string>
+</resources>

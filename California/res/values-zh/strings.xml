@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">加州</string>
+  <string name="numbers">数字</string>
+  <string name="color">颜色</string>
+  <string name="date">日期</string>
+  <string name="california">加州</string>
+  <string name="roman">罗马数字</string>
+  <string name="numerals">阿拉伯数字</string>
+  <string name="pills">胶囊风格</string>
+  <string name="arabic">阿拉伯印度文</string>
+  <string name="hindi">天城文</string>
+  <string name="color_0">奶白色</string>
+  <string name="color_1">黑色</string>
+  <string name="color_2">星光色</string>
+  <string name="color_3">深邃蓝色</string>
+  <string name="color_4">苜蓿草色</string>
+  <string name="color_5">红色</string>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Californië</string>
+  <string name="numbers">CIJFERS</string>
+  <string name="color">KLEUR</string>
+  <string name="date">Date</string>
+  <string name="california">CALIFORNIË</string>
+  <string name="roman">ROMEINS</string>
+  <string name="numerals">ARABISCH, (WEST-)</string>
+  <string name="pills">PILLEN</string>
+  <string name="arabic">ARABISCH, (OOST-)</string>
+  <string name="hindi">DEVANAGARI</string>
+  <string name="color_0">Crème</string>
+  <string name="color_1">Zwart</string>
+  <string name="color_2">Sterren­licht</string>
+  <string name="color_3">Abyss-blauw</string>
+  <string name="color_4">Klaver</string>
+  <string name="color_5">Rood</string>
+</resources>

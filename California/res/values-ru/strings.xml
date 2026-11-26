@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Калифорния</string>
+  <string name="numbers">ЦИФРЫ</string>
+  <string name="color">ЦВЕТ</string>
+  <string name="date">Date</string>
+  <string name="california">КАЛИФОРНИЯ</string>
+  <string name="roman">РИМСКИЕ</string>
+  <string name="numerals">АРАБСКИЕ (ЗАПАД)</string>
+  <string name="pills">ПИЛЮЛИ</string>
+  <string name="arabic">АРАБСКИЕ (ВОСТОК)</string>
+  <string name="hindi">ДЕВАНАГАРИ</string>
+  <string name="color_0">Кремовый</string>
+  <string name="color_1">Черный</string>
+  <string name="color_2">Сияющая звезда</string>
+  <string name="color_3">Синий омут</string>
+  <string name="color_4">Зеленый клевер</string>
+  <string name="color_5">Красный</string>
+</resources>

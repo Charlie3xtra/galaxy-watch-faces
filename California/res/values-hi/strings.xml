@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">कैलिफ़ोर्निया</string>
+  <string name="numbers">अंक</string>
+  <string name="color">रंग</string>
+  <string name="date">Date</string>
+  <string name="california">कैलिफ़ोर्निया</string>
+  <string name="roman">रोमन</string>
+  <string name="numerals">अंतरराष्ट्रीय</string>
+  <string name="pills">पिल्स</string>
+  <string name="arabic">अरबी</string>
+  <string name="hindi">देवनागरी</string>
+  <string name="color_0">क्रीम</string>
+  <string name="color_1">काला</string>
+  <string name="color_2">स्टारलाइट</string>
+  <string name="color_3">एबिस ब्लू</string>
+  <string name="color_4">क्लोवर</string>
+  <string name="color_5">लाल</string>
+</resources>

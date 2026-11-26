@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Califòrnia</string>
+  <string name="numbers">NUMERACIÓ</string>
+  <string name="color">COLOR</string>
+  <string name="date">Date</string>
+  <string name="california">CALIFÒRNIA</string>
+  <string name="roman">ROMANA</string>
+  <string name="numerals">ARÀBIGA OCCIDENTAL</string>
+  <string name="pills">INDICADORS D’HORA</string>
+  <string name="arabic">ARÀBIGA ORIENTAL</string>
+  <string name="hindi">DEVANAGARI</string>
+  <string name="color_0">Crema</string>
+  <string name="color_1">Negre</string>
+  <string name="color_2">Blanc estel·lar</string>
+  <string name="color_3">Abisme</string>
+  <string name="color_4">Verd trèvol</string>
+  <string name="color_5">Vermell</string>
+</resources>

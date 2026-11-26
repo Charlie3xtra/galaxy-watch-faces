@@ -124,3 +124,9 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 | <img src="Portraits/screenshots/active.png" width="220" alt="小狗与实时钟"> | <img src="Portraits/res/drawable-nodpi/preview.png" width="220" alt="小狗表盘预览"> |
 
 [下载人像 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/portraits-1.1)。只内置一张小狗照片，使用三种字体。小狗的前景遮挡根据 [Apple 官方宣传图](https://www.apple.com.cn/newsroom/images/product/watch/standard/Apple-watchOS-9-Watch-Portraits-face-220912_inline.jpg.large_2x.jpg) 制作，原图上的固定时间已移除。自定义相册使用 Wear OS 原生多选照片配置，照片上方显示实时时钟，点按换图。手机端选图和裁切尚未实测。
+
+## 加州 · California
+
+<img src="California/screenshots/active.png" width="220" alt="Galaxy Watch 亮屏实拍，奶白底的加州混合数字和红色秒针">
+
+[下载加州 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/california-1.0)。默认配色取自 Apple 官方图，数字使用 watchOS 24S132 加州表盘内嵌的 SF Compact Numerals Bold。提供六种数字样式、六款配色和一个可更换的短文本组件，默认显示日期。指针长度和刻度半径已适配 Galaxy 圆屏。息屏采用黑底、保留时分针并隐藏秒针，配色含移植取值。

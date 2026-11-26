@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">カリフォルニア</string>
+  <string name="numbers">数字</string>
+  <string name="color">カラー</string>
+  <string name="date">Date</string>
+  <string name="california">カリフォルニア</string>
+  <string name="roman">ローマ数字</string>
+  <string name="numerals">アラビア数字</string>
+  <string name="pills">棒状</string>
+  <string name="arabic">インド数字</string>
+  <string name="hindi">デーバナーガリー数字</string>
+  <string name="color_0">クリーム</string>
+  <string name="color_1">ブラック</string>
+  <string name="color_2">スターライト</string>
+  <string name="color_3">アビスブルー</string>
+  <string name="color_4">クローバー</string>
+  <string name="color_5">レッド</string>
+</resources>

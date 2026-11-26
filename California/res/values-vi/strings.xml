@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">California</string>
+  <string name="numbers">CHỮ SỐ</string>
+  <string name="color">MÀU</string>
+  <string name="date">Date</string>
+  <string name="california">CALIFORNIA</string>
+  <string name="roman">LA MÃ</string>
+  <string name="numerals">Ả RẬP, PHÍA TÂY</string>
+  <string name="pills">VIÊN THUỐC</string>
+  <string name="arabic">Ả RẬP, PHÍA ĐÔNG</string>
+  <string name="hindi">DEVANAGARI</string>
+  <string name="color_0">Kem</string>
+  <string name="color_1">Đen</string>
+  <string name="color_2">Màu ánh sao</string>
+  <string name="color_3">Xanh biển đậm</string>
+  <string name="color_4">Cỏ ba lá</string>
+  <string name="color_5">Đỏ</string>
+</resources>

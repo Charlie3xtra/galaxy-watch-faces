@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Kaliforniya</string>
+  <string name="numbers">NUMERİK</string>
+  <string name="color">RENK</string>
+  <string name="date">Date</string>
+  <string name="california">KALİFORNİYA</string>
+  <string name="roman">ROMEN</string>
+  <string name="numerals">ARAP, BATI</string>
+  <string name="pills">KAPSÜL</string>
+  <string name="arabic">ARAP, DOĞU</string>
+  <string name="hindi">DEVANAGARİ</string>
+  <string name="color_0">Krem</string>
+  <string name="color_1">Siyah</string>
+  <string name="color_2">Yıldız Işığı</string>
+  <string name="color_3">Koyu Abis</string>
+  <string name="color_4">Yonca</string>
+  <string name="color_5">Kırmızı</string>
+</resources>

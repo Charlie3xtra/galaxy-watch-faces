@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Καλιφόρνια</string>
+  <string name="numbers">ΑΡΙΘΜΟΙ</string>
+  <string name="color">ΧΡΩΜΑ</string>
+  <string name="date">Date</string>
+  <string name="california">ΚΑΛΙΦΟΡΝΙΑ</string>
+  <string name="roman">ΛΑΤΙΝΙΚΟΙ</string>
+  <string name="numerals">ΑΡΑΒΙΚΟΙ, ΔΥΤΙΚΟΙ</string>
+  <string name="pills">ΣΧΗΜΑ ΧΑΠΙΟΥ</string>
+  <string name="arabic">ΑΡΑΒΙΚΟΙ, ΑΝΑΤΟΛΙΚΟΙ</string>
+  <string name="hindi">ΝΤΕΒΑΝΑΓΚΑΡΙ</string>
+  <string name="color_0">Κρεμ</string>
+  <string name="color_1">Μαύρο</string>
+  <string name="color_2">Αστροφεγγιά</string>
+  <string name="color_3">Βαθύ Μπλε</string>
+  <string name="color_4">Τριφύλλι</string>
+  <string name="color_5">Κόκκινο</string>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">קליפורניה</string>
+  <string name="numbers">ספרות</string>
+  <string name="color">צבע</string>
+  <string name="date">Date</string>
+  <string name="california">קליפורניה</string>
+  <string name="roman">רומיות</string>
+  <string name="numerals">הודיות ערביות</string>
+  <string name="pills">פסים</string>
+  <string name="arabic">ערביות</string>
+  <string name="hindi">דוונאגרי</string>
+  <string name="color_0">שמנת</string>
+  <string name="color_1">שחור</string>
+  <string name="color_2">אור כוכבים</string>
+  <string name="color_3">כחול מצולות</string>
+  <string name="color_4">תלתן</string>
+  <string name="color_5">אדום</string>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Kalifornia</string>
+  <string name="numbers">SZÁMOK</string>
+  <string name="color">SZÍN</string>
+  <string name="date">Date</string>
+  <string name="california">KALIFORNIA</string>
+  <string name="roman">RÓMAI</string>
+  <string name="numerals">ARAB, NYUGATI</string>
+  <string name="pills">VONALAS</string>
+  <string name="arabic">ARAB, KELETI</string>
+  <string name="hindi">DÉVANÁGARI</string>
+  <string name="color_0">Krém</string>
+  <string name="color_1">Fekete</string>
+  <string name="color_2">Csillagfény</string>
+  <string name="color_3">Mély indigókék</string>
+  <string name="color_4">Rétzöld</string>
+  <string name="color_5">Vörös</string>
+</resources>
