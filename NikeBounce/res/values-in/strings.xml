@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Bounce</string>
+  <string name="bg">LATAR BELAKANG</string>
+  <string name="color">WARNA</string>
+  <string name="c0">Platinum Murni</string>
+  <string name="c1">Biru Dingin</string>
+  <string name="c2">Putih Santan</string>
+  <string name="c3">Arbei Gurun</string>
+  <string name="c4">Ungu Boneka</string>
+  <string name="c5">Biru Akik</string>
+  <string name="c6">Hijau Kekuningan</string>
+  <string name="c7">Biru Foto</string>
+  <string name="c8">Cokelat Wijen</string>
+  <string name="c9">Putih Salju</string>
+</resources>

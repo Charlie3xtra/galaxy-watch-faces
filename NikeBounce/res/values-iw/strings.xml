@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">‏Nike קופצני</string>
+  <string name="bg">רקע</string>
+  <string name="color">צבע</string>
+  <string name="c0">פלטינה טהורה</string>
+  <string name="c1">כחול קריר</string>
+  <string name="c2">חלב קוקוס</string>
+  <string name="c3">פטל מדבר</string>
+  <string name="c4">בובה</string>
+  <string name="c5">כחול ספורט</string>
+  <string name="c6">ירוק רפאים</string>
+  <string name="c7">כחול פוטוגני</string>
+  <string name="c8">שומשום</string>
+  <string name="c9">לבן פסגות</string>
+</resources>

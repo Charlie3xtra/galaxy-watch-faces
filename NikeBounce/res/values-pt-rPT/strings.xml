@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike movimento</string>
+  <string name="bg">FUNDO</string>
+  <string name="color">COR</string>
+  <string name="c0">Platina pura</string>
+  <string name="c1">Azul chill</string>
+  <string name="c2">Coco</string>
+  <string name="c3">Deserto</string>
+  <string name="c4">Porcelana</string>
+  <string name="c5">Game Royal</string>
+  <string name="c6">Verde golfe</string>
+  <string name="c7">Azul foto</string>
+  <string name="c8">Sésamo</string>
+  <string name="c9">Branco‑cume</string>
+</resources>

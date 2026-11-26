@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Bounce</string>
+  <string name="bg">HÁTTÉR</string>
+  <string name="color">SZÍN</string>
+  <string name="c0">Platinaszín</string>
+  <string name="c1">Blue Chill</string>
+  <string name="c2">Coconut Milk</string>
+  <string name="c3">Desert Berry</string>
+  <string name="c4">Doll</string>
+  <string name="c5">Game Royal színű</string>
+  <string name="c6">Ghost Green</string>
+  <string name="c7">Photo Blue</string>
+  <string name="c8">Sesame</string>
+  <string name="c9">Hegycsúcsfehér</string>
+</resources>

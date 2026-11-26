@@ -95,3 +95,13 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 | <img src="NikeHybrid/screenshots/active.png" width="220" alt="Nike 混合亮屏"> | <img src="NikeHybrid/screenshots/ambient.png" width="220" alt="Nike 混合息屏"> |
 
 [下载 Nike 混合 1.3](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/nike-hybrid-1.3)。默认双行数字采用 24S132 固件内嵌的 Victory Italic 和 Nike Hybrid 专用 Swoosh，息屏使用 Victory Outline Italic。提供 12 组配色、数字与两种指针样式、全屏和圆形刻度盘。四角可单独配置专用图案或关闭，默认对应电话、训练、信息和音乐。电话、跑者、气泡和音符取自官方预览，闹钟和心率图标来自固件。日期、电量按实时数据绘制。系统组件可替换角位显示，底部弧形文字槽默认留空。1.2 加大四角图案，音乐按圆弧排字，心率、电量、天气状况、气温和紫外线各有独立排版。1.3 将组件移到四角对角线，新增计时预设、月相与海拔入口。三星计时器和海拔数据的实测限制见核对表。[逐项固件核对](NikeHybrid/角位核对.md)。数字版以 Apple 官方预览为依据，指针、扇形遮罩、刻度及息屏亮度为 Galaxy 圆屏适配。使用 NikeHybrid/build.ps1 构建现有资源。
+
+## Nike 回弹 · Nike Bounce
+
+| 点按回弹（手表实录） | 息屏 |
+| --- | --- |
+| <img src="NikeBounce/screenshots/tap.gif" width="220" alt="点按不同数字，笔画局部形变后回位"> | <img src="NikeBounce/screenshots/ambient.png" width="220" alt="息屏描边数字"> |
+
+[下载 Nike 回弹 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/nike-bounce-1.0) · [亮屏截图](NikeBounce/screenshots/active.png)
+
+以 24S132 的 NTKMagmaFaceBundle、Victory 字体和 Nike 图标为依据。原版使用 Metal 弹簧网格，本版用预计算的局部位移纹理近似点按和换分钟的回摆，并用 WFF 加速度变换响应腕动。十组单色支持切换背景和多语言名称。点按响应以数字为单位，三星系统会叠加触摸反馈。机械表冠未实现。息屏使用静态描边。真实步伐和抬腕的力度尚未与 Apple Watch 真机校准。

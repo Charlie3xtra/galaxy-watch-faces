@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Αναπήδηση</string>
+  <string name="bg">ΦΟΝΤΟ</string>
+  <string name="color">ΧΡΩΜΑ</string>
+  <string name="c0">Pure Platinum</string>
+  <string name="c1">Ψυχρό Μπλε</string>
+  <string name="c2">Γάλα Καρύδας</string>
+  <string name="c3">Desert Berry</string>
+  <string name="c4">Doll</string>
+  <string name="c5">Game Royal</string>
+  <string name="c6">Πράσινο Όμπρε</string>
+  <string name="c7">Μπλε της Φωτογραφίας</string>
+  <string name="c8">Σουσάμι</string>
+  <string name="c9">Λευκό του Πάγου</string>
+</resources>

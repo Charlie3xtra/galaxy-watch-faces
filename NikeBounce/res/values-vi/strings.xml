@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Bounce</string>
+  <string name="bg">NỀN</string>
+  <string name="color">MÀU</string>
+  <string name="c0">Bạch kim</string>
+  <string name="c1">Xanh dương nhạt</string>
+  <string name="c2">Trắng sữa dừa</string>
+  <string name="c3">Hồng phấn</string>
+  <string name="c4">Tím nhạt</string>
+  <string name="c5">Xanh hoàng gia</string>
+  <string name="c6">Xanh lục nhạt</string>
+  <string name="c7">Xanh biển</string>
+  <string name="c8">Vàng nâu</string>
+  <string name="c9">Trắng ngà</string>
+</resources>

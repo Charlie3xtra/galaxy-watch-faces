@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nikeバウンス</string>
+  <string name="bg">背景</string>
+  <string name="color">カラー</string>
+  <string name="c0">ピュアプラチナム</string>
+  <string name="c1">ブルーチル</string>
+  <string name="c2">ココナッツミルク</string>
+  <string name="c3">デザートベリー</string>
+  <string name="c4">ドール</string>
+  <string name="c5">ゲームロイヤル</string>
+  <string name="c6">ゴーストグリーン</string>
+  <string name="c7">フォトブルー</string>
+  <string name="c8">セサミ</string>
+  <string name="c9">サミットホワイト</string>
+</resources>

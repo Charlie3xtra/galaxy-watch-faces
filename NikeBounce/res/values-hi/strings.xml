@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Bounce</string>
+  <string name="bg">बैकग्राउंड</string>
+  <string name="color">रंग</string>
+  <string name="c0">प्योर प्लेटिनम</string>
+  <string name="c1">ब्लू चिल</string>
+  <string name="c2">कोकोनट मिल्क</string>
+  <string name="c3">डेज़र्ट बेरी</string>
+  <string name="c4">डॉल</string>
+  <string name="c5">गेम रॉयल</string>
+  <string name="c6">गोस्ट ग्रीन</string>
+  <string name="c7">फ़ोटो ब्लू</string>
+  <string name="c8">सेसमी</string>
+  <string name="c9">समिट ह्वाइट</string>
+</resources>

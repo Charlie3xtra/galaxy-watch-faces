@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Rebond Nike</string>
+  <string name="bg">ARRIÈRE-PLAN</string>
+  <string name="color">COULEUR</string>
+  <string name="c0">Platine pur</string>
+  <string name="c1">Bleu glacial</string>
+  <string name="c2">Lait coco</string>
+  <string name="c3">Baie du désert</string>
+  <string name="c4">Poupée</string>
+  <string name="c5">Royal électrique</string>
+  <string name="c6">Vert ombre</string>
+  <string name="c7">Bleu photo</string>
+  <string name="c8">Sésame</string>
+  <string name="c9">Sommet blanc</string>
+</resources>

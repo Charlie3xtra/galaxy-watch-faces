@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Bounce</string>
+  <string name="bg">FONDO</string>
+  <string name="color">COLOR</string>
+  <string name="c0">Platino puro</string>
+  <string name="c1">Azul frío</string>
+  <string name="c2">Leche de coco</string>
+  <string name="c3">Baya del desierto</string>
+  <string name="c4">Malva</string>
+  <string name="c5">Game Royal</string>
+  <string name="c6">Verde fantasma</string>
+  <string name="c7">Azul foto</string>
+  <string name="c8">Sésamo</string>
+  <string name="c9">Blanco cumbre</string>
+</resources>

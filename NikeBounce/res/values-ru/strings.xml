@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike (на пружинах)</string>
+  <string name="bg">ФОН</string>
+  <string name="color">ЦВЕТ</string>
+  <string name="c0">Чистая платина</string>
+  <string name="c1">Голубой лед</string>
+  <string name="c2">Кокосовое молоко</string>
+  <string name="c3">Пустынная ягода</string>
+  <string name="c4">Фарфор</string>
+  <string name="c5">Активный синий</string>
+  <string name="c6">Зеленый призрак</string>
+  <string name="c7">Синие чернила</string>
+  <string name="c8">Кунжут</string>
+  <string name="c9">Снежная вершина</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike пружний</string>
+  <string name="bg">ТЛО</string>
+  <string name="color">КОЛІР</string>
+  <string name="c0">Чиста платина</string>
+  <string name="c1">Синій спокій</string>
+  <string name="c2">Кокосове молоко</string>
+  <string name="c3">Запорошена ягода</string>
+  <string name="c4">Лялька</string>
+  <string name="c5">Світло‑волошковий</string>
+  <string name="c6">Зелений привид</string>
+  <string name="c7">Синій спалах</string>
+  <string name="c8">Кунжут</string>
+  <string name="c9">Сніжно‑білий</string>
+</resources>

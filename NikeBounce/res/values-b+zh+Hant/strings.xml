@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike彈跳</string>
+  <string name="bg">背景</string>
+  <string name="color">顏色</string>
+  <string name="c0">Pure Platinum</string>
+  <string name="c1">冷藍色</string>
+  <string name="c2">椰奶白</string>
+  <string name="c3">淡莓紅</string>
+  <string name="c4">粉紫色</string>
+  <string name="c5">湛藍色</string>
+  <string name="c6">魅影綠色</string>
+  <string name="c7">淡藍色</string>
+  <string name="c8">芝麻色</string>
+  <string name="c9">雪峰白色</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Bounce</string>
+  <string name="bg">OZADJE</string>
+  <string name="color">BARVA</string>
+  <string name="c0">Čista platina</string>
+  <string name="c1">Hladno modra</string>
+  <string name="c2">Kokosovo mleko</string>
+  <string name="c3">Puščavska jagoda</string>
+  <string name="c4">Lutka</string>
+  <string name="c5">Kraljevo modra</string>
+  <string name="c6">Pošastno zelena</string>
+  <string name="c7">Fotografsko modra</string>
+  <string name="c8">Sezam</string>
+  <string name="c9">Polarno bela</string>
+</resources>

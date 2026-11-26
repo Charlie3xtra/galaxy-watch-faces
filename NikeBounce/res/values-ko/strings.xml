@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike 바운스</string>
+  <string name="bg">배경</string>
+  <string name="color">색상</string>
+  <string name="c0">퓨어 플래티넘</string>
+  <string name="c1">블루 칠</string>
+  <string name="c2">코코넛 밀크</string>
+  <string name="c3">데저트 베리</string>
+  <string name="c4">돌</string>
+  <string name="c5">게임 로열</string>
+  <string name="c6">고스트 그린</string>
+  <string name="c7">포토 블루</string>
+  <string name="c8">세서미</string>
+  <string name="c9">서밋 화이트</string>
+</resources>

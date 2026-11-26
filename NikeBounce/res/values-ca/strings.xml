@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike amb rebot</string>
+  <string name="bg">FONS</string>
+  <string name="color">COLOR</string>
+  <string name="c0">Platí pur</string>
+  <string name="c1">Blau fred</string>
+  <string name="c2">Llet de coco</string>
+  <string name="c3">Baia del desert</string>
+  <string name="c4">Malva</string>
+  <string name="c5">Blau Game Royal</string>
+  <string name="c6">Verd fantasma</string>
+  <string name="c7">Blau foto</string>
+  <string name="c8">Sèsam</string>
+  <string name="c9">Blanc polar</string>
+</resources>

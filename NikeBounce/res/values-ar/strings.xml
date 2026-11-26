@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Bounce</string>
+  <string name="bg">الخلفية</string>
+  <string name="color">اللون</string>
+  <string name="c0">بلاتين</string>
+  <string name="c1">أزرق رائق</string>
+  <string name="c2">أبيض جوز الهند</string>
+  <string name="c3">توت الصحراء</string>
+  <string name="c4">أبيض رمادي</string>
+  <string name="c5">أزرق ملكي رياضي</string>
+  <string name="c6">أخضر مزرق</string>
+  <string name="c7">أزرق منير</string>
+  <string name="c8">سمسمي</string>
+  <string name="c9">أبيض جبلي</string>
+</resources>

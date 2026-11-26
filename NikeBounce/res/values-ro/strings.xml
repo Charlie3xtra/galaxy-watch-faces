@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Nike Bounce</string>
+  <string name="bg">FUNDAL</string>
+  <string name="color">CULORI</string>
+  <string name="c0">Platină pură</string>
+  <string name="c1">Albastru glacial</string>
+  <string name="c2">Lapte de cocos</string>
+  <string name="c3">Fructul deșertului</string>
+  <string name="c4">Porțelan</string>
+  <string name="c5">Albastru Game Royal</string>
+  <string name="c6">Verde fantasmă</string>
+  <string name="c7">Albastru foto</string>
+  <string name="c8">Susan</string>
+  <string name="c9">Alb montan</string>
+</resources>
