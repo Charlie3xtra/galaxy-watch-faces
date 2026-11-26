@@ -63,6 +63,174 @@
       <Character name="۹" resource="solid_9" width="144" height="160" />
       <Character name="९" resource="solid_9" width="144" height="160" />
     </BitmapFont>
+    <BitmapFont name="solid_left">
+      <Character name="0" resource="solid_0_left" width="144" height="160" />
+      <Character name="٠" resource="solid_0_left" width="144" height="160" />
+      <Character name="۰" resource="solid_0_left" width="144" height="160" />
+      <Character name="०" resource="solid_0_left" width="144" height="160" />
+      <Character name="1" resource="solid_1_left" width="144" height="160" />
+      <Character name="١" resource="solid_1_left" width="144" height="160" />
+      <Character name="۱" resource="solid_1_left" width="144" height="160" />
+      <Character name="१" resource="solid_1_left" width="144" height="160" />
+      <Character name="2" resource="solid_2_left" width="144" height="160" />
+      <Character name="٢" resource="solid_2_left" width="144" height="160" />
+      <Character name="۲" resource="solid_2_left" width="144" height="160" />
+      <Character name="२" resource="solid_2_left" width="144" height="160" />
+      <Character name="3" resource="solid_3_left" width="144" height="160" />
+      <Character name="٣" resource="solid_3_left" width="144" height="160" />
+      <Character name="۳" resource="solid_3_left" width="144" height="160" />
+      <Character name="३" resource="solid_3_left" width="144" height="160" />
+      <Character name="4" resource="solid_4_left" width="144" height="160" />
+      <Character name="٤" resource="solid_4_left" width="144" height="160" />
+      <Character name="۴" resource="solid_4_left" width="144" height="160" />
+      <Character name="४" resource="solid_4_left" width="144" height="160" />
+      <Character name="5" resource="solid_5_left" width="144" height="160" />
+      <Character name="٥" resource="solid_5_left" width="144" height="160" />
+      <Character name="۵" resource="solid_5_left" width="144" height="160" />
+      <Character name="५" resource="solid_5_left" width="144" height="160" />
+      <Character name="6" resource="solid_6_left" width="144" height="160" />
+      <Character name="٦" resource="solid_6_left" width="144" height="160" />
+      <Character name="۶" resource="solid_6_left" width="144" height="160" />
+      <Character name="६" resource="solid_6_left" width="144" height="160" />
+      <Character name="7" resource="solid_7_left" width="144" height="160" />
+      <Character name="٧" resource="solid_7_left" width="144" height="160" />
+      <Character name="۷" resource="solid_7_left" width="144" height="160" />
+      <Character name="७" resource="solid_7_left" width="144" height="160" />
+      <Character name="8" resource="solid_8_left" width="144" height="160" />
+      <Character name="٨" resource="solid_8_left" width="144" height="160" />
+      <Character name="۸" resource="solid_8_left" width="144" height="160" />
+      <Character name="८" resource="solid_8_left" width="144" height="160" />
+      <Character name="9" resource="solid_9_left" width="144" height="160" />
+      <Character name="٩" resource="solid_9_left" width="144" height="160" />
+      <Character name="۹" resource="solid_9_left" width="144" height="160" />
+      <Character name="९" resource="solid_9_left" width="144" height="160" />
+    </BitmapFont>
+    <BitmapFont name="solid_right">
+      <Character name="0" resource="solid_0_right" width="144" height="160" />
+      <Character name="٠" resource="solid_0_right" width="144" height="160" />
+      <Character name="۰" resource="solid_0_right" width="144" height="160" />
+      <Character name="०" resource="solid_0_right" width="144" height="160" />
+      <Character name="1" resource="solid_1_right" width="144" height="160" />
+      <Character name="١" resource="solid_1_right" width="144" height="160" />
+      <Character name="۱" resource="solid_1_right" width="144" height="160" />
+      <Character name="१" resource="solid_1_right" width="144" height="160" />
+      <Character name="2" resource="solid_2_right" width="144" height="160" />
+      <Character name="٢" resource="solid_2_right" width="144" height="160" />
+      <Character name="۲" resource="solid_2_right" width="144" height="160" />
+      <Character name="२" resource="solid_2_right" width="144" height="160" />
+      <Character name="3" resource="solid_3_right" width="144" height="160" />
+      <Character name="٣" resource="solid_3_right" width="144" height="160" />
+      <Character name="۳" resource="solid_3_right" width="144" height="160" />
+      <Character name="३" resource="solid_3_right" width="144" height="160" />
+      <Character name="4" resource="solid_4_right" width="144" height="160" />
+      <Character name="٤" resource="solid_4_right" width="144" height="160" />
+      <Character name="۴" resource="solid_4_right" width="144" height="160" />
+      <Character name="४" resource="solid_4_right" width="144" height="160" />
+      <Character name="5" resource="solid_5_right" width="144" height="160" />
+      <Character name="٥" resource="solid_5_right" width="144" height="160" />
+      <Character name="۵" resource="solid_5_right" width="144" height="160" />
+      <Character name="५" resource="solid_5_right" width="144" height="160" />
+      <Character name="6" resource="solid_6_right" width="144" height="160" />
+      <Character name="٦" resource="solid_6_right" width="144" height="160" />
+      <Character name="۶" resource="solid_6_right" width="144" height="160" />
+      <Character name="६" resource="solid_6_right" width="144" height="160" />
+      <Character name="7" resource="solid_7_right" width="144" height="160" />
+      <Character name="٧" resource="solid_7_right" width="144" height="160" />
+      <Character name="۷" resource="solid_7_right" width="144" height="160" />
+      <Character name="७" resource="solid_7_right" width="144" height="160" />
+      <Character name="8" resource="solid_8_right" width="144" height="160" />
+      <Character name="٨" resource="solid_8_right" width="144" height="160" />
+      <Character name="۸" resource="solid_8_right" width="144" height="160" />
+      <Character name="८" resource="solid_8_right" width="144" height="160" />
+      <Character name="9" resource="solid_9_right" width="144" height="160" />
+      <Character name="٩" resource="solid_9_right" width="144" height="160" />
+      <Character name="۹" resource="solid_9_right" width="144" height="160" />
+      <Character name="९" resource="solid_9_right" width="144" height="160" />
+    </BitmapFont>
+    <BitmapFont name="solid_up">
+      <Character name="0" resource="solid_0_up" width="144" height="160" />
+      <Character name="٠" resource="solid_0_up" width="144" height="160" />
+      <Character name="۰" resource="solid_0_up" width="144" height="160" />
+      <Character name="०" resource="solid_0_up" width="144" height="160" />
+      <Character name="1" resource="solid_1_up" width="144" height="160" />
+      <Character name="١" resource="solid_1_up" width="144" height="160" />
+      <Character name="۱" resource="solid_1_up" width="144" height="160" />
+      <Character name="१" resource="solid_1_up" width="144" height="160" />
+      <Character name="2" resource="solid_2_up" width="144" height="160" />
+      <Character name="٢" resource="solid_2_up" width="144" height="160" />
+      <Character name="۲" resource="solid_2_up" width="144" height="160" />
+      <Character name="२" resource="solid_2_up" width="144" height="160" />
+      <Character name="3" resource="solid_3_up" width="144" height="160" />
+      <Character name="٣" resource="solid_3_up" width="144" height="160" />
+      <Character name="۳" resource="solid_3_up" width="144" height="160" />
+      <Character name="३" resource="solid_3_up" width="144" height="160" />
+      <Character name="4" resource="solid_4_up" width="144" height="160" />
+      <Character name="٤" resource="solid_4_up" width="144" height="160" />
+      <Character name="۴" resource="solid_4_up" width="144" height="160" />
+      <Character name="४" resource="solid_4_up" width="144" height="160" />
+      <Character name="5" resource="solid_5_up" width="144" height="160" />
+      <Character name="٥" resource="solid_5_up" width="144" height="160" />
+      <Character name="۵" resource="solid_5_up" width="144" height="160" />
+      <Character name="५" resource="solid_5_up" width="144" height="160" />
+      <Character name="6" resource="solid_6_up" width="144" height="160" />
+      <Character name="٦" resource="solid_6_up" width="144" height="160" />
+      <Character name="۶" resource="solid_6_up" width="144" height="160" />
+      <Character name="६" resource="solid_6_up" width="144" height="160" />
+      <Character name="7" resource="solid_7_up" width="144" height="160" />
+      <Character name="٧" resource="solid_7_up" width="144" height="160" />
+      <Character name="۷" resource="solid_7_up" width="144" height="160" />
+      <Character name="७" resource="solid_7_up" width="144" height="160" />
+      <Character name="8" resource="solid_8_up" width="144" height="160" />
+      <Character name="٨" resource="solid_8_up" width="144" height="160" />
+      <Character name="۸" resource="solid_8_up" width="144" height="160" />
+      <Character name="८" resource="solid_8_up" width="144" height="160" />
+      <Character name="9" resource="solid_9_up" width="144" height="160" />
+      <Character name="٩" resource="solid_9_up" width="144" height="160" />
+      <Character name="۹" resource="solid_9_up" width="144" height="160" />
+      <Character name="९" resource="solid_9_up" width="144" height="160" />
+    </BitmapFont>
+    <BitmapFont name="solid_down">
+      <Character name="0" resource="solid_0_down" width="144" height="160" />
+      <Character name="٠" resource="solid_0_down" width="144" height="160" />
+      <Character name="۰" resource="solid_0_down" width="144" height="160" />
+      <Character name="०" resource="solid_0_down" width="144" height="160" />
+      <Character name="1" resource="solid_1_down" width="144" height="160" />
+      <Character name="١" resource="solid_1_down" width="144" height="160" />
+      <Character name="۱" resource="solid_1_down" width="144" height="160" />
+      <Character name="१" resource="solid_1_down" width="144" height="160" />
+      <Character name="2" resource="solid_2_down" width="144" height="160" />
+      <Character name="٢" resource="solid_2_down" width="144" height="160" />
+      <Character name="۲" resource="solid_2_down" width="144" height="160" />
+      <Character name="२" resource="solid_2_down" width="144" height="160" />
+      <Character name="3" resource="solid_3_down" width="144" height="160" />
+      <Character name="٣" resource="solid_3_down" width="144" height="160" />
+      <Character name="۳" resource="solid_3_down" width="144" height="160" />
+      <Character name="३" resource="solid_3_down" width="144" height="160" />
+      <Character name="4" resource="solid_4_down" width="144" height="160" />
+      <Character name="٤" resource="solid_4_down" width="144" height="160" />
+      <Character name="۴" resource="solid_4_down" width="144" height="160" />
+      <Character name="४" resource="solid_4_down" width="144" height="160" />
+      <Character name="5" resource="solid_5_down" width="144" height="160" />
+      <Character name="٥" resource="solid_5_down" width="144" height="160" />
+      <Character name="۵" resource="solid_5_down" width="144" height="160" />
+      <Character name="५" resource="solid_5_down" width="144" height="160" />
+      <Character name="6" resource="solid_6_down" width="144" height="160" />
+      <Character name="٦" resource="solid_6_down" width="144" height="160" />
+      <Character name="۶" resource="solid_6_down" width="144" height="160" />
+      <Character name="६" resource="solid_6_down" width="144" height="160" />
+      <Character name="7" resource="solid_7_down" width="144" height="160" />
+      <Character name="٧" resource="solid_7_down" width="144" height="160" />
+      <Character name="۷" resource="solid_7_down" width="144" height="160" />
+      <Character name="७" resource="solid_7_down" width="144" height="160" />
+      <Character name="8" resource="solid_8_down" width="144" height="160" />
+      <Character name="٨" resource="solid_8_down" width="144" height="160" />
+      <Character name="۸" resource="solid_8_down" width="144" height="160" />
+      <Character name="८" resource="solid_8_down" width="144" height="160" />
+      <Character name="9" resource="solid_9_down" width="144" height="160" />
+      <Character name="٩" resource="solid_9_down" width="144" height="160" />
+      <Character name="۹" resource="solid_9_down" width="144" height="160" />
+      <Character name="९" resource="solid_9_down" width="144" height="160" />
+    </BitmapFont>
     <BitmapFont name="stencil">
       <Character name="0" resource="stencil_0" width="144" height="160" />
       <Character name="٠" resource="stencil_0" width="144" height="160" />
@@ -104,6 +272,174 @@
       <Character name="٩" resource="stencil_9" width="144" height="160" />
       <Character name="۹" resource="stencil_9" width="144" height="160" />
       <Character name="९" resource="stencil_9" width="144" height="160" />
+    </BitmapFont>
+    <BitmapFont name="stencil_left">
+      <Character name="0" resource="stencil_0_left" width="144" height="160" />
+      <Character name="٠" resource="stencil_0_left" width="144" height="160" />
+      <Character name="۰" resource="stencil_0_left" width="144" height="160" />
+      <Character name="०" resource="stencil_0_left" width="144" height="160" />
+      <Character name="1" resource="stencil_1_left" width="144" height="160" />
+      <Character name="١" resource="stencil_1_left" width="144" height="160" />
+      <Character name="۱" resource="stencil_1_left" width="144" height="160" />
+      <Character name="१" resource="stencil_1_left" width="144" height="160" />
+      <Character name="2" resource="stencil_2_left" width="144" height="160" />
+      <Character name="٢" resource="stencil_2_left" width="144" height="160" />
+      <Character name="۲" resource="stencil_2_left" width="144" height="160" />
+      <Character name="२" resource="stencil_2_left" width="144" height="160" />
+      <Character name="3" resource="stencil_3_left" width="144" height="160" />
+      <Character name="٣" resource="stencil_3_left" width="144" height="160" />
+      <Character name="۳" resource="stencil_3_left" width="144" height="160" />
+      <Character name="३" resource="stencil_3_left" width="144" height="160" />
+      <Character name="4" resource="stencil_4_left" width="144" height="160" />
+      <Character name="٤" resource="stencil_4_left" width="144" height="160" />
+      <Character name="۴" resource="stencil_4_left" width="144" height="160" />
+      <Character name="४" resource="stencil_4_left" width="144" height="160" />
+      <Character name="5" resource="stencil_5_left" width="144" height="160" />
+      <Character name="٥" resource="stencil_5_left" width="144" height="160" />
+      <Character name="۵" resource="stencil_5_left" width="144" height="160" />
+      <Character name="५" resource="stencil_5_left" width="144" height="160" />
+      <Character name="6" resource="stencil_6_left" width="144" height="160" />
+      <Character name="٦" resource="stencil_6_left" width="144" height="160" />
+      <Character name="۶" resource="stencil_6_left" width="144" height="160" />
+      <Character name="६" resource="stencil_6_left" width="144" height="160" />
+      <Character name="7" resource="stencil_7_left" width="144" height="160" />
+      <Character name="٧" resource="stencil_7_left" width="144" height="160" />
+      <Character name="۷" resource="stencil_7_left" width="144" height="160" />
+      <Character name="७" resource="stencil_7_left" width="144" height="160" />
+      <Character name="8" resource="stencil_8_left" width="144" height="160" />
+      <Character name="٨" resource="stencil_8_left" width="144" height="160" />
+      <Character name="۸" resource="stencil_8_left" width="144" height="160" />
+      <Character name="८" resource="stencil_8_left" width="144" height="160" />
+      <Character name="9" resource="stencil_9_left" width="144" height="160" />
+      <Character name="٩" resource="stencil_9_left" width="144" height="160" />
+      <Character name="۹" resource="stencil_9_left" width="144" height="160" />
+      <Character name="९" resource="stencil_9_left" width="144" height="160" />
+    </BitmapFont>
+    <BitmapFont name="stencil_right">
+      <Character name="0" resource="stencil_0_right" width="144" height="160" />
+      <Character name="٠" resource="stencil_0_right" width="144" height="160" />
+      <Character name="۰" resource="stencil_0_right" width="144" height="160" />
+      <Character name="०" resource="stencil_0_right" width="144" height="160" />
+      <Character name="1" resource="stencil_1_right" width="144" height="160" />
+      <Character name="١" resource="stencil_1_right" width="144" height="160" />
+      <Character name="۱" resource="stencil_1_right" width="144" height="160" />
+      <Character name="१" resource="stencil_1_right" width="144" height="160" />
+      <Character name="2" resource="stencil_2_right" width="144" height="160" />
+      <Character name="٢" resource="stencil_2_right" width="144" height="160" />
+      <Character name="۲" resource="stencil_2_right" width="144" height="160" />
+      <Character name="२" resource="stencil_2_right" width="144" height="160" />
+      <Character name="3" resource="stencil_3_right" width="144" height="160" />
+      <Character name="٣" resource="stencil_3_right" width="144" height="160" />
+      <Character name="۳" resource="stencil_3_right" width="144" height="160" />
+      <Character name="३" resource="stencil_3_right" width="144" height="160" />
+      <Character name="4" resource="stencil_4_right" width="144" height="160" />
+      <Character name="٤" resource="stencil_4_right" width="144" height="160" />
+      <Character name="۴" resource="stencil_4_right" width="144" height="160" />
+      <Character name="४" resource="stencil_4_right" width="144" height="160" />
+      <Character name="5" resource="stencil_5_right" width="144" height="160" />
+      <Character name="٥" resource="stencil_5_right" width="144" height="160" />
+      <Character name="۵" resource="stencil_5_right" width="144" height="160" />
+      <Character name="५" resource="stencil_5_right" width="144" height="160" />
+      <Character name="6" resource="stencil_6_right" width="144" height="160" />
+      <Character name="٦" resource="stencil_6_right" width="144" height="160" />
+      <Character name="۶" resource="stencil_6_right" width="144" height="160" />
+      <Character name="६" resource="stencil_6_right" width="144" height="160" />
+      <Character name="7" resource="stencil_7_right" width="144" height="160" />
+      <Character name="٧" resource="stencil_7_right" width="144" height="160" />
+      <Character name="۷" resource="stencil_7_right" width="144" height="160" />
+      <Character name="७" resource="stencil_7_right" width="144" height="160" />
+      <Character name="8" resource="stencil_8_right" width="144" height="160" />
+      <Character name="٨" resource="stencil_8_right" width="144" height="160" />
+      <Character name="۸" resource="stencil_8_right" width="144" height="160" />
+      <Character name="८" resource="stencil_8_right" width="144" height="160" />
+      <Character name="9" resource="stencil_9_right" width="144" height="160" />
+      <Character name="٩" resource="stencil_9_right" width="144" height="160" />
+      <Character name="۹" resource="stencil_9_right" width="144" height="160" />
+      <Character name="९" resource="stencil_9_right" width="144" height="160" />
+    </BitmapFont>
+    <BitmapFont name="stencil_up">
+      <Character name="0" resource="stencil_0_up" width="144" height="160" />
+      <Character name="٠" resource="stencil_0_up" width="144" height="160" />
+      <Character name="۰" resource="stencil_0_up" width="144" height="160" />
+      <Character name="०" resource="stencil_0_up" width="144" height="160" />
+      <Character name="1" resource="stencil_1_up" width="144" height="160" />
+      <Character name="١" resource="stencil_1_up" width="144" height="160" />
+      <Character name="۱" resource="stencil_1_up" width="144" height="160" />
+      <Character name="१" resource="stencil_1_up" width="144" height="160" />
+      <Character name="2" resource="stencil_2_up" width="144" height="160" />
+      <Character name="٢" resource="stencil_2_up" width="144" height="160" />
+      <Character name="۲" resource="stencil_2_up" width="144" height="160" />
+      <Character name="२" resource="stencil_2_up" width="144" height="160" />
+      <Character name="3" resource="stencil_3_up" width="144" height="160" />
+      <Character name="٣" resource="stencil_3_up" width="144" height="160" />
+      <Character name="۳" resource="stencil_3_up" width="144" height="160" />
+      <Character name="३" resource="stencil_3_up" width="144" height="160" />
+      <Character name="4" resource="stencil_4_up" width="144" height="160" />
+      <Character name="٤" resource="stencil_4_up" width="144" height="160" />
+      <Character name="۴" resource="stencil_4_up" width="144" height="160" />
+      <Character name="४" resource="stencil_4_up" width="144" height="160" />
+      <Character name="5" resource="stencil_5_up" width="144" height="160" />
+      <Character name="٥" resource="stencil_5_up" width="144" height="160" />
+      <Character name="۵" resource="stencil_5_up" width="144" height="160" />
+      <Character name="५" resource="stencil_5_up" width="144" height="160" />
+      <Character name="6" resource="stencil_6_up" width="144" height="160" />
+      <Character name="٦" resource="stencil_6_up" width="144" height="160" />
+      <Character name="۶" resource="stencil_6_up" width="144" height="160" />
+      <Character name="६" resource="stencil_6_up" width="144" height="160" />
+      <Character name="7" resource="stencil_7_up" width="144" height="160" />
+      <Character name="٧" resource="stencil_7_up" width="144" height="160" />
+      <Character name="۷" resource="stencil_7_up" width="144" height="160" />
+      <Character name="७" resource="stencil_7_up" width="144" height="160" />
+      <Character name="8" resource="stencil_8_up" width="144" height="160" />
+      <Character name="٨" resource="stencil_8_up" width="144" height="160" />
+      <Character name="۸" resource="stencil_8_up" width="144" height="160" />
+      <Character name="८" resource="stencil_8_up" width="144" height="160" />
+      <Character name="9" resource="stencil_9_up" width="144" height="160" />
+      <Character name="٩" resource="stencil_9_up" width="144" height="160" />
+      <Character name="۹" resource="stencil_9_up" width="144" height="160" />
+      <Character name="९" resource="stencil_9_up" width="144" height="160" />
+    </BitmapFont>
+    <BitmapFont name="stencil_down">
+      <Character name="0" resource="stencil_0_down" width="144" height="160" />
+      <Character name="٠" resource="stencil_0_down" width="144" height="160" />
+      <Character name="۰" resource="stencil_0_down" width="144" height="160" />
+      <Character name="०" resource="stencil_0_down" width="144" height="160" />
+      <Character name="1" resource="stencil_1_down" width="144" height="160" />
+      <Character name="١" resource="stencil_1_down" width="144" height="160" />
+      <Character name="۱" resource="stencil_1_down" width="144" height="160" />
+      <Character name="१" resource="stencil_1_down" width="144" height="160" />
+      <Character name="2" resource="stencil_2_down" width="144" height="160" />
+      <Character name="٢" resource="stencil_2_down" width="144" height="160" />
+      <Character name="۲" resource="stencil_2_down" width="144" height="160" />
+      <Character name="२" resource="stencil_2_down" width="144" height="160" />
+      <Character name="3" resource="stencil_3_down" width="144" height="160" />
+      <Character name="٣" resource="stencil_3_down" width="144" height="160" />
+      <Character name="۳" resource="stencil_3_down" width="144" height="160" />
+      <Character name="३" resource="stencil_3_down" width="144" height="160" />
+      <Character name="4" resource="stencil_4_down" width="144" height="160" />
+      <Character name="٤" resource="stencil_4_down" width="144" height="160" />
+      <Character name="۴" resource="stencil_4_down" width="144" height="160" />
+      <Character name="४" resource="stencil_4_down" width="144" height="160" />
+      <Character name="5" resource="stencil_5_down" width="144" height="160" />
+      <Character name="٥" resource="stencil_5_down" width="144" height="160" />
+      <Character name="۵" resource="stencil_5_down" width="144" height="160" />
+      <Character name="५" resource="stencil_5_down" width="144" height="160" />
+      <Character name="6" resource="stencil_6_down" width="144" height="160" />
+      <Character name="٦" resource="stencil_6_down" width="144" height="160" />
+      <Character name="۶" resource="stencil_6_down" width="144" height="160" />
+      <Character name="६" resource="stencil_6_down" width="144" height="160" />
+      <Character name="7" resource="stencil_7_down" width="144" height="160" />
+      <Character name="٧" resource="stencil_7_down" width="144" height="160" />
+      <Character name="۷" resource="stencil_7_down" width="144" height="160" />
+      <Character name="७" resource="stencil_7_down" width="144" height="160" />
+      <Character name="8" resource="stencil_8_down" width="144" height="160" />
+      <Character name="٨" resource="stencil_8_down" width="144" height="160" />
+      <Character name="۸" resource="stencil_8_down" width="144" height="160" />
+      <Character name="८" resource="stencil_8_down" width="144" height="160" />
+      <Character name="9" resource="stencil_9_down" width="144" height="160" />
+      <Character name="٩" resource="stencil_9_down" width="144" height="160" />
+      <Character name="۹" resource="stencil_9_down" width="144" height="160" />
+      <Character name="९" resource="stencil_9_down" width="144" height="160" />
     </BitmapFont>
   </BitmapFonts>
   <Scene backgroundColor="#000000">
@@ -173,7 +509,7 @@
       </ListConfiguration>
       <Group name="refracted_color" x="0" y="0" width="480" height="480">
         <Group name="glass_motion" x="0" y="0" width="480" height="480">
-          <Gyro angle="clamp([ACCELEROMETER_ANGLE_X], -65, 65) * 1.35" x="clamp([ACCELEROMETER_ANGLE_Y], -55, 55) * 0.7020000000000001" y="clamp([ACCELEROMETER_ANGLE_X], -55, 55) * -0.324" />
+          <Gyro angle="clamp([ACCELEROMETER_ANGLE_X], -65, 65) * 1" x="clamp([ACCELEROMETER_ANGLE_Y], -55, 55) * 0.52" y="clamp([ACCELEROMETER_ANGLE_X], -55, 55) * -0.24" />
           <Condition>
             <Expressions>
               <Expression name="p0">[CONFIGURATION.palette.0] == #FF352DB6 &amp;&amp; [CONFIGURATION.palette.1] == #FFD737D9</Expression>
@@ -253,6 +589,370 @@
                 <DigitalClock x="96" y="248" width="288" height="160">
                   <TimeText x="0" y="0" width="288" height="160" format="mm" align="CENTER">
                     <BitmapFont family="stencil" size="160" color="#FFFFFFFF" />
+                  </TimeText>
+                </DigitalClock>
+              </Group>
+            </ListOption>
+          </ListConfiguration>
+        </Group>
+      </Group>
+      <Group name="bevel_left" x="0" y="0" width="480" height="480">
+        <Group name="sample_left" x="-6" y="0" width="480" height="480">
+          <Group name="glass_motion" x="0" y="0" width="480" height="480">
+            <Gyro angle="clamp([ACCELEROMETER_ANGLE_X], -65, 65) * 1" x="clamp([ACCELEROMETER_ANGLE_Y], -55, 55) * 0.52" y="clamp([ACCELEROMETER_ANGLE_X], -55, 55) * -0.24" />
+            <Condition>
+              <Expressions>
+                <Expression name="p0">[CONFIGURATION.palette.0] == #FF352DB6 &amp;&amp; [CONFIGURATION.palette.1] == #FFD737D9</Expression>
+                <Expression name="p1">[CONFIGURATION.palette.0] == #FF910015 &amp;&amp; [CONFIGURATION.palette.1] == #FFFF8F9F</Expression>
+                <Expression name="p2">[CONFIGURATION.palette.0] == #FFB21500 &amp;&amp; [CONFIGURATION.palette.1] == #FFFFB9B0</Expression>
+                <Expression name="p3">[CONFIGURATION.palette.0] == #FF536D69 &amp;&amp; [CONFIGURATION.palette.1] == #FFF5FFFD</Expression>
+                <Expression name="p4">[CONFIGURATION.palette.0] == #FF218CA5 &amp;&amp; [CONFIGURATION.palette.1] == #FFCCF5FF</Expression>
+                <Expression name="p5">[CONFIGURATION.palette.0] == #FF37415B &amp;&amp; [CONFIGURATION.palette.1] == #FFCCDBFF</Expression>
+                <Expression name="p6">[CONFIGURATION.palette.0] == #FF7C4764 &amp;&amp; [CONFIGURATION.palette.1] == #FFFFDEF0</Expression>
+                <Expression name="p7">[CONFIGURATION.palette.0] == #FFBC4D4A &amp;&amp; [CONFIGURATION.palette.1] == #FFFFE6E6</Expression>
+              </Expressions>
+              <Compare expression="p0">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_0" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p1">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_1" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p2">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_2" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p3">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_3" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p4">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_4" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p5">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_5" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p6">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_6" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p7">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_7" />
+                </PartImage>
+              </Compare>
+            </Condition>
+          </Group>
+        </Group>
+        <Group name="normal_left" x="0" y="0" width="480" height="480" renderMode="MASK">
+          <ListConfiguration id="typeface">
+            <ListOption id="solid">
+              <Group name="solid" x="0" y="0" width="480" height="480">
+                <DigitalClock x="96" y="72" width="288" height="160">
+                  <TimeText x="0" y="0" width="288" height="160" format="hh" align="CENTER">
+                    <BitmapFont family="solid_left" size="160" color="#FFFFFFFF" />
+                  </TimeText>
+                </DigitalClock>
+                <DigitalClock x="96" y="248" width="288" height="160">
+                  <TimeText x="0" y="0" width="288" height="160" format="mm" align="CENTER">
+                    <BitmapFont family="solid_left" size="160" color="#FFFFFFFF" />
+                  </TimeText>
+                </DigitalClock>
+              </Group>
+            </ListOption>
+            <ListOption id="stencil">
+              <Group name="stencil" x="0" y="0" width="480" height="480">
+                <DigitalClock x="96" y="72" width="288" height="160">
+                  <TimeText x="0" y="0" width="288" height="160" format="hh" align="CENTER">
+                    <BitmapFont family="stencil_left" size="160" color="#FFFFFFFF" />
+                  </TimeText>
+                </DigitalClock>
+                <DigitalClock x="96" y="248" width="288" height="160">
+                  <TimeText x="0" y="0" width="288" height="160" format="mm" align="CENTER">
+                    <BitmapFont family="stencil_left" size="160" color="#FFFFFFFF" />
+                  </TimeText>
+                </DigitalClock>
+              </Group>
+            </ListOption>
+          </ListConfiguration>
+        </Group>
+      </Group>
+      <Group name="bevel_right" x="0" y="0" width="480" height="480">
+        <Group name="sample_right" x="6" y="0" width="480" height="480">
+          <Group name="glass_motion" x="0" y="0" width="480" height="480">
+            <Gyro angle="clamp([ACCELEROMETER_ANGLE_X], -65, 65) * 1" x="clamp([ACCELEROMETER_ANGLE_Y], -55, 55) * 0.52" y="clamp([ACCELEROMETER_ANGLE_X], -55, 55) * -0.24" />
+            <Condition>
+              <Expressions>
+                <Expression name="p0">[CONFIGURATION.palette.0] == #FF352DB6 &amp;&amp; [CONFIGURATION.palette.1] == #FFD737D9</Expression>
+                <Expression name="p1">[CONFIGURATION.palette.0] == #FF910015 &amp;&amp; [CONFIGURATION.palette.1] == #FFFF8F9F</Expression>
+                <Expression name="p2">[CONFIGURATION.palette.0] == #FFB21500 &amp;&amp; [CONFIGURATION.palette.1] == #FFFFB9B0</Expression>
+                <Expression name="p3">[CONFIGURATION.palette.0] == #FF536D69 &amp;&amp; [CONFIGURATION.palette.1] == #FFF5FFFD</Expression>
+                <Expression name="p4">[CONFIGURATION.palette.0] == #FF218CA5 &amp;&amp; [CONFIGURATION.palette.1] == #FFCCF5FF</Expression>
+                <Expression name="p5">[CONFIGURATION.palette.0] == #FF37415B &amp;&amp; [CONFIGURATION.palette.1] == #FFCCDBFF</Expression>
+                <Expression name="p6">[CONFIGURATION.palette.0] == #FF7C4764 &amp;&amp; [CONFIGURATION.palette.1] == #FFFFDEF0</Expression>
+                <Expression name="p7">[CONFIGURATION.palette.0] == #FFBC4D4A &amp;&amp; [CONFIGURATION.palette.1] == #FFFFE6E6</Expression>
+              </Expressions>
+              <Compare expression="p0">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_0" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p1">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_1" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p2">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_2" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p3">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_3" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p4">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_4" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p5">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_5" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p6">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_6" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p7">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_7" />
+                </PartImage>
+              </Compare>
+            </Condition>
+          </Group>
+        </Group>
+        <Group name="normal_right" x="0" y="0" width="480" height="480" renderMode="MASK">
+          <ListConfiguration id="typeface">
+            <ListOption id="solid">
+              <Group name="solid" x="0" y="0" width="480" height="480">
+                <DigitalClock x="96" y="72" width="288" height="160">
+                  <TimeText x="0" y="0" width="288" height="160" format="hh" align="CENTER">
+                    <BitmapFont family="solid_right" size="160" color="#FFFFFFFF" />
+                  </TimeText>
+                </DigitalClock>
+                <DigitalClock x="96" y="248" width="288" height="160">
+                  <TimeText x="0" y="0" width="288" height="160" format="mm" align="CENTER">
+                    <BitmapFont family="solid_right" size="160" color="#FFFFFFFF" />
+                  </TimeText>
+                </DigitalClock>
+              </Group>
+            </ListOption>
+            <ListOption id="stencil">
+              <Group name="stencil" x="0" y="0" width="480" height="480">
+                <DigitalClock x="96" y="72" width="288" height="160">
+                  <TimeText x="0" y="0" width="288" height="160" format="hh" align="CENTER">
+                    <BitmapFont family="stencil_right" size="160" color="#FFFFFFFF" />
+                  </TimeText>
+                </DigitalClock>
+                <DigitalClock x="96" y="248" width="288" height="160">
+                  <TimeText x="0" y="0" width="288" height="160" format="mm" align="CENTER">
+                    <BitmapFont family="stencil_right" size="160" color="#FFFFFFFF" />
+                  </TimeText>
+                </DigitalClock>
+              </Group>
+            </ListOption>
+          </ListConfiguration>
+        </Group>
+      </Group>
+      <Group name="bevel_up" x="0" y="0" width="480" height="480">
+        <Group name="sample_up" x="0" y="-6" width="480" height="480">
+          <Group name="glass_motion" x="0" y="0" width="480" height="480">
+            <Gyro angle="clamp([ACCELEROMETER_ANGLE_X], -65, 65) * 1" x="clamp([ACCELEROMETER_ANGLE_Y], -55, 55) * 0.52" y="clamp([ACCELEROMETER_ANGLE_X], -55, 55) * -0.24" />
+            <Condition>
+              <Expressions>
+                <Expression name="p0">[CONFIGURATION.palette.0] == #FF352DB6 &amp;&amp; [CONFIGURATION.palette.1] == #FFD737D9</Expression>
+                <Expression name="p1">[CONFIGURATION.palette.0] == #FF910015 &amp;&amp; [CONFIGURATION.palette.1] == #FFFF8F9F</Expression>
+                <Expression name="p2">[CONFIGURATION.palette.0] == #FFB21500 &amp;&amp; [CONFIGURATION.palette.1] == #FFFFB9B0</Expression>
+                <Expression name="p3">[CONFIGURATION.palette.0] == #FF536D69 &amp;&amp; [CONFIGURATION.palette.1] == #FFF5FFFD</Expression>
+                <Expression name="p4">[CONFIGURATION.palette.0] == #FF218CA5 &amp;&amp; [CONFIGURATION.palette.1] == #FFCCF5FF</Expression>
+                <Expression name="p5">[CONFIGURATION.palette.0] == #FF37415B &amp;&amp; [CONFIGURATION.palette.1] == #FFCCDBFF</Expression>
+                <Expression name="p6">[CONFIGURATION.palette.0] == #FF7C4764 &amp;&amp; [CONFIGURATION.palette.1] == #FFFFDEF0</Expression>
+                <Expression name="p7">[CONFIGURATION.palette.0] == #FFBC4D4A &amp;&amp; [CONFIGURATION.palette.1] == #FFFFE6E6</Expression>
+              </Expressions>
+              <Compare expression="p0">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_0" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p1">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_1" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p2">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_2" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p3">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_3" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p4">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_4" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p5">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_5" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p6">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_6" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p7">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_7" />
+                </PartImage>
+              </Compare>
+            </Condition>
+          </Group>
+        </Group>
+        <Group name="normal_up" x="0" y="0" width="480" height="480" renderMode="MASK">
+          <ListConfiguration id="typeface">
+            <ListOption id="solid">
+              <Group name="solid" x="0" y="0" width="480" height="480">
+                <DigitalClock x="96" y="72" width="288" height="160">
+                  <TimeText x="0" y="0" width="288" height="160" format="hh" align="CENTER">
+                    <BitmapFont family="solid_up" size="160" color="#FFFFFFFF" />
+                  </TimeText>
+                </DigitalClock>
+                <DigitalClock x="96" y="248" width="288" height="160">
+                  <TimeText x="0" y="0" width="288" height="160" format="mm" align="CENTER">
+                    <BitmapFont family="solid_up" size="160" color="#FFFFFFFF" />
+                  </TimeText>
+                </DigitalClock>
+              </Group>
+            </ListOption>
+            <ListOption id="stencil">
+              <Group name="stencil" x="0" y="0" width="480" height="480">
+                <DigitalClock x="96" y="72" width="288" height="160">
+                  <TimeText x="0" y="0" width="288" height="160" format="hh" align="CENTER">
+                    <BitmapFont family="stencil_up" size="160" color="#FFFFFFFF" />
+                  </TimeText>
+                </DigitalClock>
+                <DigitalClock x="96" y="248" width="288" height="160">
+                  <TimeText x="0" y="0" width="288" height="160" format="mm" align="CENTER">
+                    <BitmapFont family="stencil_up" size="160" color="#FFFFFFFF" />
+                  </TimeText>
+                </DigitalClock>
+              </Group>
+            </ListOption>
+          </ListConfiguration>
+        </Group>
+      </Group>
+      <Group name="bevel_down" x="0" y="0" width="480" height="480">
+        <Group name="sample_down" x="0" y="6" width="480" height="480">
+          <Group name="glass_motion" x="0" y="0" width="480" height="480">
+            <Gyro angle="clamp([ACCELEROMETER_ANGLE_X], -65, 65) * 1" x="clamp([ACCELEROMETER_ANGLE_Y], -55, 55) * 0.52" y="clamp([ACCELEROMETER_ANGLE_X], -55, 55) * -0.24" />
+            <Condition>
+              <Expressions>
+                <Expression name="p0">[CONFIGURATION.palette.0] == #FF352DB6 &amp;&amp; [CONFIGURATION.palette.1] == #FFD737D9</Expression>
+                <Expression name="p1">[CONFIGURATION.palette.0] == #FF910015 &amp;&amp; [CONFIGURATION.palette.1] == #FFFF8F9F</Expression>
+                <Expression name="p2">[CONFIGURATION.palette.0] == #FFB21500 &amp;&amp; [CONFIGURATION.palette.1] == #FFFFB9B0</Expression>
+                <Expression name="p3">[CONFIGURATION.palette.0] == #FF536D69 &amp;&amp; [CONFIGURATION.palette.1] == #FFF5FFFD</Expression>
+                <Expression name="p4">[CONFIGURATION.palette.0] == #FF218CA5 &amp;&amp; [CONFIGURATION.palette.1] == #FFCCF5FF</Expression>
+                <Expression name="p5">[CONFIGURATION.palette.0] == #FF37415B &amp;&amp; [CONFIGURATION.palette.1] == #FFCCDBFF</Expression>
+                <Expression name="p6">[CONFIGURATION.palette.0] == #FF7C4764 &amp;&amp; [CONFIGURATION.palette.1] == #FFFFDEF0</Expression>
+                <Expression name="p7">[CONFIGURATION.palette.0] == #FFBC4D4A &amp;&amp; [CONFIGURATION.palette.1] == #FFFFE6E6</Expression>
+              </Expressions>
+              <Compare expression="p0">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_0" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p1">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_1" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p2">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_2" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p3">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_3" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p4">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_4" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p5">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_5" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p6">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_6" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p7">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="glass_7" />
+                </PartImage>
+              </Compare>
+            </Condition>
+          </Group>
+        </Group>
+        <Group name="normal_down" x="0" y="0" width="480" height="480" renderMode="MASK">
+          <ListConfiguration id="typeface">
+            <ListOption id="solid">
+              <Group name="solid" x="0" y="0" width="480" height="480">
+                <DigitalClock x="96" y="72" width="288" height="160">
+                  <TimeText x="0" y="0" width="288" height="160" format="hh" align="CENTER">
+                    <BitmapFont family="solid_down" size="160" color="#FFFFFFFF" />
+                  </TimeText>
+                </DigitalClock>
+                <DigitalClock x="96" y="248" width="288" height="160">
+                  <TimeText x="0" y="0" width="288" height="160" format="mm" align="CENTER">
+                    <BitmapFont family="solid_down" size="160" color="#FFFFFFFF" />
+                  </TimeText>
+                </DigitalClock>
+              </Group>
+            </ListOption>
+            <ListOption id="stencil">
+              <Group name="stencil" x="0" y="0" width="480" height="480">
+                <DigitalClock x="96" y="72" width="288" height="160">
+                  <TimeText x="0" y="0" width="288" height="160" format="hh" align="CENTER">
+                    <BitmapFont family="stencil_down" size="160" color="#FFFFFFFF" />
+                  </TimeText>
+                </DigitalClock>
+                <DigitalClock x="96" y="248" width="288" height="160">
+                  <TimeText x="0" y="0" width="288" height="160" format="mm" align="CENTER">
+                    <BitmapFont family="stencil_down" size="160" color="#FFFFFFFF" />
                   </TimeText>
                 </DigitalClock>
               </Group>

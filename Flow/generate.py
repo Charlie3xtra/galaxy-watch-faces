@@ -75,8 +75,8 @@ for name in ('red','orange','turquoise','lightBlue','midnightBlue','lavender','v
 axis=np.linspace(-110,590,464)
 y,x=np.meshgrid(axis,axis,indexing='ij')
 def field(colors,lens):
-    xx=x+(15 if lens else 0)
-    yy=y-(20 if lens else 0)
+    xx=x
+    yy=y
     angle=np.arctan2(yy-275,xx-475)
     radius=np.hypot((xx-475)/323,(yy-275)/155)
     phase=radius+0.13*np.sin(2*angle+0.5)+0.075*np.cos(3*angle-0.75)
@@ -84,7 +84,7 @@ def field(colors,lens):
     ramp=np.array(colors,float)
     if lens:
         ramp=np.minimum(255,ramp*1.22+11)
-        phase=phase*.97
+        # Keep the interior on the same color boundary; local refraction is applied at the rim.
     return Image.fromarray(np.uint8(np.stack([np.interp(phase,stops,ramp[:,i]) for i in range(3)],axis=-1)).round())
 
 face=ET.Element('WatchFace',width='480',height='480',clipShape='CIRCLE')
@@ -99,6 +99,7 @@ for key,options in [('typeface',['stencil','solid']),('background',['on','off'])
     for opt in options:add(conf,'ListOption',id=opt,displayName=opt)
 
 W,H=144,160
+directions={'left':(-6,0),'right':(6,0),'up':(0,-6),'down':(0,6)}
 fonts=add(face,'BitmapFonts')
 for style,blob in source_fonts():
     font=ImageFont.truetype(BytesIO(blob),640)
@@ -109,6 +110,7 @@ for style,blob in source_fonts():
         masks.append(layer.crop(layer.getbbox()))
     scale=min((W-6)/max(im.width for im in masks),(H-4)/max(im.height for im in masks))
     bf=add(fonts,'BitmapFont',name=style)
+    bevel_fonts={k:add(fonts,'BitmapFont',name=style+'_'+k) for k in directions}
     for n,m in enumerate(masks):
         m=m.resize((round(m.width*scale),round(m.height*scale)),Image.Resampling.LANCZOS)
         tile=Image.new('L',(W,H))
@@ -122,6 +124,16 @@ for style,blob in source_fonts():
         a=np.asarray(tile,dtype=float)/255
         soft=np.asarray(tile.filter(ImageFilter.GaussianBlur(2)),dtype=float)/255
         dy,dx=np.gradient(soft)
+        broad=np.asarray(tile.filter(ImageFilter.GaussianBlur(5)),dtype=float)/255
+        gy,gx=np.gradient(broad)
+        for key,(ox,oy) in directions.items():
+            weight=a*np.clip((gx*ox+gy*oy)*2.2,0,1)
+            bevel=Image.new('RGBA',(W,H),'white')
+            bevel.putalpha(Image.fromarray(np.uint8(255*weight)))
+            asset=name+'_'+key
+            bevel.save(DRAW/(asset+'.png'))
+            for offset in (48,0x660,0x6f0,0x966):
+                add(bevel_fonts[key],'Character',name=chr(offset+n),resource=asset,width=W,height=H)
         normal=np.clip(5*(dx+dy),-1,1)
         edge=np.clip(7*np.hypot(dx,dy),0,1)
         rgb=np.where(normal[:,:,None]>=0,np.array([255,233,255]),np.array([144,127,255]))
@@ -134,7 +146,7 @@ version(active,False)
 def moving(parent,material):
     g=group(parent,material+'_motion')
     # WFF evaluates the motion input independently of minute ticks.
-    f=1 if material=='field' else 1.35
+    f=1  # Shared orientation, pivot and translation for every optical layer.
     add(g,'Gyro',angle=f'clamp([ACCELEROMETER_ANGLE_X], -65, 65) * {f}',
         x=f'clamp([ACCELEROMETER_ANGLE_Y], -55, 55) * {f*.52}',
         y=f'clamp([ACCELEROMETER_ANGLE_X], -55, 55) * {-f*.24}')
@@ -159,6 +171,18 @@ moving(glass,'glass')
 mask=group(glass,'digits')
 mask.set('renderMode','MASK')
 for style,g in layouts(mask):clocks(g,style,'#FFFFFFFF')
+# Only the narrow, sloping bevel samples a neighboring point of the moving field.
+# Offsets are in screen space and are bounded irrespective of wrist angle.
+for key,(ox,oy) in directions.items():
+    bevel=group(active,'bevel_'+key)
+    light=group(bevel,'sample_'+key)
+    light.set('x',str(ox))
+    light.set('y',str(oy))
+    moving(light,'glass')
+    mask=group(bevel,'normal_'+key)
+    mask.set('renderMode','MASK')
+    for style,g in layouts(mask):
+        clocks(g,style+'_'+key,'#FFFFFFFF')
 for style,g in layouts(active):
     for row,(val,y0) in enumerate([('([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])',72),('[MINUTE]',248)]):
         for col,x0 in enumerate([96,240]):
@@ -182,6 +206,9 @@ glass_image=centered('glass')
 for n,x0,y0 in [(1,96,72),(0,240,72),(0,96,248),(9,240,248)]:
     rect=(x0,y0,x0+W,y0+H)
     preview.paste(glass_image.crop(rect),(x0,y0),Image.open(DRAW/f'stencil_{n}.png').getchannel('A'))
+    for key,(ox,oy) in directions.items():
+        sample=glass_image.crop((x0-ox,y0-oy,x0+W-ox,y0+H-oy))
+        preview.paste(sample,(x0,y0),Image.open(DRAW/f'stencil_{n}_{key}.png').getchannel('A'))
     preview.alpha_composite(Image.open(DRAW/f'stencil_{n}_edge.png'),(x0,y0))
 circle=Image.new('L',(480,480))
 ImageDraw.Draw(circle).ellipse((0,0,479,479),fill=255)

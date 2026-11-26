@@ -78,4 +78,4 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 | :---: | :---: |
 | <a href="Flow/screenshots/active.png"><img src="Flow/screenshots/active.png" width="220" alt="流动亮屏"></a> | <a href="Flow/screenshots/ambient.png"><img src="Flow/screenshots/ambient.png" width="220" alt="流动息屏"></a> |
 
-[下载流动 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/flow-1.0)。使用 24S132 固件内嵌的 ADT Murano I、II 字体。编辑器支持两套字样、背景开关、官方预览取色方案及七组基于固件季节色的配色。Wear OS 通过手腕倾角分别驱动背景和数字内的纹理，两层的位移差与字形边缘的高光近似玻璃折射。Apple Metal 的逐像素折射、流体运动及全部原生色阶尚未复现。Galaxy 息屏采用黑底静态数字。构建现有资源使用 Flow/build.ps1，重新生成需要 Pillow、NumPy、固件提取目录和官方预览图。
+[下载流动 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/flow-1.1)。使用 24S132 固件内嵌的 ADT Murano I、II 字体。编辑器支持两套字样、背景开关、官方预览取色方案及七组基于固件季节色的配色。背景与数字共用手腕倾角和纹理坐标，字形边缘按法线方向取样相邻颜色。Apple Metal 的逐像素折射、流体运动及全部原生色阶尚未复现。亮屏图摄于 1.1，息屏图摄于沿用相同息屏绘制方式的 1.0。Galaxy 息屏采用黑底低亮静态数字，Apple 原版息屏的最终配色仍待核实。构建现有资源使用 Flow/build.ps1，重新生成需要 Pillow、NumPy、固件提取目录和官方预览图。
