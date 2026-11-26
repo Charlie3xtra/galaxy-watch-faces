@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Flow</string>
+  <string name="color">FARVE</string>
+  <string name="typeface">SKRIFTSNIT</string>
+  <string name="background">Background</string>
+  <string name="stencil">I</string>
+  <string name="solid">II</string>
+  <string name="on">TIL</string>
+  <string name="off">FRA</string>
+  <string name="p0">10:09</string>
+  <string name="p1">red</string>
+  <string name="p2">orange</string>
+  <string name="p3">turquoise</string>
+  <string name="p4">lightBlue</string>
+  <string name="p5">midnightBlue</string>
+  <string name="p6">lavender</string>
+  <string name="p7">vintageRose</string>
+</resources>

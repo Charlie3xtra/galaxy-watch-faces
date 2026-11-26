@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">流動</string>
+  <string name="color">顏色</string>
+  <string name="typeface">字樣</string>
+  <string name="background">背景</string>
+  <string name="stencil">I</string>
+  <string name="solid">II</string>
+  <string name="on">開啟</string>
+  <string name="off">關閉</string>
+  <string name="p0">10:09</string>
+  <string name="p1">red</string>
+  <string name="p2">orange</string>
+  <string name="p3">turquoise</string>
+  <string name="p4">lightBlue</string>
+  <string name="p5">midnightBlue</string>
+  <string name="p6">lavender</string>
+  <string name="p7">vintageRose</string>
+</resources>

@@ -71,3 +71,11 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 | <a href="NikeGlobe/screenshots/active.png"><img src="NikeGlobe/screenshots/active.png" width="220" alt="Nike 地球 · Nike Globe · 亮屏"></a> | <a href="NikeGlobe/screenshots/ambient.png"><img src="NikeGlobe/screenshots/ambient.png" width="220" alt="Nike 地球 · Nike Globe · 息屏"></a> |
 
 [下载 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/nike-globe-1.1)。WFF 4 单 APK。亮屏跟随当前秒数显示固件中的 Globe_00 至 Globe_59，息屏切换到独立 Globe 网格。上下两行使用内嵌 Vivaldi 字体的小时和分钟连字。提供 23 种固件配色与一个参考官方预览图制作的黑底珊瑚色方案。1.1 移除四角组件，网格、时间和标志整体放大 20%。中央标志为装饰。APK 可直接从 NikeGlobe/build.ps1 构建，重新生成资源需要 Pillow、fontTools 和 24S132 提取目录。
+
+## 流动 · Flow
+
+| 亮屏 | 息屏 |
+| :---: | :---: |
+| <a href="Flow/screenshots/active.png"><img src="Flow/screenshots/active.png" width="220" alt="流动亮屏"></a> | <a href="Flow/screenshots/ambient.png"><img src="Flow/screenshots/ambient.png" width="220" alt="流动息屏"></a> |
+
+[下载流动 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/flow-1.0)。使用 24S132 固件内嵌的 ADT Murano I、II 字体。编辑器支持两套字样、背景开关、官方预览取色方案及七组基于固件季节色的配色。Wear OS 通过手腕倾角分别驱动背景和数字内的纹理，两层的位移差与字形边缘的高光近似玻璃折射。Apple Metal 的逐像素折射、流体运动及全部原生色阶尚未复现。Galaxy 息屏采用黑底静态数字。构建现有资源使用 Flow/build.ps1，重新生成需要 Pillow、NumPy、固件提取目录和官方预览图。

@@ -1,0 +1,688 @@
+<?xml version='1.0' encoding='utf-8'?>
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <UserConfigurations>
+    <ColorConfiguration id="palette" displayName="color" defaultValue="0">
+      <ColorOption id="0" displayName="p0" colors="#FF352DB6 #FFD737D9 #FFAD87CD" />
+      <ColorOption id="1" displayName="p1" colors="#FF910015 #FFFF8F9F #FFFFAEBA" />
+      <ColorOption id="2" displayName="p2" colors="#FFB21500 #FFFFB9B0 #FFFFCDC6" />
+      <ColorOption id="3" displayName="p3" colors="#FF536D69 #FFF5FFFD #FFF8FFFE" />
+      <ColorOption id="4" displayName="p4" colors="#FF218CA5 #FFCCF5FF #FFDAF8FF" />
+      <ColorOption id="5" displayName="p5" colors="#FF37415B #FFCCDBFF #FFDAE5FF" />
+      <ColorOption id="6" displayName="p6" colors="#FF7C4764 #FFFFDEF0 #FFFFE7F4" />
+      <ColorOption id="7" displayName="p7" colors="#FFBC4D4A #FFFFE6E6 #FFFFEDED" />
+    </ColorConfiguration>
+    <ListConfiguration id="typeface" displayName="typeface" defaultValue="stencil">
+      <ListOption id="stencil" displayName="stencil" />
+      <ListOption id="solid" displayName="solid" />
+    </ListConfiguration>
+    <ListConfiguration id="background" displayName="background" defaultValue="on">
+      <ListOption id="on" displayName="on" />
+      <ListOption id="off" displayName="off" />
+    </ListConfiguration>
+  </UserConfigurations>
+  <BitmapFonts>
+    <BitmapFont name="solid">
+      <Character name="0" resource="solid_0" width="144" height="160" />
+      <Character name="٠" resource="solid_0" width="144" height="160" />
+      <Character name="۰" resource="solid_0" width="144" height="160" />
+      <Character name="०" resource="solid_0" width="144" height="160" />
+      <Character name="1" resource="solid_1" width="144" height="160" />
+      <Character name="١" resource="solid_1" width="144" height="160" />
+      <Character name="۱" resource="solid_1" width="144" height="160" />
+      <Character name="१" resource="solid_1" width="144" height="160" />
+      <Character name="2" resource="solid_2" width="144" height="160" />
+      <Character name="٢" resource="solid_2" width="144" height="160" />
+      <Character name="۲" resource="solid_2" width="144" height="160" />
+      <Character name="२" resource="solid_2" width="144" height="160" />
+      <Character name="3" resource="solid_3" width="144" height="160" />
+      <Character name="٣" resource="solid_3" width="144" height="160" />
+      <Character name="۳" resource="solid_3" width="144" height="160" />
+      <Character name="३" resource="solid_3" width="144" height="160" />
+      <Character name="4" resource="solid_4" width="144" height="160" />
+      <Character name="٤" resource="solid_4" width="144" height="160" />
+      <Character name="۴" resource="solid_4" width="144" height="160" />
+      <Character name="४" resource="solid_4" width="144" height="160" />
+      <Character name="5" resource="solid_5" width="144" height="160" />
+      <Character name="٥" resource="solid_5" width="144" height="160" />
+      <Character name="۵" resource="solid_5" width="144" height="160" />
+      <Character name="५" resource="solid_5" width="144" height="160" />
+      <Character name="6" resource="solid_6" width="144" height="160" />
+      <Character name="٦" resource="solid_6" width="144" height="160" />
+      <Character name="۶" resource="solid_6" width="144" height="160" />
+      <Character name="६" resource="solid_6" width="144" height="160" />
+      <Character name="7" resource="solid_7" width="144" height="160" />
+      <Character name="٧" resource="solid_7" width="144" height="160" />
+      <Character name="۷" resource="solid_7" width="144" height="160" />
+      <Character name="७" resource="solid_7" width="144" height="160" />
+      <Character name="8" resource="solid_8" width="144" height="160" />
+      <Character name="٨" resource="solid_8" width="144" height="160" />
+      <Character name="۸" resource="solid_8" width="144" height="160" />
+      <Character name="८" resource="solid_8" width="144" height="160" />
+      <Character name="9" resource="solid_9" width="144" height="160" />
+      <Character name="٩" resource="solid_9" width="144" height="160" />
+      <Character name="۹" resource="solid_9" width="144" height="160" />
+      <Character name="९" resource="solid_9" width="144" height="160" />
+    </BitmapFont>
+    <BitmapFont name="stencil">
+      <Character name="0" resource="stencil_0" width="144" height="160" />
+      <Character name="٠" resource="stencil_0" width="144" height="160" />
+      <Character name="۰" resource="stencil_0" width="144" height="160" />
+      <Character name="०" resource="stencil_0" width="144" height="160" />
+      <Character name="1" resource="stencil_1" width="144" height="160" />
+      <Character name="١" resource="stencil_1" width="144" height="160" />
+      <Character name="۱" resource="stencil_1" width="144" height="160" />
+      <Character name="१" resource="stencil_1" width="144" height="160" />
+      <Character name="2" resource="stencil_2" width="144" height="160" />
+      <Character name="٢" resource="stencil_2" width="144" height="160" />
+      <Character name="۲" resource="stencil_2" width="144" height="160" />
+      <Character name="२" resource="stencil_2" width="144" height="160" />
+      <Character name="3" resource="stencil_3" width="144" height="160" />
+      <Character name="٣" resource="stencil_3" width="144" height="160" />
+      <Character name="۳" resource="stencil_3" width="144" height="160" />
+      <Character name="३" resource="stencil_3" width="144" height="160" />
+      <Character name="4" resource="stencil_4" width="144" height="160" />
+      <Character name="٤" resource="stencil_4" width="144" height="160" />
+      <Character name="۴" resource="stencil_4" width="144" height="160" />
+      <Character name="४" resource="stencil_4" width="144" height="160" />
+      <Character name="5" resource="stencil_5" width="144" height="160" />
+      <Character name="٥" resource="stencil_5" width="144" height="160" />
+      <Character name="۵" resource="stencil_5" width="144" height="160" />
+      <Character name="५" resource="stencil_5" width="144" height="160" />
+      <Character name="6" resource="stencil_6" width="144" height="160" />
+      <Character name="٦" resource="stencil_6" width="144" height="160" />
+      <Character name="۶" resource="stencil_6" width="144" height="160" />
+      <Character name="६" resource="stencil_6" width="144" height="160" />
+      <Character name="7" resource="stencil_7" width="144" height="160" />
+      <Character name="٧" resource="stencil_7" width="144" height="160" />
+      <Character name="۷" resource="stencil_7" width="144" height="160" />
+      <Character name="७" resource="stencil_7" width="144" height="160" />
+      <Character name="8" resource="stencil_8" width="144" height="160" />
+      <Character name="٨" resource="stencil_8" width="144" height="160" />
+      <Character name="۸" resource="stencil_8" width="144" height="160" />
+      <Character name="८" resource="stencil_8" width="144" height="160" />
+      <Character name="9" resource="stencil_9" width="144" height="160" />
+      <Character name="٩" resource="stencil_9" width="144" height="160" />
+      <Character name="۹" resource="stencil_9" width="144" height="160" />
+      <Character name="९" resource="stencil_9" width="144" height="160" />
+    </BitmapFont>
+  </BitmapFonts>
+  <Scene backgroundColor="#000000">
+    <Group name="interactive" x="0" y="0" width="480" height="480" alpha="255">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <ListConfiguration id="background">
+        <ListOption id="on">
+          <Group name="field_motion" x="0" y="0" width="480" height="480">
+            <Gyro angle="clamp([ACCELEROMETER_ANGLE_X], -65, 65) * 1" x="clamp([ACCELEROMETER_ANGLE_Y], -55, 55) * 0.52" y="clamp([ACCELEROMETER_ANGLE_X], -55, 55) * -0.24" />
+            <Condition>
+              <Expressions>
+                <Expression name="p0">[CONFIGURATION.palette.0] == #FF352DB6 &amp;&amp; [CONFIGURATION.palette.1] == #FFD737D9</Expression>
+                <Expression name="p1">[CONFIGURATION.palette.0] == #FF910015 &amp;&amp; [CONFIGURATION.palette.1] == #FFFF8F9F</Expression>
+                <Expression name="p2">[CONFIGURATION.palette.0] == #FFB21500 &amp;&amp; [CONFIGURATION.palette.1] == #FFFFB9B0</Expression>
+                <Expression name="p3">[CONFIGURATION.palette.0] == #FF536D69 &amp;&amp; [CONFIGURATION.palette.1] == #FFF5FFFD</Expression>
+                <Expression name="p4">[CONFIGURATION.palette.0] == #FF218CA5 &amp;&amp; [CONFIGURATION.palette.1] == #FFCCF5FF</Expression>
+                <Expression name="p5">[CONFIGURATION.palette.0] == #FF37415B &amp;&amp; [CONFIGURATION.palette.1] == #FFCCDBFF</Expression>
+                <Expression name="p6">[CONFIGURATION.palette.0] == #FF7C4764 &amp;&amp; [CONFIGURATION.palette.1] == #FFFFDEF0</Expression>
+                <Expression name="p7">[CONFIGURATION.palette.0] == #FFBC4D4A &amp;&amp; [CONFIGURATION.palette.1] == #FFFFE6E6</Expression>
+              </Expressions>
+              <Compare expression="p0">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="field_0" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p1">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="field_1" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p2">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="field_2" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p3">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="field_3" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p4">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="field_4" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p5">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="field_5" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p6">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="field_6" />
+                </PartImage>
+              </Compare>
+              <Compare expression="p7">
+                <PartImage x="-110" y="-110" width="700" height="700">
+                  <Image resource="field_7" />
+                </PartImage>
+              </Compare>
+            </Condition>
+          </Group>
+        </ListOption>
+        <ListOption id="off">
+          <Group name="black" x="0" y="0" width="480" height="480" />
+        </ListOption>
+      </ListConfiguration>
+      <Group name="refracted_color" x="0" y="0" width="480" height="480">
+        <Group name="glass_motion" x="0" y="0" width="480" height="480">
+          <Gyro angle="clamp([ACCELEROMETER_ANGLE_X], -65, 65) * 1.35" x="clamp([ACCELEROMETER_ANGLE_Y], -55, 55) * 0.7020000000000001" y="clamp([ACCELEROMETER_ANGLE_X], -55, 55) * -0.324" />
+          <Condition>
+            <Expressions>
+              <Expression name="p0">[CONFIGURATION.palette.0] == #FF352DB6 &amp;&amp; [CONFIGURATION.palette.1] == #FFD737D9</Expression>
+              <Expression name="p1">[CONFIGURATION.palette.0] == #FF910015 &amp;&amp; [CONFIGURATION.palette.1] == #FFFF8F9F</Expression>
+              <Expression name="p2">[CONFIGURATION.palette.0] == #FFB21500 &amp;&amp; [CONFIGURATION.palette.1] == #FFFFB9B0</Expression>
+              <Expression name="p3">[CONFIGURATION.palette.0] == #FF536D69 &amp;&amp; [CONFIGURATION.palette.1] == #FFF5FFFD</Expression>
+              <Expression name="p4">[CONFIGURATION.palette.0] == #FF218CA5 &amp;&amp; [CONFIGURATION.palette.1] == #FFCCF5FF</Expression>
+              <Expression name="p5">[CONFIGURATION.palette.0] == #FF37415B &amp;&amp; [CONFIGURATION.palette.1] == #FFCCDBFF</Expression>
+              <Expression name="p6">[CONFIGURATION.palette.0] == #FF7C4764 &amp;&amp; [CONFIGURATION.palette.1] == #FFFFDEF0</Expression>
+              <Expression name="p7">[CONFIGURATION.palette.0] == #FFBC4D4A &amp;&amp; [CONFIGURATION.palette.1] == #FFFFE6E6</Expression>
+            </Expressions>
+            <Compare expression="p0">
+              <PartImage x="-110" y="-110" width="700" height="700">
+                <Image resource="glass_0" />
+              </PartImage>
+            </Compare>
+            <Compare expression="p1">
+              <PartImage x="-110" y="-110" width="700" height="700">
+                <Image resource="glass_1" />
+              </PartImage>
+            </Compare>
+            <Compare expression="p2">
+              <PartImage x="-110" y="-110" width="700" height="700">
+                <Image resource="glass_2" />
+              </PartImage>
+            </Compare>
+            <Compare expression="p3">
+              <PartImage x="-110" y="-110" width="700" height="700">
+                <Image resource="glass_3" />
+              </PartImage>
+            </Compare>
+            <Compare expression="p4">
+              <PartImage x="-110" y="-110" width="700" height="700">
+                <Image resource="glass_4" />
+              </PartImage>
+            </Compare>
+            <Compare expression="p5">
+              <PartImage x="-110" y="-110" width="700" height="700">
+                <Image resource="glass_5" />
+              </PartImage>
+            </Compare>
+            <Compare expression="p6">
+              <PartImage x="-110" y="-110" width="700" height="700">
+                <Image resource="glass_6" />
+              </PartImage>
+            </Compare>
+            <Compare expression="p7">
+              <PartImage x="-110" y="-110" width="700" height="700">
+                <Image resource="glass_7" />
+              </PartImage>
+            </Compare>
+          </Condition>
+        </Group>
+        <Group name="digits" x="0" y="0" width="480" height="480" renderMode="MASK">
+          <ListConfiguration id="typeface">
+            <ListOption id="solid">
+              <Group name="solid" x="0" y="0" width="480" height="480">
+                <DigitalClock x="96" y="72" width="288" height="160">
+                  <TimeText x="0" y="0" width="288" height="160" format="hh" align="CENTER">
+                    <BitmapFont family="solid" size="160" color="#FFFFFFFF" />
+                  </TimeText>
+                </DigitalClock>
+                <DigitalClock x="96" y="248" width="288" height="160">
+                  <TimeText x="0" y="0" width="288" height="160" format="mm" align="CENTER">
+                    <BitmapFont family="solid" size="160" color="#FFFFFFFF" />
+                  </TimeText>
+                </DigitalClock>
+              </Group>
+            </ListOption>
+            <ListOption id="stencil">
+              <Group name="stencil" x="0" y="0" width="480" height="480">
+                <DigitalClock x="96" y="72" width="288" height="160">
+                  <TimeText x="0" y="0" width="288" height="160" format="hh" align="CENTER">
+                    <BitmapFont family="stencil" size="160" color="#FFFFFFFF" />
+                  </TimeText>
+                </DigitalClock>
+                <DigitalClock x="96" y="248" width="288" height="160">
+                  <TimeText x="0" y="0" width="288" height="160" format="mm" align="CENTER">
+                    <BitmapFont family="stencil" size="160" color="#FFFFFFFF" />
+                  </TimeText>
+                </DigitalClock>
+              </Group>
+            </ListOption>
+          </ListConfiguration>
+        </Group>
+      </Group>
+      <ListConfiguration id="typeface">
+        <ListOption id="solid">
+          <Group name="solid" x="0" y="0" width="480" height="480">
+            <Condition>
+              <Expressions>
+                <Expression name="n0">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 0</Expression>
+                <Expression name="n1">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 1</Expression>
+                <Expression name="n2">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 2</Expression>
+              </Expressions>
+              <Compare expression="n0">
+                <PartImage x="96" y="72" width="144" height="160">
+                  <Image resource="solid_0_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n1">
+                <PartImage x="96" y="72" width="144" height="160">
+                  <Image resource="solid_1_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n2">
+                <PartImage x="96" y="72" width="144" height="160">
+                  <Image resource="solid_2_edge" />
+                </PartImage>
+              </Compare>
+            </Condition>
+            <Condition>
+              <Expressions>
+                <Expression name="n0">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 0</Expression>
+                <Expression name="n1">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 1</Expression>
+                <Expression name="n2">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 2</Expression>
+                <Expression name="n3">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 3</Expression>
+                <Expression name="n4">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 4</Expression>
+                <Expression name="n5">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 5</Expression>
+                <Expression name="n6">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 6</Expression>
+                <Expression name="n7">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 7</Expression>
+                <Expression name="n8">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 8</Expression>
+                <Expression name="n9">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 9</Expression>
+              </Expressions>
+              <Compare expression="n0">
+                <PartImage x="240" y="72" width="144" height="160">
+                  <Image resource="solid_0_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n1">
+                <PartImage x="240" y="72" width="144" height="160">
+                  <Image resource="solid_1_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n2">
+                <PartImage x="240" y="72" width="144" height="160">
+                  <Image resource="solid_2_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n3">
+                <PartImage x="240" y="72" width="144" height="160">
+                  <Image resource="solid_3_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n4">
+                <PartImage x="240" y="72" width="144" height="160">
+                  <Image resource="solid_4_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n5">
+                <PartImage x="240" y="72" width="144" height="160">
+                  <Image resource="solid_5_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n6">
+                <PartImage x="240" y="72" width="144" height="160">
+                  <Image resource="solid_6_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n7">
+                <PartImage x="240" y="72" width="144" height="160">
+                  <Image resource="solid_7_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n8">
+                <PartImage x="240" y="72" width="144" height="160">
+                  <Image resource="solid_8_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n9">
+                <PartImage x="240" y="72" width="144" height="160">
+                  <Image resource="solid_9_edge" />
+                </PartImage>
+              </Compare>
+            </Condition>
+            <Condition>
+              <Expressions>
+                <Expression name="n0">floor([MINUTE]/10) == 0</Expression>
+                <Expression name="n1">floor([MINUTE]/10) == 1</Expression>
+                <Expression name="n2">floor([MINUTE]/10) == 2</Expression>
+                <Expression name="n3">floor([MINUTE]/10) == 3</Expression>
+                <Expression name="n4">floor([MINUTE]/10) == 4</Expression>
+                <Expression name="n5">floor([MINUTE]/10) == 5</Expression>
+              </Expressions>
+              <Compare expression="n0">
+                <PartImage x="96" y="248" width="144" height="160">
+                  <Image resource="solid_0_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n1">
+                <PartImage x="96" y="248" width="144" height="160">
+                  <Image resource="solid_1_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n2">
+                <PartImage x="96" y="248" width="144" height="160">
+                  <Image resource="solid_2_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n3">
+                <PartImage x="96" y="248" width="144" height="160">
+                  <Image resource="solid_3_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n4">
+                <PartImage x="96" y="248" width="144" height="160">
+                  <Image resource="solid_4_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n5">
+                <PartImage x="96" y="248" width="144" height="160">
+                  <Image resource="solid_5_edge" />
+                </PartImage>
+              </Compare>
+            </Condition>
+            <Condition>
+              <Expressions>
+                <Expression name="n0">([MINUTE]%10) == 0</Expression>
+                <Expression name="n1">([MINUTE]%10) == 1</Expression>
+                <Expression name="n2">([MINUTE]%10) == 2</Expression>
+                <Expression name="n3">([MINUTE]%10) == 3</Expression>
+                <Expression name="n4">([MINUTE]%10) == 4</Expression>
+                <Expression name="n5">([MINUTE]%10) == 5</Expression>
+                <Expression name="n6">([MINUTE]%10) == 6</Expression>
+                <Expression name="n7">([MINUTE]%10) == 7</Expression>
+                <Expression name="n8">([MINUTE]%10) == 8</Expression>
+                <Expression name="n9">([MINUTE]%10) == 9</Expression>
+              </Expressions>
+              <Compare expression="n0">
+                <PartImage x="240" y="248" width="144" height="160">
+                  <Image resource="solid_0_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n1">
+                <PartImage x="240" y="248" width="144" height="160">
+                  <Image resource="solid_1_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n2">
+                <PartImage x="240" y="248" width="144" height="160">
+                  <Image resource="solid_2_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n3">
+                <PartImage x="240" y="248" width="144" height="160">
+                  <Image resource="solid_3_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n4">
+                <PartImage x="240" y="248" width="144" height="160">
+                  <Image resource="solid_4_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n5">
+                <PartImage x="240" y="248" width="144" height="160">
+                  <Image resource="solid_5_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n6">
+                <PartImage x="240" y="248" width="144" height="160">
+                  <Image resource="solid_6_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n7">
+                <PartImage x="240" y="248" width="144" height="160">
+                  <Image resource="solid_7_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n8">
+                <PartImage x="240" y="248" width="144" height="160">
+                  <Image resource="solid_8_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n9">
+                <PartImage x="240" y="248" width="144" height="160">
+                  <Image resource="solid_9_edge" />
+                </PartImage>
+              </Compare>
+            </Condition>
+          </Group>
+        </ListOption>
+        <ListOption id="stencil">
+          <Group name="stencil" x="0" y="0" width="480" height="480">
+            <Condition>
+              <Expressions>
+                <Expression name="n0">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 0</Expression>
+                <Expression name="n1">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 1</Expression>
+                <Expression name="n2">floor(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])/10) == 2</Expression>
+              </Expressions>
+              <Compare expression="n0">
+                <PartImage x="96" y="72" width="144" height="160">
+                  <Image resource="stencil_0_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n1">
+                <PartImage x="96" y="72" width="144" height="160">
+                  <Image resource="stencil_1_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n2">
+                <PartImage x="96" y="72" width="144" height="160">
+                  <Image resource="stencil_2_edge" />
+                </PartImage>
+              </Compare>
+            </Condition>
+            <Condition>
+              <Expressions>
+                <Expression name="n0">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 0</Expression>
+                <Expression name="n1">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 1</Expression>
+                <Expression name="n2">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 2</Expression>
+                <Expression name="n3">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 3</Expression>
+                <Expression name="n4">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 4</Expression>
+                <Expression name="n5">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 5</Expression>
+                <Expression name="n6">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 6</Expression>
+                <Expression name="n7">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 7</Expression>
+                <Expression name="n8">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 8</Expression>
+                <Expression name="n9">(([IS_24_HOUR_MODE] ? [HOUR_0_23] : [HOUR_1_12])%10) == 9</Expression>
+              </Expressions>
+              <Compare expression="n0">
+                <PartImage x="240" y="72" width="144" height="160">
+                  <Image resource="stencil_0_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n1">
+                <PartImage x="240" y="72" width="144" height="160">
+                  <Image resource="stencil_1_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n2">
+                <PartImage x="240" y="72" width="144" height="160">
+                  <Image resource="stencil_2_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n3">
+                <PartImage x="240" y="72" width="144" height="160">
+                  <Image resource="stencil_3_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n4">
+                <PartImage x="240" y="72" width="144" height="160">
+                  <Image resource="stencil_4_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n5">
+                <PartImage x="240" y="72" width="144" height="160">
+                  <Image resource="stencil_5_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n6">
+                <PartImage x="240" y="72" width="144" height="160">
+                  <Image resource="stencil_6_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n7">
+                <PartImage x="240" y="72" width="144" height="160">
+                  <Image resource="stencil_7_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n8">
+                <PartImage x="240" y="72" width="144" height="160">
+                  <Image resource="stencil_8_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n9">
+                <PartImage x="240" y="72" width="144" height="160">
+                  <Image resource="stencil_9_edge" />
+                </PartImage>
+              </Compare>
+            </Condition>
+            <Condition>
+              <Expressions>
+                <Expression name="n0">floor([MINUTE]/10) == 0</Expression>
+                <Expression name="n1">floor([MINUTE]/10) == 1</Expression>
+                <Expression name="n2">floor([MINUTE]/10) == 2</Expression>
+                <Expression name="n3">floor([MINUTE]/10) == 3</Expression>
+                <Expression name="n4">floor([MINUTE]/10) == 4</Expression>
+                <Expression name="n5">floor([MINUTE]/10) == 5</Expression>
+              </Expressions>
+              <Compare expression="n0">
+                <PartImage x="96" y="248" width="144" height="160">
+                  <Image resource="stencil_0_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n1">
+                <PartImage x="96" y="248" width="144" height="160">
+                  <Image resource="stencil_1_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n2">
+                <PartImage x="96" y="248" width="144" height="160">
+                  <Image resource="stencil_2_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n3">
+                <PartImage x="96" y="248" width="144" height="160">
+                  <Image resource="stencil_3_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n4">
+                <PartImage x="96" y="248" width="144" height="160">
+                  <Image resource="stencil_4_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n5">
+                <PartImage x="96" y="248" width="144" height="160">
+                  <Image resource="stencil_5_edge" />
+                </PartImage>
+              </Compare>
+            </Condition>
+            <Condition>
+              <Expressions>
+                <Expression name="n0">([MINUTE]%10) == 0</Expression>
+                <Expression name="n1">([MINUTE]%10) == 1</Expression>
+                <Expression name="n2">([MINUTE]%10) == 2</Expression>
+                <Expression name="n3">([MINUTE]%10) == 3</Expression>
+                <Expression name="n4">([MINUTE]%10) == 4</Expression>
+                <Expression name="n5">([MINUTE]%10) == 5</Expression>
+                <Expression name="n6">([MINUTE]%10) == 6</Expression>
+                <Expression name="n7">([MINUTE]%10) == 7</Expression>
+                <Expression name="n8">([MINUTE]%10) == 8</Expression>
+                <Expression name="n9">([MINUTE]%10) == 9</Expression>
+              </Expressions>
+              <Compare expression="n0">
+                <PartImage x="240" y="248" width="144" height="160">
+                  <Image resource="stencil_0_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n1">
+                <PartImage x="240" y="248" width="144" height="160">
+                  <Image resource="stencil_1_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n2">
+                <PartImage x="240" y="248" width="144" height="160">
+                  <Image resource="stencil_2_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n3">
+                <PartImage x="240" y="248" width="144" height="160">
+                  <Image resource="stencil_3_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n4">
+                <PartImage x="240" y="248" width="144" height="160">
+                  <Image resource="stencil_4_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n5">
+                <PartImage x="240" y="248" width="144" height="160">
+                  <Image resource="stencil_5_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n6">
+                <PartImage x="240" y="248" width="144" height="160">
+                  <Image resource="stencil_6_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n7">
+                <PartImage x="240" y="248" width="144" height="160">
+                  <Image resource="stencil_7_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n8">
+                <PartImage x="240" y="248" width="144" height="160">
+                  <Image resource="stencil_8_edge" />
+                </PartImage>
+              </Compare>
+              <Compare expression="n9">
+                <PartImage x="240" y="248" width="144" height="160">
+                  <Image resource="stencil_9_edge" />
+                </PartImage>
+              </Compare>
+            </Condition>
+          </Group>
+        </ListOption>
+      </ListConfiguration>
+    </Group>
+    <Group name="always_on" x="0" y="0" width="480" height="480" alpha="0">
+      <Variant mode="AMBIENT" target="alpha" value="255" />
+      <ListConfiguration id="typeface">
+        <ListOption id="solid">
+          <Group name="solid" x="0" y="0" width="480" height="480" alpha="85">
+            <DigitalClock x="96" y="72" width="288" height="160">
+              <TimeText x="0" y="0" width="288" height="160" format="hh" align="CENTER">
+                <BitmapFont family="solid" size="160" color="[CONFIGURATION.palette.2]" />
+              </TimeText>
+            </DigitalClock>
+            <DigitalClock x="96" y="248" width="288" height="160">
+              <TimeText x="0" y="0" width="288" height="160" format="mm" align="CENTER">
+                <BitmapFont family="solid" size="160" color="[CONFIGURATION.palette.2]" />
+              </TimeText>
+            </DigitalClock>
+          </Group>
+        </ListOption>
+        <ListOption id="stencil">
+          <Group name="stencil" x="0" y="0" width="480" height="480" alpha="85">
+            <DigitalClock x="96" y="72" width="288" height="160">
+              <TimeText x="0" y="0" width="288" height="160" format="hh" align="CENTER">
+                <BitmapFont family="stencil" size="160" color="[CONFIGURATION.palette.2]" />
+              </TimeText>
+            </DigitalClock>
+            <DigitalClock x="96" y="248" width="288" height="160">
+              <TimeText x="0" y="0" width="288" height="160" format="mm" align="CENTER">
+                <BitmapFont family="stencil" size="160" color="[CONFIGURATION.palette.2]" />
+              </TimeText>
+            </DigitalClock>
+          </Group>
+        </ListOption>
+      </ListConfiguration>
+    </Group>
+  </Scene>
+</WatchFace>
