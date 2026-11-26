@@ -17,10 +17,9 @@ public final class RaceProvider extends ComplicationProviderService {
             mode=left>=0?"paused":"overtime";value=(float)Math.ceil(Math.abs(left)/1000.0);
             min=-r.minutes()*60;max=Math.max(90000,value);
         }
-        PendingIntent tap=PendingIntent.getActivity(this,0,new Intent(this,RaceControls.class),PendingIntent.FLAG_IMMUTABLE|PendingIntent.FLAG_UPDATE_CURRENT);
         mgr.updateComplicationData(id,new ComplicationData.Builder(type)
             .setMinValue(min).setMaxValue(max).setValue(value)
             .setShortText(ComplicationText.plainText(mode)).setContentDescription(ComplicationText.plainText(getString(R.string.face_name)))
-            .setTapAction(tap).build());
+            .build());
     }
 }

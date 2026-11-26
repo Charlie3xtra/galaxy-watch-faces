@@ -1,5 +1,5 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="local.hermes.maritime" android:versionCode="1" android:versionName="1.0">
- <queries><intent><action android:name="com.google.wear.ACTION_PUSH_WATCH_FACES"/></intent><package android:name="com.google.android.wearable.app"/></queries>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="local.hermes.maritime" android:versionCode="2" android:versionName="1.1">
+ <queries><package android:name="com.samsung.android.watch.timer"/><intent><action android:name="com.google.wear.ACTION_PUSH_WATCH_FACES"/></intent><package android:name="com.google.android.wearable.app"/></queries>
  <uses-feature android:name="android.hardware.type.watch" android:required="true"/>
  <uses-permission android:name="com.google.wear.permission.PUSH_WATCH_FACES"/>
  <uses-permission android:name="com.google.wear.permission.SET_PUSHED_WATCH_FACE_AS_ACTIVE"/>
@@ -10,7 +10,7 @@
 
    <intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.INFO"/><category android:name="android.intent.category.DEFAULT"/></intent-filter>
   </activity>
-  <activity android:name=".RaceControls" android:theme="@android:style/Theme.Material.NoActionBar" android:exported="false"/>
+  <service android:name=".TimerListener" android:exported="false" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"><intent-filter><action android:name="android.service.notification.NotificationListenerService"/></intent-filter></service>
   <service android:name="local.hermes.maritime.RaceProvider" android:exported="true" android:permission="com.google.android.wearable.permission.BIND_COMPLICATION_PROVIDER">
    <intent-filter><action android:name="android.support.wearable.complications.ACTION_COMPLICATION_UPDATE_REQUEST"/></intent-filter>
    <meta-data android:name="android.support.wearable.complications.SUPPORTED_TYPES" android:value="RANGED_VALUE"/>

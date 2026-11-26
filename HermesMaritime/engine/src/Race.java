@@ -9,7 +9,7 @@ import android.app.PendingIntent;
 final class Race {
     final Context ctx;
     final SharedPreferences p;
-    Race(Context ctx){this.ctx=ctx; p=ctx.getSharedPreferences("race",0);}
+    Race(Context ctx){this.ctx=ctx; p=ctx.getSharedPreferences("system_timer",0);}
     String mode(){return p.getString("mode","idle");}
     int minutes(){return p.getInt("minutes",5);}
     long remaining(){
@@ -18,19 +18,20 @@ final class Race {
             return p.getLong("elapsed",0)-SystemClock.elapsedRealtime();
         return p.getLong("wall",0)-System.currentTimeMillis();
     }
-    void run(long left,int minutes){
-        save(p.edit().putString("mode","running").putInt("minutes",minutes)
+    void run(long left){
+        if(mode().equals("running") && Math.abs(left-remaining())<500)return;
+        save(p.edit().putString("mode","running")
             .putLong("elapsed",SystemClock.elapsedRealtime()+left).putLong("wall",System.currentTimeMillis()+left)
             .putInt("boot",Settings.Global.getInt(ctx.getContentResolver(),"boot_count",-2)));
     }
-    void pause(){save(p.edit().putLong("paused",remaining()).putString("mode","paused"));}
-    void reset(){save(p.edit().putString("mode","idle").remove("paused"));}
+    void pause(long left){if(mode().equals("paused") && remaining()==left)return;save(p.edit().putLong("paused",left).putString("mode","paused"));}
+    void reset(){if(mode().equals("idle"))return;save(p.edit().putString("mode","idle").remove("paused"));}
     private void save(SharedPreferences.Editor e){
         e.apply();
         String prefix="android.support.wearable.complications.";
         Intent update=new Intent(prefix+"ACTION_REQUEST_UPDATE_ALL").setPackage("com.google.android.wearable.app");
         update.putExtra(prefix+"EXTRA_PROVIDER_COMPONENT",new ComponentName(ctx,RaceProvider.class));
-        update.putExtra(prefix+"EXTRA_PENDING_INTENT", PendingIntent.getActivity(ctx,1,new Intent(ctx,RaceControls.class),PendingIntent.FLAG_IMMUTABLE));
+        update.putExtra(prefix+"EXTRA_PENDING_INTENT", PendingIntent.getActivity(ctx,1,new Intent(ctx,Setup.class),PendingIntent.FLAG_IMMUTABLE));
         ctx.sendBroadcast(update);
     }
 }

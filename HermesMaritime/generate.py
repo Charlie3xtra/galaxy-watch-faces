@@ -23,6 +23,19 @@ def color(name):
 def bitmap(mask,key):
     i=Image.new('RGBA',mask.size,'white');i.putalpha(mask);i.save(draw/(key+'.png'))
 logo=Image.open(next(assets.glob('hermes-logo*'))).convert('RGBA').getchannel('A')
+# Inverse polar projection keeps both edges of the firmware lettering concentric.
+def curved_wordmark(mask):
+    scale=5; width,height=28,92; out=Image.new('L',(width*scale,height*scale))
+    pixels=out.load(); src=mask.load()
+    for j in range(out.height):
+        y=(j+.5)/scale-height/2
+        for i in range(out.width):
+            x=(i+.5)/scale-240
+            u=(222-math.hypot(x,y))/9.0+.5
+            v=math.atan2(y,-x)*222/86+.5
+            if 0<=u<1 and 0<=v<1:pixels[i,j]=src[int(u*mask.width),int(v*mask.height)]
+    return out.resize((width,height),Image.Resampling.LANCZOS)
+logo=curved_wordmark(logo)
 bitmap(logo,'wordmark')
 b=(fw/'代码/NTKSquallFaceBundle/NTKSquallFaceBundle').read_bytes()
 def loadfont(section):
@@ -86,10 +99,10 @@ for night in (False,True):
             key=f'n{i}';add(ex,'Expression',name=key).text=f'{exp} == {i}'
             ink=(color('hourNumeralsFillLinked' if hour else 'minuteNumeralsFillLinked') if night else col(1))
             pic(add(c,'Compare',expression=key),('night' if night else 'day')+(str(i) if hour else f'{i:02}'),box(108,y,264,148),ink)
-    if night:pic(p,'wordmark',box(12,197,11,86),'#FF4295BC')
+    if night:pic(p,'wordmark',box(0,194,28,92),'#FF4295BC')
     else:
         lit,dim=cond(p,'[SECOND] >= 45')
-        for layer,idx in ((lit,5),(dim,4)):pic(layer,'wordmark',box(12,197,11,86),col(idx))
+        for layer,idx in ((lit,5),(dim,4)):pic(layer,'wordmark',box(0,194,28,92),col(idx))
 slot=add(scene,'ComplicationSlot',**box(),slotId=1,displayName='face_name',supportedTypes='RANGED_VALUE EMPTY')
 add(slot,'DefaultProviderPolicy',primaryProvider='local.hermes.maritime/local.hermes.maritime.RaceProvider',primaryProviderType='RANGED_VALUE',defaultSystemProvider='EMPTY',defaultSystemProviderType='EMPTY')
 add(slot,'BoundingOval',**box());add(slot,'Complication',type='EMPTY')
@@ -97,25 +110,18 @@ c=add(slot,'Complication',type='RANGED_VALUE')
 active,_=cond(c,'[COMPLICATION.TEXT] == "running" || [COMPLICATION.TEXT] == "paused" || [COMPLICATION.TEXT] == "overtime"')
 mn='[COMPLICATION.RANGED_VALUE_MIN]';mx='[COMPLICATION.RANGED_VALUE_MAX]';v='[COMPLICATION.RANGED_VALUE_VALUE]'
 def race_layer(parent,theme,night):
-    p=add(parent,'Group',name='race_'+theme+str(int(night)),**box(),alpha=255 if not night else 0)
+    p=add(parent,'Group',name='system_timer_'+theme+str(int(night)),**box(),alpha=0 if night else 255)
     add(p,'Variant',mode='AMBIENT',target='alpha',value=255 if night else 0)
-    paint(p,'#FF000000' if night else color('background' if theme=='noir' else 'blanc_background'))
-    content=add(p,'Group',name='readout_'+theme+str(int(night)),**box(),alpha=95 if night else 255)
-    ring(content,'#FF27323A' if night else color(theme+'_bezelDimmed'))
-    running,paused=cond(content,'[COMPLICATION.TEXT] == "running"')
-    before,after=cond(paused,'[COMPLICATION.TEXT] == "paused"')
-    for view,left,span in [(running,f'(({v}-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+{mn})*86400)',f'({mx}-86400)'),(before,v,f'(-{mn})'),(after,f'(-{v})',f'(-{mn})')]:
-        down,up=cond(view,left+' > 0')
-        for layer,ink,fraction in [(down,color(theme+'_bezelHighlighted'),f'({left})/({span})'),(up,color(theme+'_bezelCountUpHighlighted'),f'1.0*(abs({left})%60)/60.0')]:
-            if layer is down:
-                final,normal=cond(layer,left+' <= 60')
-                ring(final,color(theme+'_bezelHighlightedFinal'),f'({left})/60.0');ring(normal,ink,fraction)
-            else:ring(layer,ink,fraction)
-            fg='#FFFFFFFF' if night else color(theme+('_numeralsFill' if layer is down else '_numeralsCountUpFill'))
-            text(layer,box(58,161,364,125),82,fg,'%02d:%02d',f'floor(abs({left})/60)',f'floor(abs({left})%60)')
-    text(content,box(115,120,250,44),25,'#FFADBFC9' if night else color(theme+'_smallTime'),'%s:%s',
-         '([IS_24_HOUR_MODE] ? [HOUR_0_23_Z] : [HOUR_1_12])','[MINUTE_Z]')
-    paused,_=cond(content,'[COMPLICATION.TEXT] != "running"');text(paused,box(105,303,270,52),22,color(theme+'_pausedLabel'),'@string/paused')
+    running,paused=cond(p,'[COMPLICATION.TEXT] == "running"')
+    for view,left,stopped in ((running,f'(({v}-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+{mn})*86400)',False),(paused,v,True)):
+        live,_=cond(view,left+' > 0')
+        ink='#FF9D693A' if night else color(theme+'_bezelHighlightedFinal')
+        ring(live,'#FF172C36' if night or theme=='noir' else '#FFB2BECA')
+        ring(live,ink,f'((({left}-1)%60)+1)/60.0')
+        pic(live,'wordmark',box(0,194,28,92),'#FF98ADBA' if night else col(4))
+        text(live,box(112,50,256,43),33,ink,'%02d:%02d',f'floor({left}/60)',f'floor({left}%60)')
+        if stopped:
+            text(live,box(167,57,22,24),15,ink,'Ⅱ')
 dark,light=cond(active,col(0)+' == #FF000000')
 for branch,theme in ((dark,'noir'),(light,'blanc')):
     for night in (False,True):race_layer(branch,theme,night)
@@ -126,7 +132,7 @@ save(res/'raw/watchface.xml',face)
 prev=Image.new('RGBA',(480,480));d=ImageDraw.Draw(prev);d.ellipse((0,0,479,479),fill='black')
 d.ellipse((8,8,472,472),outline='#002F4C',width=21);d.arc((8,8,472,472),-90,90,fill='#009EFF',width=21)
 for s,y in [('10',86),('09',235)]:prev.paste('white',(108,y,372,y+148),Image.open(draw/('day'+s+'.png')).getchannel('A'))
-prev.paste('#FF6700',(12,197,23,283),logo.resize((11,86),Image.Resampling.LANCZOS))
+prev.paste('#FF6700',(0,194,28,286),logo)
 for folder in (res,host):
     (folder/'drawable-nodpi').mkdir(exist_ok=True,parents=True);prev.save(folder/'drawable-nodpi/preview.png')
 for path in props.glob('*.lproj'):

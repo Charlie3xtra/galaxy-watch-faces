@@ -557,12 +557,12 @@
           <Expression name="test">[SECOND] &gt;= 45</Expression>
         </Expressions>
         <Compare expression="test">
-          <PartImage x="12" y="197" width="11" height="86" tintColor="#FF071518">
+          <PartImage x="0" y="194" width="28" height="92" tintColor="#FF071518">
             <Image resource="wordmark" />
           </PartImage>
         </Compare>
         <Default>
-          <PartImage x="12" y="197" width="11" height="86" tintColor="[CONFIGURATION.palette.4]">
+          <PartImage x="0" y="194" width="28" height="92" tintColor="[CONFIGURATION.palette.4]">
             <Image resource="wordmark" />
           </PartImage>
         </Default>
@@ -1092,7 +1092,7 @@
           </PartImage>
         </Compare>
       </Condition>
-      <PartImage x="12" y="197" width="11" height="86" tintColor="#FF4295BC">
+      <PartImage x="0" y="194" width="28" height="92" tintColor="#FF4295BC">
         <Image resource="wordmark" />
       </PartImage>
     </Group>
@@ -1111,871 +1111,315 @@
                 <Expression name="test">[CONFIGURATION.palette.0] == #FF000000</Expression>
               </Expressions>
               <Compare expression="test">
-                <Group name="race_noir0" x="0" y="0" width="480" height="480" alpha="255">
+                <Group name="system_timer_noir0" x="0" y="0" width="480" height="480" alpha="255">
                   <Variant mode="AMBIENT" target="alpha" value="0" />
-                  <PartDraw x="0" y="0" width="480" height="480">
-                    <Rectangle x="0" y="0" width="480" height="480">
-                      <Fill color="#FF000000" />
-                    </Rectangle>
-                  </PartDraw>
-                  <Group name="readout_noir0" x="0" y="0" width="480" height="480" alpha="255">
-                    <PartDraw x="0" y="0" width="480" height="480">
-                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                        <Stroke color="#4D009EFF" thickness="21" />
-                      </Arc>
-                    </PartDraw>
-                    <Condition>
-                      <Expressions>
-                        <Expression name="test">[COMPLICATION.TEXT] == "running"</Expression>
-                      </Expressions>
-                      <Compare expression="test">
-                        <Condition>
-                          <Expressions>
-                            <Expression name="test">(([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400) &gt; 0</Expression>
-                          </Expressions>
-                          <Compare expression="test">
-                            <Condition>
-                              <Expressions>
-                                <Expression name="test">(([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400) &lt;= 60</Expression>
-                              </Expressions>
-                              <Compare expression="test">
-                                <PartDraw x="0" y="0" width="480" height="480">
-                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                    <Transform target="endAngle" value="360 * clamp(((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60.0,0,1)" />
-                                    <Stroke color="#FFFF6700" thickness="21" />
-                                  </Arc>
-                                </PartDraw>
-                              </Compare>
-                              <Default>
-                                <PartDraw x="0" y="0" width="480" height="480">
-                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                    <Transform target="endAngle" value="360 * clamp(((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/(([COMPLICATION.RANGED_VALUE_MAX]-86400)),0,1)" />
-                                    <Stroke color="#FF009EFF" thickness="21" />
-                                  </Arc>
-                                </PartDraw>
-                              </Default>
-                            </Condition>
-                            <PartText x="58" y="161" width="364" height="125">
-                              <Text align="CENTER">
-                                <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
-                                  <Template>%02d:%02d<Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60)" />
-                                    <Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)" />
-                                  </Template>
-                                </BitmapFont>
-                              </Text>
-                            </PartText>
-                          </Compare>
-                          <Default>
-                            <PartDraw x="0" y="0" width="480" height="480">
-                              <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                <Transform target="endAngle" value="360 * clamp(1.0*(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)/60.0,0,1)" />
-                                <Stroke color="#FFEE7A34" thickness="21" />
-                              </Arc>
-                            </PartDraw>
-                            <PartText x="58" y="161" width="364" height="125">
-                              <Text align="CENTER">
-                                <BitmapFont family="race_digits" size="82" color="#FFEE7A34">
-                                  <Template>%02d:%02d<Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60)" />
-                                    <Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)" />
-                                  </Template>
-                                </BitmapFont>
-                              </Text>
-                            </PartText>
-                          </Default>
-                        </Condition>
-                      </Compare>
-                      <Default>
-                        <Condition>
-                          <Expressions>
-                            <Expression name="test">[COMPLICATION.TEXT] == "paused"</Expression>
-                          </Expressions>
-                          <Compare expression="test">
-                            <Condition>
-                              <Expressions>
-                                <Expression name="test">[COMPLICATION.RANGED_VALUE_VALUE] &gt; 0</Expression>
-                              </Expressions>
-                              <Compare expression="test">
-                                <Condition>
-                                  <Expressions>
-                                    <Expression name="test">[COMPLICATION.RANGED_VALUE_VALUE] &lt;= 60</Expression>
-                                  </Expressions>
-                                  <Compare expression="test">
-                                    <PartDraw x="0" y="0" width="480" height="480">
-                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                        <Transform target="endAngle" value="360 * clamp(([COMPLICATION.RANGED_VALUE_VALUE])/60.0,0,1)" />
-                                        <Stroke color="#FFFF6700" thickness="21" />
-                                      </Arc>
-                                    </PartDraw>
-                                  </Compare>
-                                  <Default>
-                                    <PartDraw x="0" y="0" width="480" height="480">
-                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                        <Transform target="endAngle" value="360 * clamp(([COMPLICATION.RANGED_VALUE_VALUE])/((-[COMPLICATION.RANGED_VALUE_MIN])),0,1)" />
-                                        <Stroke color="#FF009EFF" thickness="21" />
-                                      </Arc>
-                                    </PartDraw>
-                                  </Default>
-                                </Condition>
-                                <PartText x="58" y="161" width="364" height="125">
-                                  <Text align="CENTER">
-                                    <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
-                                      <Template>%02d:%02d<Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])/60)" />
-                                        <Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)" />
-                                      </Template>
-                                    </BitmapFont>
-                                  </Text>
-                                </PartText>
-                              </Compare>
-                              <Default>
-                                <PartDraw x="0" y="0" width="480" height="480">
-                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                    <Transform target="endAngle" value="360 * clamp(1.0*(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)/60.0,0,1)" />
-                                    <Stroke color="#FFEE7A34" thickness="21" />
-                                  </Arc>
-                                </PartDraw>
-                                <PartText x="58" y="161" width="364" height="125">
-                                  <Text align="CENTER">
-                                    <BitmapFont family="race_digits" size="82" color="#FFEE7A34">
-                                      <Template>%02d:%02d<Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])/60)" />
-                                        <Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)" />
-                                      </Template>
-                                    </BitmapFont>
-                                  </Text>
-                                </PartText>
-                              </Default>
-                            </Condition>
-                          </Compare>
-                          <Default>
-                            <Condition>
-                              <Expressions>
-                                <Expression name="test">(-[COMPLICATION.RANGED_VALUE_VALUE]) &gt; 0</Expression>
-                              </Expressions>
-                              <Compare expression="test">
-                                <Condition>
-                                  <Expressions>
-                                    <Expression name="test">(-[COMPLICATION.RANGED_VALUE_VALUE]) &lt;= 60</Expression>
-                                  </Expressions>
-                                  <Compare expression="test">
-                                    <PartDraw x="0" y="0" width="480" height="480">
-                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                        <Transform target="endAngle" value="360 * clamp(((-[COMPLICATION.RANGED_VALUE_VALUE]))/60.0,0,1)" />
-                                        <Stroke color="#FFFF6700" thickness="21" />
-                                      </Arc>
-                                    </PartDraw>
-                                  </Compare>
-                                  <Default>
-                                    <PartDraw x="0" y="0" width="480" height="480">
-                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                        <Transform target="endAngle" value="360 * clamp(((-[COMPLICATION.RANGED_VALUE_VALUE]))/((-[COMPLICATION.RANGED_VALUE_MIN])),0,1)" />
-                                        <Stroke color="#FF009EFF" thickness="21" />
-                                      </Arc>
-                                    </PartDraw>
-                                  </Default>
-                                </Condition>
-                                <PartText x="58" y="161" width="364" height="125">
-                                  <Text align="CENTER">
-                                    <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
-                                      <Template>%02d:%02d<Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))/60)" />
-                                        <Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)" />
-                                      </Template>
-                                    </BitmapFont>
-                                  </Text>
-                                </PartText>
-                              </Compare>
-                              <Default>
-                                <PartDraw x="0" y="0" width="480" height="480">
-                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                    <Transform target="endAngle" value="360 * clamp(1.0*(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)/60.0,0,1)" />
-                                    <Stroke color="#FFEE7A34" thickness="21" />
-                                  </Arc>
-                                </PartDraw>
-                                <PartText x="58" y="161" width="364" height="125">
-                                  <Text align="CENTER">
-                                    <BitmapFont family="race_digits" size="82" color="#FFEE7A34">
-                                      <Template>%02d:%02d<Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))/60)" />
-                                        <Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)" />
-                                      </Template>
-                                    </BitmapFont>
-                                  </Text>
-                                </PartText>
-                              </Default>
-                            </Condition>
-                          </Default>
-                        </Condition>
-                      </Default>
-                    </Condition>
-                    <PartText x="115" y="120" width="250" height="44">
-                      <Text align="CENTER">
-                        <Font family="SYNC_TO_DEVICE" size="25" color="#FF0099D6">
-                          <Template>%s:%s<Parameter expression="([IS_24_HOUR_MODE] ? [HOUR_0_23_Z] : [HOUR_1_12])" />
-                            <Parameter expression="[MINUTE_Z]" />
-                          </Template>
-                        </Font>
-                      </Text>
-                    </PartText>
-                    <Condition>
-                      <Expressions>
-                        <Expression name="test">[COMPLICATION.TEXT] != "running"</Expression>
-                      </Expressions>
-                      <Compare expression="test">
-                        <PartText x="105" y="303" width="270" height="52">
-                          <Text align="CENTER">
-                            <Font family="SYNC_TO_DEVICE" size="22" color="#FF00A1FF">@string/paused</Font>
-                          </Text>
-                        </PartText>
-                      </Compare>
-                    </Condition>
-                  </Group>
+                  <Condition>
+                    <Expressions>
+                      <Expression name="test">[COMPLICATION.TEXT] == "running"</Expression>
+                    </Expressions>
+                    <Compare expression="test">
+                      <Condition>
+                        <Expressions>
+                          <Expression name="test">(([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400) &gt; 0</Expression>
+                        </Expressions>
+                        <Compare expression="test">
+                          <PartDraw x="0" y="0" width="480" height="480">
+                            <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                              <Stroke color="#FF172C36" thickness="21" />
+                            </Arc>
+                          </PartDraw>
+                          <PartDraw x="0" y="0" width="480" height="480">
+                            <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                              <Transform target="endAngle" value="360 * clamp(((((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400)-1)%60)+1)/60.0,0,1)" />
+                              <Stroke color="#FFFF6700" thickness="21" />
+                            </Arc>
+                          </PartDraw>
+                          <PartImage x="0" y="194" width="28" height="92" tintColor="[CONFIGURATION.palette.4]">
+                            <Image resource="wordmark" />
+                          </PartImage>
+                          <PartText x="112" y="50" width="256" height="43">
+                            <Text align="CENTER">
+                              <BitmapFont family="race_digits" size="33" color="#FFFF6700">
+                                <Template>%02d:%02d<Parameter expression="floor((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400)/60)" />
+                                  <Parameter expression="floor((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400)%60)" />
+                                </Template>
+                              </BitmapFont>
+                            </Text>
+                          </PartText>
+                        </Compare>
+                      </Condition>
+                    </Compare>
+                    <Default>
+                      <Condition>
+                        <Expressions>
+                          <Expression name="test">[COMPLICATION.RANGED_VALUE_VALUE] &gt; 0</Expression>
+                        </Expressions>
+                        <Compare expression="test">
+                          <PartDraw x="0" y="0" width="480" height="480">
+                            <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                              <Stroke color="#FF172C36" thickness="21" />
+                            </Arc>
+                          </PartDraw>
+                          <PartDraw x="0" y="0" width="480" height="480">
+                            <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                              <Transform target="endAngle" value="360 * clamp(((([COMPLICATION.RANGED_VALUE_VALUE]-1)%60)+1)/60.0,0,1)" />
+                              <Stroke color="#FFFF6700" thickness="21" />
+                            </Arc>
+                          </PartDraw>
+                          <PartImage x="0" y="194" width="28" height="92" tintColor="[CONFIGURATION.palette.4]">
+                            <Image resource="wordmark" />
+                          </PartImage>
+                          <PartText x="112" y="50" width="256" height="43">
+                            <Text align="CENTER">
+                              <BitmapFont family="race_digits" size="33" color="#FFFF6700">
+                                <Template>%02d:%02d<Parameter expression="floor([COMPLICATION.RANGED_VALUE_VALUE]/60)" />
+                                  <Parameter expression="floor([COMPLICATION.RANGED_VALUE_VALUE]%60)" />
+                                </Template>
+                              </BitmapFont>
+                            </Text>
+                          </PartText>
+                          <PartText x="167" y="57" width="22" height="24">
+                            <Text align="CENTER">
+                              <Font family="SYNC_TO_DEVICE" size="15" color="#FFFF6700">Ⅱ</Font>
+                            </Text>
+                          </PartText>
+                        </Compare>
+                      </Condition>
+                    </Default>
+                  </Condition>
                 </Group>
-                <Group name="race_noir1" x="0" y="0" width="480" height="480" alpha="0">
+                <Group name="system_timer_noir1" x="0" y="0" width="480" height="480" alpha="0">
                   <Variant mode="AMBIENT" target="alpha" value="255" />
-                  <PartDraw x="0" y="0" width="480" height="480">
-                    <Rectangle x="0" y="0" width="480" height="480">
-                      <Fill color="#FF000000" />
-                    </Rectangle>
-                  </PartDraw>
-                  <Group name="readout_noir1" x="0" y="0" width="480" height="480" alpha="95">
-                    <PartDraw x="0" y="0" width="480" height="480">
-                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                        <Stroke color="#FF27323A" thickness="21" />
-                      </Arc>
-                    </PartDraw>
-                    <Condition>
-                      <Expressions>
-                        <Expression name="test">[COMPLICATION.TEXT] == "running"</Expression>
-                      </Expressions>
-                      <Compare expression="test">
-                        <Condition>
-                          <Expressions>
-                            <Expression name="test">(([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400) &gt; 0</Expression>
-                          </Expressions>
-                          <Compare expression="test">
-                            <Condition>
-                              <Expressions>
-                                <Expression name="test">(([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400) &lt;= 60</Expression>
-                              </Expressions>
-                              <Compare expression="test">
-                                <PartDraw x="0" y="0" width="480" height="480">
-                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                    <Transform target="endAngle" value="360 * clamp(((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60.0,0,1)" />
-                                    <Stroke color="#FFFF6700" thickness="21" />
-                                  </Arc>
-                                </PartDraw>
-                              </Compare>
-                              <Default>
-                                <PartDraw x="0" y="0" width="480" height="480">
-                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                    <Transform target="endAngle" value="360 * clamp(((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/(([COMPLICATION.RANGED_VALUE_MAX]-86400)),0,1)" />
-                                    <Stroke color="#FF009EFF" thickness="21" />
-                                  </Arc>
-                                </PartDraw>
-                              </Default>
-                            </Condition>
-                            <PartText x="58" y="161" width="364" height="125">
-                              <Text align="CENTER">
-                                <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
-                                  <Template>%02d:%02d<Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60)" />
-                                    <Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)" />
-                                  </Template>
-                                </BitmapFont>
-                              </Text>
-                            </PartText>
-                          </Compare>
-                          <Default>
-                            <PartDraw x="0" y="0" width="480" height="480">
-                              <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                <Transform target="endAngle" value="360 * clamp(1.0*(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)/60.0,0,1)" />
-                                <Stroke color="#FFEE7A34" thickness="21" />
-                              </Arc>
-                            </PartDraw>
-                            <PartText x="58" y="161" width="364" height="125">
-                              <Text align="CENTER">
-                                <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
-                                  <Template>%02d:%02d<Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60)" />
-                                    <Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)" />
-                                  </Template>
-                                </BitmapFont>
-                              </Text>
-                            </PartText>
-                          </Default>
-                        </Condition>
-                      </Compare>
-                      <Default>
-                        <Condition>
-                          <Expressions>
-                            <Expression name="test">[COMPLICATION.TEXT] == "paused"</Expression>
-                          </Expressions>
-                          <Compare expression="test">
-                            <Condition>
-                              <Expressions>
-                                <Expression name="test">[COMPLICATION.RANGED_VALUE_VALUE] &gt; 0</Expression>
-                              </Expressions>
-                              <Compare expression="test">
-                                <Condition>
-                                  <Expressions>
-                                    <Expression name="test">[COMPLICATION.RANGED_VALUE_VALUE] &lt;= 60</Expression>
-                                  </Expressions>
-                                  <Compare expression="test">
-                                    <PartDraw x="0" y="0" width="480" height="480">
-                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                        <Transform target="endAngle" value="360 * clamp(([COMPLICATION.RANGED_VALUE_VALUE])/60.0,0,1)" />
-                                        <Stroke color="#FFFF6700" thickness="21" />
-                                      </Arc>
-                                    </PartDraw>
-                                  </Compare>
-                                  <Default>
-                                    <PartDraw x="0" y="0" width="480" height="480">
-                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                        <Transform target="endAngle" value="360 * clamp(([COMPLICATION.RANGED_VALUE_VALUE])/((-[COMPLICATION.RANGED_VALUE_MIN])),0,1)" />
-                                        <Stroke color="#FF009EFF" thickness="21" />
-                                      </Arc>
-                                    </PartDraw>
-                                  </Default>
-                                </Condition>
-                                <PartText x="58" y="161" width="364" height="125">
-                                  <Text align="CENTER">
-                                    <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
-                                      <Template>%02d:%02d<Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])/60)" />
-                                        <Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)" />
-                                      </Template>
-                                    </BitmapFont>
-                                  </Text>
-                                </PartText>
-                              </Compare>
-                              <Default>
-                                <PartDraw x="0" y="0" width="480" height="480">
-                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                    <Transform target="endAngle" value="360 * clamp(1.0*(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)/60.0,0,1)" />
-                                    <Stroke color="#FFEE7A34" thickness="21" />
-                                  </Arc>
-                                </PartDraw>
-                                <PartText x="58" y="161" width="364" height="125">
-                                  <Text align="CENTER">
-                                    <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
-                                      <Template>%02d:%02d<Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])/60)" />
-                                        <Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)" />
-                                      </Template>
-                                    </BitmapFont>
-                                  </Text>
-                                </PartText>
-                              </Default>
-                            </Condition>
-                          </Compare>
-                          <Default>
-                            <Condition>
-                              <Expressions>
-                                <Expression name="test">(-[COMPLICATION.RANGED_VALUE_VALUE]) &gt; 0</Expression>
-                              </Expressions>
-                              <Compare expression="test">
-                                <Condition>
-                                  <Expressions>
-                                    <Expression name="test">(-[COMPLICATION.RANGED_VALUE_VALUE]) &lt;= 60</Expression>
-                                  </Expressions>
-                                  <Compare expression="test">
-                                    <PartDraw x="0" y="0" width="480" height="480">
-                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                        <Transform target="endAngle" value="360 * clamp(((-[COMPLICATION.RANGED_VALUE_VALUE]))/60.0,0,1)" />
-                                        <Stroke color="#FFFF6700" thickness="21" />
-                                      </Arc>
-                                    </PartDraw>
-                                  </Compare>
-                                  <Default>
-                                    <PartDraw x="0" y="0" width="480" height="480">
-                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                        <Transform target="endAngle" value="360 * clamp(((-[COMPLICATION.RANGED_VALUE_VALUE]))/((-[COMPLICATION.RANGED_VALUE_MIN])),0,1)" />
-                                        <Stroke color="#FF009EFF" thickness="21" />
-                                      </Arc>
-                                    </PartDraw>
-                                  </Default>
-                                </Condition>
-                                <PartText x="58" y="161" width="364" height="125">
-                                  <Text align="CENTER">
-                                    <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
-                                      <Template>%02d:%02d<Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))/60)" />
-                                        <Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)" />
-                                      </Template>
-                                    </BitmapFont>
-                                  </Text>
-                                </PartText>
-                              </Compare>
-                              <Default>
-                                <PartDraw x="0" y="0" width="480" height="480">
-                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                    <Transform target="endAngle" value="360 * clamp(1.0*(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)/60.0,0,1)" />
-                                    <Stroke color="#FFEE7A34" thickness="21" />
-                                  </Arc>
-                                </PartDraw>
-                                <PartText x="58" y="161" width="364" height="125">
-                                  <Text align="CENTER">
-                                    <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
-                                      <Template>%02d:%02d<Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))/60)" />
-                                        <Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)" />
-                                      </Template>
-                                    </BitmapFont>
-                                  </Text>
-                                </PartText>
-                              </Default>
-                            </Condition>
-                          </Default>
-                        </Condition>
-                      </Default>
-                    </Condition>
-                    <PartText x="115" y="120" width="250" height="44">
-                      <Text align="CENTER">
-                        <Font family="SYNC_TO_DEVICE" size="25" color="#FFADBFC9">
-                          <Template>%s:%s<Parameter expression="([IS_24_HOUR_MODE] ? [HOUR_0_23_Z] : [HOUR_1_12])" />
-                            <Parameter expression="[MINUTE_Z]" />
-                          </Template>
-                        </Font>
-                      </Text>
-                    </PartText>
-                    <Condition>
-                      <Expressions>
-                        <Expression name="test">[COMPLICATION.TEXT] != "running"</Expression>
-                      </Expressions>
-                      <Compare expression="test">
-                        <PartText x="105" y="303" width="270" height="52">
-                          <Text align="CENTER">
-                            <Font family="SYNC_TO_DEVICE" size="22" color="#FF00A1FF">@string/paused</Font>
-                          </Text>
-                        </PartText>
-                      </Compare>
-                    </Condition>
-                  </Group>
+                  <Condition>
+                    <Expressions>
+                      <Expression name="test">[COMPLICATION.TEXT] == "running"</Expression>
+                    </Expressions>
+                    <Compare expression="test">
+                      <Condition>
+                        <Expressions>
+                          <Expression name="test">(([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400) &gt; 0</Expression>
+                        </Expressions>
+                        <Compare expression="test">
+                          <PartDraw x="0" y="0" width="480" height="480">
+                            <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                              <Stroke color="#FF172C36" thickness="21" />
+                            </Arc>
+                          </PartDraw>
+                          <PartDraw x="0" y="0" width="480" height="480">
+                            <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                              <Transform target="endAngle" value="360 * clamp(((((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400)-1)%60)+1)/60.0,0,1)" />
+                              <Stroke color="#FF9D693A" thickness="21" />
+                            </Arc>
+                          </PartDraw>
+                          <PartImage x="0" y="194" width="28" height="92" tintColor="#FF98ADBA">
+                            <Image resource="wordmark" />
+                          </PartImage>
+                          <PartText x="112" y="50" width="256" height="43">
+                            <Text align="CENTER">
+                              <BitmapFont family="race_digits" size="33" color="#FF9D693A">
+                                <Template>%02d:%02d<Parameter expression="floor((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400)/60)" />
+                                  <Parameter expression="floor((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400)%60)" />
+                                </Template>
+                              </BitmapFont>
+                            </Text>
+                          </PartText>
+                        </Compare>
+                      </Condition>
+                    </Compare>
+                    <Default>
+                      <Condition>
+                        <Expressions>
+                          <Expression name="test">[COMPLICATION.RANGED_VALUE_VALUE] &gt; 0</Expression>
+                        </Expressions>
+                        <Compare expression="test">
+                          <PartDraw x="0" y="0" width="480" height="480">
+                            <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                              <Stroke color="#FF172C36" thickness="21" />
+                            </Arc>
+                          </PartDraw>
+                          <PartDraw x="0" y="0" width="480" height="480">
+                            <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                              <Transform target="endAngle" value="360 * clamp(((([COMPLICATION.RANGED_VALUE_VALUE]-1)%60)+1)/60.0,0,1)" />
+                              <Stroke color="#FF9D693A" thickness="21" />
+                            </Arc>
+                          </PartDraw>
+                          <PartImage x="0" y="194" width="28" height="92" tintColor="#FF98ADBA">
+                            <Image resource="wordmark" />
+                          </PartImage>
+                          <PartText x="112" y="50" width="256" height="43">
+                            <Text align="CENTER">
+                              <BitmapFont family="race_digits" size="33" color="#FF9D693A">
+                                <Template>%02d:%02d<Parameter expression="floor([COMPLICATION.RANGED_VALUE_VALUE]/60)" />
+                                  <Parameter expression="floor([COMPLICATION.RANGED_VALUE_VALUE]%60)" />
+                                </Template>
+                              </BitmapFont>
+                            </Text>
+                          </PartText>
+                          <PartText x="167" y="57" width="22" height="24">
+                            <Text align="CENTER">
+                              <Font family="SYNC_TO_DEVICE" size="15" color="#FF9D693A">Ⅱ</Font>
+                            </Text>
+                          </PartText>
+                        </Compare>
+                      </Condition>
+                    </Default>
+                  </Condition>
                 </Group>
               </Compare>
               <Default>
-                <Group name="race_blanc0" x="0" y="0" width="480" height="480" alpha="255">
+                <Group name="system_timer_blanc0" x="0" y="0" width="480" height="480" alpha="255">
                   <Variant mode="AMBIENT" target="alpha" value="0" />
-                  <PartDraw x="0" y="0" width="480" height="480">
-                    <Rectangle x="0" y="0" width="480" height="480">
-                      <Fill color="#FFDFE5EA" />
-                    </Rectangle>
-                  </PartDraw>
-                  <Group name="readout_blanc0" x="0" y="0" width="480" height="480" alpha="255">
-                    <PartDraw x="0" y="0" width="480" height="480">
-                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                        <Stroke color="#4D00A1FF" thickness="21" />
-                      </Arc>
-                    </PartDraw>
-                    <Condition>
-                      <Expressions>
-                        <Expression name="test">[COMPLICATION.TEXT] == "running"</Expression>
-                      </Expressions>
-                      <Compare expression="test">
-                        <Condition>
-                          <Expressions>
-                            <Expression name="test">(([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400) &gt; 0</Expression>
-                          </Expressions>
-                          <Compare expression="test">
-                            <Condition>
-                              <Expressions>
-                                <Expression name="test">(([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400) &lt;= 60</Expression>
-                              </Expressions>
-                              <Compare expression="test">
-                                <PartDraw x="0" y="0" width="480" height="480">
-                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                    <Transform target="endAngle" value="360 * clamp(((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60.0,0,1)" />
-                                    <Stroke color="#FFFF6700" thickness="21" />
-                                  </Arc>
-                                </PartDraw>
-                              </Compare>
-                              <Default>
-                                <PartDraw x="0" y="0" width="480" height="480">
-                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                    <Transform target="endAngle" value="360 * clamp(((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/(([COMPLICATION.RANGED_VALUE_MAX]-86400)),0,1)" />
-                                    <Stroke color="#FF00A1FF" thickness="21" />
-                                  </Arc>
-                                </PartDraw>
-                              </Default>
-                            </Condition>
-                            <PartText x="58" y="161" width="364" height="125">
-                              <Text align="CENTER">
-                                <BitmapFont family="race_digits" size="82" color="#FF01171E">
-                                  <Template>%02d:%02d<Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60)" />
-                                    <Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)" />
-                                  </Template>
-                                </BitmapFont>
-                              </Text>
-                            </PartText>
-                          </Compare>
-                          <Default>
-                            <PartDraw x="0" y="0" width="480" height="480">
-                              <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                <Transform target="endAngle" value="360 * clamp(1.0*(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)/60.0,0,1)" />
-                                <Stroke color="#FFED712E" thickness="21" />
-                              </Arc>
-                            </PartDraw>
-                            <PartText x="58" y="161" width="364" height="125">
-                              <Text align="CENTER">
-                                <BitmapFont family="race_digits" size="82" color="#FFFF6700">
-                                  <Template>%02d:%02d<Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60)" />
-                                    <Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)" />
-                                  </Template>
-                                </BitmapFont>
-                              </Text>
-                            </PartText>
-                          </Default>
-                        </Condition>
-                      </Compare>
-                      <Default>
-                        <Condition>
-                          <Expressions>
-                            <Expression name="test">[COMPLICATION.TEXT] == "paused"</Expression>
-                          </Expressions>
-                          <Compare expression="test">
-                            <Condition>
-                              <Expressions>
-                                <Expression name="test">[COMPLICATION.RANGED_VALUE_VALUE] &gt; 0</Expression>
-                              </Expressions>
-                              <Compare expression="test">
-                                <Condition>
-                                  <Expressions>
-                                    <Expression name="test">[COMPLICATION.RANGED_VALUE_VALUE] &lt;= 60</Expression>
-                                  </Expressions>
-                                  <Compare expression="test">
-                                    <PartDraw x="0" y="0" width="480" height="480">
-                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                        <Transform target="endAngle" value="360 * clamp(([COMPLICATION.RANGED_VALUE_VALUE])/60.0,0,1)" />
-                                        <Stroke color="#FFFF6700" thickness="21" />
-                                      </Arc>
-                                    </PartDraw>
-                                  </Compare>
-                                  <Default>
-                                    <PartDraw x="0" y="0" width="480" height="480">
-                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                        <Transform target="endAngle" value="360 * clamp(([COMPLICATION.RANGED_VALUE_VALUE])/((-[COMPLICATION.RANGED_VALUE_MIN])),0,1)" />
-                                        <Stroke color="#FF00A1FF" thickness="21" />
-                                      </Arc>
-                                    </PartDraw>
-                                  </Default>
-                                </Condition>
-                                <PartText x="58" y="161" width="364" height="125">
-                                  <Text align="CENTER">
-                                    <BitmapFont family="race_digits" size="82" color="#FF01171E">
-                                      <Template>%02d:%02d<Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])/60)" />
-                                        <Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)" />
-                                      </Template>
-                                    </BitmapFont>
-                                  </Text>
-                                </PartText>
-                              </Compare>
-                              <Default>
-                                <PartDraw x="0" y="0" width="480" height="480">
-                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                    <Transform target="endAngle" value="360 * clamp(1.0*(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)/60.0,0,1)" />
-                                    <Stroke color="#FFED712E" thickness="21" />
-                                  </Arc>
-                                </PartDraw>
-                                <PartText x="58" y="161" width="364" height="125">
-                                  <Text align="CENTER">
-                                    <BitmapFont family="race_digits" size="82" color="#FFFF6700">
-                                      <Template>%02d:%02d<Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])/60)" />
-                                        <Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)" />
-                                      </Template>
-                                    </BitmapFont>
-                                  </Text>
-                                </PartText>
-                              </Default>
-                            </Condition>
-                          </Compare>
-                          <Default>
-                            <Condition>
-                              <Expressions>
-                                <Expression name="test">(-[COMPLICATION.RANGED_VALUE_VALUE]) &gt; 0</Expression>
-                              </Expressions>
-                              <Compare expression="test">
-                                <Condition>
-                                  <Expressions>
-                                    <Expression name="test">(-[COMPLICATION.RANGED_VALUE_VALUE]) &lt;= 60</Expression>
-                                  </Expressions>
-                                  <Compare expression="test">
-                                    <PartDraw x="0" y="0" width="480" height="480">
-                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                        <Transform target="endAngle" value="360 * clamp(((-[COMPLICATION.RANGED_VALUE_VALUE]))/60.0,0,1)" />
-                                        <Stroke color="#FFFF6700" thickness="21" />
-                                      </Arc>
-                                    </PartDraw>
-                                  </Compare>
-                                  <Default>
-                                    <PartDraw x="0" y="0" width="480" height="480">
-                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                        <Transform target="endAngle" value="360 * clamp(((-[COMPLICATION.RANGED_VALUE_VALUE]))/((-[COMPLICATION.RANGED_VALUE_MIN])),0,1)" />
-                                        <Stroke color="#FF00A1FF" thickness="21" />
-                                      </Arc>
-                                    </PartDraw>
-                                  </Default>
-                                </Condition>
-                                <PartText x="58" y="161" width="364" height="125">
-                                  <Text align="CENTER">
-                                    <BitmapFont family="race_digits" size="82" color="#FF01171E">
-                                      <Template>%02d:%02d<Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))/60)" />
-                                        <Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)" />
-                                      </Template>
-                                    </BitmapFont>
-                                  </Text>
-                                </PartText>
-                              </Compare>
-                              <Default>
-                                <PartDraw x="0" y="0" width="480" height="480">
-                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                    <Transform target="endAngle" value="360 * clamp(1.0*(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)/60.0,0,1)" />
-                                    <Stroke color="#FFED712E" thickness="21" />
-                                  </Arc>
-                                </PartDraw>
-                                <PartText x="58" y="161" width="364" height="125">
-                                  <Text align="CENTER">
-                                    <BitmapFont family="race_digits" size="82" color="#FFFF6700">
-                                      <Template>%02d:%02d<Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))/60)" />
-                                        <Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)" />
-                                      </Template>
-                                    </BitmapFont>
-                                  </Text>
-                                </PartText>
-                              </Default>
-                            </Condition>
-                          </Default>
-                        </Condition>
-                      </Default>
-                    </Condition>
-                    <PartText x="115" y="120" width="250" height="44">
-                      <Text align="CENTER">
-                        <Font family="SYNC_TO_DEVICE" size="25" color="#FF00A1FF">
-                          <Template>%s:%s<Parameter expression="([IS_24_HOUR_MODE] ? [HOUR_0_23_Z] : [HOUR_1_12])" />
-                            <Parameter expression="[MINUTE_Z]" />
-                          </Template>
-                        </Font>
-                      </Text>
-                    </PartText>
-                    <Condition>
-                      <Expressions>
-                        <Expression name="test">[COMPLICATION.TEXT] != "running"</Expression>
-                      </Expressions>
-                      <Compare expression="test">
-                        <PartText x="105" y="303" width="270" height="52">
-                          <Text align="CENTER">
-                            <Font family="SYNC_TO_DEVICE" size="22" color="#FF00A1FF">@string/paused</Font>
-                          </Text>
-                        </PartText>
-                      </Compare>
-                    </Condition>
-                  </Group>
+                  <Condition>
+                    <Expressions>
+                      <Expression name="test">[COMPLICATION.TEXT] == "running"</Expression>
+                    </Expressions>
+                    <Compare expression="test">
+                      <Condition>
+                        <Expressions>
+                          <Expression name="test">(([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400) &gt; 0</Expression>
+                        </Expressions>
+                        <Compare expression="test">
+                          <PartDraw x="0" y="0" width="480" height="480">
+                            <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                              <Stroke color="#FFB2BECA" thickness="21" />
+                            </Arc>
+                          </PartDraw>
+                          <PartDraw x="0" y="0" width="480" height="480">
+                            <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                              <Transform target="endAngle" value="360 * clamp(((((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400)-1)%60)+1)/60.0,0,1)" />
+                              <Stroke color="#FFFF6700" thickness="21" />
+                            </Arc>
+                          </PartDraw>
+                          <PartImage x="0" y="194" width="28" height="92" tintColor="[CONFIGURATION.palette.4]">
+                            <Image resource="wordmark" />
+                          </PartImage>
+                          <PartText x="112" y="50" width="256" height="43">
+                            <Text align="CENTER">
+                              <BitmapFont family="race_digits" size="33" color="#FFFF6700">
+                                <Template>%02d:%02d<Parameter expression="floor((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400)/60)" />
+                                  <Parameter expression="floor((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400)%60)" />
+                                </Template>
+                              </BitmapFont>
+                            </Text>
+                          </PartText>
+                        </Compare>
+                      </Condition>
+                    </Compare>
+                    <Default>
+                      <Condition>
+                        <Expressions>
+                          <Expression name="test">[COMPLICATION.RANGED_VALUE_VALUE] &gt; 0</Expression>
+                        </Expressions>
+                        <Compare expression="test">
+                          <PartDraw x="0" y="0" width="480" height="480">
+                            <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                              <Stroke color="#FFB2BECA" thickness="21" />
+                            </Arc>
+                          </PartDraw>
+                          <PartDraw x="0" y="0" width="480" height="480">
+                            <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                              <Transform target="endAngle" value="360 * clamp(((([COMPLICATION.RANGED_VALUE_VALUE]-1)%60)+1)/60.0,0,1)" />
+                              <Stroke color="#FFFF6700" thickness="21" />
+                            </Arc>
+                          </PartDraw>
+                          <PartImage x="0" y="194" width="28" height="92" tintColor="[CONFIGURATION.palette.4]">
+                            <Image resource="wordmark" />
+                          </PartImage>
+                          <PartText x="112" y="50" width="256" height="43">
+                            <Text align="CENTER">
+                              <BitmapFont family="race_digits" size="33" color="#FFFF6700">
+                                <Template>%02d:%02d<Parameter expression="floor([COMPLICATION.RANGED_VALUE_VALUE]/60)" />
+                                  <Parameter expression="floor([COMPLICATION.RANGED_VALUE_VALUE]%60)" />
+                                </Template>
+                              </BitmapFont>
+                            </Text>
+                          </PartText>
+                          <PartText x="167" y="57" width="22" height="24">
+                            <Text align="CENTER">
+                              <Font family="SYNC_TO_DEVICE" size="15" color="#FFFF6700">Ⅱ</Font>
+                            </Text>
+                          </PartText>
+                        </Compare>
+                      </Condition>
+                    </Default>
+                  </Condition>
                 </Group>
-                <Group name="race_blanc1" x="0" y="0" width="480" height="480" alpha="0">
+                <Group name="system_timer_blanc1" x="0" y="0" width="480" height="480" alpha="0">
                   <Variant mode="AMBIENT" target="alpha" value="255" />
-                  <PartDraw x="0" y="0" width="480" height="480">
-                    <Rectangle x="0" y="0" width="480" height="480">
-                      <Fill color="#FF000000" />
-                    </Rectangle>
-                  </PartDraw>
-                  <Group name="readout_blanc1" x="0" y="0" width="480" height="480" alpha="95">
-                    <PartDraw x="0" y="0" width="480" height="480">
-                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                        <Stroke color="#FF27323A" thickness="21" />
-                      </Arc>
-                    </PartDraw>
-                    <Condition>
-                      <Expressions>
-                        <Expression name="test">[COMPLICATION.TEXT] == "running"</Expression>
-                      </Expressions>
-                      <Compare expression="test">
-                        <Condition>
-                          <Expressions>
-                            <Expression name="test">(([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400) &gt; 0</Expression>
-                          </Expressions>
-                          <Compare expression="test">
-                            <Condition>
-                              <Expressions>
-                                <Expression name="test">(([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400) &lt;= 60</Expression>
-                              </Expressions>
-                              <Compare expression="test">
-                                <PartDraw x="0" y="0" width="480" height="480">
-                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                    <Transform target="endAngle" value="360 * clamp(((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60.0,0,1)" />
-                                    <Stroke color="#FFFF6700" thickness="21" />
-                                  </Arc>
-                                </PartDraw>
-                              </Compare>
-                              <Default>
-                                <PartDraw x="0" y="0" width="480" height="480">
-                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                    <Transform target="endAngle" value="360 * clamp(((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/(([COMPLICATION.RANGED_VALUE_MAX]-86400)),0,1)" />
-                                    <Stroke color="#FF00A1FF" thickness="21" />
-                                  </Arc>
-                                </PartDraw>
-                              </Default>
-                            </Condition>
-                            <PartText x="58" y="161" width="364" height="125">
-                              <Text align="CENTER">
-                                <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
-                                  <Template>%02d:%02d<Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60)" />
-                                    <Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)" />
-                                  </Template>
-                                </BitmapFont>
-                              </Text>
-                            </PartText>
-                          </Compare>
-                          <Default>
-                            <PartDraw x="0" y="0" width="480" height="480">
-                              <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                <Transform target="endAngle" value="360 * clamp(1.0*(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)/60.0,0,1)" />
-                                <Stroke color="#FFED712E" thickness="21" />
-                              </Arc>
-                            </PartDraw>
-                            <PartText x="58" y="161" width="364" height="125">
-                              <Text align="CENTER">
-                                <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
-                                  <Template>%02d:%02d<Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))/60)" />
-                                    <Parameter expression="floor(abs((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400))%60)" />
-                                  </Template>
-                                </BitmapFont>
-                              </Text>
-                            </PartText>
-                          </Default>
-                        </Condition>
-                      </Compare>
-                      <Default>
-                        <Condition>
-                          <Expressions>
-                            <Expression name="test">[COMPLICATION.TEXT] == "paused"</Expression>
-                          </Expressions>
-                          <Compare expression="test">
-                            <Condition>
-                              <Expressions>
-                                <Expression name="test">[COMPLICATION.RANGED_VALUE_VALUE] &gt; 0</Expression>
-                              </Expressions>
-                              <Compare expression="test">
-                                <Condition>
-                                  <Expressions>
-                                    <Expression name="test">[COMPLICATION.RANGED_VALUE_VALUE] &lt;= 60</Expression>
-                                  </Expressions>
-                                  <Compare expression="test">
-                                    <PartDraw x="0" y="0" width="480" height="480">
-                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                        <Transform target="endAngle" value="360 * clamp(([COMPLICATION.RANGED_VALUE_VALUE])/60.0,0,1)" />
-                                        <Stroke color="#FFFF6700" thickness="21" />
-                                      </Arc>
-                                    </PartDraw>
-                                  </Compare>
-                                  <Default>
-                                    <PartDraw x="0" y="0" width="480" height="480">
-                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                        <Transform target="endAngle" value="360 * clamp(([COMPLICATION.RANGED_VALUE_VALUE])/((-[COMPLICATION.RANGED_VALUE_MIN])),0,1)" />
-                                        <Stroke color="#FF00A1FF" thickness="21" />
-                                      </Arc>
-                                    </PartDraw>
-                                  </Default>
-                                </Condition>
-                                <PartText x="58" y="161" width="364" height="125">
-                                  <Text align="CENTER">
-                                    <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
-                                      <Template>%02d:%02d<Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])/60)" />
-                                        <Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)" />
-                                      </Template>
-                                    </BitmapFont>
-                                  </Text>
-                                </PartText>
-                              </Compare>
-                              <Default>
-                                <PartDraw x="0" y="0" width="480" height="480">
-                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                    <Transform target="endAngle" value="360 * clamp(1.0*(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)/60.0,0,1)" />
-                                    <Stroke color="#FFED712E" thickness="21" />
-                                  </Arc>
-                                </PartDraw>
-                                <PartText x="58" y="161" width="364" height="125">
-                                  <Text align="CENTER">
-                                    <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
-                                      <Template>%02d:%02d<Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])/60)" />
-                                        <Parameter expression="floor(abs([COMPLICATION.RANGED_VALUE_VALUE])%60)" />
-                                      </Template>
-                                    </BitmapFont>
-                                  </Text>
-                                </PartText>
-                              </Default>
-                            </Condition>
-                          </Compare>
-                          <Default>
-                            <Condition>
-                              <Expressions>
-                                <Expression name="test">(-[COMPLICATION.RANGED_VALUE_VALUE]) &gt; 0</Expression>
-                              </Expressions>
-                              <Compare expression="test">
-                                <Condition>
-                                  <Expressions>
-                                    <Expression name="test">(-[COMPLICATION.RANGED_VALUE_VALUE]) &lt;= 60</Expression>
-                                  </Expressions>
-                                  <Compare expression="test">
-                                    <PartDraw x="0" y="0" width="480" height="480">
-                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                        <Transform target="endAngle" value="360 * clamp(((-[COMPLICATION.RANGED_VALUE_VALUE]))/60.0,0,1)" />
-                                        <Stroke color="#FFFF6700" thickness="21" />
-                                      </Arc>
-                                    </PartDraw>
-                                  </Compare>
-                                  <Default>
-                                    <PartDraw x="0" y="0" width="480" height="480">
-                                      <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                        <Transform target="endAngle" value="360 * clamp(((-[COMPLICATION.RANGED_VALUE_VALUE]))/((-[COMPLICATION.RANGED_VALUE_MIN])),0,1)" />
-                                        <Stroke color="#FF00A1FF" thickness="21" />
-                                      </Arc>
-                                    </PartDraw>
-                                  </Default>
-                                </Condition>
-                                <PartText x="58" y="161" width="364" height="125">
-                                  <Text align="CENTER">
-                                    <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
-                                      <Template>%02d:%02d<Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))/60)" />
-                                        <Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)" />
-                                      </Template>
-                                    </BitmapFont>
-                                  </Text>
-                                </PartText>
-                              </Compare>
-                              <Default>
-                                <PartDraw x="0" y="0" width="480" height="480">
-                                  <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
-                                    <Transform target="endAngle" value="360 * clamp(1.0*(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)/60.0,0,1)" />
-                                    <Stroke color="#FFED712E" thickness="21" />
-                                  </Arc>
-                                </PartDraw>
-                                <PartText x="58" y="161" width="364" height="125">
-                                  <Text align="CENTER">
-                                    <BitmapFont family="race_digits" size="82" color="#FFFFFFFF">
-                                      <Template>%02d:%02d<Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))/60)" />
-                                        <Parameter expression="floor(abs((-[COMPLICATION.RANGED_VALUE_VALUE]))%60)" />
-                                      </Template>
-                                    </BitmapFont>
-                                  </Text>
-                                </PartText>
-                              </Default>
-                            </Condition>
-                          </Default>
-                        </Condition>
-                      </Default>
-                    </Condition>
-                    <PartText x="115" y="120" width="250" height="44">
-                      <Text align="CENTER">
-                        <Font family="SYNC_TO_DEVICE" size="25" color="#FFADBFC9">
-                          <Template>%s:%s<Parameter expression="([IS_24_HOUR_MODE] ? [HOUR_0_23_Z] : [HOUR_1_12])" />
-                            <Parameter expression="[MINUTE_Z]" />
-                          </Template>
-                        </Font>
-                      </Text>
-                    </PartText>
-                    <Condition>
-                      <Expressions>
-                        <Expression name="test">[COMPLICATION.TEXT] != "running"</Expression>
-                      </Expressions>
-                      <Compare expression="test">
-                        <PartText x="105" y="303" width="270" height="52">
-                          <Text align="CENTER">
-                            <Font family="SYNC_TO_DEVICE" size="22" color="#FF00A1FF">@string/paused</Font>
-                          </Text>
-                        </PartText>
-                      </Compare>
-                    </Condition>
-                  </Group>
+                  <Condition>
+                    <Expressions>
+                      <Expression name="test">[COMPLICATION.TEXT] == "running"</Expression>
+                    </Expressions>
+                    <Compare expression="test">
+                      <Condition>
+                        <Expressions>
+                          <Expression name="test">(([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400) &gt; 0</Expression>
+                        </Expressions>
+                        <Compare expression="test">
+                          <PartDraw x="0" y="0" width="480" height="480">
+                            <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                              <Stroke color="#FF172C36" thickness="21" />
+                            </Arc>
+                          </PartDraw>
+                          <PartDraw x="0" y="0" width="480" height="480">
+                            <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                              <Transform target="endAngle" value="360 * clamp(((((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400)-1)%60)+1)/60.0,0,1)" />
+                              <Stroke color="#FF9D693A" thickness="21" />
+                            </Arc>
+                          </PartDraw>
+                          <PartImage x="0" y="194" width="28" height="92" tintColor="#FF98ADBA">
+                            <Image resource="wordmark" />
+                          </PartImage>
+                          <PartText x="112" y="50" width="256" height="43">
+                            <Text align="CENTER">
+                              <BitmapFont family="race_digits" size="33" color="#FF9D693A">
+                                <Template>%02d:%02d<Parameter expression="floor((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400)/60)" />
+                                  <Parameter expression="floor((([COMPLICATION.RANGED_VALUE_VALUE]-([SECONDS_SINCE_EPOCH]%86400))-(floor([SECONDS_SINCE_EPOCH]/86400)+[COMPLICATION.RANGED_VALUE_MIN])*86400)%60)" />
+                                </Template>
+                              </BitmapFont>
+                            </Text>
+                          </PartText>
+                        </Compare>
+                      </Condition>
+                    </Compare>
+                    <Default>
+                      <Condition>
+                        <Expressions>
+                          <Expression name="test">[COMPLICATION.RANGED_VALUE_VALUE] &gt; 0</Expression>
+                        </Expressions>
+                        <Compare expression="test">
+                          <PartDraw x="0" y="0" width="480" height="480">
+                            <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                              <Stroke color="#FF172C36" thickness="21" />
+                            </Arc>
+                          </PartDraw>
+                          <PartDraw x="0" y="0" width="480" height="480">
+                            <Arc centerX="240" centerY="240" width="444" height="444" startAngle="0" endAngle="360">
+                              <Transform target="endAngle" value="360 * clamp(((([COMPLICATION.RANGED_VALUE_VALUE]-1)%60)+1)/60.0,0,1)" />
+                              <Stroke color="#FF9D693A" thickness="21" />
+                            </Arc>
+                          </PartDraw>
+                          <PartImage x="0" y="194" width="28" height="92" tintColor="#FF98ADBA">
+                            <Image resource="wordmark" />
+                          </PartImage>
+                          <PartText x="112" y="50" width="256" height="43">
+                            <Text align="CENTER">
+                              <BitmapFont family="race_digits" size="33" color="#FF9D693A">
+                                <Template>%02d:%02d<Parameter expression="floor([COMPLICATION.RANGED_VALUE_VALUE]/60)" />
+                                  <Parameter expression="floor([COMPLICATION.RANGED_VALUE_VALUE]%60)" />
+                                </Template>
+                              </BitmapFont>
+                            </Text>
+                          </PartText>
+                          <PartText x="167" y="57" width="22" height="24">
+                            <Text align="CENTER">
+                              <Font family="SYNC_TO_DEVICE" size="15" color="#FF9D693A">Ⅱ</Font>
+                            </Text>
+                          </PartText>
+                        </Compare>
+                      </Condition>
+                    </Default>
+                  </Condition>
                 </Group>
               </Default>
             </Condition>

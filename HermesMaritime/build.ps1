@@ -35,7 +35,7 @@ foreach($target in @('face','engine')) {
   Run "$BuildTools/aapt2.exe" (@('link','-I',$Platform,'--manifest',"$project/AndroidManifest.xml",'--min-sdk-version','36','--target-sdk-version','36','-o',$raw,"$dir/$target.zip")+$extra)
   if($target -eq 'engine'){Run jar @('uf',$raw,'-C',"$dir/dex",'classes.dex')}
   Run "$BuildTools/zipalign.exe" @('-f','4',$raw,"$dir/aligned-$target.apk")
-  $out=if($target -eq "face"){"$dir/validated-face.apk"}else{"$PSScriptRoot/HermesMaritime-1.0.apk"}
+  $out=if($target -eq "face"){"$dir/validated-face.apk"}else{"$PSScriptRoot/HermesMaritime-1.1.apk"}
   Run "$BuildTools/apksigner.bat" @('sign','--v4-signing-enabled','false','--ks',$key,'--ks-pass','pass:android','--ks-key-alias','artist','--out',$out,"$dir/aligned-$target.apk")
   Run "$BuildTools/apksigner.bat" @('verify','--verbose',$out)
   if($target -eq "face"){

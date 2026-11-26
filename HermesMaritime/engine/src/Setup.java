@@ -56,7 +56,7 @@ public final class Setup extends Activity {
         if(getPackageManager().resolveService(new Intent("com.google.wear.ACTION_PUSH_WATCH_FACES"),PackageManager.MATCH_SYSTEM_ONLY)==null){fail(new IllegalStateException("System watch face service unavailable"));return;}
         manager.listWatchFaceSlots(getMainExecutor(),callback((ListWatchFaceSlotsResponse response)->{
             for(WatchFaceSlot face:response.getInstalledWatchFaceSlots()){
-                if(face.getPackageName().equals(getPackageName()+".watchfacepush.maritime") && face.getVersionCode()>=6){ready(face);return;}
+                if(face.getPackageName().equals(getPackageName()+".watchfacepush.maritime") && face.getVersionCode()>=8){ready(face);return;}
                 if(face.getPackageName().equals(getPackageName()+".watchfacepush.maritime")){
 
                     push(face.getSlotId());return;

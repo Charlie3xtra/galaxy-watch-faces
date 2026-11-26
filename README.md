@@ -110,10 +110,10 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 
 ## Hermès 航海 · Hermès Maritime
 
-| 正常读时 | 帆船赛倒计时 | 息屏 |
+| 正常读时 | 系统倒计时 | 息屏 |
 | --- | --- | --- |
-| <img src="HermesMaritime/screenshots/active.png" width="180" alt="蓝色秒圈"> | <img src="HermesMaritime/screenshots/countdown.png" width="180" alt="最后六秒"> | <img src="HermesMaritime/screenshots/ambient.png" width="180" alt="息屏蓝白数字"> |
+| <img src="HermesMaritime/screenshots/active.png" width="180" alt="蓝色秒圈"> | <img src="HermesMaritime/screenshots/countdown.png" width="180" alt="系统倒计时"> | <img src="HermesMaritime/screenshots/ambient.png" width="180" alt="息屏蓝白数字"> |
 
-[下载 Hermès 航海 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/hermes-maritime-1.0) · [起航后正计时实拍](HermesMaritime/screenshots/countup.png)
+[下载 Hermès 航海 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/hermes-maritime-1.1) · [系统计时器暂停实拍](HermesMaritime/screenshots/paused.png)
 
-单 APK，安装后打开一次登记 WFF 表盘。亮屏使用 24S132 的 Squall 专用 Cape Cod 字体、Hermès 字标和黑白配色。秒圈以圆屏轮廓重排。点按表盘可设定 1 至 60 分钟倒计时，初始为 5 分钟。跑表支持暂停、继续、就近整分钟同步、还原和到零自动正计时。无需后台常驻。起航音、原版触感和 Apple Ultra 操作按钮未移植。息屏字形使用固件 Link 可变字体，字间连接与原版过渡尚未逐组合核验。
+单 APK。安装后打开一次登记表盘。左侧字标沿秒圈弯曲。开启手表的通知读取授权后，直接使用三星系统计时器；表盘会在双行时钟上方显示系统通知中的剩余时间，暂停时显示暂停标记，取消后恢复蓝色秒圈。橙圈表示当前一分钟的剩余秒数。没有独立计时设置页。通知由设备本地处理，仅解析三星计时器数据。在测试手表上未找到可从应用启动的通知授权设置页面；已授权的测试设备日常使用无需调试。若三星更新其计时通知格式，可能需要更新适配。
