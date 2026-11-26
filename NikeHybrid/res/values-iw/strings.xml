@@ -21,4 +21,23 @@
   <string name="p9">כחול מלכותי</string>
   <string name="p10">חול מדבר</string>
   <string name="p11">ירקרק חיוור</string>
+  <string name="top_left">שמאל למעלה</string>
+  <string name="corner_top_left">שמאל למעלה</string>
+  <string name="top_right">ימין למעלה</string>
+  <string name="corner_top_right">ימין למעלה</string>
+  <string name="bottom_left">שמאל למטה</string>
+  <string name="corner_bottom_left">שמאל למטה</string>
+  <string name="bottom_right">ימין למטה</string>
+  <string name="corner_bottom_right">ימין למטה</string>
+  <string name="quick_phone">ביצוע שיחת טלפון</string>
+  <string name="quick_workout">אימון</string>
+  <string name="quick_messages">הודעות</string>
+  <string name="quick_music">מוזיקה</string>
+  <string name="quick_alarm">שעון מעורר</string>
+  <string name="quick_heartrate">קצב לב</string>
+  <string name="quick_battery">סוללה</string>
+  <string name="quick_date">התאריך של היום</string>
+  <string name="quick_off">ללא</string>
+  <string name="bezel">באמצע למטה</string>
+  <string name="music_caption">מוזיקה</string>
 </resources>

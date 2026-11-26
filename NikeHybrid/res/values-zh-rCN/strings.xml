@@ -21,4 +21,23 @@
   <string name="p9">心动蓝色</string>
   <string name="p10">沙丘色</string>
   <string name="p11">亮云杉色</string>
+  <string name="top_left">左上</string>
+  <string name="corner_top_left">左上</string>
+  <string name="top_right">右上</string>
+  <string name="corner_top_right">右上</string>
+  <string name="bottom_left">左下</string>
+  <string name="corner_bottom_left">左下</string>
+  <string name="bottom_right">右下</string>
+  <string name="corner_bottom_right">右下</string>
+  <string name="quick_phone">打电话</string>
+  <string name="quick_workout">体能训练</string>
+  <string name="quick_messages">信息</string>
+  <string name="quick_music">音乐</string>
+  <string name="quick_alarm">闹钟</string>
+  <string name="quick_heartrate">心率</string>
+  <string name="quick_battery">电量</string>
+  <string name="quick_date">今日日期</string>
+  <string name="quick_off">关闭</string>
+  <string name="bezel">底部居中</string>
+  <string name="music_caption">音乐</string>
 </resources>

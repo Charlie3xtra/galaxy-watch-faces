@@ -21,4 +21,23 @@
   <string name="p9">Royal Pulse</string>
   <string name="p10">Desert Sand</string>
   <string name="p11">Spruce Aura</string>
+  <string name="top_left">Uppe till vänster</string>
+  <string name="corner_top_left">Uppe till vänster</string>
+  <string name="top_right">Uppe till höger</string>
+  <string name="corner_top_right">Uppe till höger</string>
+  <string name="bottom_left">Nedtill vänster</string>
+  <string name="corner_bottom_left">Nedtill vänster</string>
+  <string name="bottom_right">Nedtill höger</string>
+  <string name="corner_bottom_right">Nedtill höger</string>
+  <string name="quick_phone">Ring ett samtal</string>
+  <string name="quick_workout">Träning</string>
+  <string name="quick_messages">Meddelanden</string>
+  <string name="quick_music">Musik</string>
+  <string name="quick_alarm">Alarm</string>
+  <string name="quick_heartrate">Puls</string>
+  <string name="quick_battery">Batteri</string>
+  <string name="quick_date">Dagens datum</string>
+  <string name="quick_off">Av</string>
+  <string name="bezel">Nedtill mitten</string>
+  <string name="music_caption">MUSIK</string>
 </resources>

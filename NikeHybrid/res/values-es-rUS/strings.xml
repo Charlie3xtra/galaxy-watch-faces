@@ -21,4 +21,23 @@
   <string name="p9">Azul deportivo</string>
   <string name="p10">Arena del desierto</string>
   <string name="p11">Halo abeto</string>
+  <string name="top_left">Arriba izquierda</string>
+  <string name="corner_top_left">Arriba izquierda</string>
+  <string name="top_right">Arriba derecha</string>
+  <string name="corner_top_right">Arriba derecha</string>
+  <string name="bottom_left">Abajo izquierda</string>
+  <string name="corner_bottom_left">Abajo izquierda</string>
+  <string name="bottom_right">Abajo derecha</string>
+  <string name="corner_bottom_right">Abajo derecha</string>
+  <string name="quick_phone">Realizar una llamada</string>
+  <string name="quick_workout">Entrenamiento</string>
+  <string name="quick_messages">Mensajes</string>
+  <string name="quick_music">Música</string>
+  <string name="quick_alarm">Alarma</string>
+  <string name="quick_heartrate">Frecuencia Cardiaca</string>
+  <string name="quick_battery">Batería</string>
+  <string name="quick_date">Fecha de hoy</string>
+  <string name="quick_off">No</string>
+  <string name="bezel">Abajo en medio</string>
+  <string name="music_caption">MÚSICA</string>
 </resources>

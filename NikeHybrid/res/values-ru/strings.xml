@@ -21,4 +21,23 @@
   <string name="p9">Синяя пастель</string>
   <string name="p10">Песчаная пустыня</string>
   <string name="p11">Еловая дымка</string>
+  <string name="top_left">Вверху слева</string>
+  <string name="corner_top_left">Вверху слева</string>
+  <string name="top_right">Вверху справа</string>
+  <string name="corner_top_right">Вверху справа</string>
+  <string name="bottom_left">Внизу слева</string>
+  <string name="corner_bottom_left">Внизу слева</string>
+  <string name="bottom_right">Внизу справа</string>
+  <string name="corner_bottom_right">Внизу справа</string>
+  <string name="quick_phone">Совершить вызов</string>
+  <string name="quick_workout">Тренировка</string>
+  <string name="quick_messages">Сообщения</string>
+  <string name="quick_music">Музыка</string>
+  <string name="quick_alarm">Будильник</string>
+  <string name="quick_heartrate">Пульс</string>
+  <string name="quick_battery">Заряд</string>
+  <string name="quick_date">Сегодняшняя дата</string>
+  <string name="quick_off">Выкл.</string>
+  <string name="bezel">Внизу посередине</string>
+  <string name="music_caption">МУЗЫКА</string>
 </resources>

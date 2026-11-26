@@ -21,4 +21,23 @@
   <string name="p9">Królewski lazur</string>
   <string name="p10">Pustynny piasek</string>
   <string name="p11">Delikatna zieleń</string>
+  <string name="top_left">Lewa górna</string>
+  <string name="corner_top_left">Lewa górna</string>
+  <string name="top_right">Prawa górna</string>
+  <string name="corner_top_right">Prawa górna</string>
+  <string name="bottom_left">Lewa dolna</string>
+  <string name="corner_bottom_left">Lewa dolna</string>
+  <string name="bottom_right">Prawa dolna</string>
+  <string name="corner_bottom_right">Prawa dolna</string>
+  <string name="quick_phone">Połącz</string>
+  <string name="quick_workout">Trening</string>
+  <string name="quick_messages">Wiadomości</string>
+  <string name="quick_music">Muzyka</string>
+  <string name="quick_alarm">Alarm</string>
+  <string name="quick_heartrate">Tętno</string>
+  <string name="quick_battery">Bateria</string>
+  <string name="quick_date">Dzisiejsza data</string>
+  <string name="quick_off">Wył.</string>
+  <string name="bezel">Środkowa dolna</string>
+  <string name="music_caption">MUZYKA</string>
 </resources>

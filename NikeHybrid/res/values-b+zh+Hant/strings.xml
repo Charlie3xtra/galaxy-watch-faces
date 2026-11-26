@@ -21,4 +21,23 @@
   <string name="p9">皇族藍色</string>
   <string name="p10">沙丘色</string>
   <string name="p11">雲杉灰綠色</string>
+  <string name="top_left">左上</string>
+  <string name="corner_top_left">左上</string>
+  <string name="top_right">右上</string>
+  <string name="corner_top_right">右上</string>
+  <string name="bottom_left">左下</string>
+  <string name="corner_bottom_left">左下</string>
+  <string name="bottom_right">右下</string>
+  <string name="corner_bottom_right">右下</string>
+  <string name="quick_phone">通話</string>
+  <string name="quick_workout">體能訓練</string>
+  <string name="quick_messages">訊息</string>
+  <string name="quick_music">音樂</string>
+  <string name="quick_alarm">鬧鐘</string>
+  <string name="quick_heartrate">心率</string>
+  <string name="quick_battery">電池</string>
+  <string name="quick_date">今天日期</string>
+  <string name="quick_off">關閉</string>
+  <string name="bezel">中下</string>
+  <string name="music_caption">音樂</string>
 </resources>

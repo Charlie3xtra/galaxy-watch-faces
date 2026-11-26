@@ -21,4 +21,23 @@
   <string name="p9">Royal</string>
   <string name="p10">Areia do Deserto</string>
   <string name="p11">Spruce Aura</string>
+  <string name="top_left">Superior Esquerda</string>
+  <string name="corner_top_left">Superior Esquerda</string>
+  <string name="top_right">Superior Direita</string>
+  <string name="corner_top_right">Superior Direita</string>
+  <string name="bottom_left">Inferior Esquerda</string>
+  <string name="corner_bottom_left">Inferior Esquerda</string>
+  <string name="bottom_right">Inferior Direita</string>
+  <string name="corner_bottom_right">Inferior Direita</string>
+  <string name="quick_phone">Fazer uma Chamada</string>
+  <string name="quick_workout">Exercício</string>
+  <string name="quick_messages">Mensagens</string>
+  <string name="quick_music">Música</string>
+  <string name="quick_alarm">Alarme</string>
+  <string name="quick_heartrate">Frequência Cardíaca</string>
+  <string name="quick_battery">Bateria</string>
+  <string name="quick_date">Data de Hoje</string>
+  <string name="quick_off">Desativado</string>
+  <string name="bezel">Inferior Central</string>
+  <string name="music_caption">MÚSICA</string>
 </resources>

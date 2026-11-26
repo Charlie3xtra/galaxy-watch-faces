@@ -21,4 +21,23 @@
   <string name="p9">Puls regal</string>
   <string name="p10">Nisip deșertic</string>
   <string name="p11">Aură verde</string>
+  <string name="top_left">Stânga sus</string>
+  <string name="corner_top_left">Stânga sus</string>
+  <string name="top_right">Dreapta sus</string>
+  <string name="corner_top_right">Dreapta sus</string>
+  <string name="bottom_left">Stânga jos</string>
+  <string name="corner_bottom_left">Stânga jos</string>
+  <string name="bottom_right">Dreapta jos</string>
+  <string name="corner_bottom_right">Dreapta jos</string>
+  <string name="quick_phone">Efectuați un apel</string>
+  <string name="quick_workout">Exerciții</string>
+  <string name="quick_messages">Mesaje</string>
+  <string name="quick_music">Muzică</string>
+  <string name="quick_alarm">Alarme</string>
+  <string name="quick_heartrate">Ritm cardiac</string>
+  <string name="quick_battery">Baterie</string>
+  <string name="quick_date">Data de astăzi</string>
+  <string name="quick_off">Nimic</string>
+  <string name="bezel">Mijloc jos</string>
+  <string name="music_caption">MUZICĂ</string>
 </resources>

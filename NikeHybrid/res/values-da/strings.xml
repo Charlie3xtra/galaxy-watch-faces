@@ -21,4 +21,23 @@
   <string name="p9">Royal Pulse</string>
   <string name="p10">Desert Sand</string>
   <string name="p11">Spruce Aura</string>
+  <string name="top_left">Øverst til venstre</string>
+  <string name="corner_top_left">Øverst til venstre</string>
+  <string name="top_right">Øverst til højre</string>
+  <string name="corner_top_right">Øverst til højre</string>
+  <string name="bottom_left">Nederst til venstre</string>
+  <string name="corner_bottom_left">Nederst til venstre</string>
+  <string name="bottom_right">Nederst til højre</string>
+  <string name="corner_bottom_right">Nederst til højre</string>
+  <string name="quick_phone">Foretag et opkald</string>
+  <string name="quick_workout">Træning</string>
+  <string name="quick_messages">Beskeder</string>
+  <string name="quick_music">Musik</string>
+  <string name="quick_alarm">Alarm</string>
+  <string name="quick_heartrate">Puls</string>
+  <string name="quick_battery">Batteri</string>
+  <string name="quick_date">Dags dato</string>
+  <string name="quick_off">Fra</string>
+  <string name="bezel">Nederst midt for</string>
+  <string name="music_caption">MUSIK</string>
 </resources>

@@ -24,6 +24,50 @@
       <ListOption id="full" displayName="full" />
       <ListOption id="circle" displayName="circle" />
     </ListConfiguration>
+    <ListConfiguration id="art_top_left" displayName="corner_top_left" defaultValue="phone">
+      <ListOption id="phone" displayName="quick_phone" />
+      <ListOption id="workout" displayName="quick_workout" />
+      <ListOption id="messages" displayName="quick_messages" />
+      <ListOption id="music" displayName="quick_music" />
+      <ListOption id="alarm" displayName="quick_alarm" />
+      <ListOption id="heartrate" displayName="quick_heartrate" />
+      <ListOption id="battery" displayName="quick_battery" />
+      <ListOption id="date" displayName="quick_date" />
+      <ListOption id="off" displayName="quick_off" />
+    </ListConfiguration>
+    <ListConfiguration id="art_top_right" displayName="corner_top_right" defaultValue="workout">
+      <ListOption id="phone" displayName="quick_phone" />
+      <ListOption id="workout" displayName="quick_workout" />
+      <ListOption id="messages" displayName="quick_messages" />
+      <ListOption id="music" displayName="quick_music" />
+      <ListOption id="alarm" displayName="quick_alarm" />
+      <ListOption id="heartrate" displayName="quick_heartrate" />
+      <ListOption id="battery" displayName="quick_battery" />
+      <ListOption id="date" displayName="quick_date" />
+      <ListOption id="off" displayName="quick_off" />
+    </ListConfiguration>
+    <ListConfiguration id="art_bottom_left" displayName="corner_bottom_left" defaultValue="messages">
+      <ListOption id="phone" displayName="quick_phone" />
+      <ListOption id="workout" displayName="quick_workout" />
+      <ListOption id="messages" displayName="quick_messages" />
+      <ListOption id="music" displayName="quick_music" />
+      <ListOption id="alarm" displayName="quick_alarm" />
+      <ListOption id="heartrate" displayName="quick_heartrate" />
+      <ListOption id="battery" displayName="quick_battery" />
+      <ListOption id="date" displayName="quick_date" />
+      <ListOption id="off" displayName="quick_off" />
+    </ListConfiguration>
+    <ListConfiguration id="art_bottom_right" displayName="corner_bottom_right" defaultValue="music">
+      <ListOption id="phone" displayName="quick_phone" />
+      <ListOption id="workout" displayName="quick_workout" />
+      <ListOption id="messages" displayName="quick_messages" />
+      <ListOption id="music" displayName="quick_music" />
+      <ListOption id="alarm" displayName="quick_alarm" />
+      <ListOption id="heartrate" displayName="quick_heartrate" />
+      <ListOption id="battery" displayName="quick_battery" />
+      <ListOption id="date" displayName="quick_date" />
+      <ListOption id="off" displayName="quick_off" />
+    </ListConfiguration>
   </UserConfigurations>
   <Scene backgroundColor="#000000">
     <Group name="interactive" x="0" y="0" width="480" height="480" alpha="255">
@@ -2308,5 +2352,1003 @@
         </ListConfiguration>
       </Group>
     </Group>
+    <ListConfiguration id="art_top_left">
+      <ListOption id="phone">
+        <Group name="top_left_phone" x="71" y="55" width="66" height="66">
+          <Launch target="PHONE" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="17" y="17" width="32" height="32" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_phone" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="workout">
+        <Group name="top_left_workout" x="71" y="55" width="66" height="66">
+          <Launch target="com.samsung.android.wear.shealth" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="16" y="14" width="34" height="38" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_workout" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="messages">
+        <Group name="top_left_messages" x="71" y="55" width="66" height="66">
+          <Launch target="MESSAGE" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="13" y="16" width="40" height="33" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_messages" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="music">
+        <Group name="top_left_music" x="71" y="55" width="66" height="66">
+          <Launch target="MUSIC_PLAYER" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartText x="-6" y="3" width="67" height="24" angle="-35">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="16" color="[CONFIGURATION.palette.0]">@string/music_caption</Font>
+            </Text>
+          </PartText>
+          <PartImage x="31" y="32" width="24" height="27" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_note" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="alarm">
+        <Group name="top_left_alarm" x="71" y="55" width="66" height="66">
+          <Launch target="ALARM" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="17" y="16" width="32" height="34" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_alarm" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="heartrate">
+        <Group name="top_left_heartrate" x="71" y="55" width="66" height="66">
+          <Launch target="HEALTH_HEART_RATE" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="15" y="17" width="35" height="32" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_heartrate" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="battery">
+        <Group name="top_left_battery" x="71" y="55" width="66" height="66">
+          <Launch target="BATTERY_STATUS" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="66" height="66">
+            <Arc centerX="33" centerY="33" width="56" height="56" startAngle="0" endAngle="360">
+              <Transform target="endAngle" value="[BATTERY_PERCENT]*3.6" />
+              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
+            </Arc>
+          </PartDraw>
+          <PartText x="4" y="19" width="58" height="29" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[BATTERY_PERCENT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </ListOption>
+      <ListOption id="date">
+        <Group name="top_left_date" x="71" y="55" width="66" height="66">
+          <Launch target="CALENDAR" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartText x="5" y="7" width="56" height="20" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="13" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[DAY_OF_WEEK_S]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+          <PartText x="5" y="25" width="56" height="34" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="24" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[DAY_Z]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </ListOption>
+      <ListOption id="off">
+        <Group name="top_left_off" x="0" y="0" width="1" height="1" />
+      </ListOption>
+    </ListConfiguration>
+    <ComplicationSlot x="70" y="54" width="68" height="68" slotId="1" displayName="top_left" supportedTypes="EMPTY SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE RANGED_VALUE GOAL_PROGRESS">
+      <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" />
+      <BoundingOval x="0" y="0" width="68" height="68" />
+      <Complication type="EMPTY" />
+      <Complication type="SHORT_TEXT">
+        <Group name="top_left_SHORT_TEXT" x="0" y="0" width="68" height="68">
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Ellipse x="0" y="0" width="68" height="68">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <PartText x="4" y="29" width="60" height="30" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <Group name="top_left_MONOCHROMATIC_IMAGE" x="0" y="0" width="68" height="68">
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Ellipse x="0" y="0" width="68" height="68">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="14" y="14" width="40" height="40" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+        </Group>
+      </Complication>
+      <Complication type="SMALL_IMAGE">
+        <Group name="top_left_SMALL_IMAGE" x="0" y="0" width="68" height="68">
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Ellipse x="0" y="0" width="68" height="68">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="14" y="14" width="40" height="40">
+            <Image resource="[COMPLICATION.SMALL_IMAGE]" />
+          </PartImage>
+        </Group>
+      </Complication>
+      <Complication type="RANGED_VALUE">
+        <Group name="top_left_RANGED_VALUE" x="0" y="0" width="68" height="68">
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Ellipse x="0" y="0" width="68" height="68">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Arc centerX="34" centerY="34" width="61" height="61" startAngle="0" endAngle="360">
+              <Transform target="endAngle" value="clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(0.0001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)*360" />
+              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
+            </Arc>
+          </PartDraw>
+          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <PartText x="4" y="29" width="60" height="30" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="GOAL_PROGRESS">
+        <Group name="top_left_GOAL_PROGRESS" x="0" y="0" width="68" height="68">
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Ellipse x="0" y="0" width="68" height="68">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Arc centerX="34" centerY="34" width="61" height="61" startAngle="0" endAngle="360">
+              <Transform target="endAngle" value="clamp([COMPLICATION.GOAL_PROGRESS_VALUE]/max(0.0001,[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]),0,1)*360" />
+              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
+            </Arc>
+          </PartDraw>
+          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <PartText x="4" y="29" width="60" height="30" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Variant mode="AMBIENT" target="alpha" value="76" />
+    </ComplicationSlot>
+    <ListConfiguration id="art_top_right">
+      <ListOption id="phone">
+        <Group name="top_right_phone" x="343" y="55" width="66" height="66">
+          <Launch target="PHONE" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="17" y="17" width="32" height="32" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_phone" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="workout">
+        <Group name="top_right_workout" x="343" y="55" width="66" height="66">
+          <Launch target="com.samsung.android.wear.shealth" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="16" y="14" width="34" height="38" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_workout" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="messages">
+        <Group name="top_right_messages" x="343" y="55" width="66" height="66">
+          <Launch target="MESSAGE" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="13" y="16" width="40" height="33" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_messages" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="music">
+        <Group name="top_right_music" x="343" y="55" width="66" height="66">
+          <Launch target="MUSIC_PLAYER" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartText x="-6" y="3" width="67" height="24" angle="-35">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="16" color="[CONFIGURATION.palette.0]">@string/music_caption</Font>
+            </Text>
+          </PartText>
+          <PartImage x="31" y="32" width="24" height="27" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_note" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="alarm">
+        <Group name="top_right_alarm" x="343" y="55" width="66" height="66">
+          <Launch target="ALARM" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="17" y="16" width="32" height="34" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_alarm" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="heartrate">
+        <Group name="top_right_heartrate" x="343" y="55" width="66" height="66">
+          <Launch target="HEALTH_HEART_RATE" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="15" y="17" width="35" height="32" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_heartrate" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="battery">
+        <Group name="top_right_battery" x="343" y="55" width="66" height="66">
+          <Launch target="BATTERY_STATUS" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="66" height="66">
+            <Arc centerX="33" centerY="33" width="56" height="56" startAngle="0" endAngle="360">
+              <Transform target="endAngle" value="[BATTERY_PERCENT]*3.6" />
+              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
+            </Arc>
+          </PartDraw>
+          <PartText x="4" y="19" width="58" height="29" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[BATTERY_PERCENT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </ListOption>
+      <ListOption id="date">
+        <Group name="top_right_date" x="343" y="55" width="66" height="66">
+          <Launch target="CALENDAR" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartText x="5" y="7" width="56" height="20" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="13" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[DAY_OF_WEEK_S]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+          <PartText x="5" y="25" width="56" height="34" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="24" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[DAY_Z]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </ListOption>
+      <ListOption id="off">
+        <Group name="top_right_off" x="0" y="0" width="1" height="1" />
+      </ListOption>
+    </ListConfiguration>
+    <ComplicationSlot x="342" y="54" width="68" height="68" slotId="2" displayName="top_right" supportedTypes="EMPTY SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE RANGED_VALUE GOAL_PROGRESS">
+      <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" />
+      <BoundingOval x="0" y="0" width="68" height="68" />
+      <Complication type="EMPTY" />
+      <Complication type="SHORT_TEXT">
+        <Group name="top_right_SHORT_TEXT" x="0" y="0" width="68" height="68">
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Ellipse x="0" y="0" width="68" height="68">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <PartText x="4" y="29" width="60" height="30" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <Group name="top_right_MONOCHROMATIC_IMAGE" x="0" y="0" width="68" height="68">
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Ellipse x="0" y="0" width="68" height="68">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="14" y="14" width="40" height="40" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+        </Group>
+      </Complication>
+      <Complication type="SMALL_IMAGE">
+        <Group name="top_right_SMALL_IMAGE" x="0" y="0" width="68" height="68">
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Ellipse x="0" y="0" width="68" height="68">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="14" y="14" width="40" height="40">
+            <Image resource="[COMPLICATION.SMALL_IMAGE]" />
+          </PartImage>
+        </Group>
+      </Complication>
+      <Complication type="RANGED_VALUE">
+        <Group name="top_right_RANGED_VALUE" x="0" y="0" width="68" height="68">
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Ellipse x="0" y="0" width="68" height="68">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Arc centerX="34" centerY="34" width="61" height="61" startAngle="0" endAngle="360">
+              <Transform target="endAngle" value="clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(0.0001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)*360" />
+              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
+            </Arc>
+          </PartDraw>
+          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <PartText x="4" y="29" width="60" height="30" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="GOAL_PROGRESS">
+        <Group name="top_right_GOAL_PROGRESS" x="0" y="0" width="68" height="68">
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Ellipse x="0" y="0" width="68" height="68">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Arc centerX="34" centerY="34" width="61" height="61" startAngle="0" endAngle="360">
+              <Transform target="endAngle" value="clamp([COMPLICATION.GOAL_PROGRESS_VALUE]/max(0.0001,[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]),0,1)*360" />
+              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
+            </Arc>
+          </PartDraw>
+          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <PartText x="4" y="29" width="60" height="30" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Variant mode="AMBIENT" target="alpha" value="76" />
+    </ComplicationSlot>
+    <ListConfiguration id="art_bottom_left">
+      <ListOption id="phone">
+        <Group name="bottom_left_phone" x="71" y="359" width="66" height="66">
+          <Launch target="PHONE" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="17" y="17" width="32" height="32" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_phone" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="workout">
+        <Group name="bottom_left_workout" x="71" y="359" width="66" height="66">
+          <Launch target="com.samsung.android.wear.shealth" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="16" y="14" width="34" height="38" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_workout" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="messages">
+        <Group name="bottom_left_messages" x="71" y="359" width="66" height="66">
+          <Launch target="MESSAGE" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="13" y="16" width="40" height="33" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_messages" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="music">
+        <Group name="bottom_left_music" x="71" y="359" width="66" height="66">
+          <Launch target="MUSIC_PLAYER" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartText x="-6" y="3" width="67" height="24" angle="-35">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="16" color="[CONFIGURATION.palette.0]">@string/music_caption</Font>
+            </Text>
+          </PartText>
+          <PartImage x="31" y="32" width="24" height="27" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_note" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="alarm">
+        <Group name="bottom_left_alarm" x="71" y="359" width="66" height="66">
+          <Launch target="ALARM" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="17" y="16" width="32" height="34" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_alarm" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="heartrate">
+        <Group name="bottom_left_heartrate" x="71" y="359" width="66" height="66">
+          <Launch target="HEALTH_HEART_RATE" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="15" y="17" width="35" height="32" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_heartrate" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="battery">
+        <Group name="bottom_left_battery" x="71" y="359" width="66" height="66">
+          <Launch target="BATTERY_STATUS" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="66" height="66">
+            <Arc centerX="33" centerY="33" width="56" height="56" startAngle="0" endAngle="360">
+              <Transform target="endAngle" value="[BATTERY_PERCENT]*3.6" />
+              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
+            </Arc>
+          </PartDraw>
+          <PartText x="4" y="19" width="58" height="29" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[BATTERY_PERCENT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </ListOption>
+      <ListOption id="date">
+        <Group name="bottom_left_date" x="71" y="359" width="66" height="66">
+          <Launch target="CALENDAR" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartText x="5" y="7" width="56" height="20" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="13" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[DAY_OF_WEEK_S]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+          <PartText x="5" y="25" width="56" height="34" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="24" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[DAY_Z]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </ListOption>
+      <ListOption id="off">
+        <Group name="bottom_left_off" x="0" y="0" width="1" height="1" />
+      </ListOption>
+    </ListConfiguration>
+    <ComplicationSlot x="70" y="358" width="68" height="68" slotId="3" displayName="bottom_left" supportedTypes="EMPTY SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE RANGED_VALUE GOAL_PROGRESS">
+      <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" />
+      <BoundingOval x="0" y="0" width="68" height="68" />
+      <Complication type="EMPTY" />
+      <Complication type="SHORT_TEXT">
+        <Group name="bottom_left_SHORT_TEXT" x="0" y="0" width="68" height="68">
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Ellipse x="0" y="0" width="68" height="68">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <PartText x="4" y="29" width="60" height="30" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <Group name="bottom_left_MONOCHROMATIC_IMAGE" x="0" y="0" width="68" height="68">
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Ellipse x="0" y="0" width="68" height="68">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="14" y="14" width="40" height="40" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+        </Group>
+      </Complication>
+      <Complication type="SMALL_IMAGE">
+        <Group name="bottom_left_SMALL_IMAGE" x="0" y="0" width="68" height="68">
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Ellipse x="0" y="0" width="68" height="68">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="14" y="14" width="40" height="40">
+            <Image resource="[COMPLICATION.SMALL_IMAGE]" />
+          </PartImage>
+        </Group>
+      </Complication>
+      <Complication type="RANGED_VALUE">
+        <Group name="bottom_left_RANGED_VALUE" x="0" y="0" width="68" height="68">
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Ellipse x="0" y="0" width="68" height="68">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Arc centerX="34" centerY="34" width="61" height="61" startAngle="0" endAngle="360">
+              <Transform target="endAngle" value="clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(0.0001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)*360" />
+              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
+            </Arc>
+          </PartDraw>
+          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <PartText x="4" y="29" width="60" height="30" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="GOAL_PROGRESS">
+        <Group name="bottom_left_GOAL_PROGRESS" x="0" y="0" width="68" height="68">
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Ellipse x="0" y="0" width="68" height="68">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Arc centerX="34" centerY="34" width="61" height="61" startAngle="0" endAngle="360">
+              <Transform target="endAngle" value="clamp([COMPLICATION.GOAL_PROGRESS_VALUE]/max(0.0001,[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]),0,1)*360" />
+              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
+            </Arc>
+          </PartDraw>
+          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <PartText x="4" y="29" width="60" height="30" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Variant mode="AMBIENT" target="alpha" value="76" />
+    </ComplicationSlot>
+    <ListConfiguration id="art_bottom_right">
+      <ListOption id="phone">
+        <Group name="bottom_right_phone" x="343" y="359" width="66" height="66">
+          <Launch target="PHONE" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="17" y="17" width="32" height="32" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_phone" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="workout">
+        <Group name="bottom_right_workout" x="343" y="359" width="66" height="66">
+          <Launch target="com.samsung.android.wear.shealth" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="16" y="14" width="34" height="38" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_workout" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="messages">
+        <Group name="bottom_right_messages" x="343" y="359" width="66" height="66">
+          <Launch target="MESSAGE" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="13" y="16" width="40" height="33" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_messages" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="music">
+        <Group name="bottom_right_music" x="343" y="359" width="66" height="66">
+          <Launch target="MUSIC_PLAYER" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartText x="-6" y="3" width="67" height="24" angle="-35">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="16" color="[CONFIGURATION.palette.0]">@string/music_caption</Font>
+            </Text>
+          </PartText>
+          <PartImage x="31" y="32" width="24" height="27" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_note" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="alarm">
+        <Group name="bottom_right_alarm" x="343" y="359" width="66" height="66">
+          <Launch target="ALARM" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="17" y="16" width="32" height="34" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_alarm" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="heartrate">
+        <Group name="bottom_right_heartrate" x="343" y="359" width="66" height="66">
+          <Launch target="HEALTH_HEART_RATE" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="15" y="17" width="35" height="32" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="corner_heartrate" />
+          </PartImage>
+        </Group>
+      </ListOption>
+      <ListOption id="battery">
+        <Group name="bottom_right_battery" x="343" y="359" width="66" height="66">
+          <Launch target="BATTERY_STATUS" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="66" height="66">
+            <Arc centerX="33" centerY="33" width="56" height="56" startAngle="0" endAngle="360">
+              <Transform target="endAngle" value="[BATTERY_PERCENT]*3.6" />
+              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
+            </Arc>
+          </PartDraw>
+          <PartText x="4" y="19" width="58" height="29" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[BATTERY_PERCENT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </ListOption>
+      <ListOption id="date">
+        <Group name="bottom_right_date" x="343" y="359" width="66" height="66">
+          <Launch target="CALENDAR" />
+          <Variant mode="AMBIENT" target="alpha" value="76" />
+          <PartDraw x="1" y="1" width="64" height="64">
+            <Ellipse x="0" y="0" width="64" height="64">
+              <Fill color="#FF1B1B1B" />
+            </Ellipse>
+          </PartDraw>
+          <PartText x="5" y="7" width="56" height="20" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="13" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[DAY_OF_WEEK_S]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+          <PartText x="5" y="25" width="56" height="34" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="24" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[DAY_Z]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </ListOption>
+      <ListOption id="off">
+        <Group name="bottom_right_off" x="0" y="0" width="1" height="1" />
+      </ListOption>
+    </ListConfiguration>
+    <ComplicationSlot x="342" y="358" width="68" height="68" slotId="4" displayName="bottom_right" supportedTypes="EMPTY SHORT_TEXT MONOCHROMATIC_IMAGE SMALL_IMAGE RANGED_VALUE GOAL_PROGRESS">
+      <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" />
+      <BoundingOval x="0" y="0" width="68" height="68" />
+      <Complication type="EMPTY" />
+      <Complication type="SHORT_TEXT">
+        <Group name="bottom_right_SHORT_TEXT" x="0" y="0" width="68" height="68">
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Ellipse x="0" y="0" width="68" height="68">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <PartText x="4" y="29" width="60" height="30" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <Group name="bottom_right_MONOCHROMATIC_IMAGE" x="0" y="0" width="68" height="68">
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Ellipse x="0" y="0" width="68" height="68">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="14" y="14" width="40" height="40" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+        </Group>
+      </Complication>
+      <Complication type="SMALL_IMAGE">
+        <Group name="bottom_right_SMALL_IMAGE" x="0" y="0" width="68" height="68">
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Ellipse x="0" y="0" width="68" height="68">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="14" y="14" width="40" height="40">
+            <Image resource="[COMPLICATION.SMALL_IMAGE]" />
+          </PartImage>
+        </Group>
+      </Complication>
+      <Complication type="RANGED_VALUE">
+        <Group name="bottom_right_RANGED_VALUE" x="0" y="0" width="68" height="68">
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Ellipse x="0" y="0" width="68" height="68">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Arc centerX="34" centerY="34" width="61" height="61" startAngle="0" endAngle="360">
+              <Transform target="endAngle" value="clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(0.0001,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)*360" />
+              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
+            </Arc>
+          </PartDraw>
+          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <PartText x="4" y="29" width="60" height="30" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="GOAL_PROGRESS">
+        <Group name="bottom_right_GOAL_PROGRESS" x="0" y="0" width="68" height="68">
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Ellipse x="0" y="0" width="68" height="68">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartDraw x="0" y="0" width="68" height="68">
+            <Arc centerX="34" centerY="34" width="61" height="61" startAngle="0" endAngle="360">
+              <Transform target="endAngle" value="clamp([COMPLICATION.GOAL_PROGRESS_VALUE]/max(0.0001,[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]),0,1)*360" />
+              <Stroke thickness="3" color="[CONFIGURATION.palette.0]" />
+            </Arc>
+          </PartDraw>
+          <PartImage x="24" y="8" width="20" height="20" tintColor="[CONFIGURATION.palette.0]">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <PartText x="4" y="29" width="60" height="30" angle="0">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="19" color="[CONFIGURATION.palette.0]">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Variant mode="AMBIENT" target="alpha" value="76" />
+    </ComplicationSlot>
+    <ComplicationSlot x="0" y="0" width="480" height="480" slotId="5" displayName="bezel" supportedTypes="EMPTY SHORT_TEXT LONG_TEXT">
+      <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" />
+      <BoundingArc centerX="240" centerY="240" width="448" height="448" thickness="34" startAngle="150" endAngle="210" direction="CLOCKWISE" />
+      <Complication type="EMPTY" />
+      <Complication type="SHORT_TEXT">
+        <PartText x="0" y="0" width="480" height="480">
+          <TextCircular centerX="240" centerY="240" width="450" height="450" startAngle="210" endAngle="150" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+            <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </TextCircular>
+        </PartText>
+      </Complication>
+      <Complication type="LONG_TEXT">
+        <PartText x="0" y="0" width="480" height="480">
+          <TextCircular centerX="240" centerY="240" width="450" height="450" startAngle="210" endAngle="150" direction="COUNTER_CLOCKWISE" align="CENTER" ellipsis="TRUE">
+            <Font family="SYNC_TO_DEVICE" size="17" color="[CONFIGURATION.palette.0]">
+              <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+              </Template>
+            </Font>
+          </TextCircular>
+        </PartText>
+      </Complication>
+      <Variant mode="AMBIENT" target="alpha" value="76" />
+    </ComplicationSlot>
   </Scene>
 </WatchFace>

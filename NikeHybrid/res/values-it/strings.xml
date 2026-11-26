@@ -21,4 +21,23 @@
   <string name="p9">Blu riviera</string>
   <string name="p10">Beige deserto</string>
   <string name="p11">Spruce Aura</string>
+  <string name="top_left">In alto a sinistra</string>
+  <string name="corner_top_left">In alto a sinistra</string>
+  <string name="top_right">In alto a destra</string>
+  <string name="corner_top_right">In alto a destra</string>
+  <string name="bottom_left">In basso a sinistra</string>
+  <string name="corner_bottom_left">In basso a sinistra</string>
+  <string name="bottom_right">In basso a destra</string>
+  <string name="corner_bottom_right">In basso a destra</string>
+  <string name="quick_phone">Chiama</string>
+  <string name="quick_workout">Allenamento</string>
+  <string name="quick_messages">Messaggi</string>
+  <string name="quick_music">Musica</string>
+  <string name="quick_alarm">Sveglia</string>
+  <string name="quick_heartrate">Battito cardiaco</string>
+  <string name="quick_battery">Batteria</string>
+  <string name="quick_date">Data attuale</string>
+  <string name="quick_off">Nessuna</string>
+  <string name="bezel">In basso al centro</string>
+  <string name="music_caption">MUSICA</string>
 </resources>

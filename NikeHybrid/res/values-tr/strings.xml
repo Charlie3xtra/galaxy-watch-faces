@@ -21,4 +21,23 @@
   <string name="p9">Bulutlu Mavi</string>
   <string name="p10">Çöl Kumu</string>
   <string name="p11">Ladin</string>
+  <string name="top_left">Sol Üst</string>
+  <string name="corner_top_left">Sol Üst</string>
+  <string name="top_right">Sağ Üst</string>
+  <string name="corner_top_right">Sağ Üst</string>
+  <string name="bottom_left">Sol Alt</string>
+  <string name="corner_bottom_left">Sol Alt</string>
+  <string name="bottom_right">Sağ Alt</string>
+  <string name="corner_bottom_right">Sağ Alt</string>
+  <string name="quick_phone">Telefon Edin</string>
+  <string name="quick_workout">Antrenman</string>
+  <string name="quick_messages">Mesajlar</string>
+  <string name="quick_music">Müzik</string>
+  <string name="quick_alarm">Alarm</string>
+  <string name="quick_heartrate">Kalp Atış Hızı</string>
+  <string name="quick_battery">Pil</string>
+  <string name="quick_date">Bugünün Tarihi</string>
+  <string name="quick_off">Kapalı</string>
+  <string name="bezel">Orta Alt</string>
+  <string name="music_caption">MÜZİK</string>
 </resources>

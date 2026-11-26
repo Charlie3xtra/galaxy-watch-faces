@@ -21,4 +21,23 @@
   <string name="p9">Kráľovská modrá</string>
   <string name="p10">Piesková béžová</string>
   <string name="p11">Snová zelená</string>
+  <string name="top_left">Vľavo hore</string>
+  <string name="corner_top_left">Vľavo hore</string>
+  <string name="top_right">Vpravo hore</string>
+  <string name="corner_top_right">Vpravo hore</string>
+  <string name="bottom_left">Vľavo dole</string>
+  <string name="corner_bottom_left">Vľavo dole</string>
+  <string name="bottom_right">Vpravo dole</string>
+  <string name="corner_bottom_right">Vpravo dole</string>
+  <string name="quick_phone">Zavolať</string>
+  <string name="quick_workout">Tréning</string>
+  <string name="quick_messages">Správy</string>
+  <string name="quick_music">Hudba</string>
+  <string name="quick_alarm">Budík</string>
+  <string name="quick_heartrate">Srdcová frekvencia</string>
+  <string name="quick_battery">Batéria</string>
+  <string name="quick_date">Dnešný dátum</string>
+  <string name="quick_off">Vyp.</string>
+  <string name="bezel">V strede dole</string>
+  <string name="music_caption">HUDBA</string>
 </resources>

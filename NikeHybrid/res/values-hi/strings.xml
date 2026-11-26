@@ -21,4 +21,23 @@
   <string name="p9">रॉयल पल्स</string>
   <string name="p10">डेज़र्ट सैंड</string>
   <string name="p11">स्प्रूस ऑरा</string>
+  <string name="top_left">ऊपर बाएँ</string>
+  <string name="corner_top_left">ऊपर बाएँ</string>
+  <string name="top_right">ऊपर दाएँ</string>
+  <string name="corner_top_right">ऊपर दाएँ</string>
+  <string name="bottom_left">नीचे बाएँ</string>
+  <string name="corner_bottom_left">नीचे बाएँ</string>
+  <string name="bottom_right">नीचे दाएँ</string>
+  <string name="corner_bottom_right">नीचे दाएँ</string>
+  <string name="quick_phone">कॉल करें</string>
+  <string name="quick_workout">वर्कआउट</string>
+  <string name="quick_messages">संदेश</string>
+  <string name="quick_music">संगीत</string>
+  <string name="quick_alarm">अलार्म</string>
+  <string name="quick_heartrate">हृदय गति</string>
+  <string name="quick_battery">बैटरी</string>
+  <string name="quick_date">आज की तिथि</string>
+  <string name="quick_off">बंद</string>
+  <string name="bezel">नीचे मध्य</string>
+  <string name="music_caption">संगीत</string>
 </resources>

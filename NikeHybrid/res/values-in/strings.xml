@@ -21,4 +21,23 @@
   <string name="p9">Biru Royal</string>
   <string name="p10">Pasir Gurun</string>
   <string name="p11">Hijau Muda Cemara</string>
+  <string name="top_left">Kiri Atas</string>
+  <string name="corner_top_left">Kiri Atas</string>
+  <string name="top_right">Kanan Atas</string>
+  <string name="corner_top_right">Kanan Atas</string>
+  <string name="bottom_left">Kiri Bawah</string>
+  <string name="corner_bottom_left">Kiri Bawah</string>
+  <string name="bottom_right">Kanan Bawah</string>
+  <string name="corner_bottom_right">Kanan Bawah</string>
+  <string name="quick_phone">Lakukan Panggilan</string>
+  <string name="quick_workout">Olahraga</string>
+  <string name="quick_messages">Pesan</string>
+  <string name="quick_music">Musik</string>
+  <string name="quick_alarm">Alarm</string>
+  <string name="quick_heartrate">Detak Jantung</string>
+  <string name="quick_battery">Baterai</string>
+  <string name="quick_date">Tanggal Hari Ini</string>
+  <string name="quick_off">Mati</string>
+  <string name="bezel">Tengah Bawah</string>
+  <string name="music_caption">MUSIK</string>
 </resources>

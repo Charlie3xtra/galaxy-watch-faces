@@ -21,4 +21,23 @@
   <string name="p9">Noblesně modrá</string>
   <string name="p10">Pískově béžová</string>
   <string name="p11">Spruce aura</string>
+  <string name="top_left">Vlevo nahoře</string>
+  <string name="corner_top_left">Vlevo nahoře</string>
+  <string name="top_right">Vpravo nahoře</string>
+  <string name="corner_top_right">Vpravo nahoře</string>
+  <string name="bottom_left">Vlevo dole</string>
+  <string name="corner_bottom_left">Vlevo dole</string>
+  <string name="bottom_right">Vpravo dole</string>
+  <string name="corner_bottom_right">Vpravo dole</string>
+  <string name="quick_phone">Zavolat</string>
+  <string name="quick_workout">Cvičení</string>
+  <string name="quick_messages">Zprávy</string>
+  <string name="quick_music">Hudba</string>
+  <string name="quick_alarm">Budík</string>
+  <string name="quick_heartrate">Tepová frekvence</string>
+  <string name="quick_battery">Baterie</string>
+  <string name="quick_date">Dnešní datum</string>
+  <string name="quick_off">Vypnuto</string>
+  <string name="bezel">Dole uprostřed</string>
+  <string name="music_caption">HUDBA</string>
 </resources>

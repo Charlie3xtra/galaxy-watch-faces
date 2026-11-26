@@ -21,4 +21,23 @@
   <string name="p9">Royal kék</string>
   <string name="p10">Sivatagi homok</string>
   <string name="p11">Lucfenyő aura</string>
+  <string name="top_left">Balra fent</string>
+  <string name="corner_top_left">Balra fent</string>
+  <string name="top_right">Jobbra fent</string>
+  <string name="corner_top_right">Jobbra fent</string>
+  <string name="bottom_left">Balra lent</string>
+  <string name="corner_bottom_left">Balra lent</string>
+  <string name="bottom_right">Jobbra lent</string>
+  <string name="corner_bottom_right">Jobbra lent</string>
+  <string name="quick_phone">Hívás kezdeményezése</string>
+  <string name="quick_workout">Edzés</string>
+  <string name="quick_messages">Üzenetek</string>
+  <string name="quick_music">Zene</string>
+  <string name="quick_alarm">Jelzés</string>
+  <string name="quick_heartrate">Pulzusszám</string>
+  <string name="quick_battery">Akkumulátor</string>
+  <string name="quick_date">Mai dátum</string>
+  <string name="quick_off">Ki</string>
+  <string name="bezel">Középen lent</string>
+  <string name="music_caption">ZENE</string>
 </resources>

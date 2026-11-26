@@ -21,4 +21,23 @@
   <string name="p9">Royal Pulse</string>
   <string name="p10">Desert Sand</string>
   <string name="p11">Spruce Aura</string>
+  <string name="top_left">Top Left</string>
+  <string name="corner_top_left">Top Left</string>
+  <string name="top_right">Top Right</string>
+  <string name="corner_top_right">Top Right</string>
+  <string name="bottom_left">Bottom Left</string>
+  <string name="corner_bottom_left">Bottom Left</string>
+  <string name="bottom_right">Bottom Right</string>
+  <string name="corner_bottom_right">Bottom Right</string>
+  <string name="quick_phone">Make a Call</string>
+  <string name="quick_workout">Workout</string>
+  <string name="quick_messages">Messages</string>
+  <string name="quick_music">Music</string>
+  <string name="quick_alarm">Alarm</string>
+  <string name="quick_heartrate">Heart Rate</string>
+  <string name="quick_battery">Battery</string>
+  <string name="quick_date">Today’s Date</string>
+  <string name="quick_off">Off</string>
+  <string name="bezel">Bottom Middle</string>
+  <string name="music_caption">MUSIC</string>
 </resources>

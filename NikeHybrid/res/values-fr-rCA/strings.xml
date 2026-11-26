@@ -21,4 +21,23 @@
   <string name="p9">Bleu noble</string>
   <string name="p10">Sable du désert</string>
   <string name="p11">Essence d’épinette</string>
+  <string name="top_left">En haut à gauche</string>
+  <string name="corner_top_left">En haut à gauche</string>
+  <string name="top_right">En haut à droite</string>
+  <string name="corner_top_right">En haut à droite</string>
+  <string name="bottom_left">En bas à gauche</string>
+  <string name="corner_bottom_left">En bas à gauche</string>
+  <string name="bottom_right">En bas à droite</string>
+  <string name="corner_bottom_right">En bas à droite</string>
+  <string name="quick_phone">Passer un appel</string>
+  <string name="quick_workout">Exercice</string>
+  <string name="quick_messages">Messages</string>
+  <string name="quick_music">Musique</string>
+  <string name="quick_alarm">Alarme</string>
+  <string name="quick_heartrate">Fréquence cardiaque</string>
+  <string name="quick_battery">Batterie</string>
+  <string name="quick_date">Date d’aujourd’hui</string>
+  <string name="quick_off">Non</string>
+  <string name="bezel">En bas au centre</string>
+  <string name="music_caption">MUSIQUE</string>
 </resources>

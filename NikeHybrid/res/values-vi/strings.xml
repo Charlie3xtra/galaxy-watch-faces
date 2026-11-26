@@ -21,4 +21,23 @@
   <string name="p9">Xanh lam</string>
   <string name="p10">Vàng cát</string>
   <string name="p11">Xanh phớt</string>
+  <string name="top_left">Trên cùng bên trái</string>
+  <string name="corner_top_left">Trên cùng bên trái</string>
+  <string name="top_right">Trên cùng bên phải</string>
+  <string name="corner_top_right">Trên cùng bên phải</string>
+  <string name="bottom_left">Dưới cùng bên trái</string>
+  <string name="corner_bottom_left">Dưới cùng bên trái</string>
+  <string name="bottom_right">Dưới cùng bên phải</string>
+  <string name="corner_bottom_right">Dưới cùng bên phải</string>
+  <string name="quick_phone">Thực hiện cuộc gọi</string>
+  <string name="quick_workout">Bài tập</string>
+  <string name="quick_messages">Tin nhắn</string>
+  <string name="quick_music">Nhạc</string>
+  <string name="quick_alarm">Báo thức</string>
+  <string name="quick_heartrate">Nhịp tim</string>
+  <string name="quick_battery">Pin</string>
+  <string name="quick_date">Ngày hôm nay</string>
+  <string name="quick_off">Tắt</string>
+  <string name="bezel">Dưới cùng ở giữa</string>
+  <string name="music_caption">NHẠC</string>
 </resources>

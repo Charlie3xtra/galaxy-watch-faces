@@ -21,4 +21,23 @@
   <string name="p9">Azul imperial</string>
   <string name="p10">Arena del desierto</string>
   <string name="p11">Aura pícea</string>
+  <string name="top_left">Arriba izquierda</string>
+  <string name="corner_top_left">Arriba izquierda</string>
+  <string name="top_right">Arriba derecha</string>
+  <string name="corner_top_right">Arriba derecha</string>
+  <string name="bottom_left">Abajo izquierda</string>
+  <string name="corner_bottom_left">Abajo izquierda</string>
+  <string name="bottom_right">Abajo derecha</string>
+  <string name="corner_bottom_right">Abajo derecha</string>
+  <string name="quick_phone">Hacer una llamada</string>
+  <string name="quick_workout">Entreno</string>
+  <string name="quick_messages">Mensajes</string>
+  <string name="quick_music">Música</string>
+  <string name="quick_alarm">Alarma</string>
+  <string name="quick_heartrate">Frec. cardiaca</string>
+  <string name="quick_battery">Batería</string>
+  <string name="quick_date">Fecha de hoy</string>
+  <string name="quick_off">Nada</string>
+  <string name="bezel">Abajo centro</string>
+  <string name="music_caption">MÚSICA</string>
 </resources>

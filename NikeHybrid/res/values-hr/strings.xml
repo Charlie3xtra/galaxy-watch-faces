@@ -21,4 +21,23 @@
   <string name="p9">Kraljevski plava</string>
   <string name="p10">Pustinjski pijesak</string>
   <string name="p11">Spruce Aura</string>
+  <string name="top_left">Gore lijevo</string>
+  <string name="corner_top_left">Gore lijevo</string>
+  <string name="top_right">Gore desno</string>
+  <string name="corner_top_right">Gore desno</string>
+  <string name="bottom_left">Dolje lijevo</string>
+  <string name="corner_bottom_left">Dolje lijevo</string>
+  <string name="bottom_right">Dolje desno</string>
+  <string name="corner_bottom_right">Dolje desno</string>
+  <string name="quick_phone">Uspostavi poziv</string>
+  <string name="quick_workout">Trening</string>
+  <string name="quick_messages">Poruke</string>
+  <string name="quick_music">Glazba</string>
+  <string name="quick_alarm">Alarm</string>
+  <string name="quick_heartrate">Puls</string>
+  <string name="quick_battery">Baterija</string>
+  <string name="quick_date">Današnji datum</string>
+  <string name="quick_off">Isključeno</string>
+  <string name="bezel">Dolje u sredini</string>
+  <string name="music_caption">GLAZBA</string>
 </resources>

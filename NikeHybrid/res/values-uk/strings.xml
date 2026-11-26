@@ -21,4 +21,23 @@
   <string name="p9">Королівський синій</string>
   <string name="p10">Пісок пустелі</string>
   <string name="p11">Молода смерека</string>
+  <string name="top_left">Вгорі зліва</string>
+  <string name="corner_top_left">Вгорі зліва</string>
+  <string name="top_right">Вгорі справа</string>
+  <string name="corner_top_right">Вгорі справа</string>
+  <string name="bottom_left">Внизу зліва</string>
+  <string name="corner_bottom_left">Внизу зліва</string>
+  <string name="bottom_right">Внизу справа</string>
+  <string name="corner_bottom_right">Внизу справа</string>
+  <string name="quick_phone">Зробити виклик</string>
+  <string name="quick_workout">Тренування</string>
+  <string name="quick_messages">Повідомлення</string>
+  <string name="quick_music">Музика</string>
+  <string name="quick_alarm">Сигнал</string>
+  <string name="quick_heartrate">Серцевий ритм</string>
+  <string name="quick_battery">Заряд</string>
+  <string name="quick_date">Сьогодні</string>
+  <string name="quick_off">Немає</string>
+  <string name="bezel">Внизу по центру</string>
+  <string name="music_caption">МУЗИКА</string>
 </resources>

@@ -94,4 +94,4 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 | :---: | :---: |
 | <img src="NikeHybrid/screenshots/active.png" width="220" alt="Nike 混合亮屏"> | <img src="NikeHybrid/screenshots/ambient.png" width="220" alt="Nike 混合息屏"> |
 
-[下载 Nike 混合 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/nike-hybrid-1.0)。默认双行数字采用 24S132 固件内嵌的 Victory Italic 和 Nike Hybrid 专用 Swoosh，息屏使用 Victory Outline Italic。提供 12 组配色、数字与两种指针样式、全屏和圆形刻度盘。此版省略复杂功能。数字版以 Apple 官方预览为依据，指针、扇形遮罩、刻度及息屏亮度为 Galaxy 圆屏适配。使用 NikeHybrid/build.ps1 构建现有资源。
+[下载 Nike 混合 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/tag/nike-hybrid-1.1)。默认双行数字采用 24S132 固件内嵌的 Victory Italic 和 Nike Hybrid 专用 Swoosh，息屏使用 Victory Outline Italic。提供 12 组配色、数字与两种指针样式、全屏和圆形刻度盘。四角可单独配置专用图案或关闭，默认对应电话、训练、信息和音乐。电话、跑者、气泡和音符取自官方预览，闹钟和心率图标来自固件。日期、电量按实时数据绘制。系统组件可替换角位显示，底部弧形文字槽默认留空。第三方数据源使用其提供的数据和图标。数字版以 Apple 官方预览为依据，指针、扇形遮罩、刻度及息屏亮度为 Galaxy 圆屏适配。使用 NikeHybrid/build.ps1 构建现有资源。

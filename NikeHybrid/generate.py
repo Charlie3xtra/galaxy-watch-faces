@@ -1,6 +1,7 @@
 """Generate Nike Hybrid WFF from the 24S132 Olympus and NanoTimeKit resources."""
 import json
 import math
+import corners
 import struct
 import xml.etree.ElementTree as ET
 from io import BytesIO
@@ -126,6 +127,8 @@ def analog(p,minimal,ambient):
         if ambient and key=='secondhand':continue
         hand=image(p,key,0,0,480,480,f'[CONFIGURATION.palette.{col}]')
         transform(hand,'angle',ang)
+corners.artwork(draw,catalog,gallery)
+corners.configs(cfg)
 scene=add(face,'Scene',backgroundColor='#000000')
 for ambient in (False,True):
     parent=group(scene,'ambient' if ambient else 'interactive')
@@ -143,6 +146,7 @@ for ambient in (False,True):
                 if dial=='circle':image(v,'ticks',-35,-35,550,550,'[CONFIGURATION.palette.0]')
                 stacked(v,ambient)
             else:analog(v,choice=='minimal',ambient)
+corners.corners_scene(scene)
 save(res/'raw/watchface.xml',face)
 for path in local.glob('*.lproj'):
     code=path.stem
@@ -155,6 +159,7 @@ for path in local.glob('*.lproj'):
     for k,s in [('full','FULLSCREEN'),('circle','CIRCULAR')]:
         strings[k]=labels['EDIT_OPTION_LABEL_ANALOG_DIAL_SHAPE_'+s]
     for i,k in enumerate(keys): strings['p'+str(i)]=names.get(k,names.get('victory.'+k,k))
+    corners.localization(labels,strings)
     out=ET.Element('resources')
     for k,v in strings.items():add(out,'string',name=k).text=v.replace("'","\\'")
     suffix={'en':'','es_419':'-b+es+419','he':'-iw','id':'-in'}.get(code,'-'+code.replace('_','-r'))
@@ -165,4 +170,5 @@ ImageDraw.Draw(prev).ellipse((0,0,479,479),fill='black')
 for asset,xy,size,col in [('solid_10',(126,86),(250,140),0),('solid_09',(126,230),(250,140),0),('swoosh',(45,231),(74,27),1)]:
     mask=Image.open(draw/(asset+'.png')).getchannel('A').resize(size,Image.Resampling.LANCZOS)
     prev.paste(rgbtuple(styles[0][col])+(255,),xy,mask)
+corners.preview(prev,draw,gallery)
 prev.save(draw/'preview.png')

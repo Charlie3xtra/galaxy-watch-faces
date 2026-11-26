@@ -21,4 +21,23 @@
   <string name="p9">Βαθύ γαλάζιο</string>
   <string name="p10">Μπεζ άμμου</string>
   <string name="p11">Γκριζοπράσινη αύρα</string>
+  <string name="top_left">Πάνω αριστερά</string>
+  <string name="corner_top_left">Πάνω αριστερά</string>
+  <string name="top_right">Πάνω δεξιά</string>
+  <string name="corner_top_right">Πάνω δεξιά</string>
+  <string name="bottom_left">Κάτω αριστερά</string>
+  <string name="corner_bottom_left">Κάτω αριστερά</string>
+  <string name="bottom_right">Κάτω δεξιά</string>
+  <string name="corner_bottom_right">Κάτω δεξιά</string>
+  <string name="quick_phone">Πραγματοποί­ηση κλήσης</string>
+  <string name="quick_workout">Προπόνηση</string>
+  <string name="quick_messages">Μηνύματα</string>
+  <string name="quick_music">Μουσική</string>
+  <string name="quick_alarm">Ειδοποίηση</string>
+  <string name="quick_heartrate">Καρδιακοί παλμοί</string>
+  <string name="quick_battery">Μπαταρία</string>
+  <string name="quick_date">Σημερινή ημερομηνία</string>
+  <string name="quick_off">Όχι</string>
+  <string name="bezel">Κάτω στη μέση</string>
+  <string name="music_caption">ΜΟΥΣΙΚΗ</string>
 </resources>

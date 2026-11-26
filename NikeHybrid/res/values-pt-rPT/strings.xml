@@ -21,4 +21,23 @@
   <string name="p9">Azul impulso</string>
   <string name="p10">Areia do deserto</string>
   <string name="p11">Spruce Aura</string>
+  <string name="top_left">Em cima, à esquerda</string>
+  <string name="corner_top_left">Em cima, à esquerda</string>
+  <string name="top_right">Em cima, à direita</string>
+  <string name="corner_top_right">Em cima, à direita</string>
+  <string name="bottom_left">Em baixo, à esquerda</string>
+  <string name="corner_bottom_left">Em baixo, à esquerda</string>
+  <string name="bottom_right">Em baixo, à direita</string>
+  <string name="corner_bottom_right">Em baixo, à direita</string>
+  <string name="quick_phone">Fazer uma chamada</string>
+  <string name="quick_workout">Treino</string>
+  <string name="quick_messages">Mensagens</string>
+  <string name="quick_music">Música</string>
+  <string name="quick_alarm">Alarme</string>
+  <string name="quick_heartrate">Frequência cardíaca</string>
+  <string name="quick_battery">Bateria</string>
+  <string name="quick_date">Data atual</string>
+  <string name="quick_off">Não</string>
+  <string name="bezel">Em baixo, no meio</string>
+  <string name="music_caption">MÚSICA</string>
 </resources>

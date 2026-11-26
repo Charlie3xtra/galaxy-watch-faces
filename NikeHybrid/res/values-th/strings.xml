@@ -21,4 +21,23 @@
   <string name="p9">Royal Pulse</string>
   <string name="p10">Desert Sand</string>
   <string name="p11">Spruce Aura</string>
+  <string name="top_left">ด้านบนซ้าย</string>
+  <string name="corner_top_left">ด้านบนซ้าย</string>
+  <string name="top_right">ด้านบนขวา</string>
+  <string name="corner_top_right">ด้านบนขวา</string>
+  <string name="bottom_left">ด้านล่างซ้าย</string>
+  <string name="corner_bottom_left">ด้านล่างซ้าย</string>
+  <string name="bottom_right">ด้านล่างขวา</string>
+  <string name="corner_bottom_right">ด้านล่างขวา</string>
+  <string name="quick_phone">โทรออก</string>
+  <string name="quick_workout">ออกกำลังกาย</string>
+  <string name="quick_messages">ข้อความ</string>
+  <string name="quick_music">เพลง</string>
+  <string name="quick_alarm">การตั้งปลุก</string>
+  <string name="quick_heartrate">อัตราการเต้นของหัวใจ</string>
+  <string name="quick_battery">แบตเตอรี่</string>
+  <string name="quick_date">วันที่ของวันนี้</string>
+  <string name="quick_off">ปิด</string>
+  <string name="bezel">ด้านล่างกึ่งกลาง</string>
+  <string name="music_caption">เพลง</string>
 </resources>

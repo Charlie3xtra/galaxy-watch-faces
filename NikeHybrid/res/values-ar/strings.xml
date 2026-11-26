@@ -21,4 +21,23 @@
   <string name="p9">نبض ملكي</string>
   <string name="p10">رملي صحراوي</string>
   <string name="p11">أخضر باهت</string>
+  <string name="top_left">أعلى اليسار</string>
+  <string name="corner_top_left">أعلى اليسار</string>
+  <string name="top_right">أعلى اليمين</string>
+  <string name="corner_top_right">أعلى اليمين</string>
+  <string name="bottom_left">أسفل اليسار</string>
+  <string name="corner_bottom_left">أسفل اليسار</string>
+  <string name="bottom_right">أسفل اليمين</string>
+  <string name="corner_bottom_right">أسفل اليمين</string>
+  <string name="quick_phone">إجراء مكالمة</string>
+  <string name="quick_workout">التمرين</string>
+  <string name="quick_messages">الرسائل</string>
+  <string name="quick_music">الموسيقى</string>
+  <string name="quick_alarm">المنبه</string>
+  <string name="quick_heartrate">معدل نبض القلب</string>
+  <string name="quick_battery">البطارية</string>
+  <string name="quick_date">تاريخ اليوم</string>
+  <string name="quick_off">إيقاف</string>
+  <string name="bezel">أسفل المنتصف</string>
+  <string name="music_caption">الموسيقى</string>
 </resources>

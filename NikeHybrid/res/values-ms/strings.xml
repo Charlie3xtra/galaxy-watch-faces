@@ -21,4 +21,23 @@
   <string name="p9">Royal Pulse</string>
   <string name="p10">Desert Sand</string>
   <string name="p11">Spruce Aura</string>
+  <string name="top_left">Kiri Atas</string>
+  <string name="corner_top_left">Kiri Atas</string>
+  <string name="top_right">Kanan Atas</string>
+  <string name="corner_top_right">Kanan Atas</string>
+  <string name="bottom_left">Kiri Bawah</string>
+  <string name="corner_bottom_left">Kiri Bawah</string>
+  <string name="bottom_right">Kanan Bawah</string>
+  <string name="corner_bottom_right">Kanan Bawah</string>
+  <string name="quick_phone">Buat Panggilan</string>
+  <string name="quick_workout">Latihan</string>
+  <string name="quick_messages">Mesej</string>
+  <string name="quick_music">Muzik</string>
+  <string name="quick_alarm">Penggera</string>
+  <string name="quick_heartrate">Kadar Jantung</string>
+  <string name="quick_battery">Bateri</string>
+  <string name="quick_date">Tarikh Hari Ini</string>
+  <string name="quick_off">Tak Aktif</string>
+  <string name="bezel">Tengah Bawah</string>
+  <string name="music_caption">MUZIK</string>
 </resources>

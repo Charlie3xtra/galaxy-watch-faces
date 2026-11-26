@@ -21,4 +21,23 @@
   <string name="p9">Royal Pulse</string>
   <string name="p10">Desert Sand</string>
   <string name="p11">Spruce Aura</string>
+  <string name="top_left">Ylävasemmalla</string>
+  <string name="corner_top_left">Ylävasemmalla</string>
+  <string name="top_right">Yläoikealla</string>
+  <string name="corner_top_right">Yläoikealla</string>
+  <string name="bottom_left">Alavasemmalla</string>
+  <string name="corner_bottom_left">Alavasemmalla</string>
+  <string name="bottom_right">Alaoikealla</string>
+  <string name="corner_bottom_right">Alaoikealla</string>
+  <string name="quick_phone">Soita puhelu</string>
+  <string name="quick_workout">Treeni</string>
+  <string name="quick_messages">Viestit</string>
+  <string name="quick_music">Musiikki</string>
+  <string name="quick_alarm">Herätys</string>
+  <string name="quick_heartrate">Syke</string>
+  <string name="quick_battery">Akku</string>
+  <string name="quick_date">Päivä­määrä</string>
+  <string name="quick_off">Pois</string>
+  <string name="bezel">Alhaalla keskellä</string>
+  <string name="music_caption">MUSIIKKI</string>
 </resources>

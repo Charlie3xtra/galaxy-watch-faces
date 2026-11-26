@@ -21,4 +21,23 @@
   <string name="p9">Blau reial</string>
   <string name="p10">Sorra del desert</string>
   <string name="p11">Aura d’avet</string>
+  <string name="top_left">A dalt a l’esquerra</string>
+  <string name="corner_top_left">A dalt a l’esquerra</string>
+  <string name="top_right">A dalt a la dreta</string>
+  <string name="corner_top_right">A dalt a la dreta</string>
+  <string name="bottom_left">A baix a l’esquerra</string>
+  <string name="corner_bottom_left">A baix a l’esquerra</string>
+  <string name="bottom_right">A baix a la dreta</string>
+  <string name="corner_bottom_right">A baix a la dreta</string>
+  <string name="quick_phone">Fes una trucada</string>
+  <string name="quick_workout">Entrenament</string>
+  <string name="quick_messages">Missatges</string>
+  <string name="quick_music">Música</string>
+  <string name="quick_alarm">Alarma</string>
+  <string name="quick_heartrate">Freqüència cardíaca</string>
+  <string name="quick_battery">Bateria</string>
+  <string name="quick_date">Data d’avui</string>
+  <string name="quick_off">Cap</string>
+  <string name="bezel">A baix al centre</string>
+  <string name="music_caption">MÚSICA</string>
 </resources>
