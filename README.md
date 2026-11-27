@@ -160,4 +160,4 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 
 以上为布局渲染图。时针和分针分别带动光场，圆形内盘可显示四个 Wear OS 系统组件。光场来自 watchOS 24S132 的 Coltan 指针纹理及配色，在 WFF 中分层合成。24S132 固件的时、分、秒针长度常量依次为 90、150、154。息屏保留时分针光场，隐藏秒针；交叠阴影和面板亮度为近似值。1.1 修复了超大编辑选项图标导致三星运行时拒绝切换息屏状态的问题。
 
-[下载团结之光 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/unity-lights-1.1/UnityLights-1.1.apk)
+[Galaxy 真机亮屏](UnityLights/screenshots/watch-1-1-active.png) · [Galaxy 真机息屏](UnityLights/screenshots/watch-1-1-ambient.png) · [下载团结之光 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/unity-lights-1.1/UnityLights-1.1.apk)
