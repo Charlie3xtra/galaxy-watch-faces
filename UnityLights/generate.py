@@ -105,6 +105,15 @@ for i in range(12):
     ticks.alpha_composite(tick.rotate(-30*i,resample=Image.Resampling.BICUBIC))
 sprite('ticks',ticks)
 
+# Keep the corner data outside a stationary circular aperture as the hands rotate.
+inset_hand_scale = .92
+inset_tick_scale = .76
+yy,xx=np.indices((480,480))
+distance=np.hypot(xx-239.5,yy-239.5)
+aperture=Image.new('RGBA',(480,480))
+aperture.putalpha(Image.fromarray(np.uint8(255*np.clip(distance-178,0,1))))
+sprite('inset_aperture',aperture)
+
 face=ET.Element('WatchFace',width='480',height='480',clipShape='CIRCLE')
 config=node(face,'UserConfigurations')
 palette=node(config,'ColorConfiguration',id='tone',displayName='color',defaultValue='0')
@@ -132,7 +141,7 @@ def hand(clock,side,name,size):
     return h
 for shape in ('full','inset'):
     holder=node(style_switch,'ListOption',id=shape)
-    factor=1 if shape=='full' else .69
+    factor=1 if shape=='full' else inset_hand_scale
     group=node(holder,'Group',name=shape,**box(0,0,480,480))
     switch=node(group,'Condition')
     exp=node(switch,'Expressions')
@@ -147,7 +156,8 @@ for shape in ('full','inset'):
                 hand(clock,side,f'{side}_{idx}_{mode}',round(680*factor))
             marks=node(node(layer,'ListConfiguration',id='density'),'ListOption',id='detailed')
             dim=round(480*factor)
-            imagepart(marks,'ticks',(480-dim)//2,(480-dim)//2,dim,dim)
+            ticks_dim=480 if shape=='full' else round(480*inset_tick_scale)
+            imagepart(marks,'ticks',(480-ticks_dim)//2,(480-ticks_dim)//2,ticks_dim,ticks_dim)
             clock=node(layer,'AnalogClock',**box(0,0,480,480))
             for side in ('hour','minute'):
                 hand(clock,side,side+'_body',round(680*factor))
@@ -155,6 +165,7 @@ for shape in ('full','inset'):
                 hand(clock,'second',f'second_{idx}',dim)
             imagepart(layer,f'pin_{idx}',234,234,12,12)
     if shape=='inset':
+        imagepart(group,'inset_aperture',0,0,480,480)
         for i,(cx,cy) in enumerate(((99,99),(381,99),(99,381),(381,381))):
             slot=node(scene,'ComplicationSlot',slotId=i+1,displayName=f'corner{i}',supportedTypes='SHORT_TEXT MONOCHROMATIC_IMAGE EMPTY',**box(cx-34,cy-31,68,62))
             node(slot,'BoundingOval',**box(0,0,68,62))
@@ -175,7 +186,7 @@ def preview(idx=0,inset=False,detailed=False,ambient_mode=False,minute=9):
     def paint(name,angle=0):
         im=Image.open(out/(name+'.png')).convert('RGBA')
         if inset:
-            im=im.resize(tuple(round(k*.69) for k in im.size),Image.Resampling.LANCZOS)
+            im=im.resize(tuple(round(k*(inset_tick_scale if name=='ticks' else inset_hand_scale)) for k in im.size),Image.Resampling.LANCZOS)
         if angle:
             im=im.rotate(-angle,resample=Image.Resampling.BICUBIC)
         canvas.alpha_composite(im,((480-im.width)//2,(480-im.height)//2))
@@ -187,6 +198,7 @@ def preview(idx=0,inset=False,detailed=False,ambient_mode=False,minute=9):
         paint(side+'_body',angle)
     if not ambient_mode: paint('second_'+str(idx),180)
     paint('pin_'+str(idx))
+    if inset: canvas.alpha_composite(aperture)
     circle=Image.new('L',(480,480))
     ImageDraw.Draw(circle).ellipse((0,0,479,479),fill=255)
     canvas=Image.composite(canvas,Image.new('RGBA',canvas.size),circle)
@@ -196,7 +208,7 @@ for name,kw in [('preview',{}),('option_full',{}),('option_inset',dict(inset=Tru
     if name.startswith('option_'):
         artwork=artwork.resize((192,192),Image.Resampling.LANCZOS)
     sprite(name,artwork)
-for name,kw in [('gallery',{}),('ambient',dict(ambient_mode=True)),('monochrome',dict(idx=1,inset=True,detailed=True,minute=28))]:
+for name,kw in [('gallery',{}),('circular_ticks',dict(inset=True,detailed=True)),('ambient',dict(ambient_mode=True)),('monochrome',dict(idx=1,inset=True,detailed=True,minute=28))]:
     preview(**kw).save(gallery/(name+'.png'))
 
 for loc in (fw/'解析/属性表'/bundle).glob('*.lproj'):
@@ -205,6 +217,13 @@ for loc in (fw/'解析/属性表'/bundle).glob('*.lproj'):
     options=read(common/'ClockFaces.strings.json')
     pigments=read(common/'FaceColors.strings.json')
     data=dict(face_name=own['COLTAN_FACE_NAME_IN_TITLE_CASE'],style=own['EDIT_OPTION_LABEL_DENSITY'],simple=own['EDIT_OPTION_LABEL_DENSITY_SIMPLE'],detailed=own['EDIT_OPTION_LABEL_DENSITY_DETAILED'],dial=options.get('EDIT_MODE_LABEL_DIAL',options.get('EDIT_MODE_LABEL_STYLE','Dial')),color=options['EDIT_MODE_LABEL_COLOR'],full=options['EDIT_OPTION_LABEL_ANALOG_DIAL_SHAPE_FULLSCREEN'],inset=options['EDIT_OPTION_LABEL_ANALOG_DIAL_SHAPE_CIRCULAR'],p0=pigments.get('unity.red & unity.green', '🟥 / 🟩'),p1=pigments.get('white','⬛ / ⬜'))
+    dial_strings=common/'ClockFaces-alchemy.strings.json'
+    if dial_strings.exists(): data['dial']=read(dial_strings).get('EDIT_MODE_LABEL_DIAL',data['dial'])
+    if loc.stem.startswith('en'):
+        data.update(dial='Dial shape',style='Hour markers',simple='No markers',detailed='12 markers')
+    elif loc.stem.startswith('zh'):
+        traditional=loc.stem not in ('zh_CN','zh_SG')
+        data.update(dial='錶盤形狀' if traditional else '表盘形状',style='小時刻度' if traditional else '小时刻度',simple='無刻度' if traditional else '无刻度',detailed='12 個刻度' if traditional else '12 个刻度')
     data['p1']='黑白' if loc.stem.startswith('zh') else ('Black & White' if loc.stem.startswith('en') else '◐')
     for i,key in enumerate(('TOP_LEFT','TOP_RIGHT','BOTTOM_LEFT','BOTTOM_RIGHT')):
         data[f'corner{i}']=options['SLOT_LABEL_'+key]

@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
   <string name="face_name">Unity Lights</string>
-  <string name="style">STYLE</string>
-  <string name="simple">I</string>
-  <string name="detailed">II</string>
-  <string name="dial">STYLE</string>
+  <string name="style">Hour markers</string>
+  <string name="simple">No markers</string>
+  <string name="detailed">12 markers</string>
+  <string name="dial">Dial shape</string>
   <string name="color">COLOUR</string>
   <string name="full">FULL SCREEN</string>
   <string name="inset">CIRCULAR</string>
