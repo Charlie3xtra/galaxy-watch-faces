@@ -26,10 +26,10 @@
               <Group name="full_0_active" x="0" y="0" width="480" height="480" alpha="255">
                 <Variant mode="AMBIENT" target="alpha" value="0" />
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <HourHand resource="hour_0_active" x="148" y="-24" width="356" height="340" pivotX="0.25842696629213485" pivotY="0.7764705882352941" />
+                  <HourHand resource="hour_0_active" x="123" y="-42" width="398" height="364" pivotX="0.29396984924623115" pivotY="0.7747252747252747" />
                 </AnalogClock>
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <MinuteHand resource="minute_0_active" x="-100" y="-100" width="527" height="446" pivotX="0.6451612903225806" pivotY="0.7623318385650224" />
+                  <MinuteHand resource="minute_0_active" x="-100" y="-100" width="539" height="448" pivotX="0.6307977736549165" pivotY="0.7589285714285714" />
                 </AnalogClock>
                 <ListConfiguration id="density">
                   <ListOption id="detailed">
@@ -39,9 +39,10 @@
                   </ListOption>
                 </ListConfiguration>
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <HourHand resource="hour_body" x="230" y="136" width="21" height="115" pivotX="0.47619047619047616" pivotY="0.9043478260869565" />
-                  <MinuteHand resource="minute_body" x="223" y="68" width="33" height="189" pivotX="0.5151515151515151" pivotY="0.91005291005291" />
-                  <SecondHand resource="second_0" x="239" y="38" width="3" height="219" pivotX="0.3333333333333333" pivotY="0.9223744292237442">
+                  <HourHand resource="hour_body" x="229" y="129" width="22" height="122" pivotX="0.5" pivotY="0.9098360655737705" />
+                  <MinuteHand resource="minute_body" x="222" y="57" width="35" height="201" pivotX="0.5142857142857142" pivotY="0.9104477611940298" />
+                  <SecondHand resource="second_0" x="239" y="55" width="3" height="202" pivotX="0.3333333333333333" pivotY="0.9158415841584159">
+                    <Variant mode="AMBIENT" target="alpha" value="0" duration="0" />
                     <Sweep frequency="15" />
                   </SecondHand>
                 </AnalogClock>
@@ -52,10 +53,10 @@
               <Group name="full_0_ambient" x="0" y="0" width="480" height="480" alpha="0">
                 <Variant mode="AMBIENT" target="alpha" value="255" />
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <HourHand resource="hour_0_ambient" x="198" y="10" width="272" height="265" pivotX="0.15441176470588236" pivotY="0.8679245283018868" />
+                  <HourHand resource="hour_0_ambient" x="123" y="-42" width="398" height="362" pivotX="0.29396984924623115" pivotY="0.7790055248618785" />
                 </AnalogClock>
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <MinuteHand resource="minute_0_ambient" x="-100" y="-100" width="405" height="400" pivotX="0.8395061728395061" pivotY="0.85" />
+                  <MinuteHand resource="minute_0_ambient" x="-100" y="-100" width="539" height="445" pivotX="0.6307977736549165" pivotY="0.7640449438202247" />
                 </AnalogClock>
                 <ListConfiguration id="density">
                   <ListOption id="detailed">
@@ -65,8 +66,8 @@
                   </ListOption>
                 </ListConfiguration>
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <HourHand resource="hour_body" x="230" y="136" width="21" height="115" pivotX="0.47619047619047616" pivotY="0.9043478260869565" />
-                  <MinuteHand resource="minute_body" x="223" y="68" width="33" height="189" pivotX="0.5151515151515151" pivotY="0.91005291005291" />
+                  <HourHand resource="hour_body" x="229" y="129" width="22" height="122" pivotX="0.5" pivotY="0.9098360655737705" />
+                  <MinuteHand resource="minute_body" x="222" y="57" width="35" height="201" pivotX="0.5142857142857142" pivotY="0.9104477611940298" />
                 </AnalogClock>
                 <PartImage x="234" y="234" width="12" height="12">
                   <Image resource="pin_0" />
@@ -77,10 +78,10 @@
               <Group name="full_1_active" x="0" y="0" width="480" height="480" alpha="255">
                 <Variant mode="AMBIENT" target="alpha" value="0" />
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <HourHand resource="hour_1_active" x="148" y="-24" width="356" height="342" pivotX="0.25842696629213485" pivotY="0.7719298245614035" />
+                  <HourHand resource="hour_1_active" x="123" y="-42" width="398" height="364" pivotX="0.29396984924623115" pivotY="0.7747252747252747" />
                 </AnalogClock>
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <MinuteHand resource="minute_1_active" x="-100" y="-100" width="527" height="444" pivotX="0.6451612903225806" pivotY="0.7657657657657657" />
+                  <MinuteHand resource="minute_1_active" x="-100" y="-100" width="539" height="445" pivotX="0.6307977736549165" pivotY="0.7640449438202247" />
                 </AnalogClock>
                 <ListConfiguration id="density">
                   <ListOption id="detailed">
@@ -90,9 +91,10 @@
                   </ListOption>
                 </ListConfiguration>
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <HourHand resource="hour_body" x="230" y="136" width="21" height="115" pivotX="0.47619047619047616" pivotY="0.9043478260869565" />
-                  <MinuteHand resource="minute_body" x="223" y="68" width="33" height="189" pivotX="0.5151515151515151" pivotY="0.91005291005291" />
-                  <SecondHand resource="second_1" x="239" y="38" width="3" height="219" pivotX="0.3333333333333333" pivotY="0.9223744292237442">
+                  <HourHand resource="hour_body" x="229" y="129" width="22" height="122" pivotX="0.5" pivotY="0.9098360655737705" />
+                  <MinuteHand resource="minute_body" x="222" y="57" width="35" height="201" pivotX="0.5142857142857142" pivotY="0.9104477611940298" />
+                  <SecondHand resource="second_1" x="239" y="55" width="3" height="202" pivotX="0.3333333333333333" pivotY="0.9158415841584159">
+                    <Variant mode="AMBIENT" target="alpha" value="0" duration="0" />
                     <Sweep frequency="15" />
                   </SecondHand>
                 </AnalogClock>
@@ -103,10 +105,10 @@
               <Group name="full_1_ambient" x="0" y="0" width="480" height="480" alpha="0">
                 <Variant mode="AMBIENT" target="alpha" value="255" />
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <HourHand resource="hour_1_ambient" x="196" y="7" width="277" height="257" pivotX="0.1588447653429603" pivotY="0.9066147859922179" />
+                  <HourHand resource="hour_1_ambient" x="123" y="-42" width="398" height="364" pivotX="0.29396984924623115" pivotY="0.7747252747252747" />
                 </AnalogClock>
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <MinuteHand resource="minute_1_ambient" x="-100" y="-100" width="405" height="381" pivotX="0.8395061728395061" pivotY="0.8923884514435696" />
+                  <MinuteHand resource="minute_1_ambient" x="-100" y="-100" width="539" height="444" pivotX="0.6307977736549165" pivotY="0.7657657657657657" />
                 </AnalogClock>
                 <ListConfiguration id="density">
                   <ListOption id="detailed">
@@ -116,8 +118,8 @@
                   </ListOption>
                 </ListConfiguration>
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <HourHand resource="hour_body" x="230" y="136" width="21" height="115" pivotX="0.47619047619047616" pivotY="0.9043478260869565" />
-                  <MinuteHand resource="minute_body" x="223" y="68" width="33" height="189" pivotX="0.5151515151515151" pivotY="0.91005291005291" />
+                  <HourHand resource="hour_body" x="229" y="129" width="22" height="122" pivotX="0.5" pivotY="0.9098360655737705" />
+                  <MinuteHand resource="minute_body" x="222" y="57" width="35" height="201" pivotX="0.5142857142857142" pivotY="0.9104477611940298" />
                 </AnalogClock>
                 <PartImage x="234" y="234" width="12" height="12">
                   <Image resource="pin_1" />
@@ -137,10 +139,10 @@
               <Group name="inset_0_active" x="0" y="0" width="480" height="480" alpha="255">
                 <Variant mode="AMBIENT" target="alpha" value="0" />
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <HourHand resource="hour_0_active" x="177" y="58" width="246" height="234" pivotX="0.25609756097560976" pivotY="0.7777777777777778" />
+                  <HourHand resource="hour_0_active" x="159" y="46" width="275" height="251" pivotX="0.29454545454545455" pivotY="0.7729083665338645" />
                 </AnalogClock>
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <MinuteHand resource="minute_0_active" x="6" y="6" width="363" height="308" pivotX="0.6446280991735537" pivotY="0.7597402597402597" />
+                  <MinuteHand resource="minute_0_active" x="6" y="6" width="372" height="309" pivotX="0.6290322580645161" pivotY="0.7572815533980582" />
                 </AnalogClock>
                 <ListConfiguration id="density">
                   <ListOption id="detailed">
@@ -150,9 +152,10 @@
                   </ListOption>
                 </ListConfiguration>
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <HourHand resource="hour_body" x="233" y="168" width="14" height="79" pivotX="0.5" pivotY="0.9113924050632911" />
-                  <MinuteHand resource="minute_body" x="228" y="121" width="23" height="130" pivotX="0.5217391304347826" pivotY="0.9153846153846154" />
-                  <SecondHand resource="second_0" x="239" y="101" width="2" height="151" pivotX="0.5" pivotY="0.9205298013245033">
+                  <HourHand resource="hour_body" x="232" y="163" width="15" height="84" pivotX="0.5333333333333333" pivotY="0.9166666666666666" />
+                  <MinuteHand resource="minute_body" x="228" y="114" width="24" height="139" pivotX="0.5" pivotY="0.9064748201438849" />
+                  <SecondHand resource="second_0" x="239" y="112" width="2" height="139" pivotX="0.5" pivotY="0.920863309352518">
+                    <Variant mode="AMBIENT" target="alpha" value="0" duration="0" />
                     <Sweep frequency="15" />
                   </SecondHand>
                 </AnalogClock>
@@ -163,10 +166,10 @@
               <Group name="inset_0_ambient" x="0" y="0" width="480" height="480" alpha="0">
                 <Variant mode="AMBIENT" target="alpha" value="255" />
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <HourHand resource="hour_0_ambient" x="211" y="81" width="188" height="183" pivotX="0.15425531914893617" pivotY="0.8688524590163934" />
+                  <HourHand resource="hour_0_ambient" x="159" y="46" width="275" height="250" pivotX="0.29454545454545455" pivotY="0.776" />
                 </AnalogClock>
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <MinuteHand resource="minute_0_ambient" x="6" y="6" width="279" height="276" pivotX="0.8387096774193549" pivotY="0.8478260869565217" />
+                  <MinuteHand resource="minute_0_ambient" x="6" y="6" width="372" height="307" pivotX="0.6290322580645161" pivotY="0.762214983713355" />
                 </AnalogClock>
                 <ListConfiguration id="density">
                   <ListOption id="detailed">
@@ -176,8 +179,8 @@
                   </ListOption>
                 </ListConfiguration>
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <HourHand resource="hour_body" x="233" y="168" width="14" height="79" pivotX="0.5" pivotY="0.9113924050632911" />
-                  <MinuteHand resource="minute_body" x="228" y="121" width="23" height="130" pivotX="0.5217391304347826" pivotY="0.9153846153846154" />
+                  <HourHand resource="hour_body" x="232" y="163" width="15" height="84" pivotX="0.5333333333333333" pivotY="0.9166666666666666" />
+                  <MinuteHand resource="minute_body" x="228" y="114" width="24" height="139" pivotX="0.5" pivotY="0.9064748201438849" />
                 </AnalogClock>
                 <PartImage x="234" y="234" width="12" height="12">
                   <Image resource="pin_0" />
@@ -188,10 +191,10 @@
               <Group name="inset_1_active" x="0" y="0" width="480" height="480" alpha="255">
                 <Variant mode="AMBIENT" target="alpha" value="0" />
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <HourHand resource="hour_1_active" x="177" y="58" width="246" height="236" pivotX="0.25609756097560976" pivotY="0.7711864406779662" />
+                  <HourHand resource="hour_1_active" x="159" y="46" width="275" height="251" pivotX="0.29454545454545455" pivotY="0.7729083665338645" />
                 </AnalogClock>
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <MinuteHand resource="minute_1_active" x="6" y="6" width="363" height="306" pivotX="0.6446280991735537" pivotY="0.7647058823529411" />
+                  <MinuteHand resource="minute_1_active" x="6" y="6" width="372" height="307" pivotX="0.6290322580645161" pivotY="0.762214983713355" />
                 </AnalogClock>
                 <ListConfiguration id="density">
                   <ListOption id="detailed">
@@ -201,9 +204,10 @@
                   </ListOption>
                 </ListConfiguration>
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <HourHand resource="hour_body" x="233" y="168" width="14" height="79" pivotX="0.5" pivotY="0.9113924050632911" />
-                  <MinuteHand resource="minute_body" x="228" y="121" width="23" height="130" pivotX="0.5217391304347826" pivotY="0.9153846153846154" />
-                  <SecondHand resource="second_1" x="239" y="101" width="2" height="151" pivotX="0.5" pivotY="0.9205298013245033">
+                  <HourHand resource="hour_body" x="232" y="163" width="15" height="84" pivotX="0.5333333333333333" pivotY="0.9166666666666666" />
+                  <MinuteHand resource="minute_body" x="228" y="114" width="24" height="139" pivotX="0.5" pivotY="0.9064748201438849" />
+                  <SecondHand resource="second_1" x="239" y="112" width="2" height="139" pivotX="0.5" pivotY="0.920863309352518">
+                    <Variant mode="AMBIENT" target="alpha" value="0" duration="0" />
                     <Sweep frequency="15" />
                   </SecondHand>
                 </AnalogClock>
@@ -214,10 +218,10 @@
               <Group name="inset_1_ambient" x="0" y="0" width="480" height="480" alpha="0">
                 <Variant mode="AMBIENT" target="alpha" value="255" />
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <HourHand resource="hour_1_ambient" x="210" y="79" width="191" height="177" pivotX="0.15706806282722513" pivotY="0.9096045197740112" />
+                  <HourHand resource="hour_1_ambient" x="159" y="46" width="275" height="251" pivotX="0.29454545454545455" pivotY="0.7729083665338645" />
                 </AnalogClock>
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <MinuteHand resource="minute_1_ambient" x="6" y="6" width="279" height="263" pivotX="0.8387096774193549" pivotY="0.8897338403041825" />
+                  <MinuteHand resource="minute_1_ambient" x="6" y="6" width="372" height="306" pivotX="0.6290322580645161" pivotY="0.7647058823529411" />
                 </AnalogClock>
                 <ListConfiguration id="density">
                   <ListOption id="detailed">
@@ -227,8 +231,8 @@
                   </ListOption>
                 </ListConfiguration>
                 <AnalogClock x="0" y="0" width="480" height="480">
-                  <HourHand resource="hour_body" x="233" y="168" width="14" height="79" pivotX="0.5" pivotY="0.9113924050632911" />
-                  <MinuteHand resource="minute_body" x="228" y="121" width="23" height="130" pivotX="0.5217391304347826" pivotY="0.9153846153846154" />
+                  <HourHand resource="hour_body" x="232" y="163" width="15" height="84" pivotX="0.5333333333333333" pivotY="0.9166666666666666" />
+                  <MinuteHand resource="minute_body" x="228" y="114" width="24" height="139" pivotX="0.5" pivotY="0.9064748201438849" />
                 </AnalogClock>
                 <PartImage x="234" y="234" width="12" height="12">
                   <Image resource="pin_1" />

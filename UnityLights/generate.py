@@ -40,7 +40,12 @@ palettes = ('redgreengold','monochrome')
 def sprite(name,img):
     img.save(out/(name+'.png'))
 
-for side, scale in [('hour',.66),('minute',1.10)]:
+# Metal function constants 3..5 are 90, 150 and 154 before device scaling.
+hand_lengths = {'hour': 90, 'minute': 150, 'second': 154}
+dial_scale = 1.2
+native_tip = np.where(mask[:,:,2] > 127)[0].max() + .5 - 400
+for side in ('hour','minute'):
+    scale = hand_lengths[side] * dial_scale / native_tip
     # Normalize the native downward hand to the twelve o'clock position.
     size = round(scale*800)
     planes = []
@@ -69,18 +74,17 @@ for side, scale in [('hour',.66),('minute',1.10)]:
         inner=color(palette,side+'HandInnerColor')
         outer=color(palette,side+'HandOuterColor')
         for mode in ('active','ambient'):
-            if mode=='active':
-                field = bloom**.57*1.26
-                rim = core**2.2
-            else:
-                field = bloom**1.6*.36
-                rim = core**1.7*.48
+            field = bloom**.57*1.26
+            rim = core**2.2
             yy,xx=np.indices(field.shape)
             forward=(340-yy)/np.maximum(1,np.hypot(340-yy,xx-340))
             attenuation=np.clip((forward+.35)/.78,0,1)
             field*=attenuation*attenuation*(3-2*attenuation)
             rgb=np.clip(field[:,:,None]*outer+rim[:,:,None]*inner,0,1)
             # Store straight-alpha light so fully black pixels remain transparent.
+            if mode=='ambient':
+                # Use the firmware's non-vibrancy end alpha with the same light footprint.
+                rgb*=.90
             alpha=rgb.max(axis=2)
             rgba=np.dstack((rgb/np.maximum(alpha[:,:,None],1e-8),alpha))
             sprite(f'{side}_{idx}_{mode}',Image.fromarray(np.uint8(rgba*255+.5)))
@@ -89,7 +93,7 @@ for idx,pal in enumerate(palettes):
     ink=tuple(np.uint8(color(pal,'secondHandColor')*255))+(255,)
     im=Image.new('RGBA',(480,480))
     d=ImageDraw.Draw(im)
-    d.line((240,38,240,256), fill=ink,width=2)
+    d.line((240,240-round(hand_lengths['second']*dial_scale),240,256), fill=ink,width=2)
     sprite(f'second_{idx}',im)
     pin=Image.new('RGBA',(12,12))
     ImageDraw.Draw(pin).ellipse((2,2,9,9),fill=tuple(np.uint8(color(pal,'centerGlowColor')*255))+(255,))
@@ -123,6 +127,7 @@ def imagepart(parent,name,x,y,w,h):
 def hand(clock,side,name,size):
     h=node(clock,side.title()+'Hand',resource=name,**box((480-size)//2,(480-size)//2,size,size),pivotX='.5',pivotY='.5')
     if side=='second':
+        node(h,'Variant',mode='AMBIENT',target='alpha',value=0,duration=0)
         node(h,'Sweep',frequency=15)
     return h
 for shape in ('full','inset'):
@@ -187,7 +192,10 @@ def preview(idx=0,inset=False,detailed=False,ambient_mode=False,minute=9):
     canvas=Image.composite(canvas,Image.new('RGBA',canvas.size),circle)
     return canvas
 for name,kw in [('preview',{}),('option_full',{}),('option_inset',dict(inset=True)),('option_simple',{}),('option_detailed',dict(detailed=True))]:
-    sprite(name,preview(**kw))
+    artwork=preview(**kw)
+    if name.startswith('option_'):
+        artwork=artwork.resize((192,192),Image.Resampling.LANCZOS)
+    sprite(name,artwork)
 for name,kw in [('gallery',{}),('ambient',dict(ambient_mode=True)),('monochrome',dict(idx=1,inset=True,detailed=True,minute=28))]:
     preview(**kw).save(gallery/(name+'.png'))
 
@@ -238,4 +246,7 @@ for asset in sorted({e.get('resource') for e in face.iter() if e.tag in ('HourHa
         el.set('pivotX',str((240-x)/w))
         el.set('pivotY',str((240-y)/h))
 save_xml(face,res/'raw/watchface.xml')
+
+
+
 

@@ -18,12 +18,13 @@ if (!(Test-Path $key)) {
 $compiled = Join-Path $tempBuild 'res.zip'
 $raw = Join-Path $tempBuild 'raw.apk'
 $aligned = Join-Path $tempBuild 'aligned.apk'
-$output = Join-Path $PSScriptRoot 'UnityLights-1.0.apk'
+$output = Join-Path $PSScriptRoot 'UnityLights-1.1.apk'
 Run "$BuildTools/aapt2.exe" @('compile','--dir',"$PSScriptRoot/res",'-o',$compiled)
 Run "$BuildTools/aapt2.exe" @('link','-I',$AndroidJar,'--manifest',"$PSScriptRoot/AndroidManifest.xml",'--min-sdk-version','36','--target-sdk-version','36','-o',$raw,$compiled)
 Run "$BuildTools/zipalign.exe" @('-f','4',$raw,$aligned)
 Run "$BuildTools/apksigner.bat" @('sign','--v4-signing-enabled','false','--ks',$key,'--ks-pass','pass:android','--ks-key-alias','artist','--out',$output,$aligned)
 Run "$BuildTools/apksigner.bat" @('verify','--verbose',$output)
+
 
 
 
