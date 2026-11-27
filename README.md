@@ -168,4 +168,6 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 
 示意图的数字与天气为固定样本。中央三环可显示所选数据源提供的进度，右侧同时显示读数。只有文本的提供程序仅显示文本；缺少数值来源时留空或显示短横线。内环默认接入 Wear OS 当日步数与步数目标，脚印表示步数；可以在编辑器关闭步数并选择兼容的站立数据源。活动能量、锻炼分钟与站立小时尚未自动对接三星健康。支持秒数开关、六种时间颜色、两个上方组件及一个底部组件。息屏仅显示时分与降低亮度的活动信息。
 
-[Galaxy 真机截图](ActivityDigital/screenshots/watch-active.png) · [下载健身记录数字 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/activity-digital-1.0/ActivityDigital-1.0.apk)
+1.1 将四行数字统一右对齐；缺少活动数据时保留占位。内置天气取系统本地化天气描述和温度，训练使用固件的 33 帧跑步素材。支持原版 47 类组件的手动图标分类，外部提供程序在自动模式下使用其自身图标。分类图标不代表已接入同名应用的数据。三环抬腕效果通过 WFF 分段揭示真实进度，速度为适配值。旧版外部三个组件位升级后需重新选择。
+
+[1.0 真机截图](ActivityDigital/screenshots/watch-active.png) · [下载健身记录数字 1.1](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/activity-digital-1.1/ActivityDigital-1.1.apk)

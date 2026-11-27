@@ -1,0 +1,23 @@
+"""SF Symbols used as category artwork when the original provider artwork has no confirmed binding."""
+EXTRA = {
+'activity':('健身记录','Activity','circle.circle.fill'),'alarm':('闹钟','Alarm','alarm.fill'),
+'astronomy':('天文','Astronomy','moon.stars.fill'),'books':('有声书','Audiobooks','book.fill'),
+'oxygen':('血氧','Blood Oxygen','drop.fill'),'calculator':('计算器','Calculator','plus.forwardslash.minus'),
+'camera':('相机遥控器','Camera Remote','camera.fill'),'cellular':('蜂窝网络','Cellular','antenna.radiowaves.left.and.right'),
+'compass':('指南针','Compass','location.north.circle.fill'),'waypoint':('指南针航点','Waypoint','mappin.circle.fill'),
+'contacts':('联系人','Contacts','person.crop.circle.fill'),'cycle':('经期追踪','Cycle Tracking','circle.hexagongrid.fill'),
+'depth':('水深','Depth','water.waves'),'ecg':('心电图','ECG','waveform.path.ecg'),
+'find':('查找','Find My','location.fill'),'home':('家庭','Home','house.fill'),
+'mail':('邮件','Mail','envelope.fill'),'maps':('地图','Maps','map.fill'),
+'medications':('用药','Medications','pills.fill'),'messages':('信息','Messages','message.fill'),
+'mindfulness':('正念','Mindfulness','leaf.fill'),'music':('音乐','Music','music.note'),
+'recognize':('音乐识别','Music Recognition','shazamlogo'),'noise':('噪声','Noise','waveform'),
+'notes':('备忘录','Notes','note.text'),'phone':('电话','Phone','phone.fill'),
+'podcasts':('播客','Podcasts','dot.radiowaves.left.and.right'),'reminders':('提醒事项','Reminders','list.bullet'),
+'remote':('遥控器','Remote','appletvremote.gen4.fill'),'shortcuts':('快捷指令','Shortcuts','square.stack.3d.up.fill'),
+'sleep':('睡眠','Sleep','bed.double.fill'),'stocks':('股市','Stocks','chart.line.uptrend.xyaxis'),
+'stopwatch':('秒表','Stopwatch','stopwatch.fill'),'tides':('潮汐','Tides','water.waves'),
+'time':('时间','Time','clock.fill'),'timer':('计时器','Timer','timer'),
+'tips':('提示','Tips','lightbulb.fill'),'translate':('翻译','Translate','character.bubble.fill'),
+'voice':('语音备忘录','Voice Memos','waveform'),'vitals':('生命体征','Vitals','heart.text.square.fill'),
+'wallet':('钱包','Wallet','wallet.pass.fill'),'world':('世界时钟','World Clock','globe')}
