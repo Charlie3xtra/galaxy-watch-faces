@@ -161,3 +161,11 @@ The default lavender and three numeral silhouettes were sampled from the Apple g
 以上为布局渲染图。时针和分针分别带动光场，圆形内盘可显示四个 Wear OS 系统组件。光场来自 watchOS 24S132 的 Coltan 指针纹理及配色，在 WFF 中分层合成。24S132 固件的时、分、秒针长度常量依次为 90、150、154。息屏保留时分针光场，隐藏秒针；交叠阴影和面板亮度为近似值。1.1 修复了超大编辑选项图标导致三星运行时拒绝切换息屏状态的问题。
 
 [Galaxy 真机亮屏](UnityLights/screenshots/watch-1-1-active.png) · [Galaxy 真机息屏](UnityLights/screenshots/watch-1-1-ambient.png) · [圆形内盘与十二刻度预览](UnityLights/screenshots/circular_ticks.png) · [下载团结之光 1.2](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/unity-lights-1.2/UnityLights-1.2.apk)
+
+## 健身记录数字 Activity Digital
+
+<img src="ActivityDigital/screenshots/gallery.png" width="230" alt="健身记录数字布局示意">
+
+示意图的数字与天气为固定样本。中央三环可显示所选数据源提供的进度，右侧同时显示读数。只有文本的提供程序仅显示文本；缺少数值来源时留空或显示短横线。内环默认接入 Wear OS 当日步数与步数目标，脚印表示步数；可以在编辑器关闭步数并选择兼容的站立数据源。活动能量、锻炼分钟与站立小时尚未自动对接三星健康。支持秒数开关、六种时间颜色、两个上方组件及一个底部组件。息屏仅显示时分与降低亮度的活动信息。
+
+[下载健身记录数字 1.0](https://github.com/Charlie3xtra/galaxy-watch-faces/releases/download/activity-digital-1.0/ActivityDigital-1.0.apk)

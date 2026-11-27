@@ -1,0 +1,557 @@
+<?xml version='1.0' encoding='utf-8'?>
+<WatchFace width="480" height="480" clipShape="CIRCLE">
+  <Metadata key="CLOCK_TYPE" value="DIGITAL" />
+  <Metadata key="PREVIEW_TIME" value="10:09:30" />
+  <BitmapFonts>
+    <BitmapFont name="activity">
+      <Character name="0" resource="g0" width="49" height="88" />
+      <Character name="٠" resource="g0" width="49" height="88" />
+      <Character name="۰" resource="g0" width="49" height="88" />
+      <Character name="०" resource="g0" width="49" height="88" />
+      <Character name="1" resource="g1" width="35" height="88" />
+      <Character name="١" resource="g1" width="35" height="88" />
+      <Character name="۱" resource="g1" width="35" height="88" />
+      <Character name="१" resource="g1" width="35" height="88" />
+      <Character name="2" resource="g2" width="47" height="88" />
+      <Character name="٢" resource="g2" width="47" height="88" />
+      <Character name="۲" resource="g2" width="47" height="88" />
+      <Character name="२" resource="g2" width="47" height="88" />
+      <Character name="3" resource="g3" width="48" height="88" />
+      <Character name="٣" resource="g3" width="48" height="88" />
+      <Character name="۳" resource="g3" width="48" height="88" />
+      <Character name="३" resource="g3" width="48" height="88" />
+      <Character name="4" resource="g4" width="49" height="88" />
+      <Character name="٤" resource="g4" width="49" height="88" />
+      <Character name="۴" resource="g4" width="49" height="88" />
+      <Character name="४" resource="g4" width="49" height="88" />
+      <Character name="5" resource="g5" width="49" height="88" />
+      <Character name="٥" resource="g5" width="49" height="88" />
+      <Character name="۵" resource="g5" width="49" height="88" />
+      <Character name="५" resource="g5" width="49" height="88" />
+      <Character name="6" resource="g6" width="48" height="88" />
+      <Character name="٦" resource="g6" width="48" height="88" />
+      <Character name="۶" resource="g6" width="48" height="88" />
+      <Character name="६" resource="g6" width="48" height="88" />
+      <Character name="7" resource="g7" width="45" height="88" />
+      <Character name="٧" resource="g7" width="45" height="88" />
+      <Character name="۷" resource="g7" width="45" height="88" />
+      <Character name="७" resource="g7" width="45" height="88" />
+      <Character name="8" resource="g8" width="50" height="88" />
+      <Character name="٨" resource="g8" width="50" height="88" />
+      <Character name="۸" resource="g8" width="50" height="88" />
+      <Character name="८" resource="g8" width="50" height="88" />
+      <Character name="9" resource="g9" width="48" height="88" />
+      <Character name="٩" resource="g9" width="48" height="88" />
+      <Character name="۹" resource="g9" width="48" height="88" />
+      <Character name="९" resource="g9" width="48" height="88" />
+      <Character name=":" resource="g10" width="24" height="88" />
+      <Character name="-" resource="g11" width="33" height="88" />
+    </BitmapFont>
+  </BitmapFonts>
+  <UserConfigurations>
+    <ColorConfiguration id="tint" displayName="color" defaultValue="white">
+      <ColorOption id="white" colors="#FFFFFFFF" />
+      <ColorOption id="rose" colors="#FFFF2D55" />
+      <ColorOption id="orange" colors="#FFFF9500" />
+      <ColorOption id="lemon" colors="#FFF5E900" />
+      <ColorOption id="mint" colors="#FF42E6CF" />
+      <ColorOption id="blue" colors="#FF58B7FF" />
+    </ColorConfiguration>
+    <BooleanConfiguration id="seconds" displayName="seconds_label" defaultValue="TRUE" />
+    <BooleanConfiguration id="steps" displayName="use_steps" defaultValue="TRUE" />
+  </UserConfigurations>
+  <Scene backgroundColor="#FF000000">
+    <Group name="time_active" x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="0" />
+      <BooleanConfiguration id="seconds">
+        <BooleanOption id="TRUE">
+          <DigitalClock x="0" y="0" width="480" height="480">
+            <TimeText x="36" y="101" width="402" height="83" format="hh:mm:ss" align="END" hourFormat="SYNC_TO_DEVICE">
+              <BitmapFont family="activity" size="74" color="[CONFIGURATION.tint.0]" />
+            </TimeText>
+          </DigitalClock>
+        </BooleanOption>
+      </BooleanConfiguration>
+      <BooleanConfiguration id="seconds">
+        <BooleanOption id="FALSE">
+          <DigitalClock x="0" y="0" width="480" height="480">
+            <TimeText x="36" y="101" width="402" height="83" format="hh:mm" align="END" hourFormat="SYNC_TO_DEVICE">
+              <BitmapFont family="activity" size="74" color="[CONFIGURATION.tint.0]" />
+            </TimeText>
+          </DigitalClock>
+        </BooleanOption>
+      </BooleanConfiguration>
+    </Group>
+    <Group name="time_ambient" x="0" y="0" width="480" height="480" alpha="0">
+      <Variant mode="AMBIENT" target="alpha" value="190" />
+      <DigitalClock x="0" y="0" width="480" height="480">
+        <TimeText x="36" y="101" width="402" height="83" format="hh:mm" align="END" hourFormat="SYNC_TO_DEVICE">
+          <BitmapFont family="activity" size="74" color="[CONFIGURATION.tint.0]" />
+        </TimeText>
+      </DigitalClock>
+    </Group>
+    <Group name="tracks" x="0" y="0" width="480" height="480">
+      <Variant mode="AMBIENT" target="alpha" value="120" />
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Arc centerX="150" centerY="278" width="168" height="168" startAngle="0" endAngle="360">
+          <Stroke thickness="20" color="#FF420A1D" cap="ROUND" />
+        </Arc>
+      </PartDraw>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Arc centerX="150" centerY="278" width="118" height="118" startAngle="0" endAngle="360">
+          <Stroke thickness="20" color="#FF2D3C06" cap="ROUND" />
+        </Arc>
+      </PartDraw>
+      <PartDraw x="0" y="0" width="480" height="480">
+        <Arc centerX="150" centerY="278" width="68" height="68" startAngle="0" endAngle="360">
+          <Stroke thickness="20" color="#FF033536" cap="ROUND" />
+        </Arc>
+      </PartDraw>
+    </Group>
+    <ComplicationSlot slotId="10" displayName="move" supportedTypes="RANGED_VALUE GOAL_PROGRESS SHORT_TEXT EMPTY" x="0" y="0" width="480" height="480">
+      <BoundingRoundBox x="248" y="178" width="168" height="64" cornerRadius="12" />
+      <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" />
+      <Complication type="EMPTY">
+        <Group name="metric_0_EMPTY" x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="155" />
+          <Group name="content_0_EMPTY" x="0" y="0" width="480" height="480">
+            <PartText x="244" y="177" width="170" height="70">
+              <Text align="END">
+                <BitmapFont family="activity" size="64" color="#FFFF165A">
+                  <Template>%s<Parameter expression="'---'" />
+                  </Template>
+                </BitmapFont>
+              </Text>
+            </PartText>
+          </Group>
+        </Group>
+      </Complication>
+      <Complication type="SHORT_TEXT">
+        <Group name="metric_0_SHORT_TEXT" x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="155" />
+          <Group name="content_0_SHORT_TEXT" x="0" y="0" width="480" height="480">
+            <PartText x="244" y="177" width="170" height="70">
+              <Text align="END">
+                <BitmapFont family="activity" size="64" color="#FFFF165A">
+                  <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                  </Template>
+                </BitmapFont>
+              </Text>
+            </PartText>
+          </Group>
+        </Group>
+      </Complication>
+      <Complication type="RANGED_VALUE">
+        <Group name="metric_0_RANGED_VALUE" x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="155" />
+          <Group name="content_0_RANGED_VALUE" x="0" y="0" width="480" height="480">
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(1,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN])) &gt; 0 ? 255 : 0" />
+              <Arc centerX="150" centerY="278" width="168" height="168" startAngle="0" endAngle="360">
+                <Transform target="endAngle" value="360*clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(1,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)" />
+                <Stroke thickness="20" color="#FFFF165A" cap="ROUND">
+                  <SweepGradient centerX="150" centerY="278" startAngle="0" endAngle="360" colors="#FFF00029 #FFFF165A" positions="0 1" />
+                </Stroke>
+              </Arc>
+            </PartDraw>
+            <PartText x="244" y="177" width="170" height="70">
+              <Text align="END">
+                <BitmapFont family="activity" size="64" color="#FFFF165A">
+                  <Template>%s<Parameter expression="round([COMPLICATION.RANGED_VALUE_VALUE])" />
+                  </Template>
+                </BitmapFont>
+              </Text>
+            </PartText>
+          </Group>
+        </Group>
+      </Complication>
+      <Complication type="GOAL_PROGRESS">
+        <Group name="metric_0_GOAL_PROGRESS" x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="155" />
+          <Group name="content_0_GOAL_PROGRESS" x="0" y="0" width="480" height="480">
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([COMPLICATION.GOAL_PROGRESS_VALUE]/max(1,[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE])) &gt; 0 ? 255 : 0" />
+              <Arc centerX="150" centerY="278" width="168" height="168" startAngle="0" endAngle="360">
+                <Transform target="endAngle" value="360*clamp([COMPLICATION.GOAL_PROGRESS_VALUE]/max(1,[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]),0,1)" />
+                <Stroke thickness="20" color="#FFFF165A" cap="ROUND">
+                  <SweepGradient centerX="150" centerY="278" startAngle="0" endAngle="360" colors="#FFF00029 #FFFF165A" positions="0 1" />
+                </Stroke>
+              </Arc>
+            </PartDraw>
+            <PartText x="244" y="177" width="170" height="70">
+              <Text align="END">
+                <BitmapFont family="activity" size="64" color="#FFFF165A">
+                  <Template>%s<Parameter expression="round([COMPLICATION.GOAL_PROGRESS_VALUE])" />
+                  </Template>
+                </BitmapFont>
+              </Text>
+            </PartText>
+          </Group>
+        </Group>
+      </Complication>
+    </ComplicationSlot>
+    <ComplicationSlot slotId="11" displayName="exercise" supportedTypes="RANGED_VALUE GOAL_PROGRESS SHORT_TEXT EMPTY" x="0" y="0" width="480" height="480">
+      <BoundingRoundBox x="248" y="245" width="168" height="64" cornerRadius="12" />
+      <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" />
+      <Complication type="EMPTY">
+        <Group name="metric_1_EMPTY" x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="155" />
+          <Group name="content_1_EMPTY" x="0" y="0" width="480" height="480">
+            <PartText x="244" y="244" width="170" height="70">
+              <Text align="END">
+                <BitmapFont family="activity" size="64" color="#FFA7F600">
+                  <Template>%s<Parameter expression="'---'" />
+                  </Template>
+                </BitmapFont>
+              </Text>
+            </PartText>
+          </Group>
+        </Group>
+      </Complication>
+      <Complication type="SHORT_TEXT">
+        <Group name="metric_1_SHORT_TEXT" x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="155" />
+          <Group name="content_1_SHORT_TEXT" x="0" y="0" width="480" height="480">
+            <PartText x="244" y="244" width="170" height="70">
+              <Text align="END">
+                <BitmapFont family="activity" size="64" color="#FFA7F600">
+                  <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                  </Template>
+                </BitmapFont>
+              </Text>
+            </PartText>
+          </Group>
+        </Group>
+      </Complication>
+      <Complication type="RANGED_VALUE">
+        <Group name="metric_1_RANGED_VALUE" x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="155" />
+          <Group name="content_1_RANGED_VALUE" x="0" y="0" width="480" height="480">
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(1,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN])) &gt; 0 ? 255 : 0" />
+              <Arc centerX="150" centerY="278" width="118" height="118" startAngle="0" endAngle="360">
+                <Transform target="endAngle" value="360*clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(1,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)" />
+                <Stroke thickness="20" color="#FFA7F600" cap="ROUND">
+                  <SweepGradient centerX="150" centerY="278" startAngle="0" endAngle="360" colors="#FF64D900 #FFA7F600" positions="0 1" />
+                </Stroke>
+              </Arc>
+            </PartDraw>
+            <PartText x="244" y="244" width="170" height="70">
+              <Text align="END">
+                <BitmapFont family="activity" size="64" color="#FFA7F600">
+                  <Template>%s<Parameter expression="round([COMPLICATION.RANGED_VALUE_VALUE])" />
+                  </Template>
+                </BitmapFont>
+              </Text>
+            </PartText>
+          </Group>
+        </Group>
+      </Complication>
+      <Complication type="GOAL_PROGRESS">
+        <Group name="metric_1_GOAL_PROGRESS" x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="155" />
+          <Group name="content_1_GOAL_PROGRESS" x="0" y="0" width="480" height="480">
+            <PartDraw x="0" y="0" width="480" height="480">
+              <Transform target="alpha" value="([COMPLICATION.GOAL_PROGRESS_VALUE]/max(1,[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE])) &gt; 0 ? 255 : 0" />
+              <Arc centerX="150" centerY="278" width="118" height="118" startAngle="0" endAngle="360">
+                <Transform target="endAngle" value="360*clamp([COMPLICATION.GOAL_PROGRESS_VALUE]/max(1,[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]),0,1)" />
+                <Stroke thickness="20" color="#FFA7F600" cap="ROUND">
+                  <SweepGradient centerX="150" centerY="278" startAngle="0" endAngle="360" colors="#FF64D900 #FFA7F600" positions="0 1" />
+                </Stroke>
+              </Arc>
+            </PartDraw>
+            <PartText x="244" y="244" width="170" height="70">
+              <Text align="END">
+                <BitmapFont family="activity" size="64" color="#FFA7F600">
+                  <Template>%s<Parameter expression="round([COMPLICATION.GOAL_PROGRESS_VALUE])" />
+                  </Template>
+                </BitmapFont>
+              </Text>
+            </PartText>
+          </Group>
+        </Group>
+      </Complication>
+    </ComplicationSlot>
+    <ComplicationSlot slotId="12" displayName="stand" supportedTypes="RANGED_VALUE GOAL_PROGRESS SHORT_TEXT EMPTY" x="0" y="0" width="480" height="480">
+      <BoundingRoundBox x="248" y="312" width="168" height="64" cornerRadius="12" />
+      <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" />
+      <Complication type="EMPTY">
+        <Group name="metric_2_EMPTY" x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="155" />
+          <BooleanConfiguration id="steps">
+            <BooleanOption id="FALSE">
+              <Group name="content_2_EMPTY" x="0" y="0" width="480" height="480">
+                <PartText x="244" y="311" width="170" height="70">
+                  <Text align="END">
+                    <BitmapFont family="activity" size="64" color="#FF04DADB">
+                      <Template>%s<Parameter expression="'---'" />
+                      </Template>
+                    </BitmapFont>
+                  </Text>
+                </PartText>
+              </Group>
+            </BooleanOption>
+          </BooleanConfiguration>
+        </Group>
+      </Complication>
+      <Complication type="SHORT_TEXT">
+        <Group name="metric_2_SHORT_TEXT" x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="155" />
+          <BooleanConfiguration id="steps">
+            <BooleanOption id="FALSE">
+              <Group name="content_2_SHORT_TEXT" x="0" y="0" width="480" height="480">
+                <PartText x="244" y="311" width="170" height="70">
+                  <Text align="END">
+                    <BitmapFont family="activity" size="64" color="#FF04DADB">
+                      <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                      </Template>
+                    </BitmapFont>
+                  </Text>
+                </PartText>
+              </Group>
+            </BooleanOption>
+          </BooleanConfiguration>
+        </Group>
+      </Complication>
+      <Complication type="RANGED_VALUE">
+        <Group name="metric_2_RANGED_VALUE" x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="155" />
+          <BooleanConfiguration id="steps">
+            <BooleanOption id="FALSE">
+              <Group name="content_2_RANGED_VALUE" x="0" y="0" width="480" height="480">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Transform target="alpha" value="(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(1,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN])) &gt; 0 ? 255 : 0" />
+                  <Arc centerX="150" centerY="278" width="68" height="68" startAngle="0" endAngle="360">
+                    <Transform target="endAngle" value="360*clamp(([COMPLICATION.RANGED_VALUE_VALUE]-[COMPLICATION.RANGED_VALUE_MIN])/max(1,[COMPLICATION.RANGED_VALUE_MAX]-[COMPLICATION.RANGED_VALUE_MIN]),0,1)" />
+                    <Stroke thickness="20" color="#FF04DADB" cap="ROUND">
+                      <SweepGradient centerX="150" centerY="278" startAngle="0" endAngle="360" colors="#FF00BCC5 #FF04DADB" positions="0 1" />
+                    </Stroke>
+                  </Arc>
+                </PartDraw>
+                <PartText x="244" y="311" width="170" height="70">
+                  <Text align="END">
+                    <BitmapFont family="activity" size="64" color="#FF04DADB">
+                      <Template>%s<Parameter expression="round([COMPLICATION.RANGED_VALUE_VALUE])" />
+                      </Template>
+                    </BitmapFont>
+                  </Text>
+                </PartText>
+              </Group>
+            </BooleanOption>
+          </BooleanConfiguration>
+        </Group>
+      </Complication>
+      <Complication type="GOAL_PROGRESS">
+        <Group name="metric_2_GOAL_PROGRESS" x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="155" />
+          <BooleanConfiguration id="steps">
+            <BooleanOption id="FALSE">
+              <Group name="content_2_GOAL_PROGRESS" x="0" y="0" width="480" height="480">
+                <PartDraw x="0" y="0" width="480" height="480">
+                  <Transform target="alpha" value="([COMPLICATION.GOAL_PROGRESS_VALUE]/max(1,[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE])) &gt; 0 ? 255 : 0" />
+                  <Arc centerX="150" centerY="278" width="68" height="68" startAngle="0" endAngle="360">
+                    <Transform target="endAngle" value="360*clamp([COMPLICATION.GOAL_PROGRESS_VALUE]/max(1,[COMPLICATION.GOAL_PROGRESS_TARGET_VALUE]),0,1)" />
+                    <Stroke thickness="20" color="#FF04DADB" cap="ROUND">
+                      <SweepGradient centerX="150" centerY="278" startAngle="0" endAngle="360" colors="#FF00BCC5 #FF04DADB" positions="0 1" />
+                    </Stroke>
+                  </Arc>
+                </PartDraw>
+                <PartText x="244" y="311" width="170" height="70">
+                  <Text align="END">
+                    <BitmapFont family="activity" size="64" color="#FF04DADB">
+                      <Template>%s<Parameter expression="round([COMPLICATION.GOAL_PROGRESS_VALUE])" />
+                      </Template>
+                    </BitmapFont>
+                  </Text>
+                </PartText>
+              </Group>
+            </BooleanOption>
+          </BooleanConfiguration>
+        </Group>
+      </Complication>
+    </ComplicationSlot>
+    <BooleanConfiguration id="steps">
+      <BooleanOption id="TRUE">
+        <Group name="steps_metric" x="0" y="0" width="480" height="480">
+          <Variant mode="AMBIENT" target="alpha" value="155" />
+          <PartImage x="385" y="371" width="22" height="18">
+            <Image resource="footsteps" />
+          </PartImage>
+          <PartDraw x="0" y="0" width="480" height="480">
+            <Transform target="alpha" value="([STEP_COUNT]/max(1,[STEP_GOAL])) &gt; 0 ? 255 : 0" />
+            <Arc centerX="150" centerY="278" width="68" height="68" startAngle="0" endAngle="360">
+              <Transform target="endAngle" value="360*clamp([STEP_COUNT]/max(1,[STEP_GOAL]),0,1)" />
+              <Stroke thickness="20" color="#FF04DADB" cap="ROUND">
+                <SweepGradient centerX="150" centerY="278" startAngle="0" endAngle="360" colors="#FF00BCC5 #FF04DADB" positions="0 1" />
+              </Stroke>
+            </Arc>
+          </PartDraw>
+          <PartText x="244" y="311" width="170" height="70">
+            <Text align="END">
+              <BitmapFont family="activity" size="64" color="#FF04DADB">
+                <Template>%s<Parameter expression="[STEP_COUNT]" />
+                </Template>
+              </BitmapFont>
+            </Text>
+          </PartText>
+        </Group>
+      </BooleanOption>
+    </BooleanConfiguration>
+    <ComplicationSlot slotId="1" displayName="top_left" supportedTypes="SHORT_TEXT LONG_TEXT MONOCHROMATIC_IMAGE EMPTY" x="104" y="43" width="62" height="62">
+      <BoundingOval x="0" y="0" width="62" height="62" />
+      <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" primaryProvider="com.samsung.android.watch.weather/com.samsung.android.watch.weather.complication.WeatherComplicationService" primaryProviderType="SHORT_TEXT" />
+      <Complication type="SHORT_TEXT">
+        <Group name="top_left_SHORT_TEXT" x="0" y="0" width="62" height="62">
+          <Variant mode="AMBIENT" target="alpha" value="130" />
+          <PartDraw x="0" y="0" width="62" height="62">
+            <Ellipse x="0" y="0" width="62" height="62">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="18" y="4" width="25" height="25">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <PartText x="0" y="29" width="62" height="31">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="17" color="#FFFFFFFF">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="LONG_TEXT">
+        <Group name="top_left_LONG_TEXT" x="0" y="0" width="62" height="62">
+          <Variant mode="AMBIENT" target="alpha" value="130" />
+          <PartDraw x="0" y="0" width="62" height="62">
+            <Ellipse x="0" y="0" width="62" height="62">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="18" y="4" width="25" height="25">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <PartText x="0" y="29" width="62" height="31">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="17" color="#FFFFFFFF">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <Group name="top_left_MONOCHROMATIC_IMAGE" x="0" y="0" width="62" height="62">
+          <Variant mode="AMBIENT" target="alpha" value="130" />
+          <PartDraw x="0" y="0" width="62" height="62">
+            <Ellipse x="0" y="0" width="62" height="62">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="10" y="10" width="42" height="42">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+        </Group>
+      </Complication>
+    </ComplicationSlot>
+    <ComplicationSlot slotId="2" displayName="top_right" supportedTypes="SHORT_TEXT LONG_TEXT MONOCHROMATIC_IMAGE EMPTY" x="314" y="43" width="62" height="62">
+      <BoundingOval x="0" y="0" width="62" height="62" />
+      <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" primaryProvider="com.samsung.android.wear.shealth/com.samsung.android.wear.shealth.complications.exercise.WorkoutComplicationProviderService" primaryProviderType="MONOCHROMATIC_IMAGE" />
+      <Complication type="SHORT_TEXT">
+        <Group name="top_right_SHORT_TEXT" x="0" y="0" width="62" height="62">
+          <Variant mode="AMBIENT" target="alpha" value="130" />
+          <PartDraw x="0" y="0" width="62" height="62">
+            <Ellipse x="0" y="0" width="62" height="62">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="18" y="4" width="25" height="25" tintColor="#FFADFA00">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <PartText x="0" y="29" width="62" height="31">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="17" color="#FFFFFFFF">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="LONG_TEXT">
+        <Group name="top_right_LONG_TEXT" x="0" y="0" width="62" height="62">
+          <Variant mode="AMBIENT" target="alpha" value="130" />
+          <PartDraw x="0" y="0" width="62" height="62">
+            <Ellipse x="0" y="0" width="62" height="62">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="18" y="4" width="25" height="25" tintColor="#FFADFA00">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+          <PartText x="0" y="29" width="62" height="31">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="17" color="#FFFFFFFF">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <Group name="top_right_MONOCHROMATIC_IMAGE" x="0" y="0" width="62" height="62">
+          <Variant mode="AMBIENT" target="alpha" value="130" />
+          <PartDraw x="0" y="0" width="62" height="62">
+            <Ellipse x="0" y="0" width="62" height="62">
+              <Fill color="#FF191919" />
+            </Ellipse>
+          </PartDraw>
+          <PartImage x="10" y="10" width="42" height="42" tintColor="#FFADFA00">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+        </Group>
+      </Complication>
+    </ComplicationSlot>
+    <ComplicationSlot slotId="3" displayName="bottom" supportedTypes="SHORT_TEXT LONG_TEXT MONOCHROMATIC_IMAGE EMPTY" x="99" y="385" width="282" height="37">
+      <BoundingRoundBox x="0" y="0" width="282" height="37" cornerRadius="12" />
+      <DefaultProviderPolicy defaultSystemProvider="EMPTY" defaultSystemProviderType="EMPTY" primaryProvider="com.samsung.android.watch.weather/com.samsung.android.watch.weather.complication.WeatherComplicationService" primaryProviderType="SHORT_TEXT" />
+      <Complication type="SHORT_TEXT">
+        <Group name="bottom_SHORT_TEXT" x="0" y="0" width="282" height="37">
+          <Variant mode="AMBIENT" target="alpha" value="130" />
+          <PartText x="0" y="0" width="282" height="37">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="22" color="#FFFFFFFF">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="LONG_TEXT">
+        <Group name="bottom_LONG_TEXT" x="0" y="0" width="282" height="37">
+          <Variant mode="AMBIENT" target="alpha" value="130" />
+          <PartText x="0" y="0" width="282" height="37">
+            <Text align="CENTER" ellipsis="TRUE">
+              <Font family="SYNC_TO_DEVICE" size="22" color="#FFFFFFFF">
+                <Template>%s<Parameter expression="[COMPLICATION.TEXT]" />
+                </Template>
+              </Font>
+            </Text>
+          </PartText>
+        </Group>
+      </Complication>
+      <Complication type="MONOCHROMATIC_IMAGE">
+        <Group name="bottom_MONOCHROMATIC_IMAGE" x="0" y="0" width="282" height="37">
+          <Variant mode="AMBIENT" target="alpha" value="130" />
+          <PartImage x="120" y="-3" width="42" height="42">
+            <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
+          </PartImage>
+        </Group>
+      </Complication>
+    </ComplicationSlot>
+  </Scene>
+</WatchFace>

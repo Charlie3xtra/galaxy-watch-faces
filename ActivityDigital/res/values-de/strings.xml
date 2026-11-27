@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">Aktivität Digital</string>
+  <string name="move">Move</string>
+  <string name="exercise">Exercise</string>
+  <string name="stand">Stand</string>
+  <string name="seconds_label">Show seconds</string>
+  <string name="use_steps">Use steps for inner ring</string>
+  <string name="color">FARBE</string>
+  <string name="top_left">Oben links</string>
+  <string name="top_right">Oben rechts</string>
+  <string name="bottom">Unten</string>
+</resources>

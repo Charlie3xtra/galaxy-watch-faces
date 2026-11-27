@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="face_name">活動記錄數位</string>
+  <string name="move">活動能量</string>
+  <string name="exercise">運動分鐘</string>
+  <string name="stand">站立小時</string>
+  <string name="seconds_label">顯示秒數</string>
+  <string name="use_steps">內環顯示步數</string>
+  <string name="color">顏色</string>
+  <string name="top_left">左上</string>
+  <string name="top_right">右上</string>
+  <string name="bottom">底部</string>
+</resources>
